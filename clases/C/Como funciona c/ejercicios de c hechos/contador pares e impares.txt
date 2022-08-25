@@ -1,0 +1,23 @@
+#include<stdio.h>
+int p,im,nm,i;
+int main()
+{
+
+	for (i=1; i<=10; i ++)
+	{
+		printf("ingrese un numero: \n");
+		scanf("%d", &nm);
+		if(nm%2==0)
+		{
+			p=p+1;
+		}
+		else
+		{
+			im=im+1;
+		}
+	}
+	printf("\n los numeros pares son: %d\n",p);
+	printf("\n los numeros impares son: %d\n",im);
+	return 0;
+	
+}

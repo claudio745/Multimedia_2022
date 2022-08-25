@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main()
+{
+	printf("Iniciando proceso");
+	int numero;
+	do
+	{
+	
+		
+		printf("Ingrese un numero comprendido entre 1 y 5 \n");
+		scanf("%d", &numero);
+		if(numero==1)
+		{
+			printf("Proceso terminado, presione cualquier tecla para salir");
+			break;
+			
+		}
+		if(numero==2)
+		{
+			printf("Proceso terminado, presione cualquier tecla para salir");
+			break;
+			
+		}
+		if(numero==3)
+		{
+			printf("Proceso terminado, presione cualquier tecla para salir");
+			break;
+		
+		}
+		if(numero==4)
+		{
+			printf("Proceso terminado, presione cualquier tecla para salir");
+			break;
+			
+		}
+		if(numero==5)
+		{
+			printf("Proceso terminado, presione cualquier tecla para salir");
+			break;
+			
+		}
+	}while(printf);
+	return 0;
+}

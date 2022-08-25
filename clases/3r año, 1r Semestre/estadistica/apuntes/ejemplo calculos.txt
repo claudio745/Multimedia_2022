@@ -1,0 +1,196 @@
+4 8 10 11 17
+
+rango = 17-4 //(mayor - menor)
+rango = 13
+
+media = 4 + 8 + 10 + 11 + 17 
+//(suma de todos los datos dividido entre el numero total de datos)
+
+media = 50 / 5
+media = 10
+
+
+varianza = xi - x //(dato - media / numero de datos - 1)
+
+varianza = (4-10) + (8-10) + (11-10) + (17-10)
+varianza = (-6)^2 + (-2)^2 + (1)^2 + (7)^2
+varianza = 36 + 4 + 1 + 49
+varianza = 90 / 4
+varianza = 22,5
+
+desviacion estandar = √22.5 //(raiz cuadrada de la varianza)
+desviacion estandar = 4.74
+
+
+desviacion estandar = " En promedio cuando se alejan los datos de la media" 
+
+propiedades:
+ambas son siempre un numero no negativo .
+
+la varianza y desviacion estandar solo son cero cuando todos los datos son iguales.
+
+si a cada dato le sumo o resto lo mismo la varianza y desviacion estandar no se veran afectadas.
+
+si cada dato de una muestra se multiplica por un numero la varianza y la desviacion estandar se multiplican por ese numero.
+
+coeficiente de variacion:
+
+permite comparar la variabilidad de caracteristicas medidas en diferentes escalas.
+
+cv = (s/¨X )* 100 // esto se ve en porcentajes
+
+estable la homogeneidad de los datos mediante la desviacion estandar, es una medida util porque mide la dispersion de los datos.
+
+datos agrupados:
+
+media: (cada dato por la cantidad de veces que se repite ese dato) / cantidad total de datos.
+
+varianza: (xi - x)^2 + ni //(dato - media / numero de datos - 1)
+lo mismo pero se multiplica por la frecuencia absoluta.
+// sin intervalos
+
+los graficos permiten visualizar los datos de manera mas sencilla
+
+histograma: la simetria o asimetria de la curva.
+y el grado de aplaneamiento.
+
+una distribucion simetrica es cuando en ambos lados la curva es igual.
+
+asimetria negativa:
+si los datos se concentran hacia valores altos de la variable (derecha)
+
+asimetria positiva:
+si los datos se concentran hacia los valores bajos de la variable (izquierda)
+
+quartil3- quartil1 = rango intercuartil
+
+AP= x - mo / Sx -> x = promedio, mo = Moda, Sx = desviacion estandar.
+
+AP = 0 simetrica 
+AP > 0 positiva
+AP < negativa 
+
+leptocurtica muy puntuda, mesocurtica medianamente puntuda, platicurtica no puntuda (ta gordita).
+
+ancho de la caja = rango intercuartil
+
+
+boxplot: identificar patrones, se utiliza para resumir visualmente.
+
+o <- punto atipico.
+- maximo
+|
+|
+|
+- 3r quartil
+| rango intercuartil
+- 1r quartil
+|
+|
+|
+- minimo
+
+
+
+si esta cargado a la derecha asimetrica positiva
+cargada a la izquierda asimetrica negativa
+si esta en el centro es camapana de gauss 
+
+
+limite inferior = q1 - 1,5 * RIC
+limite superior = q3 + 1,5 * RIC
+
+orden atipico leve = q < q1 - 1,5 * RIC o q > q3 + 1,5 * RIC
+extremo = q < q1 - 3 * RIC o q > q3 + 3* RIC
+
+
+una medida numerica calculada a partir de los datos se llama estadistico o estadígrafo
+
+mu -> ¨X  promedio
+
+sigma -> S varianza
+
+sigma^2 -> S^2 desviacion estandar
+
+
+
+
+media en 2 casos, para n impar se toma el valor del centro si es par se toman los 2 valores centrales, se suman y se dividen en 2
+
+moda = el dato que mas se repite 
+
+si tomo el 100% de los datos y lo divido en 4 estoy hablando de cuartiles.
+si hablamos de quintiles se divide en 5 partes --> K o C
+deciles en 10 
+centiles en 100 partes
+mediana = Q2 = D5 = P50
+
+
+datos no agrupados:
+
+para datos n par = i * n/partes
+impares = i * n+1 / partes
+
+para datos agrupados:
+cuantil = (Li + i(n/partes) - F(i-1) / fi)  * a
+
+Li limite inferior
+Fi frecuencia absoluta acumulada
+fi frecuancia abosulta
+a = amplitud del intervalo
+
+2,5,3,6,7,4,9
+
+se ordenan
+
+2,3,4,5,6,7,9
+
+
+i* n+1 /partes
+
+k = 1 * 7+1 / 4
+k = 2
+cuartil 1 = 3
+
+k = 2 * 7 + 1 /4
+k = 4
+cuartil 2 = 5
+
+k = 3 * 7 + 1 / 4
+k = 6 
+cuartil 3 = 7 
+
+valor minimo = 2
+
+valor maximo = 9
+
+si el valor de un cuartil es decimal el valor sera:
+cuantil = xi + d * (xi+1 - xi) 
+
+
+3 * 9 + 1 / 4 
+7,5 
+
+63 + 0.5 * (66 - 63)
+63 + 0.5 * (3)
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

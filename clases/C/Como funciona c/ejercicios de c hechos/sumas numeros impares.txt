@@ -1,0 +1,58 @@
+#include <stdio.h>
+int main(){
+	
+	int suma,impar1,impar2,impar3,impar4,impar5;
+	
+	printf("Programa para sumar numeros impares (si ingresa un numero par el programa se detendra)\n");
+	{
+		printf("Ingrese el primer numero impar desde el teclado\n");
+		scanf("%d", &impar1);
+		if(impar1%2==0)
+		{
+			while(printf("PARANDO..."))
+			break;
+		}else
+		{
+			printf("Ingrese el segundo numero impar desde el teclado\n");
+			scanf("%d", &impar2);
+			if(impar2%2==0)
+			{
+				while(printf("PARANDO..."))
+				break;
+			}else
+			{
+				printf("Ingrese el tercer numero impar desde el teclado\n");
+				scanf("%d", &impar3);
+				if(impar3%2==0)
+				{
+					while(printf("PARANDO..."))
+					break;
+				}else
+				{
+					printf("Ingrese el cuarto numero impar desde el teclado\n");
+					scanf("%d", &impar4);
+					if(impar4%2==0)
+					{
+						while(printf("PARANDO..."))
+						break;
+					}else
+					{
+						printf("Ingrese el quinto numero impar desde el teclado\n");
+						scanf("%d", &impar5);
+						if(impar5%2==0)
+						{
+							while(printf("PARANDO..."))
+							break;
+						}else
+						{
+							suma=impar1+impar2+impar3+impar4+impar5;
+							{
+								printf("La suma es %d", suma);
+							}
+						}
+					}
+				}
+			}
+		}		
+	}
+}

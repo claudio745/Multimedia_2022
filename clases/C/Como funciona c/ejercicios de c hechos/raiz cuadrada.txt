@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<math.h>
+
+double raiz(double x){
+	double r=sqrt(x);
+	return r;
+}
+int main()
+{
+	printf("%f\n", raiz(4.0));
+	
+}

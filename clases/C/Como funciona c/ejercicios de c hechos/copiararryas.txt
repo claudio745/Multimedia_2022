@@ -1,0 +1,25 @@
+void copiandoarrays(int a[], int b[], int tamanio);
+
+int main()
+{
+	int i,j;
+	
+	int arrayuno[5] = {2,3,4,5,6};
+	int arraydos[5];
+	
+	copiandoarrays(arrayuno, arraydos, 5);
+	return 0;
+}
+	
+
+void copiandoarrays(int a[], int b[], int tamanio)
+{
+	for(i = 0;i<tamanio; i++)
+	{
+		b[i] = a[i];
+	}
+	for(j=0; j<tamanio; j++)
+	{	
+		printf("%i", b[i]);
+	}
+}

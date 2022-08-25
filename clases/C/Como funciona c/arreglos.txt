@@ -1,0 +1,38 @@
+ARREGLOS
+
+#include<stdio.h>
+int main()
+{
+	int arreglo[4] = {3,4,1,5}; // dentro del corchete se pone el tamaño del arreglo
+	printf("%i\n",arreglo[2]); // deberia de darme el numero en la posicion 2, es decir, el 1.
+	
+	return 0;
+}
+
+ejercicio arreglo unidireccional
+
+#include<stdio.h>
+int main()
+{
+	int sizeA;
+	printf("ingrese tamaño del arreglo\n");
+	scanf("%i",&sizeA);
+	int age[sizeA];
+	for(int i = 0;i < sizeA;i++);
+	{
+		printf("ingresa el valor %i\n",i+1);
+		scanf("%i", &age[i]);
+	}
+	printf("los valores del arreglo son:\n");
+	for(int i = 0; i < sizeA;i++)
+	{
+		printf("%i-", age[i]);
+	}
+	printf ("\n");
+	return 0;
+}
+
+
+
+}
+

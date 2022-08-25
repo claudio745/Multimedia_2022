@@ -1,0 +1,40 @@
+#include <stdio.h>
+int main()
+{
+	float mayor;
+	float menor;
+    int sizeA;
+    printf("introduzca cuantas personas son:\n");
+    scanf("%i", &sizeA);
+    float peso[sizeA];
+    int i;
+    for(i = 0;i < sizeA;i++)
+    {
+        printf("ingresa el valor\n");
+        scanf("%f", &peso[i]);
+    }
+    printf("Los valores que usted ingreso son:\n");
+    for(i = 0; i < sizeA;i++)
+    {
+        printf("%.1f-", peso[i]);
+    }
+	mayor=peso[0];
+	menor=mayor;
+	
+	for(i=1;i<sizeA;i++)
+	{
+		if(peso[i]>mayor)
+		{
+			mayor=peso[i];
+		}
+		if(peso[i]<menor)
+		{
+			menor=peso[i];
+		}
+	}
+    printf("\nEl numero mayor es:%f\n", mayor);
+    printf("\nEl numero menor es:%f\n", menor);
+    
+    
+    return 0;
+}

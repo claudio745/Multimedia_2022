@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+	printf("inicio del proceso generar los primeros 20 numeros impares");
+	int contador=0,numero=1;
+	
+	do
+	{	
+		contador=contador +1;
+		if(numero%2!=0)
+		{
+			printf("%d\n", contador);
+			
+		}
+		numero=numero +1;
+	}while(contador<40);
+	printf("fin del proceso, presione cualquier tecla para salir");
+	return 0;
+}
+	
+
+
+

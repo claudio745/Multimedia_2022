@@ -1,0 +1,59 @@
+#include<stdio.h>
+
+
+int main()
+{
+	int contador = 1;
+	int mujer = 0;
+	int hombre = 0;
+	int x;
+	float notash;
+	float notasm;
+	int mujeresaprobadas = 0;
+	int hombresaprobados = 0;
+	int hombresreprobados = 0;
+	int mujeresreprobadas = 0;
+	
+	do
+	{
+		printf("ingrese (1) para decir si es hombre y (2) si es mujer, si presiona cualquier otro numero el programa se detendra\n");
+		scanf("%d", &x);
+		if(x==1)
+		{
+			hombre = hombre +1;
+			printf("ingrese su promedio final:\n");
+			scanf("%f", &notash);
+			if(notash<4.0)
+			{
+				hombresreprobados = hombresreprobados + 1;	
+			}else
+			{
+				hombresaprobados = hombresaprobados + 1;
+			}
+		}
+		if (x==2)
+		{
+			mujer = mujer + 1;
+			printf("Ingrese su promedio final:\n");
+			scanf("%f", &notasm);
+			if (notasm<4.0)
+			{
+				mujeresreprobadas = mujeresreprobadas + 1;
+			}else
+			{
+				mujeresaprobadas = mujeresaprobadas + 1;
+			}
+		}
+		contador = contador + 1;
+	}while(contador<=3);
+	printf("la cantidad de hombres es:%d\n", hombre);
+	printf("la cantidad de mujeres es:%d\n", mujer);
+	printf("Lo cantidad de hombres que aprobaron son:%d\n", hombresaprobados);
+	printf("Lo cantidad de hombres que reprobaron son:%d\n", hombresreprobados);
+	printf("La cantidad de mujeres que aprobaron son:%d\n", mujeresaprobadas);
+	printf("la cantidad de mujeres que reprobaron son:%d\n", mujeresreprobadas);
+	return 0;
+
+	
+	
+}

@@ -1,0 +1,69 @@
+#include <stdio.h>
+
+int main()
+{
+	
+	int Hombre[450];
+	int i;
+	int mayor=0;
+	int menor=0;
+	int ehombre=0;
+	int Mujer[450];
+	int emujer=0;
+	int i2;
+	int mayor2=0;
+	int menor2=0;
+	
+	
+	for (i=0; i<450; i++)
+	{
+	   Hombre[i] = rand() % (80-23+1) + 24;
+	   ehombre +=Hombre[i];
+	}
+	
+	for (i=0; i<450; i++)
+	{
+	    if (Hombre[i]> mayor)
+	{
+	    mayor=Hombre[i];
+	    menor=mayor;
+	}
+	}
+	for (i=0; i<450; i++)
+	{
+	    if (Hombre[i]< menor)
+		{
+	    	menor=Hombre[i];
+	    }
+	}
+
+	
+	for (i2=0; i2<450; i2++)
+	{
+		Mujer[i2] = rand() % (90-23+1) + 20;
+	    emujer +=Mujer[i2];
+	}
+	
+	
+	for (i2=0; i2<450; i2++){
+	    if (Mujer[i2]> mayor2)
+	{
+	    mayor2=Mujer[i2];
+	    menor2=mayor2;
+	}
+	}
+	for (i2=0; i2<450; i2++)
+	{
+	    if (Mujer[i2]< menor2)
+		{
+	    	menor2=Mujer[i2];
+	    }
+	}
+	printf("\nLa mayor de edad los hombres es %d\n", mayor);
+	printf("La menor edad de los hombres es %d\n", menor);
+	printf("\nLa mayor edad de las mujeres es %d\n", mayor2);
+	printf("La menor edad de las mujeres es %d\n", menor2);
+	printf("promedio edad hombre es %d\n", ehombre/450);
+	printf("promedio edad mujer es %d\n", emujer/450);
+	getch();
+}

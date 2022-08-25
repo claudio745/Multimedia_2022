@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+    int limite, numero, positivo = 0, negativo = 0, cero = 0;
+
+    printf("Introduza el limite de numeros\n");
+    scanf("%d", &limite);
+
+    printf("Introduza los %d numeros\n", limite);
+
+    while (limite)
+    {
+        scanf("%d", &numero);
+
+        if (numero>0)
+        {
+            positivo++;
+        }
+        else if (numero<0)
+        {
+            negativo++;
+        }
+        else
+        {
+            cero++;
+        }
+
+        limite--;
+
+    }
+    printf("\nLos numeros negativos son: %d\n", negativo);
+
+    return 0;
+}

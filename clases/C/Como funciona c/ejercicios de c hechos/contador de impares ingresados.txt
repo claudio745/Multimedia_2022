@@ -1,0 +1,27 @@
+#include<stdio.h>
+int main()
+{
+	printf("inicio del programa");
+	int i=0;
+	int num2;
+	int arreglo[20];
+	int contador = 0;
+	
+	while (i<20)
+	{
+		printf("ingresa un numero:\n");
+		scanf("%d", &num2);
+		if(num2%2!=0)
+		{
+			contador = contador+1;
+			i++;
+		}else
+		{
+			i++;
+		}
+	}
+	printf("la cantidad de impares ingresados son:%d", contador);
+	printf("Programa terminado, toque cualquier tecla para cerrar la consola");
+	
+	return 0;
+}

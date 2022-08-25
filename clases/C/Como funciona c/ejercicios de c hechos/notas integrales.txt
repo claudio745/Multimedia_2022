@@ -1,0 +1,112 @@
+#include<stdio.h>
+#define NUMESTUDIANTES 45
+int main()
+{
+	int alumnos;
+	float notaintegral1;
+	float notaintegral2;
+	float notaintegral3;
+	float examen;
+	float notafinal;
+	float resultadointegral1;
+	float resultadointegral2;
+	float resultadointegral3;
+	float resultadoexamen;
+	float promedio;
+	
+	
+	for (alumnos= 1; alumnos <= NUMESTUDIANTES; alumnos++)
+	{
+		printf("ingrese la nota integral 1\n");
+		scanf("%f", &notaintegral1);
+		do
+		{
+			if (notaintegral1<1.0)
+			{
+				printf("Error, su nota no puede ser menor que 1.0, favor ingresar un nota entre 1.0 y 7.0\n");
+				scanf("%f", &notaintegral1);
+				
+			}
+		}while(notaintegral1<1.0);
+		do
+		{
+			if (notaintegral1>7.0)
+			{
+				printf("Error, su nota no puede ser mayor que 7.0, favor ingresar un nota entre 1.0 y 7.0\n");
+				scanf("%f", &notaintegral1);
+				
+			}
+		}while(notaintegral1>7.0);
+		
+		printf("ingrese la nota integral 2:\n");
+		scanf("%f", &notaintegral2);
+		do
+		{
+			if (notaintegral2<1.0)
+			{
+				printf("Error, su nota no puede ser menor que 1.0, favor ingresar un nota entre 1.0 y 7.0\n");
+				scanf("%f", &notaintegral2);
+				
+			}
+		}while(notaintegral2<1.0);
+		do
+		{
+			if (notaintegral2>7.0)
+			{
+				printf("Error, su nota no puede ser mayor que 7.0, favor ingresar un nota entre 1.0 y 7.0\n");
+				scanf("%f", &notaintegral2);
+				
+			}
+		}while(notaintegral2>7.0);
+		
+		printf("Ingrese la nota integral 3\n");
+		scanf("%f", &notaintegral3);
+		
+		do
+		{
+			if (notaintegral3<1.0)
+			{
+				printf("Error, su nota no puede ser menor que 1.0, favor ingresar un nota entre 1.0 y 7.0\n");
+				scanf("%f", &notaintegral3);
+				
+			}
+		}while(notaintegral3<1.0);
+		do
+		{
+			if (notaintegral3>7.0)
+			{
+				printf("Error, su nota no puede ser mayor que 7.0, favor ingresar un nota entre 1.0 y 7.0\n");
+				scanf("%f", &notaintegral3);
+				
+			}
+		}while(notaintegral3>7.0);
+		
+		printf("Ingrese la nota del examen\n");
+		scanf("%f", &examen);
+		
+		do
+		{
+			if (examen<1.0)
+			{
+				printf("Error, su nota no puede ser menor que 1.0, favor ingresar un nota entre 1.0 y 7.0\n");
+				scanf("%f", &examen);
+				
+			}
+		}while(examen<1.0);
+		do
+		{
+			if (examen>7.0)
+			{
+				printf("Error, su nota no puede ser mayor que 7.0, favor ingresar un nota entre 1.0 y 7.0\n");
+				scanf("%f", &examen);
+				
+			}
+		}while(examen>7.0);
+				
+			
+		notafinal = (notaintegral1 * 0.15) + (notaintegral2 * 0.25) + (notaintegral3 * 0.3) + (examen * 0.3);
+		printf("la nota final del estudiante es:%.1f\n", notafinal);
+	}
+	
+	return 0;
+}

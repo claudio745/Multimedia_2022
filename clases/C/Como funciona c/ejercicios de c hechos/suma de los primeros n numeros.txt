@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main()
+{
+	printf("inicio del proceso");
+	int n;
+	int suma;
+	printf("ingrese la cantidad de numeros enteros que desea sumar\n");
+	scanf("%i", &n);
+	suma = n*(n+1)/2;
+	printf("%i\n", suma);
+	printf("fin del proceso");
+	
+	
+	return 0;
+}

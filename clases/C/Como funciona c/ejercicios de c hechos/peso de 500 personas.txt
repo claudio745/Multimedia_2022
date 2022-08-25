@@ -1,0 +1,35 @@
+#include<stdio.h>
+int main(){
+    int alumnos40 = 0;
+    int alumnos40k50k = 0;
+    int alumnos50k60k = 0;
+    int alumnos60k = 0;
+    int contador;
+    float peso;
+    for (contador = 1;contador <=500; contador++)
+    {
+        printf("introduzca su peso\n");
+        scanf("%f", &peso);
+        if(peso <40)
+        {
+            alumnos40 = alumnos40 + 1;
+        }
+        if(peso >=40 & peso <50)
+        {
+            alumnos40k50k = alumnos40k50k + 1;
+        }
+        if(peso >=50 & peso <60)
+        {
+        	alumnos50k60k = alumnos50k60k + 1;
+		}
+		if (peso >=60)
+		{
+			alumnos60k = alumnos60k + 1;
+		}
+    }
+    printf("los alumnos que pesan menos de 40 kilos son:%d\n",alumnos40); 
+    printf("los alumnos que pesan entre 40 y 50 kilos son:%d\n",alumnos40k50k); 
+    printf("los alumnos que pesan entre 50 y 60 kilos son:%d\n",alumnos50k60k); 
+    printf("los alumnos que pesan mas de 60 kilos son:%d\n",alumnos60k); 
+    return 0;
+}

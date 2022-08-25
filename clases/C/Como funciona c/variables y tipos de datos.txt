@@ -1,0 +1,32 @@
+variables en c:
+CARACTER:
+char c = 'y'; // tamaño de 1 byte y va desde 0 hasta 255
+printf("%c\n", c); // asi se ejecuta
+
+ENTERO
+
+int a = 20; // 2 bytes, tiene rango desde -32768 hasta 32767
+printf("%i\n",a); // ejecutable
+
+ENTERO CORTO 
+
+short e = -1;    // 2 bytes y su rango es desde -128 hasta 127 
+printf("%i\n",e) // ejecutable
+
+ENTERO LARGO
+
+long l = 5932; // 4 bytes y su rango es desde -2147483648 hasta 2147483647
+printf("%li\n",l); // ejecutable
+
+FLOAT
+
+float f = 72.534; // 4 bytes de memoria, (rango muy alto)
+printf("%f\n",f); // ejecutable
+si coloco printf("%.2f\n",f); <- esto me ayuda a que me de solo 2 decimales, dependiendo que numero coloquemos delante del punto son los decimales que me dara, redondea hacia arriba siempre y cuando sea mayor que 5
+
+
+NUMERO REAL
+
+double d = 12323.877658; // 8 bytes
+printf("%f\n",d);
+podemos hacer lo mismo que en float con el punto antes del procentaje.

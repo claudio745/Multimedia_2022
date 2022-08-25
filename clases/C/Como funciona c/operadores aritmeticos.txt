@@ -1,0 +1,93 @@
+#include<stdio.h>
+
+Suma
+
+int main()
+{
+    int num1;
+    int num2;
+    int resultado;
+    printf("ingrese el primer valor");
+    scanf("%d",&num1);
+    printf("ingrese el segundo valor");
+    scanf("%d",&num2);
+    resultado = num1 + num2;
+    printf("el resultado de la suma es:%d\n", resultado);
+    return 0;
+}
+
+Resta
+
+#include<stdio.h>
+
+int main()
+{
+    int num1;
+    int num2;
+    int resultado;
+    printf("ingrese el primer valor");
+    scanf("%d",&num1);
+    printf("ingrese el segundo valor");
+    scanf("%d",&num2);
+    resultado = num1 - num2;
+    printf("el resultado de la resta es:%d\n", resultado);
+    return 0;
+}
+
+
+Multiplicacion
+
+#include<stdio.h>
+
+int main()
+{
+    int num1;
+    int num2;
+    int resultado;
+    printf("ingrese el primer valor");
+    scanf("%d",&num1);
+    printf("ingrese el segundo valor");
+    scanf("%d",&num2);
+    resultado = num1 * num2;
+    printf("el resultado de la multiplicacion es:%d\n", resultado);
+    return 0;
+}
+
+Division
+
+
+#include<stdio.h>
+
+int main()
+{
+    int num1;
+    int num2;
+    int resultado;
+    printf("ingrese el primer valor");
+    scanf("%d",&num1);
+    printf("ingrese el segundo valor");
+    scanf("%d",&num2);
+    resultado = num1 / num2;
+    printf("el resultado de la division es:%d\n", resultado);
+    return 0;
+}
+
+
+Sacar Resto de una division
+
+
+#include<stdio.h>
+
+int main()
+{
+    int num1;
+    int num2;
+    int resultado;
+    printf("ingrese el primer valor");
+    scanf("%d",&num1);
+    printf("ingrese el segundo valor");
+    scanf("%d",&num2);
+    resultado = num1 % num2;
+    printf("el resultado del resto es:%d\n", resultado);
+    return 0;
+}

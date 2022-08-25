@@ -1,0 +1,52 @@
+ETL
+1.1.- ¿Dónde se depositan los datos extraídos mediante un proceso ETL?, ¿Cuál es la diferencia entre ellos?.
+
+R: Los datos son guardados en un DataWarehouse o en un DataMart, la    diferencia entre estos es que en el DataWareHouse se guardan grandes    cantidades de datos y en el DataMart se guardan datos especificos que    puedan servir para una organizacion o departamento particular. 
+
+1.2.- ¿Qué caracteriza a los datos encontrados durante un proceso ETL?
+
+R: cada dato es de diferentes origenes, esto quiere decir que pueden venir    de  partes u organizaciones diferentes, esto puede hacer que se    encuentren datos corruptos, duplicados, faltantes, etc.
+
+
+1.3.-¿Por qué la información generada por un proceso ETL es útil para la toma de decisiones?
+
+R: estos sirven ya que normalmente toman datos que serian desechados,    tambien permiten tener una vision global de la empresa, pudiendo asi    crear estrategias de marketing.
+
+1.4.-¿Cuál es la característica principal de cada etapa del proceso ETL?.
+
+R: Extraer: caracteristica principal seria recopilar los datos.
+   Transformar: caracteristica principal en este caso seria Analizar los    datos. 
+
+1.5- ¿Qué operaciones comprende cada etapa del proceso ETL?. Considerar imagen
+
+R: Extraccion: 
+	Conexion a origen de los datos
+	Interconexion de origen
+	Establecer periodos para leer los datos
+	Establecer bloqueos si se llegase a necesitar
+	tratar errores
+
+   Transformacion:
+	Normalizar los datos
+	depurar los datos
+	estandarizar los datos
+	simplificar los datos
+	limpieza de datos
+	complementar los datos
+
+  Carga:
+	Integrar los datos
+	Tratamiento de datos
+	volcado de datos 
+
+1.6.- Nombra las características comunes, para ser eficientes, de las etapas del proceso ETL.
+
+R: Adaptarse, entregar datos, transformar datos, adaptar diferentes plataformas, gestionar datos, monitorear y controlar los datos, diseño y entorno de desarrollo, migracion de datos y evolucionar.
+
+1.7.- Nombra tres beneficios o ventajas de los procesos ETL.
+
+R: aumenta la velocidad de desarrollo de un proceso, descentraliza el control y ejecucion de algun proceso, mayor agilidad en el negocio.
+
+1.8.- Nombra los contextos de los ejemplos presentados y el objetivo principal de la aplicación del proceso ETL.
+
+

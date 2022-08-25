@@ -1,0 +1,41 @@
+#include<stdio.h>					
+#include<conio.h>					
+int main()
+{
+	long int num,n,dig,sum,repeticion;										
+	printf("\n Calcular si el numero digitado es feliz");				
+	printf("ingrese el numero (1) si desea iniciar el proceso y (2) si desea cancelarlo\n");   
+	scanf("%d", &repeticion);
+	
+
+	while(repeticion==1){							
+		
+		printf("\n ingrese un numero: ");
+		scanf("%ld", &num);
+		n=num;
+		do{
+			sum=0;					
+		do{
+			dig=n%10;				
+			n=n/10;						
+			sum=sum+(dig*dig);		
+		}while(n!=0);				
+		
+		printf("sum=%d\n", sum);	
+		n=sum;
+		}while(n!= 1 && n!= 89);		
+	if(n==1){						
+		printf("\n%d Es un numero feliz\n", num);	
+	}else{											
+		printf("\n%d No es un numero feliz\n", num);	
+	}
+	printf("ingrese el numero (1) si desea continuar su programa, si desea cancelar el proceso ingrese (2)\n");	
+	scanf("%d", &repeticion);		
+	}
+	if(repeticion==2)				
+	{
+		printf("finalizando proceso, muchas gracias por participar\n");		
+	}
+	getch();		
+	return 0;
+}

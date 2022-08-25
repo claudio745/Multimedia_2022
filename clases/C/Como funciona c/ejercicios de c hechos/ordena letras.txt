@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int main(){
+	char cad[10];
+	char aux;
+	int i;
+	int j;
+	
+	printf("ingrese una cadena corta\n");
+	scanf("%[^\n]s", cad);
+	
+	for(i=0; cad[i]; i++)
+	{
+		for(j = 0; cad[j]; j++)
+		{
+			if(cad[j] > cad[i])
+			{
+				aux = cad[j];
+				cad[j] = cad[i];
+				cad[i] = aux;
+			}
+		}
+	}
+	printf("Su palabra ordenada es: %s\n", cad);
+	return 0;
+}

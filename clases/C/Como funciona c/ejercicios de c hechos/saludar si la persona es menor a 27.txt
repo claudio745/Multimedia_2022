@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+	printf("Iniciando proceso\n");
+	int x;
+	int edad;
+	int contador;
+	printf("Hola!, hazme el favor de ingresar tu edad, si eres mayor de 28 años el programa se detendra\n");
+	scanf("%d", &edad);
+	
+	if(edad<28)
+	{
+		printf("Saludos a todos :)\n");
+		contador = contador + 1;
+		do
+		{
+			printf("Ingresa tu edad\n");
+			scanf("%d", &x);
+			if (x<28)
+			{
+				printf("Saludos a todos :)\n");
+				contador = contador + 1;
+			}else
+			{
+				break;
+			}
+		}while(x<28);
+	}
+	printf("Las personas que saludaron fueron:%d\n", contador);
+	printf("Proceso finalizado, pulse cualquier tecla para salir\n");
+	return 0;	
+}
+

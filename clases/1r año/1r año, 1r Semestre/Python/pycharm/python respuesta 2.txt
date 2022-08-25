@@ -1,0 +1,276 @@
+print ("inicio")
+print (" inicio del programa")
+import random
+alumno_1 = []
+for i in range (1, 4):
+    x = random.uniform(1.0, 7)
+    alumno_1.append(x)
+alumno_2 = []
+for i in range (1, 4):
+    w = random.uniform(1.0, 7)
+    alumno_2.append(w)
+alumno_3 = []
+for i in range (1, 4):
+    q = random.uniform(1.0, 7)
+    alumno_3.append(q)
+alumno_4 = []
+for i in range (1, 4):
+    e = random.uniform(1.0, 7)
+    alumno_4.append(e)
+alumno_5 = []
+for i in range (1, 4):
+    r = random.uniform(1.0, 7)
+    alumno_5.append(r)
+alumno_6 = []
+for i in range (1, 4):
+    t = random.uniform(1.0, 7)
+    alumno_6.append(t)
+alumno_7 = []
+for i in range (1, 4):
+    y = random.uniform(1.0, 7)
+    alumno_7.append(y)
+alumno_8 = []
+for i in range (1, 4):
+    u = random.uniform(1.0, 7)
+    alumno_8.append(u)
+alumno_9 = []
+for i in range (1, 4):
+    o = random.uniform(1.0, 7)
+    alumno_9.append(o)
+alumno_10 = []
+for i in range (1, 4):
+    p = random.uniform(1.0, 7)
+    alumno_10.append(p)
+alumno_11 = []
+for i in range (1, 4):
+    a = random.uniform(1.0, 7)
+    alumno_11.append(a)
+alumno_12 = []
+for i in range (1, 4):
+    s = random.uniform(1.0, 7)
+    alumno_12.append(s)
+alumno_13 = []
+for i in range (1, 4):
+    d = random.uniform(1.0, 7)
+    alumno_13.append(d)
+alumno_14 = []
+for i in range (1, 4):
+    f = random.uniform(1.0, 7)
+    alumno_14.append(f)
+alumno_15 = []
+for i in range (1, 4):
+    g = random.uniform(1.0, 7)
+    alumno_15.append(g)
+alumno_16 = []
+for i in range (1, 4):
+    h = random.uniform(1.0, 7)
+    alumno_16.append(h)
+alumno_17 = []
+for i in range (1, 4):
+    j = random.uniform(1.0, 7)
+    alumno_17.append(j)
+alumno_18 = []
+for i in range (1, 4):
+    k = random.uniform(1.0, 7)
+    alumno_18.append(k)
+alumno_19 = []
+for i in range (1, 4):
+    l = random.uniform(1.0, 7)
+    alumno_19.append(l)
+alumno_20 = []
+for i in range (1, 4):
+    ñ = random.uniform(1.0, 7)
+    alumno_20.append(ñ)
+alumno_21 = []
+for i in range (1, 4):
+    z = random.uniform(1.0, 7)
+    alumno_21.append(z)
+alumno_22 = []
+for i in range (1, 4):
+    c = random.uniform(1.0, 7)
+    alumno_22.append(c)
+alumno_23 = []
+for i in range (1, 4):
+    v = random.uniform(1.0, 7)
+    alumno_23.append(v)
+alumno_24 = []
+for i in range (1, 4):
+    b = random.uniform(1.0, 7)
+    alumno_24.append(b)
+alumno_25 = []
+for i in range (1, 4):
+    n = random.uniform(1.0, 7)
+    alumno_25.append(n)
+alumno_26 = []
+for i in range (1, 4):
+    m = random.uniform(1.0, 7)
+    alumno_26.append(m)
+alumno_27 = []
+for i in range (1, 4):
+    qw = random.uniform(1.0, 7)
+    alumno_27.append(qw)
+alumno_28 = []
+for i in range (1, 4):
+    we = random.uniform(1.0, 7)
+    alumno_28.append(we)
+alumno_29 = []
+for i in range (1, 4):
+    er = random.uniform(1.0, 7)
+    alumno_29.append(er)
+alumno_30 = []
+for i in range (1, 4):
+    rt = random.uniform(1.0, 7)
+    alumno_30.append(rt)
+alumno_31 = []
+for i in range (1, 4):
+    ty = random.uniform(1.0, 7)
+    alumno_31.append(ty)
+alumno_32 = []
+for i in range (1, 4):
+    yu = random.uniform(1.0, 7)
+    alumno_32.append(yu)
+alumno_33 = []
+for i in range (1, 4):
+    op = random.uniform(1.0, 7)
+    alumno_33.append(op)
+alumno_34 = []
+for i in range (1, 4):
+    pa = random.uniform(1.0, 7)
+    alumno_34.append(pa)
+alumno_35 = []
+for i in range (1, 4):
+    ax = random.uniform(1.0, 7)
+    alumno_35.append(ax)
+alumno_36 = []
+for i in range (1, 4):
+    sd = random.uniform(1.0, 7)
+    alumno_36.append(sd)
+alumno_37 = []
+for i in range (1, 4):
+    df = random.uniform(1.0, 7)
+    alumno_37.append(df)
+alumno_38 = []
+for i in range (1, 4):
+    fg = random.uniform(1.0, 7)
+    alumno_38.append(fg)
+alumno_39 = []
+for i in range (1, 4):
+    gh = random.uniform(1.0, 7)
+    alumno_39.append(gh)
+alumno_40 = []
+for i in range (1, 4):
+    hj = random.uniform(1.0, 7)
+    alumno_40.append(hj)
+alumno_41 = []
+for i in range (1, 4):
+    jk = random.uniform(1.0, 7)
+    alumno_41.append(jk)
+alumno_42 = []
+for i in range (1, 4):
+    lk = random.uniform(1.0, 7)
+    alumno_42.append(lk)
+alumno_43 = []
+for i in range (1, 4):
+    zx = random.uniform(1.0, 7)
+    alumno_43.append(zx)
+alumno_44 = []
+for i in range (1, 4):
+    xc = random.uniform(1.0, 7)
+    alumno_44.append(xc)
+alumno_45 = []
+for i in range (1, 4):
+    cv = random.uniform(1.0, 7)
+    alumno_45.append(cv)
+
+promedio_1 = (alumno_1 [0] * 0.15) + (alumno_1 [1] * 0.25) + (alumno_1 [2] * 0.3)
+promedio_2 = (alumno_2 [0] * 0.15)+ (alumno_2 [1] * 0.25) + (alumno_2 [2] * 0.3)
+promedio_3 = (alumno_3 [0] * 0.15) + (alumno_3 [1] * 0.25) + (alumno_3 [2] * 0.3)
+promedio_4 = (alumno_4 [0] * 0.15) + (alumno_4 [1] * 0.25) + (alumno_4 [2] * 0.3)
+promedio_5 = (alumno_5 [0] * 0.15) + (alumno_5 [1] * 0.25) + (alumno_5 [2] * 0.3)
+promedio_6 = (alumno_6 [0] * 0.15) + (alumno_6 [1] * 0.25) + (alumno_6 [2] * 0.3)
+promedio_7 = (alumno_7 [0] * 0.15) + (alumno_7 [1] * 0.25) + (alumno_7 [2] * 0.3)
+promedio_8 = (alumno_8 [0] * 0.15) + (alumno_8 [1] * 0.25) + (alumno_8 [2] * 0.3)
+promedio_9 = (alumno_9 [0] * 0.15) + (alumno_9 [1] * 0.25) + (alumno_9 [2] * 0.3)
+promedio_10 = (alumno_10 [0] * 0.15) + (alumno_10 [1] *0.25) + (alumno_10 [2] * 0.3)
+promedio_11 = (alumno_11 [0] * 0.15) + (alumno_11 [1] * 0.25) + (alumno_11 [2] * 0.3)
+promedio_12 = (alumno_12 [0] * 0.15) + (alumno_12 [1] * 0.25) + (alumno_12 [2] * 0.3)
+promedio_13 = (alumno_13 [0] * 0.15) + (alumno_13 [1] * 0.25) + (alumno_13 [2] *0.3)
+promedio_14 = (alumno_14 [0] * 0.15) + (alumno_14 [1] * 0.25) + (alumno_14 [2] * 0.3)
+promedio_15 = (alumno_15 [0] * 0.15) + (alumno_15 [1] * 0.25) + (alumno_15 [2] * 0.3)
+promedio_16 = (alumno_16 [0] * 0.15) + (alumno_16 [1] * 0.25) + (alumno_16 [2] * 0.3) 
+promedio_17 = (alumno_17 [0] * 0.15) + (alumno_17 [1] * 0.25) + (alumno_17  [2] * 0.3)
+promedio_18 = (alumno_18 [0] * 0.15) + (alumno_18 [1] * 0.25) + (alumno_18 [2] * 0.3)
+promedio_19 = (alumno_19 [0] * 0.15) + (alumno_19 [1] * 0.25) + (alumno_19 [2] * 0.3)
+promedio_20 = (alumno_20 [0] * 0.15) + (alumno_20 [1] * 0.25) + (alumno_20 [2] * 0.3)
+promedio_21 = (alumno_21 [0] * 0.15) + (alumno_21 [1] * 0.25) + (alumno_21 [2] * 0.3)
+promedio_22 = (alumno_22 [0] * 0.15) + (alumno_22 [1] * 0.25) + (alumno_22 [2] * 0.3)
+promedio_23 = (alumno_23 [0] * 0.15) + (alumno_23 [1] * 0.25) + (alumno_23 [2] * 0.3)
+promedio_24 = (alumno_24 [0] * 0.15) + (alumno_24 [1] * 0.25) + (alumno_24 [2] * 0.3)
+promedio_25 = (alumno_25 [0] * 0.15) + (alumno_25 [1] * 0.25) + (alumno_25 [2] * 0.3)
+promedio_26 = (alumno_26 [0] * 0.15) + (alumno_26 [1] * 0.25) + (alumno_26 [2] * 0.3)
+promedio_27 = (alumno_27 [0] * 0.15) + (alumno_27 [1] * 0.25) + (alumno_27 [2] * 0.3)
+promedio_28 = (alumno_28 [0] * 0.15) + (alumno_28 [1] * 0.25) + (alumno_28 [2] * 0.3)
+promedio_29 = (alumno_29 [0] * 0.15) + (alumno_29 [1] * 0.25) + (alumno_29 [2] * 0.3)
+promedio_30 = (alumno_30 [0] * 0.15) + (alumno_30 [1] * 0.25) + (alumno_30 [2] * 0.3)
+promedio_31 = (alumno_31 [0] * 0.15) + (alumno_31 [1] * 0.25) + (alumno_31 [2] * 0.3)
+promedio_32 = (alumno_32 [0] * 0.15) + (alumno_32 [1] * 0.25) + (alumno_32 [2] * 0.3)
+promedio_33 = (alumno_33 [0] * 0.15) + (alumno_33 [1] * 0.25) + (alumno_33 [2] * 0.3)
+promedio_34 = (alumno_34 [0] * 0.15) + (alumno_34 [1] * 0.25) + (alumno_34 [2] * 0.3)
+promedio_35 = (alumno_35 [0] * 0.15) + (alumno_35 [1] * 0.25) + (alumno_35 [2] * 0.3)
+promedio_36 = (alumno_36 [0] * 0.15) + (alumno_36 [1] * 0.25) + (alumno_36 [2] * 0.3)
+promedio_37 = (alumno_37 [0] * 0.15) + (alumno_37 [1] * 0.25) + (alumno_37 [2] * 0.3)
+promedio_38 = (alumno_38 [0] * 0.15) + (alumno_38 [1] * 0.25) + (alumno_38 [2] * 0.3)
+promedio_39 = (alumno_39 [0] * 0.15) + (alumno_39 [1] * 0.25) + (alumno_39 [2] * 0.3)
+promedio_40 = (alumno_40 [0] * 0.15) + (alumno_40 [1] * 0.25) + (alumno_40 [2] * 0.3)
+promedio_41 = (alumno_41 [0] * 0.15) + (alumno_41 [1] * 0.25) + (alumno_41 [2] * 0.3)
+promedio_42 = (alumno_42 [0] * 0.15) + (alumno_42 [1] * 0.25) + (alumno_42 [2] * 0.3)
+promedio_43 = (alumno_43 [0] * 0.15) + (alumno_43 [1] * 0.25) + (alumno_43 [2] * 0.3)
+promedio_44 = (alumno_44 [0] * 0.15) + (alumno_44 [1] * 0.25) + (alumno_44 [2] * 0.3)
+promedio_45 = (alumno_45 [0] * 0.15) + (alumno_45 [1] * 0.25) + (alumno_45 [2] * 0.3)
+print ("el promedio de la persona n° 1 es:", promedio_1)
+print ("el promedio de la persona n° 2 es:", promedio_2)
+print ("el promedio de la persona n° 3 es:", promedio_3)
+print ("el promedio de la persona n° 4 es:", promedio_4)
+print ("el promedio de la persona n° 5 es:", promedio_5)
+print ("el promedio de la persona n° 6 es:", promedio_6)
+print ("el promedio de la persona n° 7 es:", promedio_7)
+print ("el promedio de la persona n° 8 es:", promedio_8)
+print ("el promedio de la persona n° 9 es:", promedio_9)
+print ("el promedio de la persona n° 10 es:", promedio_10)
+print ("el promedio de la persona n° 11 es:", promedio_11)
+print ("el promedio de la persona n° 12 es:", promedio_12)
+print ("el promedio de la persona n° 13 es:", promedio_13)
+print ("el promedio de la persona n° 14 es:", promedio_14)
+print ("el promedio de la persona n° 15 es:", promedio_15)
+print ("el promedio de la persona n° 16 es:", promedio_16)
+print ("el promedio de la persona n° 17 es:", promedio_17)
+print ("el promedio de la persona n° 18 es:", promedio_18)
+print ("el promedio de la persona n° 19 es:", promedio_19)
+print ("el promedio de la persona n° 20 es:", promedio_20)
+print ("el promedio de la persona n° 21 es:", promedio_21)
+print ("el promedio de la persona n° 22 es:", promedio_22)
+print ("el promedio de la persona n° 23 es:", promedio_23)
+print ("el promedio de la persona n° 24 es:", promedio_24)
+print ("el promedio de la persona n° 25 es:", promedio_25)
+print ("el promedio de la persona n° 26 es:", promedio_26)
+print ("el promedio de la persona n° 27 es:", promedio_27)
+print ("el promedio de la persona n° 28 es:", promedio_28)
+print ("el promedio de la persona n° 29 es:", promedio_29)
+print ("el promedio de la persona n° 30 es:", promedio_30)
+print ("el promedio de la persona n° 31 es:", promedio_31)
+print ("el promedio de la persona n° 32 es:", promedio_32)
+print ("el promedio de la persona n° 33 es:", promedio_33)
+print ("el promedio de la persona n° 34 es:", promedio_34)
+print ("el promedio de la persona n° 35 es:", promedio_35)
+print ("el promedio de la persona n° 36 es:", promedio_36)
+print ("el promedio de la persona n° 37 es:", promedio_37)
+print ("el promedio de la persona n° 38 es:", promedio_38)
+print ("el promedio de la persona n° 39 es:", promedio_39)
+print ("el promedio de la persona n° 40 es:", promedio_40)
+print ("el promedio de la persona n° 41 es:", promedio_41)
+print ("el promedio de la persona n° 42 es:", promedio_42)
+print ("el promedio de la persona n° 43 es:", promedio_43)
+print ("el promedio de la persona n° 44 es:", promedio_44)
+print ("el promedio de la persona n° 45 es:", promedio_45)
+
+print ("fin del proceso")
