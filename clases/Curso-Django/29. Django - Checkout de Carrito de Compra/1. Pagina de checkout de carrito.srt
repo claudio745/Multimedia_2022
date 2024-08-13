@@ -1,0 +1,1099 @@
+1
+00:00:00,390 --> 00:00:07,290
+En este capítulo vamos a trabajar dentro de la funcionalidad para hacer los pagos de los productos que
+
+2
+00:00:07,290 --> 00:00:09,960
+se encuentran en el carrito de compras.
+
+3
+00:00:10,970 --> 00:00:16,640
+Esto funcionalidad se le llama el check out y vas a poder ver esa interface cuando le des clic a ese
+
+4
+00:00:16,640 --> 00:00:20,210
+botón dentro del carrito de compras que dice pagar.
+
+5
+00:00:20,990 --> 00:00:25,970
+Si le damos clic en este momento me va a dar un error porque no existe aún ese template.
+
+6
+00:00:26,210 --> 00:00:31,280
+Vamos a trabajar entonces en la elaboración de ese template de placeholder checkout.
+
+7
+00:00:32,710 --> 00:00:38,750
+Vamos a Atton, vamos a la carpeta cards y dentro de la carpeta Cars nos ubicamos en el archivo en el
+
+8
+00:00:38,890 --> 00:00:41,620
+apartado pick in y vamos a crear un nuevo path.
+
+9
+00:00:43,670 --> 00:00:44,690
+Escribimos acá, Pat.
+
+10
+00:00:47,080 --> 00:00:49,020
+Suponemos que se va a llamar check out.
+
+11
+00:00:52,670 --> 00:01:00,010
+Que se las ponemos una coma y le ponemos su nombre a la función que trabajará este path, que también
+
+12
+00:01:00,020 --> 00:01:00,920
+va a ser el checkout.
+
+13
+00:01:06,630 --> 00:01:08,010
+Y al final siempre su cama.
+
+14
+00:01:09,770 --> 00:01:13,280
+Ahora vamos al archivo virus, que también está en la carpeta cards.
+
+15
+00:01:13,310 --> 00:01:13,970
+Lo abrimos.
+
+16
+00:01:14,480 --> 00:01:16,100
+Vamos a la parte final del archivo.
+
+17
+00:01:17,960 --> 00:01:18,290
+De aquí.
+
+18
+00:01:18,290 --> 00:01:23,810
+Al final vamos a crear una función DEF que va a tener nombre también check out.
+
+19
+00:01:25,980 --> 00:01:28,790
+Inclusive este rico es dos puntos.
+
+20
+00:01:30,160 --> 00:01:35,680
+Si le digo que hago un return hacia un render request como.
+
+21
+00:01:37,160 --> 00:01:42,500
+Este checkout va a ser una un template que va a encontrarse dentro de la carpeta store.
+
+22
+00:01:44,790 --> 00:01:49,980
+Iba a tener el nombre check out punto a html.
+
+23
+00:01:51,950 --> 00:01:53,960
+Vamos a crear este template.
+
+24
+00:01:55,060 --> 00:01:56,020
+Voy a copiar el nombre.
+
+25
+00:01:58,240 --> 00:01:59,620
+Y vamos a la carpeta Templates.
+
+26
+00:02:00,210 --> 00:02:01,150
+Aquí aparece autor.
+
+27
+00:02:01,810 --> 00:02:03,130
+Vamos a darle clic derecho Store.
+
+28
+00:02:04,090 --> 00:02:04,750
+Newfield.
+
+29
+00:02:06,040 --> 00:02:09,610
+Ya que damos el nombre checkout a HTML, le damos enter.
+
+30
+00:02:10,690 --> 00:02:12,210
+Por ahora lo voy a poner acá.
+
+31
+00:02:12,270 --> 00:02:13,270
+Un H2.
+
+32
+00:02:14,750 --> 00:02:15,250
+Check out.
+
+33
+00:02:15,890 --> 00:02:17,060
+Vamos a borrar los cambios.
+
+34
+00:02:17,090 --> 00:02:20,480
+Menú false all y vamos a probar la página.
+
+35
+00:02:21,520 --> 00:02:23,890
+Hemos abierto la página en Flash Card.
+
+36
+00:02:23,890 --> 00:02:25,780
+Es más, le voy a poner check out.
+
+37
+00:02:26,870 --> 00:02:32,390
+Es la hache y le damos enter y ya me está llevando a la página que acabo de crear.
+
+38
+00:02:33,050 --> 00:02:34,340
+Vamos nuevamente a Atom.
+
+39
+00:02:34,340 --> 00:02:36,830
+Voy a crear la interface gráfica para este checkout.
+
+40
+00:02:37,230 --> 00:02:38,120
+HTML.
+
+41
+00:02:38,690 --> 00:02:43,460
+Como es muy similar al car punto html, voy a entrar al HTML un momento.
+
+42
+00:02:44,720 --> 00:02:47,630
+Voy a seleccionar todo el código del HTML.
+
+43
+00:02:47,930 --> 00:02:48,380
+Copio.
+
+44
+00:02:49,740 --> 00:02:50,760
+Volvemos al check out.
+
+45
+00:02:52,630 --> 00:02:54,160
+Vamos a limpiarlo y acá pego.
+
+46
+00:02:56,460 --> 00:02:58,110
+Nos ubicamos en la parte superior.
+
+47
+00:02:58,410 --> 00:03:01,560
+Hay ciertas cosas que no van a necesitarse para el checkout.
+
+48
+00:03:01,860 --> 00:03:02,460
+Por ejemplo.
+
+49
+00:03:02,460 --> 00:03:03,270
+Esta condición.
+
+50
+00:03:04,700 --> 00:03:05,690
+El If it.
+
+51
+00:03:06,230 --> 00:03:08,510
+Voy a eliminarlo con su if i else.
+
+52
+00:03:10,490 --> 00:03:15,290
+Y si voy a la parte final, también tengo que quitarle este if.
+
+53
+00:03:16,660 --> 00:03:16,990
+Aquí.
+
+54
+00:03:18,170 --> 00:03:22,100
+Que termine en el blog Sección Tiff y aquí está el end if.
+
+55
+00:03:22,670 --> 00:03:24,710
+En la parte final lo vamos a quitar.
+
+56
+00:03:25,370 --> 00:03:33,140
+Ahora vamos a la parte superior y vamos a notar que aquí aparece un aside clásico elegí name.
+
+57
+00:03:33,560 --> 00:03:36,860
+Esto significa una distribución de nueve.
+
+58
+00:03:38,100 --> 00:03:41,640
+Imagina que la pantalla tiene 12 columnas en forma horizontal.
+
+59
+00:03:42,090 --> 00:03:45,780
+Aquí está indicándote que este aceite está tomando nueve.
+
+60
+00:03:46,020 --> 00:03:49,650
+Significa que para lo que sobra quedarían solo tres.
+
+61
+00:03:50,250 --> 00:03:51,390
+Por ese motivo.
+
+62
+00:03:52,340 --> 00:03:56,240
+Si vamos a la página y actualizamos un momento, me falta guardar los cambios.
+
+63
+00:03:56,690 --> 00:03:58,550
+Voy a borrar los cambios del safe all.
+
+64
+00:04:00,260 --> 00:04:01,970
+Ahora sí vamos a actualizar.
+
+65
+00:04:02,340 --> 00:04:04,070
+Y cómo te está comentando?
+
+66
+00:04:04,070 --> 00:04:09,860
+Lo que hace Bootstrap es dividir la pantalla de manera horizontal en dos columnas.
+
+67
+00:04:10,890 --> 00:04:18,420
+Haciendo esto, tú le puedes indicar a un tipo o a un cualquiera a un container que tome ocho, diez,
+
+68
+00:04:18,420 --> 00:04:20,370
+nueve, el número de columnas que tú quieras.
+
+69
+00:04:20,760 --> 00:04:24,060
+Y ese número es el que va a representar la interfaz gráfica.
+
+70
+00:04:24,420 --> 00:04:31,770
+En este caso está indicando que este que este tipo assault está tomando como nueve, significa que el
+
+71
+00:04:31,770 --> 00:04:33,780
+resto de la columna va a ser como tres.
+
+72
+00:04:34,350 --> 00:04:37,620
+Pero en este caso yo quiero modificarlo, yo quiero que sean seis, seis.
+
+73
+00:04:38,040 --> 00:04:44,340
+Quiero que solo se tomen seis columnas para esta interface gráfica y otras seis para esta tabla que
+
+74
+00:04:44,340 --> 00:04:45,390
+está en la parte derecha.
+
+75
+00:04:46,880 --> 00:04:50,530
+Volvemos al código aquí en este aceite con el chip.
+
+76
+00:04:51,710 --> 00:04:54,650
+Le voy a poner que sea como seis para que tome la mitad de los dos.
+
+77
+00:04:55,280 --> 00:04:57,230
+Vamos ahora a la parte inferior.
+
+78
+00:04:57,650 --> 00:04:59,060
+Veamos donde sale el aceite.
+
+79
+00:05:01,770 --> 00:05:04,290
+Aquí cerró el aceite y comienza otro aceite.
+
+80
+00:05:04,770 --> 00:05:06,930
+Y como puedes ver aquí estaba tomando un tres.
+
+81
+00:05:07,350 --> 00:05:09,270
+Pero le voy a indicar que hacía como seis.
+
+82
+00:05:11,110 --> 00:05:12,240
+Vamos a borrar los cambios.
+
+83
+00:05:12,250 --> 00:05:13,450
+Me Luffy el Seol!
+
+84
+00:05:15,160 --> 00:05:16,950
+Estamos en la página del checkout.
+
+85
+00:05:16,960 --> 00:05:19,760
+Voy a actualizar y mira, ya cambió la distribución.
+
+86
+00:05:19,780 --> 00:05:21,880
+Ahora sí son seis y seis.
+
+87
+00:05:21,880 --> 00:05:23,980
+En total, 12 columnas.
+
+88
+00:05:25,130 --> 00:05:25,950
+Volvemos a Hatton.
+
+89
+00:05:25,970 --> 00:05:27,410
+Quiero continuar evitándolo.
+
+90
+00:05:27,650 --> 00:05:34,760
+Vamos a la parte inferior, donde aparecen los href de los botones pagar y continúa comprando lo que
+
+91
+00:05:34,760 --> 00:05:35,390
+continúa.
+
+92
+00:05:35,390 --> 00:05:40,250
+Pero primeramente, notemos estos botones se encuentran en un container de este.
+
+93
+00:05:40,490 --> 00:05:44,720
+Este tipo es el container de botones y puede notar que termina aquí.
+
+94
+00:05:45,170 --> 00:05:50,150
+Lo vas a notar porque aparece una marca de color azul en la parte inferior del div.
+
+95
+00:05:51,530 --> 00:05:59,450
+Lo que yo quiero es que dentro de este container solamente aparezcan estos dos botones de pagar y continuar
+
+96
+00:05:59,450 --> 00:06:03,380
+comprando el resto, estos párrafos o DLC.
+
+97
+00:06:04,570 --> 00:06:05,500
+Quiero eliminarlos.
+
+98
+00:06:05,500 --> 00:06:07,120
+Entonces voy a seleccionarlos.
+
+99
+00:06:07,330 --> 00:06:12,270
+El resto de elementos que están dentro de este container Carbury.
+
+100
+00:06:12,640 --> 00:06:13,240
+Carbury.
+
+101
+00:06:13,720 --> 00:06:14,650
+Y lo voy a eliminar.
+
+102
+00:06:17,480 --> 00:06:19,070
+Vamos a guardar los cambios ahora.
+
+103
+00:06:19,120 --> 00:06:20,090
+Menú Falstaff all.
+
+104
+00:06:21,820 --> 00:06:23,020
+Y probamos en la página.
+
+105
+00:06:23,860 --> 00:06:24,790
+Estamos en la página.
+
+106
+00:06:24,790 --> 00:06:25,810
+Vamos a refrescar.
+
+107
+00:06:26,020 --> 00:06:28,750
+Y así es como quedaría por el momento.
+
+108
+00:06:29,650 --> 00:06:33,520
+Y aquí vamos a continuar los botones del carbón y de pagar y continuar comprando.
+
+109
+00:06:33,520 --> 00:06:37,000
+Pero voy a cambiarle este texto de pagar para que eso lo diga.
+
+110
+00:06:38,050 --> 00:06:39,850
+Ordenar los productos.
+
+111
+00:06:42,520 --> 00:06:44,140
+Vamos a la parte superior.
+
+112
+00:06:45,720 --> 00:06:47,370
+Aquí donde dice componente uno.
+
+113
+00:06:47,380 --> 00:06:49,350
+Es esto referencia en la parte de arriba?
+
+114
+00:06:50,500 --> 00:06:52,030
+Y aquí aparece un gif.
+
+115
+00:06:53,400 --> 00:06:55,200
+Un aceite, el top class.
+
+116
+00:06:55,470 --> 00:06:56,400
+Y aquí viene un table.
+
+117
+00:06:56,700 --> 00:06:58,680
+Lo que yo deseo es mover ese table.
+
+118
+00:06:58,740 --> 00:07:01,590
+Esta tabla que ves aquí hacia la parte derecha.
+
+119
+00:07:03,050 --> 00:07:03,920
+Por este motivo.
+
+120
+00:07:03,920 --> 00:07:05,270
+Mira esta tabla que ves aquí.
+
+121
+00:07:05,300 --> 00:07:07,200
+Voy a minimizarlo.
+
+122
+00:07:07,220 --> 00:07:09,110
+Dale clic a este signo.
+
+123
+00:07:10,500 --> 00:07:12,650
+Que apunta para abajo, que está a la altura del tablón.
+
+124
+00:07:12,690 --> 00:07:16,260
+Es así y se va a minimizar y se minimiza.
+
+125
+00:07:16,470 --> 00:07:22,020
+Entonces selecciona, selecciona todo esto, lo estable y dale un control X.
+
+126
+00:07:24,240 --> 00:07:25,760
+Y ahora vamos a la parte inferior.
+
+127
+00:07:25,770 --> 00:07:28,500
+Mira donde estaban los botones de ordenar los productos.
+
+128
+00:07:28,500 --> 00:07:31,800
+Continuó comprando dentro de este container de carbón.
+
+129
+00:07:31,800 --> 00:07:35,610
+Y aquí, y dentro del carbón y antes de los botones.
+
+130
+00:07:35,610 --> 00:07:36,900
+Aquí voy a poner un espacio.
+
+131
+00:07:37,880 --> 00:07:39,380
+Vamos a pegarlo contra el B.
+
+132
+00:07:40,210 --> 00:07:40,780
+Listo.
+
+133
+00:07:41,290 --> 00:07:41,830
+Ahora sí.
+
+134
+00:07:41,830 --> 00:07:43,900
+Vamos a ir a Menú File Safe All.
+
+135
+00:07:45,130 --> 00:07:48,250
+Vamos a la página a refrescar y ya.
+
+136
+00:07:48,250 --> 00:07:51,070
+La tabla se encuentra en la parte derecha.
+
+137
+00:07:52,150 --> 00:07:57,290
+En la parte izquierda voy a construir un formulario con la información del Billing Address, es decir,
+
+138
+00:07:57,290 --> 00:08:02,620
+la información donde yo tengo que hacer el envío de los productos o del producto que estoy comprando.
+
+139
+00:08:03,750 --> 00:08:05,940
+Por ese motivo vamos a la parte superior.
+
+140
+00:08:07,810 --> 00:08:10,420
+Y aquí en esta sección que dice Carbury.
+
+141
+00:08:10,600 --> 00:08:11,140
+Bueno, aquí está el.
+
+142
+00:08:12,590 --> 00:08:13,670
+Este es el lugar que me interesa.
+
+143
+00:08:13,880 --> 00:08:14,240
+Este es el.
+
+144
+00:08:16,550 --> 00:08:18,470
+Le ponemos un espaciado para que se note.
+
+145
+00:08:19,980 --> 00:08:21,430
+Y le vamos a escribir aquí el DIF.
+
+146
+00:08:22,640 --> 00:08:24,800
+El class que va a tener va a ser un kart.
+
+147
+00:08:25,670 --> 00:08:26,420
+Raya body.
+
+148
+00:08:28,720 --> 00:08:32,650
+Lo tenemos y adentro vamos a agregarle un h4.
+
+149
+00:08:35,490 --> 00:08:36,660
+Que tiene título.
+
+150
+00:08:40,180 --> 00:08:41,680
+Dirección de facturación.
+
+151
+00:08:44,530 --> 00:08:46,960
+Y aquí vamos a agregarle también.
+
+152
+00:08:47,960 --> 00:08:50,590
+Aquí le pegamos un class a este H4.
+
+153
+00:08:51,190 --> 00:08:52,570
+Vamos a ponerle un class.
+
+154
+00:08:54,030 --> 00:08:56,880
+Igual a Kart Tirol.
+
+155
+00:08:58,430 --> 00:09:02,420
+MB cuatro son estilos que ya vienen dentro del bootstrap.
+
+156
+00:09:03,610 --> 00:09:05,380
+Y también le voy a agregar aquí un form.
+
+157
+00:09:07,530 --> 00:09:09,970
+Por ahora no va a tener ningún class este form.
+
+158
+00:09:10,140 --> 00:09:17,940
+El action lo vamos a definir en un momento en blanco, pero ya entonces tienes este car body con el
+
+159
+00:09:17,940 --> 00:09:23,940
+título que va a tener el formulario, el panel del container y también he creado un objeto Form en su
+
+160
+00:09:23,940 --> 00:09:24,420
+interior.
+
+161
+00:09:24,870 --> 00:09:29,280
+Vamos a borrar los cambios del Safe Hall y veamos en la página.
+
+162
+00:09:29,310 --> 00:09:33,780
+Vamos a refrescar y mira, ya me aparece el título dentro del container.
+
+163
+00:09:34,590 --> 00:09:38,820
+A continuación vamos a agregar nuestra primera caja de texto dentro del formulario.
+
+164
+00:09:39,570 --> 00:09:42,630
+Entonces lo primero que tienes que hacer es crear un rojo.
+
+165
+00:09:43,350 --> 00:09:46,140
+Un DEF con el clase row div.
+
+166
+00:09:47,200 --> 00:09:47,980
+De aquí en clase.
+
+167
+00:09:48,010 --> 00:09:51,560
+Le vamos a poner que se trata de un Ford Row.
+
+168
+00:09:52,540 --> 00:09:53,230
+Una fila.
+
+169
+00:09:53,470 --> 00:10:01,300
+Estamos creando una fila primero y a continuación creamos otro UDIS que represente una columna de ese
+
+170
+00:10:01,300 --> 00:10:01,590
+rojo.
+
+171
+00:10:02,260 --> 00:10:05,530
+Por eso le ponemos School Form Raya Group.
+
+172
+00:10:06,590 --> 00:10:10,820
+Y en el interior vamos a agregar el control que va a tener el input text.
+
+173
+00:10:11,330 --> 00:10:17,810
+Este input, una caja de texto tiene también un label que representa el título del valor que vas a escribir.
+
+174
+00:10:18,200 --> 00:10:19,220
+Aquí escribimos Label.
+
+175
+00:10:20,800 --> 00:10:21,660
+Y le ponemos acá.
+
+176
+00:10:21,670 --> 00:10:23,620
+For en ese espacio en blanco por ahora.
+
+177
+00:10:24,840 --> 00:10:25,740
+Y le pongo nombre.
+
+178
+00:10:26,280 --> 00:10:29,010
+Y ahora la caja de texto lo voy a poner input.
+
+179
+00:10:29,850 --> 00:10:30,620
+Es una hipótesis.
+
+180
+00:10:30,630 --> 00:10:31,290
+Eso está bien.
+
+181
+00:10:31,890 --> 00:10:36,210
+En el nombre le voy a poner fish first name value.
+
+182
+00:10:36,440 --> 00:10:38,010
+No va a tener ningún value por ahora.
+
+183
+00:10:38,190 --> 00:10:40,980
+Le ponemos un class y este class tiene que ser un form.
+
+184
+00:10:43,000 --> 00:10:44,110
+Guión control.
+
+185
+00:10:45,240 --> 00:10:45,630
+Listo.
+
+186
+00:10:47,080 --> 00:10:47,860
+Por si acaso.
+
+187
+00:10:47,860 --> 00:10:51,250
+Estos dos estilos, te repito, son parte de Bootstrap.
+
+188
+00:10:51,700 --> 00:10:54,070
+Vamos a borrar todos los cambios del shell.
+
+189
+00:10:55,280 --> 00:10:56,240
+Probemos en la página.
+
+190
+00:10:57,410 --> 00:10:58,370
+Estamos en la página.
+
+191
+00:10:58,370 --> 00:11:01,370
+Refrescamos y mira, ya apareció la caja de texto.
+
+192
+00:11:02,410 --> 00:11:08,860
+Lo que deseo ahora es agregar una columna, una caja de texto que represente el apellido.
+
+193
+00:11:09,430 --> 00:11:11,110
+Tiene que estar aquí, al costado, de nombre.
+
+194
+00:11:12,450 --> 00:11:19,110
+Entonces, como quiero que esté en la misma fila, tiene que estar dentro de este formato, dentro del
+
+195
+00:11:19,290 --> 00:11:19,620
+RAW.
+
+196
+00:11:19,630 --> 00:11:26,310
+Por el momento sólo lo tengo aquí, a este input, a este cool Ford Group que tiene solo un input.
+
+197
+00:11:26,520 --> 00:11:30,510
+Voy a copiar a ese div que representa el Cool Ford Group.
+
+198
+00:11:30,960 --> 00:11:31,710
+Lo copiamos.
+
+199
+00:11:33,220 --> 00:11:33,930
+Ya lo pego.
+
+200
+00:11:34,690 --> 00:11:35,130
+Listo.
+
+201
+00:11:35,140 --> 00:11:36,520
+Entonces ahora tengo que.
+
+202
+00:11:36,520 --> 00:11:40,240
+Mi Form Road tiene dos elementos, un nombre.
+
+203
+00:11:40,240 --> 00:11:41,920
+Y este tiene que ser apellido.
+
+204
+00:11:44,010 --> 00:11:45,570
+Apellido o apellidos.
+
+205
+00:11:45,600 --> 00:11:49,080
+Le pongo apellidos y el nombre de la caja de texto?
+
+206
+00:11:49,260 --> 00:11:51,690
+Le voy a poner Last name.
+
+207
+00:11:53,490 --> 00:11:55,590
+Vamos a borrar los cambios del Safe hall.
+
+208
+00:11:57,280 --> 00:11:58,390
+Estamos en la página.
+
+209
+00:11:58,390 --> 00:11:59,350
+Voy a refrescar.
+
+210
+00:11:59,980 --> 00:12:01,150
+Y ahora si ya apareció.
+
+211
+00:12:01,200 --> 00:12:02,650
+Nombres y apellidos.
+
+212
+00:12:03,650 --> 00:12:09,440
+A continuación, necesito crear también cajas de texto que representen el email y el número telefónico.
+
+213
+00:12:10,640 --> 00:12:11,730
+Estamos en auto.
+
+214
+00:12:11,780 --> 00:12:13,940
+Entonces como este va a ser una nueva fila?
+
+215
+00:12:14,210 --> 00:12:15,590
+Lo que voy a hacer es simple.
+
+216
+00:12:15,590 --> 00:12:18,170
+Voy a copiar esta fila que he creado antes.
+
+217
+00:12:20,690 --> 00:12:22,880
+Vamos a darle un enter y acá lo pego.
+
+218
+00:12:24,320 --> 00:12:27,380
+Y aquí en vez de label nombre le vamos a poner.
+
+219
+00:12:28,390 --> 00:12:28,840
+Y me.
+
+220
+00:12:29,860 --> 00:12:32,230
+Y el nombre de la caja de texto va a ser email.
+
+221
+00:12:33,550 --> 00:12:37,630
+Y el tipo de la de texto no va a ser Tex sino que va a ser y.
+
+222
+00:12:39,200 --> 00:12:41,990
+Para el siguiente tiene que ser número de teléfono.
+
+223
+00:12:42,040 --> 00:12:43,190
+Le voy a poner aquí el teléfono.
+
+224
+00:12:44,990 --> 00:12:45,800
+Es un hipoteca.
+
+225
+00:12:45,850 --> 00:12:46,550
+Eso está bien.
+
+226
+00:12:47,930 --> 00:12:50,150
+De aquí el nombre en el name.
+
+227
+00:12:50,150 --> 00:12:51,500
+Le voy a poner que sea font.
+
+228
+00:12:55,270 --> 00:13:00,880
+Vamos a aprovechar para agregar otra fila, otro rough que represente la dirección.
+
+229
+00:13:01,100 --> 00:13:03,730
+Entonces voy a volver a copiar este row.
+
+230
+00:13:05,510 --> 00:13:07,850
+Le damos un enter y aquí pegamos nuevamente.
+
+231
+00:13:08,480 --> 00:13:10,100
+Le voy a poner acá dirección.
+
+232
+00:13:13,760 --> 00:13:16,700
+Si lo vas a poner tipo este es un texto Tex.
+
+233
+00:13:17,390 --> 00:13:21,650
+El nombre le vamos a poner que diga en este caso address.
+
+234
+00:13:22,960 --> 00:13:24,100
+La raya uno.
+
+235
+00:13:25,850 --> 00:13:26,240
+Listo.
+
+236
+00:13:27,230 --> 00:13:28,820
+El siguiente le voy a poner.
+
+237
+00:13:31,190 --> 00:13:32,450
+Detalles, dirección.
+
+238
+00:13:34,650 --> 00:13:35,430
+Y el nombre.
+
+239
+00:13:35,610 --> 00:13:39,290
+Le vamos a decir que sea Address Line.
+
+240
+00:13:39,930 --> 00:13:40,350
+Dos.
+
+241
+00:13:43,030 --> 00:13:48,280
+Y también vamos a crear otro fondo para la ciudad y el departamento al cual pertenece.
+
+242
+00:13:48,700 --> 00:13:49,950
+Vamos a copiar este home room.
+
+243
+00:13:51,440 --> 00:13:59,630
+Damos un enter y acá le voy a poner el nombre name del input, la vamos a poner que sea city.
+
+244
+00:14:03,080 --> 00:14:05,690
+En el siguiente departamento.
+
+245
+00:14:08,450 --> 00:14:10,580
+Pero le vamos a poner el nombre y name.
+
+246
+00:14:12,160 --> 00:14:12,700
+Estate.
+
+247
+00:14:14,930 --> 00:14:17,090
+Y también nos falta el país de envío.
+
+248
+00:14:17,450 --> 00:14:21,740
+Estamos dentro de este informe que tiene ciudad y tiene departamento.
+
+249
+00:14:22,280 --> 00:14:25,280
+Voy a aprovechar para que en esta fila existan tres controles.
+
+250
+00:14:25,610 --> 00:14:27,860
+Voy a copiar este control de departamento.
+
+251
+00:14:28,640 --> 00:14:29,570
+Digamos un enter.
+
+252
+00:14:30,410 --> 00:14:31,190
+Y pegamos.
+
+253
+00:14:31,190 --> 00:14:34,550
+Y aquí, en vez de departamento, le voy a poner país.
+
+254
+00:14:35,600 --> 00:14:38,840
+Y el nombre voy a ponerle que sea country.
+
+255
+00:14:41,190 --> 00:14:48,450
+Finalmente vamos a crear otro control para que tenga un textarea, para que ponga la descripción de
+
+256
+00:14:48,450 --> 00:14:48,990
+la orden.
+
+257
+00:14:49,230 --> 00:14:50,550
+Así que vamos a hacer un div.
+
+258
+00:14:53,560 --> 00:14:58,420
+A quién le vamos a poner este glass faro a mano?
+
+259
+00:14:59,080 --> 00:15:00,370
+También le ponemos otro div.
+
+260
+00:15:00,880 --> 00:15:08,260
+Este foro si solamente es un foro le vamos a poner y ahora vamos a agregarle un label.
+
+261
+00:15:11,520 --> 00:15:13,320
+Este label lo vamos a poner aquí.
+
+262
+00:15:14,760 --> 00:15:16,170
+Descripción de la orden.
+
+263
+00:15:20,200 --> 00:15:22,030
+Y le provoca textarea.
+
+264
+00:15:23,960 --> 00:15:26,660
+El nombre que le voy a dar es Order not.
+
+265
+00:15:28,290 --> 00:15:28,890
+Rous.
+
+266
+00:15:29,280 --> 00:15:35,790
+La cantidad de filas que va a tener textarea va a ser dos columnas, no le voy a poner columnas, lo
+
+267
+00:15:35,790 --> 00:15:39,840
+que si lo voy a poner es un Klass, que sea un Ford Control.
+
+268
+00:15:41,000 --> 00:15:41,450
+Listo.
+
+269
+00:15:43,880 --> 00:15:45,080
+Vamos a borrar los cambios.
+
+270
+00:15:45,110 --> 00:15:47,780
+Menú File Safe All y vamos a probar.
+
+271
+00:15:48,740 --> 00:15:49,720
+Estamos en la página.
+
+272
+00:15:49,730 --> 00:15:50,600
+Voy a actualizar.
+
+273
+00:15:51,660 --> 00:15:57,330
+Y mira cómo ya me apareció todo el formulario de dirección de facturación, la descripción de la orden
+
+274
+00:15:57,330 --> 00:16:04,350
+ciudad, departamento, país, etcétera Vamos a continuar en el siguiente capítulo agregando la lógica
+
+275
+00:16:04,350 --> 00:16:05,550
+a este template.

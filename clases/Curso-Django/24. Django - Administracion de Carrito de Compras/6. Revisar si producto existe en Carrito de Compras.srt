@@ -1,0 +1,987 @@
+1
+00:00:00,600 --> 00:00:03,300
+Vamos a continuar trabajando en nuestro carrito de compras.
+
+2
+00:00:03,600 --> 00:00:08,940
+Por ejemplo, qué pasaría si no tuviera ningún item dentro de esta página?
+
+3
+00:00:09,780 --> 00:00:11,850
+Por ejemplo, voy a eliminar esta computadora de stop.
+
+4
+00:00:13,130 --> 00:00:14,380
+Y ya no tengo ningún elemento.
+
+5
+00:00:14,540 --> 00:00:16,510
+No quisiera que se muestre esta tabla vacía.
+
+6
+00:00:16,520 --> 00:00:22,090
+Lo que quiero que se muestre es un mensaje indicándome que el carrito de compras está vacío.
+
+7
+00:00:22,100 --> 00:00:23,870
+Vamos a trabajar en esa lógica.
+
+8
+00:00:24,740 --> 00:00:25,990
+Estamos dentro de Atom.
+
+9
+00:00:26,000 --> 00:00:31,280
+Vamos a ir a la carpeta Templates Store y al archivo carpeta HTML.
+
+10
+00:00:32,910 --> 00:00:37,250
+Aquí está el bucle que he utilizado para poder imprimir los Cat Card Items.
+
+11
+00:00:37,800 --> 00:00:45,000
+A continuación sigue el tipo Ori y luego sobre él un poco más arriba aparece un tr y aparece un div
+
+12
+00:00:45,570 --> 00:00:50,640
+class en rojo con que viene a continuación de un componente con un comentario.
+
+13
+00:00:51,210 --> 00:00:54,660
+Lo que voy a hacer es que este div class row.
+
+14
+00:00:56,260 --> 00:01:02,440
+Sea condicionado, aparezca solo si Caritas es diferente de vacío.
+
+15
+00:01:03,040 --> 00:01:05,340
+Entonces mira lo que voy a hacer para que se note mejor.
+
+16
+00:01:05,350 --> 00:01:07,060
+Voy a minimizar este div clase.
+
+17
+00:01:08,540 --> 00:01:10,130
+Que aparece esta flechita a la vez.
+
+18
+00:01:10,790 --> 00:01:16,190
+Dale click y minimizamos todo ese click del claustro y sobre él.
+
+19
+00:01:18,740 --> 00:01:20,390
+Vamos a poner unas.
+
+20
+00:01:20,390 --> 00:01:21,200
+Unas llaves.
+
+21
+00:01:23,040 --> 00:01:24,330
+Sino de porcentajes.
+
+22
+00:01:25,740 --> 00:01:29,150
+Dado la condición if not care items.
+
+23
+00:01:29,190 --> 00:01:30,040
+Si no hay.
+
+24
+00:01:30,060 --> 00:01:34,080
+Si no existen items, entonces que haga esto.
+
+25
+00:01:35,270 --> 00:01:39,720
+En caso contrario aprovecho para poner el de Chávez.
+
+26
+00:01:39,740 --> 00:01:40,640
+Sino el porcentaje.
+
+27
+00:01:43,160 --> 00:01:45,620
+En caso contrario que mi prima este dif.
+
+28
+00:01:47,110 --> 00:01:47,520
+Listo.
+
+29
+00:01:47,530 --> 00:01:49,900
+Y aquí, a continuación, vamos a cerrar.
+
+30
+00:01:50,970 --> 00:01:54,960
+Le ponemos aquí este Chávez.
+
+31
+00:01:56,970 --> 00:01:58,710
+Y también signo de porcentaje.
+
+32
+00:02:00,130 --> 00:02:01,170
+Y el if.
+
+33
+00:02:01,720 --> 00:02:02,440
+Perfecto.
+
+34
+00:02:03,040 --> 00:02:08,260
+Pero aquí si no tiene carrito, si no tiene elementos, el carrito de compras imprime un mensaje en
+
+35
+00:02:08,260 --> 00:02:11,950
+caso contrario, que significará que sí, tengo elementos y voy a imprimir la tabla.
+
+36
+00:02:12,520 --> 00:02:13,930
+Aquí vamos a poner el mensaje.
+
+37
+00:02:14,950 --> 00:02:16,990
+Vamos a poner aquí un H two.
+
+38
+00:02:19,530 --> 00:02:21,930
+Y el texto le digo el carrito de compras.
+
+39
+00:02:23,900 --> 00:02:24,650
+Está vacío.
+
+40
+00:02:26,710 --> 00:02:32,140
+Y también quiero que el usuario vea un link que le indique que pueda seguir comprando, que escoja un
+
+41
+00:02:32,140 --> 00:02:34,570
+producto a agregar al carrito de compras.
+
+42
+00:02:35,380 --> 00:02:38,440
+Entonces aquí le voy a dar un enter y le pongo ver.
+
+43
+00:02:41,010 --> 00:02:42,290
+Y voy a colocar un diez.
+
+44
+00:02:45,590 --> 00:02:46,340
+Ya está bien.
+
+45
+00:02:47,030 --> 00:02:48,770
+Vamos a cerrarlo también.
+
+46
+00:02:52,370 --> 00:02:54,260
+A este gif le voy a poner un class.
+
+47
+00:02:56,730 --> 00:02:58,140
+Contact Center.
+
+48
+00:03:00,460 --> 00:03:05,560
+Y aquí voy a colocar el link, el botón para poder redireccionar a la página store.
+
+49
+00:03:10,720 --> 00:03:12,700
+El texto del link va a ser.
+
+50
+00:03:14,170 --> 00:03:15,430
+Continúa comprando.
+
+51
+00:03:17,950 --> 00:03:20,920
+Y el href me debe llevar hacia la pagina store.
+
+52
+00:03:21,920 --> 00:03:25,700
+Qué le pongo Chávez sino de porcentajes y llamo a él?
+
+53
+00:03:26,300 --> 00:03:27,480
+Y entre apóstrofes.
+
+54
+00:03:27,500 --> 00:03:30,440
+Le digo que vaya al Path de Store.
+
+55
+00:03:31,490 --> 00:03:32,340
+Lo tenemos listo.
+
+56
+00:03:32,360 --> 00:03:34,190
+Voy a borrar los cambios de Newfield Hall.
+
+57
+00:03:35,440 --> 00:03:36,700
+Refrescamos la página.
+
+58
+00:03:38,150 --> 00:03:39,320
+Y ya me apareció aquí.
+
+59
+00:03:39,590 --> 00:03:41,990
+Continúa comprando, pero aquí tengo un problema.
+
+60
+00:03:41,990 --> 00:03:44,720
+Debería aparecer un botón, un formato de botón.
+
+61
+00:03:45,020 --> 00:03:47,060
+Y este texto del carrito de compras está vacío.
+
+62
+00:03:47,060 --> 00:03:48,470
+También debería estar centrado.
+
+63
+00:03:48,950 --> 00:03:49,910
+Vamos a arreglarlo.
+
+64
+00:03:51,030 --> 00:03:55,620
+Primero para centrarlo, pues había utilizado siempre el Class Text Center.
+
+65
+00:03:55,650 --> 00:03:56,400
+Voy a copiarlo.
+
+66
+00:03:57,850 --> 00:03:59,290
+Y se lo agregó al H2O.
+
+67
+00:04:00,270 --> 00:04:01,950
+Classic Tex Center perfecto.
+
+68
+00:04:02,340 --> 00:04:08,250
+Y aqui para el link voy a indicarle tambien un class para que tenga forma de bottom class, un estilo
+
+69
+00:04:08,250 --> 00:04:08,670
+de bottom.
+
+70
+00:04:09,150 --> 00:04:13,140
+Entonces le pongo class igual a btn espacio btn.
+
+71
+00:04:14,810 --> 00:04:15,890
+Raya primario.
+
+72
+00:04:18,280 --> 00:04:18,940
+Tenemos listo.
+
+73
+00:04:18,940 --> 00:04:20,230
+Menú Falstaff all.
+
+74
+00:04:21,840 --> 00:04:23,100
+Y vamos a probar la página.
+
+75
+00:04:24,480 --> 00:04:25,440
+Refrescamos.
+
+76
+00:04:26,100 --> 00:04:27,360
+Ahora sí, ya se ve.
+
+77
+00:04:27,720 --> 00:04:29,640
+El carrito de compras está vacío.
+
+78
+00:04:29,640 --> 00:04:33,120
+Y si le doy clic a este botón, me debería llevar al la página de Store.
+
+79
+00:04:34,110 --> 00:04:35,500
+Está muy bien la página de sur.
+
+80
+00:04:35,520 --> 00:04:37,980
+Se pueden ver todos los productos que puedo seleccionar.
+
+81
+00:04:37,980 --> 00:04:43,200
+Por ejemplo, voy a seleccionar darle clic a este árbol, haz clic aquí.
+
+82
+00:04:43,210 --> 00:04:49,950
+Vamos a la página de talla del Pods y quiero agregarlo al carrito de este botón, agregar al shopping
+
+83
+00:04:49,950 --> 00:04:56,310
+card, al carrito de compras y ya se agregó y ya te está apareciendo el precio de cada uno de estos
+
+84
+00:04:56,310 --> 00:05:01,530
+servos, el precio total y también el impuesto y el total a pagar.
+
+85
+00:05:02,340 --> 00:05:07,950
+Si yo actualizo también puedo indicarle aquí la cantidad de cuerpos que quiero comprar y va a actualizarse
+
+86
+00:05:07,950 --> 00:05:12,060
+dinámicamente el total, el impuesto y el precio total.
+
+87
+00:05:14,020 --> 00:05:20,050
+Y si lo quiero comprar vamos a darle click al botón Eliminar y automáticamente se va y ya me muestra
+
+88
+00:05:20,050 --> 00:05:21,480
+de nuevo el carrito de compras.
+
+89
+00:05:21,490 --> 00:05:22,150
+Está vacío.
+
+90
+00:05:22,360 --> 00:05:23,560
+Puede seguir comprando.
+
+91
+00:05:24,130 --> 00:05:24,730
+Perfecto.
+
+92
+00:05:25,240 --> 00:05:32,110
+Algo que también quiero trabajar es si un producto que yo estoy seleccionando ya pertenece a un carrito
+
+93
+00:05:32,110 --> 00:05:35,380
+de compras, esté incluido dentro del carrito de compras.
+
+94
+00:05:36,220 --> 00:05:41,530
+Entonces vamos a trabajar este proceso dentro del método Product Retail.
+
+95
+00:05:42,630 --> 00:05:43,800
+Estamos en Atton.
+
+96
+00:05:44,160 --> 00:05:47,160
+Vamos ahora a la carpeta Store dentro de Store.
+
+97
+00:05:47,160 --> 00:05:55,350
+Vamos a ir al archivo Buscar PY y aquí vas a encontrar la función Product Detail.
+
+98
+00:05:57,220 --> 00:06:04,210
+Aquí tengo que agregar una lógica para saber si este producto pertenece e se encuentra ya dentro de
+
+99
+00:06:04,210 --> 00:06:05,410
+un carrito de compras.
+
+100
+00:06:06,430 --> 00:06:08,310
+Entonces en la sección del Tri.
+
+101
+00:06:09,070 --> 00:06:10,610
+Luego de esta línea de single product.
+
+102
+00:06:11,840 --> 00:06:12,890
+Vamos a agregar.
+
+103
+00:06:14,270 --> 00:06:16,220
+Bueno, la variable que voy a llamar in cart.
+
+104
+00:06:17,610 --> 00:06:19,650
+Igual a card.
+
+105
+00:06:19,710 --> 00:06:24,300
+Item paint object punto filter.
+
+106
+00:06:25,570 --> 00:06:30,310
+Y hacemos la búsqueda de este producto dentro del carrito de compras.
+
+107
+00:06:31,360 --> 00:06:32,740
+Por eso aquí le pongo CAR.
+
+108
+00:06:32,770 --> 00:06:34,780
+Primeramente voy a buscar por el Heidy.
+
+109
+00:06:35,950 --> 00:06:42,580
+Para poder obtener la propiedad car id del objeto cart del objeto car item.
+
+110
+00:06:44,450 --> 00:06:50,780
+Este objeto que estoy aquí instanciado, tengo que ponerle dos rayas para abajo para acceder a sus propiedades
+
+111
+00:06:51,290 --> 00:06:52,580
+desde este contexto.
+
+112
+00:06:53,300 --> 00:06:57,560
+Entonces, haciendo estas doble rayas para abajo, ya puedo indicarle que propiedad es la que quiero
+
+113
+00:06:57,560 --> 00:07:03,980
+obtener, que es Card, y de esta es la propiedad para instanciar al objeto.
+
+114
+00:07:04,970 --> 00:07:05,390
+Cart.
+
+115
+00:07:07,550 --> 00:07:13,910
+Y esto quiero que se compare si es igual, si pertenece al kart.
+
+116
+00:07:14,480 --> 00:07:16,190
+Por eso llamo a esta función.
+
+117
+00:07:16,190 --> 00:07:19,340
+Raya para abajo y que anteriormente hemos desarrollado.
+
+118
+00:07:19,640 --> 00:07:21,560
+Y esta me va a pedir el objeto.
+
+119
+00:07:22,580 --> 00:07:23,180
+Request.
+
+120
+00:07:25,160 --> 00:07:30,590
+También algo muy importante que necesito es el product comprar por el product actual.
+
+121
+00:07:30,770 --> 00:07:33,290
+Entonces le digo Product es igual.
+
+122
+00:07:33,290 --> 00:07:33,650
+A quién?
+
+123
+00:07:33,950 --> 00:07:35,350
+Al single product.
+
+124
+00:07:35,390 --> 00:07:40,010
+Este objeto, single Product es el que estoy obteniendo a en esta línea por si acaso.
+
+125
+00:07:41,240 --> 00:07:48,380
+Entonces estoy creando un query, una consulta a la base de datos para obtener para saber si existe
+
+126
+00:07:48,380 --> 00:07:50,420
+un producto dentro de ese carrito de compras.
+
+127
+00:07:50,570 --> 00:07:56,360
+Si el actual producto que está ingresando a esta función está dentro de un carrito de compras.
+
+128
+00:07:57,690 --> 00:08:01,030
+Entonces yo no necesito realmente obtener el objeto producto aquí.
+
+129
+00:08:01,050 --> 00:08:08,820
+Lo que necesito es obtener un flag que me diga si esta variable in cart es verdadera o es falsa, es
+
+130
+00:08:08,820 --> 00:08:09,780
+true o false.
+
+131
+00:08:10,880 --> 00:08:18,000
+Por ese motivo, a toda esta consulta que he creado lo voy a llamar con un punto EXIST.
+
+132
+00:08:18,500 --> 00:08:22,820
+Si existe un record, si devuelve un record, entonces va a ser true.
+
+133
+00:08:23,270 --> 00:08:25,430
+En caso contrario, va a ser false.
+
+134
+00:08:27,310 --> 00:08:32,890
+Algo también muy interesante es que estoy aquí trabajando con el car item y este car item tengo que
+
+135
+00:08:32,890 --> 00:08:35,200
+importarlo en la parte superior.
+
+136
+00:08:35,500 --> 00:08:36,640
+Vamos a la parte superior.
+
+137
+00:08:36,640 --> 00:08:37,240
+Y aquí.
+
+138
+00:08:38,390 --> 00:08:39,710
+Debajo del front category.
+
+139
+00:08:39,710 --> 00:08:40,790
+Le voy a poner from.
+
+140
+00:08:42,470 --> 00:08:44,320
+Que le ponemos cards.
+
+141
+00:08:44,590 --> 00:08:46,220
+Punto Models.
+
+142
+00:08:47,800 --> 00:08:50,440
+Import cart item.
+
+143
+00:08:52,400 --> 00:08:55,010
+También voy a anotar otra cosa aquí en el hospital.
+
+144
+00:08:55,460 --> 00:08:58,640
+Estoy llamando a esta función Card y Aid.
+
+145
+00:08:59,540 --> 00:09:02,810
+A esta función también tengo que importarla, de lo contrario me va a dar errores.
+
+146
+00:09:03,140 --> 00:09:04,610
+Vamos a la parte superior.
+
+147
+00:09:07,030 --> 00:09:14,740
+Y aquí le voy a poner from cards bus import a la función card heidy.
+
+148
+00:09:16,170 --> 00:09:16,980
+Lo tenemos.
+
+149
+00:09:19,780 --> 00:09:20,500
+A continuación.
+
+150
+00:09:20,500 --> 00:09:26,170
+Entonces vamos a agregar esta variable booleana dentro del diccionario index.
+
+151
+00:09:26,980 --> 00:09:34,450
+Así que aquí le ponemos in cart un momento entre apóstrofe y card igual a este valor hincar y una coma.
+
+152
+00:09:34,840 --> 00:09:35,530
+Perfecto.
+
+153
+00:09:35,830 --> 00:09:38,920
+Vamos a ir al menú fiel y guardamos todos los cambios.
+
+154
+00:09:39,920 --> 00:09:43,160
+Vamos ahora hacia el templete que representa el cartel.
+
+155
+00:09:43,550 --> 00:09:45,410
+Vamos a la carpeta Templates.
+
+156
+00:09:45,650 --> 00:09:50,390
+Aquí va a aparecer dentro del store el product Taylor HTML.
+
+157
+00:09:51,050 --> 00:09:51,830
+Voy a maximizar.
+
+158
+00:09:53,130 --> 00:09:56,820
+Y vamos ahora a la sección de evaluación del stock.
+
+159
+00:09:57,120 --> 00:09:58,010
+Es justamente acá.
+
+160
+00:09:58,410 --> 00:09:58,950
+Más o menos.
+
+161
+00:09:58,950 --> 00:10:00,930
+Está en la línea 70 72.
+
+162
+00:10:01,680 --> 00:10:04,050
+Aquí aparece esta condición que antes se había creado.
+
+163
+00:10:04,350 --> 00:10:11,260
+Si el producto tiene stock o no, si no lo tiene, pues iba a imprimir un producto fuera de stock.
+
+164
+00:10:11,310 --> 00:10:11,940
+Recuerdas?
+
+165
+00:10:13,110 --> 00:10:17,880
+En caso contrario, iba a imprimir este botón Agregar al Shopping Card.
+
+166
+00:10:18,900 --> 00:10:21,330
+Aquí dentro, este es donde voy a agregar.
+
+167
+00:10:21,330 --> 00:10:22,590
+Voy a poner unos espaciados.
+
+168
+00:10:23,520 --> 00:10:24,720
+Es donde voy a agregar.
+
+169
+00:10:25,630 --> 00:10:28,620
+La condición para saber si el producto pertenece.
+
+170
+00:10:28,650 --> 00:10:31,270
+Se encuentra dentro del carrito de compras.
+
+171
+00:10:31,870 --> 00:10:34,780
+Entonces aquí vamos a colocar las llaves.
+
+172
+00:10:36,120 --> 00:10:37,410
+Sino de porcentajes.
+
+173
+00:10:38,470 --> 00:10:40,330
+Y ponemos if.
+
+174
+00:10:41,570 --> 00:10:42,140
+Hincar.
+
+175
+00:10:42,170 --> 00:10:43,640
+Así se llama la variable que he definido.
+
+176
+00:10:44,640 --> 00:10:47,880
+Si existe este infarto, entonces haz lo siguiente.
+
+177
+00:10:48,780 --> 00:10:52,770
+En caso contrario, aquí le ponemos un enlace entre llaves y porcentajes.
+
+178
+00:10:53,870 --> 00:10:54,290
+El.
+
+179
+00:10:55,790 --> 00:10:56,570
+Haz lo siguiente.
+
+180
+00:10:56,630 --> 00:11:02,300
+En caso contrario, lo que quiero es que me imprima este botón, el botón de agregar al carrito de compras
+
+181
+00:11:02,420 --> 00:11:05,810
+que ya existe y luego que se cierre.
+
+182
+00:11:07,520 --> 00:11:09,230
+Pero hemos cabo and if.
+
+183
+00:11:10,340 --> 00:11:10,700
+Listo.
+
+184
+00:11:11,550 --> 00:11:11,790
+Bien.
+
+185
+00:11:11,790 --> 00:11:12,480
+Pero si.
+
+186
+00:11:12,840 --> 00:11:14,690
+Pero si ya está en el carrito de compras.
+
+187
+00:11:14,700 --> 00:11:19,740
+Lo que quiero es que me aparezca un botón que me diga que ya está en el carrito de compras.
+
+188
+00:11:19,740 --> 00:11:20,790
+Producto agregado.
+
+189
+00:11:21,710 --> 00:11:23,780
+Agregado el carrito lo podemos mover si quieres.
+
+190
+00:11:24,530 --> 00:11:27,800
+Entonces como es muy similar el botón, voy a copiar este botón ya existente.
+
+191
+00:11:28,230 --> 00:11:29,270
+Esta línea la copio.
+
+192
+00:11:30,190 --> 00:11:31,030
+Y la voy a poner acá.
+
+193
+00:11:33,020 --> 00:11:34,580
+En este caso el href.
+
+194
+00:11:34,940 --> 00:11:38,510
+Yo no quiero que llegue a ningún lado, solamente quiero que muestre que ya está agregado.
+
+195
+00:11:38,510 --> 00:11:43,040
+Por eso voy a borrar su href y le coloco el signo de numeral.
+
+196
+00:11:43,320 --> 00:11:43,700
+Listo.
+
+197
+00:11:45,010 --> 00:11:51,100
+El class va a ser un BTN, pero en este caso es BTN success para que se diferencie del anterior del
+
+198
+00:11:51,100 --> 00:11:53,140
+primary btn success.
+
+199
+00:11:54,390 --> 00:11:55,370
+El span clase text.
+
+200
+00:11:55,380 --> 00:11:56,310
+Cuál va a ser el texto?
+
+201
+00:11:57,300 --> 00:11:57,950
+Voy a agregarle.
+
+202
+00:11:58,140 --> 00:11:58,980
+Voy a indicarle qué?
+
+203
+00:12:01,960 --> 00:12:04,330
+Producto agregado al carrito.
+
+204
+00:12:07,380 --> 00:12:08,460
+Así lo voy a poner.
+
+205
+00:12:09,290 --> 00:12:11,720
+Y el icono que lo va a representar.
+
+206
+00:12:11,720 --> 00:12:14,900
+Quiero que sea un check, un signo de V, como que ya está listo.
+
+207
+00:12:15,260 --> 00:12:20,590
+Así que aquí, en vez de este I class fast fa, le voy a poner fa rajat.
+
+208
+00:12:20,600 --> 00:12:20,990
+Check.
+
+209
+00:12:21,710 --> 00:12:22,160
+Listo.
+
+210
+00:12:24,740 --> 00:12:31,160
+También quiero que aparezca otra URL, pero en este caso estaré l que me permita que me lleve hacia
+
+211
+00:12:31,160 --> 00:12:32,090
+el carrito de compras.
+
+212
+00:12:32,090 --> 00:12:33,470
+La página del carrito de compras.
+
+213
+00:12:34,130 --> 00:12:35,300
+Voy a copiar este link.
+
+214
+00:12:36,860 --> 00:12:37,130
+Aquí.
+
+215
+00:12:37,130 --> 00:12:37,640
+Lo pego.
+
+216
+00:12:40,150 --> 00:12:42,010
+En este caso va a ser el href diferente.
+
+217
+00:12:42,010 --> 00:12:45,550
+No va a ser este signo de numeral, sino que va a ser entre llaves.
+
+218
+00:12:46,850 --> 00:12:52,910
+Y si no de porcentaje coloco un RL que me lleve a la pagina al pad de cart.
+
+219
+00:12:53,480 --> 00:12:53,930
+Listo.
+
+220
+00:12:55,350 --> 00:12:57,180
+El Class va a ser un btn btn.
+
+221
+00:12:57,210 --> 00:13:00,060
+No quiero que se asuste este si no quiero que sea un off line.
+
+222
+00:13:02,100 --> 00:13:02,940
+Raya primario.
+
+223
+00:13:03,000 --> 00:13:07,020
+Ten mucho cuidado como le escribimos para que se imprima bien el class en el botón.
+
+224
+00:13:09,240 --> 00:13:10,320
+Y aquí el texto.
+
+225
+00:13:11,840 --> 00:13:12,650
+Le voy a poner.
+
+226
+00:13:13,860 --> 00:13:15,210
+Ver carrito de compras.
+
+227
+00:13:18,030 --> 00:13:19,830
+Y el logo.
+
+228
+00:13:20,190 --> 00:13:24,090
+El icono va a ser un fas fa raya.
+
+229
+00:13:26,120 --> 00:13:27,170
+Hay como un ojo.
+
+230
+00:13:27,590 --> 00:13:31,710
+Un ojo inglés se representa como español.
+
+231
+00:13:32,570 --> 00:13:33,680
+Bien, ya lo tienes.
+
+232
+00:13:34,760 --> 00:13:36,800
+Vamos ahora a guardar los cambios.
+
+233
+00:13:37,010 --> 00:13:39,500
+Enchufa el safe hall y vamos a probar.
+
+234
+00:13:40,850 --> 00:13:41,930
+Estamos en la página.
+
+235
+00:13:41,960 --> 00:13:43,010
+Voy a refrescarla.
+
+236
+00:13:43,580 --> 00:13:44,150
+Listo.
+
+237
+00:13:44,180 --> 00:13:46,280
+Voy a seleccionar este airport.
+
+238
+00:13:48,170 --> 00:13:50,600
+Mira, aquí ya me aparece la opción Agregar a Chopin.
+
+239
+00:13:50,930 --> 00:13:51,770
+Lo voy a agregar.
+
+240
+00:13:52,280 --> 00:13:52,940
+Se agregó.
+
+241
+00:13:53,660 --> 00:13:56,120
+Vamos a volver al editor nuevamente.
+
+242
+00:13:57,180 --> 00:13:59,070
+Se mencionaba nuevamente el spot.
+
+243
+00:14:00,120 --> 00:14:05,580
+Y mira, ahora ya me aparece cuando voy a la página del taller, producto de leerlos me aparece producto
+
+244
+00:14:05,580 --> 00:14:09,510
+agregado al carrito y este botón de ver carrito de compras.
+
+245
+00:14:09,900 --> 00:14:16,890
+Esto significa que ya está funcionando mi lógica y salió de click a ver carrito de compras me va a llevar
+
+246
+00:14:17,100 --> 00:14:21,360
+a mi página cart donde se muestran todos los productos seleccionados.
+
+247
+00:14:21,540 --> 00:14:23,130
+Listo para ser pagados?

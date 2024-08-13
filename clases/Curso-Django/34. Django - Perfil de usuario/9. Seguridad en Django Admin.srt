@@ -1,0 +1,847 @@
+1
+00:00:00,390 --> 00:00:04,980
+Un aspecto que debemos tener muy en cuenta cuando desarrollamos proyectos, webs o cualquier tipo de
+
+2
+00:00:04,980 --> 00:00:05,250
+proyecto.
+
+3
+00:00:05,250 --> 00:00:12,120
+En general es la configuración, los valores de la configuración que debemos proteger para que estos
+
+4
+00:00:12,120 --> 00:00:13,230
+no sean públicos.
+
+5
+00:00:13,830 --> 00:00:18,660
+Por ejemplo, si vamos a nuestro proyecto y vamos a la carpeta e-commerce, vamos a darnos cuenta de
+
+6
+00:00:18,660 --> 00:00:25,440
+que entre el archivo 6.0 y estamos almacenando todos los que tienen propiedades importantes como The
+
+7
+00:00:25,440 --> 00:00:25,800
+Bug.
+
+8
+00:00:26,160 --> 00:00:32,790
+Inclusive aquí también tenemos alta la configuración para poder acceder al correo electrónico que envía
+
+9
+00:00:32,790 --> 00:00:34,440
+emails a diferentes clientes.
+
+10
+00:00:35,010 --> 00:00:41,520
+Entonces, estas propiedades es recomendable no trabajarlas públicamente dentro de este archivo, sino
+
+11
+00:00:41,520 --> 00:00:43,740
+utilizar otras herramientas.
+
+12
+00:00:44,400 --> 00:00:51,060
+En nuestro caso que realmente utilizaremos, utilizaremos un paquete llamado Python de Cobol para poder
+
+13
+00:00:51,300 --> 00:00:54,780
+anidar allí las propiedades importantes de nuestro proyecto.
+
+14
+00:00:55,290 --> 00:01:00,390
+Pero primero tenemos que instalarla en nuestro virtual environment del proyecto, así que vayamos al
+
+15
+00:01:00,390 --> 00:01:04,950
+bash y dentro del bash vas a escribir pip install.
+
+16
+00:01:06,800 --> 00:01:08,270
+Un momento, Peyton.
+
+17
+00:01:12,320 --> 00:01:13,820
+Raya de couple.
+
+18
+00:01:16,640 --> 00:01:17,960
+El precio de Apple.
+
+19
+00:01:18,980 --> 00:01:20,120
+Lo tenemos bien escrito.
+
+20
+00:01:20,390 --> 00:01:21,770
+Ahora, si le damos a Enter.
+
+21
+00:01:22,690 --> 00:01:24,000
+Iba a comenzar la instalación.
+
+22
+00:01:24,010 --> 00:01:25,000
+Fue muy rápido.
+
+23
+00:01:25,870 --> 00:01:27,400
+Vamos a ejecutar nuestro proyecto también.
+
+24
+00:01:27,430 --> 00:01:29,440
+Python ejecuta Run Server.
+
+25
+00:01:30,620 --> 00:01:32,230
+Vamos a entrar ahora.
+
+26
+00:01:32,230 --> 00:01:37,530
+Vamos a nuestro archivo settings en la carpeta de e-commerce y vamos a importar esa herramienta.
+
+27
+00:01:37,540 --> 00:01:39,550
+Hacemos un front de couple.
+
+28
+00:01:41,150 --> 00:01:41,750
+Import.
+
+29
+00:01:42,920 --> 00:01:43,460
+Config.
+
+30
+00:01:45,690 --> 00:01:50,290
+Lo siguiente que vamos a hacer es ir a la raíz de nuestro proyecto, a la carpeta principal que se llama
+
+31
+00:01:50,400 --> 00:01:53,300
+commerce y crear un archivo EMP.
+
+32
+00:01:53,970 --> 00:01:55,860
+Vamos a darle clic derecho Newfield.
+
+33
+00:01:56,890 --> 00:01:59,890
+El escribe el punto y le damos enter.
+
+34
+00:02:02,390 --> 00:02:03,620
+Ya en el archivo.
+
+35
+00:02:03,800 --> 00:02:10,490
+Volvamos al archivo de SharePoint original y por ejemplo, aquí tengo el script que voy a copiarlo.
+
+36
+00:02:12,370 --> 00:02:16,000
+Y voy al archivo puntocom que acabo de crear y aquí lo pego.
+
+37
+00:02:17,170 --> 00:02:22,990
+Pero en el formato de este archivo yo no necesito los apóstrofes ni tampoco espacios en blanco.
+
+38
+00:02:23,140 --> 00:02:27,670
+Tiene que estar siempre pegado con el signo de igual a que al final le voy a borrar ese apóstrofe que
+
+39
+00:02:27,670 --> 00:02:28,870
+faltaba y listo.
+
+40
+00:02:28,870 --> 00:02:30,940
+Ya tengo entonces mi primera propiedad.
+
+41
+00:02:31,360 --> 00:02:38,410
+Pero la idea principal es de que Settings pueda leer este valor, pueda leerlo utilizando como índice
+
+42
+00:02:38,440 --> 00:02:39,470
+esta palabra secret.
+
+43
+00:02:40,060 --> 00:02:47,110
+Voy a copiar este clic y vamos al archivo settings una vez más y dentro de este settings vamos a ver
+
+44
+00:02:47,110 --> 00:02:48,140
+que hay que hacer clic.
+
+45
+00:02:48,610 --> 00:02:50,140
+Voy a borrar este valor.
+
+46
+00:02:50,150 --> 00:02:54,640
+Mira, lo borramos y quiero leer el valor de este.
+
+47
+00:02:54,640 --> 00:02:55,700
+El archivo punto ENV.
+
+48
+00:02:55,960 --> 00:03:01,060
+Para poder hacerlo tienes que llamar a config que recuerda, lo hemos importado hace un segundo.
+
+49
+00:03:01,360 --> 00:03:02,710
+Config aquí en la parte superior.
+
+50
+00:03:03,820 --> 00:03:04,840
+Y le pasas el ki.
+
+51
+00:03:05,020 --> 00:03:05,650
+Cuál es el ki?
+
+52
+00:03:06,460 --> 00:03:07,300
+El ciclo aquí.
+
+53
+00:03:07,780 --> 00:03:12,680
+Y de esta forma ya estaría leyendo el valor desde el punto.
+
+54
+00:03:14,410 --> 00:03:16,690
+Para el caso de Divac va a ser muy similar.
+
+55
+00:03:17,200 --> 00:03:21,240
+Voy a copiar esta línea primero y la llevamos al MP.
+
+56
+00:03:22,970 --> 00:03:23,570
+Lo pego.
+
+57
+00:03:23,870 --> 00:03:25,730
+Recuerda que no pueden haber espacios.
+
+58
+00:03:27,480 --> 00:03:32,130
+Y ahora vamos nuevamente al The Book que le miré para indicarle qué?
+
+59
+00:03:33,480 --> 00:03:37,470
+Me leía desde el kit del punto AMB, que en este caso es de.
+
+60
+00:03:40,430 --> 00:03:45,440
+Pero aquí tienes que tener mucho cuidado porque por defecto el config, los valores que devuelve desde
+
+61
+00:03:45,440 --> 00:03:52,220
+el punto son en formato, en tipo de dato string, pero en este caso no quiere un string, lo que quiere
+
+62
+00:03:52,220 --> 00:03:54,920
+es un valor booleano que puede ser true o false.
+
+63
+00:03:55,430 --> 00:04:01,460
+Entonces, para poder castear el valor que devuelve el config, aquí le puedes poner un parámetro que
+
+64
+00:04:01,460 --> 00:04:01,730
+diga.
+
+65
+00:04:03,850 --> 00:04:04,390
+Igual.
+
+66
+00:04:05,880 --> 00:04:06,240
+Bull.
+
+67
+00:04:07,180 --> 00:04:12,100
+De esta forma le estamos indicando que el valor que va a retornar está en un tipo de dato.
+
+68
+00:04:12,100 --> 00:04:16,870
+Castear un tipo de dato booleano también le puedes indicar un valor por defecto.
+
+69
+00:04:17,200 --> 00:04:21,490
+Por ejemplo, aquí le puedo indicar que el valor por defecto es igual a true.
+
+70
+00:04:23,370 --> 00:04:31,020
+Y así podría ir agregando todas las propiedades dentro de este archivo settings como tú lo deseas.
+
+71
+00:04:31,990 --> 00:04:32,560
+Por ejemplo.
+
+72
+00:04:32,560 --> 00:04:37,840
+Algo muy importante que haremos más adelante es configurar cuando tengas una base de datos en PostgreSQL.
+
+73
+00:04:40,010 --> 00:04:46,790
+Y algo también muy importante es la configuración del correo electrónico del servidor SMTP, del correo
+
+74
+00:04:46,790 --> 00:04:48,890
+electrónico que hicimos en la parte inferior.
+
+75
+00:04:49,640 --> 00:04:52,310
+Aquí puedes ver la configuración de mi correo electrónico.
+
+76
+00:04:52,580 --> 00:04:54,650
+Lo que voy a hacer ahora es copiar.
+
+77
+00:04:57,270 --> 00:04:59,370
+Copiar estos valores y llevarlos al.
+
+78
+00:05:02,090 --> 00:05:05,870
+Ya que en él ya sabes que lo vamos a configurar.
+
+79
+00:05:06,650 --> 00:05:09,290
+Le quitamos los apóstrofe, también los espacios.
+
+80
+00:05:11,170 --> 00:05:11,840
+A esta.
+
+81
+00:05:16,030 --> 00:05:18,490
+Los apóstrofes, los espacios.
+
+82
+00:05:18,490 --> 00:05:19,270
+Listo.
+
+83
+00:05:23,080 --> 00:05:23,740
+Perfecto.
+
+84
+00:05:25,030 --> 00:05:27,190
+Vamos ahora a hacer pipí.
+
+85
+00:05:28,510 --> 00:05:30,220
+Y aquí vamos a llamar al.
+
+86
+00:05:31,930 --> 00:05:32,500
+Config.
+
+87
+00:05:35,900 --> 00:05:37,500
+Y le ponemos el email.
+
+88
+00:05:41,440 --> 00:05:42,610
+Para el import.
+
+89
+00:05:42,790 --> 00:05:43,990
+También va a ser lo mismo.
+
+90
+00:05:43,990 --> 00:05:46,600
+Le vamos a colocar en este caso también un config.
+
+91
+00:05:53,270 --> 00:05:55,190
+Le ponemos acá y el port.
+
+92
+00:06:02,960 --> 00:06:04,400
+Odio ser lo mismo.
+
+93
+00:06:04,500 --> 00:06:06,800
+Vamos a eliminar esto y le pongo config.
+
+94
+00:06:11,270 --> 00:06:13,280
+Se lo copiamos para hacerlo más rápido.
+
+95
+00:06:15,790 --> 00:06:18,750
+Ya que bloqueamos el password.
+
+96
+00:06:18,760 --> 00:06:20,070
+Lo mismo config.
+
+97
+00:06:23,890 --> 00:06:24,800
+Apóstrofes.
+
+98
+00:06:24,820 --> 00:06:27,850
+Y le pasamos el email host password.
+
+99
+00:06:30,220 --> 00:06:32,330
+Bien y el TLC también.
+
+100
+00:06:32,750 --> 00:06:33,370
+Config.
+
+101
+00:06:37,150 --> 00:06:38,020
+Y se lo pasamos.
+
+102
+00:06:42,660 --> 00:06:46,260
+Ya sabes que tengo que castigarlo porque esto me devuelve un valor booleano.
+
+103
+00:06:46,620 --> 00:06:48,660
+Así que aquí le ponemos un cast.
+
+104
+00:06:51,190 --> 00:06:51,540
+Bull.
+
+105
+00:06:54,410 --> 00:06:59,000
+Para el caso del email port, este no me devuelve un stream ni tampoco un booleano.
+
+106
+00:06:59,000 --> 00:07:00,560
+Me devuelve un número entero.
+
+107
+00:07:00,800 --> 00:07:03,710
+Por eso lo voy a poner casi igual a int.
+
+108
+00:07:05,840 --> 00:07:06,020
+Bien.
+
+109
+00:07:06,170 --> 00:07:07,010
+Ya lo tenemos.
+
+110
+00:07:07,010 --> 00:07:07,490
+Listo.
+
+111
+00:07:08,740 --> 00:07:09,460
+Está preparado.
+
+112
+00:07:09,460 --> 00:07:10,200
+No hay problema aquí.
+
+113
+00:07:10,210 --> 00:07:16,360
+Me puede decir, profesor, pero esto igual es un problema porque ese archivo punto EMP va a viajar
+
+114
+00:07:16,360 --> 00:07:20,350
+a mi repositorio, punto GIT y otra persona lo van a poder ver?
+
+115
+00:07:20,920 --> 00:07:28,300
+No, porque mira, si vamos al archivo punto ignore que hemos creado anteriormente aquí lo va a saber
+
+116
+00:07:28,300 --> 00:07:29,800
+el punto git ignore.
+
+117
+00:07:30,430 --> 00:07:36,430
+Vas a notar que dentro de los archivos que no quiero que se suba aparece el punto EMP.
+
+118
+00:07:40,410 --> 00:07:45,730
+Vamos a la parte inferior o vas a notar que Environment está bloqueando los archivos de punto EMP.
+
+119
+00:07:46,080 --> 00:07:48,420
+Esto significa que no va a subir al GIT.
+
+120
+00:07:48,600 --> 00:07:51,540
+Sólo se mete en este archivo en tu computadora.
+
+121
+00:07:51,870 --> 00:07:54,030
+Y tus passwords van a estar seguros.
+
+122
+00:07:54,690 --> 00:07:56,050
+Vamos a guardar todos los cambios.
+
+123
+00:07:56,070 --> 00:07:57,390
+Menú Field Safe all.
+
+124
+00:07:58,730 --> 00:07:59,840
+Y si vamos a la página?
+
+125
+00:07:59,870 --> 00:08:07,330
+Vas a notar que todo sigue trabajando con normalidad, inclusive la configuración para poder resetear
+
+126
+00:08:07,340 --> 00:08:09,920
+password o enviar correos electrónicos.
+
+127
+00:08:10,520 --> 00:08:14,240
+Pero aquí tenemos un problema adicional con respecto a la seguridad.
+
+128
+00:08:14,420 --> 00:08:22,670
+Es común que las que los programadores y hackers que tratan de hacer aplicaciones Jango saben que haciendo
+
+129
+00:08:22,670 --> 00:08:25,490
+un admin automáticamente va a aparecer.
+
+130
+00:08:26,450 --> 00:08:33,350
+Va a parecer lo que es el manejador de seguridad en el cual van a poder intentar hackear tu aplicación
+
+131
+00:08:33,350 --> 00:08:35,630
+e ingresar al juego Administration.
+
+132
+00:08:36,350 --> 00:08:37,700
+Cómo podemos evitar esto?
+
+133
+00:08:38,570 --> 00:08:42,320
+Lo primero es cambiando la URL por defecto que es admin.
+
+134
+00:08:42,890 --> 00:08:47,120
+Vamos a modificarla para que ahora tenga otro valor un poco más complejo.
+
+135
+00:08:47,510 --> 00:08:52,940
+Por este motivo vamos a eCommerce y comercio que aparece el URLs y.
+
+136
+00:08:54,730 --> 00:09:01,480
+Y mira, este es el el sitio de administración de Jango Admin 6.3 está apuntando a Admin, pero le voy
+
+137
+00:09:01,480 --> 00:09:06,370
+a indicar que ahora ya no sea Admin, sino que diga Secure Login.
+
+138
+00:09:08,420 --> 00:09:14,270
+Algo adicional que podemos hacer es darles una pagina fake de login a los hackers.
+
+139
+00:09:14,930 --> 00:09:19,340
+Esto no va a afectar en nada la disponibilidad de nuestro sitio web.
+
+140
+00:09:20,220 --> 00:09:24,750
+Para poder crear ese lo que ya está dentro de un paquete de Python.
+
+141
+00:09:24,960 --> 00:09:25,860
+Vayamos al.
+
+142
+00:09:26,730 --> 00:09:27,300
+Al Bash.
+
+143
+00:09:28,200 --> 00:09:29,190
+Estamos en el bash.
+
+144
+00:09:29,280 --> 00:09:31,920
+Voy a detener mi servidor.
+
+145
+00:09:31,960 --> 00:09:34,140
+Limpió la consola.
+
+146
+00:09:34,140 --> 00:09:36,780
+Y ahora sí, vamos a instalar aquí este fake.
+
+147
+00:09:36,810 --> 00:09:39,390
+Esta herramienta que me va a permitir crear un FAQ Login.
+
+148
+00:09:40,460 --> 00:09:41,510
+Vamos a hacer un pip.
+
+149
+00:09:42,730 --> 00:09:45,940
+Instant Django.
+
+150
+00:09:48,650 --> 00:09:49,790
+Raya, Admin.
+
+151
+00:09:52,160 --> 00:09:53,860
+Raya y le ponemos acá.
+
+152
+00:09:54,750 --> 00:09:55,310
+Johnny.
+
+153
+00:09:56,800 --> 00:09:59,540
+Pot ahí le escribimos y le damos enter.
+
+154
+00:10:01,600 --> 00:10:02,110
+Perfecto.
+
+155
+00:10:02,110 --> 00:10:03,490
+Se instaló sin ningún problema.
+
+156
+00:10:04,420 --> 00:10:06,370
+Y ahora vayamos aquí nuevamente.
+
+157
+00:10:06,400 --> 00:10:08,170
+Y comercio y.
+
+158
+00:10:10,460 --> 00:10:11,960
+Y voy a crearle un path.
+
+159
+00:10:12,410 --> 00:10:13,460
+Voy a copiar este path.
+
+160
+00:10:14,940 --> 00:10:15,870
+Lo pongo sobre él.
+
+161
+00:10:15,870 --> 00:10:17,430
+Sobre este Secure Logging.
+
+162
+00:10:20,670 --> 00:10:22,320
+Y aquí le vamos a indicar.
+
+163
+00:10:23,930 --> 00:10:30,770
+Que vaya hacia a Slash, pero apuntando hacia ese only pot al falso.
+
+164
+00:10:31,940 --> 00:10:33,800
+Por eso hacemos aquí un include.
+
+165
+00:10:38,680 --> 00:10:42,460
+Si le ponemos acá admin punto raya para abajo.
+
+166
+00:10:43,400 --> 00:10:44,180
+Johnny Pot.
+
+167
+00:10:46,170 --> 00:10:47,220
+Punto real.
+
+168
+00:10:49,630 --> 00:10:53,470
+Luego le ponemos una coma y le ponemos también el space namespace.
+
+169
+00:10:55,130 --> 00:10:56,450
+Igual a Admin.
+
+170
+00:10:57,080 --> 00:10:57,700
+Para abajo.
+
+171
+00:10:58,070 --> 00:10:58,700
+Honey Pot.
+
+172
+00:11:00,380 --> 00:11:01,640
+Que le faltó la y griega.
+
+173
+00:11:01,730 --> 00:11:03,980
+Honey Pot, hay que tener cuidado.
+
+174
+00:11:03,980 --> 00:11:06,260
+Aquí también faltó la griega Johnny Pott.
+
+175
+00:11:07,200 --> 00:11:10,560
+Revisamos que todo es correcto con hipótesis.
+
+176
+00:11:10,870 --> 00:11:13,050
+Yo era el Sammy a Honey Pot.
+
+177
+00:11:13,950 --> 00:11:14,520
+Honey Pot.
+
+178
+00:11:16,040 --> 00:11:16,820
+Perfecto.
+
+179
+00:11:18,210 --> 00:11:21,840
+Nos falta ahora registrar este Johnny Pod Pot dentro de nuestro settings.
+
+180
+00:11:21,870 --> 00:11:30,540
+Vamos a la carpeta y comercial, vamos al archivo central y de aquí dentro de la propiedad instale apps.
+
+181
+00:11:30,630 --> 00:11:37,020
+Luego de orders coma vamos a agregarle el admin only pot que apareció y la coma.
+
+182
+00:11:37,020 --> 00:11:43,350
+Al final vamos a guardar todos los cambios menú Field Safe All Y para que se incluya dentro de nuestro
+
+183
+00:11:43,350 --> 00:11:46,770
+web application, tenemos también que ejecutar un proceso de Migration.
+
+184
+00:11:47,340 --> 00:11:53,970
+Así que dentro del Bash vamos a escribir Python Espacio Manager y Espacio My Create y le damos enter.
+
+185
+00:11:56,120 --> 00:12:01,700
+Y ya se ejecutó sin ningún problema y se ha incluido ya el backend de Admin on y POT.
+
+186
+00:12:02,300 --> 00:12:08,600
+Ahora vamos a ejecutar nuestro servidor, escribimos el Python Manager y Run Server, le damos enter.
+
+187
+00:12:09,860 --> 00:12:11,870
+Y abrimos nuestra página para hacer las pruebas.
+
+188
+00:12:12,590 --> 00:12:14,360
+Estamos en el local 8000 cíen.
+
+189
+00:12:15,760 --> 00:12:22,960
+Y como puedes ver ya este es el admin, pero el admin fake no es el real, no es el real.
+
+190
+00:12:23,680 --> 00:12:26,020
+Si vamos a escribirlo, por ejemplo acá.
+
+191
+00:12:28,790 --> 00:12:29,630
+Mi correo.
+
+192
+00:12:31,000 --> 00:12:33,550
+L y le ponemos cualquier password.
+
+193
+00:12:33,580 --> 00:12:35,950
+Le vamos a explicar, no va a pasar nada.
+
+194
+00:12:37,030 --> 00:12:43,120
+No se va a afectar para nada mi aplicación web, pero sin embargo se va a generar un log para indicarme
+
+195
+00:12:43,120 --> 00:12:48,340
+cuál es la persona que está tratando de atacarme y vamos a revisar algún momento para que ingreses.
+
+196
+00:12:48,730 --> 00:12:56,440
+Ahora si, al dashboard, al dashboard principal del Python que hemos reconfigurado, tenemos que ir
+
+197
+00:12:56,440 --> 00:12:59,380
+hacia localhost 8000 Secure Login.
+
+198
+00:13:00,130 --> 00:13:06,250
+Ese es el path original ahora para poder hacer el login y acceder a sus Chango Administration.
+
+199
+00:13:06,280 --> 00:13:08,170
+El Real es real, ya no es admin.
+
+200
+00:13:08,650 --> 00:13:14,860
+Hemos ingresado el Basic Social, también mi password, hacemos Elokim y ya ingresamos.
+
+201
+00:13:15,370 --> 00:13:16,990
+Pero vas a notar algo muy interesante.
+
+202
+00:13:17,260 --> 00:13:24,160
+Dentro de la lista de applications va a aparecer el admin only pot y aparece en Login Items.
+
+203
+00:13:24,190 --> 00:13:25,930
+Vamos a darle clic y mira.
+
+204
+00:13:26,560 --> 00:13:32,190
+Estas son las personas que han tratado de ingresar a tu aplicación tratando de sacarte.
+
+205
+00:13:32,950 --> 00:13:34,510
+Por supuesto que son pruebas que yo he hecho.
+
+206
+00:13:34,840 --> 00:13:37,630
+Vamos a darle clic a esta, por ejemplo, y te va a aparecer aquí.
+
+207
+00:13:38,770 --> 00:13:41,110
+El path desde donde se está ejecutando la acción.
+
+208
+00:13:41,530 --> 00:13:48,100
+El user may de la persona, el hype address público de la persona que está tratando de ingresar a tu
+
+209
+00:13:48,100 --> 00:13:49,090
+juego Administration.
+
+210
+00:13:50,080 --> 00:13:50,280
+Bien.
+
+211
+00:13:50,350 --> 00:13:51,470
+Eso sería todo por ahora.
+
+212
+00:13:51,490 --> 00:13:52,990
+Continuamos en el siguiente capítulo.

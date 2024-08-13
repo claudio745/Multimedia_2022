@@ -1,0 +1,679 @@
+1
+00:00:00,480 --> 00:00:07,830
+En el capítulo anterior obtuvimos la calificación del promedio de este producto en función a los ratings
+
+2
+00:00:07,860 --> 00:00:10,170
+de los clientes que calificaron mi producto.
+
+3
+00:00:10,770 --> 00:00:17,640
+Lo que quiero ahora es representar esta calificación en estrellas, una representación gráfica y aparte.
+
+4
+00:00:17,640 --> 00:00:23,430
+Quiero agregar esta calificación debajo de este título Calificación de clientes.
+
+5
+00:00:24,670 --> 00:00:25,920
+Entonces vamos a Atton.
+
+6
+00:00:25,930 --> 00:00:30,220
+Vamos a ubicarnos en la carpeta de Templates Store y ahora Product Detail.
+
+7
+00:00:32,290 --> 00:00:32,500
+Bien.
+
+8
+00:00:32,560 --> 00:00:34,960
+Aquí tengo el el formulario.
+
+9
+00:00:34,960 --> 00:00:37,870
+En la parte inferior me aparece el sube review.
+
+10
+00:00:38,990 --> 00:00:40,070
+Escribe tu comentario.
+
+11
+00:00:40,070 --> 00:00:42,440
+Aquí aparece el single Product every review.
+
+12
+00:00:43,740 --> 00:00:44,490
+Voy a cortarlo.
+
+13
+00:00:44,490 --> 00:00:45,750
+Elimino por ahora.
+
+14
+00:00:47,590 --> 00:00:50,110
+Y aquí aparece el label como.
+
+15
+00:00:50,110 --> 00:00:51,890
+Cómo calificaría su producto?
+
+16
+00:00:52,030 --> 00:00:52,600
+Está bien.
+
+17
+00:00:54,420 --> 00:01:01,650
+La continuación de este formulario me aparece este otro header que me dice Calificación de clientes.
+
+18
+00:01:02,760 --> 00:01:08,790
+Debajo de este texto de calificación de clientes es donde voy a crear un container para agregar el promedio
+
+19
+00:01:08,790 --> 00:01:10,260
+representado por estrellas.
+
+20
+00:01:10,920 --> 00:01:15,930
+Entonces recuerda que en clases pasadas nosotros desarrollamos unos estilos y un container especial
+
+21
+00:01:16,110 --> 00:01:17,280
+para esa función.
+
+22
+00:01:17,670 --> 00:01:21,000
+Está aquí abajo, dentro del bucle for review reviews.
+
+23
+00:01:21,480 --> 00:01:27,000
+Aquí aparece este container, este div que tiene como class rating start.
+
+24
+00:01:27,570 --> 00:01:28,410
+Voy a copiarlo.
+
+25
+00:01:31,260 --> 00:01:34,290
+Y lo voy a pegar justamente debajo del h3.
+
+26
+00:01:34,290 --> 00:01:34,830
+Dentro de.
+
+27
+00:01:35,400 --> 00:01:36,690
+Dentro del header.
+
+28
+00:01:37,590 --> 00:01:39,540
+Pero ponerlo espaciado para que lo notes.
+
+29
+00:01:40,830 --> 00:01:41,830
+Y acá pegamos.
+
+30
+00:01:43,750 --> 00:01:51,070
+Evidentemente, dentro de la del bucle, nosotros obteníamos las estrellas en función al objeto.
+
+31
+00:01:52,540 --> 00:01:58,090
+Y aquí para esta calificación final, el promedio final que está después de calificación de clientes
+
+32
+00:01:58,600 --> 00:02:01,180
+va a ser un objeto diferente a evaluar dentro de la condición.
+
+33
+00:02:01,930 --> 00:02:10,580
+Por eso, en vez de este punto, Rey Tim, vamos a colocarle el single Product Punto Everis Review.
+
+34
+00:02:10,600 --> 00:02:12,370
+Es el resultado, el promedio.
+
+35
+00:02:13,210 --> 00:02:20,980
+Si este promedio en este caso voy a cambiar la condición es menor que 0.5.
+
+36
+00:02:21,940 --> 00:02:23,830
+Entonces quiero que mi prima.
+
+37
+00:02:25,770 --> 00:02:32,730
+Este estilo que concatena el estilo es estar con este menos o.
+
+38
+00:02:34,520 --> 00:02:39,410
+Y a continuación le digo otra condición una estructura lógica adicional.
+
+39
+00:02:39,860 --> 00:02:41,770
+Elif Qué significa en otros lenguajes?
+
+40
+00:02:41,780 --> 00:02:45,680
+El sabe que también haga la evaluación respecto del.
+
+41
+00:02:46,920 --> 00:02:49,180
+Single Product Punch.
+
+42
+00:02:50,070 --> 00:02:51,150
+Abres review.
+
+43
+00:02:54,100 --> 00:02:56,920
+Y en este caso le voy a indicar que sea mayor.
+
+44
+00:03:00,650 --> 00:03:01,220
+Igual.
+
+45
+00:03:02,840 --> 00:03:03,950
+Que 0.5.
+
+46
+00:03:06,590 --> 00:03:07,310
+Y además.
+
+47
+00:03:08,840 --> 00:03:09,980
+Le digo que sea.
+
+48
+00:03:11,420 --> 00:03:12,950
+Single Product punto.
+
+49
+00:03:13,940 --> 00:03:14,810
+Pablo escribió.
+
+50
+00:03:17,230 --> 00:03:18,340
+Menor que uno.
+
+51
+00:03:19,460 --> 00:03:24,660
+Si se comprueba esa condición, entonces creo que se concatena este estilo.
+
+52
+00:03:25,220 --> 00:03:29,210
+El estilo raya half raya o.
+
+53
+00:03:30,520 --> 00:03:33,190
+Y luego se va a cerrar el edif.
+
+54
+00:03:36,420 --> 00:03:37,890
+Eso sería todo lo que viene después.
+
+55
+00:03:38,250 --> 00:03:40,950
+El área y demás continúa igual.
+
+56
+00:03:41,160 --> 00:03:48,030
+Sólo estoy modificando las condiciones, los IF y también los estilos que continúan a continuación,
+
+57
+00:03:48,630 --> 00:03:50,220
+la concatenación de los estilos.
+
+58
+00:03:51,510 --> 00:03:55,950
+Entonces, lo que voy a hacer ahora, vamos a ver la parte inicial de esa línea.
+
+59
+00:03:55,980 --> 00:03:57,150
+Voy a copiar esta línea.
+
+60
+00:04:00,210 --> 00:04:00,580
+De aquí.
+
+61
+00:04:00,600 --> 00:04:02,430
+La voy a pegar en la siguiente.
+
+62
+00:04:04,670 --> 00:04:05,570
+Porque aquí va a cambiar.
+
+63
+00:04:05,570 --> 00:04:09,470
+La condición para este caso sería every review.
+
+64
+00:04:09,490 --> 00:04:16,190
+Review tiene que ser menor o menor que 1.5 para que el concatena este menos.
+
+65
+00:04:17,570 --> 00:04:18,680
+O si no el sabe.
+
+66
+00:04:19,850 --> 00:04:31,700
+El average tiene que ser mayor o igual que 1.5 y además el single product review tiene que ser menor
+
+67
+00:04:31,700 --> 00:04:32,240
+que dos.
+
+68
+00:04:35,070 --> 00:04:35,430
+Listo.
+
+69
+00:04:37,090 --> 00:04:38,410
+Voy a copiar esta línea.
+
+70
+00:04:40,160 --> 00:04:41,180
+Y vamos a la siguiente.
+
+71
+00:04:47,840 --> 00:04:52,010
+De aquí vamos a indicarle que sea menor que 2.5.
+
+72
+00:04:53,610 --> 00:04:55,530
+Y a continuación, el CIF que sea.
+
+73
+00:04:56,750 --> 00:05:00,290
+Mayor, igual que 2.5 y el producto que sea.
+
+74
+00:05:02,250 --> 00:05:03,000
+Menor que tres.
+
+75
+00:05:04,700 --> 00:05:06,350
+El hebreo sirvió menor que tres.
+
+76
+00:05:08,370 --> 00:05:10,650
+Si entendiste la secuencia, vamos a repetir.
+
+77
+00:05:10,650 --> 00:05:11,670
+Le copio esta línea.
+
+78
+00:05:12,240 --> 00:05:13,950
+Vamos a la siguiente y aquí pego.
+
+79
+00:05:16,500 --> 00:05:17,920
+Y sería Overview.
+
+80
+00:05:18,810 --> 00:05:20,430
+Menor que 3.5.
+
+81
+00:05:22,210 --> 00:05:23,410
+Mayor igual.
+
+82
+00:05:25,100 --> 00:05:27,440
+O mayor igual que 3.5 and.
+
+83
+00:05:28,970 --> 00:05:29,990
+Menor que cuatro.
+
+84
+00:05:32,320 --> 00:05:32,950
+Y continúa.
+
+85
+00:05:34,030 --> 00:05:35,210
+Voy a copiar esta línea.
+
+86
+00:05:35,230 --> 00:05:36,250
+Vamos a la última.
+
+87
+00:05:39,510 --> 00:05:40,500
+Le vamos a poner acá.
+
+88
+00:05:41,670 --> 00:05:44,520
+Menor, igual que 4.5.
+
+89
+00:05:45,970 --> 00:05:49,540
+Y mayor, igual o menor o mayor o igual que 4.5.
+
+90
+00:05:54,190 --> 00:05:54,850
+Y menor.
+
+91
+00:05:56,120 --> 00:05:56,750
+Que cinco.
+
+92
+00:05:59,790 --> 00:06:00,810
+Lo tenemos listo.
+
+93
+00:06:01,860 --> 00:06:07,350
+Ya hemos completado la lógica para que imprima las estrellas dependiendo del review.
+
+94
+00:06:08,070 --> 00:06:10,470
+Voy ahora a guardar los cambios de nube Field safe all.
+
+95
+00:06:11,440 --> 00:06:12,340
+Vamos a la página.
+
+96
+00:06:13,690 --> 00:06:14,650
+Actualizamos.
+
+97
+00:06:15,720 --> 00:06:23,010
+Y ahora vamos a la parte inferior y mira, aquí ya me apareció calificación de clientes y aparece cinco
+
+98
+00:06:23,010 --> 00:06:23,610
+estrellas.
+
+99
+00:06:23,850 --> 00:06:24,720
+Este es el promedio.
+
+100
+00:06:25,470 --> 00:06:31,590
+Pero algo que también me gustaría agregar es que esta calificación, este promedio de estrellas aparecer
+
+101
+00:06:31,920 --> 00:06:35,220
+apareciera justo después del título del producto.
+
+102
+00:06:35,220 --> 00:06:37,670
+Podemos hacerlo si podemos.
+
+103
+00:06:37,680 --> 00:06:41,760
+Lo que tenemos que hacer es simplemente copiar el container, que es el raiting Star.
+
+104
+00:06:42,090 --> 00:06:42,900
+Vamos a copiarlo.
+
+105
+00:06:44,180 --> 00:06:46,970
+Y ahora ubiquémonos en la parte superior de la página.
+
+106
+00:06:48,800 --> 00:06:49,910
+En la parte superior.
+
+107
+00:06:49,910 --> 00:06:52,190
+Vamos a ver donde aparece el título del producto.
+
+108
+00:06:52,730 --> 00:06:56,570
+Aquí aparece el H2 single Product name.
+
+109
+00:06:57,620 --> 00:06:58,850
+Vamos a darle un enter.
+
+110
+00:06:58,850 --> 00:07:03,680
+Después de este H2 ponemos un espaciado para que se note mejor y acá lo pego.
+
+111
+00:07:04,460 --> 00:07:06,380
+Listo, ya le hemos pegado.
+
+112
+00:07:06,650 --> 00:07:07,760
+Voy a guardar los cambios.
+
+113
+00:07:07,760 --> 00:07:08,870
+Menú false all.
+
+114
+00:07:10,570 --> 00:07:12,040
+Y vamos a actualizar la página.
+
+115
+00:07:12,960 --> 00:07:17,520
+Y como puedes ver ya el puntaje me aparece debajo del título.
+
+116
+00:07:18,450 --> 00:07:24,210
+Algo que también puedes agregar aquí es indicar en la página cuántos comentarios se han dejado sobre
+
+117
+00:07:24,210 --> 00:07:28,920
+este producto, cuántos ratings o puntajes han escrito los clientes.
+
+118
+00:07:29,430 --> 00:07:35,910
+Para poder hacerlo, volvamos a nuestra a nuestra carpeta que es Store.
+
+119
+00:07:35,940 --> 00:07:43,790
+Dentro del store vamos a ubicar a Models y ya que en el class product después de haber definido este
+
+120
+00:07:44,730 --> 00:07:45,180
+review.
+
+121
+00:07:46,360 --> 00:07:50,680
+Vamos a crear otra función que podemos llamarle Count Review.
+
+122
+00:07:52,090 --> 00:07:53,090
+Contador de reviews.
+
+123
+00:07:53,110 --> 00:07:54,310
+Contador de comentarios.
+
+124
+00:07:55,180 --> 00:07:56,050
+Empezamos el self.
+
+125
+00:07:57,710 --> 00:07:57,880
+Aquí.
+
+126
+00:07:57,920 --> 00:07:59,270
+Le digo que los lípidos.
+
+127
+00:07:59,300 --> 00:08:01,250
+La cantidad de residuos que quiero obtener.
+
+128
+00:08:01,790 --> 00:08:04,410
+Van a venir de ese punto.
+
+129
+00:08:05,030 --> 00:08:07,220
+Object Point Filter.
+
+130
+00:08:09,630 --> 00:08:11,610
+Que el filtro por el self.
+
+131
+00:08:12,900 --> 00:08:15,390
+También el estatus igual a true.
+
+132
+00:08:17,680 --> 00:08:19,030
+Y aquí vamos a hacer una.
+
+133
+00:08:24,700 --> 00:08:27,130
+Estamos creando esa nueva columna con Count.
+
+134
+00:08:29,350 --> 00:08:35,380
+Utilizando la función Count con mayúscula para que me cuente todos los records que tienen esa condición.
+
+135
+00:08:37,150 --> 00:08:38,400
+Sobre la columna Heidi.
+
+136
+00:08:41,250 --> 00:08:48,840
+Y ahora para obtener el valor o inicializar una variable count en cero y un if rebus el resultado del
+
+137
+00:08:48,840 --> 00:08:49,200
+query.
+
+138
+00:08:49,950 --> 00:08:52,950
+Quiero saber si tiene contiene esta columna count.
+
+139
+00:08:54,330 --> 00:08:55,710
+Si no está en blanco.
+
+140
+00:08:55,710 --> 00:08:56,520
+Is not none.
+
+141
+00:08:58,820 --> 00:09:00,860
+Entonces que sea igual.
+
+142
+00:09:01,820 --> 00:09:02,210
+Arriba.
+
+143
+00:09:07,050 --> 00:09:08,280
+Count la columna.
+
+144
+00:09:09,890 --> 00:09:15,140
+Pero aquí tengo un pequeño detalle, porque este valor tengo que parsear como si fuera un entero.
+
+145
+00:09:15,500 --> 00:09:17,600
+Entonces por delante le pongo el tinte.
+
+146
+00:09:19,270 --> 00:09:19,650
+Cristo.
+
+147
+00:09:20,080 --> 00:09:21,190
+Lo tenemos entonces.
+
+148
+00:09:21,190 --> 00:09:25,990
+Ahora lo que me faltaría solo sería hacer un return y que me devuelva el count.
+
+149
+00:09:27,350 --> 00:09:30,440
+Pero estoy utilizando esta función Count con mayúscula.
+
+150
+00:09:30,830 --> 00:09:35,480
+Así que vamos a ir a la parte superior y acá dentro del chango.
+
+151
+00:09:35,490 --> 00:09:38,510
+Edit models import debug abg.
+
+152
+00:09:38,870 --> 00:09:41,000
+Voy a colocarle que también importe al count.
+
+153
+00:09:42,690 --> 00:09:50,280
+Vamos a implementar, vamos a pintar ese nuevo valor dentro de template store product punto HTML.
+
+154
+00:09:50,820 --> 00:09:56,970
+Yaquí vamos a ubicarnos en las primeras líneas donde aparece el título del producto Single Product Product
+
+155
+00:09:56,970 --> 00:09:57,240
+Name.
+
+156
+00:09:57,880 --> 00:10:00,060
+Aquí le hemos puesto el ratón start.
+
+157
+00:10:00,330 --> 00:10:04,320
+Luego del ratón start que se resta div, voy a crear un span.
+
+158
+00:10:06,250 --> 00:10:09,010
+Y dentro de este spam vamos a colocarle.
+
+159
+00:10:12,640 --> 00:10:14,230
+Single Product punto.
+
+160
+00:10:15,760 --> 00:10:16,600
+Con previo.
+
+161
+00:10:18,430 --> 00:10:19,300
+Y le decimos.
+
+162
+00:10:22,420 --> 00:10:23,440
+Comentarios.
+
+163
+00:10:24,880 --> 00:10:25,450
+Nada más.
+
+164
+00:10:26,550 --> 00:10:28,500
+Y ahora si vamos a borrar todos los cambios.
+
+165
+00:10:29,600 --> 00:10:31,340
+Seis y vamos a la página.
+
+166
+00:10:32,000 --> 00:10:32,950
+Estamos en la página.
+
+167
+00:10:32,960 --> 00:10:33,830
+Voy a actualizar.
+
+168
+00:10:34,830 --> 00:10:38,530
+Y ya me apareció el texto con un comentario por ahora.
+
+169
+00:10:38,730 --> 00:10:41,730
+Pero si fueran 100 aparecerían dentro de este bloque.
+
+170
+00:10:43,020 --> 00:10:44,640
+Continuamos en el siguiente capítulo.

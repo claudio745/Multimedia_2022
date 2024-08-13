@@ -1,0 +1,531 @@
+1
+00:00:00,330 --> 00:00:04,770
+En ese capítulo vamos a trabajar en la página template del método de pago.
+
+2
+00:00:05,370 --> 00:00:07,410
+En otras palabras, la página de Payment.
+
+3
+00:00:08,160 --> 00:00:14,180
+Cuando yo le di clic a este orden de productos, debería no solamente registrar una orden de compra
+
+4
+00:00:14,370 --> 00:00:20,280
+acetatos, sino si esta fue exitosa, redireccionar hacia esta página Template payment.
+
+5
+00:00:21,180 --> 00:00:22,170
+Estamos Hatton?
+
+6
+00:00:22,170 --> 00:00:25,230
+Vamos a ubicarnos dentro de orders.
+
+7
+00:00:26,560 --> 00:00:30,710
+Y ahora vamos a ubicarnos dentro del archivo del punto PI.
+
+8
+00:00:31,330 --> 00:00:34,450
+Y aquí voy a copiar este path que tenía de placeholder.
+
+9
+00:00:35,990 --> 00:00:43,190
+Lo pego y vamos a crear una nueva, un nuevo iPad que se va a llamar Payment Payment.
+
+10
+00:00:43,190 --> 00:00:47,390
+Con eso el final y también la función de Va se va a llamar Payment.
+
+11
+00:00:54,250 --> 00:00:55,030
+Está listo.
+
+12
+00:00:55,960 --> 00:01:01,510
+Vamos a ubicarnos ahora en el archivo de búsqueda y de la carpeta orders donde había creado en el capítulo
+
+13
+00:01:01,510 --> 00:01:04,530
+anterior esta función Def Place Order.
+
+14
+00:01:05,350 --> 00:01:10,330
+Voy a ubicarme sobre esta función y aquí voy a crear otra función que voy a llamar Payment.
+
+15
+00:01:11,930 --> 00:01:14,360
+Que por el momento tiene este parámetro riqueza.
+
+16
+00:01:14,720 --> 00:01:15,440
+Dos puntos.
+
+17
+00:01:17,790 --> 00:01:24,810
+Que haga un render hacia primeramente conocimiento del objeto request y luego hacia el template que
+
+18
+00:01:24,810 --> 00:01:27,270
+va a estar ubicado dentro de la carpeta orders.
+
+19
+00:01:29,060 --> 00:01:29,630
+Es las.
+
+20
+00:01:31,550 --> 00:01:34,280
+Points punto a HTML.
+
+21
+00:01:37,010 --> 00:01:38,690
+Vamos a copiar el nombre payment.
+
+22
+00:01:39,080 --> 00:01:39,950
+HTML.
+
+23
+00:01:41,710 --> 00:01:47,200
+Y ahora vamos a la carpeta Templates y dentro de templates vamos a crear una nueva carpeta que va a
+
+24
+00:01:47,200 --> 00:01:48,130
+ser orders.
+
+25
+00:01:48,580 --> 00:01:50,110
+Click derecho New Folder.
+
+26
+00:01:51,800 --> 00:01:53,630
+Orders y orders.
+
+27
+00:01:53,660 --> 00:01:54,700
+Voy a crear a Payment.
+
+28
+00:01:54,990 --> 00:01:56,960
+HTML derecho.
+
+29
+00:01:56,960 --> 00:01:57,620
+Newfield.
+
+30
+00:01:58,780 --> 00:02:01,000
+Y creamos HTML.
+
+31
+00:02:01,660 --> 00:02:07,540
+Esta página es muy similar a la página del carrito de compras, así que vayamos hacia la parte de la
+
+32
+00:02:07,540 --> 00:02:10,140
+carpeta Store a Aquí aparece el apartado HTML.
+
+33
+00:02:10,150 --> 00:02:11,770
+Voy a copiar todo el contenido.
+
+34
+00:02:12,430 --> 00:02:17,170
+Selecciono controlador, copio Control C y volvamos hacia.
+
+35
+00:02:18,700 --> 00:02:24,340
+La carpeta orders, el que aparece el payment html y aquí voy a pegar todo el contenido.
+
+36
+00:02:25,650 --> 00:02:28,210
+Si vamos a la parte superior del archivo payment.
+
+37
+00:02:28,590 --> 00:02:32,770
+HTML aquí me parece una condición if it items.
+
+38
+00:02:32,850 --> 00:02:37,080
+Esta condición if else no la necesito, por lo que la voy a borrar.
+
+39
+00:02:38,210 --> 00:02:42,080
+Y también voy a ubicarme en la parte final para borrar el end if.
+
+40
+00:02:43,630 --> 00:02:44,160
+Más o menos.
+
+41
+00:02:44,170 --> 00:02:46,890
+Aquí está después del componente One Hand.
+
+42
+00:02:47,110 --> 00:02:51,040
+Esta marca que aparece en HIVE lo voy a borrar.
+
+43
+00:02:52,180 --> 00:02:56,440
+Vamos a borrar todos los cambios true fail safe all y vamos a probar la página.
+
+44
+00:02:57,100 --> 00:03:00,430
+Hemos ido a lo que el 8000 orders es Last Payment.
+
+45
+00:03:00,760 --> 00:03:05,290
+Le damos Enter y ya me está apareciendo esta interfaz gráfica.
+
+46
+00:03:06,250 --> 00:03:11,200
+Vamos a hacer aquí de que este panel de la parte derecha sea un poco más grande.
+
+47
+00:03:11,410 --> 00:03:14,470
+Recuerda que el total de columnas es 12.
+
+48
+00:03:14,980 --> 00:03:18,460
+En este momento la distribución es como 9 a 3.
+
+49
+00:03:18,670 --> 00:03:26,770
+Pero ahora quiero que sea de 8 a 4, haciendo que este panel sea una columna más grande y la otra una
+
+50
+00:03:26,770 --> 00:03:28,060
+columna más pequeña.
+
+51
+00:03:28,870 --> 00:03:32,620
+Entonces vamos a la parte superior del archivo HTML.
+
+52
+00:03:33,190 --> 00:03:39,430
+Aquí aparece el section contemporary, el deep class container y ahí aparece el deep class raw y dentro
+
+53
+00:03:39,430 --> 00:03:45,100
+del cliff class raw aparece el aceite class con el cool, el G como nueve.
+
+54
+00:03:45,580 --> 00:03:47,740
+Aquí le voy a poner que sea ocho.
+
+55
+00:03:49,940 --> 00:03:53,230
+Y vamos a minimizar este asalto con el G8.
+
+56
+00:03:53,750 --> 00:04:01,610
+Aquí lo minimizas y vas a notar que el que continúa es otro aceite, pero que tiene como un col el chi
+
+57
+00:04:01,640 --> 00:04:02,120
+tres.
+
+58
+00:04:02,540 --> 00:04:04,940
+A este le voy a poner ahora cuatro.
+
+59
+00:04:06,810 --> 00:04:08,790
+Vamos a borrar los cambios del Safe hall.
+
+60
+00:04:09,770 --> 00:04:11,180
+Y ahora vamos a actualizar.
+
+61
+00:04:11,810 --> 00:04:15,290
+Y como puedes ver, ya ha cambiado la distribución.
+
+62
+00:04:15,890 --> 00:04:20,870
+Lo siguiente que voy a hacer dentro de este site único es eliminar esta tabla.
+
+63
+00:04:22,400 --> 00:04:25,950
+Que me está mostrando a cantidad y precio.
+
+64
+00:04:26,060 --> 00:04:27,230
+Vamos a eliminar esa tabla.
+
+65
+00:04:27,830 --> 00:04:32,300
+Vamos al código a que ese primer aceite está autorizado.
+
+66
+00:04:32,300 --> 00:04:34,640
+Voy a desplegarlo dando clic.
+
+67
+00:04:34,650 --> 00:04:36,020
+Esto es signo de suma.
+
+68
+00:04:36,560 --> 00:04:37,340
+Ya me apareció.
+
+69
+00:04:37,820 --> 00:04:43,130
+Entonces quiero borrar esta tabla que muestra probado cantidad, precio y todo su contenido.
+
+70
+00:04:43,640 --> 00:04:46,430
+Vamos a minimizar la tabla que quiero eliminar.
+
+71
+00:04:46,610 --> 00:04:47,090
+Listo.
+
+72
+00:04:47,810 --> 00:04:49,340
+Aquí seleccionamos la tabla.
+
+73
+00:04:50,920 --> 00:04:52,000
+Y la removemos.
+
+74
+00:04:53,280 --> 00:04:54,830
+Ahora vamos a la parte final.
+
+75
+00:04:54,840 --> 00:04:56,760
+Donde está los botones de hacer un pago.
+
+76
+00:04:57,360 --> 00:04:59,130
+Aquí dice hacer un pago.
+
+77
+00:04:59,550 --> 00:05:02,430
+Y aquí dice Continúa comprando este.
+
+78
+00:05:02,430 --> 00:05:04,380
+Continúa comprando ese botón.
+
+79
+00:05:04,410 --> 00:05:05,310
+Lo voy a quitar.
+
+80
+00:05:05,700 --> 00:05:06,330
+Lo borro.
+
+81
+00:05:07,510 --> 00:05:11,380
+Y le voy a poner otro nombre que diga confirmar, pago.
+
+82
+00:05:13,600 --> 00:05:17,530
+Vamos a borrar los cambios minus false all y veamos la interface.
+
+83
+00:05:18,250 --> 00:05:22,570
+Estamos en la página, refrescamos la página y como puedes ver, ya ha cambiado.
+
+84
+00:05:23,930 --> 00:05:29,660
+A continuación, lo que queremos hacer en este site uno es agregar la dirección de facturación.
+
+85
+00:05:31,130 --> 00:05:32,870
+Estamos nuevamente en la página.
+
+86
+00:05:32,870 --> 00:05:36,410
+Aquí está el site con el ocho y este es el CAR.
+
+87
+00:05:36,410 --> 00:05:40,610
+Dentro de ese carro es donde voy a colocar ese panel que muestre la dirección de facturación.
+
+88
+00:05:41,330 --> 00:05:44,300
+Vamos a agregar entonces aquí un título para este cart.
+
+89
+00:05:44,660 --> 00:05:47,990
+Le voy a poner 1H5.
+
+90
+00:05:49,490 --> 00:05:54,080
+Y le pongo como un clavo hasta que diga Carl Gerard.
+
+91
+00:05:55,560 --> 00:05:57,990
+Y le pongo la dirección de facturación.
+
+92
+00:06:00,080 --> 00:06:00,860
+Lo tenemos.
+
+93
+00:06:01,250 --> 00:06:05,510
+Y ahora voy a agregar un dif que represente el cuerpo del Card.
+
+94
+00:06:06,050 --> 00:06:08,230
+Entonces aquí le pongo Card Body.
+
+95
+00:06:10,830 --> 00:06:13,770
+Y voy a poner también un pie en un párrafo.
+
+96
+00:06:15,090 --> 00:06:18,210
+Que le ponemos un clase en este párrafo que diga.
+
+97
+00:06:20,490 --> 00:06:21,750
+Car Tex.
+
+98
+00:06:23,000 --> 00:06:24,790
+Y aquí le indico.
+
+99
+00:06:24,800 --> 00:06:29,750
+Esta es la dirección de facturación por el momento.
+
+100
+00:06:30,800 --> 00:06:31,730
+Estoy codeando.
+
+101
+00:06:32,090 --> 00:06:32,540
+Listo.
+
+102
+00:06:33,150 --> 00:06:35,120
+Entonces ya tengo este primer kart.
+
+103
+00:06:36,900 --> 00:06:38,920
+Con un Hutter y también un Carbury.
+
+104
+00:06:39,030 --> 00:06:41,400
+Vamos a borrar los cambios en el Safe Hall.
+
+105
+00:06:43,040 --> 00:06:44,120
+Refrescamos la página.
+
+106
+00:06:44,660 --> 00:06:45,640
+Estamos en la página.
+
+107
+00:06:45,650 --> 00:06:46,610
+Vamos a darle un refresh.
+
+108
+00:06:47,000 --> 00:06:48,200
+Y ya me apareció aquí.
+
+109
+00:06:48,230 --> 00:06:49,910
+Dirección de facturación por ahora.
+
+110
+00:06:51,260 --> 00:06:53,120
+Vamos a agregar dos paneles más.
+
+111
+00:06:53,120 --> 00:06:59,210
+Uno para indicar cuál es el método de pago y otro para revisión de los productos que quieres comprar.
+
+112
+00:06:59,630 --> 00:07:01,100
+Entonces volvemos a la página.
+
+113
+00:07:01,850 --> 00:07:03,130
+Este ya está listo.
+
+114
+00:07:03,140 --> 00:07:04,370
+Simplemente lo copio.
+
+115
+00:07:05,120 --> 00:07:06,620
+Vamos a darle un enter.
+
+116
+00:07:08,310 --> 00:07:09,120
+Y acá lo pego.
+
+117
+00:07:09,900 --> 00:07:12,060
+Y el título a quién le vamos a poner?
+
+118
+00:07:15,410 --> 00:07:16,340
+Método de pago.
+
+119
+00:07:17,870 --> 00:07:19,550
+Que voy a poner un texto también a este.
+
+120
+00:07:21,250 --> 00:07:23,290
+Este es el método de pago.
+
+121
+00:07:25,410 --> 00:07:26,850
+Voy a copiar nuevamente el card.
+
+122
+00:07:29,390 --> 00:07:31,910
+Pegamos y le vamos a poner de título.
+
+123
+00:07:34,720 --> 00:07:36,370
+Revisión de productos.
+
+124
+00:07:42,140 --> 00:07:43,430
+Y el texto le ponemos.
+
+125
+00:07:44,510 --> 00:07:46,160
+Productos para comprar.
+
+126
+00:07:47,100 --> 00:07:48,200
+Vamos a borrar los cambios.
+
+127
+00:07:48,210 --> 00:07:49,710
+Me Luifa el fútbol.
+
+128
+00:07:51,310 --> 00:07:52,130
+En la página.
+
+129
+00:07:52,130 --> 00:07:53,000
+Refrescamos.
+
+130
+00:07:53,660 --> 00:07:54,170
+Perfecto.
+
+131
+00:07:54,170 --> 00:07:55,790
+Ya me apareció aquí los paneles.
+
+132
+00:07:56,730 --> 00:07:58,670
+Por ahora con data arco de hada.
+
+133
+00:07:58,680 --> 00:08:05,340
+En el próximo capítulo vamos a trabajar en el procedimiento para obtener la data desde la base de datos.

@@ -1,0 +1,1255 @@
+1
+00:00:00,480 --> 00:00:03,750
+En este capítulo vamos a continuar trabajando en el carrito de compras.
+
+2
+00:00:04,050 --> 00:00:05,430
+Si vamos a la parte derecha.
+
+3
+00:00:05,850 --> 00:00:08,550
+Vas a notar que aparecen estos elementos de Total Price.
+
+4
+00:00:09,150 --> 00:00:12,030
+El tags y el total final.
+
+5
+00:00:12,750 --> 00:00:14,580
+El total ya lo tengo.
+
+6
+00:00:14,880 --> 00:00:16,710
+Lo que me falta es obtener el taxi.
+
+7
+00:00:16,740 --> 00:00:17,580
+Qué cosa es el taxi?
+
+8
+00:00:17,610 --> 00:00:21,030
+Es el impuesto por la venta de estos productos.
+
+9
+00:00:21,630 --> 00:00:28,080
+Y el total final debería ser la suma entre el total Price y el impuesto.
+
+10
+00:00:28,680 --> 00:00:31,320
+Vamos a trabajar esta lógica en nuestro programa.
+
+11
+00:00:31,980 --> 00:00:35,650
+Vamos a ubicarnos dentro de eCommerce Cars, dentro de Cars.
+
+12
+00:00:35,670 --> 00:00:37,120
+Vamos a ir al buscar.
+
+13
+00:00:37,470 --> 00:00:41,130
+Y aquí tengo la función Ad card.
+
+14
+00:00:42,180 --> 00:00:44,520
+Y también tengo más abajo la función cart.
+
+15
+00:00:45,660 --> 00:00:47,820
+La función Theft Kart es aquí.
+
+16
+00:00:48,270 --> 00:00:57,930
+Después del bucle que voy a agregar esta línea, indico que el taxi, normalmente el taxi o impuesto
+
+17
+00:00:58,260 --> 00:01:00,090
+es un porcentaje de la venta.
+
+18
+00:01:00,870 --> 00:01:05,100
+Voy a suponer aquí de que mi impuesto sea el 2%.
+
+19
+00:01:06,760 --> 00:01:11,520
+Por lo que entonces debería hacer un dos por el total.
+
+20
+00:01:11,530 --> 00:01:14,500
+El 2% del total entre 100.
+
+21
+00:01:16,000 --> 00:01:18,910
+Y ahora el total final que le voy a poner, Grant.
+
+22
+00:01:20,210 --> 00:01:27,170
+Total va a ser igual al total inicial, sumado con el impuesto que es el tax.
+
+23
+00:01:28,470 --> 00:01:28,920
+Listo.
+
+24
+00:01:29,430 --> 00:01:33,510
+Ahora vamos al diccionario Context a pasarle esos dos nuevos valores.
+
+25
+00:01:34,680 --> 00:01:38,370
+Le voy a poner acá tax tax.
+
+26
+00:01:39,450 --> 00:01:41,730
+También le vamos a poner grand total.
+
+27
+00:01:43,810 --> 00:01:44,620
+Gran total.
+
+28
+00:01:45,220 --> 00:01:45,850
+Perfecto.
+
+29
+00:01:46,120 --> 00:01:51,640
+Entonces ya estos valores están pasando hacia el template del punto HTML.
+
+30
+00:01:51,940 --> 00:01:53,020
+Vayamos al template.
+
+31
+00:01:55,420 --> 00:01:56,310
+Store card.
+
+32
+00:01:56,350 --> 00:02:02,920
+HTML Lo hemos abierto más o menos desde la línea 70, en mi caso de la línea 74.
+
+33
+00:02:03,070 --> 00:02:04,240
+Aquí aparece un.
+
+34
+00:02:06,010 --> 00:02:10,540
+Aceite con el GTI cart de que aparece el total Price.
+
+35
+00:02:11,020 --> 00:02:13,690
+Vamos a reemplazar este 69 97 que tengo.
+
+36
+00:02:15,180 --> 00:02:18,570
+Le pongo doble llave y aquí le ponemos.
+
+37
+00:02:19,690 --> 00:02:20,290
+Total.
+
+38
+00:02:21,660 --> 00:02:22,920
+Este es el total inicial.
+
+39
+00:02:23,790 --> 00:02:26,610
+El siguiente es el tax, el impuesto.
+
+40
+00:02:31,380 --> 00:02:32,190
+Le ponemos acá.
+
+41
+00:02:33,550 --> 00:02:33,970
+Tags.
+
+42
+00:02:35,300 --> 00:02:37,760
+Y el siguiente es el total final.
+
+43
+00:02:39,490 --> 00:02:42,580
+Entonces acá le vamos a poner ms 59, 97.
+
+44
+00:02:44,090 --> 00:02:45,700
+Le ponemos gran total.
+
+45
+00:02:47,960 --> 00:02:48,870
+Lo tenemos listo.
+
+46
+00:02:48,890 --> 00:02:50,550
+Vamos a borrar los cambios de Luffy.
+
+47
+00:02:50,550 --> 00:02:51,350
+El Seol.
+
+48
+00:02:53,130 --> 00:02:55,950
+Estamos en la página y vamos a refrescar.
+
+49
+00:02:56,830 --> 00:02:59,260
+Y como puedes darte cuenta, ya ha cambiado.
+
+50
+00:02:59,260 --> 00:03:00,310
+Ahora sí me aparece.
+
+51
+00:03:01,450 --> 00:03:02,530
+El precio total.
+
+52
+00:03:02,560 --> 00:03:04,270
+Vamos a reemplazar este total, Price.
+
+53
+00:03:05,230 --> 00:03:06,400
+Vamos a reemplazar ese total.
+
+54
+00:03:06,400 --> 00:03:07,040
+Price aquí.
+
+55
+00:03:07,420 --> 00:03:08,320
+Precio total.
+
+56
+00:03:08,800 --> 00:03:09,670
+Le pondremos.
+
+57
+00:03:11,170 --> 00:03:12,460
+Precio total.
+
+58
+00:03:14,260 --> 00:03:17,320
+Y para que no se confunda, le ponemos impuesto.
+
+59
+00:03:20,690 --> 00:03:23,390
+Vamos a borrar los cambios del safe ol.
+
+60
+00:03:25,300 --> 00:03:26,320
+Y vamos a actualizar.
+
+61
+00:03:26,770 --> 00:03:27,220
+Listo.
+
+62
+00:03:27,850 --> 00:03:29,110
+Ya lo tenemos preparado.
+
+63
+00:03:30,040 --> 00:03:34,780
+Pero aún me faltan ciertas funcionalidades por implementar dentro de mi carrito de compra.
+
+64
+00:03:35,020 --> 00:03:41,050
+Por ejemplo, este botón para que automáticamente aumente la cantidad de productos, la cantidad de
+
+65
+00:03:41,050 --> 00:03:46,420
+elementos o también pueda disminuir la cantidad de elementos presionando este botón de menos.
+
+66
+00:03:47,110 --> 00:03:52,060
+También vamos a implementar la funcionalidad para este botón de eliminar.
+
+67
+00:03:52,540 --> 00:03:56,680
+Si yo le doy clic a este botón, debería desaparecer este ítem por completo.
+
+68
+00:03:57,430 --> 00:04:04,240
+Comencemos por agregar la funcionalidad para que este botón de suma funcione y aumente la cantidad de
+
+69
+00:04:04,240 --> 00:04:07,120
+productos en esta línea del ítem.
+
+70
+00:04:07,930 --> 00:04:10,390
+Estamos dentro del archivo carpeta HTML.
+
+71
+00:04:10,900 --> 00:04:13,560
+Vayamos ahora al botón que representa la suma.
+
+72
+00:04:13,570 --> 00:04:16,750
+Voy a maximizar mi archivo ya que aparece este botón.
+
+73
+00:04:16,750 --> 00:04:25,960
+Mira este botón que dice Button minus f a f plus plus significa suma en inglés.
+
+74
+00:04:26,980 --> 00:04:33,610
+Aquí en vez de button vamos a colocar un A porque quiero utilizar el href y esa propiedad le pertenece
+
+75
+00:04:34,090 --> 00:04:35,260
+a este add link.
+
+76
+00:04:36,310 --> 00:04:39,040
+Aquí también lo reemplaza en la parte final de la lista.
+
+77
+00:04:39,940 --> 00:04:41,860
+A continuación le ponemos el href.
+
+78
+00:04:43,720 --> 00:04:47,800
+Y ahora le digo que llame este href a una función.
+
+79
+00:04:49,290 --> 00:04:49,920
+Por él.
+
+80
+00:04:51,680 --> 00:04:53,570
+Que le ponemos entre apóstrofes.
+
+81
+00:04:53,600 --> 00:04:55,190
+La función se llama atacar.
+
+82
+00:04:55,310 --> 00:04:58,550
+Recuerdas que en el capítulo anterior creamos esta función?
+
+83
+00:04:58,550 --> 00:04:59,090
+Atacar?
+
+84
+00:04:59,240 --> 00:05:05,150
+Claro, esta función no solamente me permite agregar un producto dentro de mi carrito de compras, sino
+
+85
+00:05:05,150 --> 00:05:10,340
+también me permite actualizar la cantidad, si es que el producto ya existe en el carrito de compra.
+
+86
+00:05:11,280 --> 00:05:12,720
+Entonces esto es lo que voy a hacer.
+
+87
+00:05:12,930 --> 00:05:18,930
+Estoy llamando a esta función atacar y le tengo que pasar el producto y di como parámetro.
+
+88
+00:05:20,250 --> 00:05:22,260
+Así que aquí le pongo car item.
+
+89
+00:05:24,070 --> 00:05:24,640
+Punto.
+
+90
+00:05:26,530 --> 00:05:27,040
+Produc.
+
+91
+00:05:27,610 --> 00:05:28,030
+Punto.
+
+92
+00:05:28,720 --> 00:05:29,170
+Heidi.
+
+93
+00:05:30,410 --> 00:05:33,110
+Eso sería todo un espacio.
+
+94
+00:05:33,740 --> 00:05:35,180
+Vamos a borrar los cambios.
+
+95
+00:05:35,780 --> 00:05:36,950
+Aquí hay un problemita.
+
+96
+00:05:37,580 --> 00:05:42,080
+El href debería de colocarlo entre comillas.
+
+97
+00:05:42,630 --> 00:05:42,730
+Si.
+
+98
+00:05:43,790 --> 00:05:45,000
+Si lo no me va a funcionar.
+
+99
+00:05:46,290 --> 00:05:47,000
+Entre comillas.
+
+100
+00:05:47,010 --> 00:05:48,690
+Colocamos entonces esta función.
+
+101
+00:05:49,720 --> 00:05:50,610
+Vamos a borrar los cambios.
+
+102
+00:05:50,650 --> 00:05:51,850
+Menú File Safe All.
+
+103
+00:05:52,790 --> 00:05:53,780
+Y vamos a la página.
+
+104
+00:05:54,590 --> 00:05:55,500
+Estamos en la página.
+
+105
+00:05:55,520 --> 00:05:56,390
+Voy a refrescar.
+
+106
+00:05:57,770 --> 00:06:00,710
+Vamos a darle click a este Funes, al signo de suma.
+
+107
+00:06:01,640 --> 00:06:03,390
+Y mira, ya se está actualizando.
+
+108
+00:06:03,410 --> 00:06:09,950
+Te diste cuenta al darle clic automáticamente también cambió este precio y también está cambiando automáticamente
+
+109
+00:06:09,950 --> 00:06:12,050
+el precio total, el impuesto y el total.
+
+110
+00:06:12,050 --> 00:06:14,390
+Grant se llama Sharp MacBook Pro.
+
+111
+00:06:15,640 --> 00:06:18,100
+También está actualizándose el precio.
+
+112
+00:06:18,280 --> 00:06:19,420
+Computadora de stop.
+
+113
+00:06:19,540 --> 00:06:20,140
+Listo.
+
+114
+00:06:20,380 --> 00:06:25,420
+Estamos implementando el botón de suma de actualización de cantidades.
+
+115
+00:06:25,840 --> 00:06:28,240
+Pero qué pasaría si quisiera quitarle la cantidad?
+
+116
+00:06:29,020 --> 00:06:32,230
+En este caso, tendría que agregar una nueva función.
+
+117
+00:06:32,230 --> 00:06:33,400
+Porque esto no existe aún.
+
+118
+00:06:34,720 --> 00:06:36,010
+Estamos nuevamente en Atom.
+
+119
+00:06:36,040 --> 00:06:43,150
+Vamos a ver Explorador de archivos y vamos a la carpeta Quartz y al archivo Buscar y.
+
+120
+00:06:45,540 --> 00:06:49,800
+Aquí tengo el autocar que acabamos de utilizar.
+
+121
+00:06:50,280 --> 00:06:51,420
+Voy a minimizar un momento.
+
+122
+00:06:51,990 --> 00:06:53,580
+Después de este autocar.
+
+123
+00:06:56,040 --> 00:07:02,520
+Hago un espacio aquí, voy a crear la función que le voy a poner de nombre Remove Cart Def Remove.
+
+124
+00:07:03,500 --> 00:07:03,950
+Cart.
+
+125
+00:07:06,030 --> 00:07:08,010
+Y va a tener un parámetro request.
+
+126
+00:07:08,020 --> 00:07:10,590
+Y también necesito pasarle el product.
+
+127
+00:07:13,840 --> 00:07:14,200
+Aquí.
+
+128
+00:07:14,740 --> 00:07:15,610
+Lo actualizo.
+
+129
+00:07:15,920 --> 00:07:17,110
+Le ponemos dos puntos.
+
+130
+00:07:17,830 --> 00:07:18,100
+Bien.
+
+131
+00:07:18,370 --> 00:07:24,880
+Ahora, para poder actualizar, necesito primero instanciar al objeto carrito, del cual estamos hablando
+
+132
+00:07:24,880 --> 00:07:25,150
+aquí.
+
+133
+00:07:25,570 --> 00:07:33,160
+Por este motivo llamo al CART a la Entidad CAR con mayúscula Punto Object, Punto Get.
+
+134
+00:07:33,710 --> 00:07:37,990
+Aquí la condición es sobre su columna que se llama Cart Heidy.
+
+135
+00:07:38,590 --> 00:07:42,490
+Así que aquí le ponemos esto Car Heidy que busque con qué valor.
+
+136
+00:07:42,520 --> 00:07:47,980
+El valor lo voy a obtener desde la función que he creado en capítulos anteriores que se llama Car Heidy
+
+137
+00:07:48,880 --> 00:07:50,950
+y este me pide el request.
+
+138
+00:07:51,220 --> 00:07:55,300
+Entonces de esta forma nosotros encontramos el objeto cart.
+
+139
+00:07:55,870 --> 00:07:58,540
+Ahora voy a repetirlo para el objeto producto.
+
+140
+00:07:59,050 --> 00:08:00,220
+Le pongo entonces Product.
+
+141
+00:08:02,270 --> 00:08:03,020
+Igual a quién?
+
+142
+00:08:04,060 --> 00:08:07,120
+Vamos a llamar para este caso a la función GET.
+
+143
+00:08:08,380 --> 00:08:10,240
+Object or.
+
+144
+00:08:11,360 --> 00:08:12,620
+404.
+
+145
+00:08:14,630 --> 00:08:16,560
+Esta función me va a pedir dos parámetros.
+
+146
+00:08:16,580 --> 00:08:21,500
+El primero es el objeto al cual quiero buscar de que estructura, de que tabla quieres buscar este objeto
+
+147
+00:08:22,100 --> 00:08:23,340
+de la tabla product?
+
+148
+00:08:24,350 --> 00:08:25,420
+Y cuál es la condición?
+
+149
+00:08:25,430 --> 00:08:27,920
+La condición es el ID del producto.
+
+150
+00:08:29,640 --> 00:08:34,380
+Bueno, pero el parámetro que le voy a pasar es el product, que es el parámetro es el que está ingresando
+
+151
+00:08:34,380 --> 00:08:36,510
+a la función, si te das cuenta en la parte superior.
+
+152
+00:08:37,400 --> 00:08:42,320
+Y de esta forma ya vamos a encontrar el producto, el objeto producto.
+
+153
+00:08:42,920 --> 00:08:49,140
+Esta función que or 404 tenemos que también importarla en la parte superior.
+
+154
+00:08:49,160 --> 00:08:49,970
+Voy a copiarlo.
+
+155
+00:08:51,760 --> 00:08:55,410
+Que si vamos arriba mira que me aparece front and go shortcuts aquí.
+
+156
+00:08:55,450 --> 00:09:03,820
+Desde aquí viene imports, render direct, coma aquí pego get up, check or 404.
+
+157
+00:09:05,080 --> 00:09:05,320
+Bien.
+
+158
+00:09:05,320 --> 00:09:07,720
+Vamos a volver otra vez a la función Remove.
+
+159
+00:09:09,060 --> 00:09:09,600
+Aquí está.
+
+160
+00:09:09,780 --> 00:09:10,470
+Este es el Remove.
+
+161
+00:09:12,590 --> 00:09:18,440
+Y ya teniendo el carrito de compras, el otro carrito de compras y también el objeto product, ya puedo
+
+162
+00:09:18,440 --> 00:09:22,610
+hacer la siguiente consulta que es encontrar el item.
+
+163
+00:09:23,740 --> 00:09:26,080
+Entonces aquí la vamos a poner car item.
+
+164
+00:09:27,250 --> 00:09:28,180
+Es igual a Cam.
+
+165
+00:09:29,430 --> 00:09:30,270
+Azúcar.
+
+166
+00:09:30,270 --> 00:09:33,090
+Item Punto Objects.
+
+167
+00:09:35,030 --> 00:09:35,510
+Punto.
+
+168
+00:09:35,930 --> 00:09:36,830
+Cuál es la condición?
+
+169
+00:09:37,220 --> 00:09:40,550
+Que me busque al carrito de compras por el producto.
+
+170
+00:09:41,660 --> 00:09:48,200
+Produc igual a produc al produc que encontrado y también en función al carrito, al kart.
+
+171
+00:09:50,410 --> 00:09:51,250
+Lo tengo.
+
+172
+00:09:51,250 --> 00:09:54,820
+Entonces ya tengo el objeto carrito línea y carrito car item.
+
+173
+00:09:55,690 --> 00:10:02,530
+Ahora lo que quiero hacer es evaluar si la cantidad de elementos de esta línea de carrito es mayor que
+
+174
+00:10:02,530 --> 00:10:02,920
+uno.
+
+175
+00:10:03,160 --> 00:10:04,180
+Entonces lo voy a poner acá.
+
+176
+00:10:04,180 --> 00:10:05,770
+If car.
+
+177
+00:10:05,770 --> 00:10:07,650
+Item punto quality.
+
+178
+00:10:09,550 --> 00:10:11,020
+Es mayor que uno.
+
+179
+00:10:11,440 --> 00:10:11,980
+Entonces.
+
+180
+00:10:11,980 --> 00:10:14,530
+Qué cosa quiero que ocurra en este caso?
+
+181
+00:10:14,560 --> 00:10:16,690
+Quiero que disminuya en uno la cantidad.
+
+182
+00:10:16,700 --> 00:10:17,740
+Quiero que crezca.
+
+183
+00:10:18,770 --> 00:10:20,300
+Por eso le pongo car item.
+
+184
+00:10:22,250 --> 00:10:23,540
+Punto cuando te.
+
+185
+00:10:25,640 --> 00:10:27,000
+Va a ser igual al menos uno.
+
+186
+00:10:27,050 --> 00:10:32,090
+Una vez que el operador de eliminación de elementos -1.
+
+187
+00:10:33,270 --> 00:10:36,170
+Menos iguala uno.
+
+188
+00:10:36,390 --> 00:10:36,960
+Ahora sí.
+
+189
+00:10:39,400 --> 00:10:43,240
+Y quiero que sea ese cambio se refresque en la base de datos.
+
+190
+00:10:43,240 --> 00:10:44,020
+Por eso voy a marcar.
+
+191
+00:10:44,020 --> 00:10:45,940
+Item punto.
+
+192
+00:10:49,320 --> 00:10:53,820
+En caso contrario, el caso contrario significará que no es mayor que uno, que es cero.
+
+193
+00:10:54,300 --> 00:10:57,300
+En ese caso, quiero que se elimine este ítem.
+
+194
+00:10:58,370 --> 00:11:00,460
+Por ese motivo lo voy a poner a cascar.
+
+195
+00:11:00,470 --> 00:11:02,080
+Item punto.
+
+196
+00:11:05,630 --> 00:11:09,680
+Y finalmente quiero que me redirecciones hacia la página cart.
+
+197
+00:11:10,070 --> 00:11:10,730
+Retire.
+
+198
+00:11:12,780 --> 00:11:14,770
+Es que me faltó colocar entre apóstrofes.
+
+199
+00:11:15,550 --> 00:11:16,170
+Listo.
+
+200
+00:11:17,890 --> 00:11:24,340
+A continuación, lo que tengo que hacer es registrar el path que represente a esta función para que
+
+201
+00:11:24,340 --> 00:11:26,140
+el template pueda invocarla.
+
+202
+00:11:26,830 --> 00:11:28,360
+Entonces vamos hacia.
+
+203
+00:11:29,410 --> 00:11:32,770
+El Archivo Juárez que está dentro de la carpeta Cartas.
+
+204
+00:11:33,960 --> 00:11:38,430
+Lo abrimos y ya tenía aquí registrado este path para el autocar.
+
+205
+00:11:38,580 --> 00:11:40,140
+Va a ser muy similar para el ritmo.
+
+206
+00:11:40,320 --> 00:11:42,300
+Voy a copiar esta línea de path.
+
+207
+00:11:44,760 --> 00:11:45,420
+Checa el apego.
+
+208
+00:11:46,460 --> 00:11:50,930
+Y en vez de atacar que le ponemos simplemente en vez de lat, le ponemos remove.
+
+209
+00:11:53,720 --> 00:11:55,330
+Y aquí puse punto.
+
+210
+00:11:55,340 --> 00:11:56,420
+Remove cart.
+
+211
+00:11:57,790 --> 00:12:03,220
+El nombre de la función que hemos creado de AF también es Remove cart.
+
+212
+00:12:05,440 --> 00:12:09,400
+Vamos ahora hacia el template templates que aparece.
+
+213
+00:12:09,400 --> 00:12:10,280
+Store cart.
+
+214
+00:12:10,300 --> 00:12:11,230
+HTML.
+
+215
+00:12:11,440 --> 00:12:12,220
+Lo abrimos.
+
+216
+00:12:12,850 --> 00:12:14,800
+Voy a maximizar para que se vea mejor.
+
+217
+00:12:15,980 --> 00:12:19,550
+De aquí, más o menos a la línea 40 41 ya te debe aparecer.
+
+218
+00:12:20,830 --> 00:12:21,880
+El segmento.
+
+219
+00:12:21,880 --> 00:12:24,520
+El cable para este botón.
+
+220
+00:12:25,330 --> 00:12:29,620
+Este es el botón que me permite eliminar y actualizar la cantidad de ese menos.
+
+221
+00:12:30,370 --> 00:12:31,360
+Esta como un button.
+
+222
+00:12:31,510 --> 00:12:33,790
+Voy a reemplazarlo, ya sabes, por este A.
+
+223
+00:12:35,520 --> 00:12:40,170
+Para utilizar una propiedad href vamos a poner aquí el href.
+
+224
+00:12:41,390 --> 00:12:45,380
+Y este hecho es muy similar a lo que hemos hecho hace unos momentos.
+
+225
+00:12:46,400 --> 00:12:50,900
+Para el botón de agregar nuevos productos voy a copiar este href anterior.
+
+226
+00:12:52,800 --> 00:12:54,240
+Y acá lo voy a pegar.
+
+227
+00:12:56,220 --> 00:12:59,940
+Se lo pegué y en vez de atacar le vamos a poner.
+
+228
+00:13:02,750 --> 00:13:07,130
+Remove para abajo cart y el parámetro que le tenemos que pasar es el producto que hay ahí.
+
+229
+00:13:07,610 --> 00:13:10,190
+Vamos a darle una última revisada a nuestro archivo.
+
+230
+00:13:10,190 --> 00:13:10,570
+Buscar.
+
+231
+00:13:11,210 --> 00:13:12,530
+Me parece que me faltó algo.
+
+232
+00:13:12,530 --> 00:13:17,810
+Vamos a la carpeta cart videos y acá en la función Remove cart.
+
+233
+00:13:19,310 --> 00:13:22,100
+Me faltó agregarle luego del else los dos puntos.
+
+234
+00:13:23,410 --> 00:13:29,980
+Pequeño detalle Menu Fail Safe all Hemos guardado los cambios y vamos a probar a la página que estamos
+
+235
+00:13:29,980 --> 00:13:30,550
+en la página.
+
+236
+00:13:30,580 --> 00:13:32,390
+Voy a actualizar esto.
+
+237
+00:13:32,410 --> 00:13:33,250
+Está perfecto.
+
+238
+00:13:33,820 --> 00:13:36,580
+Aquí tengo los informes con una cantidad de cuatro.
+
+239
+00:13:36,970 --> 00:13:38,260
+Voy a quitarle uno.
+
+240
+00:13:38,590 --> 00:13:39,400
+Perfecto.
+
+241
+00:13:39,400 --> 00:13:40,320
+Ya está funcionando.
+
+242
+00:13:40,330 --> 00:13:47,050
+Y te das cuenta de que está actualizando las cantidades del precio impuesto total en toda la página.
+
+243
+00:13:47,560 --> 00:13:54,640
+Nos queda pendiente trabajar en la funcionalidad para eliminar por completo un item o un item, es decir,
+
+244
+00:13:54,820 --> 00:13:58,360
+implementar la funcionalidad para este botón de eliminar.
+
+245
+00:13:58,630 --> 00:13:59,860
+Vayamos a nuestro autom.
+
+246
+00:14:01,070 --> 00:14:05,180
+Y aquí hubo un ubicarnos en la carpeta cart, en el archivo buscar y.
+
+247
+00:14:06,610 --> 00:14:12,250
+Y justamente debajo de esta función remove car que acabo de crear, vamos a darle un enter.
+
+248
+00:14:13,500 --> 00:14:19,170
+Y voy a crear una nueva función que se va a llamar diff, remove cart item.
+
+249
+00:14:21,050 --> 00:14:25,010
+Y este va a recibir un parámetro request y un product.
+
+250
+00:14:26,140 --> 00:14:26,490
+Heidi.
+
+251
+00:14:27,310 --> 00:14:28,570
+Vamos a ponerle dos puntos.
+
+252
+00:14:30,160 --> 00:14:32,650
+Y comenzamos obteniendo el objeto cart.
+
+253
+00:14:33,070 --> 00:14:35,550
+Ya sabes que lo tengo desde CART con C mayúscula.
+
+254
+00:14:35,590 --> 00:14:36,160
+Punto.
+
+255
+00:14:37,430 --> 00:14:38,750
+Objects Get.
+
+256
+00:14:40,810 --> 00:14:42,870
+De aquí que busque por su carta.
+
+257
+00:14:42,880 --> 00:14:45,580
+Id, id iguala.
+
+258
+00:14:45,730 --> 00:14:50,500
+Ya sabéis que llamó también a la función car id y le paso el objeto request.
+
+259
+00:14:51,130 --> 00:14:52,180
+Hay que tener cuidado aquí.
+
+260
+00:14:52,480 --> 00:14:52,810
+Listo.
+
+261
+00:14:53,750 --> 00:14:56,930
+Estoy haciéndolo un poco más rápido porque ya lo hemos explicado antes.
+
+262
+00:14:56,930 --> 00:14:59,870
+Esto también voy a obtener el objeto Product.
+
+263
+00:15:00,800 --> 00:15:05,000
+Esto lo obtengo utilizando el Get Object or cuatro cuatro.
+
+264
+00:15:06,990 --> 00:15:13,770
+Llamó la entidad y también aquí le pongo el filtro que busque por allí el producto y de.
+
+265
+00:15:14,810 --> 00:15:18,440
+Y le paso el parámetro que viene desde la función proteica y di.
+
+266
+00:15:20,800 --> 00:15:23,980
+Ahora vamos a buscar lo que es el car item.
+
+267
+00:15:27,270 --> 00:15:29,910
+Muy similar si le ponemos un item.
+
+268
+00:15:31,210 --> 00:15:34,210
+Punto Object, punto get.
+
+269
+00:15:34,690 --> 00:15:38,380
+Y la condición es que me lo busque por el product igual a product.
+
+270
+00:15:40,140 --> 00:15:40,940
+Y por el 4.º.
+
+271
+00:15:46,770 --> 00:15:47,630
+Y es muy sencillo.
+
+272
+00:15:47,640 --> 00:15:52,850
+Simplemente lo que tengo que hacer aquí es llamar al card item y a su función de lead.
+
+273
+00:15:54,380 --> 00:15:55,280
+Eso sería todo.
+
+274
+00:15:56,500 --> 00:15:58,820
+Si más un return directo.
+
+275
+00:16:00,840 --> 00:16:01,710
+Hacia el kart.
+
+276
+00:16:03,680 --> 00:16:06,410
+Tenemos que registrar un pad para esta función.
+
+277
+00:16:06,830 --> 00:16:09,500
+Así que vamos al archivo pi y.
+
+278
+00:16:10,570 --> 00:16:13,870
+Y aquí voy a copiar el que acabo de hacer en su momento ese remove cart.
+
+279
+00:16:14,110 --> 00:16:19,970
+Copiamos, pegamos y este nuevo se va a llamar Remove cart.
+
+280
+00:16:19,990 --> 00:16:21,210
+Raya para abajo.
+
+281
+00:16:21,230 --> 00:16:21,730
+Item.
+
+282
+00:16:22,940 --> 00:16:29,450
+El parámetro es el mismo, pero te pide el bus remove cart como se llama la función remove item.
+
+283
+00:16:31,470 --> 00:16:33,870
+Sin buscar en el name y también.
+
+284
+00:16:37,970 --> 00:16:39,050
+Vamos ahora al template.
+
+285
+00:16:39,800 --> 00:16:41,420
+Estamos dentro de template store.
+
+286
+00:16:41,720 --> 00:16:42,590
+HTML.
+
+287
+00:16:43,100 --> 00:16:43,910
+Voy a maximizar.
+
+288
+00:16:45,910 --> 00:16:49,720
+Y aquí me aparece el botón para poder eliminar.
+
+289
+00:16:50,290 --> 00:16:52,960
+Este es el botón rojo que está en la interfaz gráfica.
+
+290
+00:16:53,620 --> 00:16:58,360
+Entonces tengo que llamar aquí al la función de eliminar item.
+
+291
+00:16:58,690 --> 00:16:59,650
+Como la estructura.
+
+292
+00:16:59,680 --> 00:17:02,110
+La nomenclatura es muy similar a la que he trabajado antes.
+
+293
+00:17:02,710 --> 00:17:06,670
+Vas a darte cuenta de que, por ejemplo, aquí tengo el href ad card.
+
+294
+00:17:08,090 --> 00:17:08,410
+Voy.
+
+295
+00:17:08,660 --> 00:17:10,370
+Bueno, el último kart.
+
+296
+00:17:10,520 --> 00:17:11,300
+Voy a copiarlo.
+
+297
+00:17:14,160 --> 00:17:14,880
+Ya lo pegó.
+
+298
+00:17:16,190 --> 00:17:19,430
+Y este sería ritmo cart raya para abajo y.
+
+299
+00:17:22,230 --> 00:17:25,170
+Y pasándole como parámetro el product Heidy.
+
+300
+00:17:26,180 --> 00:17:26,590
+Producto.
+
+301
+00:17:26,640 --> 00:17:26,880
+Punto.
+
+302
+00:17:27,800 --> 00:17:28,910
+Eso sería todo.
+
+303
+00:17:29,030 --> 00:17:30,340
+Vamos a guardar los cambios.
+
+304
+00:17:30,350 --> 00:17:31,430
+Me gusta el Safe Hall.
+
+305
+00:17:32,780 --> 00:17:35,610
+Y vamos a la página que hay en la página.
+
+306
+00:17:35,630 --> 00:17:36,590
+Vamos a refrescar.
+
+307
+00:17:38,060 --> 00:17:38,270
+Bien.
+
+308
+00:17:38,420 --> 00:17:40,340
+Quiero eliminar, por ejemplo, los jets phones.
+
+309
+00:17:40,820 --> 00:17:42,530
+Vamos a darle clic y se eliminó.
+
+310
+00:17:42,740 --> 00:17:48,350
+Y como puedes darte cuenta, también se actualizaron los precios del total impuesto y total.
+
+311
+00:17:48,950 --> 00:17:51,710
+Si quiero eliminar la MacBook Pro, vamos a darle click.
+
+312
+00:17:51,980 --> 00:17:53,150
+También se eliminó.
+
+313
+00:17:53,480 --> 00:17:54,050
+Perfecto.
+
+314
+00:17:54,050 --> 00:17:59,300
+Entonces, de esta forma ya hemos dado mantenimiento a los eventos claves del carrito de compra.

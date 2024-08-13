@@ -1,0 +1,339 @@
+1
+00:00:00,090 --> 00:00:06,390
+Una de las grandes características del software es su disposición al cambio constante, ya sea por mejoras
+
+2
+00:00:06,660 --> 00:00:09,930
+dentro de la aplicación o en arreglar problemas de código.
+
+3
+00:00:10,380 --> 00:00:15,060
+Pero lo que no se detendrá es la generación de nuevas versiones de tu aplicación.
+
+4
+00:00:15,630 --> 00:00:19,860
+Entonces, si el código de mi aplicación va a cambiar inevitablemente.
+
+5
+00:00:20,100 --> 00:00:26,280
+Cómo puedo hacer para administrar los cambios que se hagan en el software y que no impacte mi desarrollo
+
+6
+00:00:26,490 --> 00:00:28,020
+ni el de mis compañeros de equipo?
+
+7
+00:00:28,830 --> 00:00:35,700
+Frente a este problema surgen herramientas denominadas en inglés versión Control Systems o sistemas
+
+8
+00:00:35,700 --> 00:00:42,450
+de control de versiones en español, cuyo principal objetivo es llevar un registro histórico de todos
+
+9
+00:00:42,450 --> 00:00:46,290
+los cambios que se hagan sobre cada archivo de tu proyecto.
+
+10
+00:00:47,130 --> 00:00:53,640
+De modo que si un día decides volver a una versión anterior de tu código, el impacto no será mayor.
+
+11
+00:00:54,710 --> 00:01:00,800
+Como puedes ver en el ejemplo, nuestro proyecto Tienda Servicios a Futuro tendrá múltiples versiones
+
+12
+00:01:00,800 --> 00:01:04,130
+que iremos almacenando en un servidor externo.
+
+13
+00:01:05,340 --> 00:01:08,340
+En este caso tengo una versión uno, una versión dos, una versión tres.
+
+14
+00:01:08,520 --> 00:01:10,200
+Podría haber hasta una versión mil.
+
+15
+00:01:11,690 --> 00:01:14,510
+Vamos con la primera pregunta, profesor.
+
+16
+00:01:14,510 --> 00:01:17,960
+Qué necesitamos para implementar este sistema de versiones?
+
+17
+00:01:19,530 --> 00:01:24,480
+Lo primero que necesitamos es un repositorio que almacene todas las versiones.
+
+18
+00:01:24,900 --> 00:01:31,800
+Este repositorio es usualmente un servidor que ejecuta herramientas básicas de administración de archivos.
+
+19
+00:01:32,550 --> 00:01:37,440
+Existen muchas opciones de servidores repositorios online que puedes utilizar.
+
+20
+00:01:37,740 --> 00:01:40,140
+Lo más famoso son GitHub y Big Bucket.
+
+21
+00:01:42,590 --> 00:01:43,880
+Vamos con la pregunta dos.
+
+22
+00:01:44,090 --> 00:01:49,310
+Profesor, usted habló de herramientas que necesito usar para administrar mi repositorio.
+
+23
+00:01:49,580 --> 00:01:50,990
+Qué son estas herramientas?
+
+24
+00:01:51,410 --> 00:01:52,690
+Bueno, te respondo.
+
+25
+00:01:52,700 --> 00:02:00,050
+Estas herramientas contienen comandos que te permiten enviar nuevas versiones a tu servidor de repositorios.
+
+26
+00:02:00,320 --> 00:02:06,290
+Y también contienen comandos para descargar versiones de código enviadas anteriormente por programadores
+
+27
+00:02:06,290 --> 00:02:06,830
+de tu equipo.
+
+28
+00:02:07,670 --> 00:02:13,340
+Una de las principales características de estos sistemas de versiones es mantener el código sincronizado
+
+29
+00:02:13,610 --> 00:02:15,680
+entre todas las personas de tu equipo.
+
+30
+00:02:16,610 --> 00:02:21,020
+Existen varias herramientas que puedes utilizar para este trabajo.
+
+31
+00:02:21,320 --> 00:02:25,400
+Las más famosas en este momento son Git y Mercurial.
+
+32
+00:02:26,280 --> 00:02:28,080
+Para incluir nuestro proyecto.
+
+33
+00:02:28,080 --> 00:02:34,170
+Dentro de este control de versiones vamos a utilizar la herramienta Kit y también vamos a registrarnos
+
+34
+00:02:34,170 --> 00:02:37,230
+en un repositorio online que va a ser GitHub.
+
+35
+00:02:37,900 --> 00:02:42,180
+Bien, comencemos por instalar la herramienta Git en nuestra computadora.
+
+36
+00:02:43,170 --> 00:02:46,410
+Lo primero que tenemos que hacer es ir a la página oficial de kit.
+
+37
+00:02:46,890 --> 00:02:49,870
+Es kit raya c s, cmp.
+
+38
+00:02:50,070 --> 00:02:52,590
+Com y luego nos ubicamos.
+
+39
+00:02:53,540 --> 00:02:54,890
+En la opción de downloads.
+
+40
+00:02:55,130 --> 00:03:01,370
+Vamos a darle clic y aquí te aparece las opciones que puedes descargar dependiendo del sistema operativo
+
+41
+00:03:01,370 --> 00:03:01,890
+que tengas.
+
+42
+00:03:01,910 --> 00:03:07,760
+En mi caso voy a seleccionar Windows, vamos a darle clic a Windows y aquí comienza la descarga.
+
+43
+00:03:07,760 --> 00:03:13,940
+Me está indicando que mantenga el archivo, le voy a mantener clip y listo y comienza la descarga de
+
+44
+00:03:13,940 --> 00:03:15,110
+kit en mi computadora.
+
+45
+00:03:16,920 --> 00:03:22,500
+Ya ha descargado el gif y le ha dado click al botón para que lo ejecute el instalador.
+
+46
+00:03:22,800 --> 00:03:23,910
+Y apareció esta ventana.
+
+47
+00:03:23,940 --> 00:03:26,160
+Vamos a darle clic al botón Next.
+
+48
+00:03:27,360 --> 00:03:30,270
+Y aquí me aparece estas opciones que se van a instalar.
+
+49
+00:03:30,540 --> 00:03:36,240
+Primeramente me indica que el Windows se integra y va a utilizar el git batch y también el git wire.
+
+50
+00:03:36,840 --> 00:03:42,720
+Está muy bien, pero vamos a además seleccionar el additional icons on the desktop.
+
+51
+00:03:44,200 --> 00:03:46,210
+Y ahora sí vamos a darle click al botón Next.
+
+52
+00:03:46,900 --> 00:03:51,610
+Aquí me indica que va a usar el filtro de este editor.
+
+53
+00:03:51,730 --> 00:03:52,450
+Está muy bien.
+
+54
+00:03:52,750 --> 00:03:53,680
+No hay problema en eso.
+
+55
+00:03:54,040 --> 00:04:02,260
+Vamos a darle clic al botón Next y aquí me está indicando que podemos usar el kit from the comandante.
+
+56
+00:04:02,260 --> 00:04:05,650
+O sea, la ventana de dedo, ese que está instalado en mi Windows.
+
+57
+00:04:05,800 --> 00:04:07,560
+Eso está muy bien, perfecto.
+
+58
+00:04:07,570 --> 00:04:14,170
+Y se va a agregar ese el path dentro del sistema operativo para que sea posible utilizar el Git en cualquier
+
+59
+00:04:14,170 --> 00:04:16,570
+ventana de host de mi computadora.
+
+60
+00:04:17,000 --> 00:04:18,130
+Bien, eso está perfecto.
+
+61
+00:04:18,400 --> 00:04:19,840
+Vamos a darle clic al botón Next.
+
+62
+00:04:21,060 --> 00:04:25,230
+De aquí te aparece esta opción para el uso del open ssh ssh.
+
+63
+00:04:25,620 --> 00:04:32,760
+Lo que pasa es que las comunicaciones entre mi computadora y un servidor de repositorios se dan por
+
+64
+00:04:32,760 --> 00:04:40,620
+el protocolo HTTP usualmente, pero también existe la opción para utilizar este protocolo hace SSH.
+
+65
+00:04:41,340 --> 00:04:45,240
+Por ahora vamos a dejarlo seleccionado y al botón Next.
+
+66
+00:04:48,170 --> 00:04:49,090
+Eso está perfecto.
+
+67
+00:04:49,100 --> 00:04:52,490
+El juez del Open SSL Library está muy bien.
+
+68
+00:04:53,360 --> 00:04:53,810
+Next.
+
+69
+00:04:55,450 --> 00:05:01,420
+También aquí me está indicando en esta ventana cómo debería tratar jit los cuando una línea de texto
+
+70
+00:05:01,420 --> 00:05:02,020
+termine.
+
+71
+00:05:02,680 --> 00:05:05,680
+Bueno, le estoy indicando que por defecto hago checkout windom.
+
+72
+00:05:05,680 --> 00:05:09,710
+Está el commit timeline index, que es la configuración por defecto.
+
+73
+00:05:09,730 --> 00:05:11,050
+No te preocupes por esta parte.
+
+74
+00:05:11,380 --> 00:05:13,060
+Vamos a explicar al botón Next.
+
+75
+00:05:14,900 --> 00:05:18,800
+Y aquí me dice qué tipo de terminal emulador quieres usar.
+
+76
+00:05:19,200 --> 00:05:25,070
+Yo en este caso quiero utilizar la consola de Windows, así que selecciono Windows Default con Windows
+
+77
+00:05:26,180 --> 00:05:27,950
+y ahora si le damos clic al botón Next.
+
+78
+00:05:29,920 --> 00:05:36,880
+Vamos a dejar marcado el end en Google File System Catching y en el Kit Credencial Manager.
+
+79
+00:05:37,820 --> 00:05:40,220
+Y ahora sí, vamos a darle clic al botón Install.
+
+80
+00:05:41,730 --> 00:05:44,370
+Y comienza la instalación de nuestra computadora.
+
+81
+00:05:45,030 --> 00:05:46,560
+Regresamos cuando concluya.
+
+82
+00:05:47,790 --> 00:05:49,380
+Ben ha concluido la instalación de kit.
+
+83
+00:05:49,390 --> 00:05:50,820
+Vamos a replicar el botón Phoenix.
+
+84
+00:05:51,450 --> 00:05:55,290
+Yo te recomiendo reiniciar tu computadora después de este punto.
+
+85
+00:05:55,620 --> 00:06:00,630
+Bien, vamos a continuar en el siguiente video viendo la configuración de kit en nuestra computadora.

@@ -1,0 +1,1195 @@
+1
+00:00:00,520 --> 00:00:08,170
+El objetivo de este curso es implementar un web application de tipo e-commerce utilizando HTML, CSS,
+
+2
+00:00:08,200 --> 00:00:12,430
+JavaScript y lo principal, las estructuras de paquetes de chango.
+
+3
+00:00:12,940 --> 00:00:18,880
+En secciones anteriores te explicamos desde cero cómo crear páginas HTML estáticas.
+
+4
+00:00:19,120 --> 00:00:26,530
+También te explicamos qué cosa es CSS JavaScript y también hablamos de las estructuras y del objeto
+
+5
+00:00:26,530 --> 00:00:26,950
+dom.
+
+6
+00:00:27,960 --> 00:00:34,620
+Es una de las razones por la que en esta sección no nos enfocaremos en la parte teórica del código HTML,
+
+7
+00:00:34,980 --> 00:00:41,130
+sino que estaremos trabajando más en Django y cómo hacer la integración con herramientas del front end.
+
+8
+00:00:41,520 --> 00:00:48,300
+Por este motivo, en la sección de recursos de este vídeo de esta sección vas a encontrar un archivo
+
+9
+00:00:48,300 --> 00:00:55,020
+zip que contiene ya las páginas estáticas HTML, tal como puedes ver en la pantalla.
+
+10
+00:00:55,290 --> 00:01:03,510
+Esta carpeta que se va a llamar HTML template va a contener todas las páginas HTML que utilizaremos
+
+11
+00:01:03,510 --> 00:01:04,950
+para la integración con Jango.
+
+12
+00:01:05,130 --> 00:01:13,290
+También va a tener imágenes de ejemplo los archivos JavaScript de soporte, los archivos CSS y también
+
+13
+00:01:13,290 --> 00:01:14,580
+archivos de tipo fuente.
+
+14
+00:01:15,120 --> 00:01:19,020
+Pero nada de esto es dinámico, es solo código estático.
+
+15
+00:01:19,860 --> 00:01:26,880
+Qué tomaremos como base, como una plantilla inicial y que luego vamos a convertir en un código dinámico
+
+16
+00:01:26,880 --> 00:01:28,380
+utilizando Django?
+
+17
+00:01:29,270 --> 00:01:34,190
+Comencemos por implementar la página index de este proyecto.
+
+18
+00:01:34,730 --> 00:01:37,010
+Vamos a abrir este archivo con el bloc de notas.
+
+19
+00:01:38,420 --> 00:01:38,900
+Aquí.
+
+20
+00:01:38,900 --> 00:01:40,010
+Ya lo tengo abierto.
+
+21
+00:01:40,910 --> 00:01:43,820
+Entonces voy a copiar todo su contenido.
+
+22
+00:01:45,800 --> 00:01:47,990
+Vamos a nuestro proyecto Jango y Commerce.
+
+23
+00:01:48,020 --> 00:01:49,040
+Aquí y commerce.
+
+24
+00:01:49,070 --> 00:01:50,630
+Aquí aparece la carpeta Templates.
+
+25
+00:01:51,080 --> 00:01:55,900
+Vamos a abrir templates y vamos a abrir aquí el archivo HTML.
+
+26
+00:01:56,570 --> 00:02:00,650
+Voy a borrar ese contenido que había creado antes y voy a pegar.
+
+27
+00:02:00,740 --> 00:02:03,920
+Voy a pegar todo lo que viene desde el index html.
+
+28
+00:02:05,490 --> 00:02:06,480
+Lo hemos pegado.
+
+29
+00:02:07,110 --> 00:02:07,680
+Perfecto.
+
+30
+00:02:07,690 --> 00:02:08,940
+Voy a guardar los cambios.
+
+31
+00:02:09,950 --> 00:02:12,650
+Menú Falstaff all y vamos a probar la página.
+
+32
+00:02:13,550 --> 00:02:14,540
+Estoy en la página.
+
+33
+00:02:14,900 --> 00:02:18,740
+Voy a refrescarlo y mira lo que me aparece.
+
+34
+00:02:20,870 --> 00:02:22,610
+Mira, profesor, esto se ve muy feo.
+
+35
+00:02:22,640 --> 00:02:31,100
+Claro, esto sucede porque aún no he importado los archivos de tipo imagen y tampoco estoy importando
+
+36
+00:02:31,100 --> 00:02:34,370
+los estilos de Bootstrap que necesita mi proyecto.
+
+37
+00:02:35,400 --> 00:02:43,710
+Esto que significa que los archivos de tipo imagen, templates, CSS y JavaScript vas a tener que moverlos
+
+38
+00:02:43,710 --> 00:02:46,470
+al interior de tu proyecto Jango.
+
+39
+00:02:47,220 --> 00:02:53,220
+Vamos entonces primero a Atom E-commerce, que es el proyecto e-commerce dentro del proyecto E-commerce.
+
+40
+00:02:53,460 --> 00:02:58,020
+Voy a crear una carpeta de los folder que se va a llamar static.
+
+41
+00:02:59,700 --> 00:03:07,500
+Dentro de este static es donde voy a colocar todos los archivos CSS, fonts, imágenes y JavaScript
+
+42
+00:03:07,830 --> 00:03:12,060
+que yo te estoy compartiendo como un recurso dentro de este vídeo.
+
+43
+00:03:13,440 --> 00:03:18,990
+Vamos entonces otra vez a la carpeta que te he compartido dentro de este vídeo que se llama HTML Templates
+
+44
+00:03:19,740 --> 00:03:20,970
+y voy a seleccionar.
+
+45
+00:03:21,830 --> 00:03:26,330
+Si haces fonts y matches y js no lo copiamos.
+
+46
+00:03:27,550 --> 00:03:31,180
+Y ahora vamos a la carpeta de tu proyecto Jango.
+
+47
+00:03:31,190 --> 00:03:32,410
+Recuerdas que está en el disco?
+
+48
+00:03:32,440 --> 00:03:34,180
+Sé que se llama e-commerce.
+
+49
+00:03:34,930 --> 00:03:39,370
+Bien, dentro de esta carpeta está esta otra carpeta, que también se llama e-commerce.
+
+50
+00:03:39,700 --> 00:03:40,630
+Vamos a abrirla.
+
+51
+00:03:41,470 --> 00:03:42,040
+Doble clic.
+
+52
+00:03:42,940 --> 00:03:47,350
+Y aquí aparece la carpeta esta que yo acabo de crear en el IDE con Atom.
+
+53
+00:03:47,710 --> 00:03:51,970
+Vamos a abrir Static y aquí vamos a hacer clic derecho y pegar.
+
+54
+00:03:52,180 --> 00:03:53,500
+Aquí pegamos todo el contenido.
+
+55
+00:03:53,740 --> 00:03:54,730
+Perfecto.
+
+56
+00:03:54,730 --> 00:04:00,010
+Entonces ya he pegado dentro de estáticas CSS, fonts y matches y js.
+
+57
+00:04:01,110 --> 00:04:07,350
+Vamos a ir a Platón ahora y dentro de Atton, en la carpeta static, ya aparecen también estos archivos
+
+58
+00:04:07,350 --> 00:04:08,070
+pegados.
+
+59
+00:04:09,020 --> 00:04:13,010
+Para que sea posible que estos archivos media como imágenes.
+
+60
+00:04:13,190 --> 00:04:20,060
+Los archivos CSS y los archivos JavaScript puedan ser leídos por mi web application de Jango.
+
+61
+00:04:20,240 --> 00:04:22,400
+Necesito crear un static root.
+
+62
+00:04:22,910 --> 00:04:28,250
+Entonces vamos a ir dentro de la carpeta de comercio al archivo settings y.
+
+63
+00:04:29,410 --> 00:04:31,390
+De que nos ubicamos en la parte inferior.
+
+64
+00:04:32,570 --> 00:04:33,410
+Aquí está definido.
+
+65
+00:04:33,430 --> 00:04:35,000
+Youn estático, estático.
+
+66
+00:04:35,810 --> 00:04:38,930
+Pero voy a definir otro que se va a llamar estático root.
+
+67
+00:04:40,270 --> 00:04:40,570
+Igual.
+
+68
+00:04:40,570 --> 00:04:40,990
+A quién?
+
+69
+00:04:41,020 --> 00:04:46,390
+Al bastidor que representa la carpeta raíz de mi proyecto e-commerce.
+
+70
+00:04:48,290 --> 00:04:52,550
+Y le digo que apunte hacia la carpeta de static en minúscula.
+
+71
+00:04:52,560 --> 00:04:55,610
+Ten mucho cuidado aquí con las mayúsculas y minúsculas.
+
+72
+00:04:57,510 --> 00:05:02,310
+También voy a definir un static files para abajo.
+
+73
+00:05:02,310 --> 00:05:02,790
+Dirs.
+
+74
+00:05:04,100 --> 00:05:06,080
+Iguala y entre corchetes.
+
+75
+00:05:06,800 --> 00:05:10,730
+Aquí le digo que lea desde I Commerce.
+
+76
+00:05:12,280 --> 00:05:13,870
+Es las static.
+
+77
+00:05:14,110 --> 00:05:17,560
+Los archivos media como imágenes CSS y JavaScript.
+
+78
+00:05:18,040 --> 00:05:26,530
+Entonces va a comenzar a leer desde la base que es commerce y luego continuaría con la carpeta la subcarpeta
+
+79
+00:05:26,530 --> 00:05:27,130
+static.
+
+80
+00:05:27,550 --> 00:05:34,120
+Eso es lo que le estoy indicando aquí que lea desde este punto todos los recursos de tipo media como
+
+81
+00:05:34,120 --> 00:05:34,840
+imágenes.
+
+82
+00:05:35,710 --> 00:05:37,060
+Aquí hay un pequeño detalle.
+
+83
+00:05:37,090 --> 00:05:40,810
+Lo que pasa es que este es el aspa fuera del apóstrofe.
+
+84
+00:05:40,900 --> 00:05:41,530
+Ahora si.
+
+85
+00:05:42,570 --> 00:05:44,580
+Y guardamos los cambios de no false all.
+
+86
+00:05:46,530 --> 00:05:52,950
+Algo adicional que tengo que hacer es ejecutar un comando dentro del rango entre el del rango que me
+
+87
+00:05:52,950 --> 00:05:57,720
+permita generar estos archivos estáticos a nivel de la raíz de la carpeta.
+
+88
+00:05:58,470 --> 00:06:00,060
+De esta forma van a ser públicos.
+
+89
+00:06:01,140 --> 00:06:05,130
+Iban a poder ser leídos por cualquier componente de mi proyecto.
+
+90
+00:06:05,580 --> 00:06:08,880
+Entonces vamos a abrir nuestro badge aquí.
+
+91
+00:06:08,880 --> 00:06:13,140
+Puedes darte cuenta que el Buzz todavía está ejecutando la página para detener el servidor?
+
+92
+00:06:13,920 --> 00:06:14,610
+Le voy a dar control.
+
+93
+00:06:14,610 --> 00:06:14,880
+Zip.
+
+94
+00:06:15,240 --> 00:06:15,810
+Listo?
+
+95
+00:06:16,290 --> 00:06:19,470
+Y ahora sí, vamos a poner aquí el comando Python.
+
+96
+00:06:20,620 --> 00:06:24,820
+Manage copy espacio collect.
+
+97
+00:06:26,470 --> 00:06:27,070
+Estática.
+
+98
+00:06:28,140 --> 00:06:29,040
+Y le damos enter.
+
+99
+00:06:31,850 --> 00:06:33,570
+Lo ejecutó sin ningún error.
+
+100
+00:06:33,590 --> 00:06:40,640
+Vas a darte cuenta de que dentro de la raíz de la carpeta que se e-commerce ya apareció este estática
+
+101
+00:06:41,360 --> 00:06:45,770
+con los directorios de admin, SSS, fonts y matches y JS.
+
+102
+00:06:46,520 --> 00:06:51,380
+No lo voy a confundir con el otro archivo que yo he generado manualmente dentro del ecommerce, que
+
+103
+00:06:51,380 --> 00:06:52,760
+también se llama static.
+
+104
+00:06:54,240 --> 00:07:00,720
+Vas a poder diferenciarlo, porque este static que está a nivel superior inicia siempre con la carpeta
+
+105
+00:07:00,720 --> 00:07:06,120
+admin que recuerda es la carpeta de administración de recursos del Chango.
+
+106
+00:07:07,830 --> 00:07:08,370
+Profesor.
+
+107
+00:07:08,400 --> 00:07:13,500
+Esto significa entonces que ya voy a poder leer las imágenes dentro de mi página web de Jango?
+
+108
+00:07:13,860 --> 00:07:15,030
+Así es, así es.
+
+109
+00:07:15,040 --> 00:07:15,930
+Lo vas a poder hacer.
+
+110
+00:07:16,110 --> 00:07:18,660
+Vayamos entonces a la raíz y commerce.
+
+111
+00:07:18,690 --> 00:07:22,170
+Vamos a templates y al template home punto HTML.
+
+112
+00:07:23,010 --> 00:07:28,380
+Y aquí vamos a encontrar lo siguiente Aparece esta primera imagen, que es el ícono de la página.
+
+113
+00:07:29,460 --> 00:07:33,870
+Pero no lo puedo cargar de esta forma estática como si fuera html puro.
+
+114
+00:07:34,140 --> 00:07:41,630
+Tengo que cargarla utilizando la URL que me da chango para poder utilizar esa tarea estática.
+
+115
+00:07:41,650 --> 00:07:42,090
+Chango.
+
+116
+00:07:42,510 --> 00:07:44,360
+Vamos a la parte superior de la página.
+
+117
+00:07:44,770 --> 00:07:49,290
+Aquí vas a escribir entre llaves y signos de porcentaje.
+
+118
+00:07:50,740 --> 00:07:52,360
+Load static.
+
+119
+00:07:54,590 --> 00:07:55,460
+Lo tienes listo.
+
+120
+00:07:55,850 --> 00:07:58,340
+Bien, ahora vamos a este primer.
+
+121
+00:07:59,240 --> 00:08:02,420
+A esa primera imagen que carga el icono superior de la página.
+
+122
+00:08:03,550 --> 00:08:08,380
+Y en vez de colocarle este images slash fi yacom, voy a borrarlo.
+
+123
+00:08:09,160 --> 00:08:09,860
+Entre llaves.
+
+124
+00:08:09,880 --> 00:08:11,050
+Vamos a colocarle.
+
+125
+00:08:12,780 --> 00:08:20,070
+La forma en que lo va a leer chango que sería static y entre apóstrofes le coloco que es la ubicación
+
+126
+00:08:20,070 --> 00:08:21,960
+que quiero que le sea y mejor es.
+
+127
+00:08:23,180 --> 00:08:25,630
+Es la fav fav icon.
+
+128
+00:08:26,780 --> 00:08:27,820
+Punto y coma.
+
+129
+00:08:28,940 --> 00:08:29,390
+Listo.
+
+130
+00:08:29,930 --> 00:08:34,130
+De esta forma ya va a comenzar a leer la imagen del directorio compartido.
+
+131
+00:08:35,330 --> 00:08:41,480
+A continuación vamos a revisar que está incorporando leyendo un archivo de tipo JavaScript.
+
+132
+00:08:43,010 --> 00:08:47,870
+Entonces lo que voy a hacer aquí es copiar primeramente el nombre.
+
+133
+00:08:49,150 --> 00:08:49,660
+De Cary.
+
+134
+00:08:49,900 --> 00:08:50,950
+Voy a borrarlo ahora.
+
+135
+00:08:52,630 --> 00:09:00,700
+Y entre llaves y porcentajes le colocamos static y entre apóstrofes.
+
+136
+00:09:01,180 --> 00:09:09,220
+Aquí le coloco lo que había copiado antes el JS jQuery 2.0 js el archivo JavaScript.
+
+137
+00:09:09,790 --> 00:09:13,370
+Vamos a repetir la figura para los siguientes links y archivos.
+
+138
+00:09:13,440 --> 00:09:20,170
+Media por ejemplo que sigue este js bootstrap bundle mi js no hay problema, lo vamos a copiar.
+
+139
+00:09:22,690 --> 00:09:30,700
+Ahora borro el contenido y entre llaves y porcentajes le colocamos static y entre apóstrofes.
+
+140
+00:09:31,950 --> 00:09:33,330
+Aquí apareció ya el J.
+
+141
+00:09:33,630 --> 00:09:35,200
+Ese put strap on alemán.
+
+142
+00:09:35,220 --> 00:09:37,520
+J está listo para el siguiente.
+
+143
+00:09:37,530 --> 00:09:39,270
+También vamos a hacerlo un poquito más rapidito.
+
+144
+00:09:39,270 --> 00:09:39,990
+Si es, es.
+
+145
+00:09:40,290 --> 00:09:40,500
+Es.
+
+146
+00:09:41,220 --> 00:09:42,090
+Voy a copiarlo.
+
+147
+00:09:42,630 --> 00:09:43,890
+Borro su contenido.
+
+148
+00:09:44,070 --> 00:09:46,470
+Y entre llaves y porcentajes.
+
+149
+00:09:47,320 --> 00:09:48,060
+Static.
+
+150
+00:09:49,820 --> 00:09:55,520
+Esto y entre apóstrofes, aquí va el CSS bootstrap CSS.
+
+151
+00:09:55,910 --> 00:09:56,540
+Listo.
+
+152
+00:09:56,960 --> 00:09:58,700
+El siguiente es el photoshop.
+
+153
+00:09:59,330 --> 00:09:59,840
+Listo.
+
+154
+00:09:59,840 --> 00:10:00,580
+No hay problema.
+
+155
+00:10:00,590 --> 00:10:02,630
+Vamos a copiar también el nombre.
+
+156
+00:10:04,840 --> 00:10:05,830
+Lo copiamos bien.
+
+157
+00:10:07,630 --> 00:10:10,480
+Borramos y entre llaves, porcentajes.
+
+158
+00:10:12,430 --> 00:10:20,930
+Aquí colocamos un momento, colocamos static espacio y entre apóstrofes pegamos el photoshop.
+
+159
+00:10:21,550 --> 00:10:22,030
+Listo?
+
+160
+00:10:22,360 --> 00:10:23,200
+Continuamos.
+
+161
+00:10:23,410 --> 00:10:24,670
+Aquí me falta otro más.
+
+162
+00:10:27,280 --> 00:10:30,600
+Vamos a hacer ahora para este punto y punto?
+
+163
+00:10:30,610 --> 00:10:31,240
+Si es.
+
+164
+00:10:32,420 --> 00:10:33,800
+Copiamos el contenido.
+
+165
+00:10:34,700 --> 00:10:35,360
+Chávez.
+
+166
+00:10:38,750 --> 00:10:39,440
+Static.
+
+167
+00:10:41,880 --> 00:10:42,790
+Ya captamos.
+
+168
+00:10:42,870 --> 00:10:43,380
+Listo.
+
+169
+00:10:45,400 --> 00:10:46,150
+Aquí también?
+
+170
+00:10:46,780 --> 00:10:47,620
+Sí, eso es.
+
+171
+00:10:48,760 --> 00:10:49,990
+Copiamos su contenido.
+
+172
+00:10:52,670 --> 00:10:53,360
+Ya ves.
+
+173
+00:10:53,810 --> 00:10:59,620
+Porcentaje estático apostrofe y pegamos el responsive paint.
+
+174
+00:10:59,660 --> 00:11:00,200
+Si es eso.
+
+175
+00:11:02,100 --> 00:11:03,000
+Lo tenemos.
+
+176
+00:11:03,030 --> 00:11:05,340
+Ahora vamos con este JS JavaScript.
+
+177
+00:11:07,110 --> 00:11:07,920
+Copiamos.
+
+178
+00:11:08,520 --> 00:11:12,480
+Borramos llaves, porcentajes.
+
+179
+00:11:13,660 --> 00:11:15,560
+Static apóstrofe.
+
+180
+00:11:16,000 --> 00:11:16,830
+Ya captamos.
+
+181
+00:11:17,130 --> 00:11:17,940
+Perfecto.
+
+182
+00:11:18,240 --> 00:11:18,870
+Ya está.
+
+183
+00:11:19,490 --> 00:11:20,370
+No hay ningún problema.
+
+184
+00:11:21,120 --> 00:11:22,140
+Continuemos.
+
+185
+00:11:23,310 --> 00:11:25,800
+Esta es la sección del contenido.
+
+186
+00:11:26,010 --> 00:11:26,680
+Vamos a probar.
+
+187
+00:11:26,830 --> 00:11:30,660
+Voy a darle el menú Field Safe all y vamos a ejecutar la página.
+
+188
+00:11:31,380 --> 00:11:36,690
+Yo tenía pagado el servidor por eso aquí en el shell, voy a escribir de Python Manager y Run Server.
+
+189
+00:11:37,200 --> 00:11:38,010
+Le damos enter.
+
+190
+00:11:39,410 --> 00:11:41,570
+Y vamos a levantar ahora el local de 8000.
+
+191
+00:11:42,980 --> 00:11:43,950
+Igual la mira.
+
+192
+00:11:43,970 --> 00:11:47,090
+Estoy en el 8000 y estoy levantando.
+
+193
+00:11:47,090 --> 00:11:52,340
+Al menos ya me está levantando la imagen del icono y ya me está cargando la estructura de la página,
+
+194
+00:11:52,340 --> 00:11:53,420
+que se ve mucho mejor.
+
+195
+00:11:53,840 --> 00:11:56,810
+Pero lo que no me está cargando son las imágenes.
+
+196
+00:11:57,560 --> 00:12:03,380
+Entonces no te preocupes, nos falta entonces colocar la la laurel dinámica del chango.
+
+197
+00:12:04,420 --> 00:12:05,800
+Volvemos a la página.
+
+198
+00:12:05,980 --> 00:12:06,560
+Vamos a ver.
+
+199
+00:12:06,800 --> 00:12:09,640
+Aquí debe aparecer esta primera imagen.
+
+200
+00:12:10,660 --> 00:12:12,250
+Que es el logo de la página.
+
+201
+00:12:13,890 --> 00:12:14,640
+No te preocupes.
+
+202
+00:12:14,640 --> 00:12:15,270
+Aquí vamos.
+
+203
+00:12:16,170 --> 00:12:18,510
+Vamos a copiar el procedimiento.
+
+204
+00:12:18,510 --> 00:12:19,110
+Este será ese.
+
+205
+00:12:19,140 --> 00:12:22,050
+Voy a cortar esta sección de imágenes.
+
+206
+00:12:22,160 --> 00:12:23,370
+Logos uno png.
+
+207
+00:12:24,830 --> 00:12:34,840
+Lo cortamos aquí entre llaves y signos de porcentaje le colocamos static apóstrofes y aquí images es
+
+208
+00:12:35,160 --> 00:12:37,400
+punto y luego cero uno.
+
+209
+00:12:37,850 --> 00:12:42,050
+Vamos a guardar los cambios en el Safe Hall y probamos.
+
+210
+00:12:43,060 --> 00:12:49,030
+Y como puedes ver, ya me está cargando la imagen de Maxi tres, que es el logo de esta página.
+
+211
+00:12:49,630 --> 00:12:51,520
+Aquí la que continúa es el banner.
+
+212
+00:12:51,670 --> 00:12:53,500
+Veamos la imagen del banner.
+
+213
+00:12:55,090 --> 00:12:56,350
+Estamos en el IDE.
+
+214
+00:12:56,970 --> 00:12:58,240
+En el home HTML.
+
+215
+00:12:59,350 --> 00:13:01,330
+Vamos a la parte inferior.
+
+216
+00:13:02,910 --> 00:13:05,430
+Aquí en la línea 100.
+
+217
+00:13:08,020 --> 00:13:09,130
+36.
+
+218
+00:13:09,460 --> 00:13:11,800
+Me aparece la línea del banner.
+
+219
+00:13:12,400 --> 00:13:13,360
+Bien, no hay problema.
+
+220
+00:13:13,390 --> 00:13:14,050
+Vamos a.
+
+221
+00:13:15,230 --> 00:13:16,310
+Seleccionar.
+
+222
+00:13:16,850 --> 00:13:17,660
+Cortarlo.
+
+223
+00:13:19,130 --> 00:13:21,380
+Si acá ponemos las llaves.
+
+224
+00:13:21,380 --> 00:13:22,740
+El signo de porcentaje.
+
+225
+00:13:22,760 --> 00:13:23,810
+Le ponemos static.
+
+226
+00:13:25,730 --> 00:13:28,490
+Y entre apóstrofes le pega más el images.
+
+227
+00:13:28,490 --> 00:13:29,800
+Banners, banners cero uno.
+
+228
+00:13:30,680 --> 00:13:31,940
+Guardamos los cambios.
+
+229
+00:13:33,080 --> 00:13:38,450
+Y si vamos a la página y la actualizamos, vas a notar que ya me aparece el banner de la página.
+
+230
+00:13:38,460 --> 00:13:39,120
+Perfecto.
+
+231
+00:13:39,380 --> 00:13:40,370
+Qué me falta ahora?
+
+232
+00:13:40,670 --> 00:13:43,700
+Lo que me falta es cargar las imágenes de los productos.
+
+233
+00:13:44,040 --> 00:13:44,450
+Claro.
+
+234
+00:13:44,660 --> 00:13:47,870
+Tengo que reemplazarlas por el static dinámico.
+
+235
+00:13:48,890 --> 00:13:50,660
+Entonces vamos a la parte inferior.
+
+236
+00:13:51,580 --> 00:13:54,760
+Hay que aparecer en la línea 156.
+
+237
+00:13:55,180 --> 00:13:56,470
+El primer producto.
+
+238
+00:13:57,250 --> 00:13:57,950
+No hay problema.
+
+239
+00:13:57,970 --> 00:13:59,050
+Voy a cortar.
+
+240
+00:14:02,510 --> 00:14:04,040
+Este nombre de la imagen.
+
+241
+00:14:05,520 --> 00:14:11,250
+Ya sabes que aquí le coloco llaves, porcentajes estáticos, un espacio.
+
+242
+00:14:13,550 --> 00:14:14,480
+Apóstrofes.
+
+243
+00:14:15,440 --> 00:14:16,970
+Aquí pego el nombre de la imagen.
+
+244
+00:14:17,090 --> 00:14:17,540
+Listo.
+
+245
+00:14:17,750 --> 00:14:21,760
+Voy a aprovechar para repetir el procedimiento para las demás imágenes.
+
+246
+00:14:21,770 --> 00:14:23,930
+La imagen que sigue la línea 165.
+
+247
+00:14:25,520 --> 00:14:27,590
+Voy a cortar esta imagen.
+
+248
+00:14:29,500 --> 00:14:31,240
+Y reemplazamos por el estático.
+
+249
+00:14:35,590 --> 00:14:36,040
+Listo.
+
+250
+00:14:37,360 --> 00:14:40,450
+Continuemos la siguiente imagen en la línea 174.
+
+251
+00:14:44,470 --> 00:14:45,460
+Cortamos.
+
+252
+00:14:47,310 --> 00:14:49,560
+Chávez porcentaje.
+
+253
+00:14:50,670 --> 00:14:54,660
+Static apóstrofe un espacio siempre después del apóstrofe final.
+
+254
+00:14:55,760 --> 00:14:56,540
+Y pegamos.
+
+255
+00:14:56,570 --> 00:14:57,230
+Listo.
+
+256
+00:14:57,800 --> 00:14:58,750
+Continuemos.
+
+257
+00:14:58,790 --> 00:15:00,140
+La línea 183.
+
+258
+00:15:02,570 --> 00:15:04,370
+Voy a cortar esta imagen.
+
+259
+00:15:04,880 --> 00:15:05,480
+Este contenido.
+
+260
+00:15:05,480 --> 00:15:06,200
+El hombre de la imagen.
+
+261
+00:15:06,890 --> 00:15:07,550
+Chávez.
+
+262
+00:15:07,550 --> 00:15:08,690
+Porcentajes.
+
+263
+00:15:10,580 --> 00:15:12,260
+Static Apóstrofes.
+
+264
+00:15:12,800 --> 00:15:13,310
+Listo?
+
+265
+00:15:13,550 --> 00:15:14,120
+Ahí está.
+
+266
+00:15:15,860 --> 00:15:16,580
+Sigamos.
+
+267
+00:15:16,800 --> 00:15:18,080
+Línea 192.
+
+268
+00:15:20,780 --> 00:15:21,800
+Voy a cortarlo.
+
+269
+00:15:23,890 --> 00:15:25,870
+Chávez porcentajes.
+
+270
+00:15:27,840 --> 00:15:28,470
+Estático.
+
+271
+00:15:28,560 --> 00:15:29,430
+Apóstrofes.
+
+272
+00:15:29,580 --> 00:15:30,090
+Listo.
+
+273
+00:15:30,090 --> 00:15:31,110
+Siempre un espacio.
+
+274
+00:15:32,660 --> 00:15:33,530
+Seguimos.
+
+275
+00:15:37,380 --> 00:15:38,340
+Cortamos.
+
+276
+00:15:39,090 --> 00:15:40,860
+Chávez Porcentajes.
+
+277
+00:15:42,610 --> 00:15:45,090
+Static apóstrofe es el nombre de la imagen.
+
+278
+00:15:45,100 --> 00:15:45,730
+Perfecto.
+
+279
+00:15:45,940 --> 00:15:46,900
+La ubicación de la imagen.
+
+280
+00:15:47,290 --> 00:15:49,360
+Vamos a la línea 210.
+
+281
+00:15:51,470 --> 00:15:53,140
+Repetimos el procedimiento.
+
+282
+00:15:53,150 --> 00:15:54,920
+Cortamos el nombre del Imam.
+
+283
+00:15:56,610 --> 00:15:58,060
+Ya sabes lo que tenemos que hacer acá.
+
+284
+00:15:58,080 --> 00:15:58,530
+Verdad?
+
+285
+00:15:58,770 --> 00:15:59,430
+Así es.
+
+286
+00:16:00,170 --> 00:16:01,050
+Apóstrofes.
+
+287
+00:16:02,110 --> 00:16:02,680
+Perfecto.
+
+288
+00:16:03,010 --> 00:16:05,710
+Estamos yendo un poco más rápido porque este es un proceso mecánico.
+
+289
+00:16:06,340 --> 00:16:08,140
+Siguiente en la línea 219.
+
+290
+00:16:08,620 --> 00:16:09,640
+Cortamos.
+
+291
+00:16:11,290 --> 00:16:13,330
+Chávez porcentajes.
+
+292
+00:16:15,800 --> 00:16:16,310
+Listo.
+
+293
+00:16:18,660 --> 00:16:18,900
+Bien.
+
+294
+00:16:19,200 --> 00:16:20,520
+Hasta aquí hemos llegado.
+
+295
+00:16:21,820 --> 00:16:25,980
+Ya hemos reemplazado todos los nombres de las imágenes de los productos Menu Field Safe All.
+
+296
+00:16:26,760 --> 00:16:28,350
+Y vamos a ejecutar la página.
+
+297
+00:16:29,650 --> 00:16:34,090
+Y como puedes ver, ya aparecen todos los productos.
+
+298
+00:16:34,420 --> 00:16:37,000
+Hemos concluido entonces la edición.
+
+299
+00:16:37,360 --> 00:16:42,310
+La incorporación de este template HTML dentro de mi proyecto Jango.

@@ -1,0 +1,1171 @@
+1
+00:00:00,480 --> 00:00:05,490
+En este capítulo comenzaremos a trabajar dentro del dashboard principal de mi usuario.
+
+2
+00:00:05,670 --> 00:00:07,440
+Para esto vamos a guiarnos.
+
+3
+00:00:09,480 --> 00:00:10,260
+Iniciamos sesión.
+
+4
+00:00:10,650 --> 00:00:13,440
+Esta es la página a la cual me estoy refiriendo el dashboard.
+
+5
+00:00:13,860 --> 00:00:20,040
+Comenzaremos a llenarla con datos reales referentes a la sesión del usuario que viene desde la base
+
+6
+00:00:20,040 --> 00:00:20,580
+de datos.
+
+7
+00:00:21,120 --> 00:00:28,140
+Pero antes de comenzar, vamos a ir organizando mejor las estructuras gráficas de mi página.
+
+8
+00:00:28,590 --> 00:00:33,480
+Vamos a comenzar con la distribución del menú de la parte izquierda que me muestra mis órdenes de compra,
+
+9
+00:00:33,480 --> 00:00:36,060
+transacciones, devoluciones, configuración, etc.
+
+10
+00:00:36,390 --> 00:00:39,600
+Vamos hacia Atom, estamos en Atom.
+
+11
+00:00:39,610 --> 00:00:48,100
+Vamos a ubicarnos dentro de templates y aquí me va a aparecer dentro de la carpeta account el dashboard
+
+12
+00:00:48,100 --> 00:00:49,440
+punto html.
+
+13
+00:00:50,830 --> 00:00:53,820
+Y justamente esa lista de la cual te estoy hablando.
+
+14
+00:00:53,830 --> 00:00:57,640
+El menú de la izquierda se representa con este aceite.
+
+15
+00:00:58,300 --> 00:01:04,690
+Este bloque ASCII container es el que contiene aquí los grupos de texto, mis órdenes de compra, transacciones,
+
+16
+00:01:04,690 --> 00:01:11,710
+devoluciones, etcétera Lo que voy a hacer ahora es crear un nuevo componente que contenga este valor.
+
+17
+00:01:12,400 --> 00:01:20,760
+Entonces vamos a ir hacia includes y dentro de includes vamos a darle clic derecho New File Cheque.
+
+18
+00:01:20,890 --> 00:01:22,600
+Creamos un dashboard.
+
+19
+00:01:26,030 --> 00:01:27,110
+Rayo para abajo.
+
+20
+00:01:27,740 --> 00:01:33,950
+Sidebar la barra de un lado se llama esto punto html.
+
+21
+00:01:35,800 --> 00:01:36,580
+Y le damos enter.
+
+22
+00:01:38,330 --> 00:01:40,910
+Vamos a volver ahora a Dashboard HTML.
+
+23
+00:01:42,070 --> 00:01:45,190
+Y lo que voy a hacer es cortar este aceite.
+
+24
+00:01:46,440 --> 00:01:47,220
+Vamos a cortarlo.
+
+25
+00:01:47,220 --> 00:01:48,270
+Control X.
+
+26
+00:01:49,330 --> 00:01:50,230
+Volvemos al.
+
+27
+00:01:51,370 --> 00:01:52,480
+Dashboard Sidebar.
+
+28
+00:01:52,480 --> 00:01:53,980
+Y aquí lo vamos a pegar.
+
+29
+00:01:54,640 --> 00:01:54,960
+Esto.
+
+30
+00:01:56,020 --> 00:01:57,000
+Voy a borrar los cambios.
+
+31
+00:01:57,010 --> 00:01:58,060
+Mayfield Safe Hall.
+
+32
+00:01:59,850 --> 00:02:04,890
+Y si actualizamos la página de Dashboard, vas a notar que está desaparecido.
+
+33
+00:02:05,040 --> 00:02:06,240
+Pero yo no quiero que desaparezca.
+
+34
+00:02:06,240 --> 00:02:09,210
+Solamente estoy cambiando la estructura de los archivos y el código.
+
+35
+00:02:09,780 --> 00:02:11,400
+Es muy simple solucionar este problema.
+
+36
+00:02:11,400 --> 00:02:15,760
+Tenemos que ir nuevamente a Dashboard y hacer un include del Dashboard Sidebar.
+
+37
+00:02:16,200 --> 00:02:18,150
+Vamos a ir a dar del punto HTML.
+
+38
+00:02:19,400 --> 00:02:22,120
+Nos ubicamos en el claustro.
+
+39
+00:02:22,490 --> 00:02:23,000
+Aquí está.
+
+40
+00:02:24,320 --> 00:02:30,470
+Este es el div container que aparece el include alerce peruano que aparece el div container a que aparece
+
+41
+00:02:30,470 --> 00:02:32,870
+el dip ro debajo de este dip.
+
+42
+00:02:34,070 --> 00:02:35,660
+Vamos a agregar esta línea.
+
+43
+00:02:37,570 --> 00:02:49,030
+Para indicarle que incluya a esta template include es las dashboard sidebar a html.
+
+44
+00:02:49,630 --> 00:02:53,110
+Siempre recuerda que hay que tener cuidado con la forma en que le escribes los códigos.
+
+45
+00:02:53,320 --> 00:02:59,920
+Aquí por ejemplo es includes la carpeta se llama includes donde está el dashboard sidebar?
+
+46
+00:03:00,340 --> 00:03:05,590
+Listo, ya le agregué la s dashboard para separar HTML.
+
+47
+00:03:05,590 --> 00:03:06,130
+Perfecto.
+
+48
+00:03:06,130 --> 00:03:08,530
+Vamos a hacer un menú File Safe all.
+
+49
+00:03:09,570 --> 00:03:13,860
+Y si vamos a la página y la actualizamos, ya me aparece nuevamente el menú.
+
+50
+00:03:14,760 --> 00:03:19,620
+Ahora vamos nuevamente hacia la carpeta includes y al dashboard sidebar punto HTML.
+
+51
+00:03:19,890 --> 00:03:21,540
+Voy a cambiar esta lista de menús.
+
+52
+00:03:22,410 --> 00:03:25,440
+Por ejemplo, yo no quiero que aparezcan mis órdenes de compra.
+
+53
+00:03:26,250 --> 00:03:29,760
+Ahora quiero que diga en vez de texto Dashboard.
+
+54
+00:03:31,270 --> 00:03:32,200
+Y el siguiente.
+
+55
+00:03:33,420 --> 00:03:35,880
+Quiero que diga mis órdenes.
+
+56
+00:03:38,750 --> 00:03:40,070
+Y el siguiente que diga.
+
+57
+00:03:43,100 --> 00:03:44,060
+Editar perfil.
+
+58
+00:03:46,140 --> 00:03:47,820
+Y el siguiente vamos a indicarle.
+
+59
+00:03:49,530 --> 00:03:50,490
+Cambiar el password.
+
+60
+00:03:55,080 --> 00:03:56,670
+Solo esas tres opciones.
+
+61
+00:03:57,060 --> 00:04:00,160
+Esta es mi venta de productos y órdenes recibidas.
+
+62
+00:04:00,180 --> 00:04:01,170
+Las voy a eliminar.
+
+63
+00:04:03,010 --> 00:04:03,680
+Vamos a menudo.
+
+64
+00:04:04,030 --> 00:04:04,720
+Safe hall.
+
+65
+00:04:05,910 --> 00:04:07,170
+Ya actualizamos.
+
+66
+00:04:07,860 --> 00:04:14,160
+Si ya me aparecen entonces estos nuevos menús, vamos a ir cambiando ahora el contenido de la parte
+
+67
+00:04:14,160 --> 00:04:14,610
+derecha.
+
+68
+00:04:14,880 --> 00:04:18,660
+Ya no quiero que aparezca el borde de lo que quiero que me aparezca.
+
+69
+00:04:18,660 --> 00:04:21,120
+Es realmente el nombre del usuario.
+
+70
+00:04:21,720 --> 00:04:23,100
+Entonces vayamos a cambiarlo.
+
+71
+00:04:23,940 --> 00:04:27,370
+Vamos hacia Account y aparece Dashboard.
+
+72
+00:04:27,390 --> 00:04:28,350
+Vamos a Dashboard.
+
+73
+00:04:28,770 --> 00:04:30,660
+Aquí me aparece el ID.
+
+74
+00:04:32,090 --> 00:04:36,350
+Voy a modificar esto ordenadito y le voy a poner.
+
+75
+00:04:37,830 --> 00:04:39,510
+Sesión iniciada.
+
+76
+00:04:40,760 --> 00:04:41,060
+De.
+
+77
+00:04:43,440 --> 00:04:44,820
+Lo voy a poner cada dos puntos.
+
+78
+00:04:46,870 --> 00:04:52,270
+Y en este span que continua en vez de esta fecha voy a colocarle el nombre del usuario, que es un valor
+
+79
+00:04:52,270 --> 00:04:52,860
+dinámico.
+
+80
+00:04:52,870 --> 00:04:55,240
+Recuerda que tenemos ya ejecutándose.
+
+81
+00:04:56,390 --> 00:04:56,960
+Este objeto.
+
+82
+00:04:57,050 --> 00:04:58,840
+User punto.
+
+83
+00:04:59,910 --> 00:05:00,530
+Full time.
+
+84
+00:05:03,400 --> 00:05:06,280
+Voy a guardar los cambios y probamos.
+
+85
+00:05:07,030 --> 00:05:08,020
+Estamos en la página.
+
+86
+00:05:09,090 --> 00:05:09,570
+Listo.
+
+87
+00:05:09,570 --> 00:05:09,940
+Aquí llama.
+
+88
+00:05:09,990 --> 00:05:10,410
+Apareció.
+
+89
+00:05:10,440 --> 00:05:12,810
+Sesión iniciada de Nestor Arcila.
+
+90
+00:05:14,000 --> 00:05:18,590
+Algo que también quiero remover es esta tabla que muestra los productos.
+
+91
+00:05:18,950 --> 00:05:20,600
+Vamos a quitarla de este body.
+
+92
+00:05:21,200 --> 00:05:28,550
+Volvemos al archivo, das formato HTML, vamos a la parte inferior y aquí me aparece un table responsive
+
+93
+00:05:28,580 --> 00:05:30,140
+más o menos por la línea 44.
+
+94
+00:05:31,370 --> 00:05:33,260
+Aquí aparece el nombre del producto aquí.
+
+95
+00:05:33,920 --> 00:05:35,090
+Vendedor Nick Clothing.
+
+96
+00:05:35,130 --> 00:05:37,730
+Bueno, esta es la tabla que me está mostrando la data.
+
+97
+00:05:38,270 --> 00:05:40,160
+Lo que voy a hacer es minimizarla.
+
+98
+00:05:41,110 --> 00:05:42,750
+Esto ya lo he minimizado.
+
+99
+00:05:42,760 --> 00:05:45,520
+Este es toda la tabla y ahora la voy a borrar.
+
+100
+00:05:46,540 --> 00:05:46,990
+Listo?
+
+101
+00:05:48,580 --> 00:05:53,920
+También aprovecho para eliminar este div class que tiene el table responsive.
+
+102
+00:05:55,260 --> 00:05:55,920
+Lo quito.
+
+103
+00:05:56,700 --> 00:05:57,240
+Ahora sí.
+
+104
+00:05:57,240 --> 00:05:58,950
+Vamos a ir a Menú File Safe All.
+
+105
+00:06:00,100 --> 00:06:00,850
+Y actualiza.
+
+106
+00:06:00,850 --> 00:06:01,510
+Actualizamos la página.
+
+107
+00:06:01,990 --> 00:06:03,460
+Perfecto, ya desapareció.
+
+108
+00:06:04,300 --> 00:06:06,940
+Algo que también quiero borrar es este contenido de enviado.
+
+109
+00:06:07,570 --> 00:06:09,280
+Vamos a revisarlo en la página.
+
+110
+00:06:10,000 --> 00:06:14,260
+Aquí me aparece este que me muestra el enviado.
+
+111
+00:06:15,460 --> 00:06:20,620
+Voy a seleccionar lo que desde el canal Md ocho Enviado Basic tres.
+
+112
+00:06:21,780 --> 00:06:22,680
+Seleccione el DIF.
+
+113
+00:06:24,690 --> 00:06:25,350
+Y lo borro.
+
+114
+00:06:26,880 --> 00:06:34,980
+Y a continuación sigue otros diez con m de cuatro que muestra visa y subtotal y todo esto también lo
+
+115
+00:06:34,980 --> 00:06:35,820
+seleccione este DIF.
+
+116
+00:06:37,230 --> 00:06:37,960
+Y lo borramos.
+
+117
+00:06:37,980 --> 00:06:39,730
+Solamente quedaría un div class en.
+
+118
+00:06:41,380 --> 00:06:42,310
+Por este carbón y.
+
+119
+00:06:43,380 --> 00:06:45,390
+Vamos a borrar los cambios del Safe hall.
+
+120
+00:06:46,560 --> 00:06:50,190
+Y actualizamos y ya me quedaría el container en blanco.
+
+121
+00:06:51,090 --> 00:06:57,450
+Vamos a crear ahora dos cards dentro de este container, un car que me muestre la información del total
+
+122
+00:06:57,630 --> 00:07:03,900
+que yo he pagado por mis órdenes y otro que muestre la información con un avatar, una imagen de perfil
+
+123
+00:07:04,230 --> 00:07:09,960
+temporal que voy a asignarle y también mi email y un número telefónico del usuario.
+
+124
+00:07:11,210 --> 00:07:13,160
+Estamos nuevamente dentro del dashboard.
+
+125
+00:07:13,700 --> 00:07:20,510
+Aquí puedes notar que me aparece el header con información del usuario user full name y aquí me aparece
+
+126
+00:07:20,510 --> 00:07:24,470
+otro carbury y dentro de este carbury me aparece el RAW.
+
+127
+00:07:24,740 --> 00:07:26,720
+Dentro de este raw es donde vamos a crear.
+
+128
+00:07:26,720 --> 00:07:30,710
+Voy a poner un espaciado donde vamos a crear lo que son los cards.
+
+129
+00:07:32,110 --> 00:07:34,960
+Pero antes de crear el carro, primero necesito hacer la distribución.
+
+130
+00:07:35,530 --> 00:07:40,420
+La distribución, como sabes de una página por defecto en Bootstrap es de 12 columnas.
+
+131
+00:07:40,690 --> 00:07:44,620
+Entonces voy a crear dos containers cada uno de seis columnas.
+
+132
+00:07:46,460 --> 00:07:47,240
+Voy a hacer un diff.
+
+133
+00:07:48,630 --> 00:07:51,090
+Y este primer día le vamos a poner un col.
+
+134
+00:07:52,210 --> 00:07:58,170
+En vez de en seis, va a tomar la mitad de la pantalla del container.
+
+135
+00:07:59,820 --> 00:08:04,140
+Y en su interior vamos a crear el kart de Class Kart.
+
+136
+00:08:06,820 --> 00:08:11,650
+Y el estilo que le voy a indicar que todo el contenido tiene que estar centrado.
+
+137
+00:08:12,860 --> 00:08:13,700
+Tex Alice.
+
+138
+00:08:15,810 --> 00:08:16,350
+Center.
+
+139
+00:08:20,550 --> 00:08:20,850
+Esto.
+
+140
+00:08:21,870 --> 00:08:25,200
+Ahora vamos a agregar el carbón y voy a hacer otro diff.
+
+141
+00:08:27,360 --> 00:08:27,990
+Y lo pongo aquí.
+
+142
+00:08:27,990 --> 00:08:29,310
+Que se trata del carbón y.
+
+143
+00:08:33,040 --> 00:08:34,210
+Vamos a ponerle un título.
+
+144
+00:08:34,270 --> 00:08:35,370
+Le pongo un h5.
+
+145
+00:08:36,340 --> 00:08:38,830
+El título que indiquemos por aquí.
+
+146
+00:08:38,860 --> 00:08:39,300
+Un class.
+
+147
+00:08:39,310 --> 00:08:41,710
+Un momento como atributo class.
+
+148
+00:08:43,490 --> 00:08:45,290
+Y le ponemos cartas.
+
+149
+00:08:46,770 --> 00:08:47,970
+Todo listo.
+
+150
+00:08:48,450 --> 00:08:49,980
+Y el título que le voy a poner es.
+
+151
+00:08:51,230 --> 00:08:52,520
+Total de órdenes.
+
+152
+00:08:54,640 --> 00:08:55,030
+Está.
+
+153
+00:08:56,660 --> 00:09:00,620
+Y a continuación le voy a poner el total en un h4.
+
+154
+00:09:02,830 --> 00:09:04,030
+Le voy a poner 500.
+
+155
+00:09:04,780 --> 00:09:05,170
+Por ahora.
+
+156
+00:09:05,350 --> 00:09:05,800
+Cuidado!
+
+157
+00:09:06,880 --> 00:09:07,270
+Esto.
+
+158
+00:09:08,520 --> 00:09:14,750
+Y para que puedas ver las órdenes, voy a utilizar un href que me redirecciona a esta página de video
+
+159
+00:09:14,760 --> 00:09:15,270
+orders.
+
+160
+00:09:16,600 --> 00:09:18,430
+Por ahora va a estar en blanco.
+
+161
+00:09:19,420 --> 00:09:22,120
+Y voy a tener solo un texto que diga ver órdenes.
+
+162
+00:09:22,750 --> 00:09:23,140
+Listo.
+
+163
+00:09:23,920 --> 00:09:26,200
+Eso es todo para esta primera parte.
+
+164
+00:09:26,680 --> 00:09:31,620
+Ya he creado entonces un primer kart dentro de este coche, Ml6.
+
+165
+00:09:32,680 --> 00:09:33,520
+Voy a copiarlo.
+
+166
+00:09:33,550 --> 00:09:35,470
+Voy a copiar este Ml6.
+
+167
+00:09:35,830 --> 00:09:38,260
+Voy a ponerlo un espaciado un poco más para abajo.
+
+168
+00:09:39,720 --> 00:09:40,110
+Ya, claro.
+
+169
+00:09:40,110 --> 00:09:41,340
+Pero esto.
+
+170
+00:09:42,250 --> 00:09:43,950
+También va a ser un decís.
+
+171
+00:09:44,380 --> 00:09:46,690
+También va a ser un Kart Alan Center.
+
+172
+00:09:47,110 --> 00:09:48,340
+También va a tener un boli.
+
+173
+00:09:49,180 --> 00:09:54,280
+Pero aquí lo que va a cambiar es que el contenido que va a tener el carbono iba a ser diferente.
+
+174
+00:09:54,850 --> 00:09:55,570
+Voy a borrar este.
+
+175
+00:09:56,290 --> 00:10:02,290
+Lo que quiero que aquí se despliegue es una imagen, una imagen temporal del usuario, que en este caso
+
+176
+00:10:02,290 --> 00:10:03,520
+voy a utilizar un avatar.
+
+177
+00:10:03,970 --> 00:10:08,020
+Entonces, para utilizar un avatar, vayamos, abrimos el Google.
+
+178
+00:10:08,830 --> 00:10:13,190
+Entra a google.com y escribe Avatar W tres Schools.
+
+179
+00:10:13,210 --> 00:10:13,960
+Todo junto.
+
+180
+00:10:14,740 --> 00:10:19,060
+Y el primer resultado que te va a aparecer va a ser como crear un avatar images.
+
+181
+00:10:19,330 --> 00:10:20,170
+Vamos a darle clic.
+
+182
+00:10:21,270 --> 00:10:23,820
+Aquí le vamos a dar clic a cualquiera de estos Avatar.
+
+183
+00:10:23,820 --> 00:10:24,240
+Por ejemplo.
+
+184
+00:10:24,240 --> 00:10:29,070
+Voy a escoger este clip derecho y la opción Open y en YouTube.
+
+185
+00:10:31,310 --> 00:10:33,230
+Voy a copiar esta variable por ahora.
+
+186
+00:10:34,450 --> 00:10:35,510
+Y bueno, vamos al código.
+
+187
+00:10:35,510 --> 00:10:36,860
+Aquí está el div.
+
+188
+00:10:36,900 --> 00:10:37,220
+Karen.
+
+189
+00:10:37,220 --> 00:10:38,210
+Bonito y en blanco.
+
+190
+00:10:38,210 --> 00:10:39,650
+Y aquí voy a pegar esa imagen.
+
+191
+00:10:41,210 --> 00:10:41,870
+Algún momento.
+
+192
+00:10:41,870 --> 00:10:42,380
+Un momento.
+
+193
+00:10:43,190 --> 00:10:44,900
+Voy a ponerle primero el img.
+
+194
+00:10:45,590 --> 00:10:45,930
+Esto.
+
+195
+00:10:47,020 --> 00:10:52,150
+En la sección de seres seg se dice le pegamos la vuelta a la imagen.
+
+196
+00:10:53,630 --> 00:10:54,280
+El Alt.
+
+197
+00:10:54,320 --> 00:10:57,800
+Le vamos a poner acá imagen de perfil.
+
+198
+00:10:59,460 --> 00:11:00,000
+El kit.
+
+199
+00:11:00,780 --> 00:11:02,430
+Le ponemos en 50.
+
+200
+00:11:04,470 --> 00:11:08,340
+También le voy a indicar que el de la altura también son 50.
+
+201
+00:11:10,590 --> 00:11:13,110
+Y quiero que sea redondeada, por lo que le voy a poner style.
+
+202
+00:11:15,430 --> 00:11:17,290
+Border Radius.
+
+203
+00:11:19,660 --> 00:11:21,760
+Dos puntos, 50%.
+
+204
+00:11:23,670 --> 00:11:24,060
+Listo.
+
+205
+00:11:24,960 --> 00:11:27,570
+Voy a maximizar la pantalla para que lo puedas ver mejor.
+
+206
+00:11:29,910 --> 00:11:36,270
+Bien, entonces, si hemos definido esta imagen de perfil por ahora, a continuación quiero agregar
+
+207
+00:11:36,270 --> 00:11:39,720
+también el email del usuario en sesión.
+
+208
+00:11:39,900 --> 00:11:41,310
+Le voy a poner en un párrafo P.
+
+209
+00:11:43,070 --> 00:11:47,280
+Le ponemos un class de trap que va a ser el MP cero.
+
+210
+00:11:48,780 --> 00:11:49,470
+Raya cero.
+
+211
+00:11:51,590 --> 00:11:54,440
+Desde aquí le ponemos user, punto y mail.
+
+212
+00:11:56,900 --> 00:12:03,330
+Esto también voy a voy a crear otro párrafo para que me imprima el número de teléfono.
+
+213
+00:12:04,230 --> 00:12:05,190
+Le ponemos Usher.
+
+214
+00:12:05,190 --> 00:12:05,700
+Punto.
+
+215
+00:12:06,970 --> 00:12:07,630
+Fue haber.
+
+216
+00:12:09,750 --> 00:12:10,710
+Lo tenemos listo.
+
+217
+00:12:11,460 --> 00:12:12,420
+Voy a borrar los cambios.
+
+218
+00:12:12,420 --> 00:12:14,640
+Me enchufa el Safe Hall y vamos a probar.
+
+219
+00:12:15,660 --> 00:12:20,010
+Vamos a refrescar y como puedes ver, ya me aparece esta interface gráfica.
+
+220
+00:12:20,160 --> 00:12:20,760
+Perfecto.
+
+221
+00:12:20,760 --> 00:12:23,030
+Está funcionando muy bien, pero aquí tengo un solo detalle.
+
+222
+00:12:23,040 --> 00:12:26,970
+Este número total de órdenes 500 está rodeado.
+
+223
+00:12:27,390 --> 00:12:33,090
+Entonces vamos a trabajar dentro de nuestro código para que venga de la base de datos el número real.
+
+224
+00:12:34,250 --> 00:12:36,080
+Como el explorador de archivos.
+
+225
+00:12:36,410 --> 00:12:39,200
+Y ahora nos vamos a ubicar dentro de Account.
+
+226
+00:12:40,680 --> 00:12:41,340
+Diez 11.
+
+227
+00:12:41,440 --> 00:12:45,040
+Vamos a buscar el punto PI y maximizar.
+
+228
+00:12:45,250 --> 00:12:50,560
+Aquí debe aparecer una función que se llama Dashboard, que es el que hace el redireccionamiento.
+
+229
+00:12:51,620 --> 00:12:53,150
+Hacia este template hoy que aparece.
+
+230
+00:12:53,280 --> 00:12:57,530
+Mira lo de la función dashboard.
+
+231
+00:12:58,490 --> 00:12:59,030
+Perfecto.
+
+232
+00:12:59,180 --> 00:13:04,760
+Lo que quiero hacer es incluir dentro de esta función la lógica para que me obtenga el total de órdenes
+
+233
+00:13:05,120 --> 00:13:06,890
+que he hecho por este usuario.
+
+234
+00:13:07,220 --> 00:13:12,830
+Pero ya que estamos hablando de órdenes, tengo aquí también importar a esta entidad.
+
+235
+00:13:13,160 --> 00:13:16,190
+Así que vamos a la parte superior un momento para hacer la importación.
+
+236
+00:13:17,540 --> 00:13:20,360
+Lo voy a hacer después de ser Model Account.
+
+237
+00:13:20,420 --> 00:13:22,570
+Aquí lo voy a poner From Point.
+
+238
+00:13:24,050 --> 00:13:26,060
+Our Tears punto models.
+
+239
+00:13:27,140 --> 00:13:30,650
+Y que me importe la Entidad Order con o mayúscula.
+
+240
+00:13:30,650 --> 00:13:31,160
+Siempre.
+
+241
+00:13:31,160 --> 00:13:32,690
+Cuidado con los nombres.
+
+242
+00:13:33,770 --> 00:13:35,390
+Volvamos otra vez a la función.
+
+243
+00:13:38,480 --> 00:13:41,420
+No será un poco más abajo ya que apareció el dashboard?
+
+244
+00:13:42,740 --> 00:13:44,270
+Y comencemos haciendo el query.
+
+245
+00:13:45,140 --> 00:13:56,420
+Voy a indicarle que Orders va a ser igual a Order, la referencia a la clase Point Punto Order by.
+
+246
+00:13:58,560 --> 00:13:58,790
+Voy a.
+
+247
+00:13:59,220 --> 00:14:00,540
+Voy a hacer un ordenamiento.
+
+248
+00:14:00,660 --> 00:14:01,440
+Ya que estamos aquí.
+
+249
+00:14:02,880 --> 00:14:06,660
+En orden ascendente desde Create AT por esta columna.
+
+250
+00:14:07,720 --> 00:14:15,220
+Paint filter y le indico que me traiga todos aquellos que tengan el just y di rico.
+
+251
+00:14:15,220 --> 00:14:17,620
+Es punto user ídem.
+
+252
+00:14:19,190 --> 00:14:24,620
+Y también que hayan sido ordenados por decreto igual a true.
+
+253
+00:14:25,370 --> 00:14:25,760
+Listo.
+
+254
+00:14:28,060 --> 00:14:35,260
+Y ahora, para obtener el orden de la cantidad de órdenes, voy a indicarle un orders count llama su
+
+255
+00:14:35,260 --> 00:14:35,770
+función.
+
+256
+00:14:38,010 --> 00:14:41,310
+Para poder enviar esto al template necesito utilizar un diccionario.
+
+257
+00:14:41,310 --> 00:14:42,480
+Así que algún context.
+
+258
+00:14:43,470 --> 00:14:45,330
+Igual Chavez.
+
+259
+00:14:45,330 --> 00:14:46,290
+Y aquí le ponemos.
+
+260
+00:14:47,290 --> 00:14:47,500
+Por.
+
+261
+00:14:49,360 --> 00:14:50,260
+Dos puntos.
+
+262
+00:14:51,220 --> 00:14:52,270
+Orders count.
+
+263
+00:14:53,590 --> 00:14:54,580
+Y la el final.
+
+264
+00:14:55,640 --> 00:14:57,440
+Y dentro de este rato un render.
+
+265
+00:14:57,740 --> 00:15:01,640
+Luego del template le ponemos una coma y le agrego el context.
+
+266
+00:15:02,930 --> 00:15:03,860
+Eso sería todo?
+
+267
+00:15:04,550 --> 00:15:04,930
+No todo.
+
+268
+00:15:04,970 --> 00:15:08,540
+Tengo que ir ahora a la página para poder imprimir este orden Scouts.
+
+269
+00:15:09,020 --> 00:15:10,640
+Voy a copiar estos scouts el nombre.
+
+270
+00:15:12,090 --> 00:15:17,520
+Y vamos a la página templates account ya que aparece das por html.
+
+271
+00:15:19,770 --> 00:15:25,680
+De quien me estaba ofreciendo el título total de órdenes y le había copiado 500 en vez de ese 500.
+
+272
+00:15:25,740 --> 00:15:26,610
+Vamos a colocarle.
+
+273
+00:15:28,180 --> 00:15:28,700
+Orders.
+
+274
+00:15:29,710 --> 00:15:30,160
+Listo.
+
+275
+00:15:30,640 --> 00:15:32,110
+Vamos a guardar todos los cambios.
+
+276
+00:15:32,140 --> 00:15:33,340
+Menú Fail Safe all.
+
+277
+00:15:34,430 --> 00:15:35,480
+Estamos en la página.
+
+278
+00:15:35,510 --> 00:15:36,470
+Voy a actualizar.
+
+279
+00:15:39,090 --> 00:15:40,650
+Aquí me ha parecido un error.
+
+280
+00:15:41,220 --> 00:15:44,970
+Me indica que he definido mal la importación del Account Orders.
+
+281
+00:15:45,720 --> 00:15:46,920
+Vamos, un momento al código.
+
+282
+00:15:47,550 --> 00:15:52,590
+Vamos a la carpeta account que busca y vamos a la parte superior.
+
+283
+00:15:52,770 --> 00:15:56,070
+En la definición de Orders Models.
+
+284
+00:15:56,400 --> 00:15:58,200
+Aquí era sin el punto.
+
+285
+00:15:58,560 --> 00:16:02,250
+El orders era Orders Models, nada más.
+
+286
+00:16:02,910 --> 00:16:03,410
+Ahora sí.
+
+287
+00:16:03,420 --> 00:16:04,320
+Vamos a borrar los cambios.
+
+288
+00:16:04,350 --> 00:16:05,490
+Menú Field Safe all.
+
+289
+00:16:07,090 --> 00:16:10,760
+Ya actualizamos y como puedes ver, ya me aparece el número real.
+
+290
+00:16:10,780 --> 00:16:12,190
+Todavía no tengo ninguna orden.
+
+291
+00:16:12,190 --> 00:16:17,230
+Recuerda que en capítulos anteriores reiniciamos, borramos todas las órdenes de compra que había hecho
+
+292
+00:16:17,230 --> 00:16:22,870
+de prueba, pero a futuro van a aparecer aquí las órdenes que vaya creando este usuario.
+
+293
+00:16:22,870 --> 00:16:23,410
+Nestor.

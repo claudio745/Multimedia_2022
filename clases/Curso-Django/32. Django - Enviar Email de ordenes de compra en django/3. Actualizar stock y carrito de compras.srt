@@ -1,0 +1,267 @@
+1
+00:00:00,750 --> 00:00:03,900
+En este capítulo vamos a continuar trabajando en nuestro carrito de compras.
+
+2
+00:00:04,290 --> 00:00:08,640
+Si vamos al carrito de compras un momento, ya sabes que tenemos la secuencia.
+
+3
+00:00:08,910 --> 00:00:14,430
+Estamos en carrito, le damos clic al botón Pagar y a continuación tengo que llenar el formulario y
+
+4
+00:00:14,430 --> 00:00:19,530
+luego ordenar los productos donde ya se produce el proceso de pago para PayPal.
+
+5
+00:00:19,740 --> 00:00:24,300
+Pero cuando este proceso haya culminado, van a suceder dos cosas importantes.
+
+6
+00:00:24,570 --> 00:00:31,500
+La primera es que se debe actualizar el stock de los productos, suponiendo que tengo un stock de 100
+
+7
+00:00:31,500 --> 00:00:33,720
+camisas modernas en mis almacenes.
+
+8
+00:00:34,620 --> 00:00:38,310
+Si el comprador se lleva una, cuántas tendría ahora?
+
+9
+00:00:38,520 --> 00:00:39,540
+Tendría 99.
+
+10
+00:00:39,540 --> 00:00:45,780
+Entonces tendría que actualizar ese valor del stock cada vez que se realice una compra de ese producto.
+
+11
+00:00:46,670 --> 00:00:50,990
+También algo que debe ocurrir es que debe limpiarse el carrito de compras.
+
+12
+00:00:51,200 --> 00:00:57,380
+De lo contrario, estaría repitiendo el proceso de pago cada vez que el cliente quiera comprar otros
+
+13
+00:00:57,380 --> 00:00:58,100
+productos.
+
+14
+00:00:59,190 --> 00:01:06,180
+Vamos a trabajar en esa lógica dentro de nuestro archivo de que se encuentra en la carpeta orders y
+
+15
+00:01:06,180 --> 00:01:07,170
+el archivo buscar.
+
+16
+00:01:07,470 --> 00:01:09,660
+Y aquí está el método Payment.
+
+17
+00:01:11,520 --> 00:01:13,620
+Ya sabemos que este es mi bucle.
+
+18
+00:01:14,720 --> 00:01:17,600
+Para poder hacer la evaluación de los ítems en el ítem.
+
+19
+00:01:19,090 --> 00:01:23,350
+Y ahora, después de este order product safe de la última clase.
+
+20
+00:01:24,940 --> 00:01:26,820
+Vamos a hacer una instancia de prórroga aquí.
+
+21
+00:01:27,880 --> 00:01:30,300
+Vamos a indicar product object.
+
+22
+00:01:30,310 --> 00:01:31,180
+Punto get.
+
+23
+00:01:31,180 --> 00:01:32,830
+Hacemos un filtro, una búsqueda.
+
+24
+00:01:33,670 --> 00:01:36,760
+En este caso por el aire y el producto ID.
+
+25
+00:01:38,270 --> 00:01:38,780
+Iguala.
+
+26
+00:01:38,780 --> 00:01:39,650
+Item punto.
+
+27
+00:01:39,650 --> 00:01:40,520
+Product Heidy.
+
+28
+00:01:43,360 --> 00:01:50,050
+Y a continuación voy a decirle que el producto en stock, el stock del producto, va a decrecer.
+
+29
+00:01:52,370 --> 00:01:58,640
+Por menos la cantidad el quality que ha seleccionado el cliente en el carrito de compras.
+
+30
+00:01:59,120 --> 00:02:05,480
+Si seleccionó una cantidad de uno para ese producto, entonces sería mi stock, que puede ser 100 -1.
+
+31
+00:02:06,200 --> 00:02:13,360
+Si está llevándose diez camisas, entonces sería 100 -10 y eso sería el stock.
+
+32
+00:02:14,690 --> 00:02:15,440
+Vamos a actualizar.
+
+33
+00:02:15,440 --> 00:02:20,540
+Entonces hacemos un producto seis para que se refresque este cambio en la base de datos.
+
+34
+00:02:22,390 --> 00:02:28,540
+Algo que también quiero hacer es eliminar el carrito de compras una vez que ya he almacenado.
+
+35
+00:02:28,600 --> 00:02:30,190
+He hecho ya la transacción.
+
+36
+00:02:30,700 --> 00:02:32,650
+Entonces aquí voy a hacer un car item.
+
+37
+00:02:33,280 --> 00:02:34,830
+Punto Object.
+
+38
+00:02:35,170 --> 00:02:36,250
+Punto filter.
+
+39
+00:02:38,510 --> 00:02:41,220
+Y voy a buscar por el rincón este punto user.
+
+40
+00:02:42,590 --> 00:02:44,840
+A continuación le hago un link.
+
+41
+00:02:46,060 --> 00:02:46,870
+Eso será todo.
+
+42
+00:02:47,110 --> 00:02:49,390
+Voy a eliminar ese carrito de compras.
+
+43
+00:02:50,110 --> 00:02:51,490
+Pero aquí estoy, llamando a la entidad.
+
+44
+00:02:51,490 --> 00:02:55,600
+Pero entonces tengo que referenciar en la parte superior.
+
+45
+00:02:55,630 --> 00:02:56,950
+Vamos a la parte superior.
+
+46
+00:02:58,430 --> 00:03:02,060
+Así que lo llamará Imports Stor Models.
+
+47
+00:03:03,260 --> 00:03:05,020
+Import product.
+
+48
+00:03:06,040 --> 00:03:10,420
+A que es from front story models import products.
+
+49
+00:03:11,510 --> 00:03:14,240
+Vamos a borrar los cambios y vamos a probar un falso default.
+
+50
+00:03:15,170 --> 00:03:17,060
+Vamos a la página de mi ecommerce.
+
+51
+00:03:17,390 --> 00:03:19,050
+Voy a darle clic a mi carrito de compras.
+
+52
+00:03:19,070 --> 00:03:20,960
+Puedes ver mi carrito de compras en un elemento?
+
+53
+00:03:21,500 --> 00:03:22,670
+Lo voy a pagar.
+
+54
+00:03:23,000 --> 00:03:24,200
+Llenamos el formulario.
+
+55
+00:03:25,010 --> 00:03:26,600
+Ya hemos llenado el formulario.
+
+56
+00:03:26,870 --> 00:03:29,300
+Le damos clic a ordenar los productos.
+
+57
+00:03:30,780 --> 00:03:33,300
+Me parece el resumen y le doy clic al botón PayPal.
+
+58
+00:03:35,070 --> 00:03:39,390
+A que ingreso a lo del máximo operador el password y damos clic a login.
+
+59
+00:03:43,180 --> 00:03:44,980
+Me aparece el total que voy a pagar.
+
+60
+00:03:45,700 --> 00:03:48,160
+Y en la parte final me aparece el botón peinado.
+
+61
+00:03:48,190 --> 00:03:49,300
+Vamos a darle click a Peinado.
+
+62
+00:03:50,910 --> 00:03:51,490
+Salimos el.
+
+63
+00:03:51,780 --> 00:03:53,850
+Vamos a darnos cuenta de que no tengo ningún error.
+
+64
+00:03:54,270 --> 00:03:58,680
+Entonces vamos a ir ahora hacia Shecky.
+
+65
+00:03:58,680 --> 00:03:59,910
+Refrescamos la página.
+
+66
+00:04:00,980 --> 00:04:07,550
+Vamos a ver, vas a notar que ya el carrito de compras está en cero, se ha eliminado exitosamente el
+
+67
+00:04:07,550 --> 00:04:10,700
+carrito de compras y también el stock se ha actualizado sin problemas.

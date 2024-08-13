@@ -1,0 +1,643 @@
+1
+00:00:00,210 --> 00:00:06,180
+En este capítulo vamos a continuar la integración entre nuestro web application, ecommerce y PayPal.
+
+2
+00:00:07,410 --> 00:00:13,710
+Vamos hacia la página de developer por el punto com loguearse y luego pasa a ingresar al menú principal.
+
+3
+00:00:13,710 --> 00:00:17,700
+En la parte izquierda te aparece el dashboard con apps credenciales.
+
+4
+00:00:18,090 --> 00:00:18,990
+Le vamos a dar clic.
+
+5
+00:00:19,770 --> 00:00:22,290
+Esperamos unos segundos que se cargue la página.
+
+6
+00:00:23,480 --> 00:00:28,250
+Y aquí te aparecer la información respecto de la app que hemos creado.
+
+7
+00:00:29,840 --> 00:00:30,920
+Aquí me aparece la app.
+
+8
+00:00:30,920 --> 00:00:32,210
+Es Business I commerce.
+
+9
+00:00:32,840 --> 00:00:33,530
+Le damos click.
+
+10
+00:00:35,020 --> 00:00:36,460
+Esperamos unos segundos.
+
+11
+00:00:37,760 --> 00:00:40,520
+Y aquí me parece este cliente a Heidi Klein.
+
+12
+00:00:40,540 --> 00:00:40,900
+Heidi.
+
+13
+00:00:41,320 --> 00:00:42,250
+Voy a copiarlo.
+
+14
+00:00:44,220 --> 00:00:45,360
+Íbamos a Atom.
+
+15
+00:00:45,900 --> 00:00:46,830
+Estamos en auto.
+
+16
+00:00:46,860 --> 00:00:53,700
+Vamos a ir a la carpeta Templates y ahora al archivo HTML dentro del HTML.
+
+17
+00:00:53,730 --> 00:00:56,820
+En la sesión anterior copiamos este script desde PayPal.
+
+18
+00:00:57,510 --> 00:01:05,190
+Dentro de los parámetros de estaré del script me aparece el client id igual a test.
+
+19
+00:01:06,180 --> 00:01:13,110
+Este test lo voy a borrar y en su lugar voy a pegar ese claim ID que copie desde la página de PayPal.
+
+20
+00:01:14,080 --> 00:01:17,530
+Ahora vamos a la carpeta orders que parece payment.
+
+21
+00:01:17,800 --> 00:01:20,500
+Quiero que revisemos un momento en la parte inferior.
+
+22
+00:01:21,010 --> 00:01:24,850
+El código script que hemos copiado antes es de la página de PayPal.
+
+23
+00:01:25,240 --> 00:01:31,870
+Aquí puedes notar que aparece una función que se llama Create y como su nombre lo indica, este método
+
+24
+00:01:31,870 --> 00:01:37,600
+se encarga de crear la orden de servicio con el parámetro del monto total a pagar.
+
+25
+00:01:38,490 --> 00:01:45,480
+Y luego aparece otro método que significa Hola profe, este hola profe, lo que hace es evaluar si la
+
+26
+00:01:45,480 --> 00:01:53,460
+operación fue exitosa o no, y en caso que es exitoso pues te va a enviar aquí un alert con la transacción,
+
+27
+00:01:53,460 --> 00:01:54,780
+estatus y el transacción.
+
+28
+00:01:55,690 --> 00:01:58,770
+Bueno, sea exitosa o no sea exitosa, te va a dar un resultado.
+
+29
+00:01:59,130 --> 00:02:02,430
+Voy a hacer un pequeño cambio dentro de la función con A.
+
+30
+00:02:03,270 --> 00:02:04,680
+Aquí me apareció un console.log.
+
+31
+00:02:04,680 --> 00:02:06,690
+Voy a borrar el contenido de ese console.log.
+
+32
+00:02:08,600 --> 00:02:14,090
+Y en su lugar voy indicarle que me imprima el order data para ver los detalles de la transacción.
+
+33
+00:02:15,080 --> 00:02:22,760
+Puede borrar los cambios Mayfield Safe Hall y vamos a ingresar al sandbox del cliente que quiere comprar
+
+34
+00:02:22,760 --> 00:02:25,040
+productos en mi aplicación de e-commerce.
+
+35
+00:02:25,130 --> 00:02:27,200
+Recuerda que lo estamos simulando.
+
+36
+00:02:27,620 --> 00:02:29,540
+Entonces vayamos a la página.
+
+37
+00:02:30,320 --> 00:02:31,310
+Vamos a la página.
+
+38
+00:02:31,310 --> 00:02:33,260
+Sandbox punto paypal.
+
+39
+00:02:33,260 --> 00:02:33,950
+Punto com.
+
+40
+00:02:34,400 --> 00:02:37,340
+Aquí aparece el botón de OK, vamos a darle click login.
+
+41
+00:02:38,840 --> 00:02:44,150
+Y recuerdas que en el capítulo anterior creamos dos cuentas, una para comprador y otra para el vendedor?
+
+42
+00:02:44,570 --> 00:02:50,660
+Entonces aquí estoy, ingresando el email del comprador y le pongo también el password que le asigné
+
+43
+00:02:50,660 --> 00:02:53,450
+en el video anterior y le damos clic a Login.
+
+44
+00:02:55,780 --> 00:02:56,470
+Perfecto.
+
+45
+00:02:56,470 --> 00:03:04,840
+Ingresé entonces ya a mi cuenta de sandbox para este Banksy comprador y mi balance es de 1.000 $.
+
+46
+00:03:05,650 --> 00:03:08,890
+Por supuesto que todo esto es fake, es falso, es ficticio.
+
+47
+00:03:09,100 --> 00:03:12,400
+Estoy simulando que soy un comprador con un balance de 1.000 $.
+
+48
+00:03:12,400 --> 00:03:16,570
+No necesito aquí enlazar ningún tipo de cuenta a ningún banco.
+
+49
+00:03:17,610 --> 00:03:22,530
+Puedes notar también que en la parte derecha inferior te aparecen datos falsos de una tarjeta de crédito
+
+50
+00:03:22,860 --> 00:03:25,320
+y el nombre de un banco y una cuenta de check in.
+
+51
+00:03:25,740 --> 00:03:29,190
+Para este usuario que realmente, como te repito, no existe.
+
+52
+00:03:29,190 --> 00:03:29,970
+Todo es falso.
+
+53
+00:03:29,970 --> 00:03:35,250
+Lo estamos simulando para hacer las pruebas dentro de nuestra web application de e-commerce.
+
+54
+00:03:35,250 --> 00:03:43,380
+En Jango ya hemos entonces validado que el usuario, el usuario Bakshi comprador, el que va a comprar
+
+55
+00:03:43,380 --> 00:03:44,850
+productos, tiene un balance.
+
+56
+00:03:45,120 --> 00:03:46,320
+Vamos a repetir el proceso.
+
+57
+00:03:46,320 --> 00:03:50,040
+Quiero ingresar ahora al vendedor al que va a recibir el dinero.
+
+58
+00:03:50,670 --> 00:03:53,110
+He hecho un lock out y voy a hacer de nuevo un login.
+
+59
+00:03:53,130 --> 00:03:58,740
+Voy a ingresar nuevamente, pero esta vez, en vez de maxi comprador, vamos a asignarle la cuenta back
+
+60
+00:03:59,160 --> 00:04:02,010
+business arroba gmail, punto com y su password.
+
+61
+00:04:02,610 --> 00:04:08,400
+Recuerda que esta es la cuenta que va a recibir el dinero cuando yo venda algún producto por mi página
+
+62
+00:04:08,400 --> 00:04:08,730
+web.
+
+63
+00:04:09,450 --> 00:04:11,040
+Ahora sí, vamos a darle clic a Login.
+
+64
+00:04:12,450 --> 00:04:13,920
+Esperamos unos segundos.
+
+65
+00:04:15,530 --> 00:04:16,250
+Perfecto.
+
+66
+00:04:16,250 --> 00:04:20,690
+Entonces ya aquí he ingresado al dashboard de esta cuenta.
+
+67
+00:04:21,320 --> 00:04:24,770
+También me está pareciendo que el balance es de 1.000 $.
+
+68
+00:04:26,240 --> 00:04:33,920
+Entonces estoy verificando que mis dos cuentas de prueba están listas para ejecutarse dentro de mi ecommerce.
+
+69
+00:04:34,520 --> 00:04:40,790
+Vamos ahora a la página a 8000 Order Place Order, donde tengo ya pendiente hacer el pago.
+
+70
+00:04:41,390 --> 00:04:46,580
+Voy a actualizar primeramente porque recuerda que hace unos minutos había actualizado también la página
+
+71
+00:04:46,580 --> 00:04:47,540
+con JavaScript.
+
+72
+00:04:48,680 --> 00:04:49,550
+Lo tengo listo.
+
+73
+00:04:50,180 --> 00:04:51,290
+Voy a darle click entonces.
+
+74
+00:04:51,290 --> 00:04:52,970
+Ahora al botón de PayPal.
+
+75
+00:04:54,790 --> 00:04:56,080
+Pero unos segundos.
+
+76
+00:04:56,080 --> 00:04:58,960
+Y aquí me está pidiendo que ingrese las credenciales.
+
+77
+00:04:59,140 --> 00:05:01,000
+En este caso voy a ingresar, recuerda.
+
+78
+00:05:01,000 --> 00:05:10,000
+Siguiendo mi modelo de test, voy a ingresar el email del comprador, que sería si comprador Gmail.
+
+79
+00:05:10,810 --> 00:05:14,020
+Y aquí tengo también ya el password de esta cuenta.
+
+80
+00:05:14,560 --> 00:05:15,730
+Voy a darle clic a Login.
+
+81
+00:05:18,670 --> 00:05:22,690
+Y ahora aquí le vamos a indicar que estamos de acuerdo con las condiciones de PayPal.
+
+82
+00:05:22,960 --> 00:05:26,050
+Y ahora dale click al botón A continue.
+
+83
+00:05:27,990 --> 00:05:34,800
+Algo interesante que vas a notar es que te dice que lo que vas a pagar es el 84 $ con 44, mientras
+
+84
+00:05:35,010 --> 00:05:39,870
+que el carrito de compras, si lo ves aquí en la parte derecha, te dice que 51 $.
+
+85
+00:05:40,680 --> 00:05:44,520
+Eso lo vamos a arreglar en breve, pero por ahora vamos a dejarlo así.
+
+86
+00:05:45,580 --> 00:05:47,380
+Seleccionamos el balance de PayPal.
+
+87
+00:05:47,410 --> 00:05:51,610
+Desde ahí se saca el dinero y ahora le damos clic al botón Pagar, ahora peinado.
+
+88
+00:05:54,620 --> 00:05:58,790
+Luego de algunos segundos, de repente un poco más te va a parecer este alert.
+
+89
+00:05:59,000 --> 00:06:06,200
+Pero lo importante, este que yo quiero revisar dentro de la cuenta de PayPal del Bakshi Business,
+
+90
+00:06:06,200 --> 00:06:07,970
+si realmente le llegó el dinero.
+
+91
+00:06:08,360 --> 00:06:10,120
+Así que vamos a ingresar un momento.
+
+92
+00:06:10,130 --> 00:06:13,280
+Voy a salir de sesión porque esta cuenta es el del comprador.
+
+93
+00:06:13,610 --> 00:06:18,380
+Ahora sí vamos a hacer, vamos al sandbox, al puntocom, a hacer un login nuevamente.
+
+94
+00:06:19,910 --> 00:06:21,560
+Y aquí voy a indicarle que.
+
+95
+00:06:22,640 --> 00:06:29,060
+No haga hacia el comprador si no quiero que haga login hacia el back y punto business.
+
+96
+00:06:29,080 --> 00:06:30,530
+Aquí escribimos business.
+
+97
+00:06:32,500 --> 00:06:32,950
+Está.
+
+98
+00:06:33,820 --> 00:06:35,080
+Íbamos a hacer el login.
+
+99
+00:06:37,180 --> 00:06:38,710
+Esperamos unos segundos.
+
+100
+00:06:40,080 --> 00:06:42,490
+Y como puedes ver, ya le llegó el dinero.
+
+101
+00:06:42,510 --> 00:06:47,490
+Antes era 1.000 $ y mira, ya le llegó el costo de la transacción.
+
+102
+00:06:48,360 --> 00:06:48,930
+Perfecto.
+
+103
+00:06:48,930 --> 00:06:50,490
+Y puedes ver en la parte inferior.
+
+104
+00:06:51,470 --> 00:06:57,590
+Aquí en el detalle de la actividad, como es que se ha hecho un pago a tu cuenta de PayPal desde la
+
+105
+00:06:57,590 --> 00:06:59,630
+página del carrito de compras de chango?
+
+106
+00:06:59,960 --> 00:07:06,230
+Mira, aquí aparece Payment from Max, comprador 88 punto con 44 $.
+
+107
+00:07:07,580 --> 00:07:12,890
+Hemos vuelto a la página porque quiero que notes que hace un momento, cuando abrimos el PayPal, me
+
+108
+00:07:12,890 --> 00:07:13,670
+salió un error.
+
+109
+00:07:13,880 --> 00:07:19,010
+La cantidad que me mostraba a pagar era diferente a la cantidad total del carrito de compras que yo
+
+110
+00:07:19,010 --> 00:07:20,330
+tengo, que es 51 $.
+
+111
+00:07:20,570 --> 00:07:23,150
+Entonces vamos a arreglar ese problema.
+
+112
+00:07:23,990 --> 00:07:25,250
+Estamos en Atom.
+
+113
+00:07:25,250 --> 00:07:29,720
+Vamos a la carpeta Templates Orders, que ese payment punto html.
+
+114
+00:07:30,720 --> 00:07:32,250
+De que en la parte superior.
+
+115
+00:07:32,430 --> 00:07:33,810
+En este segmento del script.
+
+116
+00:07:35,050 --> 00:07:36,790
+Aquí aparece este Credit Order.
+
+117
+00:07:37,870 --> 00:07:42,490
+Y me aparece el amount que por defecto ahorita es 88.44.
+
+118
+00:07:42,490 --> 00:07:43,310
+Está codeado.
+
+119
+00:07:43,600 --> 00:07:50,020
+Lo que tengo que hacer aquí es capturar el valor real que viene desde el carrito de compras para poder
+
+120
+00:07:50,020 --> 00:07:50,500
+hacerlo.
+
+121
+00:07:50,500 --> 00:07:52,360
+Mira dentro del segmento de scripts.
+
+122
+00:07:52,840 --> 00:08:00,070
+Aquí vamos a declarar una variable que se llame amount o monto final y cual?
+
+123
+00:08:01,440 --> 00:08:05,880
+A este valor dinámico que ya se está sintiendo dentro de esta página que se llama Gran Total.
+
+124
+00:08:07,020 --> 00:08:11,510
+Y ahora, dentro de este Credit Order, aquí aparece Mount el Value.
+
+125
+00:08:11,520 --> 00:08:12,640
+En vez de este valor.
+
+126
+00:08:12,640 --> 00:08:14,190
+88 44 lo voy a borrar.
+
+127
+00:08:15,150 --> 00:08:20,100
+Le voy a poner la variable amount, que es el total del carrito de compras.
+
+128
+00:08:20,820 --> 00:08:26,460
+Vamos a guardar todos los cambios del safe hall y vamos nuevamente a la página y estando en la página
+
+129
+00:08:26,490 --> 00:08:27,720
+vamos a refrescar.
+
+130
+00:08:30,300 --> 00:08:32,580
+Y le vamos a dar clic al botón PayPal.
+
+131
+00:08:33,440 --> 00:08:34,640
+Esperamos unos segundos.
+
+132
+00:08:35,000 --> 00:08:36,030
+Ten mucho cuidado aquí.
+
+133
+00:08:36,050 --> 00:08:36,920
+Cuándo vas a hacer login?
+
+134
+00:08:36,950 --> 00:08:40,100
+Recuerda que estamos utilizando para esto el back comprador.
+
+135
+00:08:40,310 --> 00:08:43,730
+La cuenta que está comprando productos que hemos creado.
+
+136
+00:08:44,360 --> 00:08:45,740
+Ponemos aquí el password.
+
+137
+00:08:45,920 --> 00:08:47,330
+Le damos clic a Login.
+
+138
+00:08:51,830 --> 00:08:52,310
+Listo.
+
+139
+00:08:52,670 --> 00:08:55,400
+Y mira, como puedes ver, ya me está pareciendo el total.
+
+140
+00:08:55,880 --> 00:08:58,670
+El costo del carrito de compras 51 $.
+
+141
+00:08:59,240 --> 00:09:03,290
+Y ahora vamos a ir a la parte inferior y le vamos a dar clic en el botón peinado.
+
+142
+00:09:06,160 --> 00:09:06,760
+Perfecto.
+
+143
+00:09:06,760 --> 00:09:08,320
+Ya se procesó con éxito.
+
+144
+00:09:08,950 --> 00:09:14,740
+Voy a darle click derecho a mirá, ya me apareció aquí también el alert, indicándome que la transacción
+
+145
+00:09:14,740 --> 00:09:18,420
+fue completa y que miré la consola para ver todos los detalles.
+
+146
+00:09:18,430 --> 00:09:19,240
+Está bien, voy a darle.
+
+147
+00:09:19,240 --> 00:09:19,600
+Ok.
+
+148
+00:09:20,170 --> 00:09:22,210
+Vamos a darle clic derecho Inspec.
+
+149
+00:09:23,140 --> 00:09:26,650
+Ya que aparece la consola y dentro de la consola aparece un Object.
+
+150
+00:09:27,010 --> 00:09:32,950
+Vamos a desplegar el object y dentro de este object ya te aparece toda la información de la transacción,
+
+151
+00:09:33,280 --> 00:09:36,250
+incluyendo aquí el la dirección.
+
+152
+00:09:36,400 --> 00:09:42,670
+Te aparece también el email address, el name de la persona Bakshi comprador para Android.
+
+153
+00:09:43,060 --> 00:09:48,160
+El status de la transacción, etcétera Toda esa hasta que ves dentro de la consola.
+
+154
+00:09:48,160 --> 00:09:49,690
+Tengo que ingresarla.
+
+155
+00:09:49,690 --> 00:09:53,230
+Registrarla dentro de nuestra base de datos en un rango.
+
+156
+00:09:54,070 --> 00:09:55,960
+Justamente se llama Santiago Administration.
+
+157
+00:09:56,260 --> 00:09:59,170
+Tenemos que registrarla dentro de Orders Payment.
+
+158
+00:10:00,300 --> 00:10:01,530
+Dentro de este.
+
+159
+00:10:02,160 --> 00:10:07,800
+Dentro de esta tabla tenemos que registrar el user, el mi, el payment, el amount y el status de la
+
+160
+00:10:07,800 --> 00:10:08,460
+transacción.
+
+161
+00:10:08,850 --> 00:10:11,010
+Eso lo iremos viendo en el próximo capítulo.

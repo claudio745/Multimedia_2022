@@ -1,0 +1,475 @@
+1
+00:00:00,450 --> 00:00:03,780
+Vamos a continuar trabajando en la página del checkout.
+
+2
+00:00:04,380 --> 00:00:10,260
+En este caso, quiero que en la parte derecha el panel de la parte derecha despliegue la información
+
+3
+00:00:10,260 --> 00:00:14,430
+de los productos que estamos a punto de ordenar y comprar.
+
+4
+00:00:15,210 --> 00:00:17,010
+Por ese motivo vamos a ir a Atom.
+
+5
+00:00:17,490 --> 00:00:24,660
+Vamos a la carpeta karts y vamos al archivo Buscar y nos ubicamos en la parte final.
+
+6
+00:00:25,930 --> 00:00:27,460
+Aquí ya había creado yo.
+
+7
+00:00:28,440 --> 00:00:34,500
+En la función de check out la puedes ver y sobre ella está la función cart.
+
+8
+00:00:35,130 --> 00:00:36,030
+Mira lo que voy a hacer.
+
+9
+00:00:36,040 --> 00:00:38,940
+Voy a copiar todo el contenido de la función cart.
+
+10
+00:00:39,120 --> 00:00:44,970
+Voy a poner un poquito más para que se vea todo ese contenido de la función cart que había creado antes.
+
+11
+00:00:45,540 --> 00:00:46,470
+Lo voy a copiar.
+
+12
+00:00:49,240 --> 00:00:51,910
+Y lo voy a agregar dentro de la función check out.
+
+13
+00:00:53,650 --> 00:00:55,870
+Voy a quitar todo el contenido de la función check out.
+
+14
+00:00:57,390 --> 00:00:58,050
+Ya te lo pego.
+
+15
+00:00:59,370 --> 00:00:59,790
+Listo.
+
+16
+00:01:00,360 --> 00:01:04,440
+Y en vez del return render story cart, voy a poner aquí store.
+
+17
+00:01:07,440 --> 00:01:09,060
+Check out punto a html.
+
+18
+00:01:10,290 --> 00:01:10,650
+De esto.
+
+19
+00:01:11,130 --> 00:01:16,230
+Algo que me falta también agregar son los parámetros de la cabecera de esta función checkout, porque
+
+20
+00:01:16,230 --> 00:01:22,040
+si lo comparo con los parámetros del CAR, el CAR, la función CAR tiene total quality none.
+
+21
+00:01:22,410 --> 00:01:29,880
+Voy a copiar estos parámetros de card de la función card y los voy a agregar a esta función checkout.
+
+22
+00:01:32,180 --> 00:01:33,020
+Lo agregamos.
+
+23
+00:01:33,230 --> 00:01:34,490
+Parece que todo está bien.
+
+24
+00:01:34,730 --> 00:01:36,050
+Por qué estoy haciendo esto?
+
+25
+00:01:36,290 --> 00:01:43,010
+Porque dentro de la página de checkout, el checkout HTML, quiero imprimir la lista de productos.
+
+26
+00:01:43,250 --> 00:01:50,420
+Y si te das cuenta, dentro de esta lógica está incluida el query para obtener todos los elementos del
+
+27
+00:01:50,420 --> 00:01:56,870
+carrito de compras, que son justamente que los que quiero que el cliente vea antes de aplicar el botón
+
+28
+00:01:56,870 --> 00:01:57,590
+de pagar.
+
+29
+00:01:59,390 --> 00:02:02,300
+Entonces vamos a aguar de los cambios de Mayfield Safe Hall.
+
+30
+00:02:02,930 --> 00:02:04,370
+Y ahora vamos a la página.
+
+31
+00:02:05,380 --> 00:02:06,940
+Estamos en la página cart.
+
+32
+00:02:07,180 --> 00:02:08,070
+Es la checkout.
+
+33
+00:02:08,080 --> 00:02:10,300
+Voy a refrescar y mira.
+
+34
+00:02:10,300 --> 00:02:12,670
+Ya me apareció aquí en la parte derecha.
+
+35
+00:02:13,150 --> 00:02:16,450
+El producto que está en mi carrito de compras, que es camisa moderna.
+
+36
+00:02:17,080 --> 00:02:23,560
+Si no tienes un elemento en el carrito de compras, puede decir a tienda y seleccionar el producto.
+
+37
+00:02:24,490 --> 00:02:30,940
+Ya sabes que puedes aquí seleccionar rojo Short y le das click a agregar al Shopping card.
+
+38
+00:02:31,630 --> 00:02:33,160
+Luego de esto puedes ubicarte.
+
+39
+00:02:35,490 --> 00:02:36,960
+Entonces dentro del kart.
+
+40
+00:02:37,320 --> 00:02:37,980
+Check out.
+
+41
+00:02:42,160 --> 00:02:43,930
+Y ya te va a aparecer el item.
+
+42
+00:02:44,740 --> 00:02:48,340
+Lo que quiero ahora es que desaparezca este botón de eliminar.
+
+43
+00:02:48,550 --> 00:02:51,100
+Y este botón es aquí para agregar cantidades.
+
+44
+00:02:51,310 --> 00:02:52,660
+No lo necesito realmente.
+
+45
+00:02:53,110 --> 00:02:56,110
+Vamos a trabajar en remover esos componentes.
+
+46
+00:02:57,070 --> 00:03:01,630
+Vamos a ubicarlos entonces en la carpeta Templates y ahora dentro de Store.
+
+47
+00:03:02,860 --> 00:03:05,540
+Aquí aparece el check out punto HTML.
+
+48
+00:03:05,560 --> 00:03:12,390
+Vamos a abrirlo para maximizar el archivo para que lo pueda ver mejor y más o menos en la línea 160
+
+49
+00:03:12,400 --> 00:03:13,540
+168.
+
+50
+00:03:14,200 --> 00:03:16,540
+Dependiendo como tu copiaste, pegaste el código.
+
+51
+00:03:17,320 --> 00:03:20,830
+O puedes buscar también por el texto de eliminar dentro de este archivo.
+
+52
+00:03:21,790 --> 00:03:25,570
+Aquí va a aparecer este href con el haber eliminar.
+
+53
+00:03:27,060 --> 00:03:28,350
+Entonces yo lo necesito.
+
+54
+00:03:28,380 --> 00:03:29,900
+Yo no lo necesito realmente.
+
+55
+00:03:30,300 --> 00:03:31,200
+Voy a eliminarlo.
+
+56
+00:03:32,200 --> 00:03:34,570
+Así que vamos a seleccionar todo este té de.
+
+57
+00:03:36,170 --> 00:03:36,830
+Y lo quitó.
+
+58
+00:03:38,270 --> 00:03:40,660
+Pero recuerda que esto forma parte de una tabla.
+
+59
+00:03:40,670 --> 00:03:45,230
+Entonces vamos a la parte superior donde está definiéndose el título de la tabla.
+
+60
+00:03:46,210 --> 00:03:47,770
+Íbamos a eliminarlo.
+
+61
+00:03:48,460 --> 00:03:55,750
+Este, por ejemplo, el que está en la línea 113, el que está debajo de estas haches que dicen cantidad
+
+62
+00:03:55,750 --> 00:03:58,330
+y precio a que aparece este.
+
+63
+00:03:58,570 --> 00:04:03,070
+Este es el título que representa ese botón de eliminar de la tabla.
+
+64
+00:04:03,490 --> 00:04:04,540
+Lo quitamos también.
+
+65
+00:04:06,140 --> 00:04:07,400
+Vamos a borrar los cambios.
+
+66
+00:04:07,430 --> 00:04:10,490
+Menú false all y vamos a revisar la página.
+
+67
+00:04:11,520 --> 00:04:12,540
+Vamos a refrescar.
+
+68
+00:04:12,990 --> 00:04:14,550
+Y mira, ya parece mejor.
+
+69
+00:04:15,240 --> 00:04:17,070
+Vamos a remover también esta cantidad.
+
+70
+00:04:18,470 --> 00:04:19,700
+Estamos nuevamente en autos.
+
+71
+00:04:19,730 --> 00:04:28,100
+Vamos a ubicarnos dentro del bloque que representa los botones y vas a notar que aparece un TD en la
+
+72
+00:04:28,100 --> 00:04:30,650
+parte inferior que tiene todo este bloque.
+
+73
+00:04:32,460 --> 00:04:35,550
+Y también tiene acá un bucle para las variaciones.
+
+74
+00:04:36,420 --> 00:04:38,280
+Todo este que representa con el gif de.
+
+75
+00:04:38,760 --> 00:04:40,230
+Lo he seleccionado de Class Cole.
+
+76
+00:04:40,440 --> 00:04:43,470
+Luego sigue el input group input spinner.
+
+77
+00:04:44,480 --> 00:04:45,150
+Etc.
+
+78
+00:04:45,600 --> 00:04:52,250
+Que todo este bloque es el que voy a borrar, es el que representa a los controles para poder incrementar
+
+79
+00:04:52,250 --> 00:04:55,190
+o hacer decreciente de la cantidad de productos.
+
+80
+00:04:55,610 --> 00:04:56,510
+Lo voy a eliminar.
+
+81
+00:04:57,230 --> 00:04:59,710
+Quiero que el té esté vacío en su interior.
+
+82
+00:04:59,720 --> 00:05:02,750
+Solamente quiero que aparezca el label que representa la cantidad actual.
+
+83
+00:05:03,320 --> 00:05:04,340
+Voy a escribir un label.
+
+84
+00:05:06,450 --> 00:05:08,140
+El que en su interior le voy a poner.
+
+85
+00:05:10,240 --> 00:05:10,690
+Item.
+
+86
+00:05:13,090 --> 00:05:13,810
+Punto con.
+
+87
+00:05:16,370 --> 00:05:17,630
+Vamos a borrar los cambios de menú.
+
+88
+00:05:17,630 --> 00:05:18,500
+Falstaff all.
+
+89
+00:05:19,870 --> 00:05:26,350
+Estamos en la página y ahora así ya me está apareciendo aquí lo que es la cantidad.
+
+90
+00:05:27,800 --> 00:05:29,900
+Pero esta cantidad es totalmente dinámica.
+
+91
+00:05:29,900 --> 00:05:32,150
+Depende de lo que tú vayas a seleccionar.
+
+92
+00:05:32,150 --> 00:05:33,980
+Setear en el carrito de compras.
+
+93
+00:05:34,220 --> 00:05:36,020
+Por ejemplo, veamos el carrito de compras.
+
+94
+00:05:36,710 --> 00:05:38,600
+Yo quisiera que en la cantidad fuera tres.
+
+95
+00:05:40,440 --> 00:05:41,810
+Si lo doy, clic en el botón Pagar.
+
+96
+00:05:41,820 --> 00:05:43,560
+Vamos a usar el botón Pagar en el.
+
+97
+00:05:43,560 --> 00:05:45,870
+En la página de carrito de compras en la página card.
+
+98
+00:05:46,830 --> 00:05:50,070
+Aquí me está indicando que el botón no está programado.
+
+99
+00:05:50,670 --> 00:05:51,510
+No te preocupes.
+
+100
+00:05:51,540 --> 00:05:56,610
+Vayamos entonces un momento a solucionar este problema dentro de la página del carrito de compras,
+
+101
+00:05:56,820 --> 00:06:02,820
+para que cuando le dé click a pagar, me lleve a la página de de checkout.
+
+102
+00:06:03,880 --> 00:06:06,700
+Vamos a ver la barra exploradora.
+
+103
+00:06:06,700 --> 00:06:07,660
+Estamos en Store.
+
+104
+00:06:07,930 --> 00:06:10,990
+Ya que aparece el punto HTML, vamos a abrirlo.
+
+105
+00:06:12,290 --> 00:06:14,270
+Y nos ubicamos en la parte inferior.
+
+106
+00:06:16,170 --> 00:06:18,570
+Aquí es donde aparecen los botones de.
+
+107
+00:06:20,390 --> 00:06:23,600
+Pagar y continúa comprando para pagar.
+
+108
+00:06:24,140 --> 00:06:25,430
+Este es el hecho real de pagar.
+
+109
+00:06:25,700 --> 00:06:28,250
+Me está pareciendo este please or html.
+
+110
+00:06:28,640 --> 00:06:29,480
+Lo voy a borrar.
+
+111
+00:06:31,320 --> 00:06:38,220
+Y le vamos a poner que ahora me lleve utilizando el Villareal hacia la página el template de checkout.
+
+112
+00:06:39,300 --> 00:06:42,690
+Ahora, si guardamos los cambios y vamos a probar.
+
+113
+00:06:43,760 --> 00:06:44,750
+Estamos en la página.
+
+114
+00:06:44,750 --> 00:06:51,350
+Voy a refrescar la página de carrito de compras, refrescamos y ahora le voy a dar clic al botón Pagar.
+
+115
+00:06:52,600 --> 00:06:58,810
+Y como puedes ver, ya me está llevando hacia la página de checkout y puedes ver también que la cantidad
+
+116
+00:06:58,810 --> 00:06:59,920
+de productos es tres.
+
+117
+00:07:01,040 --> 00:07:03,030
+Si yo aquí lo disminuyo a dos.
+
+118
+00:07:03,050 --> 00:07:04,340
+Vamos a a pagar nuevamente.
+
+119
+00:07:04,700 --> 00:07:06,230
+Aquí ya me aparece dos.

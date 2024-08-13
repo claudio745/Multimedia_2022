@@ -1,0 +1,599 @@
+1
+00:00:00,420 --> 00:00:05,370
+En este capítulo comenzaremos a trabajar en la página detalle del producto.
+
+2
+00:00:05,580 --> 00:00:09,360
+Aquí, por ejemplo, estamos dentro de localhost 8000 Slash Store.
+
+3
+00:00:10,050 --> 00:00:14,310
+Aquí me aparecen los productos y cada producto tiene un título de tipo link.
+
+4
+00:00:14,310 --> 00:00:16,500
+Por ejemplo este hace fund para anotarlo.
+
+5
+00:00:16,500 --> 00:00:18,330
+Aquí se le doy click a este link.
+
+6
+00:00:18,570 --> 00:00:24,420
+Me debería llevar a otra página que me muestre en detalle la información de este producto.
+
+7
+00:00:25,310 --> 00:00:27,260
+Cada producto tiene ese mismo link.
+
+8
+00:00:28,010 --> 00:00:30,470
+Cómo vamos a trabajar esta nueva funcionalidad?
+
+9
+00:00:31,460 --> 00:00:39,320
+Lo que quiero hacer en este caso es tomar actualmente dentro de laurel el categoría Slug y agregarle
+
+10
+00:00:39,770 --> 00:00:42,650
+un nuevo Product Slug Nomenclatura.
+
+11
+00:00:43,370 --> 00:00:49,610
+Este es el que va a determinar el ITI del producto y es el que me va a redireccionar hacia la nueva
+
+12
+00:00:49,610 --> 00:00:50,150
+página.
+
+13
+00:00:51,560 --> 00:00:52,880
+Estamos dentro de Atom.
+
+14
+00:00:53,000 --> 00:00:57,170
+Vamos a ir ahora a la carpeta Store dentro de la App Store.
+
+15
+00:00:57,230 --> 00:00:59,930
+Vamos a ir al punto PI.
+
+16
+00:01:00,620 --> 00:01:04,610
+Y aquí antes había definido para el slug de category este path.
+
+17
+00:01:05,150 --> 00:01:05,960
+Voy a copiarlo.
+
+18
+00:01:07,540 --> 00:01:13,510
+Porque quiero ahora un nuevo pad con la nomenclatura de slug, pero que incluya al producto.
+
+19
+00:01:13,930 --> 00:01:16,410
+Entonces mira aquí, vamos a verlo.
+
+20
+00:01:16,430 --> 00:01:17,650
+Vamos a copiar este estilo.
+
+21
+00:01:17,650 --> 00:01:18,460
+Category slug.
+
+22
+00:01:21,820 --> 00:01:26,380
+Y le pongo luego de este cierre un slash y acá pego.
+
+23
+00:01:27,440 --> 00:01:30,310
+Este siguiente es a quien se refiere al product es.
+
+24
+00:01:33,310 --> 00:01:39,780
+Lo tenemos perfecto, pero el nombre te debería llevar a la página de Store, sino debería llevarme
+
+25
+00:01:39,790 --> 00:01:41,380
+a otro a otra dirección.
+
+26
+00:01:41,740 --> 00:01:43,780
+Qué le vamos a llamar Product Detail.
+
+27
+00:01:44,020 --> 00:01:45,880
+Recuerda que esta no es la página.
+
+28
+00:01:46,420 --> 00:01:52,750
+Este es el nombre de la función que va a procesar el pedido y te va a redireccionar a esa página producto.
+
+29
+00:01:53,970 --> 00:01:57,750
+Entonces para definir bien el nombre de la función, voy a copiar ese producto y tal.
+
+30
+00:01:58,440 --> 00:02:02,700
+Y aquí en la en el atributo del parámetro name, vamos a colocarlo.
+
+31
+00:02:03,660 --> 00:02:04,560
+Prado de tal.
+
+32
+00:02:05,160 --> 00:02:05,730
+Perfecto.
+
+33
+00:02:05,730 --> 00:02:07,770
+Entonces ya tengo el path creado.
+
+34
+00:02:08,250 --> 00:02:11,340
+Ahora vamos a crear la función Product Detail.
+
+35
+00:02:11,670 --> 00:02:12,870
+Vamos a borrar los cambios.
+
+36
+00:02:12,900 --> 00:02:14,160
+Menú File Safe All.
+
+37
+00:02:16,250 --> 00:02:18,540
+Vamos a ubicarnos ahora en el archivo buscar.
+
+38
+00:02:18,890 --> 00:02:20,750
+Y que se encuentra al interior de Store.
+
+39
+00:02:21,500 --> 00:02:22,280
+Vamos a abrirlo.
+
+40
+00:02:23,630 --> 00:02:30,050
+Y aquí en la parte final de este Render Return, a este nivel de mira, no hay espacios.
+
+41
+00:02:30,140 --> 00:02:33,380
+Voy a crear una nueva función de F.
+
+42
+00:02:34,130 --> 00:02:38,930
+Se llama Product Detail y va a tener estos parámetros request.
+
+43
+00:02:39,920 --> 00:02:44,470
+El category es lo que necesito y también el product es lo que.
+
+44
+00:02:46,270 --> 00:02:48,370
+Cierro paréntesis y le ponemos dos puntos.
+
+45
+00:02:50,190 --> 00:02:52,270
+A continuación lo que quiero que me retorne.
+
+46
+00:02:52,280 --> 00:02:53,900
+Hago un render.
+
+47
+00:02:55,920 --> 00:02:57,960
+Lo que quiero que me retorne es el objeto request.
+
+48
+00:02:58,200 --> 00:03:02,220
+Y también tengo que indicarle cuál es la página template de destino.
+
+49
+00:03:03,060 --> 00:03:06,600
+Voy a indicarle que sea el de la carpeta de Store de la carpeta Templates.
+
+50
+00:03:07,350 --> 00:03:13,650
+Va a estar este nuevo template que vamos a llamar product detail punto a HTML.
+
+51
+00:03:14,130 --> 00:03:15,710
+Evidentemente aún no existe.
+
+52
+00:03:15,720 --> 00:03:17,160
+Vamos a crearlo en este momento.
+
+53
+00:03:17,670 --> 00:03:20,220
+Este producto del HTML voy a copiarlo.
+
+54
+00:03:23,380 --> 00:03:25,210
+Vamos a borrar los cambios del safe hall.
+
+55
+00:03:25,810 --> 00:03:27,790
+Y ahora vamos a la carpeta Templates.
+
+56
+00:03:28,960 --> 00:03:32,890
+Dentro del templo está el lector claro y definido que tiene que estar dentro del lector.
+
+57
+00:03:34,360 --> 00:03:36,130
+Voy a darle clic derecho en la carpeta Store.
+
+58
+00:03:37,590 --> 00:03:38,370
+Y Newfield.
+
+59
+00:03:38,910 --> 00:03:45,300
+Y acá vamos a agregar el product abajo de tal punto a HTML y le damos a enter.
+
+60
+00:03:46,550 --> 00:03:47,120
+Por ahora.
+
+61
+00:03:47,120 --> 00:03:51,050
+Para probar que la navegación es correcta, sólo voy a agregar un título.
+
+62
+00:03:52,480 --> 00:03:53,230
+Página.
+
+63
+00:03:53,230 --> 00:03:54,190
+Detalle, producto.
+
+64
+00:03:54,190 --> 00:03:54,700
+Le pongo.
+
+65
+00:03:55,450 --> 00:03:56,080
+Eso es todo.
+
+66
+00:03:56,620 --> 00:03:58,600
+Vamos a darte una última revisada.
+
+67
+00:03:58,630 --> 00:04:00,040
+Vamos a la carpeta Store.
+
+68
+00:04:00,220 --> 00:04:04,090
+Un momento a la carpeta Store y vamos al tercer punto.
+
+69
+00:04:04,310 --> 00:04:07,000
+Y aquí, mira, aquí hay un pequeño detalle.
+
+70
+00:04:07,030 --> 00:04:10,300
+Había agregado este nuevo category Slug Product Slug.
+
+71
+00:04:10,310 --> 00:04:14,620
+Pero mira, aquí me faltó agregar una coma para el final del categoría Slug.
+
+72
+00:04:15,900 --> 00:04:16,860
+Le ponemos esa toma.
+
+73
+00:04:17,100 --> 00:04:20,070
+También voy a indicar que es el slug categoria slug.
+
+74
+00:04:21,150 --> 00:04:23,580
+Un logo del signo de menor.
+
+75
+00:04:24,420 --> 00:04:31,020
+Y ahora aquí también vamos a ponerle al final del slug y de este signo un slash.
+
+76
+00:04:31,530 --> 00:04:34,290
+Y al final del path le pongo siempre una coma.
+
+77
+00:04:34,500 --> 00:04:40,840
+Hay que tener mucho cuidado con estos detalles porque pueden romper el código y detener tu servidor.
+
+78
+00:04:40,860 --> 00:04:45,240
+Si eso sucede, ya sabes que tienes que volver a ejecutar el server.
+
+79
+00:04:45,480 --> 00:04:47,130
+Vamos a darle menu file Safe all.
+
+80
+00:04:47,130 --> 00:04:53,310
+Guardamos todos los cambios y en el batch vamos a ejecutar el comando Python Manager y Espacio Server.
+
+81
+00:04:53,760 --> 00:04:57,330
+Le damos enter y se está ejecutando sin ningún error.
+
+82
+00:04:58,610 --> 00:05:00,170
+Vamos a abrir nuestra página en el local.
+
+83
+00:05:00,410 --> 00:05:01,910
+8000 es la Store.
+
+84
+00:05:02,720 --> 00:05:03,560
+Refrescamos.
+
+85
+00:05:03,560 --> 00:05:04,850
+Todo parece correcto.
+
+86
+00:05:05,690 --> 00:05:08,930
+Ahora vamos a darle en la parte superior.
+
+87
+00:05:09,620 --> 00:05:10,370
+Por ejemplo.
+
+88
+00:05:12,320 --> 00:05:16,760
+Computadoras es las cualquier tipo de producto en este momento.
+
+89
+00:05:18,150 --> 00:05:18,660
+Cualquiera.
+
+90
+00:05:18,660 --> 00:05:19,170
+Le pongo.
+
+91
+00:05:19,710 --> 00:05:26,520
+Entonces recuerda, este primer slug pertenece a la categoría y el segundo pertenece al producto.
+
+92
+00:05:26,520 --> 00:05:27,870
+El slug del producto.
+
+93
+00:05:28,440 --> 00:05:30,000
+No hay problema, le vamos a dar enter.
+
+94
+00:05:30,300 --> 00:05:33,930
+Y efectivamente, mira, ya me está llevando a la página de de producto.
+
+95
+00:05:34,440 --> 00:05:39,840
+A continuación tenemos que trabajar en la creación HTML de esta página de talle producto.
+
+96
+00:05:40,020 --> 00:05:45,990
+Vamos a tener que va a tener unos colores especiales, va a tener también unos containers, unos botones,
+
+97
+00:05:45,990 --> 00:05:46,710
+etcétera.
+
+98
+00:05:47,220 --> 00:05:53,790
+Este código HTML ya está listo, está como un recurso compartido de este vídeo, de este capítulo.
+
+99
+00:05:53,970 --> 00:05:56,580
+Lo puedes descargar a tu computadora.
+
+100
+00:05:57,660 --> 00:06:02,330
+En este caso vas a notar que el archivo se llama periódico Twitter Template HTML.
+
+101
+00:06:02,340 --> 00:06:05,010
+Te repito, está como un recurso de este video.
+
+102
+00:06:06,050 --> 00:06:12,140
+Descárgalo y una vez que lo descargues, ábrelo con un bloc de notas y vamos a seleccionar todo su contenido.
+
+103
+00:06:13,450 --> 00:06:14,520
+Y ahora vamos a.
+
+104
+00:06:16,630 --> 00:06:20,170
+Y dentro de Atton vamos a ubicarnos dentro de la carpeta Templates.
+
+105
+00:06:20,290 --> 00:06:22,480
+Aquí aparece Story y aquí aparece el product detail.
+
+106
+00:06:22,510 --> 00:06:23,200
+Vamos a abrirlo.
+
+107
+00:06:24,340 --> 00:06:27,010
+Este contenido por defecto que había creado antes, se lo voy a borrar.
+
+108
+00:06:27,880 --> 00:06:28,900
+Y aquí pego.
+
+109
+00:06:30,780 --> 00:06:31,410
+Perfecto.
+
+110
+00:06:31,440 --> 00:06:36,480
+Voy a darle el menú Field Safe all y vamos a refrescar nuestra página de detalles.
+
+111
+00:06:37,480 --> 00:06:38,410
+Estamos en la página.
+
+112
+00:06:38,410 --> 00:06:39,370
+Voy a darle un refresh.
+
+113
+00:06:40,000 --> 00:06:46,060
+Me aparece de esta forma porque no estoy importando aún el base HTML de mi proyecto.
+
+114
+00:06:46,060 --> 00:06:51,190
+El base HTML es el que contiene los links para los estilos de la página.
+
+115
+00:06:51,700 --> 00:06:53,620
+No te preocupes, vayamos otra vez a Atom.
+
+116
+00:06:54,610 --> 00:06:55,450
+Estamos en Atom.
+
+117
+00:06:55,480 --> 00:06:57,850
+Estamos en el archivo product title HTML.
+
+118
+00:06:58,090 --> 00:07:01,990
+Por ahora vamos a minimizar todo lo que has pegado aquí.
+
+119
+00:07:03,220 --> 00:07:07,840
+Ubícate en la parte superior, en el nivel de sección y aquí, en esta flecha que apunta para abajo.
+
+120
+00:07:07,840 --> 00:07:10,090
+Dale un clic y se va a minimizar.
+
+121
+00:07:10,210 --> 00:07:11,290
+No te preocupes por ahora.
+
+122
+00:07:11,290 --> 00:07:13,090
+Esto se ha minimizado el código.
+
+123
+00:07:13,090 --> 00:07:14,110
+Vamos a hacerle unos centers.
+
+124
+00:07:15,100 --> 00:07:17,590
+Y vamos a incorporar los estilos.
+
+125
+00:07:18,010 --> 00:07:19,840
+Abre unas llaves en la parte superior.
+
+126
+00:07:20,230 --> 00:07:24,750
+Luego los signos de porcentaje y escribimos extends.
+
+127
+00:07:26,140 --> 00:07:26,650
+Base.
+
+128
+00:07:27,880 --> 00:07:30,220
+Entre apóstrofes pase a HTML.
+
+129
+00:07:31,490 --> 00:07:36,140
+También voy a indicarle que este código HTML que yo he pegado.
+
+130
+00:07:37,360 --> 00:07:38,500
+Quiero que sea dinámico.
+
+131
+00:07:38,500 --> 00:07:40,630
+Entonces voy a rodearlo por.
+
+132
+00:07:43,030 --> 00:07:51,430
+Este código de blog abre llaves, porcentajes y le indico que blog content empieza aquí y dónde va a
+
+133
+00:07:51,430 --> 00:07:52,060
+terminar.
+
+134
+00:07:53,560 --> 00:07:57,930
+Va a terminar aquí luego de que acabe el código HTML que he pegado.
+
+135
+00:07:57,930 --> 00:08:00,130
+En un momento le pongo end block.
+
+136
+00:08:02,330 --> 00:08:03,010
+Estás listo?
+
+137
+00:08:03,150 --> 00:08:04,730
+Bueno, vamos a guardar los cambios.
+
+138
+00:08:06,130 --> 00:08:08,200
+Y vamos a refrescar ahora nuestra página.
+
+139
+00:08:09,430 --> 00:08:10,440
+Estamos en la página.
+
+140
+00:08:10,450 --> 00:08:13,080
+Un refresh y mira cómo cambió.
+
+141
+00:08:13,090 --> 00:08:17,140
+Ya me agregó en la parte superior la barra de navegación.
+
+142
+00:08:17,140 --> 00:08:23,620
+En la parte inferior me ha agregado también el pie de página y también me ha creado ya los estilos para
+
+143
+00:08:23,620 --> 00:08:28,180
+definir los containers y estructura de la página, detalle que tengo aquí.
+
+144
+00:08:29,500 --> 00:08:29,710
+Aquí.
+
+145
+00:08:29,710 --> 00:08:30,790
+Me puedes indicar, profesor?
+
+146
+00:08:30,790 --> 00:08:32,590
+Pero no está mostrando la imagen.
+
+147
+00:08:33,040 --> 00:08:35,280
+Este texto tampoco es un texto rodeado.
+
+148
+00:08:35,290 --> 00:08:36,790
+Claro, todo esto está rodeado.
+
+149
+00:08:37,090 --> 00:08:42,880
+En el siguiente capítulo vamos a hacer de que se pinte en esta página detalle la información que tengo
+
+150
+00:08:42,880 --> 00:08:45,700
+almacenada en la base de datos de un producto.

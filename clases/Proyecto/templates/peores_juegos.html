@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Peores Juegos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Top Peores Juegos</h1>
+        <div class="games">
+            <div class="game">Juego malo 1</div>
+            <div class="game">Juego malo 2</div>
+            <div class="game">Juego malo 3</div>
+        </div>
+        <a href="{{ url_for('index') }}" class="btn">Volver al Inicio</a>
+    </div>
+</body>
+</html>

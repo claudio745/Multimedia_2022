@@ -1,0 +1,1135 @@
+1
+00:00:00,700 --> 00:00:03,830
+De capítulos anteriores trabajamos en lo que son las variaciones.
+
+2
+00:00:04,120 --> 00:00:05,650
+Pero aquí te hago una pregunta.
+
+3
+00:00:05,800 --> 00:00:09,580
+Recuerda que estamos trabajando en una aplicación de venta de productos.
+
+4
+00:00:09,910 --> 00:00:15,910
+Esto significa que vas a una tienda, escoges una camisa y tú tienes que solicitarle al vendedor que
+
+5
+00:00:15,910 --> 00:00:22,300
+te de exactamente lo que tu deseas, que es una talla específica y un color del producto.
+
+6
+00:00:22,900 --> 00:00:26,920
+A estas características de la venta se les llaman variaciones.
+
+7
+00:00:27,550 --> 00:00:33,010
+Ahora, si yo quiero comprarlo mediante esta página web, yo tengo que enviarle las características.
+
+8
+00:00:33,190 --> 00:00:33,850
+A dónde?
+
+9
+00:00:34,090 --> 00:00:35,460
+Al carrito de compras.
+
+10
+00:00:35,470 --> 00:00:36,340
+Es el objetivo.
+
+11
+00:00:36,760 --> 00:00:38,920
+Yo necesito aquí seleccionar el color.
+
+12
+00:00:39,820 --> 00:00:40,830
+Y también la talla.
+
+13
+00:00:40,840 --> 00:00:47,590
+Y luego, al apretar este botón de agregar al shopping card, lo que debería ocurrir es que estos valores
+
+14
+00:00:47,590 --> 00:00:53,620
+dinámicos deberían agregarse también al carrito de compras para este producto que es seleccionado,
+
+15
+00:00:53,860 --> 00:00:58,120
+es decir, al car item que hemos trabajado en capítulos anteriores.
+
+16
+00:00:59,370 --> 00:01:00,000
+Profesor.
+
+17
+00:01:00,030 --> 00:01:02,430
+Esto que significa en términos técnicos?
+
+18
+00:01:02,430 --> 00:01:09,210
+Significa que tenemos que agregarle una nueva columna a nuestra tabla de ítem que represente la colección
+
+19
+00:01:09,210 --> 00:01:13,590
+de variaciones que contiene el producto para la venta.
+
+20
+00:01:14,280 --> 00:01:15,810
+Vamos entonces a Atom.
+
+21
+00:01:16,080 --> 00:01:20,190
+Vamos a la carpeta karts y aquí aparece el modelo Pi.
+
+22
+00:01:20,930 --> 00:01:27,600
+Y aquí aparece la entidad Car item, que es la que representa una línea del carrito de compras.
+
+23
+00:01:28,020 --> 00:01:36,300
+Dentro de esta línea car item se encuentran los atributos de productos car quality y active y las funciones
+
+24
+00:01:36,300 --> 00:01:37,980
+para Subtotal y Unicode.
+
+25
+00:01:38,400 --> 00:01:43,350
+Aquí es donde tenemos que agregar esa nueva propiedad que almacene las variaciones.
+
+26
+00:01:44,830 --> 00:01:47,470
+Entonces aquí, después de escribimos.
+
+27
+00:01:50,000 --> 00:01:54,220
+Va igual a quien amo del punto.
+
+28
+00:01:55,050 --> 00:01:55,220
+Manny.
+
+29
+00:01:57,230 --> 00:01:57,770
+Too many.
+
+30
+00:01:59,270 --> 00:01:59,730
+Filth.
+
+31
+00:02:00,080 --> 00:02:00,740
+Por qué le pongo a?
+
+32
+00:02:01,610 --> 00:02:05,450
+Porque esto va a representar que almacenará una colección de data.
+
+33
+00:02:07,640 --> 00:02:12,680
+Aquí le pongo que va a almacenar un conjunto de variaciones, por eso le pongo la entidad variación
+
+34
+00:02:12,680 --> 00:02:15,860
+con V mayúscula, V Pequeña mayúscula, COMA.
+
+35
+00:02:17,330 --> 00:02:20,210
+Y que permita blancos también valores en blanco.
+
+36
+00:02:21,020 --> 00:02:21,710
+Y le pongo en true.
+
+37
+00:02:22,100 --> 00:02:26,960
+Cómo estoy trabajando con esta variación tenemos que importarlo en la parte superior.
+
+38
+00:02:27,930 --> 00:02:35,190
+Aquí aparece From Stock Models y coma varias variaciones.
+
+39
+00:02:35,640 --> 00:02:36,610
+Aquí lo colocamos.
+
+40
+00:02:36,630 --> 00:02:40,050
+Recuerda respetar mayúsculas y minúsculas y actúa como con mayúscula.
+
+41
+00:02:41,690 --> 00:02:43,350
+Vamos a borrar los cambios.
+
+42
+00:02:43,460 --> 00:02:48,410
+Menú Fail Safe all y quisiera ver esta propiedad en nuestro administrador.
+
+43
+00:02:49,280 --> 00:02:55,550
+Vamos a local ocho es admin, ya me logueado, aquí aparece la app de cards que parece cards y Card
+
+44
+00:02:55,640 --> 00:02:56,150
+Items.
+
+45
+00:02:56,420 --> 00:02:57,560
+Vamos a darle click cards.
+
+46
+00:02:58,950 --> 00:03:00,480
+Me aparece la Heidi del kart.
+
+47
+00:03:00,900 --> 00:03:02,460
+Le doy clic karts, items.
+
+48
+00:03:03,000 --> 00:03:05,950
+No tengo ningún cars y aún voy a crear uno.
+
+49
+00:03:05,970 --> 00:03:11,220
+Vamos a ver, agregó este agregar al shopping cart ya se generó una línea.
+
+50
+00:03:12,440 --> 00:03:13,120
+Volvemos.
+
+51
+00:03:13,130 --> 00:03:16,010
+Voy a actualizar aquí la tabla y ya me pareció un item.
+
+52
+00:03:17,810 --> 00:03:24,380
+Tengo un ítem, pero yo quisiera que aquí se mostrara con más detalles el item y también el cards.
+
+53
+00:03:24,890 --> 00:03:25,790
+Vamos a arreglarlo.
+
+54
+00:03:27,010 --> 00:03:29,410
+Estamos nuevamente dentro de la carpeta cards.
+
+55
+00:03:29,440 --> 00:03:31,300
+Vamos a ir a Admin y.
+
+56
+00:03:32,410 --> 00:03:33,730
+Y aquí vamos a crear.
+
+57
+00:03:34,890 --> 00:03:36,570
+Un class de descripción.
+
+58
+00:03:37,230 --> 00:03:38,910
+Class admin.
+
+59
+00:03:41,510 --> 00:03:45,680
+Aquí le ponemos un admin punto Model Admin.
+
+60
+00:03:47,580 --> 00:03:47,880
+Dos.
+
+61
+00:03:48,150 --> 00:03:48,630
+Dos.
+
+62
+00:03:49,810 --> 00:03:54,010
+Le ponemos un display la lista de elementos que van a haber en este grid.
+
+63
+00:03:55,760 --> 00:04:00,530
+Le ponemos producto coma uno product que sería cart.
+
+64
+00:04:01,830 --> 00:04:03,030
+Kart Heidi.
+
+65
+00:04:05,090 --> 00:04:10,820
+También quiero que muestre el date de la fecha en la cual se agregó este elemento en la base de datos.
+
+66
+00:04:12,270 --> 00:04:15,390
+También voy a crear otro para el item.
+
+67
+00:04:17,280 --> 00:04:19,110
+Class cart item admin.
+
+68
+00:04:22,320 --> 00:04:27,480
+Y la lista de elementos va a ser aquí si tendría que ser producto de pongo producto.
+
+69
+00:04:30,220 --> 00:04:31,960
+También le vamos a poner cartas.
+
+70
+00:04:34,650 --> 00:04:36,030
+También le pongo el.
+
+71
+00:04:38,020 --> 00:04:40,210
+Y también saber si está activo o no.
+
+72
+00:04:41,890 --> 00:04:42,130
+Bien.
+
+73
+00:04:42,160 --> 00:04:44,250
+Ahora vamos a agregar este.
+
+74
+00:04:45,510 --> 00:04:47,130
+Luis este Carmen.
+
+75
+00:04:49,380 --> 00:04:50,070
+Para 4.º.
+
+76
+00:04:52,660 --> 00:04:56,310
+Y este car y ténganme para el car ítem.
+
+77
+00:04:59,060 --> 00:05:02,720
+Vamos a borrar los cambios de Newfield, safe Hall y vamos a la página.
+
+78
+00:05:03,620 --> 00:05:04,520
+Estamos en la página.
+
+79
+00:05:04,550 --> 00:05:05,450
+Voy a refrescar.
+
+80
+00:05:05,900 --> 00:05:06,580
+Perfecto.
+
+81
+00:05:06,590 --> 00:05:13,550
+Ya para Quartz aparece el EDI y la fecha en la cual se agregó para el item se llama aparece el producto.
+
+82
+00:05:14,330 --> 00:05:19,370
+También aparece el adi del cart y la cantidad se lo explica el producto.
+
+83
+00:05:21,030 --> 00:05:23,670
+Me debería aparecer aquí.
+
+84
+00:05:23,670 --> 00:05:29,310
+Me debería parecer un valor del Nations, pero el problema es que aún no he hecho la migración.
+
+85
+00:05:29,700 --> 00:05:35,190
+Recuerda, cada vez que tú actualices un modelo, tienes que ejecutar el proceso de migración.
+
+86
+00:05:36,000 --> 00:05:40,220
+Si vamos nuevamente hacia la carpeta Car Models API.
+
+87
+00:05:40,740 --> 00:05:47,850
+Yo le agregué esta entidad, esta propiedad variación, pero no la he generado como valor de tabla,
+
+88
+00:05:48,180 --> 00:05:49,890
+así que vamos a hacerlo en este momento.
+
+89
+00:05:50,490 --> 00:05:51,360
+Aquí está el Bash.
+
+90
+00:05:51,720 --> 00:05:52,650
+Voy a detenerlo.
+
+91
+00:05:55,250 --> 00:05:55,950
+Se detuvo.
+
+92
+00:05:55,970 --> 00:05:57,020
+Vamos a limpiar.
+
+93
+00:05:57,050 --> 00:05:57,720
+Listo.
+
+94
+00:05:58,400 --> 00:06:00,710
+Y ahora vamos a escribir acá.
+
+95
+00:06:00,840 --> 00:06:01,520
+Peyton.
+
+96
+00:06:04,140 --> 00:06:06,180
+Espacio Management y.
+
+97
+00:06:07,880 --> 00:06:10,340
+Espacio Make Migration.
+
+98
+00:06:12,470 --> 00:06:13,330
+Y le damos enter.
+
+99
+00:06:15,580 --> 00:06:21,520
+Listo, ya me genera el archivo y ahora vamos a ejecutarlo para que se genere este cambio en la base
+
+100
+00:06:21,520 --> 00:06:28,510
+de datos y en la tabla de cart item hacemos un manage de PIB y espacio my great.
+
+101
+00:06:31,180 --> 00:06:31,780
+Listo.
+
+102
+00:06:31,840 --> 00:06:32,780
+Ya se agregó.
+
+103
+00:06:32,890 --> 00:06:35,530
+Vamos a ejecutar entonces nuestro servidor web.
+
+104
+00:06:36,040 --> 00:06:38,110
+Ya sabes que tenemos que ejecutar un Python espacio.
+
+105
+00:06:38,680 --> 00:06:39,910
+Espacio Ram Server.
+
+106
+00:06:41,180 --> 00:06:42,050
+Le vamos a entrar.
+
+107
+00:06:42,050 --> 00:06:43,000
+No hay ningún problema.
+
+108
+00:06:43,010 --> 00:06:43,880
+Vamos a la página.
+
+109
+00:06:45,000 --> 00:06:51,870
+Estamos nuevamente dentro de local 8000 admin y ahora voy a darle click a items que me apareció.
+
+110
+00:06:52,410 --> 00:06:57,870
+Vamos a seleccionar este producto Camisa moderna y ya me está mostrando el formulario sin ningún tipo
+
+111
+00:06:57,870 --> 00:06:58,830
+de error.
+
+112
+00:06:59,490 --> 00:07:01,440
+Entonces lo que he hecho es el momento.
+
+113
+00:07:01,440 --> 00:07:07,530
+Es solo crear dentro del carrito item el campo para almacenar los variaciones.
+
+114
+00:07:07,530 --> 00:07:15,360
+Pero aún no he creado la transacción, la operación para que yo pueda capturar estos variaciones.
+
+115
+00:07:16,590 --> 00:07:21,660
+Y enviarlos al carrito de compras y registrar estos valores en la tabla car.
+
+116
+00:07:21,660 --> 00:07:22,140
+Item.
+
+117
+00:07:22,860 --> 00:07:24,060
+Qué debo hacer primero?
+
+118
+00:07:24,660 --> 00:07:30,860
+Recuerda que la forma en la cual estamos pasando por defecto estos valores hacia el carrito.
+
+119
+00:07:30,880 --> 00:07:33,060
+Ítem es a través del método GET.
+
+120
+00:07:33,060 --> 00:07:39,120
+Significa que estos parámetros de color y talla estos viajan por la URL.
+
+121
+00:07:40,270 --> 00:07:42,670
+Pero yo no quiero en este caso, que viajen por la borda.
+
+122
+00:07:43,210 --> 00:07:50,560
+Porque de repente, en un futuro podría haber un caso de que un producto tenga tres o cuatro o cinco
+
+123
+00:07:50,560 --> 00:07:51,340
+variaciones.
+
+124
+00:07:52,000 --> 00:07:54,630
+Y no voy a estar llenando de parámetros toda Loreley.
+
+125
+00:07:54,670 --> 00:07:55,870
+No es una buena práctica.
+
+126
+00:07:56,230 --> 00:07:59,770
+Entonces lo que vamos a hacer es utilizar el método Post.
+
+127
+00:08:00,310 --> 00:08:06,160
+Recuerda, hay dos métodos de envío clásicos de comunicación entre un cliente y un servidor.
+
+128
+00:08:06,370 --> 00:08:12,700
+El método GET para enviar parámetros al servidor desde el cliente utilizando la URL y el método Post.
+
+129
+00:08:13,090 --> 00:08:18,880
+Enviar los parámetros al servidor utilizando el body del formulario que vamos a ver.
+
+130
+00:08:18,880 --> 00:08:27,460
+En este caso estamos dentro de Atom, en la carpeta cards, vamos al archivo Buscar Py y aquí aparece
+
+131
+00:08:27,460 --> 00:08:34,690
+Mira el método Ad Card es el método que estamos utilizando para registrar un nuevo record de carrito
+
+132
+00:08:34,690 --> 00:08:37,840
+de compras y también un carrito item.
+
+133
+00:08:39,160 --> 00:08:41,590
+Vamos a ubicarnos en esta línea de productos.
+
+134
+00:08:41,890 --> 00:08:42,120
+Ok.
+
+135
+00:08:42,120 --> 00:08:42,330
+Ok.
+
+136
+00:08:42,340 --> 00:08:42,810
+Ok.
+
+137
+00:08:43,510 --> 00:08:43,710
+Ok.
+
+138
+00:08:44,740 --> 00:08:49,480
+Voy a darle un Enter después de esta línea y voy a comenzar la lógica.
+
+139
+00:08:49,660 --> 00:08:52,450
+Primeramente, recuerda lo que te dije hace un momento.
+
+140
+00:08:52,810 --> 00:08:55,960
+Un producto que puede tener varios variaciones.
+
+141
+00:08:56,050 --> 00:09:02,350
+En mi caso, estoy trabajando con dos, sólo con color y talla, pero existen productos que pueden tener
+
+142
+00:09:02,350 --> 00:09:04,810
+tres, cuatro o de repente también puede tener uno?
+
+143
+00:09:04,810 --> 00:09:05,740
+No lo sabemos.
+
+144
+00:09:05,950 --> 00:09:07,030
+Esto es dinámico.
+
+145
+00:09:07,210 --> 00:09:13,510
+Al ser dinámico, entonces voy a hacer que los variación se conviertan también en una colección variable.
+
+146
+00:09:14,320 --> 00:09:17,530
+Por este motivo, voy a crear aquí un producto variación.
+
+147
+00:09:18,900 --> 00:09:19,440
+Igual.
+
+148
+00:09:21,000 --> 00:09:23,730
+A una Collection, por ahora en blanco.
+
+149
+00:09:23,730 --> 00:09:25,230
+Sólo le estoy inicializando.
+
+150
+00:09:26,910 --> 00:09:31,980
+A continuación, lo que voy a hacer es saber si me están enviando los parámetros de las variaciones
+
+151
+00:09:32,220 --> 00:09:33,540
+dentro del método Post.
+
+152
+00:09:33,870 --> 00:09:36,750
+Por eso voy a hacer una condición acá y le digo If request.
+
+153
+00:09:38,060 --> 00:09:38,430
+Punto.
+
+154
+00:09:38,450 --> 00:09:38,870
+Método.
+
+155
+00:09:38,930 --> 00:09:39,710
+Recuerda lo que te dije.
+
+156
+00:09:39,710 --> 00:09:41,510
+Que existen los métodos Get o Post.
+
+157
+00:09:42,560 --> 00:09:45,320
+Si el método de envío que estoy recibiendo es un post.
+
+158
+00:09:47,620 --> 00:09:55,150
+Entonces quiero que apliques un bucle para capturar cada uno de estos variaciones que me están enviando.
+
+159
+00:09:56,040 --> 00:10:02,160
+También te repito, pueden haber 134 o cinco variaciones.
+
+160
+00:10:02,160 --> 00:10:02,900
+No lo sabemos.
+
+161
+00:10:02,910 --> 00:10:04,980
+Por este motivo aplicamos un bucle.
+
+162
+00:10:06,900 --> 00:10:08,040
+Hacemos un Ford.
+
+163
+00:10:10,750 --> 00:10:16,420
+Y le ponemos un item im request punto post.
+
+164
+00:10:18,190 --> 00:10:23,260
+Le ponemos dos puntos aquí al final del IF que escribí hace un momento, también me faltó colocar los
+
+165
+00:10:23,260 --> 00:10:23,740
+puntos.
+
+166
+00:10:26,080 --> 00:10:31,720
+Y luego los dos puntos, voy a indicarle que un valor, una variable de aquí, va a ser igual a que
+
+167
+00:10:31,720 --> 00:10:33,610
+al item que estoy capturando.
+
+168
+00:10:34,560 --> 00:10:38,460
+Este item representa el nombre del Masón.
+
+169
+00:10:39,000 --> 00:10:40,140
+El nombre del masón.
+
+170
+00:10:42,120 --> 00:10:44,880
+Y también voy a tener otro que representa el value.
+
+171
+00:10:45,090 --> 00:10:48,900
+Recuerda, un payaso tiene dos elementos el nombre y el valor.
+
+172
+00:10:49,410 --> 00:10:51,660
+El nombre sería, por ejemplo, el color.
+
+173
+00:10:52,410 --> 00:10:55,110
+Y el valor tendría que ser verde.
+
+174
+00:10:56,130 --> 00:10:59,520
+Es un ejemplo para capturar el valor del variación.
+
+175
+00:10:59,520 --> 00:11:01,380
+Hacemos un rico esquema post.
+
+176
+00:11:03,980 --> 00:11:05,310
+Y aquí le ponemos Suzuki.
+
+177
+00:11:05,820 --> 00:11:06,540
+Perfecto.
+
+178
+00:11:07,520 --> 00:11:14,390
+Ahora lo que necesito es capturar el variación, saber si este variación existe en mi colección actual
+
+179
+00:11:14,810 --> 00:11:15,950
+que está en la base de datos.
+
+180
+00:11:16,610 --> 00:11:17,570
+Así que hago un traje.
+
+181
+00:11:18,980 --> 00:11:20,330
+Y les digo variación.
+
+182
+00:11:21,200 --> 00:11:23,750
+El objeto variación va a ser igual a que a variación.
+
+183
+00:11:24,710 --> 00:11:25,340
+A la tabla.
+
+184
+00:11:25,340 --> 00:11:25,870
+Variación.
+
+185
+00:11:26,540 --> 00:11:27,620
+Punto Object.
+
+186
+00:11:28,520 --> 00:11:29,240
+Punto get.
+
+187
+00:11:30,570 --> 00:11:34,260
+Y aquí vamos a aplicar un filtro para que busque por el producto.
+
+188
+00:11:34,260 --> 00:11:39,900
+Recuerda, nosotros habíamos creado el variación como si fuera una clave foránea.
+
+189
+00:11:40,410 --> 00:11:42,270
+Entonces tengo acceso a los productos.
+
+190
+00:11:42,630 --> 00:11:46,350
+Cada producto tiene un conjunto de variaciones.
+
+191
+00:11:48,040 --> 00:11:52,390
+Entonces le digo primero que busque por el producto product product.
+
+192
+00:11:53,530 --> 00:11:59,260
+Si me preguntase de dónde estoy sacando el valor del product, lo estoy sacando de la parte superior.
+
+193
+00:11:59,280 --> 00:11:59,530
+Mira.
+
+194
+00:12:00,660 --> 00:12:01,080
+Hasta aquí.
+
+195
+00:12:02,540 --> 00:12:04,400
+Ya tengo aquí la instancia del objeto producto.
+
+196
+00:12:04,400 --> 00:12:08,540
+Por eso ya puedo buscar hacer esa búsqueda de variación por producto.
+
+197
+00:12:11,080 --> 00:12:13,130
+También voy a llamar a Jetson.
+
+198
+00:12:15,100 --> 00:12:19,090
+Y quiero que busque por su columna categoría.
+
+199
+00:12:20,390 --> 00:12:21,320
+Parece eso category.
+
+200
+00:12:22,590 --> 00:12:24,330
+Con el operador y exac.
+
+201
+00:12:27,990 --> 00:12:29,790
+Y esto que sigue igual al que.
+
+202
+00:12:31,570 --> 00:12:36,130
+Recuerda que el nombre del variación realmente se llama variación categoría.
+
+203
+00:12:36,160 --> 00:12:40,400
+Es el nombre que le dimos a la columna que representa el Ki del Watson.
+
+204
+00:12:41,080 --> 00:12:43,240
+Y el operador es y exac.
+
+205
+00:12:43,870 --> 00:12:44,860
+Dos rayas para abajo.
+
+206
+00:12:44,860 --> 00:12:47,280
+Hay que colocarse siempre y cuando llames a un operador.
+
+207
+00:12:47,290 --> 00:12:47,770
+Un momento.
+
+208
+00:12:49,180 --> 00:12:51,610
+Dos rayas para abajo y operadores y exact.
+
+209
+00:12:52,360 --> 00:12:55,240
+Si es igual al KI, de donde sacas el ki?
+
+210
+00:12:55,270 --> 00:12:57,220
+Recuerda que es la parte superior.
+
+211
+00:13:00,800 --> 00:13:04,010
+Y aplico lo mismo para el evaluation value.
+
+212
+00:13:05,880 --> 00:13:08,680
+Dos rayas para abajo y llamó a su y.
+
+213
+00:13:10,640 --> 00:13:12,710
+Igual al parámetro al valor.
+
+214
+00:13:12,710 --> 00:13:14,300
+Valor que estoy obteniendo del bucle.
+
+215
+00:13:15,540 --> 00:13:20,760
+De esta forma, entonces ya estoy creando un objeto de tipo variación.
+
+216
+00:13:21,770 --> 00:13:22,690
+Y qué voy a hacer con esto?
+
+217
+00:13:22,700 --> 00:13:26,810
+Que todavía lo voy a agregar a la colección en blanco.
+
+218
+00:13:27,730 --> 00:13:30,250
+Que definí en la parte superior antes de Liebe.
+
+219
+00:13:31,800 --> 00:13:34,170
+Entonces acá le ponemos Product.
+
+220
+00:13:35,180 --> 00:13:38,780
+Varias son la colección y llamo al app en punto.
+
+221
+00:13:38,780 --> 00:13:39,230
+Append.
+
+222
+00:13:40,910 --> 00:13:45,230
+Y aquí entre paréntesis le agrego el objeto que se ha encontrado, que es este.
+
+223
+00:13:48,270 --> 00:13:48,780
+Listo.
+
+224
+00:13:50,350 --> 00:13:55,660
+En caso de que no haya un error buscando este variación, no se puede generar este objeto.
+
+225
+00:13:57,210 --> 00:13:58,940
+Entonces que dispare una excepción.
+
+226
+00:13:59,190 --> 00:13:59,190
+Un.
+
+227
+00:14:01,620 --> 00:14:03,030
+Pero le digo que no haga nada por ahora.
+
+228
+00:14:03,210 --> 00:14:04,250
+Le voy a poner un pase.
+
+229
+00:14:04,930 --> 00:14:05,370
+Listo?
+
+230
+00:14:06,420 --> 00:14:07,020
+De esta forma.
+
+231
+00:14:07,020 --> 00:14:09,360
+Entonces ya estoy yo llenando.
+
+232
+00:14:10,870 --> 00:14:18,160
+La colección de Nations que me está enviando el cliente desde la página del detalle el producto a la
+
+233
+00:14:18,160 --> 00:14:20,170
+hora que apreté el botón de agregar al carrito.
+
+234
+00:14:21,500 --> 00:14:26,360
+Pero aún estoy haciendo la transacción para que se almacenen dentro de la base de datos.
+
+235
+00:14:26,630 --> 00:14:28,370
+Recuerdas dónde tiene que almacenarse?
+
+236
+00:14:28,370 --> 00:14:30,260
+Si, dentro del ítem.
+
+237
+00:14:31,380 --> 00:14:37,390
+Vamos a la parte inferior, ya que aparece el primer try que aparece después de este variación que esto
+
+238
+00:14:37,410 --> 00:14:38,730
+después de este bucle if.
+
+239
+00:14:39,570 --> 00:14:42,840
+Este primer try es para crear un carrito de compras.
+
+240
+00:14:42,840 --> 00:14:43,740
+Ese no me interesa.
+
+241
+00:14:44,430 --> 00:14:52,050
+El que me interesa es el que le sigue, que es el try catch triceps para poder crear el carrito item
+
+242
+00:14:52,050 --> 00:14:56,280
+o agregar un nuevo carrito item al existente.
+
+243
+00:14:57,780 --> 00:15:00,630
+Entonces aquí, después del Kryten.
+
+244
+00:15:00,630 --> 00:15:03,860
+Kryten, Jet, vamos a darle un enter.
+
+245
+00:15:05,920 --> 00:15:10,440
+Y aquí voy a hacer la operación para insertar cada variación al carrito.
+
+246
+00:15:10,450 --> 00:15:11,690
+Ídem, ídem.
+
+247
+00:15:12,700 --> 00:15:18,430
+Pero quiero que solo se ejecute si es que mi colección producto no está en blanco.
+
+248
+00:15:18,880 --> 00:15:23,440
+Por eso hago una condición aquí y le digo if primero la función length.
+
+249
+00:15:26,730 --> 00:15:28,070
+Produc variación.
+
+250
+00:15:30,410 --> 00:15:31,690
+Es mayor que cero.
+
+251
+00:15:31,700 --> 00:15:34,790
+Si tiene elementos de esta colección, aquí le ponemos dos puntos.
+
+252
+00:15:36,450 --> 00:15:41,670
+Entonces haz un bucle for item im product aviation.
+
+253
+00:15:42,900 --> 00:15:43,710
+Dos puntos.
+
+254
+00:15:45,250 --> 00:15:48,090
+Y aquí quiero que hagas esta inserción card.
+
+255
+00:15:48,100 --> 00:15:50,930
+Item punto variaciones.
+
+256
+00:15:51,310 --> 00:15:52,330
+Punto at.
+
+257
+00:15:54,070 --> 00:15:55,900
+Y le agregamos ese ítem.
+
+258
+00:15:59,450 --> 00:16:00,440
+Si lo has notado.
+
+259
+00:16:00,680 --> 00:16:03,140
+Nosotros hemos utilizado este traje.
+
+260
+00:16:04,010 --> 00:16:08,840
+Utilizamos este traje cuando ya existe el carrito de compras.
+
+261
+00:16:09,140 --> 00:16:15,380
+Y utilizamos este except cuando creamos un nuevo item desde cero.
+
+262
+00:16:16,430 --> 00:16:20,630
+Entonces voy a copiar estas tres líneas que acabo de describir.
+
+263
+00:16:21,740 --> 00:16:22,760
+Respecto del Champ.
+
+264
+00:16:25,960 --> 00:16:28,510
+Y vamos a ubicarnos aquí en el hesed.
+
+265
+00:16:29,660 --> 00:16:38,750
+Después de que cierre este paréntesis y aquí pego esta líneas para también agregarle agregarle el ítem
+
+266
+00:16:38,750 --> 00:16:42,800
+variaciones a este nuevo ítem que se está generando desde cero.
+
+267
+00:16:43,550 --> 00:16:50,780
+Antes de este bucle para el try, voy a indicarle que limpie todos los variaciones que puedan existir
+
+268
+00:16:50,780 --> 00:16:51,860
+dentro del ítem.
+
+269
+00:16:51,860 --> 00:16:54,900
+Por eso lo voy a poner aquí un card para abajo.
+
+270
+00:16:54,950 --> 00:16:56,100
+Ítem punto.
+
+271
+00:16:57,320 --> 00:16:58,150
+Variaciones.
+
+272
+00:16:59,720 --> 00:17:00,410
+Un momento.
+
+273
+00:17:01,630 --> 00:17:02,420
+Variaciones.
+
+274
+00:17:03,120 --> 00:17:03,630
+Punto.
+
+275
+00:17:05,910 --> 00:17:11,310
+Y que me inserte los nuevos que ha seleccionado el usuario que le quito el punto y coma.
+
+276
+00:17:11,640 --> 00:17:12,450
+Bien, lo tenemos.
+
+277
+00:17:12,450 --> 00:17:12,930
+Listo.
+
+278
+00:17:13,740 --> 00:17:15,180
+Algo adicional que me falta.
+
+279
+00:17:15,210 --> 00:17:17,700
+Es que yo estoy llamando aquí al.
+
+280
+00:17:18,000 --> 00:17:19,260
+A la entidad variación.
+
+281
+00:17:20,000 --> 00:17:22,830
+Entonces tengo que importarla en la parte superior.
+
+282
+00:17:23,710 --> 00:17:28,810
+Viene desde Storm Models y le pongo una coma y aquí le escribo varias.
+
+283
+00:17:30,730 --> 00:17:32,450
+Vamos a guardar los cambios.
+
+284
+00:17:33,070 --> 00:17:35,440
+Safe all y continuamos en el siguiente capítulo.

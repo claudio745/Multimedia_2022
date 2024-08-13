@@ -1,0 +1,531 @@
+1
+00:00:00,390 --> 00:00:03,480
+Vamos a continuar trabajando en mi proyecto web Jango.
+
+2
+00:00:03,810 --> 00:00:07,680
+En el capítulo anterior creamos una app que denominamos usuarios.
+
+3
+00:00:07,950 --> 00:00:16,800
+Ahora lo que yo necesito es listar estos usuarios en una tabla de tipo HTML, pero como estoy trabajando
+
+4
+00:00:16,800 --> 00:00:23,430
+en las interfaces gráficas con el framework Bootstrap, vamos a basarnos en esta herramienta para crear
+
+5
+00:00:23,640 --> 00:00:25,650
+una atractiva interface.
+
+6
+00:00:26,490 --> 00:00:29,910
+Vamos a la página Get Bootstrap punto com.
+
+7
+00:00:30,870 --> 00:00:35,790
+Estamos en la versión cinco de Bootstrap y aquí aparece un menú que dice Docs.
+
+8
+00:00:36,420 --> 00:00:37,020
+Dale clic.
+
+9
+00:00:38,260 --> 00:00:41,830
+Es que te aparece un buscador dentro de esta caja.
+
+10
+00:00:42,550 --> 00:00:44,440
+Vamos a escribir table.
+
+11
+00:00:45,100 --> 00:00:46,780
+Aquí te aparece Table Tables.
+
+12
+00:00:46,870 --> 00:00:48,400
+Vamos a darle clic a Tables.
+
+13
+00:00:50,840 --> 00:00:57,620
+Y esta es la documentación para poder crear este componente, incorporar este componente dentro de nuestras
+
+14
+00:00:57,620 --> 00:00:58,220
+páginas.
+
+15
+00:00:58,880 --> 00:01:01,160
+Entonces aquí aparece en la parte inferior.
+
+16
+00:01:01,930 --> 00:01:02,320
+Un momento.
+
+17
+00:01:02,390 --> 00:01:03,740
+Vamos a mover un poco el scroll.
+
+18
+00:01:04,520 --> 00:01:08,930
+Me aparece aquí el botón de copie para poder obtener todo este código.
+
+19
+00:01:09,560 --> 00:01:11,090
+Voy a darle clic a ese botón Copy.
+
+20
+00:01:11,120 --> 00:01:12,560
+Me aparece que está copiado.
+
+21
+00:01:12,590 --> 00:01:13,940
+Vamos ahora a Atom.
+
+22
+00:01:14,980 --> 00:01:19,210
+Y dentro de autos vamos a ubicarnos entre la carpeta basic que aparece en la carpeta Templates.
+
+23
+00:01:19,570 --> 00:01:24,070
+Vamos a desplegar templates y me aparece el usuario list html.
+
+24
+00:01:24,100 --> 00:01:24,910
+Vamos a abrirlo.
+
+25
+00:01:26,690 --> 00:01:30,740
+Anteriormente solamente había creado este texto de la lista de usuarios.
+
+26
+00:01:31,010 --> 00:01:33,650
+Lo voy a remover por ahora dentro del body.
+
+27
+00:01:34,840 --> 00:01:38,920
+Y dentro del bori, lo recomendable es siempre trabajar como un container.
+
+28
+00:01:39,730 --> 00:01:40,720
+Voy a crear un gif.
+
+29
+00:01:46,590 --> 00:01:47,310
+Que está el DIF.
+
+30
+00:01:47,940 --> 00:01:54,630
+Este va a representar el container donde voy a ubicar posteriormente la tabla y le voy a poner un class
+
+31
+00:01:54,870 --> 00:01:56,400
+que se va a llamar container.
+
+32
+00:01:57,330 --> 00:02:02,280
+Ahora sí, dentro de este div voy a pegar el codigo que había copiado de la página de Bootstrap.
+
+33
+00:02:04,570 --> 00:02:08,380
+Esto lo hemos copiado para que se organice mejor el código.
+
+34
+00:02:08,380 --> 00:02:13,000
+Vamos a seleccionar todo el código controlado y vamos a ir a EDIT.
+
+35
+00:02:14,260 --> 00:02:16,300
+La emes y auto intent.
+
+36
+00:02:17,410 --> 00:02:19,240
+Para que se organice mejor el código.
+
+37
+00:02:20,220 --> 00:02:22,210
+Bien, entonces aquí tengo el container.
+
+38
+00:02:22,230 --> 00:02:23,340
+Aquí tengo la tabla.
+
+39
+00:02:24,440 --> 00:02:26,360
+Que he pegado, lo estoy minimizando.
+
+40
+00:02:26,360 --> 00:02:28,880
+La puedo minimizar o maximizar dependiendo de lo que necesite.
+
+41
+00:02:30,480 --> 00:02:33,210
+Y dentro de este container antes de la tabla.
+
+42
+00:02:34,280 --> 00:02:40,130
+Voy a crear un texto que me represente la funcionalidad, así que voy a poner acá h dos.
+
+43
+00:02:41,850 --> 00:02:43,320
+Lista de usuarios.
+
+44
+00:02:45,700 --> 00:02:46,630
+Éramos el H2.
+
+45
+00:02:48,290 --> 00:02:53,780
+Pero como voy a trabajar con el framework de Bootstrap voy a colocarle unos estilos a este título,
+
+46
+00:02:54,320 --> 00:02:57,450
+por eso llamo al text center.
+
+47
+00:02:57,470 --> 00:03:03,050
+El texto va a ser centrado y va a tener un tamaño MT en cinco tipos fuente.
+
+48
+00:03:04,190 --> 00:03:04,640
+Listo.
+
+49
+00:03:06,620 --> 00:03:10,940
+Vamos a borrar los cambios del safe hall y vamos a revisar mi página.
+
+50
+00:03:12,020 --> 00:03:14,030
+Estoy en el local Oz 8000.
+
+51
+00:03:14,390 --> 00:03:20,930
+Vamos a darle click al botón de lista de usuarios y ya me llevó hacia el componente de la app de usuario
+
+52
+00:03:21,050 --> 00:03:23,000
+que me muestra la tabla que acabo de incorporar.
+
+53
+00:03:23,210 --> 00:03:25,970
+Como puedes ver, se ve terriblemente feo.
+
+54
+00:03:26,690 --> 00:03:27,860
+Qué necesito ahora?
+
+55
+00:03:27,890 --> 00:03:28,830
+Cuál es el problema?
+
+56
+00:03:28,940 --> 00:03:32,090
+Lo que pasa es que no está leyendo los estilos de Bootstrap.
+
+57
+00:03:32,510 --> 00:03:37,220
+Tengo que agregar la referencia de Bootstrap dentro de este componente.
+
+58
+00:03:37,220 --> 00:03:38,400
+Dentro de esta página.
+
+59
+00:03:38,420 --> 00:03:38,960
+Lista.
+
+60
+00:03:38,960 --> 00:03:39,410
+Usuario.
+
+61
+00:03:39,410 --> 00:03:39,860
+Lista.
+
+62
+00:03:40,950 --> 00:03:44,940
+Hemos vuelto a la carpeta templates a que aparece el usuario Slides.
+
+63
+00:03:46,570 --> 00:03:51,940
+Y para poder incorporar esa referencia vamos a la parte superior primero antes del Dog Type.
+
+64
+00:03:53,070 --> 00:03:58,080
+Y aquí vamos a hacer una importación de LOD static.
+
+65
+00:03:59,990 --> 00:04:00,770
+Lo tengo listo.
+
+66
+00:04:02,110 --> 00:04:03,910
+Ahora vamos a la parte del jet.
+
+67
+00:04:04,540 --> 00:04:05,200
+Este es el jet.
+
+68
+00:04:07,040 --> 00:04:12,110
+Y aquí, después del tiro dentro del jet, vamos a agregar un link.
+
+69
+00:04:16,000 --> 00:04:17,970
+Que se agregó el link starship.
+
+70
+00:04:18,490 --> 00:04:20,920
+El href tiene que apuntar a quién?
+
+71
+00:04:21,550 --> 00:04:25,690
+Al archivo bootstrap que está dentro de mi proyecto, que ya te expliqué anteriormente.
+
+72
+00:04:25,690 --> 00:04:27,160
+Clases pasadas con incorporarlo.
+
+73
+00:04:28,030 --> 00:04:30,640
+Voy a borrar el contenido de la href y entre llaves.
+
+74
+00:04:31,940 --> 00:04:36,800
+Y porcentajes le vamos a colocar la referencia que apunte a static.
+
+75
+00:04:37,610 --> 00:04:45,440
+Si eses es la h bootstrap, un punto CSS.
+
+76
+00:04:47,340 --> 00:04:48,380
+Lo tenemos listo.
+
+77
+00:04:48,390 --> 00:04:49,660
+Voy a guardar todos los cambios.
+
+78
+00:04:49,680 --> 00:04:51,000
+Menú Field Safe all.
+
+79
+00:04:52,630 --> 00:04:54,850
+Y ahora vamos a ejecutar la página nuevamente.
+
+80
+00:04:55,690 --> 00:05:00,010
+Hemos dado un F5 de la página y mira, ya se ve totalmente diferente.
+
+81
+00:05:00,020 --> 00:05:01,990
+Viste el cambio abismal?
+
+82
+00:05:02,260 --> 00:05:02,980
+Claro que sí.
+
+83
+00:05:03,880 --> 00:05:06,910
+Volvamos hacia el componente que quiero agregar.
+
+84
+00:05:06,910 --> 00:05:07,750
+Unos campos.
+
+85
+00:05:08,950 --> 00:05:10,590
+Vamos a la tabla.
+
+86
+00:05:10,600 --> 00:05:11,470
+Voy a desplegarla.
+
+87
+00:05:12,460 --> 00:05:13,690
+Tiene estos títulos.
+
+88
+00:05:14,110 --> 00:05:19,210
+Estos son los títulos de la tabla que está dentro del target y tr.
+
+89
+00:05:20,170 --> 00:05:23,500
+Este es el TH que representa el primer título.
+
+90
+00:05:23,950 --> 00:05:25,330
+Voy a colocarle que sea.
+
+91
+00:05:27,410 --> 00:05:27,920
+Heidi.
+
+92
+00:05:29,370 --> 00:05:30,750
+El segundo que diga.
+
+93
+00:05:32,250 --> 00:05:32,940
+Usuario.
+
+94
+00:05:34,570 --> 00:05:38,110
+El tercero le vamos a poner profesión.
+
+95
+00:05:40,540 --> 00:05:43,060
+El siguiente le ponemos.
+
+96
+00:05:45,040 --> 00:05:48,200
+En este caso género si es hombre o mujer.
+
+97
+00:05:51,620 --> 00:05:53,150
+Y le vamos a agregar uno más.
+
+98
+00:05:54,860 --> 00:05:56,690
+Que va a ser ciudad.
+
+99
+00:06:01,050 --> 00:06:03,390
+Esas son las cinco columnas que voy a definir.
+
+100
+00:06:03,630 --> 00:06:05,430
+Ahora vamos al siguiente alienado.
+
+101
+00:06:05,460 --> 00:06:07,380
+Estos datos se supone que son estáticos.
+
+102
+00:06:08,740 --> 00:06:13,870
+Lo que es dinámico es el contenido de la tabla que va dentro de la sección del The Body.
+
+103
+00:06:16,310 --> 00:06:21,740
+Porque entonces dentro de aquel forillo se han agregado por defecto dos columnas.
+
+104
+00:06:23,360 --> 00:06:24,920
+El uno y el dos.
+
+105
+00:06:25,760 --> 00:06:27,650
+Vamos a colocarle aquí el primero.
+
+106
+00:06:29,770 --> 00:06:31,710
+Le ponemos uno.
+
+107
+00:06:31,720 --> 00:06:33,040
+Está bien, no hay problema.
+
+108
+00:06:33,520 --> 00:06:36,430
+La segunda columna que se refiere al nombre del usuario.
+
+109
+00:06:37,150 --> 00:06:39,790
+Entonces, aquí le vamos a poner aquí tres.
+
+110
+00:06:42,180 --> 00:06:45,060
+La tercera columna que era la profesión, la vamos a poner acá.
+
+111
+00:06:45,660 --> 00:06:47,130
+Ingeniero de Sistemas.
+
+112
+00:06:49,770 --> 00:06:50,340
+Género.
+
+113
+00:06:51,000 --> 00:06:53,070
+Lo que sigue es género masculino.
+
+114
+00:06:56,660 --> 00:06:58,430
+Y la que sigue es ciudad.
+
+115
+00:07:00,040 --> 00:07:02,260
+Le vamos a poner Madrid.
+
+116
+00:07:04,270 --> 00:07:04,900
+Ten listo.
+
+117
+00:07:05,500 --> 00:07:07,810
+Voy a copiar esta estructura.
+
+118
+00:07:10,440 --> 00:07:12,930
+Y este TR que continuaba lo voy a borrar.
+
+119
+00:07:14,560 --> 00:07:21,040
+Este el siguiente también lo voy a ahorrar, solamente tengo un solo tr por ahora en el the body y pego
+
+120
+00:07:21,490 --> 00:07:25,030
+el anterior de Max, ingrese el raw siguiente lo voy a poner todos.
+
+121
+00:07:26,860 --> 00:07:27,090
+Que quiero.
+
+122
+00:07:27,090 --> 00:07:29,200
+Voy a poner John Ortiz.
+
+123
+00:07:30,820 --> 00:07:32,680
+Ingeniero de sistemas masculino.
+
+124
+00:07:34,350 --> 00:07:36,090
+Él vive en Buenos Aires.
+
+125
+00:07:39,600 --> 00:07:40,380
+Lo tenemos.
+
+126
+00:07:41,010 --> 00:07:43,620
+Voy a borrar los cambios en Newfield Safe Hall.
+
+127
+00:07:45,090 --> 00:07:46,080
+Íbamos a la página.
+
+128
+00:07:47,070 --> 00:07:53,460
+Hemos refrescado la página y como te darás cuenta, es muy sencillo editar los datos, tanto los títulos
+
+129
+00:07:53,460 --> 00:07:56,100
+como los contenidos que va a tener esta tabla.
+
+130
+00:07:56,610 --> 00:08:02,610
+La idea, evidentemente, es que estos datos no sean marco de datos, sino que vengan desde una base
+
+131
+00:08:02,610 --> 00:08:05,790
+de datos y lo consuma dinámicamente el Yanko.
+
+132
+00:08:06,330 --> 00:08:12,390
+En los siguientes capítulos vamos a implementar esta base de datos en PostgreSQL y su posterior interface
+
+133
+00:08:12,390 --> 00:08:15,150
+de comunicación con Jango y Bootstrap.

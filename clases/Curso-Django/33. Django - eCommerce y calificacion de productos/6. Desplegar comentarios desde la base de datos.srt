@@ -1,0 +1,755 @@
+1
+00:00:00,420 --> 00:00:06,570
+En este capítulo vamos a trabajar e imprimir los reviews que tiene este producto.
+
+2
+00:00:08,290 --> 00:00:13,960
+Para esto vamos a ubicarnos dentro de la carpeta store y ahora al archivo Buscar y.
+
+3
+00:00:15,050 --> 00:00:21,190
+Ahora aquí aparece el LSP dentro de la función de Product detail.
+
+4
+00:00:23,370 --> 00:00:23,760
+Dentro.
+
+5
+00:00:23,760 --> 00:00:29,700
+Después de este triste orden, voy a hacer un query para obtener la lista de reviews o comentarios de
+
+6
+00:00:29,700 --> 00:00:31,920
+este producto y de un producto en particular.
+
+7
+00:00:33,000 --> 00:00:34,500
+Entonces llamo al review.
+
+8
+00:00:36,180 --> 00:00:40,800
+Rating Objects Filter.
+
+9
+00:00:41,890 --> 00:00:44,590
+Si hacemos la condición por el producto de.
+
+10
+00:00:46,740 --> 00:00:52,130
+Tengo el producto, punto y coma en el status true.
+
+11
+00:00:52,470 --> 00:00:58,410
+Esto me da a volver una colección de comentarios que respecto de este producto, de un producto y de
+
+12
+00:00:58,410 --> 00:01:00,060
+que lo estoy pasando como parámetro.
+
+13
+00:01:01,790 --> 00:01:04,910
+Y esta colección se la voy a enviar al template del producto.
+
+14
+00:01:06,050 --> 00:01:07,370
+Así que le pongo reviews.
+
+15
+00:01:08,000 --> 00:01:08,780
+Dos puntos.
+
+16
+00:01:09,530 --> 00:01:10,130
+Reviews.
+
+17
+00:01:12,300 --> 00:01:19,590
+Ahora si volvemos hacia la carpeta templates, la carpeta store y al producto item el punto A HTML,
+
+18
+00:01:20,130 --> 00:01:21,240
+vamos a la parte inferior.
+
+19
+00:01:23,410 --> 00:01:28,480
+Ese segmento de article es el que representa el comentario en sí que quiero imprimir.
+
+20
+00:01:29,320 --> 00:01:33,830
+Si vemos la página, esto es un container de tipo article.
+
+21
+00:01:34,750 --> 00:01:36,040
+Pero yo podría tener 100.
+
+22
+00:01:36,050 --> 00:01:36,850
+50.
+
+23
+00:01:37,090 --> 00:01:42,670
+Realmente van a depender del bucle de los elementos de la colección que se imprima por cada iteración
+
+24
+00:01:42,670 --> 00:01:43,210
+del bucle.
+
+25
+00:01:44,170 --> 00:01:47,020
+Entonces vamos a la parte superior antes del artículo.
+
+26
+00:01:47,470 --> 00:01:54,340
+Y aquí escribimos entre llaves y signos de porcentajes for review.
+
+27
+00:01:56,260 --> 00:01:57,330
+En reviews.
+
+28
+00:01:58,750 --> 00:01:59,120
+Listo.
+
+29
+00:01:59,530 --> 00:02:02,370
+Y terminar después de que terminó también el artículo.
+
+30
+00:02:03,730 --> 00:02:06,700
+Chávez si nos da porcentajes y le ponemos en Fort.
+
+31
+00:02:07,780 --> 00:02:08,230
+Listo.
+
+32
+00:02:09,100 --> 00:02:11,800
+Ahora comencemos a reemplazar los valores.
+
+33
+00:02:12,070 --> 00:02:14,440
+Por ahora no voy a ponerle imágenes.
+
+34
+00:02:14,710 --> 00:02:16,030
+El avatar del usuario.
+
+35
+00:02:16,420 --> 00:02:17,680
+Estremecerse.
+
+36
+00:02:18,070 --> 00:02:19,420
+Voy a eliminarlo por ahora.
+
+37
+00:02:20,640 --> 00:02:22,200
+Iba a quedar dif class.
+
+38
+00:02:24,550 --> 00:02:24,730
+Bien.
+
+39
+00:02:24,790 --> 00:02:27,130
+Vamos a indicarle aquí, por ejemplo, la fecha del review.
+
+40
+00:02:28,270 --> 00:02:29,590
+Esto está rodeado.
+
+41
+00:02:29,620 --> 00:02:30,430
+Lo voy a quitar.
+
+42
+00:02:31,490 --> 00:02:39,350
+Y entre todos lo Chávez le voy a poner review punto update it out esto.
+
+43
+00:02:40,690 --> 00:02:48,640
+En esta sección del nombre del usuario le voy a poner entre Lovely Chavez Review Punto User, punto
+
+44
+00:02:48,750 --> 00:02:49,530
+full name.
+
+45
+00:02:51,680 --> 00:02:56,870
+Esta es una función que voy a tener que crear dentro del de la entidad account.
+
+46
+00:02:57,470 --> 00:02:58,610
+Dentro de un momento lo voy a hacer.
+
+47
+00:03:00,340 --> 00:03:07,990
+Luego vamos a crear el review rating, que es el número de estrellas que le ha puesto a este producto.
+
+48
+00:03:09,160 --> 00:03:11,140
+Lo voy a poner acá debajo del H6.
+
+49
+00:03:13,830 --> 00:03:15,320
+Aquí colocamos el review.
+
+50
+00:03:15,440 --> 00:03:16,380
+Punto, rating.
+
+51
+00:03:17,250 --> 00:03:17,670
+Listo.
+
+52
+00:03:20,450 --> 00:03:24,230
+También va a parecer lo que es el review subject.
+
+53
+00:03:24,230 --> 00:03:25,760
+Esto va a estar dentro del MP3.
+
+54
+00:03:26,570 --> 00:03:28,070
+Voy a poner un especial mp3.
+
+55
+00:03:29,620 --> 00:03:32,830
+Lo voy a poner en h6 y dentro de este h6.
+
+56
+00:03:34,520 --> 00:03:40,460
+Voy a colocar en Double Chavez el review junto al título de review.
+
+57
+00:03:41,350 --> 00:03:41,710
+Esto.
+
+58
+00:03:42,680 --> 00:03:48,380
+Y este párrafo que aparece aquí copiado lo voy a borrar y entre doble Chavez lo voy a poner review.
+
+59
+00:03:48,930 --> 00:03:49,340
+Review.
+
+60
+00:03:52,570 --> 00:03:53,500
+Y eso sería todo.
+
+61
+00:03:53,500 --> 00:03:54,250
+Por el momento.
+
+62
+00:03:54,250 --> 00:03:59,680
+Voy a guardar los cambios y vamos a imprimir Menú File Staff a un momento, un momento.
+
+63
+00:03:59,950 --> 00:04:00,880
+A que me faltó algo?
+
+64
+00:04:00,880 --> 00:04:02,590
+Te dije de la función full name.
+
+65
+00:04:03,310 --> 00:04:05,620
+Entonces vamos a crear esta función full time.
+
+66
+00:04:06,650 --> 00:04:09,770
+Vamos a ubicarnos dentro de account.
+
+67
+00:04:11,060 --> 00:04:12,830
+El archivo models y.
+
+68
+00:04:14,160 --> 00:04:14,290
+Ya.
+
+69
+00:04:14,310 --> 00:04:16,470
+Ahora vamos a buscar el Class Account.
+
+70
+00:04:17,430 --> 00:04:18,700
+Aquí aparece Class Account.
+
+71
+00:04:18,720 --> 00:04:21,300
+Aquí aparece también el Object Manager.
+
+72
+00:04:22,110 --> 00:04:26,040
+Voy a darle un enter aquí y crea una función que se va a llamar Full name.
+
+73
+00:04:29,140 --> 00:04:31,900
+Que tiene como parámetro el set que representa la clase en sí.
+
+74
+00:04:32,530 --> 00:04:35,920
+Le digo que lo que va a retornar es una concatenación de valores.
+
+75
+00:04:38,910 --> 00:04:41,430
+Del Self que representa el account.
+
+76
+00:04:41,430 --> 00:04:48,510
+Punto First name concatenado con el self punto last name.
+
+77
+00:04:50,910 --> 00:04:52,560
+No te olvides de cerrar el apóstrofe.
+
+78
+00:04:52,840 --> 00:04:54,030
+Aquí lo estamos cerrando.
+
+79
+00:04:54,900 --> 00:04:56,490
+Y ahora si vamos a borrar los cambios.
+
+80
+00:04:56,530 --> 00:04:59,820
+Menú false all y vamos a la página a probar.
+
+81
+00:05:00,480 --> 00:05:02,670
+Estamos en la página del detalle del producto.
+
+82
+00:05:04,250 --> 00:05:05,960
+Pero ahora está apareciendo este cuidado.
+
+83
+00:05:05,990 --> 00:05:07,280
+Voy a refrescar la página.
+
+84
+00:05:09,090 --> 00:05:15,780
+Y mira, ya me apareció el comentario que dejé hace un momento así tres 5.0.
+
+85
+00:05:16,680 --> 00:05:17,590
+Y que me dice?
+
+86
+00:05:17,610 --> 00:05:19,490
+Es un excelente producto.
+
+87
+00:05:19,500 --> 00:05:22,710
+Estoy muy contento con llevar esta camisa puesta.
+
+88
+00:05:23,190 --> 00:05:23,910
+Perfecto.
+
+89
+00:05:25,290 --> 00:05:29,760
+Es verdad que a mí que aquí me apareció el rating de cinco estrellas, pero me gustaría que aparecieran
+
+90
+00:05:29,760 --> 00:05:30,780
+en si las estrellas.
+
+91
+00:05:31,080 --> 00:05:33,120
+Vamos a trabajar en ese aspecto.
+
+92
+00:05:33,840 --> 00:05:36,660
+Vamos a ir a Templates Store y al productor Details.
+
+93
+00:05:37,320 --> 00:05:46,680
+Voy a maximizar mi archivo y ahora me voy a ubicar justo debajo del full user full name que apareció.
+
+94
+00:05:47,840 --> 00:05:49,070
+Que aparece el rating.
+
+95
+00:05:50,930 --> 00:05:56,630
+Justamente voy a remover por el rating y voy a crear aquí.
+
+96
+00:05:58,210 --> 00:05:59,010
+Un nuevo diez.
+
+97
+00:06:00,590 --> 00:06:01,450
+Qué va a tener un class?
+
+98
+00:06:01,460 --> 00:06:05,030
+Este container es el que va a tener los las estrellas.
+
+99
+00:06:05,450 --> 00:06:08,570
+Vamos a colocarle aquí un Racing Star por ahora.
+
+100
+00:06:10,640 --> 00:06:14,420
+Estar o tengo el resto en estar y ahora voy a querer un spam.
+
+101
+00:06:15,720 --> 00:06:22,470
+Y dentro de este spam voy a ir generando cada una de las estrellas y condicionando si se trata de una
+
+102
+00:06:22,470 --> 00:06:25,380
+estrella completa o una o una media estrella.
+
+103
+00:06:26,590 --> 00:06:34,750
+Entonces aquí le vamos a poner un y porque esto es un icono, es un icono del photoshop.
+
+104
+00:06:35,920 --> 00:06:40,210
+Entonces aquí todo va a depender de que yo condicione el glass que va a pintarse.
+
+105
+00:06:41,560 --> 00:06:44,200
+El Glass para el estrella es fea.
+
+106
+00:06:45,420 --> 00:06:46,020
+Start.
+
+107
+00:06:47,770 --> 00:06:52,180
+Pero lo que pasa es que yo no sé si se trata de una estrella o una media estrella.
+
+108
+00:06:52,540 --> 00:06:56,800
+Entonces aquí es donde tengo que colocar yo la condición por el código del servidor.
+
+109
+00:06:57,160 --> 00:07:02,380
+Por ese motivo voy a ponerle una llave de porcentaje y le hago una condición.
+
+110
+00:07:03,010 --> 00:07:08,290
+Si el punto es igual a 0.5.
+
+111
+00:07:10,610 --> 00:07:12,440
+Entonces va a ocurrir lo siguiente.
+
+112
+00:07:13,280 --> 00:07:14,360
+Es una media estrella.
+
+113
+00:07:14,750 --> 00:07:17,270
+Me lo voy a poner un half o.
+
+114
+00:07:19,040 --> 00:07:19,580
+Rallado.
+
+115
+00:07:19,940 --> 00:07:23,090
+Ese es el estilo que me está definiendo el oso.
+
+116
+00:07:25,490 --> 00:07:28,940
+Y en caso contrario si le ponemos un Chávez.
+
+117
+00:07:30,100 --> 00:07:31,450
+Sino porcentajes.
+
+118
+00:07:31,450 --> 00:07:32,020
+Elif.
+
+119
+00:07:36,180 --> 00:07:39,630
+En caso contrario, Red Review rating es menos que uno.
+
+120
+00:07:43,010 --> 00:07:43,670
+Que imprima.
+
+121
+00:07:43,790 --> 00:07:47,270
+Vamos a ver aquí el uso que se concatena.
+
+122
+00:07:47,750 --> 00:07:56,570
+Se va a concatenar si cumple la condición o va a suceder esta opción o va a suceder esta opción que
+
+123
+00:07:56,570 --> 00:08:00,290
+se concatena al clase original f a f a start.
+
+124
+00:08:03,320 --> 00:08:06,170
+Y finalmente se hace un área hidden.
+
+125
+00:08:08,070 --> 00:08:08,520
+Entró.
+
+126
+00:08:10,640 --> 00:08:11,030
+Listo.
+
+127
+00:08:12,190 --> 00:08:14,800
+Esa lógica se va a repetir por todos los puntajes.
+
+128
+00:08:14,800 --> 00:08:18,640
+Aquí comencé con 0,5, pero el que le sigue.
+
+129
+00:08:20,140 --> 00:08:22,360
+El que le sigue es él.
+
+130
+00:08:23,140 --> 00:08:24,250
+1.5.
+
+131
+00:08:25,030 --> 00:08:26,680
+Aquí le ponemos 1.5.
+
+132
+00:08:29,290 --> 00:08:30,220
+Y menor que dos.
+
+133
+00:08:30,850 --> 00:08:32,500
+Mayor que es menor que vos.
+
+134
+00:08:32,920 --> 00:08:33,340
+Listo.
+
+135
+00:08:34,030 --> 00:08:34,930
+Continuemos.
+
+136
+00:08:36,750 --> 00:08:37,590
+El que le sigue.
+
+137
+00:08:39,080 --> 00:08:40,490
+Es el 2.5.
+
+138
+00:08:43,900 --> 00:08:45,430
+Y no tres.
+
+139
+00:08:49,230 --> 00:08:50,610
+Ah, mira que me faltó algo.
+
+140
+00:08:52,050 --> 00:08:54,540
+Luego de eso tengo que cerrar el edif.
+
+141
+00:08:54,540 --> 00:08:56,010
+Sino que aquí va a haber problemas.
+
+142
+00:08:57,580 --> 00:08:58,480
+Cerramos el if.
+
+143
+00:09:00,350 --> 00:09:00,930
+En IF.
+
+144
+00:09:01,310 --> 00:09:01,660
+Listo.
+
+145
+00:09:03,510 --> 00:09:04,310
+Sí, sí, sí, sí.
+
+146
+00:09:04,310 --> 00:09:05,300
+No va a haber problemas.
+
+147
+00:09:05,360 --> 00:09:06,170
+Copiamos.
+
+148
+00:09:07,510 --> 00:09:10,810
+Luego del ESO cierra con el if.
+
+149
+00:09:12,770 --> 00:09:13,190
+Listo.
+
+150
+00:09:14,610 --> 00:09:19,140
+Vamos a copiar la línea, pegamos y ahora vamos por el 3.5.
+
+151
+00:09:24,430 --> 00:09:25,390
+Y menor que.
+
+152
+00:09:26,850 --> 00:09:27,330
+Cuatro.
+
+153
+00:09:28,170 --> 00:09:29,340
+Copiamos nuevamente.
+
+154
+00:09:30,030 --> 00:09:31,020
+Checa pegamos.
+
+155
+00:09:31,770 --> 00:09:34,050
+En este caso sería 4,5.
+
+156
+00:09:36,190 --> 00:09:37,450
+Y este que llegaría.
+
+157
+00:09:39,120 --> 00:09:39,630
+A cinco.
+
+158
+00:09:40,350 --> 00:09:40,740
+Listo.
+
+159
+00:09:42,360 --> 00:09:43,260
+Ya lo tenemos.
+
+160
+00:09:43,680 --> 00:09:45,900
+Vamos a verificar que esto es correcto.
+
+161
+00:09:46,770 --> 00:09:54,810
+Menu File Save all me a pintar una estrella dependiendo del rating, si es 0.5 o está en el intervalo
+
+162
+00:09:54,810 --> 00:09:55,260
+de uno.
+
+163
+00:09:56,340 --> 00:09:59,340
+Estamos en la página, voy a refrescar y mira.
+
+164
+00:09:59,340 --> 00:10:04,200
+Como puedes ver, ya me aparece aquí el puntaje en estrellas.
+
+165
+00:10:04,200 --> 00:10:05,370
+Me aparecen cinco estrellas.
+
+166
+00:10:07,120 --> 00:10:07,330
+Aquí.
+
+167
+00:10:07,340 --> 00:10:08,410
+Me puede decir, profesor?
+
+168
+00:10:08,410 --> 00:10:08,620
+Pero.
+
+169
+00:10:08,620 --> 00:10:10,810
+Por qué no le pone mejor en color amarillo?
+
+170
+00:10:11,860 --> 00:10:13,030
+Bueno, podemos hacerlo.
+
+171
+00:10:13,210 --> 00:10:17,110
+Vamos a trabajarlo dentro de la del archivo de Custom Styles.
+
+172
+00:10:17,800 --> 00:10:19,660
+Vamos entonces al explorador.
+
+173
+00:10:20,580 --> 00:10:27,420
+Entonces ahora nos ubicamos dentro de la carpeta y commerce y que aparece static dentro de static css
+
+174
+00:10:27,720 --> 00:10:29,170
+ya que aparece el custom paint.
+
+175
+00:10:29,170 --> 00:10:29,820
+Así es, es.
+
+176
+00:10:31,030 --> 00:10:35,680
+Sin En la parte final vamos a agregar este right im start.
+
+177
+00:10:38,350 --> 00:10:44,440
+Para su elemento de ICOM de ICOM le voy a indicar que el color sea.
+
+178
+00:10:45,890 --> 00:10:48,800
+Este amarillo ff b5.
+
+179
+00:10:50,020 --> 00:10:50,770
+Cero tres.
+
+180
+00:10:53,240 --> 00:10:59,420
+Y que lo haga importante y admiración importante y punto y coma.
+
+181
+00:10:59,420 --> 00:11:05,510
+Al final vamos a guardar todos los cambios menús field safe all y ejecutamos la página.
+
+182
+00:11:06,560 --> 00:11:08,980
+Vamos a abrir la consola del navegador ya.
+
+183
+00:11:08,990 --> 00:11:16,280
+Ahora dale click derecho a este botón de refrescar en el browser y la opción en caché a Reload.
+
+184
+00:11:17,150 --> 00:11:17,600
+Listo?
+
+185
+00:11:18,080 --> 00:11:18,560
+Ahora sí.
+
+186
+00:11:18,560 --> 00:11:19,340
+Revisemos.
+
+187
+00:11:19,730 --> 00:11:25,250
+Y como puedes ver, ya me aparecen aquí las cinco estrellas en color amarillo.
+
+188
+00:11:25,520 --> 00:11:26,150
+Perfecto.
+
+189
+00:11:26,570 --> 00:11:32,150
+Entonces ya estamos desplegando todos los comentarios que pertenecen a este producto.

@@ -1,0 +1,459 @@
+1
+00:00:00,450 --> 00:00:04,800
+En este capítulo vamos a continuar trabajando en el proceso del carrito de compras.
+
+2
+00:00:05,040 --> 00:00:10,200
+Cuando yo haga el pago del carrito de compras, adicionalmente, tengo que también enviar un email al
+
+3
+00:00:10,200 --> 00:00:14,850
+comprador indicándole que ya hemos recibido su pedido y se está procesando.
+
+4
+00:00:15,720 --> 00:00:17,400
+En este capítulo haremos esto.
+
+5
+00:00:17,400 --> 00:00:20,220
+Enviaremos un correo electrónico al comprador.
+
+6
+00:00:20,700 --> 00:00:26,670
+Primero vayamos a la carpeta orders, el archivo búsqueda y ubiquémonos en la parte superior.
+
+7
+00:00:27,700 --> 00:00:29,630
+Hay que aparecer Front Model Products.
+
+8
+00:00:29,650 --> 00:00:33,010
+Voy a importar ahora las librerías que necesito para enviar un correo electrónico.
+
+9
+00:00:34,200 --> 00:00:38,270
+Por eso voy a hacer un front tango punto por punto.
+
+10
+00:00:38,520 --> 00:00:39,030
+Mail.
+
+11
+00:00:41,140 --> 00:00:41,850
+Import.
+
+12
+00:00:42,910 --> 00:00:43,200
+Mail.
+
+13
+00:00:43,210 --> 00:00:43,660
+Message.
+
+14
+00:00:44,900 --> 00:00:46,940
+También voy a importar el mango.
+
+15
+00:00:46,940 --> 00:00:49,490
+Punto templado, Laurel.
+
+16
+00:00:50,820 --> 00:00:54,930
+Import render to string.
+
+17
+00:00:56,410 --> 00:00:58,540
+Lo tenemos ahora vamos en la parte inferior.
+
+18
+00:00:59,140 --> 00:01:00,670
+Esta es la función payment.
+
+19
+00:01:02,390 --> 00:01:02,990
+Lo tenemos.
+
+20
+00:01:02,990 --> 00:01:03,400
+Listo.
+
+21
+00:01:03,410 --> 00:01:04,340
+Aquí está el bucle.
+
+22
+00:01:05,890 --> 00:01:07,260
+Voy a minimizarlo para que lo veas.
+
+23
+00:01:07,310 --> 00:01:08,690
+Luego del bucle, viene el return.
+
+24
+00:01:09,590 --> 00:01:10,670
+Voy a minimizar el bucle.
+
+25
+00:01:11,720 --> 00:01:13,130
+Aquí tengo un pequeño detalle.
+
+26
+00:01:13,210 --> 00:01:18,260
+Entre el bucle, yo había puesto esta línea de cart items objects filter.
+
+27
+00:01:18,410 --> 00:01:20,180
+Pero esto debe estar fuera del bucle.
+
+28
+00:01:20,510 --> 00:01:26,270
+Vamos a ponerlo un tab fuera para que no se ejecute dentro de esta sentencia.
+
+29
+00:01:26,270 --> 00:01:26,690
+For.
+
+30
+00:01:27,470 --> 00:01:27,920
+Listo.
+
+31
+00:01:28,730 --> 00:01:32,450
+Voy a minimizar el bucle y ya puedes ver este car y tenga filter.
+
+32
+00:01:33,230 --> 00:01:33,770
+Está fuera.
+
+33
+00:01:34,430 --> 00:01:38,840
+A continuación, vamos a trabajar en enviar este correo electrónico.
+
+34
+00:01:39,050 --> 00:01:43,940
+Lo primero, como ya sabes, es definir un título del mensaje.
+
+35
+00:01:44,450 --> 00:01:45,050
+Voy a poner aquí.
+
+36
+00:01:45,050 --> 00:01:45,770
+Gracias.
+
+37
+00:01:47,450 --> 00:01:48,410
+Por tu compra.
+
+38
+00:01:49,160 --> 00:01:51,650
+El título del email es este del subject.
+
+39
+00:01:52,970 --> 00:01:54,980
+Siguiente el bori del email.
+
+40
+00:01:55,010 --> 00:01:58,700
+El cuerpo del email se llama Llamo al render tu string.
+
+41
+00:02:00,770 --> 00:02:05,990
+Y lo voy a utilizar para ese caso, un template html que vamos a crear en unos segundos, unos minutos.
+
+42
+00:02:06,290 --> 00:02:13,130
+Hacemos aquí que este templo debe ser ubicado en la carpeta orders y el nombre va a ser Order Receive.
+
+43
+00:02:18,520 --> 00:02:20,770
+Gmail punto html.
+
+44
+00:02:23,200 --> 00:02:26,140
+Coma y le vamos a pasar estos parámetros al template.
+
+45
+00:02:26,860 --> 00:02:31,270
+Primero el user que va a hacer request user.
+
+46
+00:02:33,490 --> 00:02:39,490
+También le voy a pasar el orden del objeto order, que ya lo tengo aquí, el orden del orden instanciado
+
+47
+00:02:39,490 --> 00:02:40,300
+en esta función.
+
+48
+00:02:41,770 --> 00:02:42,550
+Eso sería todo.
+
+49
+00:02:42,970 --> 00:02:43,900
+Esos dos objetos.
+
+50
+00:02:44,830 --> 00:02:48,970
+Y luego vamos a agregar para quien va dirigido ese correo.
+
+51
+00:02:50,110 --> 00:02:51,640
+Para el cliente debe ser rico.
+
+52
+00:02:51,640 --> 00:02:53,230
+Es user y mail.
+
+53
+00:02:55,300 --> 00:03:00,310
+También voy a instanciar el objeto que se encarga de ejecutar el proceso de envío de email.
+
+54
+00:03:00,310 --> 00:03:00,600
+Así que.
+
+55
+00:03:00,920 --> 00:03:02,530
+Así que le escribimos acá.
+
+56
+00:03:02,530 --> 00:03:05,380
+Ismael email msg.
+
+57
+00:03:07,360 --> 00:03:09,700
+Y le pasamos el título del email.
+
+58
+00:03:10,550 --> 00:03:12,670
+También vamos a pasarle el body.
+
+59
+00:03:13,570 --> 00:03:14,710
+Y también a quién va a ir.
+
+60
+00:03:14,710 --> 00:03:15,400
+Recibido.
+
+61
+00:03:16,970 --> 00:03:17,690
+Tu email.
+
+62
+00:03:20,170 --> 00:03:27,040
+Luego ejecutamos este proceso, hacemos un set, email, punto send y aquí ya se envía el correo electrónico.
+
+63
+00:03:27,040 --> 00:03:32,740
+Entonces este es el bloque de código para poder enviar un correo electrónico al comprador, agradeciendo
+
+64
+00:03:32,740 --> 00:03:34,870
+por su compra y dándole los detalles de la orden.
+
+65
+00:03:35,830 --> 00:03:39,940
+Ahora voy a crear este template con el contenido del body del email.
+
+66
+00:03:40,390 --> 00:03:41,400
+Voy a copiarlo.
+
+67
+00:03:41,440 --> 00:03:42,430
+Copiamos el nombre.
+
+68
+00:03:43,500 --> 00:03:50,130
+Y nos ubicamos en la carpeta templates que aparece orders y dentro de orden Clear Echo Newfield.
+
+69
+00:03:51,540 --> 00:03:55,240
+Y aquí le damos el nombre de Ismael punto html.
+
+70
+00:03:56,050 --> 00:03:56,980
+Le damos enter.
+
+71
+00:03:58,250 --> 00:03:59,810
+Vamos a agregar.
+
+72
+00:04:01,660 --> 00:04:03,520
+Sabemos el auto escape.
+
+73
+00:04:05,670 --> 00:04:08,520
+Chávez porcentaje si lo escribimos auto escape.
+
+74
+00:04:10,130 --> 00:04:11,510
+Cerramos el auto escape.
+
+75
+00:04:14,300 --> 00:04:15,170
+En auto.
+
+76
+00:04:18,340 --> 00:04:18,910
+Escape.
+
+77
+00:04:22,920 --> 00:04:23,560
+Listo.
+
+78
+00:04:23,580 --> 00:04:24,360
+Lo tenemos.
+
+79
+00:04:24,390 --> 00:04:25,670
+Ahora voy a indicarle.
+
+80
+00:04:25,680 --> 00:04:26,130
+Hola.
+
+81
+00:04:28,240 --> 00:04:31,420
+Pongo You cero punto first name.
+
+82
+00:04:38,600 --> 00:04:40,460
+Hemos recibido tu orden.
+
+83
+00:04:43,860 --> 00:04:44,730
+Y aquí le pongo.
+
+84
+00:04:47,500 --> 00:04:48,400
+Orden.
+
+85
+00:04:49,330 --> 00:04:49,810
+Order.
+
+86
+00:04:49,820 --> 00:04:50,330
+Punto.
+
+87
+00:04:50,380 --> 00:04:51,310
+Order number.
+
+88
+00:04:56,700 --> 00:04:57,030
+Esto.
+
+89
+00:04:57,720 --> 00:05:02,850
+Aquí le ponemos un espaciado entre el auto escape y el signo de porcentaje.
+
+90
+00:05:02,850 --> 00:05:03,990
+Y en la parte superior.
+
+91
+00:05:03,990 --> 00:05:07,200
+En el auto escape me faltó agregarle el off.
+
+92
+00:05:07,680 --> 00:05:14,520
+Ahora, si vamos a guardar los cambios, menú Fail Safe all y vamos a la página, estamos en la página
+
+93
+00:05:14,520 --> 00:05:15,020
+principal.
+
+94
+00:05:15,030 --> 00:05:16,830
+No tengo productos en el carrito de compras.
+
+95
+00:05:17,100 --> 00:05:18,250
+Vamos a tienda.
+
+96
+00:05:18,270 --> 00:05:25,770
+Selecciono Camisa moderna, el color rojo, talla large, agregar al Shopping Cart.
+
+97
+00:05:26,160 --> 00:05:28,920
+Tengo ya mi carrito de compras como un producto.
+
+98
+00:05:29,370 --> 00:05:34,620
+Le damos clic al botón Pagar y aquí lleno los datos de la dirección de facturación.
+
+99
+00:05:35,220 --> 00:05:36,930
+Ya hemos llenado los datos.
+
+100
+00:05:36,960 --> 00:05:38,400
+Me aparece aquí el detalle.
+
+101
+00:05:38,760 --> 00:05:41,220
+Ahora sí vamos a darle clic, a ordenar los productos.
+
+102
+00:05:42,460 --> 00:05:48,160
+Si me aparece aquí el sumario de todo lo que estoy comprando y le damos clic al botón PayPal.
+
+103
+00:05:49,950 --> 00:05:53,850
+Me aparece también aquí, en la cantidad que voy a comprar en dólares 51 $.
+
+104
+00:05:54,150 --> 00:05:55,260
+Vamos a la parte final.
+
+105
+00:05:55,290 --> 00:05:56,460
+Me aparece aquí peinado.
+
+106
+00:05:56,970 --> 00:05:58,200
+Le damos clic a Peinado.
+
+107
+00:05:59,350 --> 00:06:00,670
+Y comenzó el proceso de compra.
+
+108
+00:06:02,020 --> 00:06:04,480
+No me apreció ningún error en la consola.
+
+109
+00:06:04,690 --> 00:06:06,520
+Significa que esto es correcto?
+
+110
+00:06:06,520 --> 00:06:09,310
+Vamos a revisar nuestra cuenta de correo electrónico.
+
+111
+00:06:10,120 --> 00:06:13,540
+Y aquí puedes ver que me llegó el correo electrónico con el mensaje.
+
+112
+00:06:13,540 --> 00:06:14,440
+Hola, Néstor.
+
+113
+00:06:14,710 --> 00:06:16,890
+Hemos recibido tu orden número tal.
+
+114
+00:06:17,230 --> 00:06:17,920
+Perfecto.
+
+115
+00:06:17,920 --> 00:06:19,630
+Continuamos en el siguiente capítulo.

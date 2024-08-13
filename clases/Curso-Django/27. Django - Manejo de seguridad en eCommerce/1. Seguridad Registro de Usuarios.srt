@@ -1,0 +1,1071 @@
+1
+00:00:00,360 --> 00:00:07,470
+En este capítulo comenzaremos a trabajar en el módulo de seguridad, implementando los templates para
+
+2
+00:00:07,470 --> 00:00:10,350
+el login y el registro de nuevos usuarios.
+
+3
+00:00:10,500 --> 00:00:13,260
+También el proceso de lock out o salir de sesión.
+
+4
+00:00:13,920 --> 00:00:18,240
+Vayamos entonces a Atton a comenzar a crear nuestras estructuras.
+
+5
+00:00:19,230 --> 00:00:27,960
+Vamos a ubicarnos en la carpeta account y aquí vamos a crear un archivo que llamaremos URLs y dale click
+
+6
+00:00:27,960 --> 00:00:30,600
+derecho a la carpeta account de un file.
+
+7
+00:00:31,800 --> 00:00:37,680
+Y aquí le escribimos Wireless Pi y le damos enter.
+
+8
+00:00:39,660 --> 00:00:44,160
+Y ahora vamos a importar las librerías para crear nuestras waters.
+
+9
+00:00:44,850 --> 00:00:46,770
+Import Chango llores.
+
+10
+00:00:46,770 --> 00:00:47,790
+Import Path.
+
+11
+00:00:49,700 --> 00:00:52,700
+También voy a importar los archivos de servidores.
+
+12
+00:00:54,600 --> 00:00:56,790
+Y ahora creo el área del Palms.
+
+13
+00:00:59,980 --> 00:01:01,990
+Este es un arreglo donde voy a colocar los pads.
+
+14
+00:01:02,860 --> 00:01:08,830
+Comenzamos con el primer pad que sería para registrar un nuevo usuario que ya llamaremos rechistar.
+
+15
+00:01:10,760 --> 00:01:14,870
+Y esto va a tener una función de tipo dif que también se llama register.
+
+16
+00:01:19,640 --> 00:01:20,960
+Al final siempre la coma.
+
+17
+00:01:22,600 --> 00:01:28,240
+Y ahora vamos a registrar esta URL de este archivo real dentro de nuestro proyecto.
+
+18
+00:01:28,900 --> 00:01:31,600
+Vayamos entonces a eCommerce.
+
+19
+00:01:32,790 --> 00:01:35,580
+Y ahora al archivo del y.
+
+20
+00:01:36,700 --> 00:01:39,970
+De aquí dentro de este yur el partners principal.
+
+21
+00:01:40,180 --> 00:01:48,460
+Luego de esta línea de path calcio en el coma, vamos a darle un enter y registramos este path que llamaremos
+
+22
+00:01:48,460 --> 00:01:49,060
+account.
+
+23
+00:01:50,500 --> 00:01:51,100
+Es el hash.
+
+24
+00:01:52,360 --> 00:01:52,570
+Dije.
+
+25
+00:01:52,570 --> 00:01:57,790
+Incluya los archivos del archivo de la carpeta account.
+
+26
+00:01:58,360 --> 00:01:58,900
+Punto.
+
+27
+00:02:00,090 --> 00:02:03,120
+Archivo journals y al final siempre la coma.
+
+28
+00:02:04,990 --> 00:02:11,020
+Volvamos al archivo JS, a la carpeta account o vamos a la carpeta count que parece el punto pi y.
+
+29
+00:02:12,070 --> 00:02:15,550
+Habíamos registrado el patch para registrar registro de nuevos usuarios.
+
+30
+00:02:15,730 --> 00:02:17,830
+Pero también necesito otro pad para el login.
+
+31
+00:02:17,860 --> 00:02:18,790
+Voy a copiar este path.
+
+32
+00:02:19,300 --> 00:02:19,960
+Aquí lo pego.
+
+33
+00:02:21,510 --> 00:02:25,620
+Y aquí reemplazo el chiste, por lo que en la función se va a llamar lo que.
+
+34
+00:02:27,740 --> 00:02:29,170
+Y el va a hacerlo, Jim.
+
+35
+00:02:30,340 --> 00:02:30,820
+Es las.
+
+36
+00:02:33,320 --> 00:02:36,740
+También voy a crear otro para lock out o salir de sesión.
+
+37
+00:02:38,340 --> 00:02:38,550
+Vamos.
+
+38
+00:02:38,550 --> 00:02:38,970
+Sácalo.
+
+39
+00:02:38,970 --> 00:02:39,300
+Cout.
+
+40
+00:02:39,300 --> 00:02:40,320
+El nombre de la función.
+
+41
+00:02:41,960 --> 00:02:46,280
+Lock out, el nombre, la función y también el path lock out.
+
+42
+00:02:46,790 --> 00:02:47,480
+Perfecto.
+
+43
+00:02:48,800 --> 00:02:50,090
+Voy a guardar todos los cambios.
+
+44
+00:02:50,090 --> 00:02:51,200
+Menús Falstaff all.
+
+45
+00:02:52,600 --> 00:03:01,540
+Y ahora vamos al archivo porque tenemos que crear las funciones Registrar y locate la A al archivo búsqueda
+
+46
+00:03:01,900 --> 00:03:04,840
+y que se encuentra en la carpeta bounce, digamos doble click.
+
+47
+00:03:05,830 --> 00:03:09,040
+De aquí comenzamos a escribir las funciones de Register.
+
+48
+00:03:10,760 --> 00:03:11,740
+Señor Juez.
+
+49
+00:03:14,600 --> 00:03:15,350
+Dos puntos.
+
+50
+00:03:15,350 --> 00:03:17,030
+Por ahora le voy a indicar que me retorne.
+
+51
+00:03:18,250 --> 00:03:20,260
+Este render utilizando la función render.
+
+52
+00:03:21,400 --> 00:03:22,120
+Harry Quest.
+
+53
+00:03:23,420 --> 00:03:28,430
+Y también a una página template que aún no existe, que se va, que va a estar ubicada en la carpeta
+
+54
+00:03:28,430 --> 00:03:30,810
+account y el nombre del archivo.
+
+55
+00:03:30,810 --> 00:03:33,350
+El tema va a ser register punto a html.
+
+56
+00:03:35,560 --> 00:03:36,820
+Voy a copiar esta función.
+
+57
+00:03:37,390 --> 00:03:37,960
+Copiamos.
+
+58
+00:03:39,550 --> 00:03:43,140
+De acá vamos a indicarle que sea otra función para login.
+
+59
+00:03:44,710 --> 00:03:48,160
+Y este me tiene que llevar también a un template en la carpeta account.
+
+60
+00:03:48,340 --> 00:03:50,860
+Pero este archivo template se va a llamar.
+
+61
+00:03:52,310 --> 00:03:52,790
+Lo que.
+
+62
+00:03:54,360 --> 00:03:55,470
+Creamos otra función.
+
+63
+00:03:56,670 --> 00:03:58,110
+Esta es para Lock Out.
+
+64
+00:04:01,100 --> 00:04:04,190
+Y por ahora voy a indicar que solamente hago un ratón sin nada.
+
+65
+00:04:04,730 --> 00:04:12,200
+Vamos a borrar los cambios del safe hall y vamos a proceder a crear esos archivos templates register
+
+66
+00:04:12,200 --> 00:04:12,710
+y login.
+
+67
+00:04:13,190 --> 00:04:14,840
+Vamos entonces a la carpeta Templates.
+
+68
+00:04:16,140 --> 00:04:21,000
+Y aquí dentro de Templates vamos a crear un nuevo directorio que vamos a llamar Account.
+
+69
+00:04:21,430 --> 00:04:22,530
+Ah, mira que me equivoqué.
+
+70
+00:04:22,950 --> 00:04:29,850
+Voy a ponerle account a la carpeta, así que dentro de este archivo le vamos a poner la S de account
+
+71
+00:04:30,240 --> 00:04:31,980
+y guardamos los cambios del default.
+
+72
+00:04:32,700 --> 00:04:33,030
+Listo?
+
+73
+00:04:33,840 --> 00:04:35,300
+Ahora sí, dentro de templates.
+
+74
+00:04:35,310 --> 00:04:36,780
+Vamos a darle clic derecho.
+
+75
+00:04:37,820 --> 00:04:38,630
+De folder.
+
+76
+00:04:39,730 --> 00:04:42,790
+Y le escribimos templates back slash account.
+
+77
+00:04:46,070 --> 00:04:53,510
+Y ahora vamos a crear darle clic derecho a un nuevo archivo que llamaremos Register punto a HTML.
+
+78
+00:04:55,300 --> 00:04:56,360
+Aquí lo vamos a ver.
+
+79
+00:04:56,360 --> 00:04:59,500
+Les plegamos la carpeta, o sea que aparecerá el punto HTML.
+
+80
+00:05:00,070 --> 00:05:01,990
+Vamos a dar click derecho en la carpeta sounds.
+
+81
+00:05:03,150 --> 00:05:03,830
+Newfield.
+
+82
+00:05:03,880 --> 00:05:07,230
+Y le pongo login a HTML.
+
+83
+00:05:08,130 --> 00:05:11,760
+Entonces ya hemos creado los dos archivos templates dentro de la carpeta account.
+
+84
+00:05:12,540 --> 00:05:17,740
+Solo para probar que ya están funcionando, vamos a escribir dentro de Elokim un pequeño texto.
+
+85
+00:05:17,760 --> 00:05:18,780
+Voy a ponerlo en H2.
+
+86
+00:05:19,830 --> 00:05:21,660
+Le pongo página de login.
+
+87
+00:05:22,950 --> 00:05:31,890
+Voy a abrir register el registro en HTML, también en HW y le pongo página de registro de usuarios.
+
+88
+00:05:33,470 --> 00:05:34,490
+Dónde está el texto?
+
+89
+00:05:34,490 --> 00:05:37,310
+En ambas páginas para verificar que todo es correcto.
+
+90
+00:05:37,340 --> 00:05:41,750
+Vamos un momento a Account y ahora al archivo descargado y.
+
+91
+00:05:42,870 --> 00:05:48,540
+Y mira que tengo un pequeño problema en la parte superior de escrito importa Change.org y por Pat aquí
+
+92
+00:05:48,570 --> 00:05:50,580
+en vez del primer importe, debería decir from.
+
+93
+00:05:51,600 --> 00:05:52,650
+Pequeño detalle.
+
+94
+00:05:52,860 --> 00:05:53,270
+Ahora sí.
+
+95
+00:05:53,290 --> 00:05:54,480
+Menu Save all.
+
+96
+00:05:55,760 --> 00:05:59,140
+Y vamos a ejecutar nuestro servidor y abrimos la página.
+
+97
+00:06:00,380 --> 00:06:03,190
+Estamos en el 127 0018 mil.
+
+98
+00:06:04,160 --> 00:06:06,770
+Aquí le voy a poner account.
+
+99
+00:06:08,270 --> 00:06:16,070
+Es lo que le vamos a hacer y ya me llevó a la página de login para registrar.
+
+100
+00:06:16,070 --> 00:06:23,630
+Le ponemos también acá Account Register, le damos enter y ya me llevó a la página template del registro
+
+101
+00:06:23,630 --> 00:06:24,320
+de usuarios.
+
+102
+00:06:26,100 --> 00:06:29,370
+Ahora vayamos a la página principal de mi tienda online.
+
+103
+00:06:30,880 --> 00:06:33,820
+Y aquí tengo dos botones Elokim y el Register.
+
+104
+00:06:34,240 --> 00:06:39,050
+Voy a cambiar la configuración para que cuando eléctrica que me lleve a la página Temple Elokim.
+
+105
+00:06:39,070 --> 00:06:40,360
+Y lo mismo para registro.
+
+106
+00:06:41,050 --> 00:06:43,960
+Pero estos botones están ubicados en el Top Bar.
+
+107
+00:06:44,350 --> 00:06:46,060
+Así que vamos a ese template.
+
+108
+00:06:47,290 --> 00:06:52,720
+Vamos entonces a la carpeta templates que aparece includes y aquí aparece el nav bar.
+
+109
+00:06:54,080 --> 00:07:00,080
+Y en esta parte deben estar en la parte inferior, más o menos en la línea.
+
+110
+00:07:01,940 --> 00:07:04,310
+70 71 alrededor esa línea.
+
+111
+00:07:04,310 --> 00:07:09,170
+Dependiendo como has copiado tu código, debe aparecer el botón de login.
+
+112
+00:07:11,000 --> 00:07:12,710
+Y también el botón de registro.
+
+113
+00:07:13,040 --> 00:07:20,360
+Pero ambos están vinculados hacia con un href hacia esta página input html que no existe.
+
+114
+00:07:20,900 --> 00:07:22,040
+Comencemos con este login.
+
+115
+00:07:23,300 --> 00:07:24,770
+Voy a remover ese href.
+
+116
+00:07:25,160 --> 00:07:25,700
+El contenido.
+
+117
+00:07:25,700 --> 00:07:26,660
+El valor del href.
+
+118
+00:07:27,870 --> 00:07:37,560
+Le vamos a poner una llave, es signo de porcentaje y llamamos al RL y entre apostrofe S le pongo que
+
+119
+00:07:37,560 --> 00:07:39,850
+me lleve a la R al que represente lo que.
+
+120
+00:07:42,210 --> 00:07:47,070
+Para este año de registrar también vamos a ponerle llaves.
+
+121
+00:07:47,580 --> 00:07:48,810
+Sino de porcentajes.
+
+122
+00:07:49,740 --> 00:07:52,530
+Llore el espacio register.
+
+123
+00:07:54,370 --> 00:07:55,240
+Eso sería todo.
+
+124
+00:07:55,240 --> 00:07:59,200
+Voy a borrar los cambios del staff all y vamos a la página.
+
+125
+00:08:00,170 --> 00:08:01,100
+Estamos en la página.
+
+126
+00:08:01,130 --> 00:08:05,630
+Voy a refrescar los explica Login y ya me llevó a la página de login.
+
+127
+00:08:05,810 --> 00:08:07,010
+Vamos para atrás un momento.
+
+128
+00:08:07,250 --> 00:08:09,530
+Y si le doy clic en el botón de registrar?
+
+129
+00:08:10,040 --> 00:08:13,280
+También ya me lleva a la página de Registrar usuarios.
+
+130
+00:08:14,340 --> 00:08:20,160
+A continuación vamos a trabajar en la construcción de la interfaz gráfica para registro de usuarios
+
+131
+00:08:20,430 --> 00:08:22,020
+y también el log de usuarios.
+
+132
+00:08:22,590 --> 00:08:28,050
+Vamos entonces a la carpeta Templates Account y comencemos por Register punto HTML.
+
+133
+00:08:29,260 --> 00:08:31,960
+Voy a borrar este texto de prueba que había puesto inicialmente.
+
+134
+00:08:33,310 --> 00:08:35,260
+Y le ponemos la incorporación.
+
+135
+00:08:36,700 --> 00:08:37,340
+Del base.
+
+136
+00:08:39,280 --> 00:08:40,680
+Entre apóstrofes base.
+
+137
+00:08:40,830 --> 00:08:42,580
+Base html.
+
+138
+00:08:43,920 --> 00:08:50,100
+Recuerda que esto lo hago para que se incorpore el NAP Bar y también el pie de página dentro de esta
+
+139
+00:08:50,100 --> 00:08:52,950
+página, dentro de la página register punto HTML.
+
+140
+00:08:53,250 --> 00:08:59,640
+En un momento y ahora voy a crear el código personalizado para esta página que vamos a trabajar luego.
+
+141
+00:09:01,410 --> 00:09:02,340
+Le ponemos acá.
+
+142
+00:09:02,340 --> 00:09:04,380
+Blog content.
+
+143
+00:09:07,250 --> 00:09:10,190
+Aquí le ponemos el fin del blog en blog.
+
+144
+00:09:12,580 --> 00:09:13,150
+Está listo.
+
+145
+00:09:13,180 --> 00:09:14,090
+Voy a borrar los cambios.
+
+146
+00:09:14,110 --> 00:09:15,310
+Menú false all.
+
+147
+00:09:15,760 --> 00:09:16,660
+Vamos a la página.
+
+148
+00:09:17,740 --> 00:09:18,640
+Estamos en él.
+
+149
+00:09:18,670 --> 00:09:20,670
+127 0018 mil.
+
+150
+00:09:20,710 --> 00:09:24,490
+Voy a refrescar y le daré clic al link de registro Registrar.
+
+151
+00:09:25,380 --> 00:09:32,430
+Y mira, ya me llevó y la página de registro ya me está apareciendo el nav bar y también el pie de página
+
+152
+00:09:32,790 --> 00:09:36,370
+para construir el contenido de registro de nuevo usuario.
+
+153
+00:09:36,420 --> 00:09:42,600
+Te estoy compartiendo en la sección de recursos de este capítulo, de este video un archivo que se llama
+
+154
+00:09:42,600 --> 00:09:46,110
+Register y abajo template a html.
+
+155
+00:09:47,260 --> 00:09:49,420
+En mi caso, yo lo voy a abrir con un bloc de notas.
+
+156
+00:09:50,170 --> 00:09:52,060
+Aquí lo puedes verlo abierto con notas.
+
+157
+00:09:52,060 --> 00:09:52,660
+Es el archivo.
+
+158
+00:09:52,670 --> 00:09:55,480
+Registre abajo template punto HTML.
+
+159
+00:09:56,230 --> 00:09:57,130
+Cópialo todo.
+
+160
+00:09:57,130 --> 00:09:57,850
+Controla.
+
+161
+00:09:58,570 --> 00:09:59,500
+Lo copiamos.
+
+162
+00:09:59,770 --> 00:10:00,520
+Control C.
+
+163
+00:10:01,840 --> 00:10:03,460
+Y vamos al Atom.
+
+164
+00:10:04,150 --> 00:10:05,350
+Estoy en Atom aquí.
+
+165
+00:10:05,500 --> 00:10:11,440
+Estoy dentro del HTML y dentro de este blog content.
+
+166
+00:10:12,310 --> 00:10:13,990
+Aquí vamos a pegarlo.
+
+167
+00:10:14,440 --> 00:10:17,650
+Pegamos todo el contenido que te he compartido en ese archivo.
+
+168
+00:10:18,980 --> 00:10:20,510
+Vamos a borrar todos los cambios.
+
+169
+00:10:20,540 --> 00:10:21,320
+Menú File.
+
+170
+00:10:22,310 --> 00:10:23,060
+Saif Al.
+
+171
+00:10:24,800 --> 00:10:28,190
+Y ahora volvemos a la página en el Register.
+
+172
+00:10:28,760 --> 00:10:29,870
+Vamos a refrescarla.
+
+173
+00:10:30,230 --> 00:10:33,200
+Y ya me apareció aquí la página completa.
+
+174
+00:10:33,230 --> 00:10:36,870
+Perfecto para trabajar la transacción.
+
+175
+00:10:36,890 --> 00:10:40,010
+El registro de un nuevo usuario dentro de mi base de datos.
+
+176
+00:10:40,130 --> 00:10:42,980
+Voy a utilizar lo que se llama el Yankee Forms.
+
+177
+00:10:44,100 --> 00:10:46,260
+Entonces vayamos a nuestro auto.
+
+178
+00:10:46,680 --> 00:10:54,720
+Y dentro de Atton, en la carpeta account, voy a crear un nuevo archivo que llamaré Forms y clic derecho
+
+179
+00:10:54,720 --> 00:10:56,100
+Account New File.
+
+180
+00:10:57,850 --> 00:11:03,360
+Aquí le ponemos Forms Punto Pi y le damos Enter.
+
+181
+00:11:05,030 --> 00:11:08,330
+Vamos a hacer la importación de front a Jango.
+
+182
+00:11:09,860 --> 00:11:10,490
+Imports.
+
+183
+00:11:12,140 --> 00:11:12,710
+Forms.
+
+184
+00:11:13,310 --> 00:11:15,050
+A que apareció Forms?
+
+185
+00:11:16,880 --> 00:11:18,200
+Aquel momento me faltó.
+
+186
+00:11:18,230 --> 00:11:19,130
+Es imposible.
+
+187
+00:11:19,400 --> 00:11:19,880
+Ahora sí.
+
+188
+00:11:20,720 --> 00:11:26,480
+Y también voy a importar el modelo Models Import Account.
+
+189
+00:11:27,050 --> 00:11:33,380
+Recuerda que nosotros anteriormente hemos creado la estructura de un nuevo usuario dentro de Jango.
+
+190
+00:11:33,950 --> 00:11:43,010
+Si vas aquí dentro de Account al archivo Models y lo vas a notar, aquí aparece la estructura que tiene
+
+191
+00:11:43,010 --> 00:11:44,270
+un usuario para nosotros.
+
+192
+00:11:45,140 --> 00:11:46,030
+Vamos a ver más abajo.
+
+193
+00:11:46,040 --> 00:11:49,850
+Aquí aparece el email, username, password.
+
+194
+00:11:50,890 --> 00:11:51,550
+Etcétera.
+
+195
+00:11:52,850 --> 00:12:00,920
+Volvamos nuevamente al archivo Fonts Pi y voy a crear ahora una clase que llamaré Registro Registración
+
+196
+00:12:01,100 --> 00:12:01,610
+Form.
+
+197
+00:12:03,290 --> 00:12:05,330
+Que va a recibir un form.
+
+198
+00:12:05,930 --> 00:12:07,970
+Top Model Form.
+
+199
+00:12:08,990 --> 00:12:10,110
+Si le ponemos dos puntos.
+
+200
+00:12:11,240 --> 00:12:12,800
+Vamos a indicarle que haga un class.
+
+201
+00:12:12,830 --> 00:12:22,130
+Meta dos puntos y le digo que el modelo se va a basar en la clase account, que es que guarda la estructura
+
+202
+00:12:22,130 --> 00:12:26,300
+y los campos que tienen usuario como nombre, apellidos, etc.
+
+203
+00:12:27,970 --> 00:12:33,940
+Entonces les digo que los campos que voy a utilizar para hacer la registración de mi formulario van
+
+204
+00:12:33,940 --> 00:12:36,250
+a ser primero el nombre que se llama First Name.
+
+205
+00:12:37,830 --> 00:12:39,930
+También el Last name apellido.
+
+206
+00:12:42,370 --> 00:12:43,960
+También el fan number.
+
+207
+00:12:46,860 --> 00:12:47,550
+El email.
+
+208
+00:12:50,430 --> 00:12:54,840
+Y el password son los datos que yo necesito para registrar crear un nuevo usuario.
+
+209
+00:12:55,830 --> 00:13:01,650
+Entonces digamos que esta es la estructura modelo que usará mi formulario en mi template HTML.
+
+210
+00:13:02,100 --> 00:13:06,660
+Entonces tengo que enviarle este modelo a mi página directamente.
+
+211
+00:13:06,660 --> 00:13:07,230
+El fonts.
+
+212
+00:13:07,260 --> 00:13:08,310
+No puede hacer eso.
+
+213
+00:13:08,490 --> 00:13:13,350
+Quien lo tiene que hacer es el método, la función de tipo dev de registro.
+
+214
+00:13:13,350 --> 00:13:13,980
+Recuerdas?
+
+215
+00:13:14,340 --> 00:13:18,710
+Entonces esa función de registro debe invocar a este class.
+
+216
+00:13:18,720 --> 00:13:20,760
+Registro, registración form.
+
+217
+00:13:22,110 --> 00:13:24,270
+Vamos entonces al bus y.
+
+218
+00:13:26,420 --> 00:13:28,820
+Y aquí dentro de la función register.
+
+219
+00:13:30,160 --> 00:13:33,640
+Vamos a agregar lo siguiente le digo que un objeto de tipo form.
+
+220
+00:13:34,690 --> 00:13:37,750
+Basado en el registración que acabo de crear.
+
+221
+00:13:39,250 --> 00:13:40,250
+O es una instancia?
+
+222
+00:13:42,230 --> 00:13:43,610
+Quiero que se lleve hacia.
+
+223
+00:13:43,610 --> 00:13:47,390
+Que se dirija hacia el template register y HTML.
+
+224
+00:13:47,690 --> 00:13:50,540
+Entonces aquí, para que pueda enviarse, tengo que crear un diccionario.
+
+225
+00:13:50,780 --> 00:13:52,430
+Crea un diccionario que se va a llamar context.
+
+226
+00:13:54,230 --> 00:14:00,740
+Y le pongo como nombre este form y le paso el objeto form que viene desde el Registry Form.
+
+227
+00:14:01,310 --> 00:14:05,750
+Pero ya que estoy hablando de registración, tengo que importarlo en la parte superior.
+
+228
+00:14:07,020 --> 00:14:07,210
+Así.
+
+229
+00:14:07,260 --> 00:14:09,360
+Aquí le pongo From Forms.
+
+230
+00:14:10,510 --> 00:14:11,170
+Import.
+
+231
+00:14:13,580 --> 00:14:13,960
+A quién?
+
+232
+00:14:14,100 --> 00:14:15,130
+A registración.
+
+233
+00:14:16,380 --> 00:14:16,740
+Ford.
+
+234
+00:14:17,980 --> 00:14:18,430
+Listo.
+
+235
+00:14:19,180 --> 00:14:22,540
+Y en la parte final está un render hacia el Account Register.
+
+236
+00:14:23,320 --> 00:14:29,500
+Le pongo una coma y le digo que envíe el diccionario que se llama Context y que tiene la estructura
+
+237
+00:14:29,500 --> 00:14:32,350
+que va a tener mi formulario en el template html.
+
+238
+00:14:32,830 --> 00:14:35,920
+Vamos ahora a la página del punto HTML.
+
+239
+00:14:35,920 --> 00:14:38,650
+Quiero ver qué cosa es lo que está enviando en este contexto.
+
+240
+00:14:38,860 --> 00:14:39,790
+Quiero imprimirlo.
+
+241
+00:14:40,450 --> 00:14:41,830
+Entonces vayamos a ver.
+
+242
+00:14:41,850 --> 00:14:43,120
+Aquí aparece la carpeta Templates.
+
+243
+00:14:43,450 --> 00:14:46,120
+Aquí aparece Account y aparece Register.
+
+244
+00:14:46,120 --> 00:14:47,050
+Punto html.
+
+245
+00:14:48,460 --> 00:14:49,870
+Vamos a la parte superior.
+
+246
+00:14:50,560 --> 00:14:51,580
+Aquí aparece un form.
+
+247
+00:14:52,480 --> 00:14:53,410
+Debajo de este form.
+
+248
+00:14:53,770 --> 00:14:54,880
+Voy a darle un espaciado.
+
+249
+00:14:56,530 --> 00:15:01,750
+De aquí voy a imprimir ese valor que me está enviando el diccionario que es form.
+
+250
+00:15:02,140 --> 00:15:03,190
+Recuerdas ese form?
+
+251
+00:15:03,400 --> 00:15:04,930
+Quiero imprimir, ver qué cosa sale.
+
+252
+00:15:06,090 --> 00:15:06,960
+Vamos a borrar los cambios.
+
+253
+00:15:07,000 --> 00:15:08,880
+Enchufa el safe hall y vamos a la página.
+
+254
+00:15:09,780 --> 00:15:10,860
+Estoy en mi página.
+
+255
+00:15:11,310 --> 00:15:14,820
+Voy a actualizarla, refrescar y mira lo que ha pasado.
+
+256
+00:15:15,300 --> 00:15:22,260
+El objeto Jango Form que he definido en un class meta me está generando estos campos automáticamente.
+
+257
+00:15:23,100 --> 00:15:27,630
+Si recuerdas que le haya puesto first name, las NIF de number y mail y password, claro, los está
+
+258
+00:15:27,630 --> 00:15:28,860
+generando de esta forma.
+
+259
+00:15:29,130 --> 00:15:31,560
+Está generando un HTML para mí.
+
+260
+00:15:32,400 --> 00:15:34,590
+Vamos a tratar de ordenarlo un poco más.
+
+261
+00:15:35,840 --> 00:15:43,010
+Para que se vean con un espaciado, así que le ponga aquí un foro junto a ese raya para abajo P.
+
+262
+00:15:44,620 --> 00:15:46,810
+Vamos a borrar los cambios de Mayfield Safe Hall.
+
+263
+00:15:48,900 --> 00:15:52,500
+Y en la página de registro voy a actualizar y mira, ya se ve mejor.
+
+264
+00:15:52,810 --> 00:15:58,470
+Está notando entonces este formulario que me está generando automáticamente chango desde un flash meta?
+
+265
+00:15:59,500 --> 00:16:00,950
+Por supuesto que se ve.
+
+266
+00:16:00,970 --> 00:16:01,960
+No se ve tan bien.
+
+267
+00:16:02,140 --> 00:16:06,460
+Tendría que utilizar estilo CSS y cuadrar bien este formulario.
+
+268
+00:16:06,820 --> 00:16:09,130
+Eso lo vamos a trabajar en el siguiente capítulo.

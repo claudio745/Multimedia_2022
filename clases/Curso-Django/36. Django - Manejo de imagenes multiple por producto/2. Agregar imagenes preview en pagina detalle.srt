@@ -1,0 +1,1155 @@
+1
+00:00:00,390 --> 00:00:05,340
+En este capítulo vamos a trabajar en la funcionalidad para agregar las imágenes dentro de la página
+
+2
+00:00:05,340 --> 00:00:06,750
+del detalle del producto.
+
+3
+00:00:06,960 --> 00:00:13,230
+Pero recuerda que esta página está consumiendo una función de tipo product def, que es la que se encarga
+
+4
+00:00:13,230 --> 00:00:16,950
+de hacer el query, la base de datos y obtener la imagen actual.
+
+5
+00:00:17,160 --> 00:00:22,440
+La información del título, del nombre del producto, también las variantes, etcétera.
+
+6
+00:00:23,550 --> 00:00:29,820
+Entonces, si yo quisiera también devolver la lista de imágenes que tiene almacenada almacenada este
+
+7
+00:00:29,820 --> 00:00:33,930
+producto, tendría que ingresar esta función y agregar un query.
+
+8
+00:00:34,870 --> 00:00:37,660
+Entonces vamos a ubicarnos dentro de Store.
+
+9
+00:00:37,690 --> 00:00:39,910
+Dentro de la store aparece el buzón y.
+
+10
+00:00:41,510 --> 00:00:45,660
+Aquí debe aparecer este método de product details.
+
+11
+00:00:46,530 --> 00:00:50,730
+Este producto se encarga de devolver la información del producto en particular.
+
+12
+00:00:51,870 --> 00:00:55,770
+Después de este método Reviews, voy a agregar una nueva variable.
+
+13
+00:00:57,310 --> 00:00:59,110
+Que le llamamos Product Gallery.
+
+14
+00:00:59,950 --> 00:01:02,740
+Las imágenes del producto que van a venir de este.
+
+15
+00:01:03,820 --> 00:01:04,510
+Este producto.
+
+16
+00:01:04,510 --> 00:01:05,440
+Galería Entity.
+
+17
+00:01:06,370 --> 00:01:09,100
+Entonces queda un Object Filter.
+
+18
+00:01:10,180 --> 00:01:12,580
+Y la condición sería sobre el Ducati.
+
+19
+00:01:13,630 --> 00:01:14,890
+Ducati va a ser igual a en.
+
+20
+00:01:16,230 --> 00:01:23,010
+Al señor Heidi y de esta forma me va a devolver todas las imágenes que le pertenecen a este producto
+
+21
+00:01:23,010 --> 00:01:23,670
+en particular.
+
+22
+00:01:25,190 --> 00:01:30,170
+Esta colección de imágenes la tengo que devolver dentro del diccionario de datos que va hacia el temple
+
+23
+00:01:30,170 --> 00:01:30,860
+de la página.
+
+24
+00:01:31,520 --> 00:01:33,020
+Por eso después de este reviews.
+
+25
+00:01:35,060 --> 00:01:39,770
+Aquí le pongo Gallery, dos puntos Pro tu Gallery y le pongo una coma.
+
+26
+00:01:40,580 --> 00:01:46,520
+De esta forma ya el template estaría recibiendo la información de las imágenes del producto.
+
+27
+00:01:47,330 --> 00:01:49,010
+Entonces vayamos ahora al template.
+
+28
+00:01:49,910 --> 00:01:52,190
+Estamos en la carpeta Templates.
+
+29
+00:01:52,640 --> 00:01:54,950
+Ahora vamos a Store.
+
+30
+00:01:55,070 --> 00:01:58,700
+Ya que aparece el producto del punto HTML, vamos a abrirlo.
+
+31
+00:02:00,040 --> 00:02:02,710
+Y más o menos alrededor de la línea 13 a 16.
+
+32
+00:02:03,700 --> 00:02:04,860
+Aparece este.
+
+33
+00:02:06,230 --> 00:02:08,160
+Y el producto y yo.
+
+34
+00:02:08,180 --> 00:02:13,880
+En él está ese link que representa la imagen que se está pintando en ese momento en la página principal
+
+35
+00:02:13,880 --> 00:02:14,900
+del detalle del producto.
+
+36
+00:02:15,840 --> 00:02:17,370
+Hagamos algunas modificaciones.
+
+37
+00:02:17,370 --> 00:02:20,820
+Por ejemplo, esta imagen está rodeada de un href.
+
+38
+00:02:21,570 --> 00:02:23,910
+Voy a quitarle ese href a.
+
+39
+00:02:26,170 --> 00:02:27,400
+Esto quedó así.
+
+40
+00:02:28,420 --> 00:02:30,070
+Luego este centro de DIF.
+
+41
+00:02:30,700 --> 00:02:35,110
+Luego del DIF aparece un article el cierre del artículo.
+
+42
+00:02:36,450 --> 00:02:39,750
+Y luego de este artículo voy a agregar un nuevo componente.
+
+43
+00:02:39,760 --> 00:02:42,030
+Va a ser una lista, por eso le pongo VL.
+
+44
+00:02:43,140 --> 00:02:44,070
+Qué va a tener un class?
+
+45
+00:02:44,940 --> 00:02:46,170
+Qué le voy a poner, Tom?
+
+46
+00:02:48,710 --> 00:02:52,490
+Recuerda, está entre el artículo y el cierre del aceite.
+
+47
+00:02:54,330 --> 00:02:57,810
+Aquí lo estamos colocando y dentro de este voy a colocar un L.I.
+
+48
+00:02:59,640 --> 00:03:05,520
+Primero voy a agregar lo que es el el elemento que representa.
+
+49
+00:03:06,940 --> 00:03:10,510
+En este caso la imagen principal que ya tengo como portada.
+
+50
+00:03:12,530 --> 00:03:18,580
+Por eso te lo voy a indicar un href igual a entre llaves al cinco.
+
+51
+00:03:18,590 --> 00:03:19,250
+El producto.
+
+52
+00:03:20,970 --> 00:03:22,770
+Punto 10.8 en él.
+
+53
+00:03:25,110 --> 00:03:25,860
+Lo voy a poner aquí.
+
+54
+00:03:25,860 --> 00:03:29,310
+Un target que sea igual a un meme.
+
+55
+00:03:38,350 --> 00:03:42,520
+También vamos a colocar aquí dentro de este href la imagen.
+
+56
+00:03:43,800 --> 00:03:45,620
+Pero acá img listo.
+
+57
+00:03:46,020 --> 00:03:49,560
+Y el origen de la imagen sería sin el product.
+
+58
+00:03:49,710 --> 00:03:50,250
+Punto.
+
+59
+00:03:52,220 --> 00:03:52,880
+Y Moisés.
+
+60
+00:03:54,000 --> 00:03:54,600
+Punto.
+
+61
+00:03:55,320 --> 00:03:55,920
+Yo era el.
+
+62
+00:03:57,900 --> 00:04:00,270
+Y le voy a poner imagen del producto.
+
+63
+00:04:02,740 --> 00:04:04,730
+Lo voy a maximizar para que sea mejor.
+
+64
+00:04:05,940 --> 00:04:11,400
+Lo que estoy haciendo con ese primer elemento es agregando esta imagen como si fuera un preview en la
+
+65
+00:04:11,400 --> 00:04:13,950
+parte inferior izquierda en este lado.
+
+66
+00:04:14,760 --> 00:04:21,210
+Por el momento, ahora lo que quiero a continuación es agregar los que vienen desde el Gallery Tabla
+
+67
+00:04:21,930 --> 00:04:22,680
+a continuación.
+
+68
+00:04:23,400 --> 00:04:29,340
+Pero recuerda que esos valores son dinámicos y vienen dentro del diccionario context context dentro
+
+69
+00:04:29,340 --> 00:04:31,140
+del atributo Product Gallery.
+
+70
+00:04:32,100 --> 00:04:34,370
+Entonces lo que voy a hacer después de este.
+
+71
+00:04:34,420 --> 00:04:35,220
+HREF.
+
+72
+00:04:36,340 --> 00:04:41,410
+Aquí voy a colocar un bucle para imprimir esos elementos que vienen de la colección Gallery.
+
+73
+00:04:43,430 --> 00:04:44,160
+For him.
+
+74
+00:04:45,190 --> 00:04:46,240
+Product Gallery.
+
+75
+00:04:46,270 --> 00:04:47,770
+Así se llama mi variable.
+
+76
+00:04:50,890 --> 00:04:51,460
+En Fort.
+
+77
+00:04:54,230 --> 00:04:56,990
+Y ahora aquí lo que quiero imprimir también es un href.
+
+78
+00:04:57,940 --> 00:05:00,460
+Entonces voy a copiar esto como template, como ayuda.
+
+79
+00:05:01,850 --> 00:05:06,500
+Pero en este caso la variable que quiero imprimir no es el producto, sino que es.
+
+80
+00:05:07,590 --> 00:05:09,450
+La variable i es el contador.
+
+81
+00:05:10,860 --> 00:05:20,580
+Y representa un objeto Kalahari y mechas y mechas seria y en este caso punto jurel.
+
+82
+00:05:23,260 --> 00:05:24,640
+El target es un main pech.
+
+83
+00:05:25,570 --> 00:05:26,650
+El src.
+
+84
+00:05:26,770 --> 00:05:28,030
+Voy a colocar aquí y.
+
+85
+00:05:30,430 --> 00:05:32,110
+Y sin la S aquí.
+
+86
+00:05:33,230 --> 00:05:35,150
+Aquí le pongo imagen del producto.
+
+87
+00:05:35,990 --> 00:05:40,370
+Vamos a borrar los cambios en un falso árbol y veamos la página.
+
+88
+00:05:41,090 --> 00:05:42,500
+Voy a actualizar en la página.
+
+89
+00:05:44,220 --> 00:05:45,300
+A que tengo un problema.
+
+90
+00:05:45,780 --> 00:05:47,280
+Me dice que produzca la harina.
+
+91
+00:05:47,280 --> 00:05:48,030
+Está definido.
+
+92
+00:05:48,330 --> 00:05:51,000
+Ya se me faltó importarlo dentro del bus.
+
+93
+00:05:51,690 --> 00:05:54,390
+Volvamos un momento hacia el explorador.
+
+94
+00:05:54,840 --> 00:05:55,770
+Vamos al archivo.
+
+95
+00:05:55,780 --> 00:05:56,910
+Buscar y.
+
+96
+00:05:58,130 --> 00:06:00,590
+Y aquí mira dentro de la función, producto y tal.
+
+97
+00:06:00,890 --> 00:06:05,960
+Estoy invocando al Product Gallery, pero no lo estoy importando.
+
+98
+00:06:05,960 --> 00:06:08,300
+En la parte superior vamos a la parte superior.
+
+99
+00:06:10,280 --> 00:06:12,950
+Aquí es donde estoy colocando lo que son los productos.
+
+100
+00:06:13,520 --> 00:06:14,150
+No lo es.
+
+101
+00:06:14,390 --> 00:06:17,060
+No he ingresado el producto.
+
+102
+00:06:17,390 --> 00:06:18,530
+Debería haberlo puesto aquí.
+
+103
+00:06:18,530 --> 00:06:21,590
+Le pongo el rating, pero tú cállate.
+
+104
+00:06:22,460 --> 00:06:25,070
+Ahora, si guardamos los cambios, me trufa el safe hall.
+
+105
+00:06:26,140 --> 00:06:27,370
+Y ahora actualizamos.
+
+106
+00:06:28,030 --> 00:06:28,660
+Perfecto.
+
+107
+00:06:28,660 --> 00:06:29,680
+Ahora sí apareció.
+
+108
+00:06:31,240 --> 00:06:39,190
+Y si puedes ver, ya me aparecen todas las imágenes almacenadas de dentro de este producto del Kalahari.
+
+109
+00:06:39,760 --> 00:06:42,400
+Pero hay un problema yo no quiero que aparezcan así.
+
+110
+00:06:42,400 --> 00:06:48,580
+Yo quiero que aparezcan en la parte izquierda inferior de este lado y que cuando el usuario lee click,
+
+111
+00:06:48,590 --> 00:06:53,050
+alguno de ellos automáticamente cambie el portrait, el container principal.
+
+112
+00:06:53,970 --> 00:06:59,490
+Entonces, para ubicar las imágenes como un preview en la parte izquierda tengo que utilizar estilos.
+
+113
+00:07:00,030 --> 00:07:03,790
+Vayamos entonces a las archivos de estilos de mi proyecto.
+
+114
+00:07:03,810 --> 00:07:08,310
+Vamos a la carpeta E-commerce y comercio y ubiquémonos en la carpeta de static.
+
+115
+00:07:08,790 --> 00:07:15,030
+Dentro de static está el CSS y dentro del si es ese, está el custom CSS, digamos doble click.
+
+116
+00:07:16,060 --> 00:07:17,620
+De aquí vamos a comenzar a trabajar.
+
+117
+00:07:18,190 --> 00:07:20,590
+Primeramente el último thumb.
+
+118
+00:07:20,620 --> 00:07:25,540
+Recuerda que le pusimos un Classroom C y quiero que ese bloque.
+
+119
+00:07:25,540 --> 00:07:26,860
+Esa lista de imágenes.
+
+120
+00:07:28,360 --> 00:07:30,070
+Tengo un margen de cero.
+
+121
+00:07:31,120 --> 00:07:31,660
+El auto.
+
+122
+00:07:34,680 --> 00:07:36,360
+Un partido de cero.
+
+123
+00:07:38,920 --> 00:07:41,860
+Un float que comiencen a imprimir sea de la izquierda.
+
+124
+00:07:44,850 --> 00:07:46,860
+Este es el container principal, la we ll.
+
+125
+00:07:46,860 --> 00:07:51,720
+Pero ahora creo que para cada elemento también agregar un especifico estilo.
+
+126
+00:07:51,720 --> 00:07:53,280
+Así que le pongo huele thump.
+
+127
+00:07:54,320 --> 00:07:55,400
+Espacio Eloi.
+
+128
+00:07:56,120 --> 00:07:58,280
+Que representa un elemento de la lista.
+
+129
+00:08:00,250 --> 00:08:00,700
+Y estos.
+
+130
+00:08:00,700 --> 00:08:02,560
+Quiero que tenga un list style.
+
+131
+00:08:04,550 --> 00:08:10,040
+En None significa que cada elemento de la lista ya no va a tener el puntito que siempre lo precedía.
+
+132
+00:08:10,060 --> 00:08:10,190
+No?
+
+133
+00:08:11,820 --> 00:08:12,610
+Y un margen.
+
+134
+00:08:13,140 --> 00:08:13,770
+Margen?
+
+135
+00:08:14,810 --> 00:08:17,120
+Le vamos a colocar de diez pixeles.
+
+136
+00:08:19,940 --> 00:08:25,370
+Y por último, también quiero agregarle estilos a las imágenes que están contenidas dentro de cada elemento
+
+137
+00:08:25,370 --> 00:08:25,940
+de la lista.
+
+138
+00:08:28,140 --> 00:08:29,870
+Por ser un electrón.
+
+139
+00:08:30,330 --> 00:08:31,530
+L.I i.
+
+140
+00:08:31,530 --> 00:08:32,040
+EMG.
+
+141
+00:08:34,690 --> 00:08:38,440
+Y el wit de la imagen que le vamos a dar es 80 píxeles.
+
+142
+00:08:42,320 --> 00:08:46,640
+El el alto voy a indicarle que también sea 80 píxeles.
+
+143
+00:08:49,320 --> 00:08:50,160
+Y el border.
+
+144
+00:08:50,190 --> 00:08:56,310
+Le vamos a colocar que sea un pixel en sólido y el color grey gris.
+
+145
+00:08:58,360 --> 00:09:00,880
+Esos son los tres estilos que vamos a agregarle.
+
+146
+00:09:01,850 --> 00:09:08,360
+Vamos a borrar los cambios, pero recuerda que estos estilos tienen que procesarse para que funcionen.
+
+147
+00:09:08,480 --> 00:09:13,610
+Recuerda que estamos en un archivo tipo estático y al final quiero que esos cambios también se reflejen
+
+148
+00:09:13,610 --> 00:09:15,740
+dentro de otro archivo público.
+
+149
+00:09:15,770 --> 00:09:21,800
+Esta carpeta pública estática, que es la que finalmente se va a hacer el float hacia los servidores
+
+150
+00:09:21,800 --> 00:09:22,400
+de Amazon.
+
+151
+00:09:23,330 --> 00:09:27,860
+Y para que ocurra ese procesamiento vamos a abrir nuevamente la consola.
+
+152
+00:09:29,610 --> 00:09:30,750
+Pero hacer un clic aquí.
+
+153
+00:09:32,110 --> 00:09:33,460
+Y vamos a escribir.
+
+154
+00:09:33,460 --> 00:09:34,210
+Peyton.
+
+155
+00:09:36,580 --> 00:09:38,980
+Espacio manage y.
+
+156
+00:09:40,270 --> 00:09:42,310
+Y llamamos al collect.
+
+157
+00:09:43,350 --> 00:09:45,630
+Static y le damos enter.
+
+158
+00:09:49,410 --> 00:09:49,620
+Aquí.
+
+159
+00:09:49,620 --> 00:09:50,200
+Lo escribí mal.
+
+160
+00:09:50,220 --> 00:09:51,800
+Debería haber sido colec.
+
+161
+00:09:52,150 --> 00:09:53,010
+Conté al final.
+
+162
+00:09:53,400 --> 00:09:54,490
+Y luego sigue la st.
+
+163
+00:09:54,570 --> 00:09:54,990
+Static.
+
+164
+00:09:56,820 --> 00:09:57,730
+Lo vamos a entrar.
+
+165
+00:09:58,800 --> 00:10:04,440
+Y ahora sí me está pidiendo que si quiero continuar con el writing le digo que sí.
+
+166
+00:10:06,600 --> 00:10:10,140
+Le pongo yes, yes y le doy enter.
+
+167
+00:10:12,030 --> 00:10:14,850
+Después de algunos segundos ya se terminó de procesar.
+
+168
+00:10:15,450 --> 00:10:21,810
+Voy a ejecutar nuevamente mi servidor y le ponemos el python manager y uno al server, le damos enter
+
+169
+00:10:21,810 --> 00:10:22,710
+todo perfecto.
+
+170
+00:10:22,720 --> 00:10:26,640
+Vamos a abrir la pagina, estoy en la pagina en el detalle del producto.
+
+171
+00:10:26,640 --> 00:10:27,690
+Voy a actualizar.
+
+172
+00:10:30,590 --> 00:10:31,100
+Aquí.
+
+173
+00:10:31,100 --> 00:10:31,790
+Todavía no está.
+
+174
+00:10:32,090 --> 00:10:33,020
+No me está mostrando.
+
+175
+00:10:33,020 --> 00:10:34,550
+No está reflejando los cambios.
+
+176
+00:10:35,580 --> 00:10:37,750
+Entonces voy a hacer un cheque.
+
+177
+00:10:38,430 --> 00:10:39,690
+Ya sabes, es lo que tienes que hacer.
+
+178
+00:10:39,690 --> 00:10:42,160
+Es ir a la página y spec.
+
+179
+00:10:42,180 --> 00:10:43,080
+Vas a la consola.
+
+180
+00:10:43,800 --> 00:10:46,890
+Y ahora en el botón de refresh le das derecho.
+
+181
+00:10:47,250 --> 00:10:49,650
+Y la opción ética dice Amar Reload.
+
+182
+00:10:49,800 --> 00:10:50,460
+Le haz clic.
+
+183
+00:10:52,220 --> 00:10:59,450
+Ya se ahora la consola y mira, ya me aparecen las imágenes en la parte izquierda del container.
+
+184
+00:11:01,220 --> 00:11:02,960
+Pero te das cuenta de algo?
+
+185
+00:11:03,200 --> 00:11:08,570
+Si le doy click a alguna de las imágenes, lo que hace es devolverme la imagen completa.
+
+186
+00:11:09,110 --> 00:11:16,160
+Yo lo que quiero es que cuando el click me cambie el container, aquí la imagen principal no esté sucediendo.
+
+187
+00:11:16,160 --> 00:11:17,420
+Eso cómo lo voy a trabajar?
+
+188
+00:11:17,600 --> 00:11:19,640
+Para esto tengo que trabajar con JavaScript.
+
+189
+00:11:20,730 --> 00:11:25,050
+O también con jQuery vamos a importar jQuery dentro de nuestro proyecto.
+
+190
+00:11:25,290 --> 00:11:30,720
+Para agregar, si quieres a tu proyecto, simplemente anda a Google y escribe jQuery doble tres espacio
+
+191
+00:11:30,720 --> 00:11:37,650
+schools y ahora aquí te aparece un link que dice jQuery Get started está dentro del segmento de query
+
+192
+00:11:37,980 --> 00:11:39,910
+tutorial double schools.
+
+193
+00:11:40,470 --> 00:11:41,010
+Dale click.
+
+194
+00:11:43,100 --> 00:11:44,280
+Vamos a esta página.
+
+195
+00:11:44,420 --> 00:11:46,430
+Yaquí aparece el jeque CDM.
+
+196
+00:11:47,210 --> 00:11:52,430
+Aparece esta línea que representa el acceso directo a esta librería online.
+
+197
+00:11:53,090 --> 00:11:54,290
+Voy a copiar esta línea.
+
+198
+00:11:55,440 --> 00:12:00,150
+Vamos a Atton, vamos a la carpeta Templates y aquí aparece la carpeta.
+
+199
+00:12:00,150 --> 00:12:00,930
+Incluso dentro de él.
+
+200
+00:12:01,410 --> 00:12:03,570
+Vamos a estudiar HTML.
+
+201
+00:12:03,600 --> 00:12:04,380
+Vamos a abrirlo.
+
+202
+00:12:05,790 --> 00:12:12,180
+Estamos ubicados en la parte final de Fort Fuller End y aquí pegamos el link de Tacuarí.
+
+203
+00:12:12,630 --> 00:12:13,680
+Lo tenemos listo.
+
+204
+00:12:13,680 --> 00:12:17,910
+Y algo adicional que voy a hacer es que también voy a aprovechar aquí para cerrar.
+
+205
+00:12:19,170 --> 00:12:22,140
+Lo que es el body, el cuerpo, la página.
+
+206
+00:12:23,940 --> 00:12:28,290
+Y también cierro lo que es el invento HTML.
+
+207
+00:12:31,560 --> 00:12:33,990
+Y voy a crear un nuevo blog que escribo aquí.
+
+208
+00:12:36,460 --> 00:12:37,040
+Scrip.
+
+209
+00:12:37,090 --> 00:12:37,390
+Ya.
+
+210
+00:12:37,390 --> 00:12:37,770
+Listo.
+
+211
+00:12:37,780 --> 00:12:38,590
+Lo hemos creado.
+
+212
+00:12:41,960 --> 00:12:43,430
+Y aquí vamos a hacer la lógica.
+
+213
+00:12:44,830 --> 00:12:48,640
+Voy a crear un método sobre el documento dom html.
+
+214
+00:12:50,340 --> 00:12:51,420
+Ponemos Document.
+
+215
+00:12:51,990 --> 00:12:52,560
+Ready?
+
+216
+00:12:54,550 --> 00:12:55,310
+Fuck son.
+
+217
+00:12:56,520 --> 00:12:57,480
+Y habrá una función.
+
+218
+00:12:58,200 --> 00:12:59,720
+Qué significa este documento?
+
+219
+00:13:00,390 --> 00:13:05,400
+Significa que este método se va a ejecutar cuando la página haya completado.
+
+220
+00:13:05,400 --> 00:13:09,750
+De cargarse inmediatamente se complete la carga de la página y sus elementos.
+
+221
+00:13:10,020 --> 00:13:11,640
+Inmediatamente se va a ejecutar.
+
+222
+00:13:11,880 --> 00:13:14,280
+Va a estar lista para ejecutarse esta función.
+
+223
+00:13:16,060 --> 00:13:20,920
+Y lo que quiero que esté listo para ejecutarse al recibir un evento de un cliente es esto.
+
+224
+00:13:22,540 --> 00:13:25,180
+Quiero que capture primero al objeto.
+
+225
+00:13:25,180 --> 00:13:25,660
+Tom.
+
+226
+00:13:27,840 --> 00:13:28,560
+A la clase.
+
+227
+00:13:29,160 --> 00:13:30,380
+Al objeto que tenga en la clase.
+
+228
+00:13:31,720 --> 00:13:34,180
+Que sea de tipo href.
+
+229
+00:13:36,540 --> 00:13:42,960
+Que cuando le doy click a este objeto de tipo href que está dentro de un container dump, entonces haga
+
+230
+00:13:42,960 --> 00:13:44,280
+lo siguiente Hago un evento click.
+
+231
+00:13:44,280 --> 00:13:45,210
+Dispara un evento click.
+
+232
+00:13:48,230 --> 00:13:49,430
+Como si fuera un botón.
+
+233
+00:13:49,730 --> 00:13:52,280
+Por eso hago un function e abro las llaves.
+
+234
+00:13:54,610 --> 00:13:59,920
+Y lo que quiero que ocurra es que primero hago, es decir, que no refresque la página, por eso hago
+
+235
+00:13:59,920 --> 00:14:01,090
+un default.
+
+236
+00:14:03,370 --> 00:14:08,230
+Este default hace que la acción no haga un F5 o un refresh.
+
+237
+00:14:10,720 --> 00:14:11,770
+Luego quiero que.
+
+238
+00:14:14,130 --> 00:14:17,220
+Se mete dentro del container de imagen.
+
+239
+00:14:17,250 --> 00:14:19,410
+El imagen que hemos puesto.
+
+240
+00:14:21,870 --> 00:14:26,010
+Que ese tipo emerge en el objeto y emerge de ese container.
+
+241
+00:14:26,310 --> 00:14:27,360
+Quiero que se te.
+
+242
+00:14:29,480 --> 00:14:30,380
+Este atributo.
+
+243
+00:14:31,440 --> 00:14:34,320
+Es su atributo, ese de la imagen que ese es el.
+
+244
+00:14:36,060 --> 00:14:37,840
+Valor de aumento.
+
+245
+00:14:40,960 --> 00:14:42,700
+Punto atributo.
+
+246
+00:14:45,650 --> 00:14:46,400
+HREF.
+
+247
+00:14:51,310 --> 00:14:54,430
+Esto va a representar el valor de la imagen.
+
+248
+00:14:55,120 --> 00:14:56,580
+Lo elabora y lee la imagen.
+
+249
+00:14:56,590 --> 00:14:57,520
+Entonces es ahora.
+
+250
+00:14:57,580 --> 00:15:04,780
+La imagen se está reseteando dentro del atributo src del componente image que está dentro del container.
+
+251
+00:15:05,780 --> 00:15:12,280
+Este Image image y representa este container, esta imagen.
+
+252
+00:15:12,290 --> 00:15:15,530
+Este es el main image y dentro esta el IMG.
+
+253
+00:15:15,810 --> 00:15:20,510
+Es lo que quiero que se acepte, que cambie cada vez que le de click alguno de estos elementos.
+
+254
+00:15:21,440 --> 00:15:27,200
+Lo que acabo de yo de hacer es agregarle el evento click a cada uno de estos elementos preview.
+
+255
+00:15:28,460 --> 00:15:31,210
+Teniendo esto listo, voy a borrar los cambios.
+
+256
+00:15:31,220 --> 00:15:34,940
+Me trufa el safe hall y vamos a refrescar la página.
+
+257
+00:15:35,750 --> 00:15:38,720
+Refrescamos y no me está actualizando.
+
+258
+00:15:39,350 --> 00:15:40,140
+Cuál es el problema?
+
+259
+00:15:40,160 --> 00:15:43,430
+Me parece que no le he puesto el main a este container.
+
+260
+00:15:43,970 --> 00:15:45,110
+Vamos a revisarlo.
+
+261
+00:15:45,920 --> 00:15:47,510
+Vamos a ubicarnos en el Templates.
+
+262
+00:15:48,920 --> 00:15:50,450
+Estos productos del.
+
+263
+00:15:51,670 --> 00:15:52,630
+Veo maximizar.
+
+264
+00:15:54,270 --> 00:15:56,490
+Y aquí me está pareciendo el contendor principal.
+
+265
+00:15:56,520 --> 00:15:57,390
+Recuerdas lo que te dije?
+
+266
+00:15:57,390 --> 00:15:58,620
+Este es el contenido principal.
+
+267
+00:15:58,620 --> 00:16:00,120
+Y aquí está la imagen principal.
+
+268
+00:16:00,660 --> 00:16:04,470
+Pero el contenido principal no le había puesto el meme.
+
+269
+00:16:04,860 --> 00:16:08,880
+Dentro del class lo tengo que agregar esto sino no va a salir imagen.
+
+270
+00:16:11,200 --> 00:16:15,220
+Ahora, si guardamos los cambios false all, vamos a la página.
+
+271
+00:16:15,700 --> 00:16:17,290
+En la página refrescamos.
+
+272
+00:16:18,480 --> 00:16:25,230
+Y ahora quiero seleccionar la imagen de color rojo y ya está trabajando esta imagen con rayas también.
+
+273
+00:16:26,590 --> 00:16:27,610
+Está tu imagen?
+
+274
+00:16:27,640 --> 00:16:28,540
+Perfecto.
+
+275
+00:16:28,960 --> 00:16:29,950
+Pero entonces algo.
+
+276
+00:16:29,950 --> 00:16:31,480
+La imagen no está centrada.
+
+277
+00:16:31,540 --> 00:16:32,920
+Vamos a centrarla también.
+
+278
+00:16:34,560 --> 00:16:37,860
+Estamos nuevamente en este bloque de memes.
+
+279
+00:16:38,100 --> 00:16:39,210
+Aquí está el IMG.
+
+280
+00:16:39,870 --> 00:16:41,220
+Voy a ponerle un center.
+
+281
+00:16:41,800 --> 00:16:42,200
+De momento.
+
+282
+00:16:44,690 --> 00:16:45,520
+No está funcionando.
+
+283
+00:16:45,970 --> 00:16:46,910
+Entonces lo hago manual.
+
+284
+00:16:48,100 --> 00:16:49,210
+Escribo Center.
+
+285
+00:16:51,200 --> 00:16:53,000
+Ya cierro el center.
+
+286
+00:16:56,320 --> 00:16:57,090
+Lo tenemos.
+
+287
+00:16:57,100 --> 00:16:58,450
+Guardamos los cambios.
+
+288
+00:17:00,020 --> 00:17:06,980
+Vamos a la página, refrescamos y perfecto, ya está centrado y ya está funcionando el acceso ilimitado
+
+289
+00:17:06,980 --> 00:17:09,290
+de imágenes preview dentro de mi página.

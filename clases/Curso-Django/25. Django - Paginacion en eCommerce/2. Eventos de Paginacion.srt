@@ -1,0 +1,1103 @@
+1
+00:00:00,420 --> 00:00:03,960
+En este capítulo vamos a seguir trabajando en el concepto de paginación.
+
+2
+00:00:05,450 --> 00:00:09,950
+Vamos ahora a ver una pequeña funcionalidad para hacer la búsqueda por categorías.
+
+3
+00:00:10,190 --> 00:00:16,160
+Si le das clic a este ComboBox Categorías y seleccionamos, por ejemplo, computadoras, mira lo que
+
+4
+00:00:16,160 --> 00:00:16,850
+va a suceder.
+
+5
+00:00:17,540 --> 00:00:19,400
+Nos está enviando un error.
+
+6
+00:00:20,330 --> 00:00:25,310
+Esto sucede porque no hemos colocado la paginación en el objeto de paginación.
+
+7
+00:00:25,670 --> 00:00:30,560
+Cuando la búsqueda incluye las categorías de los productos.
+
+8
+00:00:31,250 --> 00:00:33,770
+Para solucionar este problema, vayamos a Haddon.
+
+9
+00:00:34,730 --> 00:00:35,840
+Estamos en Atom.
+
+10
+00:00:35,840 --> 00:00:39,110
+A la carpeta Store, al archivo búsqueda y.
+
+11
+00:00:40,940 --> 00:00:42,610
+En la función de store.
+
+12
+00:00:45,040 --> 00:00:52,060
+En el capítulo anterior trabajamos la condición de ELS, pero no la condición de EF cuando tenía un
+
+13
+00:00:52,060 --> 00:00:52,840
+category slug.
+
+14
+00:00:53,680 --> 00:00:55,300
+No te preocupes, ahora lo vamos a ver.
+
+15
+00:00:56,020 --> 00:00:56,800
+Es muy simple.
+
+16
+00:00:57,340 --> 00:01:00,010
+Vamos a agregar el objeto página de OR dentro del if.
+
+17
+00:01:02,380 --> 00:01:06,430
+Dentro de este enlace vamos a seleccionar este página Editor el PS.
+
+18
+00:01:07,720 --> 00:01:10,030
+Y el pez produce esas tres líneas.
+
+19
+00:01:12,460 --> 00:01:16,960
+Y ahora vamos a la sección del IRPF y después de esta línea de productos vamos a darle un enter.
+
+20
+00:01:18,800 --> 00:01:19,550
+Lo pegamos.
+
+21
+00:01:20,770 --> 00:01:21,670
+Eso sería todo.
+
+22
+00:01:23,330 --> 00:01:24,410
+Voy a borrar los cambios.
+
+23
+00:01:24,440 --> 00:01:25,940
+Menú File Save All.
+
+24
+00:01:27,010 --> 00:01:27,980
+Y vamos a probar.
+
+25
+00:01:28,900 --> 00:01:29,890
+Vamos a refrescar.
+
+26
+00:01:31,310 --> 00:01:32,720
+Y ya me está funcionando.
+
+27
+00:01:32,730 --> 00:01:35,420
+Voy a seleccionar otra categoría, por ejemplo, muebles de oficina.
+
+28
+00:01:36,950 --> 00:01:37,700
+Perfecto.
+
+29
+00:01:37,700 --> 00:01:40,010
+Ya está trabajando sin problemas.
+
+30
+00:01:40,010 --> 00:01:41,390
+Accesorios, techos también.
+
+31
+00:01:43,320 --> 00:01:50,250
+Pero el tema principal de ese capítulo es trabajar el control de paginación que ves en la parte superior.
+
+32
+00:01:50,460 --> 00:01:57,000
+Se supone que cuando le dé click a alguno de estos números elementos me debe llevar a la página índice
+
+33
+00:01:57,000 --> 00:01:57,750
+que corresponde.
+
+34
+00:01:58,020 --> 00:02:03,540
+Si le doy clic a este botón de dos, quisiera que me lleve a la página al grupo dos.
+
+35
+00:02:03,960 --> 00:02:08,610
+Para realizar esas tareas utilizaremos funciones propias del objeto.
+
+36
+00:02:08,610 --> 00:02:09,840
+Página dos de Chango.
+
+37
+00:02:10,920 --> 00:02:14,310
+Primero vayamos a la parte superior y démosle clic.
+
+38
+00:02:14,640 --> 00:02:21,240
+Alguien de la tienda que me lleve al Store principal para tener la mayor cantidad de productos.
+
+39
+00:02:22,080 --> 00:02:23,530
+Ahora vayamos al Atom.
+
+40
+00:02:24,510 --> 00:02:25,380
+Estamos en auto.
+
+41
+00:02:25,390 --> 00:02:30,870
+Vamos a la carpeta Templates que aparece en la carpeta Store y dentro de la store aparece el editor
+
+42
+00:02:31,280 --> 00:02:32,130
+HTML.
+
+43
+00:02:32,730 --> 00:02:39,900
+Vamos a darle doble clic y vamos a la parte inferior, justamente aquí, en la línea más o menos 154.
+
+44
+00:02:40,790 --> 00:02:43,530
+Va a aparecer el objeto fascinador.
+
+45
+00:02:45,510 --> 00:02:52,470
+Lo primero que quiero hacer es que este objeto fascinador sólo aparezca si existen páginas donde pueda
+
+46
+00:02:52,590 --> 00:02:53,220
+dirigirme.
+
+47
+00:02:53,490 --> 00:02:56,850
+Si no hay páginas, entonces quiero que sea invisible.
+
+48
+00:02:57,420 --> 00:03:02,910
+Por este motivo vamos a colocar aquí, después de este navigation sample, un enter.
+
+49
+00:03:03,660 --> 00:03:05,820
+Entras aquí para separarlo y se pueda ver mejor.
+
+50
+00:03:08,930 --> 00:03:09,230
+De aquí.
+
+51
+00:03:09,230 --> 00:03:11,030
+Vamos a colocar entre llaves.
+
+52
+00:03:13,130 --> 00:03:16,670
+Y signos de porcentaje esta condición.
+
+53
+00:03:17,800 --> 00:03:19,990
+Si produce producto.
+
+54
+00:03:20,440 --> 00:03:20,960
+Punto.
+
+55
+00:03:21,340 --> 00:03:22,940
+Aquí llamo a la función del editor.
+
+56
+00:03:24,190 --> 00:03:24,550
+Haz.
+
+57
+00:03:25,710 --> 00:03:26,370
+Joder.
+
+58
+00:03:27,830 --> 00:03:28,640
+Ley de trabajo.
+
+59
+00:03:28,740 --> 00:03:30,050
+pH belleza.
+
+60
+00:03:30,050 --> 00:03:31,280
+Existen otras páginas.
+
+61
+00:03:32,480 --> 00:03:33,980
+Entonces que se muestre.
+
+62
+00:03:34,130 --> 00:03:35,510
+Se mostrará este bloque.
+
+63
+00:03:36,020 --> 00:03:37,970
+En caso contrario, no va a mostrar nada.
+
+64
+00:03:39,740 --> 00:03:43,520
+Aquí la vamos a poner también entre llaves y si de porcentaje.
+
+65
+00:03:45,640 --> 00:03:47,440
+La indicación que aquí la condición.
+
+66
+00:03:49,190 --> 00:03:49,550
+A ver.
+
+67
+00:03:49,850 --> 00:03:50,990
+Voy a guardar los cambios.
+
+68
+00:03:52,130 --> 00:03:52,460
+Hola.
+
+69
+00:03:53,150 --> 00:03:53,990
+Estamos en la página.
+
+70
+00:03:54,020 --> 00:03:54,830
+Voy a refrescar.
+
+71
+00:03:55,220 --> 00:03:57,770
+Vamos a la parte inferior y se sigue mostrando el página.
+
+72
+00:03:57,950 --> 00:03:58,610
+Sabes por qué?
+
+73
+00:03:59,150 --> 00:04:03,080
+Porque tú tienes 11 elementos en la base de datos.
+
+74
+00:04:03,560 --> 00:04:08,990
+Mientras que tu grupo, los grupos que estás formando solo son de cinco.
+
+75
+00:04:09,800 --> 00:04:16,670
+Entonces, si yo le pusiera que los grupos sean de 11, entonces me formaría sólo un grupo y no habría
+
+76
+00:04:16,670 --> 00:04:17,720
+otras páginas.
+
+77
+00:04:18,020 --> 00:04:20,870
+Y en ese caso, el página desaparecería.
+
+78
+00:04:21,320 --> 00:04:22,130
+Quieres verlo?
+
+79
+00:04:22,250 --> 00:04:23,120
+Hagamos esa prueba.
+
+80
+00:04:24,040 --> 00:04:27,430
+Vamos a la carpeta sur, al archivo buscar y.
+
+81
+00:04:28,570 --> 00:04:30,040
+Chequeen la funcion Stor.
+
+82
+00:04:30,790 --> 00:04:32,790
+El patinador le había puesto cinco.
+
+83
+00:04:32,800 --> 00:04:34,510
+Lo voy a cambiar a 11.
+
+84
+00:04:36,180 --> 00:04:36,780
+En el siguiente.
+
+85
+00:04:36,780 --> 00:04:38,580
+Aquí también de leerse el paginación.
+
+86
+00:04:38,730 --> 00:04:40,710
+También le pongo le cambio a 11.
+
+87
+00:04:42,740 --> 00:04:44,170
+Menú False all.
+
+88
+00:04:44,680 --> 00:04:45,680
+Íbamos a probar.
+
+89
+00:04:46,730 --> 00:04:48,320
+Vamos a refrescar la página ahora.
+
+90
+00:04:49,380 --> 00:04:50,700
+Está formando ahora grupos de 11.
+
+91
+00:04:50,710 --> 00:04:54,090
+Vamos a la parte inferior y mira, ya desapareció.
+
+92
+00:04:54,480 --> 00:04:58,980
+Ha desaparecido porque sólo tengo una sola página y no hay otras páginas.
+
+93
+00:04:59,220 --> 00:05:01,230
+No hay otras páginas a donde acudir.
+
+94
+00:05:01,560 --> 00:05:03,240
+Por eso desaparece.
+
+95
+00:05:03,840 --> 00:05:08,220
+Entonces esta primera condición está funcionando al 100%.
+
+96
+00:05:08,790 --> 00:05:12,490
+Pero voy a volver al Atom para colocarla de nuevo.
+
+97
+00:05:12,510 --> 00:05:12,930
+Cinco.
+
+98
+00:05:13,290 --> 00:05:16,620
+Voy a continuar agregando nueva lógica a este objeto.
+
+99
+00:05:16,620 --> 00:05:17,940
+Página dos en HTML.
+
+100
+00:05:18,810 --> 00:05:25,020
+Vamos a borrar los cambios de menú false all y volvemos también al archivo Templates Store.
+
+101
+00:05:25,770 --> 00:05:27,180
+Es todo punto HTML.
+
+102
+00:05:28,720 --> 00:05:32,470
+Vamos a trabajar en el siguiente botón que es anterior.
+
+103
+00:05:33,010 --> 00:05:38,320
+El anterior va a funcionar, por ejemplo, si estoy en la página tres y quiero ir a la página dos.
+
+104
+00:05:38,620 --> 00:05:43,060
+En ese caso tiene que estar habilitado para que podamos retroceder entre páginas.
+
+105
+00:05:43,570 --> 00:05:46,270
+Pero qué pasaría si estuviera hecho en la página uno?
+
+106
+00:05:47,240 --> 00:05:48,980
+Podría yo volver a la página cero?
+
+107
+00:05:49,490 --> 00:05:53,030
+No, aquí habría un problema porque me podría disparar un error.
+
+108
+00:05:53,420 --> 00:05:54,580
+Entonces tengo que.
+
+109
+00:05:54,590 --> 00:06:03,230
+Antes de que el usuario pueda ejecutar este botón, validar que exista una página anterior a la cual
+
+110
+00:06:03,230 --> 00:06:04,040
+pueda acudir.
+
+111
+00:06:04,760 --> 00:06:06,950
+Por ese motivo, voy a separar un poco aquí.
+
+112
+00:06:08,310 --> 00:06:09,990
+Vamos a agregarle una condición.
+
+113
+00:06:10,470 --> 00:06:11,430
+Le pongo entre llaves.
+
+114
+00:06:13,000 --> 00:06:15,540
+If product punto.
+
+115
+00:06:17,370 --> 00:06:18,410
+Jas previos.
+
+116
+00:06:18,420 --> 00:06:19,260
+Así se llama.
+
+117
+00:06:19,680 --> 00:06:20,820
+Escríbelo bien, por favor.
+
+118
+00:06:20,850 --> 00:06:21,570
+La función.
+
+119
+00:06:22,260 --> 00:06:24,900
+Mira que me faltó los porcentajes al inicio y al final.
+
+120
+00:06:27,630 --> 00:06:33,930
+Si producto tiene un previo, tiene un valor una página previa, entonces que se muestre este.
+
+121
+00:06:35,190 --> 00:06:39,450
+Este valor de anterior, este botón de anterior, para que pueda retroceder, darle equilibrio.
+
+122
+00:06:40,320 --> 00:06:42,660
+En caso contrario, un espacio más.
+
+123
+00:06:44,580 --> 00:06:45,420
+Porcentajes.
+
+124
+00:06:47,450 --> 00:06:48,200
+De acuerdo con él.
+
+125
+00:06:48,440 --> 00:06:49,610
+En caso contrario.
+
+126
+00:06:50,630 --> 00:06:53,660
+Que no lo muestre o que lo muestre, pero que esté deshabilitado.
+
+127
+00:06:54,350 --> 00:06:55,520
+Entonces mire lo que voy a hacer.
+
+128
+00:06:55,520 --> 00:06:56,420
+Voy a copiar esto.
+
+129
+00:06:56,570 --> 00:06:58,430
+Esta línea de acá la pegó.
+
+130
+00:07:00,710 --> 00:07:02,060
+De que parece deseable.
+
+131
+00:07:02,360 --> 00:07:03,650
+Está deshabilitado.
+
+132
+00:07:03,650 --> 00:07:04,340
+Ya está puesto.
+
+133
+00:07:04,850 --> 00:07:07,100
+Pero el que tiene que estar habilitado es el primero.
+
+134
+00:07:07,490 --> 00:07:08,090
+No es cierto?
+
+135
+00:07:08,420 --> 00:07:09,740
+Claro que puede retroceder.
+
+136
+00:07:09,770 --> 00:07:11,840
+Entonces este dice De aquí lo voy a borrar.
+
+137
+00:07:14,930 --> 00:07:22,340
+También algo muy importante es que si puede retroceder, entonces también voy a cambiarle el href.
+
+138
+00:07:22,940 --> 00:07:31,180
+Recuerdas que para poder regirnos entre páginas utilizamos ese parámetro en la variable que se llama
+
+139
+00:07:31,190 --> 00:07:31,550
+PG?
+
+140
+00:07:32,150 --> 00:07:34,190
+Claro, aquí es donde tengo que llamarlo.
+
+141
+00:07:34,970 --> 00:07:37,220
+En el href le voy a poner unas llaves.
+
+142
+00:07:37,730 --> 00:07:40,100
+Primero voy a maximizar mi pantalla para que sea mejor.
+
+143
+00:07:42,450 --> 00:07:43,440
+Le pongo una llave.
+
+144
+00:07:43,510 --> 00:07:44,080
+Ah, no, no, no!
+
+145
+00:07:44,100 --> 00:07:45,390
+Primeramente no balanceadas.
+
+146
+00:07:45,390 --> 00:07:46,980
+Primeramente el parámetro PS.
+
+147
+00:07:50,480 --> 00:07:51,950
+Y le pongo peaje igual.
+
+148
+00:07:52,430 --> 00:08:00,020
+Ahora sí, la doble Chaves Product punto previews raya para abajo PG.
+
+149
+00:08:01,180 --> 00:08:02,080
+Raya para abajo.
+
+150
+00:08:02,710 --> 00:08:03,190
+Number.
+
+151
+00:08:06,340 --> 00:08:08,020
+Me va a llevar a la página anterior.
+
+152
+00:08:12,000 --> 00:08:16,320
+Ahora, si vamos a cerrar esta condición, le voy a poner acá llaves.
+
+153
+00:08:18,800 --> 00:08:20,570
+Es perfecto.
+
+154
+00:08:21,350 --> 00:08:22,220
+Vamos a probarlo.
+
+155
+00:08:22,700 --> 00:08:24,980
+Pero primero guardamos los cambios en el Safe Hall.
+
+156
+00:08:25,520 --> 00:08:26,420
+Vamos a la página.
+
+157
+00:08:27,530 --> 00:08:28,430
+Estoy en la página.
+
+158
+00:08:28,430 --> 00:08:29,570
+Vamos a refrescar.
+
+159
+00:08:30,450 --> 00:08:31,650
+Siempre aparece el fascinador.
+
+160
+00:08:31,810 --> 00:08:34,790
+Ahora está en el mira porque soy en la página uno.
+
+161
+00:08:34,810 --> 00:08:35,470
+Eso está bien.
+
+162
+00:08:35,890 --> 00:08:39,640
+Vamos a la página dos en la parte superior del browser.
+
+163
+00:08:40,920 --> 00:08:44,430
+Voy a colocarle signo de interrogación igual a dos.
+
+164
+00:08:45,950 --> 00:08:47,360
+Ah, estamos en la página dos.
+
+165
+00:08:49,620 --> 00:08:52,340
+Listo y mira el botón anterior ya está habilitado en este caso.
+
+166
+00:08:52,350 --> 00:08:55,320
+Lo anterior me debe llevar a la página uno.
+
+167
+00:08:56,350 --> 00:08:57,340
+Démosle clic anterior.
+
+168
+00:08:57,910 --> 00:08:59,220
+Ahora sí funcionó.
+
+169
+00:08:59,230 --> 00:09:00,610
+Me llevó a la página uno.
+
+170
+00:09:01,390 --> 00:09:02,440
+Estoy en la página uno.
+
+171
+00:09:03,650 --> 00:09:05,470
+Y ahora ya no puedo hacer más.
+
+172
+00:09:05,480 --> 00:09:07,010
+Entonces la lógica está bien.
+
+173
+00:09:07,010 --> 00:09:10,010
+Vamos a seguir trabajando ahora en la generación de los botones.
+
+174
+00:09:11,490 --> 00:09:17,670
+Como puedes ver en el HTML tengo tres botones de ejemplo para un índice uno.
+
+175
+00:09:17,670 --> 00:09:19,050
+Índice dos índice tres.
+
+176
+00:09:19,050 --> 00:09:22,140
+Están rodeados, pero ahora quiero que sean dinámicos.
+
+177
+00:09:22,380 --> 00:09:28,380
+Significa que tengo que crear un bucle que imprima el número de páginas que el página de Jango me ha
+
+178
+00:09:28,380 --> 00:09:29,010
+generado.
+
+179
+00:09:30,760 --> 00:09:35,140
+Entonces voy a borrar este dos y tres y solamente me quedo con uno, como el ejemplo.
+
+180
+00:09:36,500 --> 00:09:38,600
+Que es el que va a trabajarse dentro del bucle.
+
+181
+00:09:41,090 --> 00:09:49,070
+Voy a colocar entonces acá, entre llaves y porcentajes, un bucle que recorra con índice de y.
+
+182
+00:09:51,130 --> 00:09:54,770
+En productos Aitor Raya para abajo.
+
+183
+00:09:56,220 --> 00:09:58,800
+Página Doctor Punto pg.
+
+184
+00:10:00,160 --> 00:10:00,680
+Branch.
+
+185
+00:10:01,180 --> 00:10:01,570
+Listo.
+
+186
+00:10:05,920 --> 00:10:07,510
+Y aquí voy a indicarle que termine.
+
+187
+00:10:14,500 --> 00:10:15,420
+Volvemos a la página.
+
+188
+00:10:15,440 --> 00:10:17,680
+Solo un momento para mostrarte algo.
+
+189
+00:10:17,920 --> 00:10:20,290
+Cuando estoy en la página actual.
+
+190
+00:10:20,920 --> 00:10:24,130
+Lo que pasa con el número índice que lo representa.
+
+191
+00:10:24,460 --> 00:10:25,870
+Tiene que estar como activo.
+
+192
+00:10:26,140 --> 00:10:27,950
+Tiene que tener un color de fondo diferente.
+
+193
+00:10:27,970 --> 00:10:30,640
+Este color es gracias a un clase que se llama Active.
+
+194
+00:10:31,770 --> 00:10:35,490
+Otra cosa adicional es que también está deshabilitado el botón.
+
+195
+00:10:36,450 --> 00:10:40,020
+Es decir, si le doy click no va a pasar nada porque ya estoy en la página actual.
+
+196
+00:10:40,410 --> 00:10:46,110
+Solo debe ejecutarse el action del botón cuando no está activo.
+
+197
+00:10:46,110 --> 00:10:49,560
+Cuando quiero ir a otras páginas, no a la página actual.
+
+198
+00:10:50,040 --> 00:10:53,370
+Claro, darle click otra vez al botón sería redundante.
+
+199
+00:10:53,370 --> 00:10:56,850
+Sería volver a recargar la página para volver al mismo momento.
+
+200
+00:10:58,160 --> 00:11:05,660
+Por ese motivo, dentro del bucle for que estoy haciendo aquí, voy a condicionar para saber si mi índice
+
+201
+00:11:05,660 --> 00:11:07,370
+se encuentra en la página actual.
+
+202
+00:11:08,620 --> 00:11:10,930
+Por eso voy a colocar aquí entre Chávez.
+
+203
+00:11:12,720 --> 00:11:13,860
+Y porcentajes.
+
+204
+00:11:13,890 --> 00:11:14,760
+Una condición.
+
+205
+00:11:16,100 --> 00:11:16,610
+Sí.
+
+206
+00:11:18,920 --> 00:11:20,330
+Sería Products.
+
+207
+00:11:22,160 --> 00:11:23,570
+Punto number.
+
+208
+00:11:25,050 --> 00:11:25,860
+Es igual.
+
+209
+00:11:26,760 --> 00:11:27,390
+Al y.
+
+210
+00:11:29,810 --> 00:11:32,960
+Entonces esto va a significar que estoy en la página actual.
+
+211
+00:11:33,500 --> 00:11:37,220
+En ese caso, tengo que llamar al Glass de Active.
+
+212
+00:11:38,940 --> 00:11:42,090
+Aquí está el artículo y también el href.
+
+213
+00:11:42,570 --> 00:11:45,510
+En este caso debe ser como deshabilitado.
+
+214
+00:11:45,510 --> 00:11:46,860
+Por eso le puse el numeral.
+
+215
+00:11:48,690 --> 00:11:50,940
+Pero si es un él o le ponemos acá.
+
+216
+00:11:53,480 --> 00:11:54,140
+Sí, es genial.
+
+217
+00:11:54,320 --> 00:11:56,080
+Entonces voy a colocar.
+
+218
+00:11:56,360 --> 00:11:58,340
+Voy a copiar esta línea del Hailey.
+
+219
+00:11:59,540 --> 00:12:00,740
+No debe ser activo.
+
+220
+00:12:03,550 --> 00:12:08,500
+Y me debe llevar a donde me debe llevar al href que representa el pdf.
+
+221
+00:12:09,920 --> 00:12:12,470
+Al número de página que es el contador.
+
+222
+00:12:12,710 --> 00:12:13,100
+Verdad?
+
+223
+00:12:13,760 --> 00:12:14,150
+Listo.
+
+224
+00:12:15,280 --> 00:12:17,320
+Ah, mira aquí también en la sección de label.
+
+225
+00:12:17,350 --> 00:12:18,610
+Voy a reemplazar este uno.
+
+226
+00:12:20,380 --> 00:12:21,310
+Por el contador.
+
+227
+00:12:21,790 --> 00:12:22,420
+Aquí también.
+
+228
+00:12:26,100 --> 00:12:26,940
+Por el contador.
+
+229
+00:12:27,240 --> 00:12:27,750
+Listo.
+
+230
+00:12:28,380 --> 00:12:29,970
+Y cerramos un momento aquí.
+
+231
+00:12:31,930 --> 00:12:33,430
+Cerramos este if.
+
+232
+00:12:33,790 --> 00:12:35,110
+Lo ponemos en if.
+
+233
+00:12:37,770 --> 00:12:39,470
+Pero los espacios para que lo notes.
+
+234
+00:12:39,480 --> 00:12:40,320
+Perfecto.
+
+235
+00:12:40,950 --> 00:12:43,980
+Vamos a borrar los cambios y probamos el Safe Hall.
+
+236
+00:12:45,740 --> 00:12:47,540
+Estamos en la página web de actualizar.
+
+237
+00:12:48,920 --> 00:12:49,310
+Listo.
+
+238
+00:12:49,310 --> 00:12:52,700
+Ya está aquí imprimiendo las páginas, que son tres.
+
+239
+00:12:53,480 --> 00:12:57,320
+Si le doy clic a la página dos, me llevó a la página dos.
+
+240
+00:12:57,320 --> 00:12:57,950
+Perfecto.
+
+241
+00:12:57,950 --> 00:12:58,790
+Y vamos a ver.
+
+242
+00:12:58,790 --> 00:13:01,130
+Y si ya está poniendo el activo en la página dos?
+
+243
+00:13:01,790 --> 00:13:04,130
+Si le vuelvo a dar clic, no va a pasar nada.
+
+244
+00:13:04,130 --> 00:13:05,090
+No debería pasar nada.
+
+245
+00:13:06,800 --> 00:13:12,740
+Y si le doy clic a la página tres, también me lleva a la página tres, que tiene un solo producto,
+
+246
+00:13:12,740 --> 00:13:13,290
+recuerdas?
+
+247
+00:13:13,310 --> 00:13:18,020
+Tengo tres grupos, un primer grupo de cinco, segundo grupo de cinco y el tercero de uno.
+
+248
+00:13:19,070 --> 00:13:20,240
+Volvemos a la página uno.
+
+249
+00:13:22,240 --> 00:13:22,400
+Bien.
+
+250
+00:13:22,630 --> 00:13:23,350
+Continuamos?
+
+251
+00:13:24,250 --> 00:13:27,220
+Nos falta solo un botón que es el siguiente.
+
+252
+00:13:27,730 --> 00:13:33,270
+El de Next o siguiente es muy similar a la lógica que hemos aplicado para el previews.
+
+253
+00:13:34,250 --> 00:13:39,040
+Vamos agregarle aquí un entre llaves y porcentajes if.
+
+254
+00:13:40,640 --> 00:13:43,190
+Product at next.
+
+255
+00:13:44,700 --> 00:13:50,730
+Y acá en el href le vamos a cambiar para que me lleve hacia Pech igual a.
+
+256
+00:13:51,860 --> 00:13:53,000
+Entre llaves.
+
+257
+00:13:56,820 --> 00:14:02,880
+Le ponemos a Product Products Next Pet Number.
+
+258
+00:14:04,940 --> 00:14:06,560
+Y le ponemos ahora su L.
+
+259
+00:14:13,900 --> 00:14:15,100
+Vamos a copiar esta ley.
+
+260
+00:14:18,950 --> 00:14:21,560
+Y aquí para ese caso debería ser deshabilitado.
+
+261
+00:14:21,560 --> 00:14:22,560
+Por eso le pongo PG.
+
+262
+00:14:22,610 --> 00:14:25,490
+Item, ya está puesto espacio disabled.
+
+263
+00:14:26,480 --> 00:14:29,270
+Deshabilitado y el href también se lo voy a quitar.
+
+264
+00:14:31,730 --> 00:14:33,410
+Para que aparezca se signo numeral.
+
+265
+00:14:33,800 --> 00:14:34,280
+Listo.
+
+266
+00:14:35,600 --> 00:14:37,380
+Y cerramos el if.
+
+267
+00:14:40,640 --> 00:14:45,200
+En if vamos a borrar los cambios nenúfares safe all y vamos a la página.
+
+268
+00:14:46,010 --> 00:14:46,990
+Estamos en la página.
+
+269
+00:14:47,000 --> 00:14:47,960
+Voy a refrescar.
+
+270
+00:14:49,460 --> 00:14:50,240
+Está perfecto.
+
+271
+00:14:50,250 --> 00:14:52,800
+Voy a darle click a este botón de dos, página dos.
+
+272
+00:14:53,130 --> 00:14:56,790
+La página siguiente me llevó efectivamente a la página tres.
+
+273
+00:14:57,750 --> 00:14:59,400
+Y luego de esto ya no hay más páginas.
+
+274
+00:14:59,400 --> 00:15:01,200
+Por eso está deshabilitado.
+
+275
+00:15:01,580 --> 00:15:08,340
+Bien, entonces de esta forma ya hemos implementado nuestro control de paginación de productos en nuestro
+
+276
+00:15:08,340 --> 00:15:09,720
+proyecto e-commerce.

@@ -1,0 +1,639 @@
+1
+00:00:00,540 --> 00:00:07,980
+A continuación, vamos a trabajar en una funcionalidad para contar el número de ítems que tengo en mi
+
+2
+00:00:07,980 --> 00:00:08,940
+carrito de compras.
+
+3
+00:00:09,090 --> 00:00:10,680
+Por ejemplo, ahora tengo uno.
+
+4
+00:00:11,370 --> 00:00:16,930
+Entonces debería aparecerme aquí, en este icono de la parte derecha superior, un valor de uno.
+
+5
+00:00:16,950 --> 00:00:21,920
+Qué pasaría si de repente agrego otro, otro producto a mi carrito de compra?
+
+6
+00:00:21,930 --> 00:00:28,370
+Por ejemplo, este servidor está fresco, seleccionamos otro, el MacBook Pro, agregar a pinchar.
+
+7
+00:00:28,740 --> 00:00:30,240
+En este caso ya tengo dos.
+
+8
+00:00:30,570 --> 00:00:35,820
+Entonces ese número dos debería refrescar el icono del carrito en la parte superior.
+
+9
+00:00:36,000 --> 00:00:42,660
+Para que esto ocurra, voy a tener que trabajar con una función global dentro de un archivo de tipo
+
+10
+00:00:42,660 --> 00:00:43,980
+Context proceso.
+
+11
+00:00:45,840 --> 00:00:47,060
+Estamos dentro de Atton.
+
+12
+00:00:47,070 --> 00:00:55,110
+Vamos a ir ahora al a la carpeta Cartas y dentro de Katz vamos a darle clic derecho y luego New File.
+
+13
+00:00:55,560 --> 00:00:58,800
+Y aquí vamos a crear un archivo que se va a llamar Context.
+
+14
+00:00:58,800 --> 00:00:59,760
+Raya para abajo.
+
+15
+00:00:59,760 --> 00:01:05,640
+Procesos doble s, punto PI y leamos Enter.
+
+16
+00:01:06,590 --> 00:01:12,560
+Ya hemos creado el archivo y comencemos creando las referencias, los soportes, las herramientas que
+
+17
+00:01:12,560 --> 00:01:13,610
+necesite esta función.
+
+18
+00:01:14,640 --> 00:01:22,260
+Primeramente de ese punto Mothers voy a tener que importar a Cart y también a la estructura del car
+
+19
+00:01:22,460 --> 00:01:23,190
+ídem.
+
+20
+00:01:24,280 --> 00:01:30,970
+También voy a utilizar la función que me permite buscar en carrito de compras utilizando como parámetro
+
+21
+00:01:31,210 --> 00:01:32,260
+el objeto request.
+
+22
+00:01:32,590 --> 00:01:37,780
+Por eso se front bus import y llamo a la función cart.
+
+23
+00:01:39,660 --> 00:01:40,530
+Raya para abajo.
+
+24
+00:01:41,190 --> 00:01:41,580
+Heidi.
+
+25
+00:01:42,500 --> 00:01:43,590
+Perfecto.
+
+26
+00:01:43,640 --> 00:01:48,560
+Vamos a crear a continuación la función de tipo de global que se va a llamar Counter.
+
+27
+00:01:51,000 --> 00:01:54,120
+Y recibe un parámetro o un objeto de tipo request.
+
+28
+00:01:55,130 --> 00:02:02,750
+Voy a indicarle por ahora que el carcome, que voy a devolverle al cliente comience como cero, o sea,
+
+29
+00:02:03,470 --> 00:02:07,010
+la cantidad de elementos del carrito de compras, sea en un primer momento cero.
+
+30
+00:02:07,930 --> 00:02:12,010
+Y ahora, antes de comenzar la lógica, vamos a crear un try catch.
+
+31
+00:02:12,430 --> 00:02:19,630
+Primeramente comenzamos con el try dos puntos, try dos puntos y voy a buscar al objeto carrito de compras.
+
+32
+00:02:20,750 --> 00:02:28,490
+Hago un cart punto object, punto filter y aplicamos la lógica para encontrar este carrito de compras
+
+33
+00:02:28,490 --> 00:02:30,740
+como lo hemos venido haciendo desde clases pasadas.
+
+34
+00:02:31,190 --> 00:02:39,110
+Llamo a su columna Car Aid y busco por el ID y para encontrarlo utilizo a esta función raya para abajo.
+
+35
+00:02:39,110 --> 00:02:40,600
+Id, Jared.
+
+36
+00:02:41,740 --> 00:02:43,180
+Y le paso el objeto.
+
+37
+00:02:46,030 --> 00:02:48,070
+De esta forma ya encontré el objeto.
+
+38
+00:02:48,070 --> 00:02:48,610
+Carrito.
+
+39
+00:02:48,880 --> 00:02:49,450
+Carrito.
+
+40
+00:02:50,330 --> 00:02:51,200
+Vamos por el siguiente.
+
+41
+00:02:51,200 --> 00:02:54,170
+Ahora quiero buscar los elementos del carrito de compras.
+
+42
+00:02:54,170 --> 00:02:57,020
+Por eso invoco al Card para abajo Items.
+
+43
+00:02:58,060 --> 00:02:59,840
+Llamó a su estructura card.
+
+44
+00:03:00,790 --> 00:03:01,480
+Car item.
+
+45
+00:03:04,330 --> 00:03:05,950
+Object Tool.
+
+46
+00:03:08,160 --> 00:03:11,280
+De que le voy a poner punto filter y aplico la condición.
+
+47
+00:03:11,610 --> 00:03:16,500
+Quiero que me traiga al carrito de compras, pero por defecto te trae un arreglo, aunque ese arreglo
+
+48
+00:03:16,500 --> 00:03:17,610
+solo tenga un elemento.
+
+49
+00:03:17,970 --> 00:03:20,700
+Así que para que te devuelva solo un elemento.
+
+50
+00:03:21,850 --> 00:03:24,130
+Voy a colocarle kart igual a kart.
+
+51
+00:03:26,100 --> 00:03:26,970
+2.1.
+
+52
+00:03:28,280 --> 00:03:33,800
+A lo que me refiero que trae un solo elemento es a esta búsqueda que hice inicialmente al filter.
+
+53
+00:03:35,000 --> 00:03:37,520
+Entonces solamente quiero que me devuelva un elemento.
+
+54
+00:03:37,970 --> 00:03:42,830
+Recuerda, es una colección, pero tenés que indicarle, aunque tenga esta colección, un elemento que
+
+55
+00:03:43,430 --> 00:03:45,290
+apunte solo a este elemento.
+
+56
+00:03:47,070 --> 00:03:47,890
+Lo tenemos.
+
+57
+00:03:47,910 --> 00:03:54,480
+Ahora lo que quiero es saber la cantidad total de items que tengo dentro de este específico carrito,
+
+58
+00:03:55,200 --> 00:04:00,780
+pero no me estoy refiriendo solamente a las líneas, sino me refiero a la cantidad de productos.
+
+59
+00:04:02,870 --> 00:04:06,170
+Porque me puede decir, profesor, pero usted aquí tiene dos líneas.
+
+60
+00:04:06,170 --> 00:04:07,880
+Entonces sería aquí solamente dos.
+
+61
+00:04:08,030 --> 00:04:12,080
+Pero qué pasaría si árbol tiene una cantidad de cuatro?
+
+62
+00:04:12,970 --> 00:04:15,040
+Cuánto debería apuntar en el carrito?
+
+63
+00:04:15,040 --> 00:04:15,490
+Este.
+
+64
+00:04:15,820 --> 00:04:16,600
+Este número está en cero.
+
+65
+00:04:16,600 --> 00:04:16,750
+Pero.
+
+66
+00:04:16,750 --> 00:04:17,680
+Cuánto debería ser?
+
+67
+00:04:18,310 --> 00:04:21,100
+Debería ser cuatro más uno cinco.
+
+68
+00:04:21,640 --> 00:04:28,510
+Entonces lo que tengo que sumar acá y mostrar dentro del carrito es el número, la cantidad total de
+
+69
+00:04:28,540 --> 00:04:32,320
+elementos que voy a comprar, aunque solo tenga dos líneas.
+
+70
+00:04:32,470 --> 00:04:34,820
+La cantidad puede ser muy diferente.
+
+71
+00:04:34,840 --> 00:04:40,600
+Por ejemplo, aquí, en este caso el MacBook Pro le puedo indicar que sea seis, seis más cuatro.
+
+72
+00:04:41,260 --> 00:04:43,240
+Entonces debería apuntarme a diez.
+
+73
+00:04:44,900 --> 00:04:52,490
+Por ese motivo debo de crear un bucle que lea cada una de las líneas de car items y obtenga el quality
+
+74
+00:04:52,490 --> 00:04:59,990
+de cada línea y ir acumulando línea por línea el quality y obtener la sumatoria total de quality.
+
+75
+00:05:00,440 --> 00:05:02,870
+Por ese motivo, aquí vamos a hacer un for.
+
+76
+00:05:04,280 --> 00:05:05,450
+Car y tem.
+
+77
+00:05:07,730 --> 00:05:09,770
+In car items.
+
+78
+00:05:10,100 --> 00:05:12,020
+Ahora si, dos puntos.
+
+79
+00:05:13,550 --> 00:05:15,040
+Y le digo que el car count.
+
+80
+00:05:15,050 --> 00:05:18,230
+Recuerdas la variable que definí inicialmente que tiene un valor de cero?
+
+81
+00:05:18,780 --> 00:05:22,910
+Si va a ser igual a un car item.
+
+82
+00:05:24,080 --> 00:05:24,390
+Punto.
+
+83
+00:05:24,410 --> 00:05:30,830
+Cuándo va a irse acumulando aquí cada una de las cantidades de los productos que yo he seleccionado
+
+84
+00:05:31,070 --> 00:05:32,510
+dentro de mi carrito de compras?
+
+85
+00:05:33,800 --> 00:05:34,790
+Lo tengo listo.
+
+86
+00:05:35,020 --> 00:05:36,350
+Pero eso sería todo.
+
+87
+00:05:36,560 --> 00:05:37,760
+La lógica del Tri.
+
+88
+00:05:38,390 --> 00:05:40,860
+Ahora le voy a poner su SP.
+
+89
+00:05:40,910 --> 00:05:42,710
+Qué pasaría si ocurre un error?
+
+90
+00:05:42,920 --> 00:05:45,740
+Dentro de las búsquedas del CAR o del car items.
+
+91
+00:05:46,220 --> 00:05:46,730
+Entonces.
+
+92
+00:05:46,730 --> 00:05:48,560
+En ese caso le voy a decir cart.
+
+93
+00:05:49,820 --> 00:05:53,120
+Punto does not exist no existe.
+
+94
+00:05:54,550 --> 00:05:55,420
+Dos puntos.
+
+95
+00:05:56,410 --> 00:06:00,160
+Y en ese caso quiero que el car count sea igual a cero.
+
+96
+00:06:02,160 --> 00:06:04,650
+Y finalmente quiero que me haga un return.
+
+97
+00:06:07,230 --> 00:06:08,820
+Devolviendo el car count.
+
+98
+00:06:13,390 --> 00:06:14,290
+Con esa variable.
+
+99
+00:06:16,000 --> 00:06:20,500
+A continuación vamos a registrar esta función counter dentro de mi proyecto.
+
+100
+00:06:20,950 --> 00:06:24,850
+Vayamos entonces a la carpeta e-commerce dentro de e-commerce.
+
+101
+00:06:25,570 --> 00:06:31,960
+Vamos ahora al Crystal I y busquemos ahora la opción Templates.
+
+102
+00:06:32,050 --> 00:06:34,390
+La propiedad Templates está más abajo.
+
+103
+00:06:35,320 --> 00:06:36,520
+Aquí aparece Templates.
+
+104
+00:06:36,670 --> 00:06:37,540
+Como puedes verlo?
+
+105
+00:06:39,010 --> 00:06:41,890
+Y dentro de templates aparece la opción de options.
+
+106
+00:06:43,040 --> 00:06:44,210
+Hasta que aparecen los options.
+
+107
+00:06:44,630 --> 00:06:46,700
+Luego del menu links vamos a darle una coma.
+
+108
+00:06:48,060 --> 00:06:49,170
+Que le voy a indicar carts.
+
+109
+00:06:49,230 --> 00:06:56,520
+Mi aplicación carts tiene un archivo que se llama Context Resource y registra la función counter y una
+
+110
+00:06:56,520 --> 00:06:57,670
+coma al final.
+
+111
+00:06:57,750 --> 00:07:00,300
+Ten mucho cuidado siempre con la sintaxis en Python.
+
+112
+00:07:01,200 --> 00:07:02,180
+Vamos a borrar los cambios.
+
+113
+00:07:02,200 --> 00:07:03,390
+Menú File Safe All.
+
+114
+00:07:05,350 --> 00:07:10,870
+A continuación, tenemos que trabajar dentro de este icono porque quiero que se actualice con la cantidad
+
+115
+00:07:10,870 --> 00:07:13,450
+total de elementos que están en el carrito de compras.
+
+116
+00:07:13,840 --> 00:07:19,240
+Y aparte, también quiero que cuando el usuario le dé clic a este icono, lo redirecciona directamente
+
+117
+00:07:19,240 --> 00:07:23,590
+al carrito de compras, no importando si es en la página One o Store o cualquiera.
+
+118
+00:07:24,010 --> 00:07:30,250
+Vayamos entonces a este ícono que se encuentra en nuestro template que se llama La barra html.
+
+119
+00:07:31,800 --> 00:07:32,940
+Está nuevamente en auto.
+
+120
+00:07:32,970 --> 00:07:38,310
+Vamos a ir a la carpeta templates a que aparece includes dentro de aparecen add par.
+
+121
+00:07:39,320 --> 00:07:42,860
+Y ahora vamos más o menos a la línea 70 75.
+
+122
+00:07:43,920 --> 00:07:44,090
+Sí.
+
+123
+00:07:44,250 --> 00:07:46,800
+Y aquí aparece, en mi caso, la línea 71.
+
+124
+00:07:46,830 --> 00:07:48,000
+Tienes que buscarlo.
+
+125
+00:07:48,330 --> 00:07:51,870
+Eso va a depender de cómo tú has copiado y pegado el código en tu archivo.
+
+126
+00:07:52,890 --> 00:07:55,620
+Y aquí aparece el punto HTML.
+
+127
+00:07:57,390 --> 00:08:00,900
+Y aparece también el icono del shopping card del carrito de compras.
+
+128
+00:08:02,010 --> 00:08:07,800
+Y este es el valor por defecto que está apuntando ahora el badge, que es en cero cero cantidad.
+
+129
+00:08:08,010 --> 00:08:09,360
+Aquí lo voy a reemplazar.
+
+130
+00:08:10,490 --> 00:08:17,030
+Y en su lugar vamos a colocarle la función global que he creado de Contact Professor, que es Card count.
+
+131
+00:08:17,390 --> 00:08:17,900
+Listo.
+
+132
+00:08:19,290 --> 00:08:20,220
+Eso está muy bien.
+
+133
+00:08:20,250 --> 00:08:24,990
+Aparte tengo un href que me redirecciona a la página de cart.
+
+134
+00:08:25,560 --> 00:08:28,080
+Voy a eliminar este href que tiene por defecto.
+
+135
+00:08:29,420 --> 00:08:33,590
+Vamos a poner llaves, también porcentajes.
+
+136
+00:08:33,860 --> 00:08:39,860
+Llamó a la función y le digo a dónde quiero que me lleve a la página de carta alta en Play cart.
+
+137
+00:08:40,770 --> 00:08:41,390
+Listo.
+
+138
+00:08:41,430 --> 00:08:42,120
+Lo tenemos.
+
+139
+00:08:42,120 --> 00:08:45,660
+Vamos a ir a menú Field Safe All y vamos a probar.
+
+140
+00:08:46,560 --> 00:08:49,830
+Estamos en la página de cart local ocho cart.
+
+141
+00:08:50,190 --> 00:08:53,610
+Vamos a refrescar y mira automáticamente.
+
+142
+00:08:53,610 --> 00:08:56,310
+Ya me está devolviendo la cantidad de seis.
+
+143
+00:08:56,820 --> 00:09:01,590
+Aquí sucede esto porque no estoy acumulando las cantidades dentro del bucle, sino que estoy tomando
+
+144
+00:09:01,590 --> 00:09:04,350
+la última, que en este caso es la de mapeo.
+
+145
+00:09:04,680 --> 00:09:06,240
+Vamos a revisar nuestra función.
+
+146
+00:09:07,250 --> 00:09:11,210
+Ya sabes que se encuentra la carpeta cards, que es el archivo con proceso del punto PI.
+
+147
+00:09:11,660 --> 00:09:16,980
+Aquí está mi función def counter y este es el bucle que tiene que acumular, pero no está acumulando.
+
+148
+00:09:17,040 --> 00:09:24,980
+Mira, aquí me faltó un signo, el signo de suma que va a permitir acumular todas las cantidades dentro
+
+149
+00:09:25,430 --> 00:09:30,260
+de este card count, que es el que finalmente estoy devolviendo al final de la función.
+
+150
+00:09:30,710 --> 00:09:33,260
+Voy a guardar los cambios de no false f all.
+
+151
+00:09:34,650 --> 00:09:36,330
+Y ahora vamos a la página nuevamente.
+
+152
+00:09:37,630 --> 00:09:39,430
+Esto en la página me sigue mostrando seis.
+
+153
+00:09:39,430 --> 00:09:40,720
+Pero vamos a refrescarlo.
+
+154
+00:09:42,040 --> 00:09:46,870
+Y ahora sí, como puedes ver, ya me muestra el número diez, la cantidad total.
+
+155
+00:09:47,050 --> 00:09:48,400
+Y si voy actualizándolo?
+
+156
+00:09:49,570 --> 00:09:51,310
+Para, por ejemplo, haberle quitado uno.
+
+157
+00:09:51,320 --> 00:09:54,670
+Ya bajó a nueve, le quitó otro, después también bajó ocho.
+
+158
+00:09:55,030 --> 00:10:00,550
+Si subo dos más, va a subir a diez y así va a ir actualizándose constantemente.
+
+159
+00:10:00,850 --> 00:10:04,150
+Nuestro icono del carrito de compras con su respectivo badge.
+
+160
+00:10:04,810 --> 00:10:06,370
+Continuamos en el siguiente capítulo.

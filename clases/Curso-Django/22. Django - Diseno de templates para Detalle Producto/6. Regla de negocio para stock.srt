@@ -1,0 +1,291 @@
+1
+00:00:00,420 --> 00:00:05,460
+Algo muy interesante de trabajar con Jango es que puedes controlar dinámicamente la lógica de negocios
+
+2
+00:00:05,760 --> 00:00:07,560
+al interior de la página.
+
+3
+00:00:07,770 --> 00:00:13,680
+Puedes tener el control total y desplegar cierta lógica dependiendo de la data que esté en la base de
+
+4
+00:00:13,680 --> 00:00:14,220
+datos.
+
+5
+00:00:14,400 --> 00:00:18,090
+Por ejemplo, qué pasaría si no tuviera stock de un producto?
+
+6
+00:00:18,450 --> 00:00:23,160
+En ese caso, yo debería de indicarle al cliente de que no puede comprarlo en ese momento.
+
+7
+00:00:23,430 --> 00:00:26,100
+Ves el mensaje como que está fuera de stock.
+
+8
+00:00:26,790 --> 00:00:28,830
+Por ejemplo, vamos a darle click a este hedge funds.
+
+9
+00:00:30,000 --> 00:00:33,660
+Aquí aparece este botón de agregar al shopping card para comprarlo.
+
+10
+00:00:33,870 --> 00:00:38,730
+Pero qué pasaría si este no tuviera stock que el stock fuera cero?
+
+11
+00:00:39,150 --> 00:00:41,640
+Entonces no debería de aparecer este botón.
+
+12
+00:00:42,600 --> 00:00:44,520
+Este es el tema de este capítulo.
+
+13
+00:00:44,580 --> 00:00:49,170
+Vamos a agregar una lógica para condicionar la compra de un producto.
+
+14
+00:00:51,290 --> 00:00:54,760
+Vamos entonces a nuestro proyecto, vamos a ir a Templates.
+
+15
+00:00:54,770 --> 00:01:00,740
+Dentro de Templates va a aparecer el editor y también aparece el includes.
+
+16
+00:01:01,640 --> 00:01:06,230
+Lo que nos interesa dentro del store es el producto item, el punto HTML.
+
+17
+00:01:06,500 --> 00:01:13,340
+Vamos a abrirlo y ahora vamos a ubicarnos en el botón que me permite hacer la compra, agregar ese producto
+
+18
+00:01:13,340 --> 00:01:14,300
+al carrito de compras.
+
+19
+00:01:14,930 --> 00:01:21,170
+Vamos a la parte inferior, más o menos en la línea 76 71.
+
+20
+00:01:21,380 --> 00:01:22,100
+Aquí aparece.
+
+21
+00:01:22,970 --> 00:01:25,130
+Voy a maximizar mi archivo.
+
+22
+00:01:25,790 --> 00:01:30,500
+Aquí aparece este botón que representa agregar al Shopping Card.
+
+23
+00:01:31,370 --> 00:01:37,010
+Pero este botón yo solo quiero que aparezca cuando el producto tiene stock.
+
+24
+00:01:37,010 --> 00:01:40,310
+Si no hay stock del producto, no debería aparecer este botón.
+
+25
+00:01:42,010 --> 00:01:43,780
+Entonces vamos a hacer una condición aquí.
+
+26
+00:01:44,850 --> 00:01:50,900
+Voy a poner entre llaves y signos de porcentaje.
+
+27
+00:01:50,910 --> 00:01:51,720
+Esta condición?
+
+28
+00:01:51,730 --> 00:01:52,200
+Si.
+
+29
+00:01:54,390 --> 00:01:57,360
+El producto single produc punto stocks.
+
+30
+00:01:59,530 --> 00:02:02,830
+Es menor o igual que cero.
+
+31
+00:02:04,060 --> 00:02:05,560
+Entonces que suceda lo siguiente.
+
+32
+00:02:05,560 --> 00:02:06,520
+Qué es lo que quiero que suceda?
+
+33
+00:02:06,550 --> 00:02:08,140
+Que aparezca un mensaje de error.
+
+34
+00:02:08,950 --> 00:02:09,750
+Lo voy a poner por ahora.
+
+35
+00:02:09,790 --> 00:02:10,600
+Un h5.
+
+36
+00:02:12,800 --> 00:02:15,110
+Que le diga no tiene stok.
+
+37
+00:02:17,940 --> 00:02:19,590
+Oh, le pongo producto fuera de stock.
+
+38
+00:02:19,980 --> 00:02:21,510
+Producto fuera de stock.
+
+39
+00:02:23,770 --> 00:02:25,330
+Pero en caso contrario.
+
+40
+00:02:26,880 --> 00:02:28,260
+Que si sea posible comprarlo.
+
+41
+00:02:28,260 --> 00:02:31,890
+Por eso lo pongo entre llaves y porcentajes reales.
+
+42
+00:02:32,580 --> 00:02:36,630
+Y para ese caso, sí quiero que se imprima este botón.
+
+43
+00:02:38,900 --> 00:02:40,340
+Y cierro la condición.
+
+44
+00:02:42,030 --> 00:02:46,320
+Llaves, porcentajes y le pongo el end end if.
+
+45
+00:02:47,350 --> 00:02:47,950
+Perfecto.
+
+46
+00:02:48,250 --> 00:02:49,190
+Vamos a comprobarlo.
+
+47
+00:02:49,210 --> 00:02:52,300
+Menú File Save All y vamos a la página.
+
+48
+00:02:53,420 --> 00:02:55,750
+Estamos en la página ocho.
+
+49
+00:02:55,770 --> 00:02:56,510
+Miguel Accesorios.
+
+50
+00:02:57,080 --> 00:02:58,730
+Bueno, vamos a seleccionar otro producto.
+
+51
+00:02:59,180 --> 00:03:02,180
+Por ejemplo, este que se llama Computadoras de stock.
+
+52
+00:03:03,700 --> 00:03:04,310
+Te lo tengo.
+
+53
+00:03:04,330 --> 00:03:07,270
+Como puedes ver, ya me aparece aquí el producto.
+
+54
+00:03:07,750 --> 00:03:08,800
+Agregar a eso, pinchar.
+
+55
+00:03:09,100 --> 00:03:11,050
+Si lo refrescas vas a notar también.
+
+56
+00:03:11,070 --> 00:03:16,120
+Aquí aparece el producto porque tiene stock, pero tu quieres que no tenga stock para que aparezca el
+
+57
+00:03:16,120 --> 00:03:16,620
+mensaje.
+
+58
+00:03:16,630 --> 00:03:17,440
+No te preocupes.
+
+59
+00:03:17,440 --> 00:03:21,250
+Entonces vamos al localhost 8000 admin en otro tab.
+
+60
+00:03:22,610 --> 00:03:24,260
+Y aquí aparece la lista de productos.
+
+61
+00:03:25,460 --> 00:03:28,160
+Vamos a buscar ese producto que se llama computadoras.
+
+62
+00:03:28,610 --> 00:03:29,330
+Aquí lo tengo.
+
+63
+00:03:29,960 --> 00:03:30,800
+Vamos a darle clic.
+
+64
+00:03:32,300 --> 00:03:33,200
+Y aquí aparece.
+
+65
+00:03:33,200 --> 00:03:34,670
+Debería aparecer el stok.
+
+66
+00:03:34,670 --> 00:03:37,370
+Tiene un stok de 800, pero lo voy a cambiar a cero.
+
+67
+00:03:38,640 --> 00:03:39,840
+Guardo los cambios.
+
+68
+00:03:40,930 --> 00:03:47,140
+Esto iba nuevamente a mi página, al detalle del producto computadora de stock y voy a refrescar.
+
+69
+00:03:48,160 --> 00:03:49,390
+Y mira lo que pasó.
+
+70
+00:03:49,630 --> 00:03:56,020
+Ya el botón desapareció y en su lugar me aparece este mensaje que me indica producto fuera de stock.
+
+71
+00:03:56,030 --> 00:03:57,430
+No vas a poder comprarlo.
+
+72
+00:03:58,240 --> 00:03:59,080
+Perfecto.
+
+73
+00:03:59,320 --> 00:04:01,150
+Continuamos en el siguiente capítulo.

@@ -1,0 +1,467 @@
+1
+00:00:00,480 --> 00:00:05,250
+En el capítulo anterior trabajamos en la actualización del editor de perfil de usuario.
+
+2
+00:00:05,260 --> 00:00:07,800
+Bueno, mostrar el formulario y también actualizarlo.
+
+3
+00:00:08,040 --> 00:00:11,340
+Si yo quisiera, podría poner aquí Nestor Arcila.
+
+4
+00:00:12,580 --> 00:00:16,330
+Luego le damos clic al botón Guardar y ya se almacenó con éxito.
+
+5
+00:00:17,260 --> 00:00:20,260
+Si actualizo, vas a notar que aparece la información de la base de datos.
+
+6
+00:00:21,310 --> 00:00:22,450
+Lo ponemos también aquí.
+
+7
+00:00:22,580 --> 00:00:23,410
+Bakshi tres.
+
+8
+00:00:24,040 --> 00:00:24,400
+Esto.
+
+9
+00:00:25,320 --> 00:00:26,160
+Y actualizamos.
+
+10
+00:00:26,730 --> 00:00:28,230
+Lo mismo va a pasar para la imagen.
+
+11
+00:00:28,230 --> 00:00:31,380
+Tú puedes seleccionar la imagen que tu deseas para tu perfil.
+
+12
+00:00:31,710 --> 00:00:34,440
+Por ejemplo, si voy a tu avatar y me Michelle.
+
+13
+00:00:35,500 --> 00:00:42,880
+Voy a descargar cualquier imagen, esta imagen le voy a dar clic derecho y así la voy a guardar en mi
+
+14
+00:00:42,880 --> 00:00:43,600
+computadora.
+
+15
+00:00:45,150 --> 00:00:50,460
+Le vamos a poner Avatar dos PNG y lo guardamos listo.
+
+16
+00:00:51,540 --> 00:00:54,300
+Ahora vamos de nuevo a la página de e-commerce.
+
+17
+00:00:54,840 --> 00:00:57,480
+Y aquí voy a seleccionar esta imagen que acabo de descargar.
+
+18
+00:00:58,870 --> 00:00:59,710
+Avatar dos.
+
+19
+00:01:01,410 --> 00:01:02,240
+Ya lo tengo aquí.
+
+20
+00:01:02,250 --> 00:01:03,060
+Voy a guardar.
+
+21
+00:01:03,420 --> 00:01:04,410
+Y mira lo que sucede.
+
+22
+00:01:05,100 --> 00:01:07,440
+Ya se actualizó también la imagen.
+
+23
+00:01:08,430 --> 00:01:10,090
+Pero aquí tengo un pequeño problema.
+
+24
+00:01:10,110 --> 00:01:13,920
+Esto sucede cuando ya el perfil ha sido creado.
+
+25
+00:01:14,190 --> 00:01:17,040
+Pero cuando yo registro un nuevo usuario, no sucede esto.
+
+26
+00:01:17,670 --> 00:01:19,380
+Entonces aquí tengo un problema.
+
+27
+00:01:19,890 --> 00:01:24,660
+Yo necesito actualizar el método cuando yo registro un nuevo usuario en mi aplicación.
+
+28
+00:01:24,990 --> 00:01:30,630
+También quiero que se genere un nuevo record dentro de la nueva tabla User Profile.
+
+29
+00:01:31,800 --> 00:01:32,880
+Para arreglar ese problema.
+
+30
+00:01:32,880 --> 00:01:36,070
+Vamos a ir a nuestro proyecto a la carpeta account.
+
+31
+00:01:36,150 --> 00:01:39,240
+Y ahora al buscar y lo vamos a abrir.
+
+32
+00:01:39,750 --> 00:01:43,380
+Y aquí aparece el método Register que estamos viendo.
+
+33
+00:01:44,340 --> 00:01:49,380
+Este primer bloque es para almacenar, crear el user account.
+
+34
+00:01:49,410 --> 00:01:50,190
+El user sabe.
+
+35
+00:01:51,370 --> 00:01:55,900
+Lo que sigue a continuación es el proceso para enviar un correo de email.
+
+36
+00:01:55,900 --> 00:02:01,560
+Recuerdas que para poder dar de alta una cuenta dentro de nuestro ecommerce se tiene que enviar un email?
+
+37
+00:02:01,570 --> 00:02:08,050
+El usuario abre el email y le da clic en la activación y recién ya va a poder trabajar dentro de nuestro
+
+38
+00:02:08,050 --> 00:02:08,530
+portal.
+
+39
+00:02:08,950 --> 00:02:15,700
+Pero antes de que suceda este proceso de envío de correo electrónico, voy a crear aquí la lógica para
+
+40
+00:02:16,420 --> 00:02:19,980
+generar el user profile un record dentro de la tabla de Excel Profile.
+
+41
+00:02:20,920 --> 00:02:24,010
+Entonces hacemos acá un perfil igual a user profile.
+
+42
+00:02:27,570 --> 00:02:28,950
+Y le ponemos acá perfil.
+
+43
+00:02:31,700 --> 00:02:32,320
+Punto.
+
+44
+00:02:33,260 --> 00:02:33,410
+Será.
+
+45
+00:02:35,210 --> 00:02:35,840
+Va a ser igual.
+
+46
+00:02:35,840 --> 00:02:36,170
+A quién?
+
+47
+00:02:36,600 --> 00:02:37,310
+Al Giuseppe.
+
+48
+00:02:38,150 --> 00:02:40,820
+Qué es lo que sucede cuando yo ejecuto este método?
+
+49
+00:02:40,880 --> 00:02:41,570
+User Safe?
+
+50
+00:02:41,870 --> 00:02:48,200
+En ese momento, lo que está ocurriendo es que Jango me está generando una IDE para este objeto user.
+
+51
+00:02:48,770 --> 00:02:51,530
+Después del método Safe, ya ese OID lo tengo.
+
+52
+00:02:51,530 --> 00:02:53,080
+Y puedo usarlo.
+
+53
+00:02:53,090 --> 00:02:53,690
+Para qué?
+
+54
+00:02:53,930 --> 00:02:59,460
+Para enlazarlo con la clase, con la tabla profile en su propiedad user y.
+
+55
+00:03:02,300 --> 00:03:08,270
+También vamos a indicarle que el perfil tenga una foto por defecto que va a ser profile picture.
+
+56
+00:03:10,390 --> 00:03:12,580
+Iba a ser ubicada dentro del default.
+
+57
+00:03:14,690 --> 00:03:17,660
+Default no se va a llamar default.
+
+58
+00:03:18,140 --> 00:03:19,130
+Vamos a poner el default.
+
+59
+00:03:19,250 --> 00:03:19,940
+Default.
+
+60
+00:03:21,720 --> 00:03:24,900
+Raya Usher punto png.
+
+61
+00:03:28,310 --> 00:03:30,300
+Y luego le aplicó un profile.
+
+62
+00:03:33,440 --> 00:03:34,940
+Eso sería todo lo que tienes que hacer.
+
+63
+00:03:35,210 --> 00:03:37,830
+De esta forma generamos un perfil por default.
+
+64
+00:03:38,030 --> 00:03:43,370
+Más adelante, cuando ya el usuario esté activado, cuando ya tenga su cuenta lista, puede ingresar
+
+65
+00:03:43,370 --> 00:03:49,790
+al TAB del perfil del usuario y puede agregar la data que crea conveniente con la imagen que crea conveniente.
+
+66
+00:03:51,260 --> 00:03:56,360
+Lo que me queda pendiente es agregar esta imagen de full user pene que todavía no existe.
+
+67
+00:03:56,600 --> 00:03:58,370
+No te preocupes, voy a copiar el nombre.
+
+68
+00:03:59,640 --> 00:04:00,420
+Entonces la imagen.
+
+69
+00:04:01,700 --> 00:04:06,740
+Y mira esa imagen realmente tiene que estar ubicada dentro del media folder.
+
+70
+00:04:07,190 --> 00:04:09,980
+El media folder está a nivel de la red de e-commerce.
+
+71
+00:04:10,640 --> 00:04:12,770
+Aquí vas a poder verlo, a que aparece media.
+
+72
+00:04:13,100 --> 00:04:18,620
+Vamos a darle click derecho a esta carpeta media y creamos un nuevo folder que le llamamos default.
+
+73
+00:04:20,950 --> 00:04:22,450
+Ahora en mi carpeta Downloads.
+
+74
+00:04:22,450 --> 00:04:23,730
+Yo descargué este avatar.
+
+75
+00:04:23,740 --> 00:04:24,340
+Recuerdas?
+
+76
+00:04:24,760 --> 00:04:26,560
+Este avatar le voy a cambiar de nombre.
+
+77
+00:04:28,190 --> 00:04:30,410
+Y ahora se va a llamar default user.
+
+78
+00:04:31,640 --> 00:04:33,560
+PNG está ahí.
+
+79
+00:04:34,160 --> 00:04:34,820
+Perfecto.
+
+80
+00:04:36,170 --> 00:04:38,630
+Lo que voy a hacer es copiar este archivo.
+
+81
+00:04:39,760 --> 00:04:40,270
+Lo copie.
+
+82
+00:04:40,270 --> 00:04:41,530
+Se disolvió, supongo.
+
+83
+00:04:42,850 --> 00:04:45,700
+Y lo voy a pegar dentro de esa carpeta default.
+
+84
+00:04:46,090 --> 00:04:47,500
+Vamos a darle clic derecho default.
+
+85
+00:04:47,950 --> 00:04:51,220
+Y aquí debe aparecer la opción Show en Explorer.
+
+86
+00:04:51,880 --> 00:04:52,990
+Vamos a esperar que se abra.
+
+87
+00:04:53,470 --> 00:04:54,850
+Ya se abrió el directorio.
+
+88
+00:04:55,210 --> 00:04:58,050
+Vamos a ingresar a default, a que aparece default.
+
+89
+00:04:58,060 --> 00:05:00,070
+Y aquí es donde voy a pegar el archivo.
+
+90
+00:05:00,760 --> 00:05:03,940
+Listo, ya he pegado entonces el default user png.
+
+91
+00:05:04,870 --> 00:05:09,400
+Ya voy a guardar los cambios de rol y vamos a probar en la página.
+
+92
+00:05:10,360 --> 00:05:11,350
+Estamos en la página.
+
+93
+00:05:11,380 --> 00:05:12,520
+Voy a servir recepción.
+
+94
+00:05:13,620 --> 00:05:15,510
+Y voy a la opción de registrar.
+
+95
+00:05:15,960 --> 00:05:17,880
+Y aquí vamos a llenar el formulario.
+
+96
+00:05:18,330 --> 00:05:20,250
+Ya hemos llenado el formulario registro.
+
+97
+00:05:20,430 --> 00:05:23,100
+Le voy a dar clic al botón Registrar.
+
+98
+00:05:23,610 --> 00:05:29,010
+Ahora vamos a la cuenta de correo electrónico para que puedas notar que me llegó este email indicándome
+
+99
+00:05:29,010 --> 00:05:32,940
+que por favor le dé clic al link para que pueda activar la cuenta.
+
+100
+00:05:33,150 --> 00:05:34,860
+Le damos clic a este link.
+
+101
+00:05:36,810 --> 00:05:42,690
+Le di click allí y me llevó a la página de ahora vamos a darle click a este botón de login.
+
+102
+00:05:44,210 --> 00:05:45,050
+Y perfecto.
+
+103
+00:05:45,050 --> 00:05:47,270
+Ya estoy dentro de la página.
+
+104
+00:05:47,270 --> 00:05:55,790
+Se ha logueado perfectamente y si vamos hacia la página de editar perfil, ya que me va a aparecer la
+
+105
+00:05:55,790 --> 00:05:57,260
+información del usuario.
+
+106
+00:05:58,160 --> 00:06:03,710
+Puedo agregarle si yo quiero la dirección, avenida, el cosmos.
+
+107
+00:06:06,330 --> 00:06:07,350
+56.
+
+108
+00:06:08,660 --> 00:06:13,850
+Departamento 45 Ciudad Houston.
+
+109
+00:06:18,570 --> 00:06:19,260
+Texas.
+
+110
+00:06:21,480 --> 00:06:21,840
+USA.
+
+111
+00:06:22,470 --> 00:06:22,890
+Listo.
+
+112
+00:06:23,190 --> 00:06:24,900
+También puedo seleccionar una imagen.
+
+113
+00:06:26,520 --> 00:06:27,600
+Sabrá que Bakshi.
+
+114
+00:06:28,600 --> 00:06:29,330
+Lo tenemos.
+
+115
+00:06:29,350 --> 00:06:30,040
+Voy a guardar.
+
+116
+00:06:30,670 --> 00:06:33,880
+Y mira, ya se actualizó también la información del perfil de usuario.
+
+117
+00:06:34,270 --> 00:06:36,010
+Continuamos en el siguiente capítulo.

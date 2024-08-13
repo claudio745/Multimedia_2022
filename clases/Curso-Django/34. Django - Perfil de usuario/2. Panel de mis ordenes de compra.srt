@@ -1,0 +1,971 @@
+1
+00:00:00,450 --> 00:00:02,980
+En este capítulo vamos a continuar trabajando en el dashboard.
+
+2
+00:00:03,000 --> 00:00:07,620
+Y en esta ocasión quiero obtener la lista de mis órdenes de compra.
+
+3
+00:00:08,190 --> 00:00:14,000
+Para esto vamos a Atom y nos ubicamos en la carpeta account y ahora en el archivo JSP.
+
+4
+00:00:14,340 --> 00:00:21,180
+Y porque necesito definir un path que a su vez me va a redireccionar a una función que es donde haremos
+
+5
+00:00:21,180 --> 00:00:24,240
+la transacción para obtener la lista de órdenes.
+
+6
+00:00:24,850 --> 00:00:26,790
+Bien, estoy dentro entonces de el al path.
+
+7
+00:00:27,570 --> 00:00:28,680
+Vamos a copiar.
+
+8
+00:00:30,230 --> 00:00:31,970
+Este, por ejemplo, este par de dashboard.
+
+9
+00:00:34,230 --> 00:00:35,670
+Y lo ponemos en la parte final.
+
+10
+00:00:37,460 --> 00:00:39,800
+Y el path que voy a crear para obtener las órdenes.
+
+11
+00:00:39,800 --> 00:00:40,730
+Mis órdenes?
+
+12
+00:00:40,730 --> 00:00:42,110
+Va a ser mi orders.
+
+13
+00:00:43,900 --> 00:00:48,100
+La función también del mismo nombre May Orders.
+
+14
+00:00:50,740 --> 00:00:51,580
+Ya hemos definido.
+
+15
+00:00:55,100 --> 00:00:59,720
+Y ahora vamos a ir al archivo buscar y que se encuentra en la carpeta sounds.
+
+16
+00:01:01,520 --> 00:01:02,870
+Vamos a la parte inferior.
+
+17
+00:01:05,780 --> 00:01:06,680
+A la parte inferior.
+
+18
+00:01:06,710 --> 00:01:07,200
+Listo.
+
+19
+00:01:07,220 --> 00:01:09,560
+Y aquí, después de la función, el password.
+
+20
+00:01:09,920 --> 00:01:12,680
+Voy a crear esta función My Orders.
+
+21
+00:01:14,450 --> 00:01:16,100
+Que tiene un parámetro rico es.
+
+22
+00:01:18,490 --> 00:01:20,590
+Y hacemos la lógica para obtener las órdenes.
+
+23
+00:01:20,980 --> 00:01:24,160
+Voy a utilizar llamar a la entidad Order.
+
+24
+00:01:25,620 --> 00:01:31,880
+Object Point Filter, voy a indicarle que me traiga las órdenes de un usuario.
+
+25
+00:01:31,890 --> 00:01:34,860
+Entonces le digo el parámetro de user va a ser igual a request.
+
+26
+00:01:36,530 --> 00:01:37,460
+Punto user.
+
+27
+00:01:39,640 --> 00:01:45,340
+Y también quiero que me diga que si está ordenado o no, solamente los que estén ordenados.
+
+28
+00:01:46,730 --> 00:01:48,440
+Y haga un order by.
+
+29
+00:01:51,050 --> 00:01:52,250
+La fecha de creación.
+
+30
+00:01:52,640 --> 00:01:53,810
+Entonces aquí le ponemos.
+
+31
+00:01:55,200 --> 00:01:56,270
+Entre apóstrofes.
+
+32
+00:01:58,310 --> 00:01:58,560
+AT.
+
+33
+00:01:59,270 --> 00:01:59,660
+Listo.
+
+34
+00:02:01,350 --> 00:02:02,550
+Ya tengo las órdenes.
+
+35
+00:02:03,240 --> 00:02:06,030
+Ahora voy a colocarlas dentro de un diccionario.
+
+36
+00:02:07,350 --> 00:02:09,150
+Aquí le colocamos orders.
+
+37
+00:02:11,200 --> 00:02:12,880
+Los Puntos orders.
+
+38
+00:02:14,150 --> 00:02:14,660
+Y coma.
+
+39
+00:02:16,940 --> 00:02:19,820
+Y finalmente vamos a colocarle un reto, un render.
+
+40
+00:02:23,510 --> 00:02:24,470
+El paso rico es.
+
+41
+00:02:26,270 --> 00:02:28,340
+Y de paso account es las.
+
+42
+00:02:29,810 --> 00:02:30,230
+Mi.
+
+43
+00:02:32,630 --> 00:02:35,630
+Orders punto html este template.
+
+44
+00:02:37,380 --> 00:02:39,150
+A me faltó pasarle el context.
+
+45
+00:02:39,750 --> 00:02:40,770
+El diccionario de datos.
+
+46
+00:02:42,290 --> 00:02:46,320
+Vamos a crear este archivo, así que voy a copiar el nombre orders.
+
+47
+00:02:46,380 --> 00:02:47,270
+HTML.
+
+48
+00:02:47,810 --> 00:02:49,580
+Vamos ahora a la carpeta Templates.
+
+49
+00:02:50,270 --> 00:02:55,550
+Dentro de templates account y dentro del alcance está el dashboard HTML.
+
+50
+00:02:55,970 --> 00:02:59,390
+Voy a darle clic derecho a la carpeta Account Newfield.
+
+51
+00:03:00,820 --> 00:03:06,990
+Ya que parece mayor del HTML lo escribí y ahora si le damos a Enter la estructura de esta página, mi
+
+52
+00:03:07,630 --> 00:03:14,950
+HTML es muy similar a la de Dashboard HTML, por lo que mira, voy a ir a Dashboard HTML, voy a seleccionar
+
+53
+00:03:14,950 --> 00:03:21,730
+todo el código controlar, lo copiamos contra el CE y vamos a orders html y acá lo pego todo.
+
+54
+00:03:22,670 --> 00:03:26,420
+Vamos a su código a hacer algunas actualizaciones.
+
+55
+00:03:26,630 --> 00:03:27,290
+Ajustes?
+
+56
+00:03:27,590 --> 00:03:28,190
+Por ejemplo.
+
+57
+00:03:28,200 --> 00:03:34,550
+Recuerdas que teníamos un kart y dentro de ese kart teníamos este título de total de órdenes, órdenes
+
+58
+00:03:34,550 --> 00:03:35,810
+scouts, ver órdenes.
+
+59
+00:03:36,530 --> 00:03:40,970
+Y estaba dentro de este disco M16 que trabajamos en el capítulo anterior.
+
+60
+00:03:42,330 --> 00:03:44,460
+Recuerda que estamos en la pagina my orders.
+
+61
+00:03:44,700 --> 00:03:51,120
+HTML Ten mucho cuidado entonces lo que voy a hacer con este M6 es que lo voy a borrar.
+
+62
+00:03:53,270 --> 00:04:00,890
+Esto quedaría solamente este diff del call M6 para lo que se la va a dar.
+
+63
+00:04:00,890 --> 00:04:05,390
+Por ahora le voy a indicar que sea tome 12 columnas.
+
+64
+00:04:07,460 --> 00:04:11,690
+Y en la parte superior aquí donde aparece el título Sesión iniciada de.
+
+65
+00:04:13,460 --> 00:04:14,840
+Voy a indicarle.
+
+66
+00:04:18,990 --> 00:04:20,040
+Órdenes de compra.
+
+67
+00:04:22,220 --> 00:04:25,340
+Y este spam con el user full time lo voy a borrar, lo quito.
+
+68
+00:04:28,380 --> 00:04:34,500
+Si el contenido de este disco MB 12 tiene un CAR aquí, este CAR lo voy a quitar.
+
+69
+00:04:34,800 --> 00:04:37,350
+Solamente quiero que me quede el col m12.
+
+70
+00:04:38,500 --> 00:04:39,130
+En su interior.
+
+71
+00:04:39,130 --> 00:04:45,370
+Vamos a crear una tabla donde voy a desplegar las órdenes de compra que me retorne mi base de datos
+
+72
+00:04:45,370 --> 00:04:45,880
+en rango.
+
+73
+00:04:46,550 --> 00:04:48,610
+Entonces vamos a primero crear la interface.
+
+74
+00:04:48,610 --> 00:04:48,890
+A ver.
+
+75
+00:04:49,390 --> 00:04:50,410
+Voy a poner un table.
+
+76
+00:04:51,870 --> 00:04:53,790
+Esto es estable.
+
+77
+00:04:53,790 --> 00:04:56,880
+Tiene un class de Bootstrap, asi que le pongo table.
+
+78
+00:04:58,640 --> 00:04:59,690
+Table over.
+
+79
+00:05:02,690 --> 00:05:07,040
+Stop y vamos a crear los cabeceras de la tabla.
+
+80
+00:05:07,520 --> 00:05:08,840
+Por eso le pongo el target.
+
+81
+00:05:11,000 --> 00:05:14,960
+Y dentro de este traje lo colocamos tr la fila.
+
+82
+00:05:16,390 --> 00:05:22,150
+Ya dentro el primer, la primera columna, vamos a indicarle que sea el scope.
+
+83
+00:05:23,720 --> 00:05:24,040
+Cool.
+
+84
+00:05:24,350 --> 00:05:24,800
+Listo?
+
+85
+00:05:25,010 --> 00:05:25,700
+No tenemos.
+
+86
+00:05:27,920 --> 00:05:29,030
+De que le pongo orden.
+
+87
+00:05:29,660 --> 00:05:33,070
+Debería ser número de orden, pero voy a poner acá el signo a enumerar que se entienda.
+
+88
+00:05:33,090 --> 00:05:33,860
+Número de orden.
+
+89
+00:05:34,860 --> 00:05:36,330
+Vamos a copiar esta columna.
+
+90
+00:05:36,840 --> 00:05:40,410
+Veamos otra y le voy a indicar aquí otro título.
+
+91
+00:05:42,410 --> 00:05:43,940
+Nombre de facturación.
+
+92
+00:05:47,620 --> 00:05:47,860
+Nombre?
+
+93
+00:05:47,860 --> 00:05:48,430
+Facturación.
+
+94
+00:05:48,460 --> 00:05:48,850
+Le pongo.
+
+95
+00:05:49,970 --> 00:05:51,640
+Copiamos esta columna.
+
+96
+00:05:51,740 --> 00:05:52,460
+Seguimos.
+
+97
+00:05:53,150 --> 00:05:55,070
+Le pongo aquí el teléfono.
+
+98
+00:05:59,230 --> 00:06:00,580
+También va a tener.
+
+99
+00:06:04,650 --> 00:06:05,250
+Total.
+
+100
+00:06:06,750 --> 00:06:07,230
+Orden.
+
+101
+00:06:10,410 --> 00:06:11,310
+Y también la fecha.
+
+102
+00:06:14,450 --> 00:06:14,840
+Listo.
+
+103
+00:06:16,540 --> 00:06:17,600
+Está perfecto.
+
+104
+00:06:17,620 --> 00:06:20,200
+Luego del teje, vamos a crear el tipo Ori.
+
+105
+00:06:22,230 --> 00:06:23,210
+El cuerpo de la tabla.
+
+106
+00:06:23,220 --> 00:06:28,620
+Y aquí es donde tenemos que hacer un bucle que me imprima las filas desde la base de datos.
+
+107
+00:06:29,250 --> 00:06:30,930
+Vamos a escribir aquí entonces.
+
+108
+00:06:31,200 --> 00:06:37,500
+Entre llaves, porcentajes for order in orders.
+
+109
+00:06:37,890 --> 00:06:41,460
+Recuerda que este valor es el que le estamos enviando en el diccionario context.
+
+110
+00:06:43,130 --> 00:06:44,420
+Aquí le ponemos un end.
+
+111
+00:06:45,270 --> 00:06:45,770
+Fort.
+
+112
+00:06:47,620 --> 00:06:48,460
+Lo que me faltó.
+
+113
+00:06:49,060 --> 00:06:50,590
+Los porcentajes.
+
+114
+00:06:51,130 --> 00:06:51,280
+Bien.
+
+115
+00:06:52,740 --> 00:06:53,400
+En el interior.
+
+116
+00:06:53,400 --> 00:06:56,970
+Vamos a imprimir por cada iteración del bucle un TR.
+
+117
+00:06:57,190 --> 00:06:58,320
+Aquí escribimos R.
+
+118
+00:07:00,460 --> 00:07:01,120
+Lo tengo.
+
+119
+00:07:01,630 --> 00:07:04,330
+Y el primer valor va a ser th.
+
+120
+00:07:05,460 --> 00:07:07,860
+Te voy a indicar que sea con un scope.
+
+121
+00:07:10,230 --> 00:07:11,010
+Digo en el rol.
+
+122
+00:07:13,350 --> 00:07:14,510
+Es lo que quiero que imprimas.
+
+123
+00:07:14,510 --> 00:07:17,390
+Es el order punto order number.
+
+124
+00:07:21,930 --> 00:07:23,550
+El siguiente es un normal.
+
+125
+00:07:24,870 --> 00:07:28,170
+Quiero que imprima el order punto full name.
+
+126
+00:07:30,640 --> 00:07:36,430
+Vamos a copiar este TD para la siguiente fila, el siguiente celda y sería Order.
+
+127
+00:07:41,210 --> 00:07:41,780
+Siente.
+
+128
+00:07:42,870 --> 00:07:44,330
+Sería order punto.
+
+129
+00:07:45,610 --> 00:07:46,600
+Order total.
+
+130
+00:07:47,540 --> 00:07:48,200
+Siguiente.
+
+131
+00:07:49,570 --> 00:07:49,840
+Oh.
+
+132
+00:07:52,470 --> 00:07:54,170
+Order la fecha de creación seria.
+
+133
+00:07:54,180 --> 00:07:56,550
+Punto create.
+
+134
+00:07:57,460 --> 00:07:57,820
+AT.
+
+135
+00:08:00,510 --> 00:08:01,290
+Lo tiene listo.
+
+136
+00:08:01,290 --> 00:08:03,720
+Vamos a quitarle este espacio.
+
+137
+00:08:06,150 --> 00:08:09,630
+Aquí, en este orden total, se refiere a una cantidad monetaria.
+
+138
+00:08:09,930 --> 00:08:11,850
+Voy a colocarle el signo de dólar por delante.
+
+139
+00:08:13,740 --> 00:08:16,680
+Vamos a borrar los cambios en Falstaff Hall.
+
+140
+00:08:17,950 --> 00:08:19,660
+Vamos hacia acá.
+
+141
+00:08:19,990 --> 00:08:21,610
+Es la May Orders.
+
+142
+00:08:21,970 --> 00:08:22,510
+Es el ajo.
+
+143
+00:08:22,960 --> 00:08:24,820
+Le damos enter y ya me va a aparecer aquí.
+
+144
+00:08:24,820 --> 00:08:26,080
+Las órdenes de compra.
+
+145
+00:08:26,530 --> 00:08:27,970
+Y también el número de orden.
+
+146
+00:08:27,970 --> 00:08:30,400
+Nombre, facturación, teléfono total de orden y fecha.
+
+147
+00:08:30,640 --> 00:08:34,150
+No me parece nada porque no he registrado aún ninguna orden.
+
+148
+00:08:34,630 --> 00:08:38,230
+Voy a registrarla para que podamos complementar bien este mantenimiento.
+
+149
+00:08:38,240 --> 00:08:38,980
+Vamos a tienda.
+
+150
+00:08:40,160 --> 00:08:41,900
+Estamos acá en camisa moderna.
+
+151
+00:08:42,620 --> 00:08:45,680
+Voy a seleccionar color talla.
+
+152
+00:08:46,550 --> 00:08:47,610
+A pintar.
+
+153
+00:08:47,660 --> 00:08:48,530
+Voy a pagar.
+
+154
+00:08:49,160 --> 00:08:50,000
+Seleccionamos.
+
+155
+00:08:50,000 --> 00:08:51,350
+Ingresamos aquí el formulario.
+
+156
+00:08:51,920 --> 00:08:54,050
+Ya he llenado exitosamente formulario.
+
+157
+00:08:54,350 --> 00:08:56,780
+Ahora vamos a darle clic a ordenar los productos.
+
+158
+00:08:57,260 --> 00:08:57,890
+Le damos clic.
+
+159
+00:08:58,220 --> 00:08:59,780
+Me lleva a dirección de facturación.
+
+160
+00:08:59,810 --> 00:09:02,210
+Ahora le doy clic al botón de PayPal.
+
+161
+00:09:03,330 --> 00:09:04,560
+Esperamos unos segundos.
+
+162
+00:09:05,010 --> 00:09:09,540
+Me pide que ingrese con el usuario, ya sabes que utilizo para hacer las compras a maxi comprador,
+
+163
+00:09:09,540 --> 00:09:10,650
+que soy un sandbox.
+
+164
+00:09:11,740 --> 00:09:12,820
+Vamos a hacer el login.
+
+165
+00:09:15,940 --> 00:09:18,530
+Ahora vamos a la parte inferior y hay que hacer ese peinado.
+
+166
+00:09:18,550 --> 00:09:19,690
+Vamos a pagar el producto.
+
+167
+00:09:19,960 --> 00:09:21,370
+Estamos haciendo la orden de compra.
+
+168
+00:09:22,180 --> 00:09:22,840
+Perfecto.
+
+169
+00:09:22,840 --> 00:09:24,520
+Todo parece que está muy bien.
+
+170
+00:09:25,530 --> 00:09:32,280
+Esperamos unos segundos y automáticamente la página se redirecciona y me indica que el pago se realizó
+
+171
+00:09:32,280 --> 00:09:32,970
+con éxito.
+
+172
+00:09:33,630 --> 00:09:34,260
+Perfecto.
+
+173
+00:09:34,740 --> 00:09:36,750
+Ahora vamos a ir a la página.
+
+174
+00:09:37,730 --> 00:09:38,940
+De Demi Orders.
+
+175
+00:09:39,150 --> 00:09:46,350
+Entonces recuerda, en la parte superior escribe Account es las my orders es las y le damos enter.
+
+176
+00:09:47,130 --> 00:09:52,650
+Y vas a notar que ya te aparece la orden que acabas de crear el número de orden, nombre, nombre de
+
+177
+00:09:52,650 --> 00:09:56,160
+la facturación, el teléfono total de la orden y la fecha en la cual se generó.
+
+178
+00:09:56,610 --> 00:10:01,980
+Pero aquí tenemos un pequeño detalle a resolver aún, porque mira, si bien es cierto estoy dentro de
+
+179
+00:10:01,980 --> 00:10:09,630
+la página Template Account Order, el menú me está apuntando hacia dashboard, cuando debería apuntar
+
+180
+00:10:09,870 --> 00:10:10,980
+a mis órdenes.
+
+181
+00:10:11,610 --> 00:10:16,110
+También algo que está ocurriendo es que si le doy click a mis órdenes no sucede nada.
+
+182
+00:10:16,110 --> 00:10:18,540
+Y si le doy clic dashboard, tampoco sucede nada.
+
+183
+00:10:18,780 --> 00:10:22,830
+Tenemos que implementar la lógica para el redireccionamiento de esos links.
+
+184
+00:10:24,390 --> 00:10:28,740
+Para esto vamos a ir a la carpeta templates dentro de includes.
+
+185
+00:10:29,940 --> 00:10:33,510
+Había creado el dashboard sidebar HTML.
+
+186
+00:10:33,540 --> 00:10:34,360
+Vamos a abrirlo.
+
+187
+00:10:34,380 --> 00:10:42,240
+Voy a maximizar aquí el archivo y voy a comenzar por agregar la lógica para que quede como activo cuando
+
+188
+00:10:42,240 --> 00:10:44,670
+estoy trabajando en un determinado módulo del menú.
+
+189
+00:10:45,330 --> 00:10:47,970
+Entonces, quién determina si está activo o no?
+
+190
+00:10:48,000 --> 00:10:49,830
+Es este class active?
+
+191
+00:10:51,890 --> 00:10:55,250
+Recuerda que esto es si los vienen desde Bootstrap ya están implementados.
+
+192
+00:10:56,190 --> 00:10:59,380
+Entonces lo que voy a hacer aquí es condicionar este active.
+
+193
+00:10:59,670 --> 00:11:01,080
+Con qué lo voy a condicionar?
+
+194
+00:11:01,290 --> 00:11:03,520
+Con la ruta en la cual te encuentras.
+
+195
+00:11:03,540 --> 00:11:05,160
+La ruta la da la URL.
+
+196
+00:11:05,760 --> 00:11:09,210
+Entonces lo que voy a hacer aquí es agregarle un.
+
+197
+00:11:10,520 --> 00:11:14,150
+Signos de Chávez, también de porcentajes.
+
+198
+00:11:14,510 --> 00:11:15,470
+Y hago la condición.
+
+199
+00:11:15,710 --> 00:11:16,100
+Si.
+
+200
+00:11:17,840 --> 00:11:19,550
+Account es las.
+
+201
+00:11:21,630 --> 00:11:22,410
+Es igual.
+
+202
+00:11:22,500 --> 00:11:23,220
+Vamos a ponerlo acá.
+
+203
+00:11:24,990 --> 00:11:27,300
+Es igual a ese punto, Pat.
+
+204
+00:11:29,560 --> 00:11:31,180
+Entonces le voy a indicar.
+
+205
+00:11:32,020 --> 00:11:33,460
+Que esté en activo.
+
+206
+00:11:33,940 --> 00:11:34,960
+Aquí le pongo al costado.
+
+207
+00:11:35,350 --> 00:11:35,860
+Active.
+
+208
+00:11:38,710 --> 00:11:42,340
+Y el href el redireccionamiento para esta página en dashboard.
+
+209
+00:11:44,250 --> 00:11:45,600
+Va a ser Laurel.
+
+210
+00:11:47,440 --> 00:11:48,010
+Password.
+
+211
+00:11:50,800 --> 00:11:51,120
+Esto.
+
+212
+00:11:52,160 --> 00:11:55,310
+Para el caso de mis órdenes es muy similar.
+
+213
+00:11:55,880 --> 00:11:58,910
+Voy a copiar este contenido y también el href.
+
+214
+00:12:02,890 --> 00:12:03,010
+Ya.
+
+215
+00:12:03,550 --> 00:12:04,210
+Luego ya.
+
+216
+00:12:05,410 --> 00:12:10,090
+Eliminar ese que había y luego del group hidden y cerrando el apóstrofe lo pego.
+
+217
+00:12:11,960 --> 00:12:16,090
+En este caso sería hay un problema cada momento.
+
+218
+00:12:17,150 --> 00:12:22,580
+Me faltó colocarle, cerrar ese post, no eliminar ese apóstrofe de cierre de grupo.
+
+219
+00:12:22,970 --> 00:12:26,820
+Ahora si, si account en este caso sería my orders.
+
+220
+00:12:26,850 --> 00:12:27,590
+Ya no alcance.
+
+221
+00:12:30,830 --> 00:12:31,880
+Mi orders.
+
+222
+00:12:33,190 --> 00:12:34,150
+Es igual a Rico.
+
+223
+00:12:34,150 --> 00:12:34,870
+Es Pat.
+
+224
+00:12:35,560 --> 00:12:37,310
+Entonces quiero que vaya.
+
+225
+00:12:37,660 --> 00:12:39,700
+Que se agregue el active.
+
+226
+00:12:41,020 --> 00:12:41,710
+Eso sería todo.
+
+227
+00:12:42,430 --> 00:12:44,740
+Y el href sería url.
+
+228
+00:12:44,890 --> 00:12:46,510
+Ya no a password, sino a.
+
+229
+00:12:48,140 --> 00:12:49,070
+May Orders.
+
+230
+00:12:51,880 --> 00:12:53,590
+Revisamos que todo está correcto.
+
+231
+00:12:56,160 --> 00:12:57,990
+En este caso ya no sería igual.
+
+232
+00:12:58,380 --> 00:12:59,220
+Sería in.
+
+233
+00:13:00,900 --> 00:13:07,380
+Y si mi orders esta dentro del request pad, entonces agrega el class active.
+
+234
+00:13:08,160 --> 00:13:09,180
+Pero hay un detalle acá.
+
+235
+00:13:09,210 --> 00:13:15,510
+Algo que me faltó aquí fue a cerrar el IF, así que después del active le ponemos esta vez signo de
+
+236
+00:13:15,510 --> 00:13:17,580
+porcentaje y le ponemos end if.
+
+237
+00:13:19,060 --> 00:13:22,540
+Igual para destacar la siguiente línea Chávez.
+
+238
+00:13:23,660 --> 00:13:24,850
+Y cerramos el.
+
+239
+00:13:26,990 --> 00:13:27,860
+Lo tenemos listo.
+
+240
+00:13:27,890 --> 00:13:29,600
+Voy a borrar los cambios de Newfield Safe Hall.
+
+241
+00:13:31,930 --> 00:13:38,080
+Y si actualizamos la página vas a notar que ya te aparece aquí mi ordenes apuntando hacia el menú y
+
+242
+00:13:38,080 --> 00:13:43,930
+si lo password me lleva al dashboard perfecto y le doy clic de nuevo y ordenes mis ordenes.
+
+243
+00:13:44,960 --> 00:13:46,520
+Me lleva a la página correcta.

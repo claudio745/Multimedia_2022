@@ -1,0 +1,379 @@
+1
+00:00:00,450 --> 00:00:06,060
+En ese capítulo vamos a hacer el habla de los cambios que hemos hecho dentro de nuestro proyecto, agregando
+
+2
+00:00:06,060 --> 00:00:11,850
+esta nueva entidad y también la funcionalidad de agregar imágenes ilimitadas para un producto.
+
+3
+00:00:12,480 --> 00:00:14,490
+Para eso, primero vamos a abrir la consola.
+
+4
+00:00:15,410 --> 00:00:16,970
+Voy a detener mi servidor local.
+
+5
+00:00:17,360 --> 00:00:18,620
+Limpiamos la consola.
+
+6
+00:00:20,280 --> 00:00:24,840
+Y lo que tenemos que comenzar a hacer es crear, regenerar el archivo.
+
+7
+00:00:25,720 --> 00:00:31,590
+TXT porque recuerda que ese archivo tiene todas las librerías que necesita de proyecto para ejecutarse
+
+8
+00:00:31,590 --> 00:00:32,940
+en el cloud de Amazon.
+
+9
+00:00:34,420 --> 00:00:36,220
+Entonces para volver a hacerlo.
+
+10
+00:00:36,220 --> 00:00:36,770
+Regenerar?
+
+11
+00:00:36,820 --> 00:00:38,470
+Ese es archivo.
+
+12
+00:00:38,470 --> 00:00:39,910
+Hacemos un peep freeze.
+
+13
+00:00:43,260 --> 00:00:44,060
+Espacio.
+
+14
+00:00:44,760 --> 00:00:45,870
+Signo de mayor.
+
+15
+00:00:47,190 --> 00:00:48,000
+Dame el archivo.
+
+16
+00:00:48,070 --> 00:00:49,500
+Recuérdame cuando esté.
+
+17
+00:00:51,120 --> 00:00:51,920
+Y le a entrar.
+
+18
+00:00:54,090 --> 00:00:54,640
+Perfecto.
+
+19
+00:00:54,660 --> 00:00:55,350
+Se ha regenerado.
+
+20
+00:00:55,350 --> 00:00:56,490
+Vamos a abrirlo para ver.
+
+21
+00:00:57,820 --> 00:01:01,300
+Si ya se ha regenerado, me ha agregado la librería.
+
+22
+00:01:02,210 --> 00:01:03,520
+Aquí aparece el Yanko.
+
+23
+00:01:03,520 --> 00:01:04,870
+Admito Snails.
+
+24
+00:01:05,050 --> 00:01:05,890
+Perfecto.
+
+25
+00:01:07,270 --> 00:01:12,000
+Bien, pero aquí recuerda que le estamos colocando siempre para este saco pechito.
+
+26
+00:01:12,070 --> 00:01:13,960
+Binary es la versión 2.6.
+
+27
+00:01:15,330 --> 00:01:16,500
+2.8.
+
+28
+00:01:16,830 --> 00:01:17,190
+Seis.
+
+29
+00:01:18,680 --> 00:01:19,740
+Vamos a borrar los cambios.
+
+30
+00:01:19,760 --> 00:01:20,930
+Menudo false all.
+
+31
+00:01:22,020 --> 00:01:23,550
+Y ahora vamos nuevamente al valle.
+
+32
+00:01:23,850 --> 00:01:29,340
+Pero para hacer este blog, recuerda que siempre te lo digo, hay que estar fuera del environment virtual,
+
+33
+00:01:29,750 --> 00:01:30,660
+por lo que voy a salir.
+
+34
+00:01:31,020 --> 00:01:33,930
+Para salir del environment, voy a hacer de activate.
+
+35
+00:01:35,400 --> 00:01:36,330
+Le vamos a entrar.
+
+36
+00:01:36,340 --> 00:01:36,780
+Listo?
+
+37
+00:01:36,790 --> 00:01:37,990
+Ya salí del environment.
+
+38
+00:01:38,350 --> 00:01:38,920
+Ahora sí.
+
+39
+00:01:39,190 --> 00:01:41,800
+Hagamos el envío del código primero al Git.
+
+40
+00:01:42,740 --> 00:01:43,910
+Kit a punto.
+
+41
+00:01:46,170 --> 00:01:48,780
+Que espacio con menos m.
+
+42
+00:01:50,600 --> 00:01:51,350
+Y el mensaje.
+
+43
+00:01:52,700 --> 00:01:53,660
+Imágenes.
+
+44
+00:01:55,100 --> 00:01:57,640
+Y limitadas por detalle producto.
+
+45
+00:02:00,910 --> 00:02:01,690
+Perfecto.
+
+46
+00:02:02,260 --> 00:02:03,460
+Y ahora el quipus.
+
+47
+00:02:05,040 --> 00:02:06,300
+Enviamos todo al repositorio.
+
+48
+00:02:07,380 --> 00:02:13,200
+Y por último el IP deploy para hacer ejecutar los cambios dentro del servidor de Amazon.
+
+49
+00:02:14,010 --> 00:02:14,910
+Le damos enter.
+
+50
+00:02:16,630 --> 00:02:19,440
+Esperamos algunos minutos que culmine esta operación.
+
+51
+00:02:20,580 --> 00:02:26,340
+Se ejecutaba sin ningún problema el deploy después de algunos minutos, tres minutos a cinco minutos
+
+52
+00:02:26,340 --> 00:02:28,740
+en lo que puede morar para verificar.
+
+53
+00:02:28,740 --> 00:02:31,170
+Hemos ido al he ido a de Amazon.
+
+54
+00:02:31,320 --> 00:02:32,670
+Estamos dentro del management.
+
+55
+00:02:32,670 --> 00:02:36,750
+Consulte Nos hemos logueado ya que le damos clic en la app Stack.
+
+56
+00:02:38,760 --> 00:02:42,750
+Se está cargando a quien me parece la aplicación y commerce app le doy clic.
+
+57
+00:02:44,880 --> 00:02:52,140
+Y ahora me aparece aquí en la parte izquierda, el Configuration y también el Goto Environment.
+
+58
+00:02:52,290 --> 00:02:53,490
+Vamos al Goto Environment.
+
+59
+00:02:54,580 --> 00:02:57,790
+Y mira, ya se está mostrando aquí la información.
+
+60
+00:02:58,420 --> 00:02:59,620
+Tenemos aquí Elokim.
+
+61
+00:03:00,370 --> 00:03:06,640
+Si voy a la tienda, me aparecen los productos y si selecciono camisa moderna ya me aparece el previo.
+
+62
+00:03:07,000 --> 00:03:10,750
+Como estoy en otro ambiente, recuerda que también es otra base de datos.
+
+63
+00:03:11,020 --> 00:03:12,610
+Me aparece solo una imagen.
+
+64
+00:03:12,610 --> 00:03:16,090
+Si quisiera agregarle más imágenes tendría que ir al administrador de Xango.
+
+65
+00:03:16,840 --> 00:03:19,150
+Aquí agregamos lo que es el password.
+
+66
+00:03:19,150 --> 00:03:20,230
+Vamos a explicar login.
+
+67
+00:03:21,260 --> 00:03:22,760
+Y ya hemos ingresado.
+
+68
+00:03:23,990 --> 00:03:27,860
+Aquí también vamos a notar que aparece en el Store el producto arte y también los productos.
+
+69
+00:03:28,070 --> 00:03:30,080
+Seleccionamos Productos Products.
+
+70
+00:03:31,060 --> 00:03:32,470
+Que me parece camisa moderna.
+
+71
+00:03:32,500 --> 00:03:34,180
+Vamos a darle una camisa moderna.
+
+72
+00:03:34,690 --> 00:03:38,530
+Y en la parte inferior ya me aparece también la opción para agregar imágenes.
+
+73
+00:03:38,530 --> 00:03:40,000
+Vamos a agregarle unas imágenes.
+
+74
+00:03:41,810 --> 00:03:43,970
+Voy a seleccionar este camisa moderna.
+
+75
+00:03:45,510 --> 00:03:46,080
+Lo explica.
+
+76
+00:03:48,850 --> 00:03:49,960
+Perfecto es almacenado.
+
+77
+00:03:49,970 --> 00:03:51,400
+Vamos a revisar si esto es correcto.
+
+78
+00:03:51,400 --> 00:03:52,510
+Si, ya figura aquí.
+
+79
+00:03:53,860 --> 00:03:54,890
+Seleccionamos otra.
+
+80
+00:03:55,390 --> 00:03:55,840
+Esta.
+
+81
+00:03:58,770 --> 00:04:00,950
+También vamos a seleccionar otra imagen.
+
+82
+00:04:01,050 --> 00:04:01,800
+Esta también.
+
+83
+00:04:03,320 --> 00:04:06,350
+Hemos seleccionado dos más y le doy clic a Save.
+
+84
+00:04:07,870 --> 00:04:08,440
+Perfecto.
+
+85
+00:04:08,440 --> 00:04:09,280
+Ya se agregaron.
+
+86
+00:04:09,430 --> 00:04:10,480
+Veamos otra vez.
+
+87
+00:04:11,050 --> 00:04:11,740
+Ya aparecen.
+
+88
+00:04:11,740 --> 00:04:17,020
+Recuerda que estamos dentro del ambiente de producción de Amazon en este momento ejecutando en nuestra
+
+89
+00:04:17,020 --> 00:04:17,440
+página.
+
+90
+00:04:17,800 --> 00:04:24,070
+Volvamos otra vez a la página del detalle del producto de Amazon de nuestro proyecto de e-commerce.
+
+91
+00:04:25,000 --> 00:04:27,280
+Aquí le voy a dar clic al botón Refrescar.
+
+92
+00:04:29,200 --> 00:04:33,100
+Y como puedes ver ya están apareciendo aquí las imágenes.
+
+93
+00:04:33,490 --> 00:04:34,230
+Y si, dale click.
+
+94
+00:04:35,200 --> 00:04:38,110
+Puedes ver que ya está funcionando a la perfección.
+
+95
+00:04:38,410 --> 00:04:39,460
+Nuestro proyecto.

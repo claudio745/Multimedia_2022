@@ -1,0 +1,639 @@
+1
+00:00:00,610 --> 00:00:04,740
+En este capítulo vamos a volver a trabajar dentro de la app de usuarios.
+
+2
+00:00:04,750 --> 00:00:10,450
+Recuerdas la que habíamos creado como un template utilizando los estilos de Bootstrap?
+
+3
+00:00:10,780 --> 00:00:12,740
+En este momento tengo data rodeada.
+
+4
+00:00:12,880 --> 00:00:19,210
+Yo lo que quiero es que se despliegue dentro de esta tabla la data que tengo en mi base de datos.
+
+5
+00:00:19,780 --> 00:00:20,890
+Cómo voy a hacerlo?
+
+6
+00:00:21,790 --> 00:00:23,410
+Vayamos a nuestro proyecto.
+
+7
+00:00:23,710 --> 00:00:31,060
+Vamos a la app Usuarios dentro de usuarios aparece Views y vamos a abrirlo.
+
+8
+00:00:32,150 --> 00:00:39,740
+Y aquí, dentro de esta función DEF, que se llama usuario list, vamos a crear la lógica para hacer
+
+9
+00:00:39,740 --> 00:00:41,510
+la consulta de la data.
+
+10
+00:00:41,990 --> 00:00:46,910
+Voy a crear una variable que se vaya a market usuarios.
+
+11
+00:00:47,970 --> 00:00:53,580
+Y voy a indicarle que haga la consulta a la clase modelo usuario.
+
+12
+00:00:55,740 --> 00:00:58,020
+Punto llamando al método Objects.
+
+13
+00:00:59,430 --> 00:01:03,900
+Punto al que traiga toda la data que tenga esta tabla.
+
+14
+00:01:04,900 --> 00:01:14,050
+Y luego quiero que esa data que obtenga se envíe hacia el template al página HTML que representa el
+
+15
+00:01:14,050 --> 00:01:15,550
+usuario lista usuario lies.
+
+16
+00:01:16,620 --> 00:01:22,470
+Pero lo que tengo que enviar aquí es un diccionario que represente la data, por lo que aquí voy a crear
+
+17
+00:01:23,130 --> 00:01:24,960
+un data de tipo de diccionario.
+
+18
+00:01:26,990 --> 00:01:29,330
+Y lo voy a poner gadget usuarios.
+
+19
+00:01:31,220 --> 00:01:35,300
+Con el valor que está obteniéndose desde acá que usuarios.
+
+20
+00:01:36,900 --> 00:01:42,180
+Y luego continuación dentro del return render request usuarios list punto html.
+
+21
+00:01:42,570 --> 00:01:45,960
+Le pongo una coma y le digo que lo que quiero que envíe es esta data.
+
+22
+00:01:46,170 --> 00:01:46,590
+A quién?
+
+23
+00:01:46,950 --> 00:01:48,690
+A la página usuario.
+
+24
+00:01:48,720 --> 00:01:50,190
+Usuario list html.
+
+25
+00:01:51,910 --> 00:01:57,010
+Pero aquí me faltó importar lo que es la entidad de usuario que viene desde Models.
+
+26
+00:01:57,310 --> 00:02:01,570
+Así que en la parte superior hacemos un front models.
+
+27
+00:02:03,360 --> 00:02:03,990
+Import.
+
+28
+00:02:05,130 --> 00:02:05,730
+Usuario.
+
+29
+00:02:08,810 --> 00:02:10,220
+Vamos a borrar los cambios.
+
+30
+00:02:11,120 --> 00:02:14,540
+Y ahora vamos a la página Template usuario list.
+
+31
+00:02:16,360 --> 00:02:18,820
+Vamos a ubicarnos dentro de la carpeta Templates.
+
+32
+00:02:20,060 --> 00:02:21,470
+Ya que aparece el usuario.
+
+33
+00:02:21,470 --> 00:02:21,800
+Listo.
+
+34
+00:02:22,430 --> 00:02:23,300
+Lo vamos a abrir.
+
+35
+00:02:24,780 --> 00:02:30,450
+Y antes de imprimir la data dentro de la tabla de Bootstrap, quiero hacer una pequeña prueba.
+
+36
+00:02:30,870 --> 00:02:36,570
+Entonces aquí aparece el div container y aquí aparece el port y en la parte superior entre el body y
+
+37
+00:02:36,570 --> 00:02:37,440
+el div container.
+
+38
+00:02:37,470 --> 00:02:45,270
+Aquí voy a crear un código de tipo servidor que imprima los nombres de los usuarios registrados en mi
+
+39
+00:02:45,270 --> 00:02:45,720
+tabla.
+
+40
+00:02:46,720 --> 00:02:47,530
+Debido a Seattle.
+
+41
+00:02:47,650 --> 00:02:49,030
+Así que mira lo que voy a hacer.
+
+42
+00:02:49,570 --> 00:02:55,000
+Vamos a escribir acá un código de servidor que represente un bucle como for.
+
+43
+00:02:56,650 --> 00:02:57,150
+Puede ser.
+
+44
+00:02:57,220 --> 00:02:59,680
+Le pongo el la variable que va a iterar.
+
+45
+00:03:00,700 --> 00:03:01,090
+En.
+
+46
+00:03:03,010 --> 00:03:03,970
+Que usuarios.
+
+47
+00:03:05,420 --> 00:03:09,860
+Se supone que este gueto usuarios está siendo enviado por mi archivo bus.
+
+48
+00:03:10,310 --> 00:03:11,780
+Ya lo está recibiendo el template.
+
+49
+00:03:13,840 --> 00:03:16,240
+Ya aquí le voy a poner que cierre el end for.
+
+50
+00:03:17,430 --> 00:03:18,300
+El for el bucle.
+
+51
+00:03:19,890 --> 00:03:21,630
+Por eso le pongo en for aquí.
+
+52
+00:03:24,010 --> 00:03:30,280
+Y en medio voy a colocar lo que quiero que se imprima cada vez que se itera el bucle.
+
+53
+00:03:31,480 --> 00:03:31,720
+Aquí.
+
+54
+00:03:31,720 --> 00:03:33,460
+Le voy a poner entonces VCR.
+
+55
+00:03:35,080 --> 00:03:36,350
+Qué cosa quieres imprimir?
+
+56
+00:03:36,370 --> 00:03:37,720
+El nombre del usuario, por ahora.
+
+57
+00:03:37,870 --> 00:03:38,530
+VCR?
+
+58
+00:03:38,890 --> 00:03:39,220
+Nombre?
+
+59
+00:03:39,220 --> 00:03:39,820
+Nada más.
+
+60
+00:03:41,280 --> 00:03:42,090
+Eso es todo.
+
+61
+00:03:42,690 --> 00:03:44,010
+Vamos a dar una revisada.
+
+62
+00:03:44,040 --> 00:03:45,390
+Todo parece correcto.
+
+63
+00:03:45,450 --> 00:03:49,770
+Voy a barrer los cambios de Mayfield Safe Hall y vamos a mi página.
+
+64
+00:03:51,000 --> 00:03:52,320
+Voy a actualizar la página.
+
+65
+00:03:53,540 --> 00:04:01,280
+Y mira, ya me apareció aquí los nombres de los usuarios Armando González, Lorenzo, Fabián, María,
+
+66
+00:04:01,280 --> 00:04:02,090
+etcétera.
+
+67
+00:04:03,190 --> 00:04:06,840
+Volvamos a Atton, porque ya comprobamos que el código está funcionando bien.
+
+68
+00:04:06,850 --> 00:04:09,490
+Está leyendo la data de la base de datos.
+
+69
+00:04:09,820 --> 00:04:11,080
+Vamos a acomodar ahora.
+
+70
+00:04:11,080 --> 00:04:11,770
+Sí, la tabla.
+
+71
+00:04:12,050 --> 00:04:13,000
+Bien, vayamos a la tabla.
+
+72
+00:04:13,030 --> 00:04:13,410
+Un momento.
+
+73
+00:04:13,420 --> 00:04:14,200
+Esta es la tabla.
+
+74
+00:04:14,530 --> 00:04:15,730
+Aquí está el clause table.
+
+75
+00:04:16,690 --> 00:04:18,160
+Esta es la cabecera, el ticket.
+
+76
+00:04:18,670 --> 00:04:19,710
+Aquí está el tipo.
+
+77
+00:04:19,810 --> 00:04:21,370
+Y dentro del tipo.
+
+78
+00:04:21,760 --> 00:04:24,250
+Yo tengo dos records rodeados.
+
+79
+00:04:24,820 --> 00:04:26,260
+Voy a eliminarlos.
+
+80
+00:04:27,350 --> 00:04:27,610
+Vuelvo.
+
+81
+00:04:27,620 --> 00:04:28,070
+Eliminar uno.
+
+82
+00:04:28,250 --> 00:04:28,880
+Vamos a ver.
+
+83
+00:04:31,380 --> 00:04:33,540
+Y sólo me quedo con este que dice si eres.
+
+84
+00:04:35,180 --> 00:04:39,470
+Pero lo que yo quiero es que se genere dinámicamente las filas, los cierres.
+
+85
+00:04:40,400 --> 00:04:42,470
+Entonces lo que voy a hacer es lo siguiente.
+
+86
+00:04:42,650 --> 00:04:46,370
+Vamos a primero minimizar este ticket para que no me estorbe tanto ahorita.
+
+87
+00:04:48,430 --> 00:04:54,250
+Y lo que yo quiero es que se intere este tr tantas veces con los récords que tengo en la base de datos.
+
+88
+00:04:54,610 --> 00:04:58,840
+Entonces mira, voy a copiar este for user inquietud usuarios.
+
+89
+00:05:00,500 --> 00:05:02,930
+Y lo coloco sobre el TR.
+
+90
+00:05:05,360 --> 00:05:06,530
+Y este informe.
+
+91
+00:05:08,360 --> 00:05:10,490
+Lo colocó al final de TR.
+
+92
+00:05:13,900 --> 00:05:17,340
+Y ahora vamos a ver este TH.
+
+93
+00:05:17,350 --> 00:05:18,220
+Lo voy a borrar.
+
+94
+00:05:21,390 --> 00:05:23,390
+Pero colocar este nuevo TD.
+
+95
+00:05:25,510 --> 00:05:26,160
+Esta forma.
+
+96
+00:05:28,370 --> 00:05:30,950
+De aquí el primer campo que deseabas.
+
+97
+00:05:31,460 --> 00:05:34,520
+Vamos a colocarle para que aparezca el código.
+
+98
+00:05:35,540 --> 00:05:36,830
+Entonces le vamos a poner acá.
+
+99
+00:05:37,370 --> 00:05:38,440
+Uh, sr.
+
+100
+00:05:41,750 --> 00:05:42,350
+Código.
+
+101
+00:05:44,310 --> 00:05:46,890
+El siguiente hecho quisiera que aparezca la foto.
+
+102
+00:05:47,340 --> 00:05:51,390
+Entonces, en vez de este bachilleres lo borramos.
+
+103
+00:05:53,480 --> 00:05:53,610
+Ya.
+
+104
+00:05:53,770 --> 00:05:56,550
+Qué le vamos a poner a que me equivoque?
+
+105
+00:05:56,560 --> 00:06:00,160
+No va a ser un TD, pero con un IMG.
+
+106
+00:06:02,790 --> 00:06:03,980
+Aquí le ponemos CDs.
+
+107
+00:06:03,980 --> 00:06:03,990
+Ese.
+
+108
+00:06:05,620 --> 00:06:10,250
+Y entre comillas le ponemos que me imprima el VCR.
+
+109
+00:06:12,110 --> 00:06:13,940
+Foto Punto Wireless.
+
+110
+00:06:17,400 --> 00:06:19,410
+Y le voy a indicar que tenga un kit.
+
+111
+00:06:20,980 --> 00:06:21,850
+De 40.
+
+112
+00:06:24,000 --> 00:06:24,180
+Un.
+
+113
+00:06:25,810 --> 00:06:26,830
+De 40 también.
+
+114
+00:06:28,480 --> 00:06:34,360
+Y está el que diga un border radius que sea redondeado.
+
+115
+00:06:36,540 --> 00:06:37,890
+En 50 píxeles.
+
+116
+00:06:42,980 --> 00:06:43,370
+Listo.
+
+117
+00:06:44,620 --> 00:06:46,570
+Que tenemos que imprima la imagen también.
+
+118
+00:06:47,630 --> 00:06:48,250
+Continuemos.
+
+119
+00:06:49,010 --> 00:06:49,710
+El siguiente.
+
+120
+00:06:49,730 --> 00:06:51,260
+Quiero que me imprima.
+
+121
+00:06:52,720 --> 00:06:56,200
+Lo que es el nombre del usuario, así que le pongo user el nombre.
+
+122
+00:06:59,340 --> 00:07:00,150
+El siguiente.
+
+123
+00:07:00,360 --> 00:07:02,130
+Quiero que me imprima la profesión.
+
+124
+00:07:04,520 --> 00:07:06,380
+Puede ser una profesión.
+
+125
+00:07:09,610 --> 00:07:10,370
+El siguiente.
+
+126
+00:07:10,390 --> 00:07:11,110
+El género.
+
+127
+00:07:12,960 --> 00:07:15,150
+VCR punto género.
+
+128
+00:07:17,020 --> 00:07:17,710
+Falta uno más.
+
+129
+00:07:17,740 --> 00:07:19,150
+Voy a colocarle otra ciudad.
+
+130
+00:07:19,360 --> 00:07:20,410
+Copio este te de.
+
+131
+00:07:21,990 --> 00:07:23,920
+Hasta que le ponemos VCR.
+
+132
+00:07:25,850 --> 00:07:26,420
+Ciudad.
+
+133
+00:07:27,050 --> 00:07:27,500
+Perfecto.
+
+134
+00:07:27,510 --> 00:07:34,970
+Entonces tengo 123456 columnas que se van a imprimir por cada iteración del bucle.
+
+135
+00:07:35,480 --> 00:07:38,000
+Vamos a compararlo con en la cabecera.
+
+136
+00:07:39,110 --> 00:07:40,790
+Y en la cabecera solamente tengo.
+
+137
+00:07:41,780 --> 00:07:42,350
+Cinco.
+
+138
+00:07:42,890 --> 00:07:48,080
+Entonces vamos a modificar primeramente este primer th de la cabecera título de la cabecera de City.
+
+139
+00:07:48,980 --> 00:07:50,810
+Yo le voy a colocar que sea código.
+
+140
+00:07:51,410 --> 00:07:52,970
+El siguiente es la foto.
+
+141
+00:07:53,420 --> 00:07:55,730
+Entonces voy a copiar este de primero de código.
+
+142
+00:07:57,530 --> 00:07:59,120
+Aquí le coloco imagen.
+
+143
+00:08:00,620 --> 00:08:03,290
+El siguiente es el usuario, profesión, género y ciudad.
+
+144
+00:08:03,530 --> 00:08:04,310
+Concuerda?
+
+145
+00:08:04,610 --> 00:08:05,450
+Si, concuerda.
+
+146
+00:08:06,450 --> 00:08:07,560
+Todo parece correcto.
+
+147
+00:08:07,560 --> 00:08:10,590
+Vamos a darle Menu File Safe all.
+
+148
+00:08:11,860 --> 00:08:12,910
+Íbamos a probar.
+
+149
+00:08:13,900 --> 00:08:14,880
+Estamos en la página.
+
+150
+00:08:14,890 --> 00:08:15,940
+Vamos a refrescarla.
+
+151
+00:08:16,630 --> 00:08:17,470
+Y perfecto.
+
+152
+00:08:17,470 --> 00:08:23,170
+Como puedes darte cuenta, ya está imprimiendo la data que viene desde la base de datos.
+
+153
+00:08:23,950 --> 00:08:26,230
+Me sigue apareciendo este código en la parte superior.
+
+154
+00:08:26,230 --> 00:08:27,640
+Vamos a eliminarlo.
+
+155
+00:08:29,170 --> 00:08:32,230
+Vamos a la parte superior que aparece este bucle.
+
+156
+00:08:32,260 --> 00:08:34,900
+Voy a quitarlo cuando lo necesito para las pruebas.
+
+157
+00:08:36,440 --> 00:08:37,490
+Y guardamos los cambios.
+
+158
+00:08:37,500 --> 00:08:38,600
+Menú Falstaff all.
+
+159
+00:08:41,320 --> 00:08:43,720
+Vamos a actualizar y perfecto.
+
+160
+00:08:44,200 --> 00:08:46,570
+Continuamos en los siguientes vídeos.

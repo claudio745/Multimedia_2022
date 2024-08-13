@@ -1,0 +1,999 @@
+1
+00:00:00,390 --> 00:00:05,850
+Dentro de nuestro proyecto e-commerce existen diferentes funcionalidades que iremos desarrollando paso
+
+2
+00:00:05,850 --> 00:00:06,300
+a paso.
+
+3
+00:00:06,780 --> 00:00:12,420
+Por ejemplo, tenemos una funcionalidad para el mantenimiento de categorías, otro para productos,
+
+4
+00:00:12,660 --> 00:00:17,310
+otro para usuarios, otro para carrito de compras, etc.
+
+5
+00:00:18,360 --> 00:00:26,040
+Lo que vamos a hacer ahora es que por cada una de estas funcionalidades iremos creando una app dentro
+
+6
+00:00:26,040 --> 00:00:26,800
+de nuestro proyecto.
+
+7
+00:00:28,020 --> 00:00:31,680
+Comencemos creando una app que represente a categorías.
+
+8
+00:00:33,090 --> 00:00:36,330
+Para poder crear una app tenemos que ir al bus de nuestro proyecto.
+
+9
+00:00:37,200 --> 00:00:39,660
+Voy a detenerlo porque está ejecutando la aplicación.
+
+10
+00:00:39,930 --> 00:00:50,520
+Y ahora, una vez que lo detuve, vamos a escribir este comando que es Peyton, Espacio Manager y Espacio
+
+11
+00:00:50,520 --> 00:00:51,210
+Start.
+
+12
+00:00:52,120 --> 00:00:57,840
+A Pepe Espacio, el nombre de la app que va a ser categoría, categoría y le voy a poner.
+
+13
+00:00:58,200 --> 00:01:02,400
+Recuerda que antes de ejecutar esto tienes que estar dentro de tu virtual environment.
+
+14
+00:01:02,700 --> 00:01:06,270
+Si acaso recién estás ingresando a la carpeta y al vas.
+
+15
+00:01:07,910 --> 00:01:11,480
+En capítulos anteriores ya te expliqué que comando ejecutar para entrar al virtual.
+
+16
+00:01:12,170 --> 00:01:14,270
+Teniendo esto en cuenta, vamos a darle enter.
+
+17
+00:01:16,770 --> 00:01:23,070
+Y pasó notar que en el directorio principal y commerce de nuestro proyecto se ha generado category.
+
+18
+00:01:24,560 --> 00:01:27,400
+Inmediatamente creamos esta app category.
+
+19
+00:01:27,410 --> 00:01:31,370
+Necesitamos registrarlas dentro de nuestra dentro de nuestro proyecto.
+
+20
+00:01:31,610 --> 00:01:33,770
+Por esto vamos a nivel de ecommerce.
+
+21
+00:01:34,190 --> 00:01:42,420
+Dentro de ecommerce aparece otra vez ecommerce y vamos a ser instrumento API y vamos a buscar aquí a
+
+22
+00:01:42,530 --> 00:01:45,650
+la propiedad install app a pps.
+
+23
+00:01:46,040 --> 00:01:54,710
+Aquí aparece un enter y le pongo el nombre de esta nueva app que he creado que se llama Category y la
+
+24
+00:01:54,710 --> 00:01:55,700
+coma al final.
+
+25
+00:01:56,780 --> 00:01:57,920
+Vamos a borrar los cambios.
+
+26
+00:01:57,950 --> 00:01:59,210
+Menu Field Safe all.
+
+27
+00:02:01,010 --> 00:02:04,520
+Y ahora vamos a ubicarnos dentro de la app Category.
+
+28
+00:02:04,820 --> 00:02:12,230
+Dentro de category va a aparecer un archivo que se llama Models API y dentro de este vamos a crear una
+
+29
+00:02:12,230 --> 00:02:15,170
+entidad, una clase que represente a una categoría.
+
+30
+00:02:16,190 --> 00:02:18,130
+Entonces a le voy a escribir class.
+
+31
+00:02:18,140 --> 00:02:18,950
+Category.
+
+32
+00:02:20,730 --> 00:02:24,210
+Va a recibir como parámetro un model model.
+
+33
+00:02:27,070 --> 00:02:27,370
+De aquí.
+
+34
+00:02:27,370 --> 00:02:30,640
+A continuación vamos a colocarle sus columnas o propiedades.
+
+35
+00:02:30,910 --> 00:02:32,410
+Le pongo category.
+
+36
+00:02:33,750 --> 00:02:34,740
+Raya para abajo.
+
+37
+00:02:36,040 --> 00:02:36,450
+Llámame.
+
+38
+00:02:37,180 --> 00:02:38,530
+Qué tipo de auto va a hacer esto?
+
+39
+00:02:38,530 --> 00:02:39,550
+Va a ser un motel.
+
+40
+00:02:41,170 --> 00:02:42,670
+Charm Field.
+
+41
+00:02:44,020 --> 00:02:47,680
+Le pongo la longitud que antes en este texto le pongo un max length.
+
+42
+00:02:50,350 --> 00:02:51,430
+Igual a 50.
+
+43
+00:02:53,980 --> 00:02:59,290
+Idéntico que va a ser un Tunick entero que no pueda repetirse este valor.
+
+44
+00:03:00,690 --> 00:03:01,390
+No tenemos.
+
+45
+00:03:01,410 --> 00:03:02,520
+Vamos con el siguiente.
+
+46
+00:03:04,030 --> 00:03:06,400
+Te pongo un descripción.
+
+47
+00:03:10,360 --> 00:03:13,930
+Matters punto sarsfield.
+
+48
+00:03:15,970 --> 00:03:19,000
+No vamos a poner que este descripción sea Max Planck.
+
+49
+00:03:20,620 --> 00:03:22,240
+En 255.
+
+50
+00:03:24,620 --> 00:03:26,000
+Y que no permita valores nulos.
+
+51
+00:03:26,010 --> 00:03:30,490
+Por eso le pongo un blank que permita valores nulos, por eso le pongo en true.
+
+52
+00:03:31,370 --> 00:03:37,250
+Vamos a colocarle otra propiedad que va a ser el look que le vamos a indicar un models.
+
+53
+00:03:38,950 --> 00:03:39,720
+Punto.
+
+54
+00:03:39,780 --> 00:03:41,200
+También hacer un char field.
+
+55
+00:03:42,670 --> 00:03:44,530
+Que le colocamos un Max Blanc.
+
+56
+00:03:45,480 --> 00:03:47,910
+En este caso le voy a poner que sea 100.
+
+57
+00:03:49,920 --> 00:03:53,010
+Y les digo que ese look también tiene que ser un tónico.
+
+58
+00:03:54,720 --> 00:03:56,100
+Centro Valor única.
+
+59
+00:03:57,050 --> 00:04:02,360
+Si te preguntas que es un estilo que lo utilizan, es un concepto que se utiliza en aplicaciones de
+
+60
+00:04:02,360 --> 00:04:03,560
+tipo e-commerce.
+
+61
+00:04:04,010 --> 00:04:11,420
+Realmente está destinado este campo a estar dentro de la parte final de la URL y que representa a la
+
+62
+00:04:11,420 --> 00:04:11,990
+entidad?
+
+63
+00:04:13,740 --> 00:04:19,230
+Vamos a colocar aquí también un CAT categoría, una categoría de una imagen que representa la categoría
+
+64
+00:04:19,560 --> 00:04:20,310
+CAT Image.
+
+65
+00:04:20,970 --> 00:04:24,090
+Le ponemos un Model y Mech field.
+
+66
+00:04:26,560 --> 00:04:30,920
+Y le indico la ubicación donde se van a guardar las imágenes.
+
+67
+00:04:31,250 --> 00:04:34,490
+Le ponemos a upload igual a fotos.
+
+68
+00:04:38,800 --> 00:04:40,180
+Fotos es las.
+
+69
+00:04:41,320 --> 00:04:42,070
+Categorías.
+
+70
+00:04:45,870 --> 00:04:47,850
+Y también le pongo que tenga un blank.
+
+71
+00:04:49,130 --> 00:04:50,750
+Centro que permitan ángulos.
+
+72
+00:04:52,270 --> 00:04:58,600
+También recuerda que la información, la data de esta estructura categorías va a ser visible dentro
+
+73
+00:04:58,600 --> 00:05:01,660
+del módulo de administración del Dashboard de Django.
+
+74
+00:05:02,110 --> 00:05:07,180
+Entonces, para que se pueda ver la data, un valor que representativo dentro de la tabla que se va
+
+75
+00:05:07,180 --> 00:05:15,910
+a generar, voy a colocarle un DEF, dos rayas espacio, dos rayas para abajo STR dos rayas para abajo.
+
+76
+00:05:18,160 --> 00:05:21,070
+Y pegado entre paréntesis el self.
+
+77
+00:05:23,100 --> 00:05:28,560
+Damos un enter y le digo que lo que quiero que retorne, lo que quiero que se pinte en la pantalla de
+
+78
+00:05:28,560 --> 00:05:31,050
+administración respecto de esta estructura.
+
+79
+00:05:31,050 --> 00:05:33,690
+Categorías Sea el category name.
+
+80
+00:05:37,770 --> 00:05:39,060
+Vamos a guardar los cambios.
+
+81
+00:05:39,090 --> 00:05:48,120
+Menú False All y ahora para registrar esta entidad Categoría Category dentro de la página de administración
+
+82
+00:05:48,120 --> 00:05:48,750
+de Jango.
+
+83
+00:05:48,960 --> 00:05:56,310
+Tenemos que ir entonces al archivo Admin Punto Pi y que se encuentra dentro de la carpeta category.
+
+84
+00:05:56,670 --> 00:05:58,050
+Aquí aparece AP.
+
+85
+00:05:58,350 --> 00:05:58,860
+Lo tengo.
+
+86
+00:06:01,440 --> 00:06:06,960
+Y aquí vamos a indicarle que haga un admin site register.
+
+87
+00:06:08,010 --> 00:06:09,210
+Y a quién va a registrar?
+
+88
+00:06:09,510 --> 00:06:10,230
+Al modelo?
+
+89
+00:06:10,230 --> 00:06:13,020
+A la estructura que acabo de crear que se llama Category.
+
+90
+00:06:14,310 --> 00:06:17,850
+Pero este category no tienes que importarlo dentro de este archivo.
+
+91
+00:06:18,120 --> 00:06:23,670
+Por eso, en la parte superior del un enter le escribimos From Point Models.
+
+92
+00:06:24,720 --> 00:06:26,400
+Import category.
+
+93
+00:06:27,870 --> 00:06:30,450
+Respeta siempre las mayúsculas y minúsculas.
+
+94
+00:06:30,630 --> 00:06:34,740
+Si no vas a tener problemas, recemos un momento a modo de pi.
+
+95
+00:06:34,770 --> 00:06:37,050
+Y aquí me faltó algo.
+
+96
+00:06:37,050 --> 00:06:39,870
+Mira, este parece propiedad Cat.
+
+97
+00:06:39,870 --> 00:06:41,710
+Y más allá, puesto a float.
+
+98
+00:06:41,730 --> 00:06:42,150
+Debe ser.
+
+99
+00:06:42,150 --> 00:06:43,380
+Habló raya para abajo.
+
+100
+00:06:43,380 --> 00:06:44,820
+Tu ahora?
+
+101
+00:06:44,820 --> 00:06:46,500
+Si, y también si.
+
+102
+00:06:46,500 --> 00:06:49,110
+Yo quiero utilizar el procedimiento para hacer.
+
+103
+00:06:49,110 --> 00:06:51,390
+Habló de archivos dentro de Jango.
+
+104
+00:06:51,660 --> 00:06:54,870
+Necesito instalar un paquete que se llama Payload.
+
+105
+00:06:55,830 --> 00:06:58,950
+Pero antes de hacer eso, vamos a borrar todos los cambios de Newfield Safe Hall.
+
+106
+00:06:59,370 --> 00:06:59,820
+Listo.
+
+107
+00:07:00,450 --> 00:07:05,940
+Ahora, si abrimos el vacío nuevamente y vamos a instalar este paquete piloto para el manejo de los
+
+108
+00:07:05,940 --> 00:07:07,170
+archivos VIP.
+
+109
+00:07:07,170 --> 00:07:08,520
+Espacio Install.
+
+110
+00:07:09,210 --> 00:07:10,830
+Espacio piloto.
+
+111
+00:07:12,040 --> 00:07:12,850
+Y le damos enter.
+
+112
+00:07:16,370 --> 00:07:23,060
+Luego de haber tenido toda la estructura lista, ya podemos ejecutar el proceso de migración que significa
+
+113
+00:07:23,060 --> 00:07:29,750
+la creación de las entidades en un archivo que posteriormente ejecutaremos para insertarla dentro del
+
+114
+00:07:29,750 --> 00:07:31,910
+módulo de administración de Chango.
+
+115
+00:07:32,480 --> 00:07:36,560
+Entonces, nuevamente dentro del bash vamos a escribir.
+
+116
+00:07:37,910 --> 00:07:38,480
+Peyton.
+
+117
+00:07:39,880 --> 00:07:45,790
+Espacio Manage y Espacio Make.
+
+118
+00:07:46,000 --> 00:07:48,340
+Migraciones y Le amo Center.
+
+119
+00:07:51,590 --> 00:07:56,930
+A que me está indicando que hay un error de entrada en el archivo Models punto pi y es está correcto.
+
+120
+00:07:57,740 --> 00:08:04,750
+Y el error es el siguiente yo le coloque char field, pero realmente este field a F es con F mayúscula.
+
+121
+00:08:05,590 --> 00:08:10,530
+Si, pequeño detalle tengo aquí para le ponemos la F mayúscula.
+
+122
+00:08:10,850 --> 00:08:11,540
+Perfecto.
+
+123
+00:08:12,090 --> 00:08:16,190
+Ya en la parte superior, en el class category Models Models.
+
+124
+00:08:16,190 --> 00:08:17,330
+Cierra el paréntesis.
+
+125
+00:08:17,780 --> 00:08:20,720
+Tienes que poner los puntos perfecto para la función.
+
+126
+00:08:21,080 --> 00:08:26,930
+Y aquí en el def str self cierra el paréntesis y también le pones el dos puntos.
+
+127
+00:08:27,470 --> 00:08:28,310
+Lo tiene listo.
+
+128
+00:08:28,310 --> 00:08:32,840
+Vamos a ir a Menu Field Safe all y vamos a abrir ahora.
+
+129
+00:08:34,030 --> 00:08:34,650
+El Bash.
+
+130
+00:08:34,660 --> 00:08:37,180
+Tenemos visual Bash y vamos a escribir el comando.
+
+131
+00:08:37,780 --> 00:08:38,800
+Qué es Python?
+
+132
+00:08:38,800 --> 00:08:41,290
+Espacio, management y espacio.
+
+133
+00:08:41,320 --> 00:08:42,220
+Make questions.
+
+134
+00:08:42,250 --> 00:08:43,270
+Y le damos enter.
+
+135
+00:08:44,220 --> 00:08:44,840
+Perfecto.
+
+136
+00:08:44,850 --> 00:08:47,970
+Se ha generado exitosamente el archivo.
+
+137
+00:08:48,900 --> 00:08:49,770
+001.
+
+138
+00:08:49,770 --> 00:08:52,920
+Inicia el punto y dentro de la carpeta Migraciones Category.
+
+139
+00:08:53,370 --> 00:08:56,780
+Para verificar que todo esto es correcto, vamos hacia la carpeta category.
+
+140
+00:08:56,790 --> 00:08:58,380
+Aquí aparece la carpeta Migration.
+
+141
+00:08:58,950 --> 00:09:01,870
+Y aquí vas a notar que aparece el archivo 001.
+
+142
+00:09:01,890 --> 00:09:04,470
+Inicia el punto P y si la doble clic.
+
+143
+00:09:04,770 --> 00:09:12,360
+Aquí aparece el código de la estructura que se va a generar al interior de la aplicación admin de cinco.
+
+144
+00:09:13,470 --> 00:09:21,210
+Para ejecutar este código, vamos a ir nuevamente al shell y aquí escribimos el comando Python, Espacio
+
+145
+00:09:21,210 --> 00:09:25,660
+Manage y Espacio My Great.
+
+146
+00:09:26,100 --> 00:09:28,770
+Así como se escribe y le damos enter.
+
+147
+00:09:30,200 --> 00:09:30,850
+Perfecto.
+
+148
+00:09:30,860 --> 00:09:35,450
+Ya se ha generado la tabla al interior del Chango Admin.
+
+149
+00:09:36,510 --> 00:09:42,500
+Para tratar de ingresar al ambiente administrador de Jango, vamos a ejecutar aquí este comando Python.
+
+150
+00:09:42,510 --> 00:09:45,990
+Primero ejecutamos la aplicación Python Management y.
+
+151
+00:09:47,320 --> 00:09:48,850
+Espacio Ram Server.
+
+152
+00:09:49,160 --> 00:09:51,790
+Creamos Enter y ahora vamos al browser.
+
+153
+00:09:53,040 --> 00:09:58,980
+Estando en el browser vamos a ir a localhost 8000 es la admin y le damos enter.
+
+154
+00:10:00,350 --> 00:10:00,650
+Bien.
+
+155
+00:10:00,980 --> 00:10:04,080
+Esta es la pagina para ingresar al Jango Administration.
+
+156
+00:10:04,100 --> 00:10:10,460
+Como te he mencionado en secciones anteriores, pero aún no hemos creado un usuario para esta aplicación.
+
+157
+00:10:11,580 --> 00:10:16,200
+Entonces lo que tenemos que hacer es crear un super user para este ambiente.
+
+158
+00:10:16,950 --> 00:10:18,590
+Estamos en el bus de Jango.
+
+159
+00:10:18,600 --> 00:10:26,820
+Voy a tener el servicio del servidor listo, voy a limpiar la consola y aquí vamos a ejecutar este comando
+
+160
+00:10:26,820 --> 00:10:27,310
+wimps.
+
+161
+00:10:28,980 --> 00:10:30,450
+Espacio Python.
+
+162
+00:10:31,170 --> 00:10:37,620
+Espacio Manager y espacio Create Super user.
+
+163
+00:10:38,280 --> 00:10:39,270
+Y le damos enter.
+
+164
+00:10:40,840 --> 00:10:43,600
+A me está pidiendo cuál es el nombre de usuario que quieres crear?
+
+165
+00:10:43,930 --> 00:10:47,080
+Yo le voy a poner bugs y tres todo junto.
+
+166
+00:10:49,540 --> 00:10:51,330
+A que me está pidiendo un email?
+
+167
+00:10:51,360 --> 00:10:52,280
+Le digo que es así.
+
+168
+00:10:52,320 --> 00:10:53,040
+Punto tres.
+
+169
+00:10:53,040 --> 00:10:55,020
+Punto social arroba gmail.
+
+170
+00:10:55,020 --> 00:10:55,620
+Punto com.
+
+171
+00:10:57,530 --> 00:10:58,330
+Y el password.
+
+172
+00:10:58,340 --> 00:11:03,530
+Aquí siempre recomiendo colocar un password con mayúsculas y minúsculas, números y también con caracter
+
+173
+00:11:03,530 --> 00:11:04,070
+especial.
+
+174
+00:11:05,190 --> 00:11:06,300
+Ya he colocado el password.
+
+175
+00:11:06,330 --> 00:11:07,200
+Le voy a dar enter.
+
+176
+00:11:07,800 --> 00:11:09,300
+Me está pidiendo que lo repita?
+
+177
+00:11:10,430 --> 00:11:11,970
+Le coloqué nuevamente el password.
+
+178
+00:11:12,020 --> 00:11:12,830
+Le doy enter.
+
+179
+00:11:14,570 --> 00:11:16,970
+Me dice que el password es muy similar para el username.
+
+180
+00:11:18,850 --> 00:11:23,530
+Sí, porque parte del username lo estoy utilizando dentro del password.
+
+181
+00:11:23,540 --> 00:11:24,250
+No hay problema.
+
+182
+00:11:24,640 --> 00:11:27,850
+Aquí me aparece la opción by pass Password validación al crear.
+
+183
+00:11:28,360 --> 00:11:33,730
+Anyway, si a pesar de eso quieres crear el password, le digo que sí, por eso le pongo la y griega
+
+184
+00:11:34,090 --> 00:11:34,900
+y le doy enter.
+
+185
+00:11:35,170 --> 00:11:38,740
+Entonces ya el username se ha creado exitosamente.
+
+186
+00:11:39,550 --> 00:11:44,980
+Vamos a ejecutar nuevamente nuestro servidor para probar el usuario y hacemos un Python Espacio Management,
+
+187
+00:11:45,100 --> 00:11:47,560
+espacio Ram Server y le llamas Center.
+
+188
+00:11:48,040 --> 00:11:48,670
+Perfecto.
+
+189
+00:11:48,940 --> 00:11:51,310
+Vamos a refrescar la página.
+
+190
+00:11:54,480 --> 00:11:56,310
+Aquí el usuario es Max y tres.
+
+191
+00:11:57,550 --> 00:12:00,610
+Aquí el password que he generado antes.
+
+192
+00:12:01,510 --> 00:12:02,710
+Le doy clic a Login.
+
+193
+00:12:03,770 --> 00:12:04,640
+Y perfecto.
+
+194
+00:12:04,640 --> 00:12:12,350
+Ya he ingresado a la administración del admin Jango, pero puedes ver aquí aparece también el category
+
+195
+00:12:13,100 --> 00:12:13,870
+que he creado.
+
+196
+00:12:13,880 --> 00:12:18,950
+Si le doy click vamos a notar que aún no me aparece ningún récord para categorías.
+
+197
+00:12:20,360 --> 00:12:22,010
+Pero aquí me puede decir, profesor.
+
+198
+00:12:22,010 --> 00:12:24,070
+Pero por qué le ha puesto categoría?
+
+199
+00:12:24,070 --> 00:12:25,090
+Y usted le puso eso?
+
+200
+00:12:25,100 --> 00:12:30,440
+No, yo le puse categoría a la estructura que he creado, a la estructura modelo, pero automáticamente
+
+201
+00:12:30,440 --> 00:12:38,240
+lo que hace el patrón es pluralizar y agregarle la S por la s en la última, como último carácter.
+
+202
+00:12:38,480 --> 00:12:45,350
+Si por ejemplo, yo le pusiera producto, lo que hace el pitón es agregarle la S al final y sería entonces
+
+203
+00:12:45,350 --> 00:12:46,220
+productos.
+
+204
+00:12:46,820 --> 00:12:53,210
+Si yo le llamo usuario, entonces lo que hace pitón es cereal s final para decirle usuarios, pero en
+
+205
+00:12:53,210 --> 00:12:54,230
+este caso sería muy feo.
+
+206
+00:12:54,740 --> 00:12:56,540
+Lo que voy a hacer es modificarlo.
+
+207
+00:12:57,610 --> 00:13:00,880
+Este categorías, porque realmente esta palabra no existe ni en inglés.
+
+208
+00:13:01,120 --> 00:13:03,820
+Vamos entonces otra vez a la estructura modelo.
+
+209
+00:13:04,870 --> 00:13:10,660
+Vamos a ubicarnos dentro de la carpeta category y dentro de category está Models, punto Pi y.
+
+210
+00:13:11,820 --> 00:13:17,250
+Y aquí, antes del debut, vamos a agregarle un nuevo class que va a ser meta.
+
+211
+00:13:19,070 --> 00:13:19,910
+Dos puntos.
+
+212
+00:13:21,730 --> 00:13:28,300
+Y no voy a indicar que el verbo name, el nombre de esta entidad entre apóstrofes, va a ser categórico.
+
+213
+00:13:29,050 --> 00:13:32,680
+Está bien, pero el nombre en plural.
+
+214
+00:13:33,630 --> 00:13:36,240
+Para ser verbos name real para abajo.
+
+215
+00:13:36,240 --> 00:13:36,930
+Plural.
+
+216
+00:13:37,980 --> 00:13:39,030
+Quiero que se llame.
+
+217
+00:13:40,160 --> 00:13:43,130
+Categories diez Categorías.
+
+218
+00:13:43,190 --> 00:13:46,910
+Esa es la forma correcta de hacer un plural de categorías en inglés.
+
+219
+00:13:48,090 --> 00:13:49,320
+Voy a borrar los cambios.
+
+220
+00:13:51,280 --> 00:13:57,790
+Soy real y lo que tengo que hacer ahora es volver a crear un archivo de migración y luego tengo que
+
+221
+00:13:57,790 --> 00:13:58,720
+ejecutarlo.
+
+222
+00:13:59,540 --> 00:14:01,760
+Por esto tenemos que nuevamente levantar el vaso.
+
+223
+00:14:01,790 --> 00:14:04,210
+Está ejecutando mi servidor o voy a detenerlo?
+
+224
+00:14:04,220 --> 00:14:08,720
+Control C Y ahora aquí voy a tener que generar un nuevo archivo de migración.
+
+225
+00:14:08,720 --> 00:14:15,470
+Por eso le pongo Python Manage y aquí le pongo Make.
+
+226
+00:14:16,990 --> 00:14:18,250
+Make might lessons.
+
+227
+00:14:21,760 --> 00:14:22,510
+Lo tengo listo.
+
+228
+00:14:22,900 --> 00:14:23,800
+Le damos a Enter.
+
+229
+00:14:25,180 --> 00:14:25,810
+Listo.
+
+230
+00:14:26,410 --> 00:14:28,510
+Ya me ha generado un nuevo archivo.
+
+231
+00:14:28,510 --> 00:14:29,070
+Puede notar.
+
+232
+00:14:29,080 --> 00:14:31,000
+Aparece Catholic 002.
+
+233
+00:14:31,420 --> 00:14:32,890
+Alter categoría options.
+
+234
+00:14:32,920 --> 00:14:33,490
+Perfecto.
+
+235
+00:14:33,880 --> 00:14:36,040
+Y ahora vamos a ejecutar este cambio.
+
+236
+00:14:36,280 --> 00:14:38,200
+Hacemos entonces un Python?
+
+237
+00:14:40,440 --> 00:14:45,280
+Espacio Manage y espacio migratorio.
+
+238
+00:14:46,250 --> 00:14:47,120
+Y le damos enter.
+
+239
+00:14:48,770 --> 00:14:49,220
+Listo.
+
+240
+00:14:49,220 --> 00:14:54,770
+Se han aplicado todos los cambios que he hecho y ahora para probarlo voy a ejecutar mi servidor web.
+
+241
+00:14:56,120 --> 00:14:59,750
+Escribo Python, espacio management y.
+
+242
+00:15:01,430 --> 00:15:04,130
+Espacio Run server y le damos enter.
+
+243
+00:15:04,790 --> 00:15:05,980
+Listo, ya se levantó.
+
+244
+00:15:05,990 --> 00:15:07,700
+Vamos a abrir la página nuevamente.
+
+245
+00:15:08,390 --> 00:15:10,430
+Estoy en la pagina, voy a refrescar.
+
+246
+00:15:11,320 --> 00:15:13,580
+Y mira, como puedes ver, ya cambió.
+
+247
+00:15:13,600 --> 00:15:14,770
+Ahora se aparece.
+
+248
+00:15:14,770 --> 00:15:15,550
+Categories.
+
+249
+00:15:15,850 --> 00:15:21,700
+Esta es la forma entonces de editar el nombre de una estructura de una entidad al interior del Jango
+
+250
+00:15:21,700 --> 00:15:22,630
+Administration.

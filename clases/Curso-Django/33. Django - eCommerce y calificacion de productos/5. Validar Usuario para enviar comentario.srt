@@ -1,0 +1,359 @@
+1
+00:00:00,360 --> 00:00:05,910
+A continuación vamos a agregar una nueva validación para que solo las personas, los clientes que hayan
+
+2
+00:00:05,910 --> 00:00:10,740
+comprado este producto, tengan la capacidad de escribir un comentario sobre este.
+
+3
+00:00:11,490 --> 00:00:15,300
+Vamos entonces hacia la carpeta Store.
+
+4
+00:00:16,390 --> 00:00:18,060
+Ahora vamos al archivo.
+
+5
+00:00:18,090 --> 00:00:19,440
+Buscar a Pi y.
+
+6
+00:00:21,130 --> 00:00:23,100
+Ahora vamos a ubicarnos en la parte superior.
+
+7
+00:00:24,660 --> 00:00:29,910
+Y lo primero que tengo que hacer es importar este modelo que voy a necesitar para validar que viene
+
+8
+00:00:29,910 --> 00:00:31,890
+desde Orders Models.
+
+9
+00:00:33,420 --> 00:00:35,600
+Y el archivo se llama Order Product.
+
+10
+00:00:37,720 --> 00:00:38,670
+Lo tenemos listo.
+
+11
+00:00:38,920 --> 00:00:40,330
+Ahora vamos a la función.
+
+12
+00:00:41,330 --> 00:00:42,530
+Que es producto retail.
+
+13
+00:00:43,100 --> 00:00:48,140
+Dentro de este producto retail function vamos a agregar otro try antes del contex.
+
+14
+00:00:50,880 --> 00:00:57,270
+Uno trae dos puntos y vamos aquí a crear un objeto de tipo order product.
+
+15
+00:00:58,710 --> 00:01:06,150
+Recuerda si el or del product existe en True, realmente significará de que este producto ya ha sido
+
+16
+00:01:06,150 --> 00:01:07,560
+comprado por este usuario.
+
+17
+00:01:08,940 --> 00:01:11,910
+Entonces por este motivo llamo a la entidad Order Product.
+
+18
+00:01:13,220 --> 00:01:15,140
+Object Filter.
+
+19
+00:01:17,350 --> 00:01:21,310
+Niego la condición si este usuario ha comprado, ha ordenado este producto.
+
+20
+00:01:21,760 --> 00:01:25,990
+Por eso le pongo user request, punto user.
+
+21
+00:01:27,570 --> 00:01:30,780
+Que a su vez voy a hacer la condición por el product.
+
+22
+00:01:32,560 --> 00:01:36,730
+Igual sigo el producto IDE y le pregunto si existe.
+
+23
+00:01:37,320 --> 00:01:39,280
+Existe con ese final.
+
+24
+00:01:40,660 --> 00:01:43,600
+Entonces este valor va a ser verdadero o falso?
+
+25
+00:01:43,840 --> 00:01:47,830
+Si existe, entonces significa que el cliente ya ha comprado este producto.
+
+26
+00:01:48,100 --> 00:01:49,750
+Si es falso, no lo ha comprado.
+
+27
+00:01:52,090 --> 00:01:53,860
+Y ahora le voy a agregar un except.
+
+28
+00:01:55,180 --> 00:01:56,800
+Si no encuentra el producto.
+
+29
+00:01:58,470 --> 00:02:00,420
+Entonces a qué le vamos a poner este CEP?
+
+30
+00:02:00,450 --> 00:02:04,830
+Es de tipo order product to das not exist.
+
+31
+00:02:05,850 --> 00:02:06,600
+Sin la s.
+
+32
+00:02:09,130 --> 00:02:13,030
+Y este objeto order product va a ser igual.
+
+33
+00:02:14,300 --> 00:02:14,750
+Anónimo.
+
+34
+00:02:17,800 --> 00:02:22,660
+Y ahora, en el contexto que es el diccionario, cambió el template del title products.
+
+35
+00:02:22,870 --> 00:02:25,030
+Vamos a agregarle este orden.
+
+36
+00:02:29,310 --> 00:02:30,990
+Si le ponemos acá por otro.
+
+37
+00:02:32,650 --> 00:02:33,670
+Y una coma al final.
+
+38
+00:02:35,110 --> 00:02:36,040
+Lo tenemos listo.
+
+39
+00:02:36,040 --> 00:02:39,280
+Ahora vamos a trabajar este horror del producto dentro de mi template.
+
+40
+00:02:40,030 --> 00:02:45,460
+Vamos entonces a Templates Store y que aparece el producto y tail punto HTML.
+
+41
+00:02:46,570 --> 00:02:48,190
+Ahora vamos a la sección del botón.
+
+42
+00:02:49,540 --> 00:02:50,800
+Aquí me aparece este botón.
+
+43
+00:02:50,830 --> 00:02:52,030
+Este es el input submit.
+
+44
+00:02:52,330 --> 00:02:56,820
+Ya había agregado antes una condición para saber si el usuario está autenticado, si está autenticado,
+
+45
+00:02:56,830 --> 00:02:59,620
+si podía ingresar presionar ese botón.
+
+46
+00:03:00,610 --> 00:03:03,280
+Pero ahora vamos a agregarle otra condición más.
+
+47
+00:03:03,310 --> 00:03:09,190
+Voy a ponerle un espaciado entre este if else y el input y aquí le agregamos un.
+
+48
+00:03:11,020 --> 00:03:12,040
+Y adicional.
+
+49
+00:03:13,360 --> 00:03:13,810
+Si.
+
+50
+00:03:15,540 --> 00:03:16,500
+Order product.
+
+51
+00:03:18,680 --> 00:03:19,730
+Tiene un valor Stroop.
+
+52
+00:03:20,450 --> 00:03:21,080
+Entonces.
+
+53
+00:03:21,800 --> 00:03:22,490
+Que se muestre.
+
+54
+00:03:22,490 --> 00:03:25,400
+Significará que el cliente lo comprado antes.
+
+55
+00:03:26,510 --> 00:03:27,500
+En caso contrario.
+
+56
+00:03:31,850 --> 00:03:32,690
+Vamos a indicarle.
+
+57
+00:03:32,690 --> 00:03:35,540
+Y aquí cierro este end if.
+
+58
+00:03:39,200 --> 00:03:41,270
+Voy a indicarle que muestre un mensaje.
+
+59
+00:03:43,150 --> 00:03:45,490
+En un párrafo le digo.
+
+60
+00:03:47,300 --> 00:03:48,230
+Debe primero.
+
+61
+00:03:51,250 --> 00:03:54,460
+Compra el producto para poder ver un comentario.
+
+62
+00:03:59,180 --> 00:03:59,660
+Listo.
+
+63
+00:04:01,410 --> 00:04:02,190
+Eso es todo.
+
+64
+00:04:02,340 --> 00:04:03,510
+Vamos a borrar los cambios.
+
+65
+00:04:03,540 --> 00:04:04,770
+Menú Fail Save all.
+
+66
+00:04:05,430 --> 00:04:10,590
+Ya en la página ya podemos ver el formulario, pero me está apareciendo el comentario.
+
+67
+00:04:10,590 --> 00:04:16,830
+Me aparece el botón en ver comentario Me aparece porque yo antes con mi cuenta de Néstor ya he comprado,
+
+68
+00:04:17,130 --> 00:04:19,410
+he creado órdenes de compra de este producto.
+
+69
+00:04:20,680 --> 00:04:25,840
+Entonces lo que vamos a hacer ahora para hacer la prueba es ir a Orders.
+
+70
+00:04:26,440 --> 00:04:27,940
+Vamos a ir a la Administration.
+
+71
+00:04:28,960 --> 00:04:29,500
+Orders.
+
+72
+00:04:30,700 --> 00:04:34,750
+Y dentro de Orders voy a seleccionarlas todas y voy a eliminar todas mis órdenes.
+
+73
+00:04:37,510 --> 00:04:38,560
+Si lo elimino todo.
+
+74
+00:04:40,560 --> 00:04:42,420
+También estas dos que faltaban aquí.
+
+75
+00:04:43,540 --> 00:04:44,530
+Las eliminamos.
+
+76
+00:04:45,720 --> 00:04:45,870
+Bien.
+
+77
+00:04:45,960 --> 00:04:47,100
+Ya no tengo órdenes.
+
+78
+00:04:48,810 --> 00:04:50,100
+También en order products.
+
+79
+00:04:50,580 --> 00:04:52,680
+También está Zero Points.
+
+80
+00:04:52,950 --> 00:04:54,180
+Voy a eliminar también Payment.
+
+81
+00:04:58,010 --> 00:04:58,650
+Perfecto.
+
+82
+00:04:58,670 --> 00:04:59,690
+Se ha quedado blanco todo.
+
+83
+00:05:00,410 --> 00:05:02,000
+Vamos nuevamente a camisa moderna.
+
+84
+00:05:04,250 --> 00:05:09,890
+Me aparece aquí el botón porque está indicando de que yo tengo una orden de compra generada antes de
+
+85
+00:05:09,890 --> 00:05:10,970
+que haya comprado ese producto.
+
+86
+00:05:10,970 --> 00:05:11,870
+Pero si refresco.
+
+87
+00:05:13,950 --> 00:05:15,090
+Ahora que me va a indicar?
+
+88
+00:05:16,100 --> 00:05:19,160
+Debe primero comprar el producto para poder emitir un comentario.
+
+89
+00:05:19,160 --> 00:05:23,090
+Significa que nunca he comprado porque he eliminado ya de las órdenes de compras pasadas.
+
+90
+00:05:23,450 --> 00:05:26,120
+Entonces está funcionando exitosamente.

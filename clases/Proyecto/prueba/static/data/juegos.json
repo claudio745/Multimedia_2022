@@ -1,0 +1,402 @@
+[
+    {
+        "Nombre del juego": "ELDEN RING",
+        "Desarrollador": "FromSoftware Inc.",
+        "Editor": "FromSoftware Inc.",
+        "Cantidad de rese\u00f1as": "(25,233)",
+        "Fecha de lanzamiento": "24 Feb, 2022",
+        "Precio": "CLP$ 38.499"
+    },
+    {
+        "Nombre del juego": "ELDEN RING Shadow of the Erdtree",
+        "Desarrollador": "FromSoftware Inc.",
+        "Editor": "FromSoftware Inc.",
+        "Cantidad de rese\u00f1as": "(18,374)",
+        "Fecha de lanzamiento": "20 Jun, 2024",
+        "Precio": "CLP$ 28.499"
+    },
+    {
+        "Nombre del juego": "Counter-Strike 2",
+        "Desarrollador": "Valve",
+        "Editor": "Valve",
+        "Cantidad de rese\u00f1as": "(60,203)",
+        "Fecha de lanzamiento": "21 Aug, 2012",
+        "Precio": "Free to Play"
+    },
+    {
+        "Nombre del juego": "",
+        "Desarrollador": "",
+        "Editor": "",
+        "Cantidad de rese\u00f1as": "",
+        "Fecha de lanzamiento": "",
+        "Precio": ""
+    },
+    {
+        "Nombre del juego": "Destiny 2",
+        "Desarrollador": "Bungie",
+        "Editor": "Bungie",
+        "Cantidad de rese\u00f1as": "(9,857)",
+        "Fecha de lanzamiento": "1 Oct, 2019",
+        "Precio": "Free To Play"
+    },
+    {
+        "Nombre del juego": "Dota 2",
+        "Desarrollador": "Valve",
+        "Editor": "Valve",
+        "Cantidad de rese\u00f1as": "(22,976)",
+        "Fecha de lanzamiento": "9 Jul, 2013",
+        "Precio": "Free to Play"
+    },
+    {
+        "Nombre del juego": "Forza Horizon 5",
+        "Desarrollador": "Playground Games",
+        "Editor": "Xbox Game Studios",
+        "Cantidad de rese\u00f1as": "(4,073)",
+        "Fecha de lanzamiento": "8 Nov, 2021",
+        "Precio": "CLP$ 169.850"
+    },
+    {
+        "Nombre del juego": "Baldur's Gate 3",
+        "Desarrollador": "Larian Studios",
+        "Editor": "Larian Studios",
+        "Cantidad de rese\u00f1as": "(9,015)",
+        "Fecha de lanzamiento": "3 Aug, 2023",
+        "Precio": "CLP$ 39.999"
+    },
+    {
+        "Nombre del juego": "HELLDIVERS\u2122 2",
+        "Desarrollador": "Arrowhead Game Studios",
+        "Editor": "PlayStation Publishing LLC",
+        "Cantidad de rese\u00f1as": "(11,544)",
+        "Fecha de lanzamiento": "8 Feb, 2024",
+        "Precio": "CLP$ 28.000"
+    },
+    {
+        "Nombre del juego": "Dark and Darker",
+        "Desarrollador": "IRONMACE",
+        "Editor": "IRONMACE",
+        "Cantidad de rese\u00f1as": "(25,230)",
+        "Fecha de lanzamiento": "7 Jun, 2024",
+        "Precio": "Free to Play"
+    },
+    {
+        "Nombre del juego": "Dead by Daylight",
+        "Desarrollador": "Behaviour Interactive Inc.",
+        "Editor": "Behaviour Interactive Inc.",
+        "Cantidad de rese\u00f1as": "(5,024)",
+        "Fecha de lanzamiento": "14 Jun, 2016",
+        "Precio": "CLP$ 8.500"
+    },
+    {
+        "Nombre del juego": "Ghost of Tsushima DIRECTOR'S CUT",
+        "Desarrollador": "Sucker Punch Productions",
+        "Editor": "PlayStation Publishing LLC",
+        "Cantidad de rese\u00f1as": "(9,060)",
+        "Fecha de lanzamiento": "16 May, 2024",
+        "Precio": "CLP$ 42.000"
+    },
+    {
+        "Nombre del juego": "Mount & Blade II: Bannerlord",
+        "Desarrollador": "TaleWorlds Entertainment",
+        "Editor": "TaleWorlds Entertainment",
+        "Cantidad de rese\u00f1as": "(1,080)",
+        "Fecha de lanzamiento": "25 Oct, 2022",
+        "Precio": "CLP$ 5.275"
+    },
+    {
+        "Nombre del juego": "Black Desert",
+        "Desarrollador": "Pearl Abyss",
+        "Editor": "Pearl Abyss",
+        "Cantidad de rese\u00f1as": "(425)",
+        "Fecha de lanzamiento": "15 Nov, 2017",
+        "Precio": "CLP$ 4.122"
+    },
+    {
+        "Nombre del juego": "Grand Theft Auto V",
+        "Desarrollador": "Rockstar North",
+        "Editor": "Rockstar Games",
+        "Cantidad de rese\u00f1as": "(16,827)",
+        "Fecha de lanzamiento": "14 Apr, 2015",
+        "Precio": ""
+    },
+    {
+        "Nombre del juego": "Apex Legends\u2122",
+        "Desarrollador": "Respawn",
+        "Editor": "Electronic Arts",
+        "Cantidad de rese\u00f1as": "(9,590)",
+        "Fecha de lanzamiento": "4 Nov, 2020",
+        "Precio": "Free to Play"
+    },
+    {
+        "Nombre del juego": "Destiny 2: The Final Shape",
+        "Desarrollador": "Bungie",
+        "Editor": "Bungie",
+        "Cantidad de rese\u00f1as": "(4,779)",
+        "Fecha de lanzamiento": "4 Jun, 2024",
+        "Precio": "CLP$ 24.200"
+    },
+    {
+        "Nombre del juego": "Back 4 Blood",
+        "Desarrollador": "Turtle Rock Studios",
+        "Editor": "Warner Bros. Games",
+        "Cantidad de rese\u00f1as": "(841)",
+        "Fecha de lanzamiento": "12 Oct, 2021",
+        "Precio": "CLP$ 7.637"
+    },
+    {
+        "Nombre del juego": "Rust",
+        "Desarrollador": "Facepunch Studios",
+        "Editor": "Facepunch Studios",
+        "Cantidad de rese\u00f1as": "(13,702)",
+        "Fecha de lanzamiento": "8 Feb, 2018",
+        "Precio": "CLP$ 17.900"
+    },
+    {
+        "Nombre del juego": "Call of Duty\u00ae: Warzone\u2122",
+        "Desarrollador": "Infinity Ward",
+        "Editor": "Activision",
+        "Cantidad de rese\u00f1as": "(985)",
+        "Fecha de lanzamiento": "16 Nov, 2022",
+        "Precio": "Free"
+    },
+    {
+        "Nombre del juego": "Deep Rock Galactic",
+        "Desarrollador": "Ghost Ship Games",
+        "Editor": "Coffee Stain Publishing",
+        "Cantidad de rese\u00f1as": "(5,125)",
+        "Fecha de lanzamiento": "13 May, 2020",
+        "Precio": "CLP$ 21.458"
+    },
+    {
+        "Nombre del juego": "EA SPORTS FC\u2122 24",
+        "Desarrollador": "EA Canada & EA Romania",
+        "Editor": "Electronic Arts",
+        "Cantidad de rese\u00f1as": "(6,816)",
+        "Fecha de lanzamiento": "28 Sep, 2023",
+        "Precio": "CLP$ 55.900"
+    },
+    {
+        "Nombre del juego": "Diablo\u00ae IV",
+        "Desarrollador": "Blizzard Entertainment, Inc.",
+        "Editor": "Blizzard Entertainment, Inc.",
+        "Cantidad de rese\u00f1as": "(2,680)",
+        "Fecha de lanzamiento": "17 Oct, 2023",
+        "Precio": "CLP$ 47.500"
+    },
+    {
+        "Nombre del juego": "X4: Foundations",
+        "Desarrollador": "Egosoft",
+        "Editor": "Egosoft",
+        "Cantidad de rese\u00f1as": "(284)",
+        "Fecha de lanzamiento": "30 Nov, 2018",
+        "Precio": "CLP$ 32.855"
+    },
+    {
+        "Nombre del juego": "Fallout 76",
+        "Desarrollador": "Bethesda Game Studios",
+        "Editor": "Bethesda Softworks",
+        "Cantidad de rese\u00f1as": "(1,479)",
+        "Fecha de lanzamiento": "14 Apr, 2020",
+        "Precio": "CLP$ 26.799"
+    },
+    {
+        "Nombre del juego": "Don't Starve Together",
+        "Desarrollador": "Klei Entertainment",
+        "Editor": "Klei Entertainment",
+        "Cantidad de rese\u00f1as": "(2,607)",
+        "Fecha de lanzamiento": "21 Apr, 2016",
+        "Precio": "CLP$ 106.849"
+    },
+    {
+        "Nombre del juego": "Overwatch\u00ae 2",
+        "Desarrollador": "Blizzard Entertainment, Inc.",
+        "Editor": "Blizzard Entertainment, Inc.",
+        "Cantidad de rese\u00f1as": "(7,908)",
+        "Fecha de lanzamiento": "10 Aug, 2023",
+        "Precio": "Free to Play"
+    },
+    {
+        "Nombre del juego": "Sea of Thieves: 2024 Edition",
+        "Desarrollador": "Rare Ltd",
+        "Editor": "Xbox Game Studios",
+        "Cantidad de rese\u00f1as": "(3,977)",
+        "Fecha de lanzamiento": "3 Jun, 2020",
+        "Precio": "CLP$ 22.990"
+    },
+    {
+        "Nombre del juego": "Call of Duty\u00ae: Black Ops 6",
+        "Desarrollador": "Treyarch",
+        "Editor": "Activision",
+        "Cantidad de rese\u00f1as": ":",
+        "Fecha de lanzamiento": "24 Oct, 2024",
+        "Precio": "CLP$ 64.990"
+    },
+    {
+        "Nombre del juego": "Call of Duty\u00ae: Modern Warfare\u00ae III",
+        "Desarrollador": "Sledgehammer Games",
+        "Editor": "Activision",
+        "Cantidad de rese\u00f1as": "(487)",
+        "Fecha de lanzamiento": "10 Nov, 2023",
+        "Precio": "CLP$ 54.990"
+    },
+    {
+        "Nombre del juego": "Cyberpunk 2077",
+        "Desarrollador": "CD PROJEKT RED",
+        "Editor": "CD PROJEKT RED",
+        "Cantidad de rese\u00f1as": "(6,565)",
+        "Fecha de lanzamiento": "9 Dec, 2020",
+        "Precio": "CLP$ 39.999"
+    },
+    {
+        "Nombre del juego": "Dead Island 2",
+        "Desarrollador": "Dambuster Studios",
+        "Editor": "Deep Silver",
+        "Cantidad de rese\u00f1as": "(588)",
+        "Fecha de lanzamiento": "22 Apr, 2024",
+        "Precio": "CLP$ 61.673"
+    },
+    {
+        "Nombre del juego": "Yu-Gi-Oh! Master Duel",
+        "Desarrollador": "KONAMI",
+        "Editor": "KONAMI",
+        "Cantidad de rese\u00f1as": "(1,064)",
+        "Fecha de lanzamiento": "18 Jan, 2022",
+        "Precio": "Free To Play"
+    },
+    {
+        "Nombre del juego": "Call of Duty\u00ae",
+        "Desarrollador": "Sledgehammer Games",
+        "Editor": "Activision",
+        "Cantidad de rese\u00f1as": "(5,322)",
+        "Fecha de lanzamiento": "27 Oct, 2022",
+        "Precio": "CLP$ 64.990"
+    },
+    {
+        "Nombre del juego": "Street Fighter\u2122 6",
+        "Desarrollador": "CAPCOM Co., Ltd.",
+        "Editor": "CAPCOM Co., Ltd.",
+        "Cantidad de rese\u00f1as": "(1,673)",
+        "Fecha de lanzamiento": "1 Jun, 2023",
+        "Precio": "CLP$ 49.900"
+    },
+    {
+        "Nombre del juego": "Eternal Return",
+        "Desarrollador": "Nimble Neuron",
+        "Editor": "Kakao Games Europe B.V. (EU,NA,OCE)",
+        "Cantidad de rese\u00f1as": "(843)",
+        "Fecha de lanzamiento": "19 Jul, 2023",
+        "Precio": "Free To Play"
+    },
+    {
+        "Nombre del juego": "ARK: Survival Ascended",
+        "Desarrollador": "Studio Wildcard",
+        "Editor": "Studio Wildcard",
+        "Cantidad de rese\u00f1as": "(2,396)",
+        "Fecha de lanzamiento": "25 Oct, 2023",
+        "Precio": "CLP$ 41.600"
+    },
+    {
+        "Nombre del juego": "Magic: The Gathering Arena",
+        "Desarrollador": "Wizards of the Coast LLC",
+        "Editor": "Wizards of the Coast LLC",
+        "Cantidad de rese\u00f1as": "(705)",
+        "Fecha de lanzamiento": "23 May, 2023",
+        "Precio": "Free To Play"
+    },
+    {
+        "Nombre del juego": "Halo: The Master Chief Collection",
+        "Desarrollador": "343 Industries",
+        "Editor": "Xbox Game Studios",
+        "Cantidad de rese\u00f1as": "(1,499)",
+        "Fecha de lanzamiento": "3 Dec, 2019",
+        "Precio": "CLP$ 10.982"
+    },
+    {
+        "Nombre del juego": "RimWorld",
+        "Desarrollador": "Ludeon Studios",
+        "Editor": "Ludeon Studios",
+        "Cantidad de rese\u00f1as": "(1,544)",
+        "Fecha de lanzamiento": "17 Oct, 2018",
+        "Precio": "CLP$ 15.500"
+    },
+    {
+        "Nombre del juego": "Red Dead Redemption 2",
+        "Desarrollador": "Rockstar Games",
+        "Editor": "Rockstar Games",
+        "Cantidad de rese\u00f1as": "(10,041)",
+        "Fecha de lanzamiento": "5 Dec, 2019",
+        "Precio": "CLP$ 39.990"
+    },
+    {
+        "Nombre del juego": "World of Warships",
+        "Desarrollador": "Wargaming Group Limited",
+        "Editor": "Wargaming Group Limited",
+        "Cantidad de rese\u00f1as": "(1,022)",
+        "Fecha de lanzamiento": "15 Nov, 2017",
+        "Precio": "Free to Play"
+    },
+    {
+        "Nombre del juego": "DRAGON BALL: Sparking! ZERO",
+        "Desarrollador": "Spike Chunsoft Co., Ltd.",
+        "Editor": "Bandai Namco Entertainment",
+        "Cantidad de rese\u00f1as": ":",
+        "Fecha de lanzamiento": "10 Oct, 2024",
+        "Precio": "CLP$ 54.999"
+    },
+    {
+        "Nombre del juego": "X4: Timelines",
+        "Desarrollador": "Egosoft",
+        "Editor": "Egosoft",
+        "Cantidad de rese\u00f1as": "(537)",
+        "Fecha de lanzamiento": "20 Jun, 2024",
+        "Precio": "CLP$ 8.300"
+    },
+    {
+        "Nombre del juego": "Grounded",
+        "Desarrollador": "Obsidian Entertainment",
+        "Editor": "Xbox Game Studios",
+        "Cantidad de rese\u00f1as": "(772)",
+        "Fecha de lanzamiento": "27 Sep, 2022",
+        "Precio": "CLP$ 3.080"
+    },
+    {
+        "Nombre del juego": "BeamNG.drive",
+        "Desarrollador": "BeamNG",
+        "Editor": "BeamNG",
+        "Cantidad de rese\u00f1as": "(5,285)",
+        "Fecha de lanzamiento": "29 May, 2015",
+        "Precio": "CLP$ 13.000"
+    },
+    {
+        "Nombre del juego": "Cyberpunk 2077: Phantom Liberty",
+        "Desarrollador": "CD PROJEKT RED",
+        "Editor": "CD PROJEKT RED",
+        "Cantidad de rese\u00f1as": "(296)",
+        "Fecha de lanzamiento": "25 Sep, 2023",
+        "Precio": "CLP$ 19.999"
+    },
+    {
+        "Nombre del juego": "Gladiator Guild Manager",
+        "Desarrollador": "Entertainment Forge",
+        "Editor": "GrabTheGames",
+        "Cantidad de rese\u00f1as": "(34)",
+        "Fecha de lanzamiento": "22 Jun, 2024",
+        "Precio": "CLP$ 3.000"
+    },
+    {
+        "Nombre del juego": "F1\u00ae 24",
+        "Desarrollador": "Codemasters",
+        "Editor": "Electronic Arts",
+        "Cantidad de rese\u00f1as": "(2,307)",
+        "Fecha de lanzamiento": "31 May, 2024",
+        "Precio": "CLP$ 60.900"
+    },
+    {
+        "Nombre del juego": "Farming Simulator 22",
+        "Desarrollador": "Giants Software",
+        "Editor": "Giants Software",
+        "Cantidad de rese\u00f1as": "(1,583)",
+        "Fecha de lanzamiento": "21 Nov, 2021",
+        "Precio": "CLP$ 19.950"
+    }
+]

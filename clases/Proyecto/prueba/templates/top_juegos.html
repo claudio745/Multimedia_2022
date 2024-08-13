@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Juegos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Estilos adicionales para la página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container2 {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .busqueda {
+            margin-bottom: 20px;
+            margin-top: 50px;
+        }
+        .juego {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Portal de Juegos</h1>
+            <nav>
+                <a href="{{ url_for('index') }}" class="btn">Inicio</a>
+                <a href="{{ url_for('top_juegos') }}" class="btn">Top Juegos</a>
+                <a href="{{ url_for('acerca_de') }}" class="btn">Acerca de</a>
+                <a href="{{ url_for('contacto') }}" class="btn">Contacto</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container2">
+        <h2>Top Juegos</h2>
+        
+        <!-- Formulario de búsqueda avanzada -->
+        <form action="{{ url_for('buscar_juegos') }}" method="GET" class="busqueda">
+            <input type="text" name="query" placeholder="Buscar juegos...">
+            <label for="orden">Ordenar por:</label>
+            <select name="orden" id="orden">
+                <option value="asc">Precio (Menor a Mayor)</option>
+                <option value="desc">Precio (Mayor a Menor)</option>
+            </select>
+            <button type="submit">Buscar</button>
+        </form>
+        
+        <!-- Lista de juegos -->
+        <div class="juegos-container">
+            {% for juego in juegos %}
+            <div class="juego">
+                <h3>{{ juego['Nombre del juego'] }}</h3>
+                <ul>
+                    <li><strong>Desarrollador:</strong> {{ juego['Desarrollador'] }}</li>
+                    <li><strong>Editor:</strong> {{ juego['Editor'] }}</li>
+                    <li><strong>Cantidad de reseñas:</strong> {{ juego['Cantidad de reseñas'] }}</li>
+                    <li><strong>Fecha de lanzamiento:</strong> {{ juego['Fecha de lanzamiento'] }}</li>
+                    <li><strong>Precio:</strong> {{ juego['Precio'] }}</li>
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

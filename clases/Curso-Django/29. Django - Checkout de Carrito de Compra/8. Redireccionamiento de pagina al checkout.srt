@@ -1,0 +1,915 @@
+1
+00:00:00,330 --> 00:00:04,710
+En este capítulo vamos a trabajar en el redireccionamiento automático.
+
+2
+00:00:04,920 --> 00:00:09,300
+Cuando me logueado para ver la página de checkout a que me refiero?
+
+3
+00:00:09,600 --> 00:00:13,080
+A ver, estamos bloqueados en este momento con mi cuenta de bachilleres.
+
+4
+00:00:13,230 --> 00:00:14,310
+Voy a salir de sesión.
+
+5
+00:00:15,340 --> 00:00:16,180
+Voy a la tienda.
+
+6
+00:00:18,070 --> 00:00:21,310
+Voy a escoger este producto, le voy a poner estas variantes.
+
+7
+00:00:21,340 --> 00:00:22,840
+Cualquiera puede ser.
+
+8
+00:00:23,440 --> 00:00:25,030
+Lo agrego en mi carrito de compras.
+
+9
+00:00:25,150 --> 00:00:25,750
+Perfecto.
+
+10
+00:00:25,760 --> 00:00:26,950
+Lo agregué a mi carrito de compras.
+
+11
+00:00:27,280 --> 00:00:28,180
+Ahora quiero pagar.
+
+12
+00:00:28,180 --> 00:00:30,400
+Pero recuerda, no estoy en sesión todavía.
+
+13
+00:00:30,700 --> 00:00:31,990
+Voy a darle clic a pagar.
+
+14
+00:00:33,900 --> 00:00:35,910
+Y aquí va a comenzar la secuencia.
+
+15
+00:00:35,910 --> 00:00:39,300
+Tengo que ingresar mi usuario, mi password y le doy clic login.
+
+16
+00:00:39,540 --> 00:00:45,450
+Lo que debería ocurrir aquí es que debería llevarme automáticamente luego de login a la página de checkout.
+
+17
+00:00:45,690 --> 00:00:48,150
+Pero sin embargo, mira dónde me está llevando.
+
+18
+00:00:49,320 --> 00:00:51,570
+Me está llevando a la pagina de Dashboard.
+
+19
+00:00:52,440 --> 00:00:56,640
+Yo quisiera que directamente me llevara a esta página.
+
+20
+00:00:56,640 --> 00:00:57,960
+A la página de checkout.
+
+21
+00:00:59,590 --> 00:01:01,450
+Entonces, cómo vamos a resolver esto?
+
+22
+00:01:02,020 --> 00:01:04,930
+Recuerda aquí el detalle está en el login.
+
+23
+00:01:05,260 --> 00:01:06,310
+En el botón de login.
+
+24
+00:01:07,370 --> 00:01:14,330
+Entonces vamos a ir a datos a la carpeta account que aparece en el archivo Buscar y y dentro está la
+
+25
+00:01:14,330 --> 00:01:15,300
+función register.
+
+26
+00:01:15,320 --> 00:01:18,260
+Voy a minimizar register y a continuación esta login.
+
+27
+00:01:19,370 --> 00:01:21,620
+Si vamos a la parte inferior del método Elokim.
+
+28
+00:01:22,890 --> 00:01:24,030
+Lo de la paz.
+
+29
+00:01:24,570 --> 00:01:27,090
+Que aparece este método que es el Outlook.
+
+30
+00:01:27,110 --> 00:01:32,070
+Y a partir de aquí es donde nosotros vamos a tener que trabajar en la lógica.
+
+31
+00:01:32,460 --> 00:01:35,400
+Pero hay algo muy importante que quisiera que notes.
+
+32
+00:01:36,180 --> 00:01:37,560
+Voy a volver a salir de sesión.
+
+33
+00:01:39,230 --> 00:01:40,100
+Voy a la tienda.
+
+34
+00:01:41,410 --> 00:01:44,650
+Voy a seleccionar nuevamente un producto rojo.
+
+35
+00:01:44,650 --> 00:01:46,240
+Cualquier no cualquier variante.
+
+36
+00:01:47,030 --> 00:01:47,980
+Al pinchar.
+
+37
+00:01:50,120 --> 00:01:51,190
+Y ahora voy a pagar.
+
+38
+00:01:51,200 --> 00:01:53,360
+Mira, le voy a a pagar y no estoy en sesión.
+
+39
+00:01:54,620 --> 00:01:56,390
+Mira, estoy aquí.
+
+40
+00:01:56,390 --> 00:01:57,230
+He tenido un momento.
+
+41
+00:01:58,560 --> 00:02:01,380
+Mira lo que Laurel te está mostrando en este momento.
+
+42
+00:02:01,800 --> 00:02:07,380
+Te está indicando que estás en la página de login, pero automáticamente Jango te está indicando que
+
+43
+00:02:07,380 --> 00:02:08,580
+la siguiente página.
+
+44
+00:02:08,580 --> 00:02:11,160
+Cual debe ser Card Checkout.
+
+45
+00:02:12,290 --> 00:02:19,700
+Entonces realmente yo podría tomar este valor, esta ruta, e incorporarla al interior de la transacción
+
+46
+00:02:19,700 --> 00:02:27,140
+del método de login, y a partir de eso hacer el redireccionamiento automático hacia la página, la
+
+47
+00:02:27,140 --> 00:02:29,600
+ruta de checkout y ya no hacia Dashboard.
+
+48
+00:02:30,170 --> 00:02:34,080
+Entonces, lo que necesito en este momento es capturar este path.
+
+49
+00:02:34,100 --> 00:02:36,440
+Estos parámetros que están en la parte superior.
+
+50
+00:02:36,710 --> 00:02:37,820
+Cómo lo voy a hacer?
+
+51
+00:02:38,750 --> 00:02:39,560
+Vamos nuevamente.
+
+52
+00:02:39,560 --> 00:02:40,600
+Auto aquí.
+
+53
+00:02:41,720 --> 00:02:43,780
+Un espaciado y a la altura del auto.
+
+54
+00:02:44,150 --> 00:02:47,120
+Voy a poner un comentario para que veas el PAT.
+
+55
+00:02:47,750 --> 00:02:49,670
+Este es el Pat del que te estaba hablando.
+
+56
+00:02:50,670 --> 00:02:57,450
+Y esto es lo que quiero obtener este parámetro NEX obteniendo el NEX ya tengo la rusa y podría redireccionar.
+
+57
+00:02:58,880 --> 00:03:06,230
+Pero para poder capturar este parámetro de la URL voy a necesitar una librería adicional que se llama
+
+58
+00:03:06,230 --> 00:03:08,510
+Request con la es al final.
+
+59
+00:03:08,870 --> 00:03:13,880
+Entonces vamos a instalar esta librería en nuestro proyecto a que tengo abierto el Bash.
+
+60
+00:03:14,000 --> 00:03:15,170
+Voy a detenerlo.
+
+61
+00:03:15,920 --> 00:03:17,570
+Control C se detuvo.
+
+62
+00:03:17,570 --> 00:03:18,410
+Voy a limpiar.
+
+63
+00:03:19,070 --> 00:03:22,700
+Y ahora siempre recuerda que estamos ejecutando en el Environment.
+
+64
+00:03:22,760 --> 00:03:23,870
+En el Virtual Environment.
+
+65
+00:03:24,140 --> 00:03:24,590
+Verdad?
+
+66
+00:03:25,010 --> 00:03:25,640
+Ahora sí.
+
+67
+00:03:25,670 --> 00:03:28,550
+Aquí voy a instalar la librería request.
+
+68
+00:03:29,270 --> 00:03:38,210
+Pongo, le escribo pip espacio install espacio request con ese al final y le damos enter.
+
+69
+00:03:40,030 --> 00:03:41,170
+Esperamos que se instale.
+
+70
+00:03:41,200 --> 00:03:41,880
+Perfecto.
+
+71
+00:03:41,890 --> 00:03:43,450
+Se instaló correctamente.
+
+72
+00:03:44,470 --> 00:03:49,930
+Aprovecho para ejecutar este Comando Manager y Espacio Server para ejecutar mi servidor.
+
+73
+00:03:51,100 --> 00:03:51,430
+Listo.
+
+74
+00:03:51,440 --> 00:03:52,330
+No hay ningún problema.
+
+75
+00:03:53,260 --> 00:03:59,260
+Vamos nuevamente a Atom y en la parte superior, lo que tengo que hacer es importar esta librería.
+
+76
+00:03:59,530 --> 00:04:03,310
+Así que aquí lo podemos hacer momentos después del item.
+
+77
+00:04:04,380 --> 00:04:04,740
+Aquí.
+
+78
+00:04:04,920 --> 00:04:06,870
+Voy a hacer un import.
+
+79
+00:04:07,930 --> 00:04:08,530
+Riqueza.
+
+80
+00:04:08,800 --> 00:04:10,350
+No lo confundas con el rico.
+
+81
+00:04:10,360 --> 00:04:11,200
+Es sin ese.
+
+82
+00:04:11,770 --> 00:04:13,000
+Este es el Enriquez.
+
+83
+00:04:13,420 --> 00:04:14,350
+Con ese al final.
+
+84
+00:04:14,660 --> 00:04:14,910
+Bien.
+
+85
+00:04:14,920 --> 00:04:19,360
+Ahora volvamos otra vez dentro de Elokim al método.
+
+86
+00:04:20,470 --> 00:04:21,250
+Dónde estoy yo?
+
+87
+00:04:21,250 --> 00:04:22,270
+Haciendo el adoquín.
+
+88
+00:04:24,010 --> 00:04:24,150
+Bien.
+
+89
+00:04:24,310 --> 00:04:25,960
+Comencemos a analizar el código.
+
+90
+00:04:26,260 --> 00:04:27,630
+El adoquín está perfecto.
+
+91
+00:04:27,640 --> 00:04:28,810
+Eso no lo voy a modificar.
+
+92
+00:04:28,810 --> 00:04:33,610
+El mensaje que me diga que inició exitosamente tampoco lo voy a quitar.
+
+93
+00:04:34,090 --> 00:04:36,760
+Después de seis meses es donde voy a cambiar.
+
+94
+00:04:36,760 --> 00:04:37,990
+Voy a agregar mi lógica.
+
+95
+00:04:38,620 --> 00:04:41,890
+Lo primero que quiero es capturar la URL completa.
+
+96
+00:04:41,900 --> 00:04:42,820
+Esta RL.
+
+97
+00:04:44,040 --> 00:04:45,570
+Vamos a capturar esa Borelli.
+
+98
+00:04:45,840 --> 00:04:46,770
+Cómo la capturamos?
+
+99
+00:04:47,400 --> 00:04:50,310
+Declaramos una variable de él y le indicamos que.
+
+100
+00:04:51,330 --> 00:04:54,180
+La captura y captura el punto request.
+
+101
+00:04:54,180 --> 00:04:55,110
+Punto meta.
+
+102
+00:04:56,080 --> 00:04:56,830
+Punto get.
+
+103
+00:04:59,150 --> 00:05:01,520
+Aquí me capture la futura ayuda de él.
+
+104
+00:05:01,520 --> 00:05:03,620
+Que es el http de referir.
+
+105
+00:05:06,030 --> 00:05:06,780
+Lo tengo.
+
+106
+00:05:06,810 --> 00:05:08,280
+Esta es la futura.
+
+107
+00:05:08,390 --> 00:05:13,050
+Tu eres el que te esta apareciendo en el browser cuando te redireccionado.
+
+108
+00:05:14,070 --> 00:05:17,430
+A lo que eso es lo que estoy capturando en ese momento.
+
+109
+00:05:18,270 --> 00:05:21,120
+Pero yo necesito capturar el parámetro.
+
+110
+00:05:21,750 --> 00:05:22,780
+Ahora, no lo confundas.
+
+111
+00:05:22,870 --> 00:05:26,820
+Mira, yo estoy utilizando el request normal para capturar la fotografía.
+
+112
+00:05:27,420 --> 00:05:30,720
+Aún no estoy utilizando la librería que instale hace un momento.
+
+113
+00:05:31,630 --> 00:05:35,830
+Para poder capturar el parámetro, voy a utilizar un try.
+
+114
+00:05:36,810 --> 00:05:43,200
+Dentro de este traje voy a indicarle que el query, es decir el parámetro que necesito que es este mex.
+
+115
+00:05:45,050 --> 00:05:47,150
+Este es el parámetro que yo quiero capturar el Nex.
+
+116
+00:05:48,480 --> 00:05:49,680
+Dentro de esta variable.
+
+117
+00:05:49,680 --> 00:05:50,040
+Keri.
+
+118
+00:05:51,220 --> 00:05:57,310
+Lo hago utilizando ahora sí, la librería que he instalado, que es request con la DS al final.
+
+119
+00:05:58,260 --> 00:05:59,370
+Puntos útiles.
+
+120
+00:06:00,210 --> 00:06:01,440
+Punto Jurel.
+
+121
+00:06:02,420 --> 00:06:02,960
+Parce.
+
+122
+00:06:04,990 --> 00:06:08,290
+Y aquí le paso la RL que capturé anteriormente.
+
+123
+00:06:08,290 --> 00:06:09,730
+La futura era el completa.
+
+124
+00:06:11,230 --> 00:06:12,730
+Y le pongo el punto query.
+
+125
+00:06:13,330 --> 00:06:19,810
+De esta forma, yo no estaría solo capturando un solo parámetro, sino que estaría capturando todo el
+
+126
+00:06:19,810 --> 00:06:21,130
+grupo de parámetros.
+
+127
+00:06:21,370 --> 00:06:27,220
+En este caso solo tengo uno que es Nex, pero tal vez podría tener otro que se llame Adi, que sería
+
+128
+00:06:27,220 --> 00:06:34,240
+a continuación otro que se llame nombre y otro que se llame apellido, etc Todos los parámetros que
+
+129
+00:06:34,240 --> 00:06:39,760
+vengan después del signo de interrogación van a ser capturados con este método.
+
+130
+00:06:40,850 --> 00:06:42,530
+Y están almacenados dentro del query.
+
+131
+00:06:42,830 --> 00:06:45,140
+Pero yo lo que necesito realmente a quién es?
+
+132
+00:06:45,890 --> 00:06:50,870
+Necesito capturar a este parámetro que se llama Nex, solamente a él.
+
+133
+00:06:51,680 --> 00:06:53,660
+Entonces lo que voy a hacer aquí.
+
+134
+00:06:54,870 --> 00:06:57,600
+Es indicarle que los parámetros.
+
+135
+00:07:00,190 --> 00:07:03,760
+Se capture dentro de un X punto de split.
+
+136
+00:07:05,140 --> 00:07:05,920
+Pasa por aquí.
+
+137
+00:07:08,780 --> 00:07:10,130
+Con el signo de igual.
+
+138
+00:07:11,710 --> 00:07:12,400
+A esta.
+
+139
+00:07:14,150 --> 00:07:16,880
+For x Hikari.
+
+140
+00:07:18,470 --> 00:07:19,340
+Junto a Split.
+
+141
+00:07:23,340 --> 00:07:24,960
+Si le ponemos el signo de Ant.
+
+142
+00:07:27,930 --> 00:07:28,380
+Listo.
+
+143
+00:07:30,830 --> 00:07:32,240
+Y ahora voy a hacer una condición.
+
+144
+00:07:32,240 --> 00:07:38,960
+Si el parámetro nex es existe dentro de param, el grupo de parámetros le voy a poner dos puntos.
+
+145
+00:07:39,350 --> 00:07:44,180
+Entonces quiero que diga que el Next Page, esto es una variable que estoy creando en este momento.
+
+146
+00:07:45,380 --> 00:07:49,250
+Sea igual al parámetro next.
+
+147
+00:07:50,790 --> 00:07:53,160
+Ahora sí ya estaría yo capturando aquí.
+
+148
+00:07:54,900 --> 00:07:55,950
+El valor de Nex.
+
+149
+00:07:56,070 --> 00:07:57,090
+Cuál es el valor de Next?
+
+150
+00:07:57,150 --> 00:07:57,630
+Es este.
+
+151
+00:07:57,630 --> 00:07:58,800
+Es check out.
+
+152
+00:07:59,550 --> 00:08:01,230
+Ya lo tengo capturado en este momento.
+
+153
+00:08:01,680 --> 00:08:05,790
+Y entonces que haga un return hacia esa página.
+
+154
+00:08:06,390 --> 00:08:09,080
+Un retire hacia esa página que es Next.
+
+155
+00:08:10,510 --> 00:08:11,050
+Listo.
+
+156
+00:08:11,830 --> 00:08:12,790
+Eso sería todo.
+
+157
+00:08:13,210 --> 00:08:14,950
+Pero recuerda que estoy dentro de un traje.
+
+158
+00:08:15,400 --> 00:08:19,150
+Entonces, al mismo nivel de drive.
+
+159
+00:08:19,450 --> 00:08:21,370
+Siempre recuerda tener cuidado con los stops.
+
+160
+00:08:22,060 --> 00:08:24,430
+Voy a escribir LSP dos puntos.
+
+161
+00:08:26,340 --> 00:08:26,940
+Return.
+
+162
+00:08:28,180 --> 00:08:28,740
+Prohibiré.
+
+163
+00:08:31,400 --> 00:08:31,880
+Dashboard.
+
+164
+00:08:31,880 --> 00:08:32,750
+Porque le pongo esto?
+
+165
+00:08:32,750 --> 00:08:36,740
+Porque si en algún caso no logra encontrar este.
+
+166
+00:08:37,880 --> 00:08:42,230
+Este parámetro, Parse no logra encontrar ningún query dentro de la página.
+
+167
+00:08:42,230 --> 00:08:44,600
+Entonces que por defecto me lleve al dashboard?
+
+168
+00:08:45,570 --> 00:08:46,560
+Así no tengo pierde.
+
+169
+00:08:48,570 --> 00:08:51,480
+Este mal se lo voy a borrar.
+
+170
+00:08:53,460 --> 00:09:00,180
+Y una última revisada en esta línea del páramo dic split en Split.
+
+171
+00:09:00,180 --> 00:09:03,120
+Aquí en este split me falta colocarle al signo de ant.
+
+172
+00:09:04,350 --> 00:09:05,960
+Los apóstrofes se.
+
+173
+00:09:07,330 --> 00:09:11,290
+Ahora sí, vamos a ir a File Safe All y vamos a probar.
+
+174
+00:09:12,200 --> 00:09:13,130
+Estamos en la página.
+
+175
+00:09:13,160 --> 00:09:14,360
+Voy a ir a la página de Store.
+
+176
+00:09:14,570 --> 00:09:15,170
+Ahí está.
+
+177
+00:09:15,590 --> 00:09:18,410
+Seleccionamos el Producto Rojo.
+
+178
+00:09:19,560 --> 00:09:20,100
+Murió.
+
+179
+00:09:21,530 --> 00:09:22,670
+Agrega Piccard.
+
+180
+00:09:22,850 --> 00:09:23,510
+Listo.
+
+181
+00:09:23,900 --> 00:09:25,880
+Recuerda que estoy como visitante.
+
+182
+00:09:26,390 --> 00:09:28,350
+Ahora le voy a dar clic al botón de pagar.
+
+183
+00:09:28,370 --> 00:09:29,630
+Estoy en el carrito de compras.
+
+184
+00:09:30,610 --> 00:09:31,300
+Estoy aquí.
+
+185
+00:09:31,310 --> 00:09:32,430
+Estoy con Elokim.
+
+186
+00:09:32,450 --> 00:09:36,470
+Recuerda que en la parte superior ya me aparece la futura Yo iré al que es el car checkout.
+
+187
+00:09:36,800 --> 00:09:40,190
+Vamos a explicar lo que sucede y perfecto.
+
+188
+00:09:40,200 --> 00:09:44,300
+Ya me está llevando a la página de checkout directamente.
+
+189
+00:09:45,380 --> 00:09:46,790
+Pero aquí tengo un pequeño problema.
+
+190
+00:09:47,090 --> 00:09:52,190
+No me está actualizando la lista de productos que voy a comprar en la parte derecha.
+
+191
+00:09:53,380 --> 00:09:54,630
+Vamos a resolverlo.
+
+192
+00:09:54,640 --> 00:09:57,600
+Vamos a ir a la carpeta cartas y a buscar.
+
+193
+00:09:59,290 --> 00:10:01,300
+Vamos a buscar el método de checkout.
+
+194
+00:10:02,110 --> 00:10:03,280
+Este es el método Cart.
+
+195
+00:10:03,970 --> 00:10:05,980
+Luego continúa el método Checkout.
+
+196
+00:10:06,700 --> 00:10:08,620
+Aquí es lo que me faltó dentro del método checkout.
+
+197
+00:10:08,620 --> 00:10:14,830
+Es agregar la lógica para que me pueda cargar la lista de productos cuando estoy en sesión.
+
+198
+00:10:15,430 --> 00:10:16,600
+No lo está haciendo.
+
+199
+00:10:17,410 --> 00:10:22,540
+Pero no te preocupes, esa lógica ya la hemos creado antes para el carrito de compras, así que vamos
+
+200
+00:10:22,540 --> 00:10:24,190
+un momento a la parte superior.
+
+201
+00:10:24,340 --> 00:10:31,600
+El anterior método aquí el método Cart, ya que aparece, mira la lógica para cargar los las líneas
+
+202
+00:10:31,600 --> 00:10:35,560
+del carrito de compras cuando está en sesión y cuando no está en sesión.
+
+203
+00:10:35,840 --> 00:10:36,700
+Aquí está la condición.
+
+204
+00:10:37,670 --> 00:10:38,960
+Voy a copiar estas líneas.
+
+205
+00:10:38,960 --> 00:10:40,460
+Este y este él.
+
+206
+00:10:40,790 --> 00:10:44,390
+Los copiamos y volvemos al método check out.
+
+207
+00:10:45,560 --> 00:10:49,010
+Y acá en el método de checkout dentro del dentro del try.
+
+208
+00:10:50,180 --> 00:10:51,500
+Un espacio para que lo notes.
+
+209
+00:10:52,490 --> 00:10:57,370
+Aquí están estas dos líneas para obtener el carrito de compras y las líneas del carrito de compras.
+
+210
+00:10:57,380 --> 00:11:01,190
+Eso lo voy a borrar y pego lo que he copiado antes.
+
+211
+00:11:02,700 --> 00:11:03,180
+Listo.
+
+212
+00:11:03,900 --> 00:11:07,320
+Pero recuerda que tiene que estar al nivel del try después del try.
+
+213
+00:11:07,830 --> 00:11:09,960
+Entonces siempre es bueno colocarle stops.
+
+214
+00:11:10,950 --> 00:11:11,460
+Perfecto.
+
+215
+00:11:11,460 --> 00:11:18,180
+De esta forma, entonces ya cargaría los productos, las líneas del carrito de compras dentro del checkout
+
+216
+00:11:18,180 --> 00:11:23,820
+para que se llene la tabla cuando está en sesión y cuando no está en sesión, vamos a borrar los cambios.
+
+217
+00:11:23,850 --> 00:11:25,110
+Menu Field Save all.
+
+218
+00:11:26,800 --> 00:11:33,310
+Estamos nuevamente en la página checkout y estoy en sesión, voy a actualizar y como puedes ver ya aquí
+
+219
+00:11:33,310 --> 00:11:36,370
+me aparecen los productos que vas a comprar.
+
+220
+00:11:37,420 --> 00:11:39,160
+Aquí me está pareciendo un pequeño error.
+
+221
+00:11:39,160 --> 00:11:43,780
+En la parte izquierda me estoy imprimiendo el CSS token, eso está mal.
+
+222
+00:11:44,050 --> 00:11:45,610
+Vamos a ir un momento al template.
+
+223
+00:11:46,600 --> 00:11:52,040
+Estamos dentro de Atom, a la carpeta templates dentro de la carpeta store, ya que para ese checkout
+
+224
+00:11:52,120 --> 00:11:58,300
+html vamos a ubicarnos dentro del formulario for action method post.
+
+225
+00:11:58,690 --> 00:12:00,730
+De aquí me faltó agregarle.
+
+226
+00:12:02,260 --> 00:12:05,210
+19 porcentaje para este toque.
+
+227
+00:12:07,260 --> 00:12:12,390
+Ahora, si vamos a borrar los cambios de Newfield Safe Hall, estamos en la página de checkout.
+
+228
+00:12:12,420 --> 00:12:14,190
+Voy a refrescar y listo.
+
+229
+00:12:15,360 --> 00:12:17,100
+Continuamos en el siguiente capítulo.

@@ -1,0 +1,331 @@
+1
+00:00:00,590 --> 00:00:03,910
+Estamos en el carrito de compras nuevamente estoy logueado.
+
+2
+00:00:03,920 --> 00:00:07,010
+Estoy dentro de la sesión de Maxi Dress con el nombre Néstor.
+
+3
+00:00:08,030 --> 00:00:09,080
+Y aquí tengo un producto.
+
+4
+00:00:09,080 --> 00:00:10,790
+Camisa moderna, una cantidad de tres.
+
+5
+00:00:11,000 --> 00:00:16,760
+Si le doy clic en el botón de agregar nuevos productos, agregar la cantidad de clic automáticamente
+
+6
+00:00:16,760 --> 00:00:18,110
+me la agrega estando en sesión.
+
+7
+00:00:18,410 --> 00:00:22,640
+Pero si le doy clic a este botón de eliminar una cantidad de crecer.
+
+8
+00:00:24,520 --> 00:00:26,080
+Va a tirarme este error.
+
+9
+00:00:27,280 --> 00:00:33,040
+Y si lo explica el botón de eliminar todo el ítem también me va a tirar otro error.
+
+10
+00:00:33,490 --> 00:00:38,980
+Entonces vamos en este capítulo a trabajar en estos eventos para disminuir la cantidad de elementos
+
+11
+00:00:38,980 --> 00:00:43,690
+del ítem y también para eliminar un ítem estando en sesión.
+
+12
+00:00:45,510 --> 00:00:47,160
+Estamos dentro de Atton.
+
+13
+00:00:47,190 --> 00:00:51,270
+Vamos a ir a la carpeta cart y nos ubicamos en el archivo Giuseppe Pin.
+
+14
+00:00:51,820 --> 00:00:54,960
+Y ahora vamos a buscar la función Remove Cart.
+
+15
+00:00:55,590 --> 00:00:56,760
+Está en la parte inferior.
+
+16
+00:00:58,390 --> 00:00:59,020
+Aquí aparece.
+
+17
+00:00:59,920 --> 00:01:01,510
+Este es el remove cart.
+
+18
+00:01:03,100 --> 00:01:06,760
+Si veo en la función estas dos primeras líneas están bien, son correctas.
+
+19
+00:01:06,910 --> 00:01:14,260
+Para obtener el CAR por el ID desde el objeto request y también obtener el product ID el product desde
+
+20
+00:01:14,260 --> 00:01:14,920
+el product.
+
+21
+00:01:15,520 --> 00:01:23,230
+Pero ahora, dentro de la sección del Tri, aquí tengo un pequeño dilema a resolver, porque la consulta
+
+22
+00:01:23,440 --> 00:01:27,910
+debería hacerla tomando en cuenta la sesión del usuario.
+
+23
+00:01:29,550 --> 00:01:33,180
+Así que aquí dentro del Tri vamos a agregarle esta condición.
+
+24
+00:01:33,250 --> 00:01:38,100
+Hacemos un if user punto.
+
+25
+00:01:38,490 --> 00:01:40,290
+Es out autenticado.
+
+26
+00:01:41,670 --> 00:01:51,550
+Si esto es verdad, entonces quiero que el item se obtenga con este desde el item punto Object punto
+
+27
+00:01:51,570 --> 00:01:56,790
+que con estos parámetros de product que lo obtuve en la parte superior product.
+
+28
+00:01:59,840 --> 00:02:07,730
+También aquí va a ser Justin en vez de ser va a ser igual a que al request user y el Hadi va a ser igual
+
+29
+00:02:08,030 --> 00:02:09,110
+al card item.
+
+30
+00:02:12,210 --> 00:02:12,720
+Raya.
+
+31
+00:02:12,720 --> 00:02:13,110
+Heidi.
+
+32
+00:02:13,830 --> 00:02:14,550
+Lo tenemos.
+
+33
+00:02:15,790 --> 00:02:19,480
+Pero en caso contrario que en este autenticado le vamos a poner dos puntos.
+
+34
+00:02:20,110 --> 00:02:23,080
+Aquí lo primero que quisiera que ocurra es que obtenga el Card.
+
+35
+00:02:23,980 --> 00:02:25,750
+Entonces, esta línea del Card.
+
+36
+00:02:25,900 --> 00:02:26,980
+Voy a cortarla.
+
+37
+00:02:28,610 --> 00:02:29,270
+Y la pongo aquí.
+
+38
+00:02:30,830 --> 00:02:38,030
+Y luego quiero que esa línea original que estaba trabajando para Kryten, haciendo la consulta del Item
+
+39
+00:02:38,030 --> 00:02:43,700
+Objects, utilizando los parámetros del product, el cast y el item continue.
+
+40
+00:02:44,240 --> 00:02:51,500
+Le he quitado el espacio entre este if y la anterior línea, pero este segundo if tiene que ir al mismo
+
+41
+00:02:51,500 --> 00:02:52,880
+nivel de tab del else.
+
+42
+00:02:53,780 --> 00:03:00,920
+Esto aquí también le hemos puesto un espacio entre el quality y el signo de mayor y el signo y el número
+
+43
+00:03:00,920 --> 00:03:02,010
+uno o dos puntos.
+
+44
+00:03:02,030 --> 00:03:04,520
+Verificamos que todo está correcto.
+
+45
+00:03:04,790 --> 00:03:07,280
+Siempre hay que revisar el código antes de ejecutarlo.
+
+46
+00:03:08,450 --> 00:03:12,650
+Ahora sí, vamos a ir a Menú File Save All y vamos a la página.
+
+47
+00:03:13,830 --> 00:03:14,840
+Estamos en la página.
+
+48
+00:03:14,850 --> 00:03:17,880
+Voy a actualizar la página y vamos a ver.
+
+49
+00:03:18,060 --> 00:03:22,050
+Démosle click al botón de menos y ya está disminuyendo la cantidad.
+
+50
+00:03:22,350 --> 00:03:24,630
+Y si le doy clic al botón de más, también aumenta.
+
+51
+00:03:25,560 --> 00:03:26,940
+Bien, esto está perfecto.
+
+52
+00:03:26,940 --> 00:03:29,940
+Ahora vamos a trabajar en la lógica del botón Eliminar.
+
+53
+00:03:31,210 --> 00:03:36,370
+La lógica del botón eliminar es esta es el de la función de remove car item.
+
+54
+00:03:37,720 --> 00:03:42,280
+En este caso, voy a mantener lo que es el product.
+
+55
+00:03:43,380 --> 00:03:44,620
+No puedo mover esta línea.
+
+56
+00:03:46,320 --> 00:03:47,070
+Cortarla.
+
+57
+00:03:47,400 --> 00:03:48,750
+Y la muevo para arriba.
+
+58
+00:03:48,870 --> 00:03:49,380
+Listo.
+
+59
+00:03:50,690 --> 00:03:53,990
+Y ahora voy a condicionar por la sesión del usuario.
+
+60
+00:03:54,650 --> 00:04:01,190
+Voy a indicarles if request, punto user, punto is out, etc.
+
+61
+00:04:02,760 --> 00:04:04,110
+Entonces que haga lo siguiente.
+
+62
+00:04:06,390 --> 00:04:09,750
+Que obtenga un item desde.
+
+63
+00:04:11,250 --> 00:04:12,000
+Cada ítem.
+
+64
+00:04:15,390 --> 00:04:16,020
+Punto.
+
+65
+00:04:17,690 --> 00:04:19,400
+Object punto get.
+
+66
+00:04:20,840 --> 00:04:23,990
+Y aquí la condición sería sobre el producto igual al producto.
+
+67
+00:04:26,260 --> 00:04:27,740
+Y el ser igual.
+
+68
+00:04:30,460 --> 00:04:31,780
+Request user.
+
+69
+00:04:33,980 --> 00:04:41,750
+Y también por el ID, que sería el car item para abajo y listo.
+
+70
+00:04:42,590 --> 00:04:44,390
+Así vamos a encontrar el card item.
+
+71
+00:04:46,210 --> 00:04:51,720
+Y si no, si no está autenticado, entonces en ese caso tendría que hacer lo anterior.
+
+72
+00:04:51,730 --> 00:04:53,980
+Tendrá que obtener primero el CAR.
+
+73
+00:04:54,310 --> 00:05:00,160
+Vamos a poner aquí el espaciado del CAR y una vez que obtenga el CAR, ya puede encontrar el car.
+
+74
+00:05:00,160 --> 00:05:00,640
+Item.
+
+75
+00:05:02,360 --> 00:05:02,990
+Qué es este?
+
+76
+00:05:04,520 --> 00:05:06,440
+Verificamos que todo está correcto.
+
+77
+00:05:07,100 --> 00:05:07,310
+Bien.
+
+78
+00:05:07,330 --> 00:05:10,940
+Voy a borrar los cambios en el Safe Hall y vamos a la página.
+
+79
+00:05:11,840 --> 00:05:13,580
+Estamos en la página del carrito de compras.
+
+80
+00:05:13,610 --> 00:05:17,300
+Voy a refrescar la página y ahora le voy a dar clic en el botón de eliminar.
+
+81
+00:05:17,870 --> 00:05:18,580
+Perfecto.
+
+82
+00:05:18,590 --> 00:05:22,580
+Ya está eliminando el Kryten cuando nosotros estamos en sesión.
+
+83
+00:05:23,480 --> 00:05:25,340
+Continuamos en el siguiente capítulo.

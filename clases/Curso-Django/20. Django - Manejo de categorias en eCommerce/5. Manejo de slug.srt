@@ -1,0 +1,255 @@
+1
+00:00:00,510 --> 00:00:06,150
+En este capítulo vamos a trabajar en el tema del Slack para que automáticamente se auto genere en el
+
+2
+00:00:06,150 --> 00:00:08,430
+momento que yo escriba el nombre de la categoría.
+
+3
+00:00:10,000 --> 00:00:12,820
+Para agregar este nuevo me gusta nueva mejora.
+
+4
+00:00:12,850 --> 00:00:20,080
+Vamos a ir a la carpeta category de esta categoría y vamos a ir al admin punto y y dentro de este admin
+
+5
+00:00:20,410 --> 00:00:24,190
+vamos a agregar una nueva clase, o sea, el espacio.
+
+6
+00:00:25,800 --> 00:00:29,700
+Te voy a poner las categorías admin.
+
+7
+00:00:32,230 --> 00:00:37,150
+Siento que me pase como parametro el admin punto model admin.
+
+8
+00:00:38,320 --> 00:00:39,220
+Y luego otros puntos.
+
+9
+00:00:40,720 --> 00:00:40,960
+Aquí.
+
+10
+00:00:40,960 --> 00:00:44,460
+Vamos a llamar a la propiedad pre popular.
+
+11
+00:00:47,560 --> 00:00:53,850
+Es cierto que tener cuidado con las formas de escribirlo por una s de más o una o una s que falta no
+
+12
+00:00:53,850 --> 00:00:54,600
+te va a ejecutar.
+
+13
+00:00:56,970 --> 00:01:01,080
+Le digo que en este caso es lo que quiero que dejen que se auto genere.
+
+14
+00:01:01,560 --> 00:01:03,180
+Es la propiedad Sloop.
+
+15
+00:01:04,530 --> 00:01:06,570
+Con qué se va a llenar este caso?
+
+16
+00:01:07,080 --> 00:01:10,230
+Con los datos de la propiedad Category.
+
+17
+00:01:11,360 --> 00:01:11,630
+Me.
+
+18
+00:01:13,320 --> 00:01:15,390
+Esto aquí es muy importante.
+
+19
+00:01:15,390 --> 00:01:19,920
+Luego de cerrar el apóstrofe y colocarle una coma, es parte de la sintaxis.
+
+20
+00:01:21,340 --> 00:01:26,920
+También aprovecho para indicarle que elementos quiero que se muestren en el grid de la lista de categorías.
+
+21
+00:01:27,070 --> 00:01:29,710
+Por ahora solo se está mostrando el nombre de la categoría.
+
+22
+00:01:29,980 --> 00:01:33,220
+Pero también quiero que se muestre el slug, así que si lo voy a poner.
+
+23
+00:01:34,220 --> 00:01:40,230
+Entonces el maestro del spray iguala categóricamente y también a los.
+
+24
+00:01:41,860 --> 00:01:42,110
+Listo.
+
+25
+00:01:43,000 --> 00:01:50,560
+Bien, el admin seis register se esta pasando el category no le voy a pasar tambien este category admin.
+
+26
+00:01:52,460 --> 00:01:53,170
+Lo tenemos.
+
+27
+00:01:53,180 --> 00:01:54,170
+Vamos a borrar los cambios.
+
+28
+00:01:54,260 --> 00:01:55,310
+No faltes, al.
+
+29
+00:01:56,990 --> 00:01:57,800
+Y vamos a probar.
+
+30
+00:01:58,860 --> 00:02:03,480
+Se está ejecutando mi página, voy a rebuscar en el browser y que aparece Categories.
+
+31
+00:02:03,510 --> 00:02:10,620
+Vamos a darle clic y mira, ya me aparece el grid con dos columnas, el category name y el slug de computadoras.
+
+32
+00:02:11,560 --> 00:02:13,270
+Quiero agregar un nuevo elemento.
+
+33
+00:02:13,270 --> 00:02:16,840
+Vamos a darle clic en el botón a category y el category name.
+
+34
+00:02:16,990 --> 00:02:17,890
+Le vamos a poner.
+
+35
+00:02:19,900 --> 00:02:21,790
+Ropa de verano.
+
+36
+00:02:24,480 --> 00:02:28,420
+Te das cuenta automáticamente se está ingresando el slug.
+
+37
+00:02:28,530 --> 00:02:29,520
+Ropa de verano.
+
+38
+00:02:29,520 --> 00:02:35,130
+Pero la diferencia es que en vez de los espacios en blanco me está colocando un guión.
+
+39
+00:02:35,580 --> 00:02:42,240
+No está colocando espacios en blanco porque sucede esto, porque posteriormente se toma el slug como
+
+40
+00:02:42,240 --> 00:02:45,030
+parte de la URL que representa el producto.
+
+41
+00:02:45,060 --> 00:02:46,470
+Eso lo vamos a ver más adelante.
+
+42
+00:02:47,550 --> 00:02:50,190
+En la institución le vamos a poner ropa de verano.
+
+43
+00:02:54,120 --> 00:02:55,050
+Está en promoción.
+
+44
+00:02:56,430 --> 00:02:57,630
+Seleccionamos una imagen.
+
+45
+00:03:01,860 --> 00:03:02,790
+La tenemos.
+
+46
+00:03:03,680 --> 00:03:07,690
+Si guardamos la categoría, vamos a crear otras categorías.
+
+47
+00:03:07,700 --> 00:03:09,050
+Por ejemplo, voy a colocar aquí.
+
+48
+00:03:10,980 --> 00:03:12,480
+Música y media.
+
+49
+00:03:15,810 --> 00:03:17,730
+Artefactos de música.
+
+50
+00:03:19,860 --> 00:03:20,470
+Moderna.
+
+51
+00:03:21,360 --> 00:03:22,020
+Tenemos.
+
+52
+00:03:23,720 --> 00:03:24,890
+Que le vamos a poner.
+
+53
+00:03:25,790 --> 00:03:26,150
+Desde el.
+
+54
+00:03:30,750 --> 00:03:33,180
+No vamos a agregar otra categoría.
+
+55
+00:03:34,290 --> 00:03:36,720
+Más sobre categoría que le llama Muebles de oficina.
+
+56
+00:03:38,750 --> 00:03:42,530
+Terminamos, presionamos la imagen y guardamos.
+
+57
+00:03:43,580 --> 00:03:45,080
+Vamos en otra categoría.
+
+58
+00:03:46,350 --> 00:03:48,180
+Y aquí le agregamos accesorios Stitch.
+
+59
+00:03:49,210 --> 00:03:49,630
+Gracias.
+
+60
+00:03:49,630 --> 00:03:50,200
+Personales.
+
+61
+00:03:50,200 --> 00:03:53,260
+Seleccionamos una imagen casual de un reloj.
+
+62
+00:03:55,410 --> 00:03:55,830
+Listo.
+
+63
+00:03:55,830 --> 00:03:58,200
+Ya hemos creado entonces las categorías.
+
+64
+00:03:58,950 --> 00:04:00,660
+Continuamos en el siguiente capítulo.

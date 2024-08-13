@@ -1,0 +1,275 @@
+1
+00:00:00,390 --> 00:00:04,680
+Vamos a continuar en este capítulo trabajando mi proyecto llamado Web Application.
+
+2
+00:00:04,920 --> 00:00:11,850
+Algo que voy a pedirte es que de ahora en adelante voy a asumir que tú ya tienes ejecutando el Virtual
+
+3
+00:00:11,850 --> 00:00:15,330
+Environment y también el servidor web de Jango.
+
+4
+00:00:15,960 --> 00:00:16,850
+A que me refiero?
+
+5
+00:00:16,860 --> 00:00:23,940
+Me refiero a que vas a abrir ese badge y vas a ejecutar ese comando source em script activa y vas a
+
+6
+00:00:23,940 --> 00:00:30,570
+activar el virtual environment y a continuación vas a ejecutar el Python Manager Run Server para que
+
+7
+00:00:30,570 --> 00:00:32,580
+se ejecute tu proyecto web.
+
+8
+00:00:33,670 --> 00:00:39,550
+Si tienes dudas de cómo hacerlo, recuerda que en el capítulo anterior te expliqué paso a paso cómo
+
+9
+00:00:39,550 --> 00:00:46,240
+ejecutar estos comandos y cómo levantar el servidor de Jango con el Python Manager punto Pi y Run Server.
+
+10
+00:00:47,710 --> 00:00:50,740
+Vamos a continuar ahora con la construcción de nuestro proyecto.
+
+11
+00:00:51,370 --> 00:00:57,970
+Si vamos al archivo buscar y vamos a saber el código que hicimos en la clase pasada para crear el objeto
+
+12
+00:00:57,970 --> 00:00:58,570
+response.
+
+13
+00:00:58,990 --> 00:01:04,870
+Y eso que todo lo que estaba haciendo estaba imprimiendo un texto dentro de mi página y el texto era
+
+14
+00:01:05,050 --> 00:01:06,310
+Bienvenidos a Validez.
+
+15
+00:01:06,730 --> 00:01:14,410
+Pero yo lo que quiero ahora es manejar estos objetos de tipo response dentro de un file, un template.
+
+16
+00:01:15,280 --> 00:01:18,670
+Vamos entonces a la raíz de mi proyecto, que es BASIC.
+
+17
+00:01:19,330 --> 00:01:25,330
+A este nivel vamos a darle clic derecho New Folder y le vamos a poner el nombre Templates.
+
+18
+00:01:25,930 --> 00:01:30,550
+A continuación, dentro del folder template vamos a teclear Echo New File.
+
+19
+00:01:30,580 --> 00:01:35,500
+Vamos a crear un file que le vamos a llamar home punto a HTML.
+
+20
+00:01:36,660 --> 00:01:37,560
+Le damos enter.
+
+21
+00:01:39,030 --> 00:01:40,200
+Vamos a revisarlo.
+
+22
+00:01:40,680 --> 00:01:43,050
+Sí, aquí está el archivo HTML.
+
+23
+00:01:43,230 --> 00:01:44,600
+Y lo que quiero ahora es aquí.
+
+24
+00:01:44,640 --> 00:01:49,680
+Escribir ese H2 que antes estaba mandando como response.
+
+25
+00:01:50,040 --> 00:01:50,340
+Bien.
+
+26
+00:01:50,550 --> 00:01:51,570
+Le pongo un H2.
+
+27
+00:01:52,950 --> 00:01:54,240
+Cerramos el H2O.
+
+28
+00:01:56,070 --> 00:01:57,840
+Y le escribo Bienvenidos.
+
+29
+00:01:59,680 --> 00:02:01,510
+A Bakshi tres punto com.
+
+30
+00:02:01,570 --> 00:02:02,470
+Visite nuestra página.
+
+31
+00:02:02,980 --> 00:02:03,460
+Listo.
+
+32
+00:02:03,760 --> 00:02:11,320
+Guardamos los cambios y ahora vamos hacia el archivo que está dentro del proyecto dentro de Bakshi Projects.
+
+33
+00:02:12,280 --> 00:02:16,360
+Hasta que aparece el bus y lo abrimos.
+
+34
+00:02:17,080 --> 00:02:21,640
+Y a continuación, en vez de este http response, voy a eliminarlo.
+
+35
+00:02:22,690 --> 00:02:24,370
+Vamos a escribir render.
+
+36
+00:02:25,340 --> 00:02:27,460
+Y le vamos a pasar dos parámetros.
+
+37
+00:02:27,470 --> 00:02:30,170
+El objeto es que esté ingresando a este método.
+
+38
+00:02:31,280 --> 00:02:36,620
+Y también el nombre del templo que acabamos de crear, que es home a HTML.
+
+39
+00:02:37,040 --> 00:02:41,450
+Pero vas a notar que aquí estoy utilizando esta palabra reservada render, que es una función.
+
+40
+00:02:41,810 --> 00:02:44,960
+Entonces tenemos que importarla también en la parte superior.
+
+41
+00:02:45,240 --> 00:02:50,840
+Aquí por eso voy a escribir From Dayan go punto shortcut.
+
+42
+00:02:53,580 --> 00:02:55,620
+Import render.
+
+43
+00:02:56,690 --> 00:02:57,320
+Perfecto.
+
+44
+00:02:58,330 --> 00:03:02,740
+Algo adicional es de que tenemos que registrar la carpeta templates.
+
+45
+00:03:03,820 --> 00:03:09,760
+Anteriormente había creado a este nivel Templates y dentro de templates el punto HTML.
+
+46
+00:03:10,120 --> 00:03:16,690
+Pero lo que necesito hacer es registrar, indicarle a mi proyecto que los templates web están dentro
+
+47
+00:03:16,690 --> 00:03:17,410
+de esta carpeta.
+
+48
+00:03:17,560 --> 00:03:18,460
+Cómo lo voy a hacer?
+
+49
+00:03:19,000 --> 00:03:25,120
+Tienes que ir a la carpeta Maxi y pasa ahora a ser instrumento pipe y vamos a abrirlo.
+
+50
+00:03:25,870 --> 00:03:29,980
+Y recuerdas que te he indicado antes que aquí existe una configuración de templates?
+
+51
+00:03:30,090 --> 00:03:31,390
+Si, aquí está.
+
+52
+00:03:33,230 --> 00:03:37,550
+Y dentro de ella hay un atributo que dice Dios qué significa directorios?
+
+53
+00:03:38,120 --> 00:03:44,240
+Aquí vamos a colocarle entre apóstrofes el nombre de la carpeta que se llama Templates.
+
+54
+00:03:46,470 --> 00:03:47,420
+Tenemos todo listo.
+
+55
+00:03:47,430 --> 00:03:48,670
+Voy a guardar todos los cambios.
+
+56
+00:03:48,670 --> 00:03:49,950
+Menú Fire Safe All.
+
+57
+00:03:50,280 --> 00:03:52,530
+Y ahora vamos a probar nuestra página.
+
+58
+00:03:53,520 --> 00:04:00,390
+Y como puedes ver, ya se está ejecutando en el local 8000 el mensaje, pero ahora leyéndose desde un
+
+59
+00:04:00,390 --> 00:04:01,080
+template.
+
+60
+00:04:01,860 --> 00:04:07,080
+Algo importante que te quería comentar es que cuando estés haciendo los cambios en tu proyecto y a la
+
+61
+00:04:07,080 --> 00:04:13,950
+vez esté ejecutando la aplicación web, puede ser que en algún punto la aplicación caiga o deje de ejecutarse
+
+62
+00:04:14,250 --> 00:04:14,940
+en el valle.
+
+63
+00:04:15,390 --> 00:04:23,280
+Entonces, en ese caso, lo que tienes que hacer es volver a ejecutar el comando Python Manager Run
+
+64
+00:04:23,280 --> 00:04:25,620
+Server tal como hemos hecho antes.
+
+65
+00:04:25,620 --> 00:04:31,380
+Porque a veces puede ocurrirte que al estar haciendo tantos cambios en tu proyecto, la aplicación se
+
+66
+00:04:31,380 --> 00:04:31,890
+detenga.
+
+67
+00:04:31,890 --> 00:04:37,560
+La aplicación que está ejecutándose en el valle se detenga y en ese caso te obliga a volver a ejecutar
+
+68
+00:04:37,560 --> 00:04:40,350
+manualmente este comando que hemos hablado antes.
+
+69
+00:04:41,600 --> 00:04:47,990
+Vamos a continuar en el siguiente capítulo integrando Django con otros frameworks como Bootstrap.

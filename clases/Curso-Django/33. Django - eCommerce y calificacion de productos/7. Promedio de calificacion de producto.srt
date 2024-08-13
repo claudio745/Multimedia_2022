@@ -1,0 +1,331 @@
+1
+00:00:00,420 --> 00:00:06,180
+En este capítulo vamos a seguir trabajando en la página de tal producto y los reviews y ratings puntajes
+
+2
+00:00:06,360 --> 00:00:08,880
+que los clientes le dan a mi producto.
+
+3
+00:00:09,630 --> 00:00:16,530
+Lo que quiero ahora es calcular el promedio del puntajes que me ha dado el conjunto de compradores por
+
+4
+00:00:16,530 --> 00:00:17,340
+este producto.
+
+5
+00:00:18,090 --> 00:00:22,950
+Para hacer esta función vamos a ir hacia la carpeta Store.
+
+6
+00:00:23,670 --> 00:00:25,920
+Dentro de esto vamos a Models y.
+
+7
+00:00:27,010 --> 00:00:32,980
+Y vamos a crear una función dentro de la clase modelo, de la clase producto.
+
+8
+00:00:33,950 --> 00:00:39,520
+Y aquí, como voy a utilizar lo que es una función para obtener el promedio de un conjunto de números
+
+9
+00:00:39,920 --> 00:00:47,290
+que en este caso de la columna Rating, voy a utilizar esta librería Django de Div Models.
+
+10
+00:00:48,890 --> 00:00:49,490
+Import.
+
+11
+00:00:51,450 --> 00:00:56,130
+EB Creo que es como para obtener el promedio y dentro del class product.
+
+12
+00:00:58,020 --> 00:01:03,570
+Luego de este STR vamos a crear otra función de tipo de F.
+
+13
+00:01:05,030 --> 00:01:08,120
+Que no voy a llamar Empress Review.
+
+14
+00:01:13,650 --> 00:01:14,850
+Y le paso el self.
+
+15
+00:01:18,500 --> 00:01:21,380
+De aquí, lo primero que voy a hacer es obtener el objeto.
+
+16
+00:01:21,380 --> 00:01:22,580
+Escribió el promedio.
+
+17
+00:01:23,270 --> 00:01:24,200
+Una consulta.
+
+18
+00:01:24,620 --> 00:01:25,760
+Así que le pongo dos.
+
+19
+00:01:26,390 --> 00:01:27,920
+Va a ser igual al recibido.
+
+20
+00:01:30,460 --> 00:01:34,750
+Rating Punto Objects Filter.
+
+21
+00:01:37,920 --> 00:01:40,080
+Y voy a hacer la consulta sobre esta misma clase.
+
+22
+00:01:40,080 --> 00:01:41,100
+Así que le pongo el self.
+
+23
+00:01:43,240 --> 00:01:45,610
+El estatus de producto debe ser true.
+
+24
+00:01:46,750 --> 00:01:53,470
+Una vez que obtuve el producto, lo que quiero es ejecutar una función que obtenga el promedio respecto
+
+25
+00:01:53,470 --> 00:01:54,700
+de la columna rating.
+
+26
+00:01:55,880 --> 00:01:57,220
+De rating.
+
+27
+00:01:57,230 --> 00:01:58,940
+Entonces vamos a hacer una.
+
+28
+00:02:02,780 --> 00:02:03,590
+Debo agregar.
+
+29
+00:02:03,740 --> 00:02:05,870
+Y ahora voy a indicarle que abres.
+
+30
+00:02:07,070 --> 00:02:08,660
+Va a ser igual a esta función.
+
+31
+00:02:08,660 --> 00:02:09,770
+AVG, AVG.
+
+32
+00:02:11,840 --> 00:02:15,440
+Sobre la columna rating que tiene los puntajes.
+
+33
+00:02:17,370 --> 00:02:22,590
+Pero este es un cuadro y tengo que obtener el dato en la columna para poder obtenerlo.
+
+34
+00:02:22,830 --> 00:02:23,850
+Voy a hacer un ABC que.
+
+35
+00:02:25,110 --> 00:02:25,930
+Es igual a cero.
+
+36
+00:02:28,450 --> 00:02:31,810
+Y ahora le digo si el objeto recibido tiene.
+
+37
+00:02:33,130 --> 00:02:34,960
+Se ha obtenido este campo calculado.
+
+38
+00:02:34,960 --> 00:02:38,830
+Everest que no es vacío.
+
+39
+00:02:38,830 --> 00:02:39,190
+Nos.
+
+40
+00:02:41,270 --> 00:02:45,060
+Entonces obtenerlo y almacenarlo dentro del ABC.
+
+41
+00:02:47,450 --> 00:02:50,210
+Esto va a ser un número, pero va a ser decimal.
+
+42
+00:02:50,540 --> 00:02:51,980
+Altamente probable que sea decimal.
+
+43
+00:02:52,520 --> 00:02:56,690
+Le pongo que lo obtenga de la consulta en la columna.
+
+44
+00:02:56,690 --> 00:02:57,230
+Abrís.
+
+45
+00:02:59,620 --> 00:03:02,800
+Finalmente le digo que me retorne el ave que.
+
+46
+00:03:04,010 --> 00:03:11,420
+Y de esta forma ya estoy obteniendo lo que es el promedio de puntajes que me está, que me está enviando
+
+47
+00:03:11,420 --> 00:03:12,590
+el conjunto de usuarios.
+
+48
+00:03:13,400 --> 00:03:16,180
+Vamos ahora al template de product detail.
+
+49
+00:03:17,510 --> 00:03:19,640
+Voy a hacer que aparezca la barra de navegación.
+
+50
+00:03:19,910 --> 00:03:25,310
+Vamos a la carpeta Templates que aparece Store y del producto del punto HTML.
+
+51
+00:03:25,730 --> 00:03:26,720
+Vamos a maximizar.
+
+52
+00:03:28,230 --> 00:03:33,630
+Ahora vamos a la parte inferior del archivo donde aparece la parte de los reviews.
+
+53
+00:03:33,660 --> 00:03:34,410
+Vamos a ver.
+
+54
+00:03:34,950 --> 00:03:35,970
+Aquí están los input.
+
+55
+00:03:35,970 --> 00:03:37,470
+Aquí está el formulario.
+
+56
+00:03:38,250 --> 00:03:39,150
+El método post.
+
+57
+00:03:40,340 --> 00:03:42,920
+Y sobre él está un Jeter.
+
+58
+00:03:44,150 --> 00:03:50,690
+Y este gente que se acaba, vamos a moverlo para la sección de la lista donde se imprime la lista de
+
+59
+00:03:50,690 --> 00:03:51,650
+calificaciones de.
+
+60
+00:03:52,310 --> 00:03:53,540
+Voy a cortar este header.
+
+61
+00:03:57,300 --> 00:04:01,200
+Y lo voy a colocar aquí antes del bucle que imprime los dibujos en la parte inferior.
+
+62
+00:04:02,140 --> 00:04:04,690
+Antes de este artículo y antes del bucle.
+
+63
+00:04:05,660 --> 00:04:06,830
+Aquí lo vamos a pelear.
+
+64
+00:04:07,310 --> 00:04:10,520
+Siempre que sea mejor, volvemos a la parte superior.
+
+65
+00:04:12,040 --> 00:04:14,720
+Aquí me quedo este Roque.
+
+66
+00:04:15,370 --> 00:04:20,170
+También aquí está el fortachón que me lleva hacia el suburbio.
+
+67
+00:04:22,810 --> 00:04:23,050
+Aquí.
+
+68
+00:04:23,050 --> 00:04:23,440
+Un momento.
+
+69
+00:04:23,440 --> 00:04:24,350
+Aquí aparece el título.
+
+70
+00:04:24,370 --> 00:04:26,650
+Escribe tu comentario después de secaremos.
+
+71
+00:04:29,500 --> 00:04:30,030
+El promedio.
+
+72
+00:04:30,060 --> 00:04:31,410
+Hacemos un single por producto.
+
+73
+00:04:31,900 --> 00:04:33,070
+Abres review?
+
+74
+00:04:33,760 --> 00:04:37,990
+Recuerda que esta es la función que definiste en el clase de producto hace un momento.
+
+75
+00:04:38,950 --> 00:04:39,940
+Aquí vamos a volver.
+
+76
+00:04:40,240 --> 00:04:42,610
+Puedes ver que presenté review?
+
+77
+00:04:43,840 --> 00:04:46,270
+Aquí hay un pequeño detalle en este agregaste.
+
+78
+00:04:46,630 --> 00:04:48,550
+Debería ser con doble que.
+
+79
+00:04:50,490 --> 00:04:51,810
+La primera que hay que presentar.
+
+80
+00:04:52,350 --> 00:04:57,480
+Ahora sí vamos a guardar todos los cambios menús, failed safe all y vamos a probar la página.
+
+81
+00:04:58,630 --> 00:05:06,580
+Actualizamos la página, vamos a la parte inferior y mira, aquí aparece el puntaje del producto 5.0.
+
+82
+00:05:07,390 --> 00:05:08,390
+Perfecto.
+
+83
+00:05:08,440 --> 00:05:10,270
+Continuamos en el siguiente video.

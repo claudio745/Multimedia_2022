@@ -1,0 +1,811 @@
+1
+00:00:00,390 --> 00:00:07,350
+En este capítulo comenzaremos la creación de la lógica para verificar que un usuario ha ingresado sus
+
+2
+00:00:07,350 --> 00:00:08,460
+datos correctamente.
+
+3
+00:00:08,760 --> 00:00:09,660
+A qué me refiero?
+
+4
+00:00:09,810 --> 00:00:12,210
+Vamos a salir a la sesión porque estaba con mi amigo Juan.
+
+5
+00:00:14,020 --> 00:00:20,830
+Me refiero a que cuando vayas al formulario de registro de usuario, el cliente va a ingresar un email.
+
+6
+00:00:21,490 --> 00:00:23,560
+Este email tiene que ser válido.
+
+7
+00:00:24,460 --> 00:00:31,000
+Esto significa que nosotros tenemos que enviar un correo electrónico a esta cuenta de email con un link
+
+8
+00:00:31,270 --> 00:00:38,020
+en el cual el usuario tiene que darle click a ese link para que pueda recién activarse como un usuario
+
+9
+00:00:38,020 --> 00:00:40,990
+automáticamente dentro de nuestro portal de e-commerce.
+
+10
+00:00:42,080 --> 00:00:47,420
+Hasta que no haga este proceso, su usuario va a estar en un estatus de inactivo.
+
+11
+00:00:48,350 --> 00:00:50,360
+Entonces, profesor, que es lo que tengo que hacer?
+
+12
+00:00:50,480 --> 00:00:57,260
+Lo que tenemos que hacer es ir dentro de este proceso de del evento de registrar un nuevo usuario y
+
+13
+00:00:57,260 --> 00:01:02,840
+agregar la lógica para que se envíe un correo electrónico a esta persona.
+
+14
+00:01:03,290 --> 00:01:10,370
+Vamos entonces a Hatton, vamos a la carpeta account y dentro del account aparece el bus y si es interior
+
+15
+00:01:10,370 --> 00:01:14,420
+vamos a notar que me aparece la función dev register.
+
+16
+00:01:15,590 --> 00:01:19,790
+Dentro de esta función tengo la lógica para crear un nuevo usuario.
+
+17
+00:01:20,910 --> 00:01:27,000
+Esta es la lógica para crear el nuevo usuario y culmina justamente en esta línea cuando se inserta dentro
+
+18
+00:01:27,000 --> 00:01:33,930
+de la base de datos este nuevo usuario, utilizando el user a continuación de este hecho agregado en
+
+19
+00:01:33,930 --> 00:01:34,860
+el capítulo anterior.
+
+20
+00:01:35,070 --> 00:01:39,510
+Una lógica para enviar un mensaje indicándote que se registro el usuario exitosamente.
+
+21
+00:01:39,930 --> 00:01:42,330
+Pero eso está al margen de lo que vamos a hacer en este momento.
+
+22
+00:01:42,630 --> 00:01:48,330
+Lo que queremos es crear un proceso de activación del usuario enviando un correo electrónico.
+
+23
+00:01:49,410 --> 00:01:57,660
+Entonces aquí comenzaríamos diciendo cuál es la URL donde tiene que darle click ese usuario cuando le
+
+24
+00:01:57,660 --> 00:01:59,370
+llegue el contenido del correo electrónico.
+
+25
+00:02:00,090 --> 00:02:06,570
+Por eso es que voy a crear esta variable que significa Current site, el sitio actual que sería mi página,
+
+26
+00:02:08,100 --> 00:02:13,280
+y esta se obtiene llamando a esta función get bajo current y abajo site.
+
+27
+00:02:14,620 --> 00:02:16,450
+Y pasándole el objeto es.
+
+28
+00:02:18,620 --> 00:02:20,780
+También necesito el email.
+
+29
+00:02:21,170 --> 00:02:22,190
+El mail, subject.
+
+30
+00:02:23,620 --> 00:02:28,000
+Este caso significa el título del correo electrónico que tú vas a enviar.
+
+31
+00:02:29,550 --> 00:02:29,820
+Yo qué?
+
+32
+00:02:29,820 --> 00:02:32,280
+Quiero decir en el título Entre apóstrofes.
+
+33
+00:02:34,210 --> 00:02:36,160
+Por favor, activa tu cuenta.
+
+34
+00:02:38,300 --> 00:02:39,290
+En validez.
+
+35
+00:02:45,430 --> 00:02:48,970
+Y también necesitas enviarle el contenido del correo electrónico.
+
+36
+00:02:49,270 --> 00:02:54,010
+Le voy a poner body y aquí voy a hacer un render.
+
+37
+00:02:54,340 --> 00:02:55,420
+Tu string.
+
+38
+00:02:56,560 --> 00:03:02,840
+Esta función me pide como parámetro cuál es el texto que quieres ingresarlo.
+
+39
+00:03:02,860 --> 00:03:04,130
+Tú podrías escribir acá.
+
+40
+00:03:04,150 --> 00:03:04,570
+Hola!
+
+41
+00:03:05,650 --> 00:03:12,370
+Por favor, dale clic a este link para activar tu cuenta.
+
+42
+00:03:15,910 --> 00:03:22,030
+Pero realmente sería muy pesado crear todo este código HTML, el contenido del correo electrónico en
+
+43
+00:03:22,030 --> 00:03:22,870
+ese segmento.
+
+44
+00:03:23,410 --> 00:03:30,940
+Entonces, en su lugar, vamos a crear en breves minutos un template, un template que tenga el contenido
+
+45
+00:03:30,940 --> 00:03:32,860
+del correo electrónico que quiere llegar al cliente.
+
+46
+00:03:34,210 --> 00:03:39,970
+Lo que voy a hacer acá es indicarle dónde está ubicado este este template, así que le agrego que va
+
+47
+00:03:39,970 --> 00:03:41,230
+a estar dentro de account.
+
+48
+00:03:43,760 --> 00:03:46,940
+Y el templete se va a llamar a verificación.
+
+49
+00:03:48,020 --> 00:03:48,400
+Email.
+
+50
+00:03:49,810 --> 00:03:50,660
+HTML.
+
+51
+00:03:52,210 --> 00:03:57,160
+Pero este template va a tener algunos valores que tiene que pintarse también dinámicamente dentro del
+
+52
+00:03:57,160 --> 00:03:58,210
+contenido del mensaje.
+
+53
+00:04:00,150 --> 00:04:04,980
+Esos valores se los voy a pasar utilizando esta nomenclatura.
+
+54
+00:04:05,820 --> 00:04:08,340
+Le voy a pasar un objeto del usuario actual.
+
+55
+00:04:10,530 --> 00:04:15,450
+El usuario que se está registrando en mi base de datos se lo paso al template para que pinte el nombre,
+
+56
+00:04:15,450 --> 00:04:16,530
+el apellido, etc.
+
+57
+00:04:18,370 --> 00:04:23,950
+También el dominio en este caso debe ser referido a mi página actual Laurel.
+
+58
+00:04:23,950 --> 00:04:25,930
+En mi página le pongo Current site.
+
+59
+00:04:27,570 --> 00:04:34,260
+También debo enviarle un identificador para que se sepa que usuario quiero dar de alta, por lo que
+
+60
+00:04:34,260 --> 00:04:35,850
+le voy a poner un ID.
+
+61
+00:04:37,860 --> 00:04:43,290
+Y lo que le quiero enviar realmente aquí es el primary quid del usuario que se ha almacenado en la base
+
+62
+00:04:43,290 --> 00:04:46,170
+de datos, pero que está inactivo en ese momento.
+
+63
+00:04:46,800 --> 00:04:52,280
+Entonces yo no le podría, yo le podría enviar un user punto pack, pero no es nada recomendable.
+
+64
+00:04:52,290 --> 00:04:56,010
+Esto le va a enviar la clave primaria del usuario, que sería el.
+
+65
+00:04:56,010 --> 00:04:56,730
+Yo sería y de.
+
+66
+00:04:58,010 --> 00:05:05,390
+Compartir claves primarias de modo público es algo altamente peligroso, por lo que tenemos que aquí
+
+67
+00:05:05,390 --> 00:05:06,940
+hacer un descifrado.
+
+68
+00:05:06,950 --> 00:05:07,880
+Vamos a descifrarla.
+
+69
+00:05:08,870 --> 00:05:11,300
+Voy a poner esto en el safe.
+
+70
+00:05:13,940 --> 00:05:14,930
+Base64.
+
+71
+00:05:14,930 --> 00:05:16,910
+La voy a codificar en base64.
+
+72
+00:05:18,530 --> 00:05:19,130
+En code.
+
+73
+00:05:22,010 --> 00:05:25,990
+Y también en interior vamos a colocarle un force bytes.
+
+74
+00:05:28,460 --> 00:05:35,300
+Ya que si le agregamos qué es lo que quiero que en code codifique sea el user PK la clave primaria?
+
+75
+00:05:37,540 --> 00:05:38,200
+Se lo borró.
+
+76
+00:05:38,560 --> 00:05:39,430
+Ahí lo tenemos.
+
+77
+00:05:41,390 --> 00:05:48,320
+Entonces, si tu clave primaria de repente era un número entero como diez o 20, lo que va a ser esta
+
+78
+00:05:48,320 --> 00:05:54,320
+línea de código es transformarlo a una colección de caracteres como esto, más o menos.
+
+79
+00:05:56,820 --> 00:05:57,630
+Hexadecimal.
+
+80
+00:06:01,070 --> 00:06:02,000
+Algo parecido a esto.
+
+81
+00:06:02,270 --> 00:06:03,050
+Eso es lo que va a hacer.
+
+82
+00:06:03,050 --> 00:06:03,920
+Va a edificarla.
+
+83
+00:06:06,060 --> 00:06:06,840
+Continuamos.
+
+84
+00:06:06,870 --> 00:06:07,950
+Voy a ponerle una coma.
+
+85
+00:06:09,290 --> 00:06:12,500
+Y también le voy a pedir un toque que represente a este mensaje.
+
+86
+00:06:13,910 --> 00:06:14,420
+Lo voy a poner.
+
+87
+00:06:14,420 --> 00:06:22,220
+Por eso llamo a esta función que se llama The Fold Toque Generator.
+
+88
+00:06:24,860 --> 00:06:27,510
+Y a la función make up.
+
+89
+00:06:29,790 --> 00:06:32,730
+El token se va a basar en el objeto user.
+
+90
+00:06:33,660 --> 00:06:38,160
+Recuerda que el usuario y el objeto usuario existe dentro del contexto de esta función.
+
+91
+00:06:38,160 --> 00:06:39,630
+Por eso lo puedo pasar.
+
+92
+00:06:41,030 --> 00:06:47,120
+Una vez que haya indicado cuáles son los valores que van en la template y que a futuro será el bori,
+
+93
+00:06:47,780 --> 00:06:51,050
+ya puedo iniciar el proceso de envío del correo electrónico.
+
+94
+00:06:51,770 --> 00:06:57,320
+Voy a crear una variable que se me tu email que represente el email del cliente al cual le quiero enviar
+
+95
+00:06:57,320 --> 00:06:58,400
+ese correo electrónico.
+
+96
+00:06:59,940 --> 00:07:05,730
+También voy a crear una variable que se llame Sean email.
+
+97
+00:07:07,810 --> 00:07:11,560
+Este es el objeto realmente que va a procesar tu correo electrónico?
+
+98
+00:07:11,980 --> 00:07:14,010
+Le tengo que poner email message.
+
+99
+00:07:16,870 --> 00:07:20,050
+Aquí le paso como parámetros el email subject.
+
+100
+00:07:22,420 --> 00:07:24,310
+El título del email también.
+
+101
+00:07:24,350 --> 00:07:28,330
+El body, el contenido del email y también a quién va dirigido.
+
+102
+00:07:28,870 --> 00:07:33,860
+Por eso aquí le pongo que va dirigido hacia el tu email.
+
+103
+00:07:33,880 --> 00:07:35,740
+A esta persona va a llegar el correo electrónico.
+
+104
+00:07:38,230 --> 00:07:46,170
+Y ahora voy a llamar a este objeto en email y a una función que es Cent para que haga ya el envío del
+
+105
+00:07:46,180 --> 00:07:46,540
+email.
+
+106
+00:07:48,700 --> 00:07:49,630
+Eso sería todo.
+
+107
+00:07:50,200 --> 00:07:53,890
+Pero como te darás cuenta, está en este bloque código que he creado.
+
+108
+00:07:53,890 --> 00:07:55,750
+Estoy llamando a diferentes funciones.
+
+109
+00:07:56,020 --> 00:07:58,810
+Qué tenemos que importar en la parte superior?
+
+110
+00:07:59,380 --> 00:08:00,580
+Vamos a la parte superior.
+
+111
+00:08:03,680 --> 00:08:05,540
+De aquí después de lo que requiere.
+
+112
+00:08:06,350 --> 00:08:08,240
+Vamos a agregar los imports.
+
+113
+00:08:10,870 --> 00:08:17,420
+Le ponemos From Chango, Punto Country, punto seis, punto sur.
+
+114
+00:08:19,870 --> 00:08:22,900
+Y que me importe aquí el get current sight.
+
+115
+00:08:24,820 --> 00:08:26,830
+También voy a importar el tag chango.
+
+116
+00:08:28,240 --> 00:08:30,100
+Template loader.
+
+117
+00:08:31,350 --> 00:08:39,900
+Importe que le pongo que me importa el render tu string también vamos a hacer que importe el rango útil
+
+118
+00:08:40,560 --> 00:08:43,500
+a http import.
+
+119
+00:08:43,500 --> 00:08:44,900
+El url safe.
+
+120
+00:08:46,680 --> 00:08:48,630
+Yo era el jefe en un momento.
+
+121
+00:08:50,890 --> 00:08:57,580
+Raya para abajo el vasco base64 en foot y también el yo en el safe.
+
+122
+00:09:00,790 --> 00:09:01,450
+De momento.
+
+123
+00:09:03,410 --> 00:09:06,170
+B 64 c artículo aquí.
+
+124
+00:09:08,750 --> 00:09:09,320
+Scott.
+
+125
+00:09:09,710 --> 00:09:11,180
+Ambos lo necesito.
+
+126
+00:09:11,870 --> 00:09:13,910
+Yo era el SF 64, Scott.
+
+127
+00:09:13,910 --> 00:09:17,000
+Y yo era el SF 64 de Scott.
+
+128
+00:09:19,140 --> 00:09:26,870
+Ya no voy a llamar al front jango punto com es.youtube.com.
+
+129
+00:09:29,580 --> 00:09:31,230
+Importamos el.
+
+130
+00:09:33,080 --> 00:09:36,830
+Vamos a exportar aquí el default Token Generator.
+
+131
+00:09:38,500 --> 00:09:42,340
+También vamos a importar el from da chango.
+
+132
+00:09:43,610 --> 00:09:44,760
+Puntos útiles.
+
+133
+00:09:44,780 --> 00:09:46,040
+Punto en común.
+
+134
+00:09:48,570 --> 00:09:50,130
+Import Force.
+
+135
+00:09:51,470 --> 00:09:51,900
+Bits.
+
+136
+00:09:55,100 --> 00:09:58,550
+Y también importamos el hallazgo punto por punto.
+
+137
+00:09:58,550 --> 00:10:00,860
+Mail import.
+
+138
+00:10:01,340 --> 00:10:02,290
+Email message.
+
+139
+00:10:04,920 --> 00:10:06,480
+Aquí me faltó una S.
+
+140
+00:10:06,900 --> 00:10:14,940
+Debería ser en esta línea del tochaco country output tokens que me faltó después de la N una s.
+
+141
+00:10:17,030 --> 00:10:18,710
+Ahora vamos a la función nuevamente.
+
+142
+00:10:20,060 --> 00:10:21,770
+Ese es el bloque de código que he creado.
+
+143
+00:10:23,580 --> 00:10:27,090
+Y vamos ahora a crear este template acá.
+
+144
+00:10:27,210 --> 00:10:29,220
+Verificación email html.
+
+145
+00:10:29,370 --> 00:10:30,720
+Voy a copiar el nombre.
+
+146
+00:10:34,020 --> 00:10:35,790
+Y vamos a ubicarnos dentro.
+
+147
+00:10:36,980 --> 00:10:41,270
+De la carpeta Templates Account le damos clic derecho New File.
+
+148
+00:10:42,430 --> 00:10:45,880
+Se cambió el nombre a cabo de verificación email, punto html.
+
+149
+00:10:46,000 --> 00:10:46,900
+Le amo Center.
+
+150
+00:10:48,140 --> 00:10:55,550
+Entonces aquí vamos a comenzar por agregar la parte superior, unas llaves, porcentajes y le hacemos
+
+151
+00:10:55,550 --> 00:10:59,420
+un auto escape en off.
+
+152
+00:10:59,810 --> 00:11:02,390
+Hacemos esto como una forma de seguridad.
+
+153
+00:11:04,030 --> 00:11:07,710
+Para evitar un script en auto escape también.
+
+154
+00:11:07,780 --> 00:11:13,290
+Bueno, aquí y aquí comenzamos a escribir el contenido del mensaje.
+
+155
+00:11:13,300 --> 00:11:19,720
+Lo voy a poner hola aqui yo user la variable user que le estoy pasando?
+
+156
+00:11:20,680 --> 00:11:21,550
+First name.
+
+157
+00:11:22,710 --> 00:11:24,000
+Pero voy a poner una coma.
+
+158
+00:11:25,110 --> 00:11:29,370
+Y le digo Por favor, activa tu cuenta.
+
+159
+00:11:31,000 --> 00:11:33,170
+Dándole click al siguiente link.
+
+160
+00:11:37,000 --> 00:11:40,000
+De aquí le pongo el http dos puntos.
+
+161
+00:11:40,000 --> 00:11:41,200
+Doble slash.
+
+162
+00:11:42,790 --> 00:11:49,390
+Aquí lo voy a poner el domain del portal de e-commerce y a continuación tengo que indicarle exactamente
+
+163
+00:11:49,390 --> 00:11:53,920
+en qué página a que página quieres que vaya para que haga esta activación.
+
+164
+00:11:54,460 --> 00:11:55,930
+Entonces aquí lo voy a poner.
+
+165
+00:11:55,930 --> 00:11:58,510
+No es realmente una página, tiene que ser un URL.
+
+166
+00:12:00,730 --> 00:12:01,390
+Es un padre!
+
+167
+00:12:02,350 --> 00:12:02,980
+Es el padre!
+
+168
+00:12:03,010 --> 00:12:03,730
+Actívate!
+
+169
+00:12:04,660 --> 00:12:05,350
+Actívate!
+
+170
+00:12:07,540 --> 00:12:08,220
+Y le pongo aquí.
+
+171
+00:12:09,490 --> 00:12:10,030
+Heidi.
+
+172
+00:12:11,750 --> 00:12:13,160
+V64.
+
+173
+00:12:15,560 --> 00:12:16,660
+Igual a Lloyd.
+
+174
+00:12:19,350 --> 00:12:23,520
+Y el toque va a ser igual al valor del token que le estoy pasando como parámetro.
+
+175
+00:12:25,970 --> 00:12:26,120
+Bien.
+
+176
+00:12:27,530 --> 00:12:31,220
+Y finalmente le pongo saludos de validez.
+
+177
+00:12:33,990 --> 00:12:39,840
+A continuación, tenemos que configurar una cuenta de correo electrónico para que me permita ingresar
+
+178
+00:12:39,840 --> 00:12:44,730
+al servidor de Gmail, utilizar el servidor de Gmail para poder enviar ese correo electrónico.
+
+179
+00:12:45,270 --> 00:12:52,920
+Entonces vamos ahora hacia la carpeta e-commerce y nos ubicamos dentro de ser Internet y vamos a la
+
+180
+00:12:52,920 --> 00:12:53,670
+parte inferior.
+
+181
+00:12:57,370 --> 00:13:02,020
+Ya que en la parte inferior habíamos hecho un From the Country of messages.
+
+182
+00:13:02,080 --> 00:13:05,380
+Después de esto, vamos a colocar aquí.
+
+183
+00:13:06,630 --> 00:13:07,560
+Un menos.
+
+184
+00:13:09,260 --> 00:13:15,170
+En este caso el email es SMTP punto gmail.com.
+
+185
+00:13:17,530 --> 00:13:17,920
+El email.
+
+186
+00:13:17,960 --> 00:13:19,420
+Port el puerto.
+
+187
+00:13:19,900 --> 00:13:22,420
+Voy indicarle que sea 587.
+
+188
+00:13:24,610 --> 00:13:26,650
+El email host user.
+
+189
+00:13:28,570 --> 00:13:30,190
+Tienes que indicarle cuál es el usuario.
+
+190
+00:13:30,700 --> 00:13:34,390
+Le voy a poner que es y punto tres arroba gmail.
+
+191
+00:13:34,390 --> 00:13:34,930
+Punto com.
+
+192
+00:13:37,240 --> 00:13:40,270
+No le voy a colocar redes sociales.
+
+193
+00:13:41,770 --> 00:13:42,400
+Arroba gmail.
+
+194
+00:13:42,400 --> 00:13:46,840
+Punto com Puedes colocar aquí tu cuenta de correo de Gmail de tu cuenta personal.
+
+195
+00:13:49,570 --> 00:13:52,450
+Yo aquí le colocamos email host password.
+
+196
+00:13:54,430 --> 00:13:55,630
+Colocas aquí el password?
+
+197
+00:13:55,630 --> 00:13:58,420
+Por ahora yo no le voy a colocar nada.
+
+198
+00:13:58,450 --> 00:13:59,950
+Voy a poner un password.
+
+199
+00:14:00,090 --> 00:14:04,450
+Tú coloca el el password que utilizas para acceder a tu cuenta de correo electronico de gmail.
+
+200
+00:14:06,860 --> 00:14:10,260
+Y finalmente le pongo it s dls.
+
+201
+00:14:11,090 --> 00:14:12,350
+Y le digo que si true.
+
+202
+00:14:14,520 --> 00:14:16,290
+Eso sería todo con la configuración.
+
+203
+00:14:16,830 --> 00:14:18,960
+Continuamos en el siguiente capítulo.

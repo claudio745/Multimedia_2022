@@ -1,0 +1,66 @@
+Prueba 2019
+
+¿Por qué tener redes neuronales profundas?
+R: La idea de tener redes neuronales profundas es poder agregar más niveles de procesamiento, con el objetivo de aprender los atributos necesarios para aprender los atributos de salida.
+------------------
+¿Por que se dice que la funcion de activacion ReLu actua como un arbol de decision?
+
+R: Esto se debe a que tiene un comportamiento bastante peculiar, debido a que tiene la capacidad de elegir, esto se refiere que si la entrada es positiva activa la salida y la apaga si es que esta es negativa.
+-----------------
+¿En que tipo de problemas se usa la capa soft-max?¿Por que razon se usa?
+
+R: Este se usa en problemas de clasificacion de multiclase para convertir las salidas de la red en probabilidades normalizadas y asi facilitar la interpretacion y toma de desiciones.
+
+--------
+Explique brevemente cual es el objetivo del forward pass y el backward pass en el algoritmo de backpropagation
+
+R: Forward Pass: la red neuronal realiza una evaluacion de la entrada en conjunto de todas las capas hasta que pueda producir una salida.
+Backward Pass: En este se calculan los gradientes de la funcion de perdida respectivos a los parametros de la red y se utilizan para ajustar la red y mejorar su rendimiento.
+
+-------------------
+
+En redes neuronales profundas. ¿El algoritmo de gradiente descendente usualmente converge al optimo?
+Fundamente su respuesta positiva o negativa.
+
+La convergencia no esta garantizada, esto debido a que hay que saber elegir los hiperparametros y saber como inicializar los pesos para aumentar la posibilidad de convergencia.
+
+----------------
+
+¿Cual es la diferencia entre aprendizaje supervisado y aprendizaje no supervisado?
+
+R: En el aprendizaje no supervisado el algoritmo busca patrones para descubrir la estructura de los datos, mientras que en aprendizaje supervisado el objetivo es aprender una funcion la cual se generaliza con los ejemplos de entrenamiento para hacer predicciones.
+
+------------------
+Comparemos los modelos A y B esquematizados en la Figura 1 El Modelo A difiere del Modelo B, en que
+en el Modelo B se pone una capa escondida con 16 nodos funciones de activación lineal entre la capa escondia original
+de tamaño 128 y la capa de salida de tamaño 250. Describa una ventaja del modelo A y una ventaja del Modelo B.
+
+En el modelo A la ventaja es sy simplicidad y reduccion de complejidad, al tener menos capas el modelo es mas eficiente y más facil de entrenar, evitando el sobreajuste.
+
+En el modelo B como se añade una capa oculta este debería ser capaz de capturar patrones y complejidades en los datos, por lo que para problemas de mayor complejidad podría hacerlo mas efectivo.
+
+
+-------------------
+Considerando una capa de entrada de 20 neuronas. Indique el codigo necesario para agregar una capa de
+dropout con probabilidad 0.8 mantener el nodo.
+
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout
+
+# Crear un modelo secuencial
+modelo = Sequential()
+
+# Añadir una capa de entrada con 20 neuronas
+modelo.add(Dense(20, input_dim=20, activation='relu'))
+
+# Añadir una capa de dropout con probabilidad de retención de 0.8
+modelo.add(Dropout(0.2))  # 1 - 0.8 = 0.2, donde 0.2 es la probabilidad de dropout
+
+# Puedes continuar agregando más capas según sea necesario
+# Por ejemplo, modelo.add(Dense(otro_número_de_neuronas, activation='relu'))
+
+# Compilar el modelo
+modelo.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+# Imprimir un resumen del modelo
+modelo.summary()

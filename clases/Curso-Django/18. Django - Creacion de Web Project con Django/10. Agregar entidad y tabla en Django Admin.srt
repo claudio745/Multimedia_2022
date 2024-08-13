@@ -1,0 +1,639 @@
+1
+00:00:00,420 --> 00:00:06,000
+Para que sea visible la entidad usuarios que nosotros hemos creado en nuestro proyecto.
+
+2
+00:00:06,330 --> 00:00:09,000
+Lo que tenemos que hacer es registrar la.
+
+3
+00:00:10,130 --> 00:00:12,590
+La pregunta es dónde registrarlo?
+
+4
+00:00:13,040 --> 00:00:18,860
+Vamos a registrarlo dentro de la carpeta de la aplicación que es usuarios, ingresa usuarios y aquí
+
+5
+00:00:18,860 --> 00:00:21,620
+aparece el archivo admin.
+
+6
+00:00:22,130 --> 00:00:23,840
+Y vamos a abrirlo.
+
+7
+00:00:24,200 --> 00:00:27,980
+Y justamente mira, aquí te dice registra tu modelo aquí.
+
+8
+00:00:29,050 --> 00:00:34,360
+Vamos a escribir entonces admin punto siete, punto Register.
+
+9
+00:00:35,020 --> 00:00:36,400
+Y a quién vas a registrar?
+
+10
+00:00:36,970 --> 00:00:40,090
+Debe ser a la clase usuario que has creado.
+
+11
+00:00:40,690 --> 00:00:43,420
+Le pones usuario, pero tienes que entonces importarla.
+
+12
+00:00:44,170 --> 00:00:46,270
+Hacemos un from en la parte superior.
+
+13
+00:00:46,270 --> 00:00:47,410
+Punto Models.
+
+14
+00:00:48,930 --> 00:00:49,590
+Import.
+
+15
+00:00:50,310 --> 00:00:50,940
+Usuario.
+
+16
+00:00:52,580 --> 00:01:00,260
+Recuerda que este usuario ya lo has generado anteriormente dentro del archivo Models Pi, aquí aparece
+
+17
+00:01:00,410 --> 00:01:01,360
+el class usuario.
+
+18
+00:01:01,370 --> 00:01:08,720
+Eso es lo que estas haciendo que se registre dentro del admin API para que sea visible en el portal
+
+19
+00:01:08,720 --> 00:01:10,010
+de administración de Jango.
+
+20
+00:01:11,370 --> 00:01:13,830
+Vamos a borrar los cambios de menú Fail Safe all.
+
+21
+00:01:14,280 --> 00:01:16,020
+Y ahora vamos a nuestra página.
+
+22
+00:01:17,070 --> 00:01:22,800
+Estamos en la página de administración local 200.000 slash admin ya estoy logueado, vamos a recargar
+
+23
+00:01:22,800 --> 00:01:29,340
+la página y mira, ya apareció aquí la sección que te muestra las entidades de tu proyecto, en este
+
+24
+00:01:29,340 --> 00:01:35,220
+caso es usuarios, pero si yo quisiera lo hubiera puesto libro o lo hubiera puesto productos o lo hubiera
+
+25
+00:01:35,220 --> 00:01:39,210
+puesto factura, etc Es una entidad propia la que yo he creado.
+
+26
+00:01:39,420 --> 00:01:45,690
+Si le damos clic a usuarios, mira lo que te va a aparecer te indica que no has registrado aún ningún
+
+27
+00:01:45,690 --> 00:01:47,580
+tipo de record para esta tabla.
+
+28
+00:01:48,180 --> 00:01:49,590
+Vamos a crear un record aquí.
+
+29
+00:01:49,590 --> 00:01:53,460
+En la parte superior aparece un botón de add usuario agregar un usuario.
+
+30
+00:01:53,940 --> 00:01:54,480
+Dale click.
+
+31
+00:01:55,660 --> 00:01:56,770
+Un código de usuario.
+
+32
+00:01:56,770 --> 00:01:58,390
+Yo le voy a poner que sea mil.
+
+33
+00:01:59,260 --> 00:02:03,790
+También te voy a pedir que selecciones un archivo, foto, una imagen de tu computadora.
+
+34
+00:02:03,800 --> 00:02:05,020
+Vamos a seleccionarlo.
+
+35
+00:02:06,270 --> 00:02:10,660
+Para seleccionar la imagen de un gato como foto perfil open.
+
+36
+00:02:10,830 --> 00:02:12,060
+Listo, ya seleccioné.
+
+37
+00:02:12,420 --> 00:02:14,060
+Vamos a ponerle un nombre.
+
+38
+00:02:14,100 --> 00:02:15,060
+Le voy a poner.
+
+39
+00:02:20,290 --> 00:02:21,160
+Armando.
+
+40
+00:02:23,010 --> 00:02:23,880
+González.
+
+41
+00:02:23,880 --> 00:02:24,450
+Le pongo.
+
+42
+00:02:26,970 --> 00:02:27,960
+Qué profesión?
+
+43
+00:02:29,590 --> 00:02:31,600
+Técnico de enfermería.
+
+44
+00:02:33,240 --> 00:02:35,010
+Género que aparece.
+
+45
+00:02:35,250 --> 00:02:35,850
+Masculino.
+
+46
+00:02:35,850 --> 00:02:36,260
+Femenino.
+
+47
+00:02:36,270 --> 00:02:36,900
+Masculino.
+
+48
+00:02:37,590 --> 00:02:38,490
+Ciudad.
+
+49
+00:02:39,900 --> 00:02:40,740
+Montevideo.
+
+50
+00:02:41,790 --> 00:02:42,990
+Y le damos clic al botón.
+
+51
+00:02:44,800 --> 00:02:48,460
+Y ya se acaba de crear un récord dentro de mi tabla usuario.
+
+52
+00:02:49,550 --> 00:02:52,100
+Vamos a darle clic nuevamente ese record que acabo de guardar.
+
+53
+00:02:52,960 --> 00:02:59,080
+Hasta que aparece la información y también aquí aparece el link de la imagen como antes lo hemos configurado
+
+54
+00:02:59,320 --> 00:03:03,940
+dentro de la carpeta fotos el año, el mes, el día.
+
+55
+00:03:04,210 --> 00:03:06,520
+Vamos a darle clic a ver si me abre la foto.
+
+56
+00:03:07,590 --> 00:03:09,390
+Me dice que es imposible abrirla.
+
+57
+00:03:09,750 --> 00:03:16,950
+Esto está sucediendo porque debería ser un tipo media fiel, pero no lo está reconociendo.
+
+58
+00:03:17,250 --> 00:03:23,030
+Entonces tengo que ingresar a mi proyecto para poder actualizar esta configuración de media Fields.
+
+59
+00:03:24,100 --> 00:03:30,610
+Vamos a ubicarnos dentro de la carpeta de mi proyecto que es Bakshi Project y aquí voy a ir al archivo
+
+60
+00:03:30,610 --> 00:03:32,020
+seis punto Pi y.
+
+61
+00:03:33,090 --> 00:03:37,160
+Vamos a la parte inferior donde están registrados las wireless.
+
+62
+00:03:38,270 --> 00:03:43,340
+Hoy que aparece por ejemplo el static URL para el root static file tears.
+
+63
+00:03:44,440 --> 00:03:49,720
+Vamos a darle un enter luego de este corchete y aquí voy a poner un comentario para que represente.
+
+64
+00:03:51,160 --> 00:03:52,390
+El Media Files.
+
+65
+00:03:54,060 --> 00:03:54,900
+Configuration.
+
+66
+00:03:56,690 --> 00:03:58,640
+Va a ser muy similar a lo que hemos hecho antes.
+
+67
+00:03:59,300 --> 00:04:01,580
+Le voy a poner un medio a Ruth propiedad.
+
+68
+00:04:03,580 --> 00:04:07,000
+Que va a apuntar directamente al bastidor.
+
+69
+00:04:10,640 --> 00:04:11,240
+Es las.
+
+70
+00:04:12,760 --> 00:04:14,740
+A una carpeta que se va a llamar media.
+
+71
+00:04:16,720 --> 00:04:18,310
+Y en media jurel.
+
+72
+00:04:19,360 --> 00:04:21,460
+Quiero que apunte a una carpeta.
+
+73
+00:04:23,450 --> 00:04:24,380
+Que se llame media.
+
+74
+00:04:26,460 --> 00:04:27,520
+Lo tenemos listo.
+
+75
+00:04:27,540 --> 00:04:29,790
+Voy a guardar los cambios que enchufa el Safe Hall.
+
+76
+00:04:32,300 --> 00:04:36,830
+Y ahora vamos al Archivo General, que también está al interior de Macy Project.
+
+77
+00:04:37,430 --> 00:04:41,540
+Vamos a abrir el archivo de aquí dentro de sello en el Patterns.
+
+78
+00:04:41,570 --> 00:04:48,980
+Bueno, luego del corchete vamos a poner un signo de suma y vamos a agregar esta variable estática static
+
+79
+00:04:48,980 --> 00:04:49,790
+settings.
+
+80
+00:04:52,590 --> 00:04:53,280
+Punto.
+
+81
+00:04:55,270 --> 00:04:56,800
+Media jurel.
+
+82
+00:04:57,040 --> 00:04:58,990
+Aquí está lo que registraba en su momento.
+
+83
+00:04:59,470 --> 00:04:59,950
+Coma.
+
+84
+00:05:00,640 --> 00:05:03,010
+Teniendo como referencia el document rut.
+
+85
+00:05:04,830 --> 00:05:05,350
+Document.
+
+86
+00:05:05,430 --> 00:05:06,180
+Raya para abajo.
+
+87
+00:05:06,180 --> 00:05:06,510
+Road.
+
+88
+00:05:06,930 --> 00:05:08,700
+Igual a Kim al Settings.
+
+89
+00:05:10,660 --> 00:05:12,100
+Punto media, Ruth.
+
+90
+00:05:14,610 --> 00:05:19,800
+Tengo listo, pero estoy utilizando aquí esta función static y también al settings.
+
+91
+00:05:20,550 --> 00:05:23,790
+Entonces tengo que importarlos aquí en la parte superior.
+
+92
+00:05:24,300 --> 00:05:32,220
+Voy a poner from Jango conf punto jureles punto static.
+
+93
+00:05:33,840 --> 00:05:34,500
+Import.
+
+94
+00:05:35,900 --> 00:05:36,360
+Estate.
+
+95
+00:05:38,790 --> 00:05:41,650
+Y también vamos a importar el Chango Newcomb.
+
+96
+00:05:43,900 --> 00:05:44,530
+Import.
+
+97
+00:05:45,810 --> 00:05:46,440
+Settings.
+
+98
+00:05:47,980 --> 00:05:49,130
+Vamos a borrar los cambios.
+
+99
+00:05:49,150 --> 00:05:50,350
+Me gusta el Safe Hall.
+
+100
+00:05:52,000 --> 00:05:59,590
+Algo adicional que nos faltó hacer es ejecutar un comando para hacer que el archivo de estático de Bootstrap
+
+101
+00:05:59,590 --> 00:06:05,330
+que tengo dentro de mi proyecto Project A que aparece Static?
+
+102
+00:06:05,350 --> 00:06:06,880
+Si es es Bootstrap.
+
+103
+00:06:06,910 --> 00:06:10,180
+Domine este código, se ejecute también con Mediafire.
+
+104
+00:06:10,540 --> 00:06:13,150
+Entonces para hacerlo, vamos a abrir la consola.
+
+105
+00:06:13,150 --> 00:06:13,630
+El Bash.
+
+106
+00:06:14,590 --> 00:06:15,880
+Tengo el patio abierto.
+
+107
+00:06:15,880 --> 00:06:16,960
+Voy a detenerlo.
+
+108
+00:06:16,960 --> 00:06:17,620
+Control C.
+
+109
+00:06:18,760 --> 00:06:21,100
+Y voy a ejecutar este comando Python.
+
+110
+00:06:23,020 --> 00:06:23,560
+Manage.
+
+111
+00:06:23,590 --> 00:06:24,150
+Punto.
+
+112
+00:06:24,620 --> 00:06:28,810
+Momento y espacio.
+
+113
+00:06:29,500 --> 00:06:30,040
+Collect.
+
+114
+00:06:30,880 --> 00:06:31,480
+Static.
+
+115
+00:06:34,150 --> 00:06:35,110
+Le damos a Enter.
+
+116
+00:06:37,060 --> 00:06:40,930
+Esperamos unos segundos y se ha creado sin ningún problema.
+
+117
+00:06:41,620 --> 00:06:47,320
+Si vas a la raíz de tu proyecto, vas a notar que ya se creó esta carpeta static y dentro de ella aparece
+
+118
+00:06:47,320 --> 00:06:54,400
+una carpeta admin que representa realmente toda la interfaz gráfica de administración de Yanko y también
+
+119
+00:06:54,670 --> 00:07:01,000
+está incorporando una carpeta si es que representa el bootstrap en mi punto CSS.
+
+120
+00:07:02,170 --> 00:07:09,140
+Es muy importante crear estos archivos estáticos para hacer más rápido el acceso a recursos compartidos.
+
+121
+00:07:09,160 --> 00:07:12,370
+Cuando trabajas en proyectos de regular tamaño.
+
+122
+00:07:13,570 --> 00:07:17,220
+Vamos a ejecutar nuevamente nuestro servidor web de Python en Django.
+
+123
+00:07:17,230 --> 00:07:22,870
+Así que hacemos un Python Manage y or server.
+
+124
+00:07:22,870 --> 00:07:23,890
+Le damos enter.
+
+125
+00:07:25,950 --> 00:07:27,350
+Estaba nuevamente en el despacho.
+
+126
+00:07:27,690 --> 00:07:29,940
+Es la admin, vamos a actualizar.
+
+127
+00:07:30,360 --> 00:07:32,400
+Está perfecto que aparece usuarios.
+
+128
+00:07:32,400 --> 00:07:35,550
+Vamos a darle clic a que me aparece el usuario Object.
+
+129
+00:07:36,840 --> 00:07:38,900
+Vamos a volver a subir una imagen.
+
+130
+00:07:38,910 --> 00:07:39,960
+Voy a seleccionarla.
+
+131
+00:07:42,210 --> 00:07:45,300
+Seleccionamos una imagen, le doy safe y listo.
+
+132
+00:07:45,300 --> 00:07:47,130
+Lo hemos guardado sin ningún problema.
+
+133
+00:07:47,580 --> 00:07:49,860
+Otra vez seleccionamos el usuario guardado.
+
+134
+00:07:50,340 --> 00:07:54,270
+A ver, le damos clic a la imagen y ahora si ya me aparece.
+
+135
+00:07:55,370 --> 00:07:59,240
+Ya está funcionando los medios sociales dentro de mi proyecto.
+
+136
+00:08:00,110 --> 00:08:04,710
+A continuación voy a crear cuatro nuevos usuarios, así que no te preocupes.
+
+137
+00:08:04,730 --> 00:08:11,060
+Volvemos a la plantilla principal a que aparece el botón Add Usuario y vamos a generar cuatro nuevos
+
+138
+00:08:11,060 --> 00:08:11,660
+usuarios.
+
+139
+00:08:12,780 --> 00:08:18,110
+Ya he generado los cuatro usuarios, pero como puedes ver, se está mostrando como si fuera un tipo
+
+140
+00:08:18,120 --> 00:08:18,840
+objeto.
+
+141
+00:08:19,500 --> 00:08:22,290
+Qué pasaría si yo quisiera que se mostrara en detalle?
+
+142
+00:08:23,250 --> 00:08:29,430
+Hemos vuelto al proyecto, a la carpeta de usuarios y dentro de usuarios al archivo Models API, donde
+
+143
+00:08:29,430 --> 00:08:34,050
+habíamos definido las propiedades que iba a tener en esta tabla, a las columnas que va a tener esta
+
+144
+00:08:34,050 --> 00:08:34,410
+tabla.
+
+145
+00:08:34,620 --> 00:08:38,980
+Vamos a darle un enter acá y vamos a crear un método de tipo def.
+
+146
+00:08:40,900 --> 00:08:43,120
+Y le ponemos dos rayas para abajo.
+
+147
+00:08:44,590 --> 00:08:45,430
+Str.
+
+148
+00:08:46,500 --> 00:08:51,690
+Dos rayas para abajo y le paso el parámetro self.
+
+149
+00:08:53,410 --> 00:08:55,630
+Cierro los paréntesis, le pongo dos puntos.
+
+150
+00:08:58,340 --> 00:09:04,040
+Y a continuación vamos a indicarle que lo que quiero que me retorne es el nombre del usuario, así que
+
+151
+00:09:04,040 --> 00:09:05,050
+le pongo self.
+
+152
+00:09:05,060 --> 00:09:05,640
+Punto.
+
+153
+00:09:06,700 --> 00:09:07,180
+Nombre.
+
+154
+00:09:08,260 --> 00:09:09,100
+Eso sería todo.
+
+155
+00:09:09,640 --> 00:09:10,690
+Voy a borrar los cambios.
+
+156
+00:09:10,720 --> 00:09:12,010
+Menú Falstaff all.
+
+157
+00:09:13,240 --> 00:09:14,260
+Y vamos a la página.
+
+158
+00:09:15,390 --> 00:09:22,680
+Vamos a refrescar la página y ahora sí, mira, ya me aparecen los nombres de los usuarios y puedo irlos
+
+159
+00:09:22,680 --> 00:09:24,150
+editando a placer.
+
+160
+00:09:24,660 --> 00:09:26,430
+Continuamos en el siguiente capítulo.

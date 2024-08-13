@@ -1,0 +1,839 @@
+1
+00:00:00,360 --> 00:00:05,550
+En ese capítulo vamos a trabajar en llenar con datos de la base de datos esta página de Payment.
+
+2
+00:00:06,390 --> 00:00:09,960
+Para esto ubiquémonos dentro de la carpeta orders.
+
+3
+00:00:10,870 --> 00:00:12,940
+Así que aparece Bush, Bush y.
+
+4
+00:00:13,990 --> 00:00:17,260
+Y aquí tengo la función de placeholder.
+
+5
+00:00:17,530 --> 00:00:18,520
+Vamos a ubicarnos aquí.
+
+6
+00:00:19,610 --> 00:00:20,390
+Es muy importante.
+
+7
+00:00:20,390 --> 00:00:23,540
+Porque mira, cuando yo estoy almacenando la data.
+
+8
+00:00:24,380 --> 00:00:25,760
+La data de la orden de compra.
+
+9
+00:00:26,900 --> 00:00:31,670
+Estoy inmediatamente redireccionando hacia la página checkout, pero yo no quiero que esto más ocurra.
+
+10
+00:00:31,670 --> 00:00:36,080
+Yo quiero que me redirecciones ahora a la página de Payment.
+
+11
+00:00:36,200 --> 00:00:37,790
+Si esto fue exitoso, claro está.
+
+12
+00:00:38,510 --> 00:00:42,620
+Entonces también a la hora de redireccionar.
+
+13
+00:00:43,100 --> 00:00:47,060
+Ya no va a ser un Reddit realmente va a ser un render porque tengo que pasarle parámetros.
+
+14
+00:00:47,720 --> 00:00:49,100
+Que parámetros son estos?
+
+15
+00:00:49,460 --> 00:00:56,870
+Por ejemplo el objeto orden, también la lista de elementos de productos, los items también el total
+
+16
+00:00:56,870 --> 00:01:02,720
+a pagar el impuesto y el total final que va a desembolsar el usuario.
+
+17
+00:01:03,850 --> 00:01:08,770
+Entonces esa data tengo que obtenerla desde el objeto orden.
+
+18
+00:01:09,310 --> 00:01:12,910
+Después de hacer el Data Shift, se supone que la información está en la base de datos.
+
+19
+00:01:13,480 --> 00:01:16,120
+Lo que voy a hacer a continuación es obtener el objeto order.
+
+20
+00:01:17,140 --> 00:01:20,530
+Entonces, para obtener el objeto Order, tengo que llamar a la entidad Order.
+
+21
+00:01:20,530 --> 00:01:21,070
+Punto.
+
+22
+00:01:22,130 --> 00:01:23,990
+Object punto get.
+
+23
+00:01:26,630 --> 00:01:33,170
+Y voy a indicarle que me obtenga esta orden filtrando por el usuario Current User.
+
+24
+00:01:34,180 --> 00:01:36,400
+También tengo que indicarle que.
+
+25
+00:01:37,850 --> 00:01:41,220
+Esta orden está en estatus de ordenada orden.
+
+26
+00:01:41,450 --> 00:01:44,420
+Debe ser acá igual a false.
+
+27
+00:01:46,380 --> 00:01:50,850
+Y también le tengo que pasar el orden number igual al order.
+
+28
+00:01:52,300 --> 00:01:56,560
+Order number que he generado aquí es order number.
+
+29
+00:01:57,750 --> 00:01:58,110
+Listo.
+
+30
+00:01:58,380 --> 00:02:04,230
+Estos son los parámetros que necesito para poder filtrar y obtener mi objeto order desde la base de
+
+31
+00:02:04,230 --> 00:02:04,770
+datos.
+
+32
+00:02:05,160 --> 00:02:08,370
+Una vez que lo tengas, ya puedes hacer lo siguiente.
+
+33
+00:02:08,760 --> 00:02:12,150
+Podemos crear un diccionario que enviaremos a nuestro template payment.
+
+34
+00:02:13,110 --> 00:02:18,420
+Este diccionario va a tener primeramente un objeto order.
+
+35
+00:02:19,360 --> 00:02:20,140
+Que le ponemos.
+
+36
+00:02:22,350 --> 00:02:26,550
+El objeto order que se envíe también va a tener el car items.
+
+37
+00:02:27,810 --> 00:02:31,520
+La lista de elementos del carrito de compras cart items.
+
+38
+00:02:31,560 --> 00:02:32,820
+Los elementos que vas a comprar.
+
+39
+00:02:34,440 --> 00:02:36,000
+También el total a pagar.
+
+40
+00:02:38,320 --> 00:02:42,910
+Pero ese total representa la cantidad de productos versus el precio de cada producto.
+
+41
+00:02:44,980 --> 00:02:47,090
+A este total tengo que sacarle el tax.
+
+42
+00:02:47,110 --> 00:02:51,040
+Por eso también tengo que indicarle que envíe el tax, el impuesto.
+
+43
+00:02:51,960 --> 00:02:56,400
+Y por último, la suma entre el total y el tax, que es la variable gran total.
+
+44
+00:02:57,790 --> 00:02:58,670
+Listo al final.
+
+45
+00:02:58,690 --> 00:02:59,560
+Siempre una coma.
+
+46
+00:03:00,100 --> 00:03:01,060
+Lo tenemos.
+
+47
+00:03:02,440 --> 00:03:07,780
+Y ahora lo que tengo que hacer es hacer un render hacia la página de Payment.
+
+48
+00:03:07,840 --> 00:03:10,630
+Entonces aquí en vez de Direct le vamos a poner render.
+
+49
+00:03:11,270 --> 00:03:12,190
+Porque le pongo render?
+
+50
+00:03:12,190 --> 00:03:14,290
+Porque tengo que enviarle ese diccionario.
+
+51
+00:03:15,300 --> 00:03:17,430
+Así que aquí le ponemos orders.
+
+52
+00:03:18,090 --> 00:03:19,920
+Es las payment.
+
+53
+00:03:20,980 --> 00:03:22,390
+Junto a HTML.
+
+54
+00:03:24,390 --> 00:03:25,760
+Y le paso los parámetros.
+
+55
+00:03:25,770 --> 00:03:26,430
+El contex.
+
+56
+00:03:27,780 --> 00:03:29,550
+Y se llama nuevamente a la página de spam.
+
+57
+00:03:30,120 --> 00:03:33,180
+Mira, aquí va a suceder algo muy interesante en la dirección de facturación.
+
+58
+00:03:33,180 --> 00:03:38,160
+Tengo que indicarle cuál es el nombre de la persona a la cual va a remitido.
+
+59
+00:03:38,640 --> 00:03:39,870
+Va a remitir la factura.
+
+60
+00:03:40,230 --> 00:03:46,080
+Entonces aquí tienes que colocar el nombre y el apellido y a continuación tienes que colocar también
+
+61
+00:03:46,230 --> 00:03:47,970
+lo que es la dirección completa.
+
+62
+00:03:49,390 --> 00:03:55,780
+Pero si yo reviso dentro del objeto order, me voy a dar cuenta de que mira, tengo dos valores, tengo
+
+63
+00:03:55,780 --> 00:03:57,550
+un first name y tengo un last name.
+
+64
+00:03:57,820 --> 00:04:03,610
+Si yo quiero el nombre completo, tendría que concatenar ambos valores dentro del template y para la
+
+65
+00:04:03,610 --> 00:04:04,810
+dirección también es lo mismo.
+
+66
+00:04:04,810 --> 00:04:10,510
+La dirección está conformada por dos columnas el Address uno y el line dos.
+
+67
+00:04:11,500 --> 00:04:16,250
+Tendrá que hacer también esa concatenación dentro de la página template payment.
+
+68
+00:04:16,540 --> 00:04:17,320
+HTML.
+
+69
+00:04:17,530 --> 00:04:24,310
+Pero para evitar esto, podemos crear unas funciones dentro de la entidad order que me permitan hacer
+
+70
+00:04:24,310 --> 00:04:26,080
+esa concatenación dinámicamente.
+
+71
+00:04:27,160 --> 00:04:29,830
+Entonces vayamos al archivo Models y.
+
+72
+00:04:31,070 --> 00:04:32,980
+De aquí vamos a ubicarnos dentro de orden.
+
+73
+00:04:32,990 --> 00:04:33,860
+Aquí está Order.
+
+74
+00:04:34,900 --> 00:04:37,060
+Ya que esta su función de STR.
+
+75
+00:04:37,090 --> 00:04:38,950
+Voy a darle un espaciador listo.
+
+76
+00:04:38,950 --> 00:04:44,080
+Y aquí voy a crear una función que me permita obtener devolver el full name.
+
+77
+00:04:46,050 --> 00:04:48,630
+La concatenación del nombre y el apellido.
+
+78
+00:04:49,200 --> 00:04:51,780
+Entonces aquí lo que voy a hacer es indicarle.
+
+79
+00:04:53,120 --> 00:04:55,870
+Que haga un self mamento aquí.
+
+80
+00:04:56,540 --> 00:04:57,350
+Son llaves.
+
+81
+00:04:58,590 --> 00:05:00,420
+Self first name.
+
+82
+00:05:01,700 --> 00:05:05,630
+Concatenado a aquí le pongo un espacio concatenado con.
+
+83
+00:05:06,890 --> 00:05:08,300
+Sea el punto.
+
+84
+00:05:08,300 --> 00:05:09,170
+Last Name.
+
+85
+00:05:09,980 --> 00:05:11,030
+Eso sería todo.
+
+86
+00:05:11,960 --> 00:05:12,490
+Momento aquí.
+
+87
+00:05:12,500 --> 00:05:13,610
+Me faltó el apóstrofe.
+
+88
+00:05:13,610 --> 00:05:14,720
+Cerca del apóstrofe.
+
+89
+00:05:15,260 --> 00:05:15,740
+Listo.
+
+90
+00:05:16,340 --> 00:05:20,420
+Ya abrimos el apóstrofe después de la F para concatenar.
+
+91
+00:05:20,630 --> 00:05:21,440
+Y aquí la cierro.
+
+92
+00:05:22,420 --> 00:05:27,460
+También voy a crear otra función para poder concatenar las direcciones el Address Line uno y el Address
+
+93
+00:05:27,460 --> 00:05:28,060
+Line dos.
+
+94
+00:05:28,810 --> 00:05:30,520
+Entonces aquí ponemos full.
+
+95
+00:05:31,790 --> 00:05:32,370
+Adres.
+
+96
+00:05:33,200 --> 00:05:33,400
+Adres.
+
+97
+00:05:33,440 --> 00:05:34,670
+Sólo puedo darle ese.
+
+98
+00:05:36,060 --> 00:05:36,870
+Le pasó el self.
+
+99
+00:05:38,610 --> 00:05:40,890
+Aquí le vamos a poner return F.
+
+100
+00:05:42,700 --> 00:05:45,640
+Sea el punto A3.
+
+101
+00:05:45,820 --> 00:05:47,770
+La F1 este se va con una s.
+
+102
+00:05:47,770 --> 00:05:48,670
+Recuerda esa columna?
+
+103
+00:05:48,670 --> 00:05:49,780
+La había aclarado con una S.
+
+104
+00:05:51,380 --> 00:05:57,890
+Y le pongo el punto a tres lindos y cierro el apóstrofe.
+
+105
+00:05:58,740 --> 00:05:59,420
+Perfecto.
+
+106
+00:05:59,430 --> 00:06:00,120
+Ya lo tengo.
+
+107
+00:06:00,120 --> 00:06:05,430
+Entonces ya tengo aquí las dos funciones que puedo llamarte desde Play para poder imprimir el nombre
+
+108
+00:06:05,430 --> 00:06:08,100
+completo y también la dirección completa.
+
+109
+00:06:09,060 --> 00:06:09,510
+Ahora sí.
+
+110
+00:06:09,510 --> 00:06:11,670
+Vayamos hacia el template.
+
+111
+00:06:12,120 --> 00:06:13,020
+La carpeta templates.
+
+112
+00:06:13,530 --> 00:06:18,000
+Aquí me aparece orders y dentro de orders está payment el html.
+
+113
+00:06:19,320 --> 00:06:20,430
+Estamos dentro del templo.
+
+114
+00:06:20,490 --> 00:06:23,640
+Vamos a agregar aquí dentro de este primer cartel.
+
+115
+00:06:24,120 --> 00:06:26,110
+Me está apareciendo el árbol.
+
+116
+00:06:26,130 --> 00:06:28,830
+Y este P me muestra el cartel.
+
+117
+00:06:29,160 --> 00:06:31,350
+Este es el texto arco que le había puesto.
+
+118
+00:06:32,040 --> 00:06:39,510
+Voy a borrarlo y aquí le voy a poner el objeto que ya me está enviando en el diccionario del contexto
+
+119
+00:06:40,020 --> 00:06:43,140
+y le pongo llama la función que acabo de crear, que se llama Full name.
+
+120
+00:06:43,860 --> 00:06:44,370
+Listo.
+
+121
+00:06:45,680 --> 00:06:48,230
+También le voy a poner un borde para abajo de cero.
+
+122
+00:06:48,500 --> 00:06:50,030
+Margin border, margin bottom.
+
+123
+00:06:51,400 --> 00:06:53,680
+MP Raya cero.
+
+124
+00:06:54,650 --> 00:06:56,210
+Esto es propio del Bootstrap.
+
+125
+00:06:58,160 --> 00:07:00,560
+A continuación, voy a poner la dirección completa.
+
+126
+00:07:00,590 --> 00:07:02,060
+Vamos a copiar esta línea.
+
+127
+00:07:02,060 --> 00:07:02,480
+Estp.
+
+128
+00:07:03,440 --> 00:07:04,070
+Acá lo pego.
+
+129
+00:07:05,300 --> 00:07:08,780
+Y le pongo y le pongo full address con doble.
+
+130
+00:07:08,780 --> 00:07:09,470
+Es esta vez.
+
+131
+00:07:10,790 --> 00:07:18,470
+A continuación le vamos a poner la ciudad y el estado o departamento, así que aquí le pongo Order Punto
+
+132
+00:07:19,370 --> 00:07:19,910
+City.
+
+133
+00:07:22,260 --> 00:07:23,020
+Luego de la ducha.
+
+134
+00:07:23,020 --> 00:07:27,450
+A veces le voy a colocar una goma, un espaciador y le pongo order.
+
+135
+00:07:27,450 --> 00:07:28,020
+Punto.
+
+136
+00:07:28,410 --> 00:07:30,090
+Estate listo.
+
+137
+00:07:32,450 --> 00:07:36,380
+A continuación vamos a agregarle el país sería order.
+
+138
+00:07:37,910 --> 00:07:38,960
+Punto country.
+
+139
+00:07:41,030 --> 00:07:41,750
+Siguiendo.
+
+140
+00:07:42,170 --> 00:07:46,790
+Vamos a agregar también el correo electrónico de la persona a la cual se le debe enviar ese paquete.
+
+141
+00:07:48,370 --> 00:07:50,140
+Sería ordenar punto y mil.
+
+142
+00:07:53,630 --> 00:07:54,980
+También vas a poner el teléfono?
+
+143
+00:07:57,120 --> 00:07:58,110
+Order punto phone.
+
+144
+00:08:00,050 --> 00:08:01,150
+Y también hay una nota.
+
+145
+00:08:01,160 --> 00:08:06,290
+Recuerdas un detalle de la orden de compra, pero no estoy seguro si existe o no existe, por lo que
+
+146
+00:08:06,290 --> 00:08:07,820
+voy a hacer una condición aquí.
+
+147
+00:08:09,210 --> 00:08:09,720
+Sí.
+
+148
+00:08:11,570 --> 00:08:13,610
+Order order not.
+
+149
+00:08:15,380 --> 00:08:16,010
+Existe.
+
+150
+00:08:18,000 --> 00:08:19,980
+Entonces quiero que ocurra lo siguiente.
+
+151
+00:08:19,980 --> 00:08:21,210
+Pero antes, vamos a cerrar esto.
+
+152
+00:08:21,390 --> 00:08:22,830
+Siempre es bueno abrir y cerrar.
+
+153
+00:08:24,200 --> 00:08:25,320
+And if esto.
+
+154
+00:08:27,010 --> 00:08:28,480
+Entonces quiero que ocurra lo siguiente.
+
+155
+00:08:28,480 --> 00:08:30,940
+Quiero que el negrita se ponga.
+
+156
+00:08:33,230 --> 00:08:35,330
+Detalle de la orden.
+
+157
+00:08:38,470 --> 00:08:40,720
+Le ponemos aquí los dos puntos dentro del VEF.
+
+158
+00:08:42,800 --> 00:08:48,350
+Y luego aquí a continuación el texto order punto order not.
+
+159
+00:08:50,360 --> 00:08:50,810
+Listo.
+
+160
+00:08:51,680 --> 00:08:59,810
+Vamos a ir ahora un momento hacia la carpeta orders y el archivo búsqueda y mira aquí, dentro de esta
+
+161
+00:08:59,810 --> 00:09:04,970
+función que está trabajando para hacer el order y retornar el Orders Payment.
+
+162
+00:09:05,450 --> 00:09:07,370
+Me faltó aquí en ese rato un render.
+
+163
+00:09:08,180 --> 00:09:11,480
+Me faltó agregarle el rico, ese pequeño detalle.
+
+164
+00:09:12,530 --> 00:09:14,010
+Ahora si vamos a borrar los cambios.
+
+165
+00:09:14,030 --> 00:09:17,120
+Menú File Safe All y vamos a probar la página.
+
+166
+00:09:17,690 --> 00:09:20,770
+Vamos a ir al carrito de compras, luego refrescarla.
+
+167
+00:09:20,780 --> 00:09:22,610
+Aquí tengo esta camisa moderna.
+
+168
+00:09:22,940 --> 00:09:24,590
+Voy a darle click al botón Pagar.
+
+169
+00:09:25,570 --> 00:09:27,120
+Aquí me pide la dirección de facturación.
+
+170
+00:09:27,130 --> 00:09:29,200
+Voy a ingresar los datos de formulario.
+
+171
+00:09:29,860 --> 00:09:36,360
+Ya he llenado el formulario con estos datos y ahora le voy a dar clic al botón Ordenar los productos.
+
+172
+00:09:36,370 --> 00:09:37,030
+Le damos clic.
+
+173
+00:09:38,080 --> 00:09:45,670
+Y como puedes ver, ya me está apareciendo aquí la dirección de facturación con los datos de la persona
+
+174
+00:09:45,670 --> 00:09:51,670
+que está haciendo la compra y también su dirección completa, el email, el teléfono y el detalle de
+
+175
+00:09:51,670 --> 00:09:52,420
+la orden.
+
+176
+00:09:53,830 --> 00:09:55,810
+Ahora vamos a trabajar en el método de pago.
+
+177
+00:09:55,990 --> 00:10:00,040
+Nosotros vamos a hacer el app, la configuración del método de pago solo para PayPal.
+
+178
+00:10:00,760 --> 00:10:04,330
+Así que vamos nuevamente a la página payment punto html.
+
+179
+00:10:05,170 --> 00:10:09,550
+De aquí me aparece este cart con el metodo de pago, se le voy a indicar.
+
+180
+00:10:09,550 --> 00:10:10,960
+Aquí le escribo.
+
+181
+00:10:12,710 --> 00:10:13,220
+PayPal.
+
+182
+00:10:14,650 --> 00:10:15,370
+O PayPal.
+
+183
+00:10:16,260 --> 00:10:21,660
+Para el siguiente caso de la revisión de productos tengo este CAR también, pero este CAR lo que quiero
+
+184
+00:10:21,660 --> 00:10:24,720
+que muestre es la lista de productos entre unas tabla.
+
+185
+00:10:24,840 --> 00:10:27,720
+Los productos que yo he seleccionado en el carrito de compras.
+
+186
+00:10:28,320 --> 00:10:32,640
+Entonces, para solucionarlo, ya he creado antes esto.
+
+187
+00:10:32,790 --> 00:10:38,220
+Si vamos a la carpeta Store, aquí aparece el checkout punto HTML.
+
+188
+00:10:38,850 --> 00:10:46,530
+Vamos a abrirlo y en su interior vas a encontrar una tabla en el cual se despliega dinámicamente todo
+
+189
+00:10:46,530 --> 00:10:48,990
+el contenido de los carritos de compra.
+
+190
+00:10:49,260 --> 00:10:50,170
+Aquí aparece la tabla.
+
+191
+00:10:50,190 --> 00:10:52,140
+Mira más o menos en la fila 100.
+
+192
+00:10:52,590 --> 00:10:57,300
+En la línea 107 aparece esta tabla alrededor de la 107.
+
+193
+00:10:57,600 --> 00:11:04,800
+Lo vas a reconocer porque tiene tiene en los títulos a product, cantidad y precio.
+
+194
+00:11:05,580 --> 00:11:11,250
+Lo que voy a hacer aquí, a este nivel de tabla, es minimizarlo y ya te aparece todo el componente
+
+195
+00:11:11,250 --> 00:11:11,720
+completo.
+
+196
+00:11:11,730 --> 00:11:14,640
+Voy a seleccionarlo, lo copio.
+
+197
+00:11:15,610 --> 00:11:17,380
+Y vamos nuevamente hacia.
+
+198
+00:11:18,560 --> 00:11:21,170
+La carpeta orders y payment en HTML.
+
+199
+00:11:22,560 --> 00:11:29,070
+Y acá dentro de este carbón, si aparece un párrafo lo voy a eliminar, voy a poner un espacio para
+
+200
+00:11:29,070 --> 00:11:32,460
+que se note lo que estoy haciendo y aquí pego la tabla.
+
+201
+00:11:33,120 --> 00:11:35,520
+Listo, ya hemos pegado la tabla.
+
+202
+00:11:35,520 --> 00:11:41,760
+Entonces, al interior de mi página de Payment vamos a borrar los cambios.
+
+203
+00:11:41,760 --> 00:11:43,050
+Medfield Field Safe all.
+
+204
+00:11:44,200 --> 00:11:45,850
+Estamos nuevamente en la página.
+
+205
+00:11:46,480 --> 00:11:47,800
+Voy a refrescar.
+
+206
+00:11:50,010 --> 00:11:52,230
+Y como puedes ver ya me aparece acá.
+
+207
+00:11:52,680 --> 00:11:57,600
+Dirección de facturación en el método de pago PayPal Revisión de productos Me aparece solo el producto
+
+208
+00:11:57,600 --> 00:11:59,940
+que hace momento tengo que es el de camisa moderna.
+
+209
+00:12:01,090 --> 00:12:06,850
+En el próximo capítulo vamos a trabajar en la integración con la cuenta de PayPal para que un cliente
+
+210
+00:12:06,850 --> 00:12:08,860
+nos pueda enviar sus pagos.

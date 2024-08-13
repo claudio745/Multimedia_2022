@@ -1,0 +1,215 @@
+1
+00:00:00,420 --> 00:00:05,940
+En este capítulo vamos a trabajar en la instalación de una herramienta que nos permita visualizar toda
+
+2
+00:00:05,940 --> 00:00:11,010
+la data que hemos venido trabajando al interior de rango de nuestra web application.
+
+3
+00:00:11,190 --> 00:00:16,830
+Por ejemplo, las tablas y la data de categorías, de usuarios, de grupos, etcétera.
+
+4
+00:00:17,340 --> 00:00:21,660
+Para esto vamos a instalar una herramienta llamada SQL Studio.
+
+5
+00:00:22,730 --> 00:00:25,040
+Primero ubiquémonos dentro de esta página.
+
+6
+00:00:25,300 --> 00:00:34,010
+Si Light está SQL y estudio punto PL está lo RL del producto.
+
+7
+00:00:34,190 --> 00:00:40,430
+Vamos a entrar, ingresamos y por defecto te va a indicar en qué sistema operativo te encuentras y te
+
+8
+00:00:40,430 --> 00:00:46,400
+va a dar la opción para que descargues el Light Studio para la versión de tu sistema operativo que aparece
+
+9
+00:00:46,400 --> 00:00:48,980
+para Windows, que es lo que estoy utilizando en este momento.
+
+10
+00:00:49,250 --> 00:00:50,690
+Dale clic al botón Download.
+
+11
+00:00:52,820 --> 00:00:53,990
+Esperamos unos segundos.
+
+12
+00:00:54,710 --> 00:01:00,350
+Una vez descargado el archivo, he movido este archivo al disco C en una carpeta que he creado que se
+
+13
+00:01:00,350 --> 00:01:01,250
+llama Icon Light.
+
+14
+00:01:02,010 --> 00:01:05,450
+Dentro he colocado el archivo zip que he descargado de la página.
+
+15
+00:01:05,930 --> 00:01:07,040
+Voy a descomprimirlo.
+
+16
+00:01:08,620 --> 00:01:13,060
+Vamos a ingresar ahora a la carpeta que descomprimido que se llama SQL Studio.
+
+17
+00:01:14,140 --> 00:01:14,680
+Doble clic.
+
+18
+00:01:15,190 --> 00:01:21,040
+Y ahora aquí va a aparecer este archivo que se llama EXE, que se llama ese cual studio punto exe.
+
+19
+00:01:21,670 --> 00:01:25,030
+Vamos a darle doble clic y se va a abrir la herramienta.
+
+20
+00:01:27,300 --> 00:01:28,560
+Esperamos unos segundos.
+
+21
+00:01:29,310 --> 00:01:30,530
+Ya se abrió la herramienta.
+
+22
+00:01:30,540 --> 00:01:33,540
+Vamos ahora al menú de Voice Database.
+
+23
+00:01:34,890 --> 00:01:36,630
+La opción Add Database.
+
+24
+00:01:38,390 --> 00:01:39,770
+De aquí me va a aparecer la opción.
+
+25
+00:01:39,770 --> 00:01:41,570
+Cuál es el nombre del archivo?
+
+26
+00:01:42,110 --> 00:01:47,570
+Si vamos a nuevamente a nuestro proyecto e-commerce, vamos a ver que en la raíz de nuestro proyecto
+
+27
+00:01:47,840 --> 00:01:50,720
+se encuentra el archivo de cola i3.
+
+28
+00:01:51,050 --> 00:01:56,060
+Este es el archivo que quiero abrir con esta herramienta que acabo de instalar, donde se encuentra
+
+29
+00:01:56,240 --> 00:02:00,260
+dentro de la carpeta e-commerce y la carpeta e-commerce donde está en el disco C.
+
+30
+00:02:01,190 --> 00:02:04,170
+Entonces vamos a ir esta ubicación para abrir el archivo de.
+
+31
+00:02:05,750 --> 00:02:10,070
+Vamos a darle click a este botón de Zuma en el fondo verde.
+
+32
+00:02:11,730 --> 00:02:17,370
+Y aquí me ubico en el disco, en mi computadora, en la carpeta ecommerce, ya que aparece el archivo
+
+33
+00:02:17,370 --> 00:02:17,850
+de PayPal.
+
+34
+00:02:18,160 --> 00:02:19,080
+Si hay tres.
+
+35
+00:02:19,830 --> 00:02:20,700
+Vamos a abrirlo.
+
+36
+00:02:21,820 --> 00:02:22,600
+Perfecto.
+
+37
+00:02:23,410 --> 00:02:24,980
+Y ahora dale click al botón.
+
+38
+00:02:25,000 --> 00:02:25,390
+Ok?
+
+39
+00:02:27,870 --> 00:02:31,860
+Bien, ya se ha abierto entonces el archivo, pero aún no ha hecho la conexión.
+
+40
+00:02:32,070 --> 00:02:34,080
+Cuando habla de la conexión me refiero al proceso.
+
+41
+00:02:34,080 --> 00:02:39,600
+Para poder leer las tablas y la data que se encuentra en cada tabla, seleccione el archivo, dale clic
+
+42
+00:02:40,020 --> 00:02:42,960
+derecho y ahora la opción conecto a través.
+
+43
+00:02:44,030 --> 00:02:50,090
+Y aquí vas a notar que ya te van a aparecer todas las tablas que hemos estado trabajando y generando
+
+44
+00:02:50,090 --> 00:02:51,380
+dentro de nuestra aplicación.
+
+45
+00:02:51,980 --> 00:02:54,230
+Por ejemplo, aquí aparece el category.
+
+46
+00:02:54,860 --> 00:02:56,000
+Vamos a darle doble clic.
+
+47
+00:02:57,250 --> 00:03:03,400
+Y mira en la parte derecha ya te aparece la estructura de esta tabla.
+
+48
+00:03:03,400 --> 00:03:07,540
+Heidy Categoria Name Description Slug y cat categoría Imagen.
+
+49
+00:03:08,230 --> 00:03:14,200
+Si quieres ver la data de esta tabla, tienes que darle click al tab de data que hay en la parte superior
+
+50
+00:03:14,980 --> 00:03:19,570
+y aquí vas a anotar todos los récords que hemos estado insertando hasta el momento.
+
+51
+00:03:19,960 --> 00:03:26,650
+El ID, la categoría Description, el slug y también la URL de la imagen.
+
+52
+00:03:26,680 --> 00:03:29,860
+La ubicación interna de la imagen dentro de nuestra aplicación.
+
+53
+00:03:30,580 --> 00:03:36,580
+De esta forma, cada vez que tu necesites visualizar la data que vas trabajando dentro de tu web application,
+
+54
+00:03:36,850 --> 00:03:41,410
+puedes venir a este estudio y abrir la tabla que creas conveniente.

@@ -1,0 +1,267 @@
+1
+00:00:00,390 --> 00:00:04,170
+En este capítulo vamos a continuar trabajando dentro de mi ecommerce.
+
+2
+00:00:04,410 --> 00:00:10,500
+Vayamos a la página home, es decir, a lo que los juegos 8000 o 127 0018 mil.
+
+3
+00:00:11,010 --> 00:00:16,260
+Lo que yo quiero es que aquí aparezca no solamente la imagen del producto, el iPhone y el precio.
+
+4
+00:00:16,260 --> 00:00:21,930
+También quiero que me aparezca lo que son las estrellas, la calificación que le han dado los clientes
+
+5
+00:00:21,930 --> 00:00:24,480
+que compraron cada respectivo producto.
+
+6
+00:00:24,990 --> 00:00:26,100
+Cómo vamos a hacer esto?
+
+7
+00:00:26,430 --> 00:00:28,620
+Vayamos a donde ya.
+
+8
+00:00:28,670 --> 00:00:30,090
+Ahora vamos a la carpeta e-commerce.
+
+9
+00:00:30,090 --> 00:00:35,760
+Dentro de e-commerce aparece el buscador pyme y aquí puedes notar que aparece la función home.
+
+10
+00:00:37,020 --> 00:00:40,890
+Que es la que está realizando la consulta de los productos.
+
+11
+00:00:41,160 --> 00:00:42,480
+Voy a modificar aquí algo.
+
+12
+00:00:42,710 --> 00:00:45,480
+Creo que me entrega todos los productos, es cierto.
+
+13
+00:00:45,780 --> 00:00:47,700
+Pero también quiero que los ordene.
+
+14
+00:00:47,940 --> 00:00:49,280
+Voy a hacer un order.
+
+15
+00:00:49,290 --> 00:00:49,650
+Voy.
+
+16
+00:00:54,020 --> 00:00:56,330
+En forma descendente por el.
+
+17
+00:00:57,760 --> 00:00:58,540
+Quítate.
+
+18
+00:01:01,590 --> 00:01:02,340
+Apóstrofes.
+
+19
+00:01:05,350 --> 00:01:10,330
+Y ahora lo que quiero es obtener los reviews, los puntajes de cada producto.
+
+20
+00:01:10,690 --> 00:01:12,340
+Por esto voy a hacer un bucle.
+
+21
+00:01:12,910 --> 00:01:16,390
+Voy a hacer un for products in products.
+
+22
+00:01:16,690 --> 00:01:17,560
+Dos puntos.
+
+23
+00:01:19,050 --> 00:01:26,670
+Y obtengo la colección de comentarios, reviews, ratings llamando al review rating objects.
+
+24
+00:01:27,900 --> 00:01:28,530
+Punto.
+
+25
+00:01:28,830 --> 00:01:29,550
+Filter.
+
+26
+00:01:31,650 --> 00:01:34,760
+Aquí le pasamos el product idi igual a.
+
+27
+00:01:35,880 --> 00:01:38,100
+Pero tu punto, Heidi.
+
+28
+00:01:41,190 --> 00:01:44,490
+También le indico que haga la búsqueda por un estatus.
+
+29
+00:01:45,460 --> 00:01:46,090
+Igual a Trump.
+
+30
+00:01:47,170 --> 00:01:52,300
+Vamos a la parte superior porque tengo que importar o de productos el review reading.
+
+31
+00:01:54,290 --> 00:01:57,530
+Y ahora tengo que agregarlo dentro del contexto del diccionario.
+
+32
+00:01:57,980 --> 00:02:05,840
+Así que quería poner reviews dos punto reviews y al final una toma para que viaje hacia el template.
+
+33
+00:02:06,200 --> 00:02:08,840
+Vamos ahora hacia la página de Home Template.
+
+34
+00:02:09,590 --> 00:02:14,370
+Vamos entonces a la carpeta templates, ya que aparece el HTML.
+
+35
+00:02:15,500 --> 00:02:18,290
+Aquí está el bucle que me imprime los productos.
+
+36
+00:02:19,450 --> 00:02:22,270
+Y justamente aquí, debajo de este PDF.
+
+37
+00:02:23,260 --> 00:02:27,490
+Voy a darle un enter antes del fic caption y aquí es donde quiero imprimir las estrellas.
+
+38
+00:02:28,240 --> 00:02:32,110
+Pero ya hemos implementado anteriormente esto dentro del product detail.
+
+39
+00:02:32,320 --> 00:02:35,140
+Vamos entonces un momento a Templates, la carpeta Store.
+
+40
+00:02:35,170 --> 00:02:36,550
+Y aquí aparece el producto detail.
+
+41
+00:02:36,790 --> 00:02:37,570
+Vamos a abrirlo.
+
+42
+00:02:38,970 --> 00:02:44,900
+Y aquí te está apareciendo este Deaf class reading start.
+
+43
+00:02:45,210 --> 00:02:46,800
+Voy a copiar este container.
+
+44
+00:02:48,130 --> 00:02:52,690
+El derecho, lo copiamos y volvemos a la página home html.
+
+45
+00:02:53,870 --> 00:02:54,410
+De aquí.
+
+46
+00:02:54,410 --> 00:02:56,060
+Lo vamos a pegar de alquiler derecho.
+
+47
+00:02:57,180 --> 00:02:57,510
+Paige.
+
+48
+00:02:58,140 --> 00:02:58,650
+Listo.
+
+49
+00:03:00,140 --> 00:03:01,970
+Voy a maximizar para que sea mejor.
+
+50
+00:03:02,540 --> 00:03:04,340
+Pero aquí tengo un pequeño detalle a corregir.
+
+51
+00:03:04,610 --> 00:03:09,950
+Aquí está haciendo la evaluación del IF para el class utilizando este single product.
+
+52
+00:03:10,190 --> 00:03:15,650
+Pero para este contexto donde estoy trabajando, el bucle está iterando con un objeto product, así
+
+53
+00:03:15,650 --> 00:03:16,850
+que tenemos que reemplazarlo.
+
+54
+00:03:17,090 --> 00:03:21,530
+Voy a copiar este producto y aquí lo voy a reemplazar en vez de este single product.
+
+55
+00:03:23,130 --> 00:03:24,240
+Para todos sus casos.
+
+56
+00:03:26,960 --> 00:03:30,200
+Y para este lado también el else if else if.
+
+57
+00:03:30,590 --> 00:03:36,080
+También aquí colocamos product product en vez de ser product y el and.
+
+58
+00:03:36,200 --> 00:03:37,340
+Aquí aparece también un ant.
+
+59
+00:03:38,320 --> 00:03:40,060
+Tome aquí lo reemplazamos.
+
+60
+00:03:44,100 --> 00:03:46,320
+Así es como quedaría finalmente.
+
+61
+00:03:47,430 --> 00:03:49,140
+Vamos a guardar todos los cambios.
+
+62
+00:03:49,170 --> 00:03:51,510
+Menú false all y probemos.
+
+63
+00:03:52,260 --> 00:03:53,730
+Estamos en la página Home.
+
+64
+00:03:54,390 --> 00:03:55,320
+Voy a actualizar.
+
+65
+00:03:56,790 --> 00:04:01,560
+Y ya puedes notar que los productos me están apareciendo como puntaje.
+
+66
+00:04:01,800 --> 00:04:06,750
+Por ahora el único que tiene es el de camisa moderna, porque es el que hemos estado trabajando para
+
+67
+00:04:06,750 --> 00:04:07,470
+nuestras pruebas.

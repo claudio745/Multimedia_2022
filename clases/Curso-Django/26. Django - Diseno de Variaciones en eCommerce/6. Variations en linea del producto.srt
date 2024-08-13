@@ -1,0 +1,1227 @@
+1
+00:00:00,390 --> 00:00:04,410
+En este capítulo vamos a continuar trabajando en las variaciones para el carrito de compras.
+
+2
+00:00:04,620 --> 00:00:09,630
+Pero antes de continuar, quiero llevarte otra vez al detalle el producto.
+
+3
+00:00:10,020 --> 00:00:13,320
+Vamos a darle clic y unas lecciones anteriores.
+
+4
+00:00:13,320 --> 00:00:20,760
+Había agregado una lógica para que aparecieran estos botones en caso de que el producto ya fuera agregado
+
+5
+00:00:20,760 --> 00:00:22,770
+anteriormente al carrito de compras.
+
+6
+00:00:23,130 --> 00:00:26,250
+Si vamos al carrito de compras, vas a notar que el producto ya está agregado.
+
+7
+00:00:27,180 --> 00:00:29,520
+Entonces si vuelvo al detalle, el producto.
+
+8
+00:00:30,460 --> 00:00:33,730
+Aparecen estos botones que quiero eliminar.
+
+9
+00:00:34,030 --> 00:00:38,590
+Quiero que vuelva a aparecer otra vez el botón original de agregar al carrito de nuevo.
+
+10
+00:00:38,920 --> 00:00:39,880
+Cómo hacemos esto?
+
+11
+00:00:40,870 --> 00:00:47,470
+Vayamos a Atton, vamos a ir a Templates y ahora vamos a ir a Store, ya que parece el productor y el
+
+12
+00:00:47,470 --> 00:00:48,640
+punto HTML.
+
+13
+00:00:48,940 --> 00:00:54,820
+Vamos a la sección donde aparece el botón de agregar al carrito de compras, más o menos este de la
+
+14
+00:00:54,820 --> 00:00:56,650
+línea 66 70.
+
+15
+00:00:57,280 --> 00:00:59,140
+Voy a maximizar para que lo veas mejor.
+
+16
+00:00:59,390 --> 00:01:05,110
+Mira, aquí había puesto yo la condición para saber si el producto estaba en el carrito de compras,
+
+17
+00:01:05,470 --> 00:01:08,050
+pero esta condición la voy a eliminar antes de eliminarla.
+
+18
+00:01:08,920 --> 00:01:13,660
+Este else muestra el botón para agregar el producto al carrito de compras.
+
+19
+00:01:13,660 --> 00:01:15,730
+Siempre voy a seleccionarlo.
+
+20
+00:01:17,800 --> 00:01:21,520
+Y lo coloco sobre este if in cart.
+
+21
+00:01:22,930 --> 00:01:24,010
+A que lo pego.
+
+22
+00:01:25,250 --> 00:01:29,450
+Y ahora voy a seleccionar todo este if y con el else and if.
+
+23
+00:01:29,870 --> 00:01:35,450
+Ten mucho cuidado, no vayas a borrar el otro if, que ese sí nos sirve porque es de otra condición
+
+24
+00:01:35,450 --> 00:01:36,920
+de stop.
+
+25
+00:01:37,820 --> 00:01:38,540
+Solo esto.
+
+26
+00:01:39,790 --> 00:01:40,720
+Pero eliminamos.
+
+27
+00:01:40,960 --> 00:01:43,270
+Entonces solo quedaría este botón.
+
+28
+00:01:43,930 --> 00:01:46,360
+Vamos a ir otra vez a Menu Field Safe all.
+
+29
+00:01:46,450 --> 00:01:51,460
+Guardamos todos los cambios y estamos en la página del detalle del producto.
+
+30
+00:01:51,910 --> 00:01:53,590
+Aún se están mostrando estos botones?
+
+31
+00:01:53,890 --> 00:01:55,960
+Porque tengo que refrescar el template y la página.
+
+32
+00:01:56,970 --> 00:02:00,870
+Y ahora si me aparece, me aparece el botón del shopping card.
+
+33
+00:02:00,900 --> 00:02:02,000
+Cuando actualice la página.
+
+34
+00:02:02,850 --> 00:02:04,530
+Vayamos un momento al carrito de compras.
+
+35
+00:02:06,220 --> 00:02:09,100
+Anteriormente había agregado ya el camisa moderna.
+
+36
+00:02:09,100 --> 00:02:10,300
+Con una cantidad de uno.
+
+37
+00:02:10,690 --> 00:02:16,120
+Y puedes notar que aparecen sus variaciones para esta camisa naranja y Miriam.
+
+38
+00:02:16,690 --> 00:02:23,320
+Qué pasaría si el usuario el cliente quiere comprar otra camisa pero con otras variaciones como en color
+
+39
+00:02:23,320 --> 00:02:25,150
+negro y la talla large?
+
+40
+00:02:26,390 --> 00:02:27,620
+Vamos otra vez a la tienda.
+
+41
+00:02:30,260 --> 00:02:32,030
+Voy a darle una camisa moderna.
+
+42
+00:02:32,420 --> 00:02:34,010
+Y aquí vamos a seleccionar.
+
+43
+00:02:34,980 --> 00:02:41,820
+El color negro y la talla large y le damos click Agregar al Shopping Card.
+
+44
+00:02:43,210 --> 00:02:44,560
+Mira lo que ha sucedido ahora.
+
+45
+00:02:44,890 --> 00:02:47,110
+Se ha actualizado el producto por completo.
+
+46
+00:02:47,710 --> 00:02:51,430
+Ya la anterior selección que había hecho se ha eliminado.
+
+47
+00:02:52,360 --> 00:02:53,650
+Realmente se ha actualizado.
+
+48
+00:02:54,220 --> 00:02:59,470
+Ahora ya no es la cantidad de uno, sino que es de dos, pero está tomando las variaciones del último
+
+49
+00:02:59,470 --> 00:03:04,540
+producto que he agregado al carrito y el anterior producto que también quería comprar, pero con otro
+
+50
+00:03:04,540 --> 00:03:06,100
+color de camisa y otra talla.
+
+51
+00:03:06,640 --> 00:03:07,710
+Se ha actualizado.
+
+52
+00:03:07,720 --> 00:03:09,670
+Entonces aquí tenemos un problema.
+
+53
+00:03:09,940 --> 00:03:15,550
+Cómo hago para mantener aquellos productos en el carrito de compras que tienen diferentes variaciones?
+
+54
+00:03:16,390 --> 00:03:24,070
+Vayamos entonces a Atom y ahora vamos a la carpeta cards, ya que aparece el bus y vamos a abrirlo.
+
+55
+00:03:25,820 --> 00:03:28,250
+Y nos ubicamos en el método Ad Card.
+
+56
+00:03:29,380 --> 00:03:31,930
+Agregar el producto al carrito de compras.
+
+57
+00:03:33,950 --> 00:03:37,850
+Vamos a ubicarnos en la línea donde se trabaja con el carrito de compras.
+
+58
+00:03:38,290 --> 00:03:39,630
+Aquí aparece un primer try catch.
+
+59
+00:03:39,650 --> 00:03:40,370
+Puede verlo?
+
+60
+00:03:40,370 --> 00:03:40,760
+Este.
+
+61
+00:03:41,170 --> 00:03:45,620
+Este bloque de código es para crear el carrito de compras y el siguiente try catch.
+
+62
+00:03:46,030 --> 00:03:47,570
+Espera crear.
+
+63
+00:03:47,570 --> 00:03:52,070
+Agregar un elemento al carrito de compras mediante el item.
+
+64
+00:03:54,010 --> 00:04:01,600
+Pero este trae lo que está haciendo es buscando primero al producto si existe dentro del item.
+
+65
+00:04:03,800 --> 00:04:07,640
+Entonces yo no quiero que ahora lo busque, yo quiero que por defecto lo genere.
+
+66
+00:04:08,240 --> 00:04:12,920
+Así que en vez de este get que aparece, vamos a cambiarlo por GET.
+
+67
+00:04:13,430 --> 00:04:16,910
+Vamos a poner Create que genere un nuevo record cada vez.
+
+68
+00:04:17,930 --> 00:04:23,000
+Aquí está indicando como parámetros que necesita el product y el card, pero también necesito agregarle
+
+69
+00:04:23,000 --> 00:04:27,770
+el cuant y la cantidad, por eso aquí le pongo quality igual a uno por defecto.
+
+70
+00:04:29,030 --> 00:04:34,250
+Y tampoco necesitamos ya agregar esta línea que me indica que va a actualizar la cantidad en uno.
+
+71
+00:04:34,670 --> 00:04:35,270
+La borro.
+
+72
+00:04:35,930 --> 00:04:39,920
+Vamos a borrar los cambios del safe hall y vamos a la página a probar.
+
+73
+00:04:40,700 --> 00:04:46,460
+Estamos nuevamente en el 127 0018 cart que aparece para refrescar la página.
+
+74
+00:04:46,490 --> 00:04:46,790
+Listo.
+
+75
+00:04:46,820 --> 00:04:49,730
+Aquí me aparece el item camisa moderna con negro y large.
+
+76
+00:04:49,970 --> 00:04:51,380
+Vamos a la tienda nuevamente.
+
+77
+00:04:52,430 --> 00:04:53,600
+Porque aparece el producto.
+
+78
+00:04:54,320 --> 00:04:55,520
+Voy a seleccionarlo.
+
+79
+00:04:55,520 --> 00:05:02,150
+En este caso voy a indicar que sea naranja y sort y le damos clic al botón Agregar a pinchar.
+
+80
+00:05:03,490 --> 00:05:10,000
+Y mira, como puedes ver ya se está agregando camisa moderna, naranja, shorts y también se está manteniendo
+
+81
+00:05:10,000 --> 00:05:13,330
+el producto anterior, que es la camisa moderna, negro y large.
+
+82
+00:05:13,930 --> 00:05:16,930
+Pero al hacer este cambio ha aparecido un nuevo problema.
+
+83
+00:05:17,250 --> 00:05:21,460
+Mira, por ejemplo, tengo aquí camisa moderna que tiene naranja y short.
+
+84
+00:05:21,970 --> 00:05:22,440
+Voy a ir.
+
+85
+00:05:22,490 --> 00:05:23,560
+Voy de nuevo a la tienda.
+
+86
+00:05:24,700 --> 00:05:25,840
+Seleccionamos el producto.
+
+87
+00:05:27,240 --> 00:05:31,170
+Y voy a indicarle que también sea naranja y short.
+
+88
+00:05:32,290 --> 00:05:34,150
+Y lo de agregar a Piccard.
+
+89
+00:05:35,080 --> 00:05:36,190
+Mire lo que ha sucedido.
+
+90
+00:05:37,300 --> 00:05:41,530
+El mismo producto, con las mismas variantes, se está creando una nueva línea.
+
+91
+00:05:42,250 --> 00:05:43,660
+Esto no me parece correcto.
+
+92
+00:05:43,660 --> 00:05:50,590
+Lo que debería ocurrir aquí es que deberían de agregarse en una sola y también sumarse las cantidades.
+
+93
+00:05:50,980 --> 00:05:54,310
+Cómo notarás la lógica que tenemos que implementar ahora en nuestro código?
+
+94
+00:05:54,490 --> 00:06:01,180
+Va a ser la condición del producto sobre las variaciones para saber si estas variaciones para este específico
+
+95
+00:06:01,180 --> 00:06:02,410
+producto ya existen.
+
+96
+00:06:03,010 --> 00:06:10,750
+Estamos en Atom, en la carpeta Cars Bus y en el método que se llama atacar, justo en la sección del
+
+97
+00:06:10,750 --> 00:06:14,150
+tri except que me trabaja lo que son los car.
+
+98
+00:06:14,200 --> 00:06:18,940
+Item, por si acaso vamos a comenzar a trabajarlo antes del Tri.
+
+99
+00:06:19,390 --> 00:06:20,410
+Voy a poner un espacio aquí.
+
+100
+00:06:21,660 --> 00:06:22,470
+Vamos a hacer una.
+
+101
+00:06:23,280 --> 00:06:25,380
+Crear una variable que se llame start.
+
+102
+00:06:26,600 --> 00:06:27,430
+Y ten existe.
+
+103
+00:06:28,910 --> 00:06:32,900
+Para saber si la línea de este ítem existe.
+
+104
+00:06:33,230 --> 00:06:37,220
+Vamos entonces a llamar al Card Item Objects.
+
+105
+00:06:38,850 --> 00:06:39,840
+Punto filter.
+
+106
+00:06:41,050 --> 00:06:48,820
+Y la condición va a ser que exista por el producto product igual a product coma cart igual a cart.
+
+107
+00:06:50,810 --> 00:06:52,340
+Y lo que quiero es que llame al operador.
+
+108
+00:06:53,030 --> 00:06:55,490
+Si me devuelve un récord o no desde la tabla.
+
+109
+00:06:57,320 --> 00:07:01,730
+Dependiendo de esto, voy a aplicar una condición if sobre esta variable.
+
+110
+00:07:01,730 --> 00:07:07,220
+Si el Kryten existe o no, entonces ya no voy a trabajar con este traje ni con este.
+
+111
+00:07:07,610 --> 00:07:08,450
+Voy a reemplazarlo.
+
+112
+00:07:08,690 --> 00:07:10,820
+En vez de este traje, voy a colocar if.
+
+113
+00:07:12,930 --> 00:07:14,640
+Is it, it is.
+
+114
+00:07:15,920 --> 00:07:16,910
+Esta es la nueva condición.
+
+115
+00:07:17,870 --> 00:07:19,370
+Aquí en la sección del except.
+
+116
+00:07:19,970 --> 00:07:21,320
+Voy a removerlo también.
+
+117
+00:07:21,320 --> 00:07:22,490
+Se lo dejo los dos puntos.
+
+118
+00:07:23,300 --> 00:07:25,160
+Le voy a poner solo un else.
+
+119
+00:07:27,500 --> 00:07:30,080
+Y aquí, dentro de esta primera condición, if.
+
+120
+00:07:30,680 --> 00:07:31,910
+En esta primera línea, car.
+
+121
+00:07:31,910 --> 00:07:35,410
+Item estaba haciendo la creación del objeto de un nuevo item.
+
+122
+00:07:35,420 --> 00:07:38,780
+Vamos a reemplazarlo por un ese, por un filter.
+
+123
+00:07:40,260 --> 00:07:44,900
+Filter y el filter va a tener la condición por el producto y por el.
+
+124
+00:07:46,770 --> 00:07:51,450
+Entonces de esta forma me está devolviendo el ítem que viene desde la base de datos.
+
+125
+00:07:51,810 --> 00:07:53,010
+Por qué hago esto?
+
+126
+00:07:53,190 --> 00:07:59,790
+Porque mira, ya tengo yo el ítem que contiene el producto y a su vez el producto contiene las variaciones
+
+127
+00:07:59,970 --> 00:08:03,960
+que anteriormente ya están registrados en la base de datos.
+
+128
+00:08:04,320 --> 00:08:11,280
+Entonces, lo que voy a hacer ahora es comparar, comparar que el producto, la aparición del producto,
+
+129
+00:08:11,760 --> 00:08:19,050
+sean iguales o sean diferentes de las variaciones que en este momento me está enviando el cliente al
+
+130
+00:08:19,050 --> 00:08:20,100
+carrito de compras.
+
+131
+00:08:20,940 --> 00:08:22,800
+Y si son iguales las variaciones.
+
+132
+00:08:23,070 --> 00:08:29,850
+Entonces lo que voy a hacer es solamente actualizar la cantidad de productos y si los variaciones son
+
+133
+00:08:29,850 --> 00:08:35,670
+diferentes, entonces voy a crear una nueva línea, un nuevo ítem en la base de datos.
+
+134
+00:08:36,180 --> 00:08:40,920
+Vamos a comenzar por capturar los variaciones que vienen desde la base de datos.
+
+135
+00:08:41,310 --> 00:08:43,980
+Comencemos entonces declarando una variable.
+
+136
+00:08:44,220 --> 00:08:46,020
+Vamos a poner aquí que se llame X.
+
+137
+00:08:47,230 --> 00:08:48,940
+Bar, Liz.
+
+138
+00:08:49,970 --> 00:08:51,140
+Porque va a estar en blanco.
+
+139
+00:08:51,140 --> 00:08:53,840
+Representa una colección ex Charlize.
+
+140
+00:08:55,040 --> 00:09:01,880
+Aquí voy a capturar todas las variantes del producto y luego vamos a también capturar los índices de
+
+141
+00:09:01,880 --> 00:09:02,630
+cada variante.
+
+142
+00:09:02,630 --> 00:09:06,950
+Por eso voy a crear otro arreglo que represente esa colección de ideas.
+
+143
+00:09:08,060 --> 00:09:11,300
+A continuación, voy a hacer el bucle for item im.
+
+144
+00:09:12,660 --> 00:09:13,590
+Kryten.
+
+145
+00:09:15,440 --> 00:09:16,610
+Le ponemos dos puntos.
+
+146
+00:09:18,570 --> 00:09:18,810
+De aquí.
+
+147
+00:09:18,810 --> 00:09:21,800
+Comencemos haciendo un existe variación.
+
+148
+00:09:24,060 --> 00:09:24,600
+Iguala.
+
+149
+00:09:24,600 --> 00:09:25,740
+Item punto.
+
+150
+00:09:26,520 --> 00:09:27,450
+Variación.
+
+151
+00:09:27,810 --> 00:09:29,400
+Variaciones all.
+
+152
+00:09:31,450 --> 00:09:32,920
+Haciendo estas operaciones.
+
+153
+00:09:32,920 --> 00:09:38,710
+Ya tengo las dos colecciones que definí al inicio el ex Charlies y el Hide llenas.
+
+154
+00:09:39,010 --> 00:09:43,720
+Si todo es correcto, con esto estoy agregando las listas y llenando las colecciones.
+
+155
+00:09:44,560 --> 00:09:46,600
+Entonces ya puedo hacer la comparación.
+
+156
+00:09:46,900 --> 00:09:53,770
+Ya puedo saber si este producto tiene variaciones que ya envió previamente al carrito de compras o no,
+
+157
+00:09:54,070 --> 00:09:55,450
+o tiene varias diferentes.
+
+158
+00:09:55,960 --> 00:10:00,450
+Para hacer esta condición hacemos un if product variación.
+
+159
+00:10:01,640 --> 00:10:07,790
+Si recuerdas, esta variable representa la colección de variaciones que te está enviando en este momento
+
+160
+00:10:07,790 --> 00:10:11,840
+el cliente al carrito de compras donde la trabajaste en capítulos anteriores.
+
+161
+00:10:11,840 --> 00:10:12,390
+Te lo expliqué.
+
+162
+00:10:12,420 --> 00:10:14,210
+Mira, vamos un momento para arriba.
+
+163
+00:10:14,210 --> 00:10:15,080
+No te vas a confundir.
+
+164
+00:10:16,390 --> 00:10:20,150
+Y aquí vas a ver que nosotros declaramos este producto.
+
+165
+00:10:20,190 --> 00:10:20,680
+Creation.
+
+166
+00:10:21,660 --> 00:10:22,530
+Y este preocupado.
+
+167
+00:10:22,530 --> 00:10:29,040
+Jackson se está llenando con la data que envía en el cliente gracias al método Post desde el formulario.
+
+168
+00:10:31,330 --> 00:10:34,110
+Entonces volvemos ahora a la línea del 51.
+
+169
+00:10:34,120 --> 00:10:35,020
+Dónde está la condición?
+
+170
+00:10:35,500 --> 00:10:36,580
+Si el producto varía.
+
+171
+00:10:36,750 --> 00:10:38,410
+Que me está enviando el cliente?
+
+172
+00:10:40,980 --> 00:10:47,010
+Esta se encuentra dentro de la lista X var list que está en la base de datos.
+
+173
+00:10:48,200 --> 00:10:53,270
+Entonces lo que quiero que ocurra es que no me genere una nueva línea, porque ya las variaciones para
+
+174
+00:10:53,270 --> 00:10:58,850
+este producto existen, sino que solo actualice la cantidad de producto se incremente en este caso.
+
+175
+00:10:59,690 --> 00:11:05,810
+Entonces procedamos a hacer lo siguiente pero primero necesito saber el índice del producto que quieres
+
+176
+00:11:05,810 --> 00:11:10,460
+actualizar porque recuerda que tu carro, tu carrito de compras, puede tener varias líneas.
+
+177
+00:11:10,700 --> 00:11:15,920
+Necesito saber sobre cuál de estas líneas es la que voy a actualizar de la cantidad de productos.
+
+178
+00:11:16,640 --> 00:11:21,110
+Entonces hacemos un index igual a x valid.
+
+179
+00:11:22,220 --> 00:11:23,270
+Punto Index.
+
+180
+00:11:25,030 --> 00:11:26,560
+Y le paso como parámetro.
+
+181
+00:11:27,870 --> 00:11:28,950
+El producto Creation.
+
+182
+00:11:35,290 --> 00:11:38,560
+Y ahora les digo item id va a ser igual a.
+
+183
+00:11:39,990 --> 00:11:42,510
+Heidy pasándole este index.
+
+184
+00:11:45,020 --> 00:11:50,960
+Ahora si ya podemos obtener el ítem en la línea que yo requiero que va actualizar la cantidad de productos
+
+185
+00:11:51,620 --> 00:11:53,300
+llamando al ítem.
+
+186
+00:11:56,060 --> 00:11:58,660
+Punto Object, punto Get.
+
+187
+00:11:59,560 --> 00:12:07,460
+Deseamos el filtro sobre este producto product igual a este product, y el ID va a ser igual a que al
+
+188
+00:12:07,460 --> 00:12:08,570
+ídem id.
+
+189
+00:12:10,030 --> 00:12:11,410
+Qué obtenido en la ley anterior?
+
+190
+00:12:13,250 --> 00:12:21,050
+Y ya teniendo este elemento del carrito de compras, voy a hacer un ítem cuanti te y le digo que se
+
+191
+00:12:21,050 --> 00:12:22,850
+incremente en uno su cantidad.
+
+192
+00:12:24,290 --> 00:12:28,550
+Y finalmente que ese cambio que acabo de hacer se refleje en la base de datos.
+
+193
+00:12:28,790 --> 00:12:30,770
+Hago por esto un item safe.
+
+194
+00:12:32,940 --> 00:12:34,530
+Pero volvemos al punto.
+
+195
+00:12:34,800 --> 00:12:40,470
+Esto ocurre solo cuando el producto aviation que me estén viendo el cliente existe en la base de datos.
+
+196
+00:12:40,480 --> 00:12:42,270
+Pero si no existiera, qué va a ocurrir?
+
+197
+00:12:42,810 --> 00:12:43,910
+Por eso aquí lo ponemos.
+
+198
+00:12:43,920 --> 00:12:44,940
+Vamos a la altura del IF.
+
+199
+00:12:46,530 --> 00:12:47,460
+Le ponemos un enlace.
+
+200
+00:12:49,560 --> 00:12:52,560
+De aquí tendría que crear el carrito de compras.
+
+201
+00:12:53,190 --> 00:12:59,550
+Por eso le voy a poner un item igual a car item object.
+
+202
+00:13:02,790 --> 00:13:03,590
+Punto Cricket.
+
+203
+00:13:05,080 --> 00:13:12,850
+Y le paso como parámetros el producto desde el cual se va a crear esta línea, producto de cuanto por
+
+204
+00:13:12,850 --> 00:13:13,690
+defecto es uno.
+
+205
+00:13:14,750 --> 00:13:16,180
+El kart es igual a kart.
+
+206
+00:13:16,480 --> 00:13:18,430
+Son objetos que los tengo dentro del método.
+
+207
+00:13:19,150 --> 00:13:21,970
+Con esto estoy creando un nuevo item en la base de datos.
+
+208
+00:13:22,150 --> 00:13:28,270
+Pero también tengo que agregarle a este item los Nations que me está enviando el cliente.
+
+209
+00:13:28,840 --> 00:13:33,910
+Y aquí justamente va a saber el código que antes estuve trabajando para hacer esa tarea.
+
+210
+00:13:34,390 --> 00:13:35,950
+Hacia un if lem.
+
+211
+00:13:37,180 --> 00:13:43,450
+Pero tu variación si es mayor que cero, entonces primero limpiamos y luego iba a generar las variaciones
+
+212
+00:13:43,720 --> 00:13:45,180
+para este item.
+
+213
+00:13:46,090 --> 00:13:47,200
+Vamos a cortarlo.
+
+214
+00:13:48,460 --> 00:13:49,510
+Vamos a cortar esta línea.
+
+215
+00:13:49,510 --> 00:13:50,980
+Estas cinco líneas.
+
+216
+00:13:52,090 --> 00:13:52,830
+Cuatro líneas.
+
+217
+00:13:52,840 --> 00:13:53,380
+Corto.
+
+218
+00:13:54,550 --> 00:13:55,990
+Les pego debajo del ítem.
+
+219
+00:13:57,550 --> 00:13:59,500
+A ver, tenemos aquí el Islam.
+
+220
+00:14:01,170 --> 00:14:01,860
+Está bien.
+
+221
+00:14:01,890 --> 00:14:04,770
+Le estoy indicando que si es correcto.
+
+222
+00:14:04,770 --> 00:14:07,860
+Entonces aquí tengo que indicarle que ya limpie el ídem.
+
+223
+00:14:08,370 --> 00:14:09,060
+Ídem ídem.
+
+224
+00:14:09,060 --> 00:14:09,350
+Punto.
+
+225
+00:14:09,360 --> 00:14:09,800
+Variación.
+
+226
+00:14:09,840 --> 00:14:10,070
+Punto.
+
+227
+00:14:10,110 --> 00:14:10,440
+Claire.
+
+228
+00:14:11,370 --> 00:14:12,240
+Eso está correcto.
+
+229
+00:14:13,560 --> 00:14:18,960
+Y luego quiero que ya no es necesario hacer este bucle porque ya tengo todos los valores dentro de esa
+
+230
+00:14:18,960 --> 00:14:20,130
+colección de variaciones.
+
+231
+00:14:21,060 --> 00:14:27,480
+Haría simplemente un item, punto variaciones, punto AT.
+
+232
+00:14:29,270 --> 00:14:32,050
+De que haría un producto variado en la colección.
+
+233
+00:14:32,200 --> 00:14:36,160
+Pero para que se dé una colección tengo que colocarle por delante el signo de asterisco.
+
+234
+00:14:38,280 --> 00:14:38,700
+Listo.
+
+235
+00:14:39,030 --> 00:14:41,130
+Luego al nivel de Live.
+
+236
+00:14:41,400 --> 00:14:42,090
+Fuera de live.
+
+237
+00:14:43,670 --> 00:14:47,300
+Para que esté fuera del IF tienes que colocarlo a la altura del día anterior de setup.
+
+238
+00:14:48,110 --> 00:14:49,780
+Hacemos el guardado en la base de datos.
+
+239
+00:14:49,790 --> 00:14:51,340
+Hacemos un item safe.
+
+240
+00:14:53,100 --> 00:14:54,990
+Yo este item que tenía antes lo voy a borrar.
+
+241
+00:14:58,180 --> 00:15:01,630
+Ya tenemos entonces lista esta primera condición.
+
+242
+00:15:01,630 --> 00:15:03,550
+Y si el Kryten existe?
+
+243
+00:15:04,300 --> 00:15:08,410
+Pero si no existe, entonces iría directamente a este otro.
+
+244
+00:15:08,410 --> 00:15:08,760
+A él.
+
+245
+00:15:10,010 --> 00:15:15,740
+En la parte inferior antes de retour a l me estoy refiriendo que todavía no lo hemos tocado.
+
+246
+00:15:16,400 --> 00:15:17,600
+Veamos el car.
+
+247
+00:15:17,630 --> 00:15:24,290
+En este caso, lo que está sucediendo para ustedes es que el car item está creando un nuevo objeto product
+
+248
+00:15:24,380 --> 00:15:26,480
+con T1 dentro del kart.
+
+249
+00:15:27,990 --> 00:15:33,420
+Y luego está aplicando la lógica para agregar las variaciones a este producto.
+
+250
+00:15:35,030 --> 00:15:37,910
+Vamos a hacer lo siguiente hay que hacer unos pequeños cambios.
+
+251
+00:15:38,330 --> 00:15:42,710
+Voy a quitar este bucle, estas dos líneas del bucle con el y te marchas at.
+
+252
+00:15:45,160 --> 00:15:47,800
+Y voy a agregar aquí un par.
+
+253
+00:15:48,880 --> 00:15:49,270
+Item.
+
+254
+00:15:50,490 --> 00:15:52,700
+Junto a Variaciones Eclair.
+
+255
+00:15:53,130 --> 00:15:54,990
+Limpiamos primero antes de hacer cualquier cosa.
+
+256
+00:15:56,790 --> 00:15:59,460
+Y luego voy a hacer un café y te apunto a Variaciones.
+
+257
+00:16:00,470 --> 00:16:01,220
+Junto a ud.
+
+258
+00:16:02,570 --> 00:16:07,130
+Y aquí agrego al producto aviation directamente sin el bucle.
+
+259
+00:16:08,120 --> 00:16:11,720
+Pero como se trata de una colección que quiero agregar, le pongo por delante el asterisco.
+
+260
+00:16:14,410 --> 00:16:15,310
+Eso sería todo.
+
+261
+00:16:15,970 --> 00:16:17,740
+Se aplica el item safe.
+
+262
+00:16:20,320 --> 00:16:21,100
+Sí, aquí está.
+
+263
+00:16:22,000 --> 00:16:24,900
+Y finalmente, hace un rato de hacia el cartel.
+
+264
+00:16:26,940 --> 00:16:28,100
+Vamos a borrar los cambios.
+
+265
+00:16:28,110 --> 00:16:29,300
+Minnifield sabe Hall.
+
+266
+00:16:33,120 --> 00:16:34,470
+Y vamos a ejecutar la página.
+
+267
+00:16:34,830 --> 00:16:38,280
+Primero vayamos a lo que hace 8000 admin, te recomiendo esto.
+
+268
+00:16:38,760 --> 00:16:41,160
+Y ahora vamos aquí al car items.
+
+269
+00:16:42,820 --> 00:16:45,580
+Lo que voy a hacer es eliminar todos para comenzar desde cero.
+
+270
+00:16:45,910 --> 00:16:52,080
+Seleccionamos aquí estos checks, todos los items que está grabando y la parte superior aparece.
+
+271
+00:16:52,090 --> 00:16:57,880
+Este ComboBox de Actions seleccionó la opción Delete Selected Card Items y le doy clic al botón Go.
+
+272
+00:16:59,630 --> 00:17:00,440
+Te está preguntando.
+
+273
+00:17:00,440 --> 00:17:01,190
+Estás seguro?
+
+274
+00:17:01,220 --> 00:17:01,880
+Le digo que sí.
+
+275
+00:17:02,930 --> 00:17:04,700
+Entonces ya se ha actualizado.
+
+276
+00:17:04,700 --> 00:17:07,070
+Ya eliminé los items de mi carrito de compras.
+
+277
+00:17:07,760 --> 00:17:11,290
+Vamos a mi página 127 0018 cart.
+
+278
+00:17:11,660 --> 00:17:12,620
+Voy a refrescarla.
+
+279
+00:17:13,130 --> 00:17:14,930
+Y el carrito de compras está vacío.
+
+280
+00:17:15,590 --> 00:17:16,280
+Vamos ahora?
+
+281
+00:17:16,280 --> 00:17:17,240
+Sí, a la tienda.
+
+282
+00:17:17,720 --> 00:17:19,430
+Voy a seleccionar este producto.
+
+283
+00:17:19,430 --> 00:17:20,390
+Camisa moderna.
+
+284
+00:17:21,460 --> 00:17:24,850
+Seleccionamos aquí, por ejemplo, Rojo y Larch.
+
+285
+00:17:26,380 --> 00:17:27,280
+Y la música.
+
+286
+00:17:27,280 --> 00:17:28,570
+Agregar a Chopin Card.
+
+287
+00:17:30,060 --> 00:17:30,840
+Ya se agregó.
+
+288
+00:17:31,630 --> 00:17:32,550
+Eso está correcto.
+
+289
+00:17:33,590 --> 00:17:34,230
+Vayamos nuevamente.
+
+290
+00:17:34,280 --> 00:17:39,650
+La tienda seleccionó nuevamente Camisa moderna y ahora selecciono Negro.
+
+291
+00:17:40,880 --> 00:17:42,110
+Cita talla Miriam.
+
+292
+00:17:44,520 --> 00:17:49,080
+Le damos clic agregado al shopping card y también se agregó hace un momento Está funcionando bien,
+
+293
+00:17:49,320 --> 00:17:55,440
+pero ahora voy a seleccionar un nuevo producto con las variaciones de color negro y Miriam otra vez.
+
+294
+00:17:57,210 --> 00:17:58,020
+Vamos a la tienda.
+
+295
+00:17:59,160 --> 00:17:59,270
+Ya.
+
+296
+00:17:59,330 --> 00:18:01,150
+Aquí seleccionamos Negro.
+
+297
+00:18:03,200 --> 00:18:04,010
+Y también Miriam.
+
+298
+00:18:05,200 --> 00:18:06,340
+Agregar a eso pintar.
+
+299
+00:18:06,640 --> 00:18:08,800
+Le damos click y mira lo que ha sucedido.
+
+300
+00:18:09,310 --> 00:18:13,200
+No se ha generado en este caso una nueva línea dentro del carrito de compras.
+
+301
+00:18:13,210 --> 00:18:16,510
+Lo que ha pasado es que se ha actualizado la cantidad.
+
+302
+00:18:16,510 --> 00:18:17,380
+Ahora es dos.
+
+303
+00:18:18,420 --> 00:18:23,370
+De esta forma hemos implementado la lógica para hacer el group pin de los palillos dentro de mi carrito
+
+304
+00:18:23,370 --> 00:18:23,970
+de compras.
+
+305
+00:18:24,150 --> 00:18:25,950
+Pero esto aún no ha terminado.
+
+306
+00:18:26,190 --> 00:18:32,910
+Me falta trabajar los botones de incremento y decremento de cantidades para una línea de producto.
+
+307
+00:18:34,030 --> 00:18:36,490
+En el siguiente capítulo iremos viendo este tema.

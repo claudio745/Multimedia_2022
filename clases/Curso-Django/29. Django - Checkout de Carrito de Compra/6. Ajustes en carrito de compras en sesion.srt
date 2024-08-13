@@ -1,0 +1,815 @@
+1
+00:00:00,270 --> 00:00:06,510
+En el capítulo anterior resolvimos el problema del agrupamiento de productos con similares variaciones
+
+2
+00:00:07,140 --> 00:00:09,420
+cuando estaba el usuario en sesión.
+
+3
+00:00:09,750 --> 00:00:12,330
+Pero mira, déjame mostrarte algo que aún persiste.
+
+4
+00:00:12,660 --> 00:00:13,680
+Voy a salir de sesión.
+
+5
+00:00:16,630 --> 00:00:19,300
+Y ahora vamos a ir a la tienda.
+
+6
+00:00:20,670 --> 00:00:21,770
+Selecciona el producto.
+
+7
+00:00:22,200 --> 00:00:25,410
+Voy a seleccionar la naranja de color naranja.
+
+8
+00:00:25,800 --> 00:00:27,150
+Talla short.
+
+9
+00:00:28,850 --> 00:00:29,670
+Y le voy a dar clic.
+
+10
+00:00:29,730 --> 00:00:30,770
+Agregar al Shopping Card.
+
+11
+00:00:31,280 --> 00:00:31,640
+Esto.
+
+12
+00:00:32,480 --> 00:00:34,280
+Yo ahora le voy a decir clic a apagar.
+
+13
+00:00:35,720 --> 00:00:36,620
+Iniciamos sesión.
+
+14
+00:00:37,400 --> 00:00:37,880
+Perfecto.
+
+15
+00:00:37,890 --> 00:00:38,430
+Inicie sesión.
+
+16
+00:00:38,450 --> 00:00:39,500
+Voy al carrito de compras.
+
+17
+00:00:40,820 --> 00:00:42,200
+Y mira lo que ha sucedido acá.
+
+18
+00:00:43,070 --> 00:00:47,120
+Se ha replicado, se ha replicado el producto con similares variaciones.
+
+19
+00:00:47,330 --> 00:00:52,580
+Es decir, aquí el problema que tengo es que cuando yo genero un producto con similares variaciones.
+
+20
+00:00:52,730 --> 00:00:54,320
+No estando en sesión.
+
+21
+00:00:55,360 --> 00:00:57,070
+Me va a crear una nueva línea.
+
+22
+00:00:57,670 --> 00:01:01,420
+Entonces lo que tengo que hacer aquí es revisar el proceso de login.
+
+23
+00:01:01,630 --> 00:01:04,150
+Cuando yo haga login, tengo que hacer el MERS.
+
+24
+00:01:04,180 --> 00:01:10,570
+La unión de los productos que ya existen en mi carrito de compras versus los nuevos productos que he
+
+25
+00:01:10,570 --> 00:01:12,550
+generado estando no en sesión.
+
+26
+00:01:13,150 --> 00:01:16,990
+Para resolver ese problema tenemos que ir hacia la transacción de login.
+
+27
+00:01:17,560 --> 00:01:22,090
+Vamos entonces a la carpeta account que aparece buscar y.
+
+28
+00:01:23,120 --> 00:01:25,670
+Y dentro de este debe aparecer la función login.
+
+29
+00:01:25,700 --> 00:01:27,950
+Aquí la puedes ver def login.
+
+30
+00:01:28,910 --> 00:01:34,880
+Lo que hace este proceso de login dentro de esta función es capturar los parámetros de email y password.
+
+31
+00:01:35,090 --> 00:01:41,720
+Seguidamente vamos a invocar a una función que es auténtica, pasándole el parámetro, el parámetro
+
+32
+00:01:41,720 --> 00:01:42,650
+de email y password.
+
+33
+00:01:43,430 --> 00:01:46,610
+El resultado de esto va a ser esta variable user.
+
+34
+00:01:47,120 --> 00:01:56,210
+Si el user is not none significa de que el usuario fue logueado exitosamente y haría toda esta secuencia
+
+35
+00:01:56,210 --> 00:02:02,150
+de código en caso contrario, lo que pasaría es que me devolvería un mensaje de error indicándome que
+
+36
+00:02:02,150 --> 00:02:03,950
+las credenciales son incorrectas.
+
+37
+00:02:04,400 --> 00:02:10,880
+En mi caso, yo voy a trabajar dentro del box, dentro del bloque, cuando el usuario esta logueado
+
+38
+00:02:10,880 --> 00:02:11,810
+exitosamente.
+
+39
+00:02:13,190 --> 00:02:18,920
+Si vamos a la sección del Tri aquí lo que está haciendo es obteniendo el objeto CAR.
+
+40
+00:02:19,640 --> 00:02:25,850
+Luego de esto, me está indicando si este objeto CAR tiene líneas, tiene car items, tiene elementos
+
+41
+00:02:25,850 --> 00:02:26,510
+en su interior.
+
+42
+00:02:27,500 --> 00:02:32,200
+Si los tiene, entonces continúa con la condición si el item existe.
+
+43
+00:02:32,210 --> 00:02:38,600
+Si es verdad que tengo elementos dentro del CAR, entonces lo que tienes que hacer es obtener esa lista
+
+44
+00:02:38,600 --> 00:02:39,560
+de car items.
+
+45
+00:02:41,790 --> 00:02:42,420
+Perfecto.
+
+46
+00:02:42,420 --> 00:02:46,620
+Eso está bien, pero recuerda que cada ítem tiene un conjunto de variaciones.
+
+47
+00:02:46,890 --> 00:02:54,990
+Y aquí mi problema es el siguiente yo necesito evaluar si estas variaciones ya existen dentro de la
+
+48
+00:02:54,990 --> 00:03:01,620
+base de datos y si existen, entonces que actualicen la cantidad de elementos del producto que no me
+
+49
+00:03:01,620 --> 00:03:02,730
+genere una nueva línea.
+
+50
+00:03:03,240 --> 00:03:08,400
+Entonces aquí necesito comparar dos colecciones, dos arreglos, dos conjuntos de elementos.
+
+51
+00:03:08,610 --> 00:03:16,320
+La primera es el conjunto de variaciones que están registradas para un usuario en sesión versus las
+
+52
+00:03:16,320 --> 00:03:20,700
+variaciones que he registrado, no estando el usuario en sesión.
+
+53
+00:03:21,210 --> 00:03:28,380
+Comencemos por buscar aquellos aquellas variaciones que se registraron cuando el usuario no estaba en
+
+54
+00:03:28,380 --> 00:03:28,860
+sesión.
+
+55
+00:03:29,460 --> 00:03:33,300
+Entonces voy a colocar aquí un producto variación.
+
+56
+00:03:34,360 --> 00:03:35,020
+Igual a quien?
+
+57
+00:03:35,930 --> 00:03:37,160
+Por ahora en blanco.
+
+58
+00:03:37,880 --> 00:03:39,230
+Y ahora voy a hacer un bucle.
+
+59
+00:03:39,980 --> 00:03:41,510
+Voy a hacer un item.
+
+60
+00:03:41,510 --> 00:03:43,230
+Im car.
+
+61
+00:03:43,250 --> 00:03:43,670
+Item.
+
+62
+00:03:44,920 --> 00:03:50,980
+Dos puntos y le digo que me obtenga todas las variaciones que tiene este elemento del carrito, que
+
+63
+00:03:50,980 --> 00:03:53,830
+no, que se registró estando no en sesión.
+
+64
+00:03:55,130 --> 00:03:56,590
+Entonces le pongo variación.
+
+65
+00:03:58,160 --> 00:03:58,850
+Iguala.
+
+66
+00:03:59,390 --> 00:03:59,870
+Item.
+
+67
+00:04:00,110 --> 00:04:00,770
+Punto.
+
+68
+00:04:00,770 --> 00:04:01,500
+Variación.
+
+69
+00:04:02,510 --> 00:04:03,290
+Punto all.
+
+70
+00:04:06,410 --> 00:04:08,540
+Luego lo que voy a hacer es un producto.
+
+71
+00:04:10,400 --> 00:04:10,970
+Append.
+
+72
+00:04:14,090 --> 00:04:16,760
+Y le pongo aquí un punto a Point.
+
+73
+00:04:17,360 --> 00:04:23,500
+Le pongo aquí un link para agregar todos los elementos de la colección que tengo que agregar de variaciones.
+
+74
+00:04:23,960 --> 00:04:30,530
+Entonces este producto variaciones ya tiene todas las variaciones que contenía antes la línea.
+
+75
+00:04:32,400 --> 00:04:39,600
+Ahora sí, vamos a obtener a continuación aquellas variaciones que fueron registrados cuando el usuario
+
+76
+00:04:39,600 --> 00:04:41,790
+estaba en sesión, cuando ya me había logueado.
+
+77
+00:04:41,970 --> 00:04:44,160
+Este es el segundo caso, la segunda colección.
+
+78
+00:04:45,420 --> 00:04:46,770
+Entonces voy a hacer un card.
+
+79
+00:04:47,310 --> 00:04:49,860
+Item igual a car.
+
+80
+00:04:49,860 --> 00:04:51,930
+Item objects.
+
+81
+00:04:53,800 --> 00:04:55,440
+Punto filter.
+
+82
+00:04:55,510 --> 00:04:58,060
+Pero aquí la condición ya no va a ser con cara igual a cara.
+
+83
+00:04:58,090 --> 00:05:01,270
+Va a ser un user igual a user.
+
+84
+00:05:03,940 --> 00:05:05,650
+Y voy a declarar una variable x.
+
+85
+00:05:07,390 --> 00:05:08,950
+Donde voy a almacenar estas variaciones.
+
+86
+00:05:10,020 --> 00:05:11,640
+Que por ahora inicializado en blanco.
+
+87
+00:05:13,410 --> 00:05:15,810
+Y ahora voy a hacer el bucle for item.
+
+88
+00:05:16,260 --> 00:05:17,220
+Im card.
+
+89
+00:05:17,220 --> 00:05:17,670
+Item.
+
+90
+00:05:22,200 --> 00:05:25,470
+Y le digo acá primeramente existen variaciones, existen variaciones.
+
+91
+00:05:26,950 --> 00:05:28,870
+Aquí lo voy a poner y en punto.
+
+92
+00:05:28,870 --> 00:05:30,760
+Variación cool.
+
+93
+00:05:34,550 --> 00:05:41,800
+Y el ex Charlies voy a agregar, voy a hacer un append que seré en y dentro de esta colección los Johns
+
+94
+00:05:41,810 --> 00:05:42,800
+que he encontrado.
+
+95
+00:05:43,430 --> 00:05:44,210
+Le digo List.
+
+96
+00:05:45,760 --> 00:05:46,750
+Existen varias.
+
+97
+00:05:50,820 --> 00:05:52,050
+Y ahora le digo Heidi.
+
+98
+00:05:52,470 --> 00:05:53,040
+Append.
+
+99
+00:05:55,390 --> 00:05:56,220
+Desde el item.
+
+100
+00:05:56,230 --> 00:05:59,770
+Punto Heidy Entonces aquí ya tengo dos colecciones.
+
+101
+00:06:00,370 --> 00:06:02,440
+La primera colección es el producto.
+
+102
+00:06:04,000 --> 00:06:05,200
+No voy a poder aquel momento.
+
+103
+00:06:05,740 --> 00:06:07,120
+Pero tu aparición lo copio aquí.
+
+104
+00:06:07,120 --> 00:06:07,540
+Lo pego.
+
+105
+00:06:08,750 --> 00:06:15,650
+Que, por ejemplo puede tener valores como 12345.
+
+106
+00:06:17,030 --> 00:06:21,920
+Y también voy a tener otra colección que es el barniz.
+
+107
+00:06:24,950 --> 00:06:28,250
+Que puede tener elementos como cinco.
+
+108
+00:06:30,040 --> 00:06:30,760
+Seis.
+
+109
+00:06:31,850 --> 00:06:32,450
+Siete.
+
+110
+00:06:32,930 --> 00:06:33,380
+Ocho.
+
+111
+00:06:35,440 --> 00:06:38,530
+Por supuesto que estos son valores de ejemplo, no son los valores reales.
+
+112
+00:06:39,460 --> 00:06:47,170
+Lo que quiero yo es hacer una evaluación entre estas dos colecciones y solo extraer, trabajar con aquellas
+
+113
+00:06:47,170 --> 00:06:49,510
+que tienen valores con elementos coincidentes.
+
+114
+00:06:49,960 --> 00:06:54,990
+Por ejemplo, el único valor coincidente entre producto Aviation y Starlight.
+
+115
+00:06:55,030 --> 00:06:55,540
+Quién es?
+
+116
+00:06:55,960 --> 00:06:57,220
+Es el valor de cinco.
+
+117
+00:06:57,910 --> 00:07:00,640
+Ese es el que quiero yo encontrar.
+
+118
+00:07:00,790 --> 00:07:05,800
+Quiero saber las coincidencias de elementos entre estas dos colecciones.
+
+119
+00:07:06,730 --> 00:07:09,490
+Vayamos entonces a continuación a hacer esa evaluación.
+
+120
+00:07:09,490 --> 00:07:16,060
+Entre estas dos colecciones hacemos un for pr im product para que comencemos con él.
+
+121
+00:07:17,230 --> 00:07:19,870
+Dos puntos que le voy a poner.
+
+122
+00:07:19,870 --> 00:07:30,730
+Si PR se encuentra dentro de la lista X Valid, entonces a lo siguiente, es decir, si existe la coincidencia.
+
+123
+00:07:30,730 --> 00:07:34,660
+En otras palabras, estoy aquí ya encontrando este elemento cinco.
+
+124
+00:07:35,620 --> 00:07:41,560
+La coincidencia la estoy encontrando y esa coincidencia la voy a trabajar dentro de este bloque if.
+
+125
+00:07:43,530 --> 00:07:47,310
+Le digo entonces primeramente que tenga el índice la ubicación del elemento.
+
+126
+00:07:48,240 --> 00:07:49,620
+Desde el ex barniz.
+
+127
+00:07:53,470 --> 00:07:56,290
+Punto index y le paso el objeto pr.
+
+128
+00:07:57,100 --> 00:07:57,970
+Tengo el índice.
+
+129
+00:07:59,020 --> 00:08:01,570
+Ahora voy a obtener el item ID igual a.
+
+130
+00:08:02,640 --> 00:08:03,090
+Heidi.
+
+131
+00:08:04,240 --> 00:08:04,780
+Index.
+
+132
+00:08:06,920 --> 00:08:09,980
+Le digo ahora item iguala el objeto.
+
+133
+00:08:09,980 --> 00:08:11,990
+Item va a venir ese item.
+
+134
+00:08:14,550 --> 00:08:17,220
+Point Object punto Quest.
+
+135
+00:08:18,660 --> 00:08:23,790
+Y el filtro va a ser por el ID igual a quién y qué obtuve en su momento en la línea anterior?
+
+136
+00:08:24,180 --> 00:08:24,770
+Y ahí?
+
+137
+00:08:27,200 --> 00:08:33,590
+Si esto concuerda, entonces lo que tengo que hacer es no crear un nuevo item, sino actualizar su cantidad
+
+138
+00:08:33,590 --> 00:08:34,040
+en uno.
+
+139
+00:08:35,300 --> 00:08:39,140
+Después le pongo esto y a ti suma igual a.
+
+140
+00:08:40,810 --> 00:08:41,140
+Uno.
+
+141
+00:08:43,430 --> 00:08:49,400
+También le tengo que indicar que este item ahora tiene un usuario y user va a ser igual que al objeto
+
+142
+00:08:49,460 --> 00:08:49,880
+user.
+
+143
+00:08:51,110 --> 00:08:56,900
+Y finalmente le digo Item, entonces sabe que actualicé este ítem en la base de datos.
+
+144
+00:08:57,200 --> 00:09:05,600
+Pero recuerda, esto va a ocurrir cuando haya coincidencias de elementos entre estas dos listas de variación
+
+145
+00:09:05,600 --> 00:09:06,620
+y ex charlies.
+
+146
+00:09:06,860 --> 00:09:11,150
+Si no hubiera una coincidencia, entonces voy a aplicar un L en los dos puntos.
+
+147
+00:09:11,840 --> 00:09:16,230
+Y aquí le digo que el item a trabajar venga desde card.
+
+148
+00:09:16,250 --> 00:09:18,170
+Item punto object.
+
+149
+00:09:18,770 --> 00:09:19,790
+Punto filter.
+
+150
+00:09:22,220 --> 00:09:24,770
+Y le digo que la condición sea igual a kart.
+
+151
+00:09:25,950 --> 00:09:27,630
+Y aquí voy a hacer un bucle for.
+
+152
+00:09:27,630 --> 00:09:28,860
+Item impar.
+
+153
+00:09:28,860 --> 00:09:29,340
+Item.
+
+154
+00:09:31,340 --> 00:09:32,210
+Dos puntos.
+
+155
+00:09:33,610 --> 00:09:37,090
+Y lo único que voy a hacer es hacer un item user igual a user.
+
+156
+00:09:37,330 --> 00:09:43,150
+Le estoy asignando a cada línea el usuario y voy a hacer un ítem punto safe.
+
+157
+00:09:44,460 --> 00:09:45,360
+Y eso sería todo.
+
+158
+00:09:47,850 --> 00:09:49,620
+Vamos a tomar un poco mejor el código.
+
+159
+00:09:51,980 --> 00:09:55,490
+Ah, mira este for item que al final no lo había borrado.
+
+160
+00:09:55,490 --> 00:09:56,570
+Voy a quitarlo aquí.
+
+161
+00:09:57,560 --> 00:09:58,400
+No lo necesito.
+
+162
+00:09:58,900 --> 00:10:05,330
+Quedaría de esta forma si luego de la última línea del último que había hecho que está dentro de este
+
+163
+00:10:05,330 --> 00:10:05,720
+bucle.
+
+164
+00:10:06,400 --> 00:10:10,420
+Producto Animation continua LSP LSP.
+
+165
+00:10:10,460 --> 00:10:13,510
+Recuerda que está al nivel del try de la parte superior.
+
+166
+00:10:13,520 --> 00:10:15,140
+Ten cuidado, siempre lo repito.
+
+167
+00:10:15,410 --> 00:10:22,310
+Ten mucho cuidado con los taps que coloques dentro del código Python aquí en este bucle del for item
+
+168
+00:10:22,640 --> 00:10:26,930
+y ten para el item de use object filter user user.
+
+169
+00:10:28,380 --> 00:10:31,410
+Yo estoy agregando este aquí, pero aquí tengo un problema.
+
+170
+00:10:31,410 --> 00:10:33,750
+No había declarado la colección de ideas.
+
+171
+00:10:34,560 --> 00:10:41,040
+Así que antes del bucle Marlin, voy a colocar un ID igual a indicarle que es una colección.
+
+172
+00:10:42,490 --> 00:10:44,920
+Ahora, si vamos a guardar el file safe all.
+
+173
+00:10:46,340 --> 00:10:47,750
+Íbamos a probar a la página.
+
+174
+00:10:48,470 --> 00:10:55,160
+Primero vamos a lo que el admin que quiero limpiar, eliminar todos los cards y items que tengo en mi
+
+175
+00:10:55,160 --> 00:10:55,820
+base de datos.
+
+176
+00:10:56,060 --> 00:11:04,250
+Vamos primero a Card, voy a seleccionar este Card Tileset cart go yes and sure de eliminar todo.
+
+177
+00:11:05,680 --> 00:11:14,290
+Para ítems lo mismo voy a seleccionar los elementos que existan Delete Selected Items Go y eliminar
+
+178
+00:11:14,290 --> 00:11:15,010
+Get and sure.
+
+179
+00:11:15,460 --> 00:11:15,850
+Listo.
+
+180
+00:11:17,370 --> 00:11:21,000
+Vamos ahora a mi e-commerce y el carrito de compras está vacío.
+
+181
+00:11:21,060 --> 00:11:24,000
+Como puedes ver, también estoy en sesión y sesión de validez.
+
+182
+00:11:24,630 --> 00:11:25,530
+Eso es correcto.
+
+183
+00:11:25,860 --> 00:11:27,000
+Voy a ir a la tienda.
+
+184
+00:11:28,330 --> 00:11:29,530
+A seleccionar este producto.
+
+185
+00:11:29,530 --> 00:11:30,370
+Camisa moderna.
+
+186
+00:11:31,120 --> 00:11:33,580
+Lo voy a poner que es rojo y larch.
+
+187
+00:11:34,560 --> 00:11:36,240
+Y lo agregó al carrito de compras.
+
+188
+00:11:36,390 --> 00:11:37,410
+Perfecto, se agregó.
+
+189
+00:11:37,980 --> 00:11:39,450
+Voy a ir nuevamente a la tienda.
+
+190
+00:11:40,020 --> 00:11:46,710
+Selecciono el nuevo producto con los mismos Variant, Rojo y Large y le vuelvo a dar agregado a Piccard
+
+191
+00:11:47,010 --> 00:11:48,420
+y ya se está acumulando.
+
+192
+00:11:49,320 --> 00:11:50,760
+Ahora probemos si se acumula.
+
+193
+00:11:50,760 --> 00:11:54,160
+Cuando no estoy en sesión, voy a salir de sesión.
+
+194
+00:11:54,180 --> 00:11:55,470
+Vamos a aplicar este botón.
+
+195
+00:11:57,680 --> 00:12:01,100
+Voy a la tienda nuevamente selecciono el producto.
+
+196
+00:12:02,530 --> 00:12:04,420
+Con variantes Rojo y Larch.
+
+197
+00:12:05,430 --> 00:12:06,720
+Y lo agregó al shopping cart.
+
+198
+00:12:07,470 --> 00:12:09,000
+Se agregó nuestra sesión.
+
+199
+00:12:09,300 --> 00:12:10,710
+Le doy clic al botón Pagar.
+
+200
+00:12:10,860 --> 00:12:12,120
+Me va a pedir que haga login?
+
+201
+00:12:12,810 --> 00:12:13,590
+Hago Elokim.
+
+202
+00:12:15,820 --> 00:12:18,250
+Y ya se agregó Vamos a ir al carrito de compras.
+
+203
+00:12:18,760 --> 00:12:23,980
+Y aquí ya puedes notar de que se está agregando ese elemento al producto.
+
+204
+00:12:23,980 --> 00:12:28,660
+Con los baterías que tengo, mi sesión de usuario significa que el problema se ha resuelto.

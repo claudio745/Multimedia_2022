@@ -1,0 +1,679 @@
+1
+00:00:00,240 --> 00:00:06,750
+Un tema muy importante en el desarrollo web es la factorización de componentes, que es un componente.
+
+2
+00:00:06,750 --> 00:00:10,980
+Un componente representa una funcionalidad y una interfaz gráfica.
+
+3
+00:00:11,340 --> 00:00:18,300
+Por ejemplo, tenemos en la parte superior un componente que representa el header, el título de la
+
+4
+00:00:18,300 --> 00:00:24,300
+página, y si vamos a la parte inferior, vamos a ver que aparece el Fuller o pie de página.
+
+5
+00:00:24,810 --> 00:00:32,820
+Esta cabecera y pie de página son elementos comunes que se van a repetir en todas las páginas HTML que
+
+6
+00:00:32,820 --> 00:00:38,610
+vaya construyendo dentro de mi proyecto Django, por lo que lo que tengo que hacer ahora es factorizar,
+
+7
+00:00:38,640 --> 00:00:45,270
+es decir, crear un componente que represente al header y crear otro componente que represente a pie
+
+8
+00:00:45,300 --> 00:00:51,930
+de página, que puede ser consumido ene veces por cualquier página que a futuro vaya creando.
+
+9
+00:00:52,790 --> 00:00:58,500
+Vamos a comenzar por ir a Atton y dentro de la carpeta Templates voy a crear un nuevo archivo nuevo
+
+10
+00:00:58,610 --> 00:01:02,540
+File que le voy a poner de nombre base punto HTML.
+
+11
+00:01:03,140 --> 00:01:09,560
+Este base de HTML va a tener la estructura que va a ser dinámica, que va a cambiar conforme yo selecciono
+
+12
+00:01:09,560 --> 00:01:15,320
+una página de mi proyecto y también va a tener una estructura estática que nunca va a cambiar.
+
+13
+00:01:15,350 --> 00:01:16,640
+Cual es la estructura estática?
+
+14
+00:01:16,640 --> 00:01:22,220
+Puede ser el pie de página y el header que se va a repetir en todos los elementos web.
+
+15
+00:01:22,840 --> 00:01:24,340
+A ver, comencemos con este trabajo.
+
+16
+00:01:24,350 --> 00:01:27,560
+Vayamos primero al punto HTML, vamos.
+
+17
+00:01:27,680 --> 00:01:28,490
+Estamos en el home.
+
+18
+00:01:28,940 --> 00:01:33,680
+Lo que quiero es tomar el código desde la página, desde la línea 43.
+
+19
+00:01:33,980 --> 00:01:36,410
+Vamos a la línea 43 que representa el body.
+
+20
+00:01:37,130 --> 00:01:39,050
+Busque el body, lo tienes?
+
+21
+00:01:39,170 --> 00:01:46,370
+Momento que se minimizo ya este body desde este body para adelante, para arriba, lo voy a seleccionar
+
+22
+00:01:46,910 --> 00:01:48,230
+y lo voy a cortar.
+
+23
+00:01:48,230 --> 00:01:52,190
+Voy a hacer un clic derecho y la opción de Cut Cortar.
+
+24
+00:01:53,110 --> 00:01:54,060
+Lo tenemos.
+
+25
+00:01:54,070 --> 00:02:01,210
+Ahora vamos a la página web, acepta HTML y aquí le doy clic derecho y pegar.
+
+26
+00:02:02,130 --> 00:02:08,010
+Y ahora dentro del HTML vamos a darle un enter del bori y vamos a crear un contenido dinámico.
+
+27
+00:02:09,100 --> 00:02:13,030
+Entre llaves y también signos de porcentaje.
+
+28
+00:02:14,040 --> 00:02:16,380
+Vamos a colocar aquí block content.
+
+29
+00:02:16,410 --> 00:02:17,970
+Este va a ser el contenido dinámico.
+
+30
+00:02:20,080 --> 00:02:23,260
+Y aquí lo voy a poner que llega hasta aquí el blog.
+
+31
+00:02:24,680 --> 00:02:27,500
+Esto va a representar el contenido que coloque en medio.
+
+32
+00:02:27,680 --> 00:02:33,050
+Va a representar las páginas que vaya seleccionando que puede ser home html.
+
+33
+00:02:33,050 --> 00:02:34,860
+Puede ser la página de venta.
+
+34
+00:02:34,880 --> 00:02:37,820
+Puede ser la página de carrito de compra, etc.
+
+35
+00:02:38,270 --> 00:02:41,810
+Todo va a irse desplegando dentro de este segmento block.
+
+36
+00:02:43,130 --> 00:02:47,600
+Algo que también quiero agregarte dentro de HTML es el GET.
+
+37
+00:02:47,990 --> 00:02:50,300
+Vamos a darle un enter para que lo podamos hacer.
+
+38
+00:02:50,870 --> 00:02:54,980
+El GET que todavía está en la sección de ADD, que todavía está dentro del home.
+
+39
+00:02:55,460 --> 00:02:56,130
+No te preocupes.
+
+40
+00:02:56,150 --> 00:02:58,370
+Vamos al home entonces nuevamente como HTML.
+
+41
+00:02:58,790 --> 00:03:00,860
+Y aquí lo que continúa es el header.
+
+42
+00:03:01,920 --> 00:03:03,210
+Voy a seleccionar el header.
+
+43
+00:03:04,170 --> 00:03:05,610
+Sigo para abajo, sigo para abajo.
+
+44
+00:03:05,610 --> 00:03:06,780
+Hasta donde termina el querer?
+
+45
+00:03:07,760 --> 00:03:09,050
+Entonces aquí terminó el éter.
+
+46
+00:03:09,350 --> 00:03:09,980
+Listo?
+
+47
+00:03:10,310 --> 00:03:11,280
+Voy a cortarlo.
+
+48
+00:03:11,300 --> 00:03:12,110
+Clic derecho.
+
+49
+00:03:14,320 --> 00:03:20,890
+Y vamos al Boys HTML nuevamente y aquí después del body y antes del blog content vamos a darle clic
+
+50
+00:03:20,890 --> 00:03:22,630
+derecho y pegar.
+
+51
+00:03:24,460 --> 00:03:29,410
+Entonces ya tengo también incluido dentro del HTML el header.
+
+52
+00:03:30,430 --> 00:03:37,570
+Pero como te repito, la idea de factorizar es que estos elementos que están dentro del HTML puedan
+
+53
+00:03:37,570 --> 00:03:41,380
+ser replicados en diferentes páginas al mismo tiempo.
+
+54
+00:03:42,010 --> 00:03:49,150
+En este caso, lo que quiero es que el Home Replique tenga estos códigos HTML que pertenecen al base.
+
+55
+00:03:50,110 --> 00:03:51,220
+Cómo voy a hacer esto?
+
+56
+00:03:51,670 --> 00:03:55,300
+Vayamos entonces al punto a HTML, asset Template.
+
+57
+00:03:56,050 --> 00:03:57,130
+Y aquí mira cómo quedó.
+
+58
+00:03:57,130 --> 00:03:58,570
+Ya no tiene nada de lo anterior.
+
+59
+00:03:59,230 --> 00:04:06,070
+Pero voy a indicarle que extienda, que incluya el código que viene de la base, que son la parte del
+
+60
+00:04:06,070 --> 00:04:06,400
+header.
+
+61
+00:04:06,940 --> 00:04:14,940
+Por eso aquí en la parte superior, le voy a poner entre llaves y asterisco y porcentajes extends y
+
+62
+00:04:15,130 --> 00:04:20,350
+le indicó el nombre del template, del cual tiene que extenderse en base a HTML.
+
+63
+00:04:21,160 --> 00:04:28,840
+De esta forma, el código HTML que se encuentra en base HTML se va a incluir dentro del home automáticamente.
+
+64
+00:04:29,710 --> 00:04:34,630
+Adicionalmente a eso, tengo que indicarle cuál es el contenido dinámico y el contenido dinámico es
+
+65
+00:04:34,630 --> 00:04:36,550
+todo este código HTML.
+
+66
+00:04:37,000 --> 00:04:42,490
+Entonces vamos a colocarle aquí el inicio del contenido dinámico entre Chávez y.
+
+67
+00:04:43,220 --> 00:04:47,420
+Y porcentajes y le colocamos block content.
+
+68
+00:04:48,840 --> 00:04:49,260
+Listo.
+
+69
+00:04:50,070 --> 00:04:54,180
+Aquí comienza el blog content y vamos a la parte final para indicarle dónde termina.
+
+70
+00:04:54,600 --> 00:05:00,330
+Después del cierre del HTML, aquí le voy a colocar entre llaves y porcentajes.
+
+71
+00:05:01,230 --> 00:05:01,620
+End.
+
+72
+00:05:02,780 --> 00:05:03,200
+Block.
+
+73
+00:05:06,520 --> 00:05:07,610
+Vamos a borrar los cambios.
+
+74
+00:05:07,630 --> 00:05:11,140
+Menú File Safe All y vamos a ejecutar nuestra página.
+
+75
+00:05:11,800 --> 00:05:17,800
+He refrescado la página y me está pareciendo un error porque dentro de la página ya no aparece la declaración
+
+76
+00:05:17,860 --> 00:05:18,570
+del static.
+
+77
+00:05:18,580 --> 00:05:25,210
+Recuerda que la página home necesita el static para poder cargar las imágenes de los productos.
+
+78
+00:05:25,930 --> 00:05:26,840
+No te preocupes.
+
+79
+00:05:26,860 --> 00:05:27,970
+Vamos a la parte superior.
+
+80
+00:05:28,000 --> 00:05:30,910
+Estamos dentro de home paint html en la parte superior.
+
+81
+00:05:30,970 --> 00:05:33,490
+Después del extends sale un enter.
+
+82
+00:05:33,850 --> 00:05:37,960
+Voy a indicarle que se cargue entre llaves y porcentajes.
+
+83
+00:05:38,500 --> 00:05:41,140
+Le escribo lod static.
+
+84
+00:05:43,620 --> 00:05:44,970
+Vamos a borrar los cambios.
+
+85
+00:05:46,610 --> 00:05:48,050
+Y volvemos a probar la página.
+
+86
+00:05:49,000 --> 00:05:52,120
+Refrescamos y como puedes ver, perfecto.
+
+87
+00:05:52,120 --> 00:06:00,550
+Ya estoy consumiendo dinámicamente esta cabecera desde el archivo base HTML.
+
+88
+00:06:01,480 --> 00:06:02,990
+Volvamos nuevamente a Atton.
+
+89
+00:06:03,010 --> 00:06:06,520
+Vamos a ir al punto HTML y vamos a la parte final.
+
+90
+00:06:07,060 --> 00:06:07,840
+En la parte final.
+
+91
+00:06:08,140 --> 00:06:09,820
+Vamos a notar que aparece el footer.
+
+92
+00:06:10,420 --> 00:06:11,520
+El pie de página.
+
+93
+00:06:11,530 --> 00:06:17,620
+Como te he explicado al inicio de este capítulo, este va a ser un elemento que se va a repetir en múltiples
+
+94
+00:06:17,620 --> 00:06:18,190
+páginas.
+
+95
+00:06:18,460 --> 00:06:21,070
+Entonces, lo que necesito también es factorizar.
+
+96
+00:06:21,970 --> 00:06:22,900
+Vamos a hacer algo.
+
+97
+00:06:23,080 --> 00:06:27,840
+Vamos a ir a Templates, a la carpeta Templates, y creamos dentro de ella un nuevo directorio.
+
+98
+00:06:28,720 --> 00:06:31,120
+Que vamos a ponerle nombre includes.
+
+99
+00:06:34,290 --> 00:06:38,100
+Y dentro de este directorio includes vamos a crear un archivo.
+
+100
+00:06:39,170 --> 00:06:40,820
+Qué se va a llamar Führer?
+
+101
+00:06:40,820 --> 00:06:42,530
+Punto a HTML.
+
+102
+00:06:44,630 --> 00:06:49,760
+Y otro más que se llame nap bar punto a html.
+
+103
+00:06:52,260 --> 00:06:55,110
+Volvamos entonces ahora al punto HTML.
+
+104
+00:06:55,890 --> 00:06:58,470
+Y aquí voy a seleccionar el Führer completo.
+
+105
+00:06:58,470 --> 00:07:00,300
+Führer, lo he seleccionado.
+
+106
+00:07:00,570 --> 00:07:02,370
+Lo corto y derecho.
+
+107
+00:07:02,520 --> 00:07:04,620
+Cut Cut, como quiera decirlo.
+
+108
+00:07:05,860 --> 00:07:08,260
+Y vamos ahora a la carpeta includes footer.
+
+109
+00:07:09,210 --> 00:07:10,740
+HTML ya que lo pego.
+
+110
+00:07:12,850 --> 00:07:14,370
+Para el caso del NAB Bar.
+
+111
+00:07:14,380 --> 00:07:20,500
+Recuerdas que anteriormente hemos cortado la parte superior del home y la pusimos al interior del base?
+
+112
+00:07:20,770 --> 00:07:27,130
+Si está en el base HTML, pero no es el mejor lugar para que esté, vamos a ir a base de punto HTML.
+
+113
+00:07:27,700 --> 00:07:31,540
+Y mira, aquí está Nat Bar que representa qué se representa por el header.
+
+114
+00:07:32,140 --> 00:07:34,660
+Este jerarquía que aquí voy a seleccionar.
+
+115
+00:07:34,660 --> 00:07:37,300
+Este header que tiene el class section header.
+
+116
+00:07:38,850 --> 00:07:40,810
+Lo selecciono hasta aquí.
+
+117
+00:07:40,830 --> 00:07:42,270
+Aquí termina el header.
+
+118
+00:07:43,560 --> 00:07:44,160
+Corto.
+
+119
+00:07:44,790 --> 00:07:45,230
+Listo?
+
+120
+00:07:45,240 --> 00:07:46,410
+Así es como va a quedar.
+
+121
+00:07:47,480 --> 00:07:55,910
+Y ahora vamos a la carpeta includes y vamos al Führer, al nav, barco a HTML y aquí lo voy a pegar.
+
+122
+00:07:56,910 --> 00:07:58,620
+Vamos a guardar ahora todos los cambios.
+
+123
+00:07:58,680 --> 00:08:01,230
+Enchufa el safe hall y probemos la página.
+
+124
+00:08:02,180 --> 00:08:08,960
+Si refrescamos la página, vas a darte cuenta que ya no me aparece el nav bar de la parte superior y
+
+125
+00:08:08,960 --> 00:08:11,690
+tampoco me aparece el future el pie de página.
+
+126
+00:08:12,860 --> 00:08:14,390
+Por qué está sucediendo esto?
+
+127
+00:08:15,490 --> 00:08:23,140
+Porque si vamos al base HTML te darás cuenta de que sólo le estoy indicando que imprima el contenido
+
+128
+00:08:23,140 --> 00:08:29,410
+de la página a la cual está referenciando, que en este caso es el HTML, pero no lo estoy colocando
+
+129
+00:08:29,410 --> 00:08:30,970
+aquí en ningún momento.
+
+130
+00:08:30,970 --> 00:08:37,000
+Que agregue el nav bar, el header ni tampoco el pie de página, el fuller.
+
+131
+00:08:38,420 --> 00:08:42,680
+Entonces agreguemos el pie de página y el nav var el header.
+
+132
+00:08:42,860 --> 00:08:44,480
+Vamos a hacer la parte superior aquí.
+
+133
+00:08:45,690 --> 00:08:48,930
+Sobre el blog content vamos a escribir entre llaves.
+
+134
+00:08:50,270 --> 00:08:51,380
+Y porcentajes.
+
+135
+00:08:52,380 --> 00:08:54,780
+Que incluya, incluido a quien.
+
+136
+00:08:56,170 --> 00:09:01,030
+Adentro de la carpeta includes que está en template includes el archivo nav.
+
+137
+00:09:01,870 --> 00:09:05,710
+VAR punto html perfecto.
+
+138
+00:09:05,980 --> 00:09:07,150
+Voy a copiar esta línea.
+
+139
+00:09:08,150 --> 00:09:09,160
+Y al final del bloque.
+
+140
+00:09:09,180 --> 00:09:10,040
+Quién va a venir?
+
+141
+00:09:10,200 --> 00:09:10,550
+Claro.
+
+142
+00:09:10,550 --> 00:09:11,570
+El pie de página.
+
+143
+00:09:11,870 --> 00:09:12,590
+Aquí lo pego.
+
+144
+00:09:13,040 --> 00:09:15,740
+Le digo que incluya el in a includes.
+
+145
+00:09:16,040 --> 00:09:18,640
+Aquí sería en vez de lavar Führer.
+
+146
+00:09:18,650 --> 00:09:20,210
+Punto a HTML.
+
+147
+00:09:20,750 --> 00:09:21,740
+Vamos a borrar los cambios.
+
+148
+00:09:21,740 --> 00:09:24,860
+Me enchufa el safe all y ejecutamos la página.
+
+149
+00:09:25,820 --> 00:09:32,030
+Y al refrescar vamos a anotar que me aparece un error porque me está indicando que no está leyendo la
+
+150
+00:09:32,030 --> 00:09:34,730
+variable estática dentro del header.
+
+151
+00:09:35,940 --> 00:09:42,120
+Y esto sucede básicamente porque dentro del querer yo había colocado una imagen que representaba el
+
+152
+00:09:42,120 --> 00:09:43,890
+logo de mi página.
+
+153
+00:09:44,400 --> 00:09:47,040
+Vamos a ir al bar que representa el header.
+
+154
+00:09:47,070 --> 00:09:49,200
+Aquí está la parte superior.
+
+155
+00:09:50,450 --> 00:09:53,720
+Aquí vas a notar que aparece la imagen del logo.
+
+156
+00:09:54,570 --> 00:09:55,920
+Vamos a ver aquí a que aparece.
+
+157
+00:09:55,920 --> 00:09:58,380
+Mira en la línea 30, más o menos.
+
+158
+00:09:59,380 --> 00:10:03,700
+Pero ese logo static y este estático es el que nos está leyendo.
+
+159
+00:10:04,080 --> 00:10:06,180
+Bien, para poder agregarlo no hay ningún problema.
+
+160
+00:10:06,190 --> 00:10:07,690
+Vamos a la parte superior.
+
+161
+00:10:08,570 --> 00:10:10,610
+Que un espacio.
+
+162
+00:10:11,980 --> 00:10:14,050
+Y escribimos la importación.
+
+163
+00:10:15,980 --> 00:10:17,870
+Que se cargue el loot estático.
+
+164
+00:10:20,250 --> 00:10:20,910
+Lo tenemos.
+
+165
+00:10:20,940 --> 00:10:24,540
+Voy a borrar los cambios del Safe Hall y ejecutamos la página.
+
+166
+00:10:25,480 --> 00:10:27,280
+Igual a como puedes darte cuenta.
+
+167
+00:10:27,280 --> 00:10:36,160
+Ya está leyendo tanto el Geller como también en la parte inferior aparece el Führer el pie de página.
+
+168
+00:10:36,490 --> 00:10:37,080
+Perfecto.
+
+169
+00:10:37,090 --> 00:10:45,310
+Con esto ya hemos autorizado nuestro proyecto web para que ciertos elementos sean reutilizables por
+
+170
+00:10:45,310 --> 00:10:49,510
+todos mis componentes web, por todas mis páginas web del proyecto Jango.

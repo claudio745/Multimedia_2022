@@ -1,0 +1,543 @@
+1
+00:00:00,450 --> 00:00:06,480
+En este capítulo vamos a crear las estructuras, las columnas y también las tablas que van a soportar
+
+2
+00:00:06,480 --> 00:00:07,590
+mi carrito de compras.
+
+3
+00:00:07,830 --> 00:00:12,900
+Voy a crear una clase que se va a marcar y otra clase que se vaya a marcar.
+
+4
+00:00:12,900 --> 00:00:13,350
+Item.
+
+5
+00:00:13,650 --> 00:00:15,210
+El producto seleccionado.
+
+6
+00:00:16,550 --> 00:00:18,280
+Estamos dentro de mi proyecto.
+
+7
+00:00:18,320 --> 00:00:26,030
+Vamos a ir ahora a la carpeta cartas, ya que aparece el archivo Models y vamos a abrirlo.
+
+8
+00:00:27,230 --> 00:00:30,530
+Y aquí vamos a comenzar a trabajar en la creación de estas clases.
+
+9
+00:00:30,950 --> 00:00:36,140
+Primero voy a tener que importar From Store Models.
+
+10
+00:00:37,440 --> 00:00:41,310
+Al producto, así que que le pongo product que es importe product perfecto.
+
+11
+00:00:42,120 --> 00:00:45,210
+Y ahora comenzamos a crear el primer class que es card.
+
+12
+00:00:45,360 --> 00:00:46,860
+Representa el carrito de compras.
+
+13
+00:00:48,430 --> 00:00:51,550
+Este va a tener un parámetro de tipo Models Model.
+
+14
+00:00:52,980 --> 00:01:00,450
+Dos puntos y le voy a indicar que va a tener un car ide igual a Model Chart.
+
+15
+00:01:01,540 --> 00:01:02,170
+Field.
+
+16
+00:01:04,300 --> 00:01:05,940
+Aquí le ponemos que el más.
+
+17
+00:01:09,650 --> 00:01:11,660
+Va a ser igual a 250.
+
+18
+00:01:12,750 --> 00:01:14,280
+Coma blank.
+
+19
+00:01:15,420 --> 00:01:17,990
+Si permite blancos o dólares en blanco.
+
+20
+00:01:18,060 --> 00:01:18,990
+Digo que sí, que true.
+
+21
+00:01:20,900 --> 00:01:22,070
+Voy a copiar esa línea.
+
+22
+00:01:23,550 --> 00:01:24,410
+Hasta le pegamos.
+
+23
+00:01:24,420 --> 00:01:29,250
+Y otro campo adicional sería la fecha en que se está agregando este nuevo récord.
+
+24
+00:01:29,640 --> 00:01:31,200
+Así que le pongo Audit.
+
+25
+00:01:31,800 --> 00:01:33,360
+La fecha de agregación de récord.
+
+26
+00:01:33,780 --> 00:01:36,100
+Pero este tipo es fecha, así que le pongo models.
+
+27
+00:01:36,180 --> 00:01:36,690
+Punto.
+
+28
+00:01:38,060 --> 00:01:39,020
+De Hetfield.
+
+29
+00:01:40,840 --> 00:01:43,630
+Y aquí le digo que el valor por defecto va a ser.
+
+30
+00:01:44,970 --> 00:01:46,050
+Un auto.
+
+31
+00:01:46,860 --> 00:01:47,370
+Nao!
+
+32
+00:01:48,650 --> 00:01:48,920
+AT.
+
+33
+00:01:50,060 --> 00:01:51,710
+Para que se agregue la fecha por defecto.
+
+34
+00:01:52,370 --> 00:01:58,550
+Y también quiero que a la hora que esté en el módulo Administración de Chango se imprima un valor que
+
+35
+00:01:58,550 --> 00:02:00,650
+represente a cada record del carrito.
+
+36
+00:02:01,100 --> 00:02:04,070
+En este caso quiero que sea el ID del carrito.
+
+37
+00:02:04,340 --> 00:02:07,850
+Por eso lo voy a poner esta función TF dos rayas para abajo.
+
+38
+00:02:07,850 --> 00:02:10,070
+Str dos rayas para abajo.
+
+39
+00:02:11,380 --> 00:02:12,760
+Y le paso el surf.
+
+40
+00:02:13,090 --> 00:02:13,480
+Un momento.
+
+41
+00:02:13,480 --> 00:02:14,560
+Aquí te faltó dos puntos.
+
+42
+00:02:14,570 --> 00:02:15,280
+Hay que tener cuidado.
+
+43
+00:02:15,290 --> 00:02:18,760
+Siempre le digo que me retorne el self.
+
+44
+00:02:20,600 --> 00:02:21,080
+Self.
+
+45
+00:02:21,250 --> 00:02:21,830
+Punto.
+
+46
+00:02:23,580 --> 00:02:24,080
+Kurt.
+
+47
+00:02:24,090 --> 00:02:24,480
+Heidi.
+
+48
+00:02:25,890 --> 00:02:27,620
+Que se me fue un ratón.
+
+49
+00:02:27,750 --> 00:02:28,140
+Listo?
+
+50
+00:02:28,140 --> 00:02:28,560
+Perfecto.
+
+51
+00:02:28,560 --> 00:02:29,040
+Lo tengo.
+
+52
+00:02:29,820 --> 00:02:34,560
+De esta forma hemos creado entonces la primera estructura que representa el carrito de compra.
+
+53
+00:02:34,920 --> 00:02:41,970
+Pero ahora me falta el elemento del carrito, el carrito ídem o el producto que se ha seleccionado y
+
+54
+00:02:41,970 --> 00:02:43,290
+que se va a comprar a futuro.
+
+55
+00:02:43,860 --> 00:02:45,780
+Entonces voy a hacer un class.
+
+56
+00:02:48,150 --> 00:02:48,560
+Ídem.
+
+57
+00:02:50,560 --> 00:02:52,630
+Que le vamos a poner models to.
+
+58
+00:02:53,680 --> 00:02:54,310
+Model.
+
+59
+00:02:55,780 --> 00:02:56,680
+Dos puntos.
+
+60
+00:02:58,040 --> 00:03:02,900
+Y comenzamos indicándole que este Hayden tiene una propiedad que representa el producto que ha seleccionado
+
+61
+00:03:02,900 --> 00:03:03,590
+para la compra.
+
+62
+00:03:04,830 --> 00:03:11,790
+Este va a ser tipo models for all coins y se está relacionando con la entidad producto.
+
+63
+00:03:11,790 --> 00:03:19,530
+Por eso que entre paréntesis le pongo el producto y también voy a indicarle que cuando elimine este
+
+64
+00:03:19,530 --> 00:03:24,990
+producto relacionado quiero que también se elimine ese item, ese car y ten este récord.
+
+65
+00:03:25,290 --> 00:03:26,970
+Por eso le digo on delete.
+
+66
+00:03:30,650 --> 00:03:31,850
+Iguala Models.
+
+67
+00:03:32,750 --> 00:03:33,470
+Cascade.
+
+68
+00:03:36,090 --> 00:03:36,920
+Lo tenemos.
+
+69
+00:03:37,250 --> 00:03:37,760
+Perfecto.
+
+70
+00:03:37,770 --> 00:03:42,050
+También va a tener una relación este item con el kart.
+
+71
+00:03:42,590 --> 00:03:44,360
+El kart es el padre de kart.
+
+72
+00:03:44,360 --> 00:03:44,810
+Item.
+
+73
+00:03:45,660 --> 00:03:47,750
+Entonces voy a copiar esta linea.
+
+74
+00:03:48,030 --> 00:03:48,780
+Aca la pego.
+
+75
+00:03:49,820 --> 00:03:54,020
+Y voy a tener también un objeto de tipo, una columna que representa el cartel.
+
+76
+00:03:54,770 --> 00:03:59,900
+Va a ser también un ferengi, pero en este caso relacionándose hacia la entidad kart.
+
+77
+00:04:01,780 --> 00:04:03,770
+Y también tiene un mothers.
+
+78
+00:04:04,000 --> 00:04:11,740
+Si eliminamos un CAR que tiene incorporado un item determinado, también va a borrarse automáticamente.
+
+79
+00:04:14,570 --> 00:04:20,990
+La cuantía de la cantidad voy a indicar que es de Mothers Integer Field.
+
+80
+00:04:23,250 --> 00:04:24,050
+No tenemos.
+
+81
+00:04:24,340 --> 00:04:27,870
+Voy a indicarle si es activo o no está activo este elemento.
+
+82
+00:04:28,500 --> 00:04:30,270
+Entonces, este tipo Models.
+
+83
+00:04:30,970 --> 00:04:32,100
+William Field.
+
+84
+00:04:35,470 --> 00:04:37,460
+Y por defecto le digo que se entro.
+
+85
+00:04:37,840 --> 00:04:38,590
+Está activado.
+
+86
+00:04:40,790 --> 00:04:42,920
+Y ahora vamos a definir su función.
+
+87
+00:04:43,290 --> 00:04:43,670
+Def.
+
+88
+00:04:44,840 --> 00:04:45,860
+Torre para abajo.
+
+89
+00:04:45,860 --> 00:04:46,500
+Str.
+
+90
+00:04:46,620 --> 00:04:47,600
+Dos rayas para abajo.
+
+91
+00:04:49,170 --> 00:04:49,800
+Self.
+
+92
+00:04:50,350 --> 00:04:57,870
+Dos puntos y quiero que me imprima en el módulo de administración los elementos del carrito de compra,
+
+93
+00:04:58,740 --> 00:04:59,760
+el producto.
+
+94
+00:04:59,970 --> 00:05:03,280
+Entonces le pongo self punto product.
+
+95
+00:05:04,710 --> 00:05:11,400
+Como siguiente paso tenemos que registrar estas entidades cart y cart item dentro del archivo admin.
+
+96
+00:05:11,430 --> 00:05:11,640
+Punto.
+
+97
+00:05:12,360 --> 00:05:14,970
+Entonces vamos nuevamente a la carpeta cards.
+
+98
+00:05:15,400 --> 00:05:16,380
+Aquí aparece el admin.
+
+99
+00:05:16,980 --> 00:05:17,790
+Vamos a abrirlo.
+
+100
+00:05:18,850 --> 00:05:19,150
+De aquí.
+
+101
+00:05:19,150 --> 00:05:25,210
+Primeramente voy a hacerle referencia a las entidades que quiero registrar, por eso pongo from models
+
+102
+00:05:26,050 --> 00:05:30,390
+import cart coma espacio cart.
+
+103
+00:05:30,400 --> 00:05:32,050
+Item listo.
+
+104
+00:05:33,230 --> 00:05:38,540
+Eso nos ahora el registro admin punto seis punto register.
+
+105
+00:05:40,360 --> 00:05:41,920
+Le digo que registre a Cart.
+
+106
+00:05:43,290 --> 00:05:48,690
+Voy a copiar esta línea y también aquí le digo que registre al card item.
+
+107
+00:05:50,910 --> 00:05:51,910
+Lo tenemos listo.
+
+108
+00:05:51,930 --> 00:05:53,070
+Voy a borrar los cambios.
+
+109
+00:05:53,100 --> 00:05:54,300
+Menú false all.
+
+110
+00:05:55,790 --> 00:06:01,220
+Para ejecutar la migración que me genere este archivo, voy a detener primeramente mi batch.
+
+111
+00:06:02,630 --> 00:06:02,980
+Esto.
+
+112
+00:06:02,990 --> 00:06:04,270
+Vamos a limpiarlo también.
+
+113
+00:06:04,990 --> 00:06:10,300
+Y ahora vamos a llamar al comando Peyton Espacio Manager.
+
+114
+00:06:11,870 --> 00:06:17,840
+Punto Pi y espacio mec migration.
+
+115
+00:06:18,560 --> 00:06:19,290
+Eso sería todo.
+
+116
+00:06:19,310 --> 00:06:20,120
+Le damos Enter.
+
+117
+00:06:21,730 --> 00:06:22,390
+Y perfecto.
+
+118
+00:06:22,400 --> 00:06:28,790
+Ya se generó entonces archivo 001 inicial y dentro de la carpeta cars, dentro de la carpeta migration
+
+119
+00:06:28,840 --> 00:06:35,920
+que se encarece, vamos a darlo justamente a que aparece el archivo 001 inicial P Entonces estamos listos
+
+120
+00:06:35,920 --> 00:06:40,870
+para ejecutar el archivo de migración y crear las tablas dentro de Jango.
+
+121
+00:06:41,140 --> 00:06:49,640
+Así que escribimos dentro de la consola dentro del box Python, Espacio Manager y Espacio Migration
+
+122
+00:06:49,930 --> 00:06:50,770
+y le damos Enter.
+
+123
+00:06:52,040 --> 00:06:53,570
+Perfecto ya se generó.
+
+124
+00:06:54,560 --> 00:06:59,870
+Ahora voy a ejecutar otro comando que es Python Espacio Manager, pedir espacio Ram Server para levantar
+
+125
+00:06:59,870 --> 00:07:00,530
+mi servidor web.
+
+126
+00:07:00,950 --> 00:07:01,860
+Le damos enter.
+
+127
+00:07:01,880 --> 00:07:02,990
+No me ha dado ningún error.
+
+128
+00:07:03,260 --> 00:07:05,390
+Vamos a la página de administración de Jango.
+
+129
+00:07:06,260 --> 00:07:07,130
+Estamos dentro del local.
+
+130
+00:07:07,340 --> 00:07:08,710
+Dos puntos, 8000 admin.
+
+131
+00:07:08,720 --> 00:07:15,550
+Llamé logueado y puedes ver que ya apareció aquí un nuevo tab de cards y me está mostrando los cart
+
+132
+00:07:15,560 --> 00:07:17,330
+items y también los cards.
+
+133
+00:07:18,020 --> 00:07:18,550
+Perfecto.
+
+134
+00:07:18,560 --> 00:07:24,320
+Si seleccionamos Cards que me aparecen todavía no tengo ningún record dentro de esta tabla Card Items.
+
+135
+00:07:24,320 --> 00:07:26,810
+Tampoco tengo recursos en items aún.
+
+136
+00:07:27,290 --> 00:07:28,970
+Continuamos en el siguiente capítulo.

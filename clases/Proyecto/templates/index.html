@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Juegos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Portal de Juegos</h1>
+        <div class="buttons">
+            <a href="{{ url_for('index') }}" class="btn">Inicio</a>
+            <a href="{{ url_for('top_juegos') }}" class="btn">Top Juegos</a>
+            <a href="{{ url_for('peores_juegos') }}" class="btn">Top Peores Juegos</a>
+        </div>
+    </div>
+</body>
+</html>

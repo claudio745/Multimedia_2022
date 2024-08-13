@@ -1,0 +1,1059 @@
+1
+00:00:00,540 --> 00:00:06,520
+En este capítulo vamos a trabajar la lógica que necesito para consultar la data de la base de datos
+
+2
+00:00:06,540 --> 00:00:10,920
+con respecto al carrito de compra y sus ítems o elementos.
+
+3
+00:00:11,950 --> 00:00:15,490
+Para esto vamos a ubicarnos dentro del ecommerce que aparece Cart.
+
+4
+00:00:15,910 --> 00:00:20,080
+Dentro de Cars aparece el buzz y voy a maximizar.
+
+5
+00:00:20,980 --> 00:00:27,700
+Y ya anteriormente había creado una función que había denominado de azúcar con un parámetro de tipo
+
+6
+00:00:27,700 --> 00:00:28,210
+request.
+
+7
+00:00:29,490 --> 00:00:31,440
+Vamos a en esta función.
+
+8
+00:00:32,520 --> 00:00:34,470
+Hace la lógica de la consulta a la base de datos.
+
+9
+00:00:34,470 --> 00:00:36,600
+Pero primero voy a agregar aquí en el request.
+
+10
+00:00:37,750 --> 00:00:41,170
+Algunos parámetros adicionales, como por ejemplo el total.
+
+11
+00:00:42,320 --> 00:00:45,230
+El cual identity que inicializa de cero a ambos.
+
+12
+00:00:46,250 --> 00:00:47,450
+El Card Items.
+
+13
+00:00:50,220 --> 00:00:53,240
+Que por ahora le coloco solamente para inicializar.
+
+14
+00:00:55,280 --> 00:00:56,750
+Ahora vamos a comenzar.
+
+15
+00:00:57,650 --> 00:01:00,080
+Las transacciones, las consultas a la base de datos.
+
+16
+00:01:00,890 --> 00:01:04,880
+Pero como estoy hablando de consultas para ver si existe o no existe el elemento que quiero buscar en
+
+17
+00:01:04,880 --> 00:01:07,940
+la base de datos, voy a agregar un try catch.
+
+18
+00:01:08,510 --> 00:01:09,800
+Primero comenzamos con el try.
+
+19
+00:01:11,910 --> 00:01:18,930
+Y digo que busque el objeto CAR dentro de la estructura Card Card Objects.
+
+20
+00:01:20,460 --> 00:01:21,090
+Un ticket.
+
+21
+00:01:22,030 --> 00:01:24,490
+Y la condición de búsqueda es por el Caribe.
+
+22
+00:01:27,220 --> 00:01:29,050
+Igual a quién debe ser?
+
+23
+00:01:29,050 --> 00:01:34,300
+Al kart y la función que definió la clase pasada en la parte superior.
+
+24
+00:01:34,480 --> 00:01:36,670
+Pero este car id está pidiendo.
+
+25
+00:01:38,020 --> 00:01:39,040
+Un objeto es.
+
+26
+00:01:40,780 --> 00:01:41,590
+Estamos listo.
+
+27
+00:01:42,550 --> 00:01:46,420
+Ahora también quiero buscar los ítems que pertenecen a este kart.
+
+28
+00:01:47,320 --> 00:01:50,770
+Entonces llamo al Car Item Objects.
+
+29
+00:01:52,560 --> 00:01:53,550
+Point Filter.
+
+30
+00:01:55,020 --> 00:01:58,590
+Y aquí la condición les digo que es igual a los que tocar.
+
+31
+00:02:01,630 --> 00:02:06,130
+Y también que busque que es active y active entre igual a true.
+
+32
+00:02:07,180 --> 00:02:07,840
+Ten mucho cuidado.
+
+33
+00:02:07,840 --> 00:02:10,990
+Aquí estoy indicando que la columna.
+
+34
+00:02:12,070 --> 00:02:14,890
+En la propiedad del item scart.
+
+35
+00:02:16,070 --> 00:02:22,040
+Y este segundo car es el parámetro, el objeto que entra como valor del resultado de hacer este car
+
+36
+00:02:22,220 --> 00:02:22,430
+de.
+
+37
+00:02:25,560 --> 00:02:27,240
+Bien, continuemos.
+
+38
+00:02:27,270 --> 00:02:32,000
+Ahora voy a hacer un bucle for car item im.
+
+39
+00:02:34,800 --> 00:02:37,610
+Buscar items y dos puntos.
+
+40
+00:02:37,610 --> 00:02:38,360
+Aquí me faltó.
+
+41
+00:02:39,050 --> 00:02:39,800
+Le puse doble.
+
+42
+00:02:40,310 --> 00:02:41,090
+Lo corrijo.
+
+43
+00:02:41,510 --> 00:02:42,760
+Estoy realizando este.
+
+44
+00:02:42,770 --> 00:02:48,920
+Googleé para poder saber el precio total de mis productos y también para poder saber la cantidad total
+
+45
+00:02:48,920 --> 00:02:50,930
+de productos que están en mi carrito de compra.
+
+46
+00:02:51,680 --> 00:02:53,330
+Entonces comencemos por el precio total.
+
+47
+00:02:53,670 --> 00:03:00,350
+Te pongo total igual con el siguiente suma para que vaya agregando ese valor en cada iteración del bucle.
+
+48
+00:03:01,890 --> 00:03:05,340
+Va a ser igual que al Card item Product Prize.
+
+49
+00:03:08,320 --> 00:03:10,990
+Y esto multiplicado por.
+
+50
+00:03:12,540 --> 00:03:13,500
+Car ítem.
+
+51
+00:03:15,510 --> 00:03:16,290
+Justo cuando.
+
+52
+00:03:19,510 --> 00:03:24,490
+Y para saber la cantidad total de productos también a una concatenación aquí de valor.
+
+53
+00:03:25,590 --> 00:03:28,220
+Vamos a colocarle aquí un kart ídem.
+
+54
+00:03:31,920 --> 00:03:32,490
+Cuando te.
+
+55
+00:03:34,720 --> 00:03:35,410
+Lo tenemos.
+
+56
+00:03:36,410 --> 00:03:40,850
+Bien, pero esto va a suceder siempre y cuando yo encuentre en la base de datos estos valores para el
+
+57
+00:03:40,850 --> 00:03:42,050
+CAR y el car items.
+
+58
+00:03:42,470 --> 00:03:46,910
+Si no lo encontrara, entonces tendríamos que agregar.
+
+59
+00:03:48,860 --> 00:03:51,710
+Aquí tenemos que agregarle una excepción.
+
+60
+00:03:52,580 --> 00:03:55,610
+Por eso aquí, de mucho cuidado, que tiene que estar a la altura del traje.
+
+61
+00:03:56,540 --> 00:03:56,930
+Listo.
+
+62
+00:03:57,830 --> 00:03:58,820
+Le ponemos un excep.
+
+63
+00:04:00,510 --> 00:04:02,490
+Y la excepción es object no existe.
+
+64
+00:04:05,110 --> 00:04:05,800
+Dos puntos.
+
+65
+00:04:06,950 --> 00:04:09,710
+Pero por ahora voy a indicarle que pase, que lo ignore.
+
+66
+00:04:12,500 --> 00:04:15,350
+Solo ignora la decepción.
+
+67
+00:04:19,930 --> 00:04:21,220
+Bien, continuemos.
+
+68
+00:04:21,910 --> 00:04:27,550
+También voy a hacer un context, un diccionario, donde voy a indicar qué valores que son los que quiero
+
+69
+00:04:27,550 --> 00:04:30,250
+enviar al template que corresponde al carrito de compras.
+
+70
+00:04:31,940 --> 00:04:38,970
+Quiero enviar el total aquí, un total también, el cual vamos a poner entre apóstrofes y.
+
+71
+00:04:43,320 --> 00:04:46,290
+También vamos a enviarle el Card Items.
+
+72
+00:04:50,610 --> 00:04:51,410
+Par items.
+
+73
+00:04:51,900 --> 00:04:52,350
+Listo.
+
+74
+00:04:53,220 --> 00:05:00,380
+Y ahora dentro del return render estaba pasandole request el estor carpeta html y coma.
+
+75
+00:05:00,390 --> 00:05:02,640
+Tambien le paso el diccionario con index.
+
+76
+00:05:05,400 --> 00:05:07,740
+Vamos a darle una última revisada a la función.
+
+77
+00:05:08,490 --> 00:05:10,260
+Aquí tengo un pequeño problema dentro del bucle.
+
+78
+00:05:10,650 --> 00:05:14,700
+Porque le había puesto car item punto product ralla bajo Price.
+
+79
+00:05:14,700 --> 00:05:16,570
+No debería ser punto product.
+
+80
+00:05:16,590 --> 00:05:19,890
+Punto Price es lo ideal.
+
+81
+00:05:20,640 --> 00:05:23,910
+Continuando, este exception object no existe.
+
+82
+00:05:24,000 --> 00:05:25,650
+Debería ser does not exist.
+
+83
+00:05:26,990 --> 00:05:30,440
+Vamos a colocarle este Object dos.
+
+84
+00:05:32,010 --> 00:05:33,060
+Not exist.
+
+85
+00:05:34,080 --> 00:05:36,750
+Y también tenemos que importarlo en la parte superior.
+
+86
+00:05:37,500 --> 00:05:38,310
+Voy a copiarlo.
+
+87
+00:05:39,890 --> 00:05:40,850
+De la parte superior.
+
+88
+00:05:40,850 --> 00:05:46,610
+Vamos a colocarle from the Jango punto por punto.
+
+89
+00:05:46,610 --> 00:05:47,090
+Excepto.
+
+90
+00:05:49,220 --> 00:05:49,880
+Import.
+
+91
+00:05:51,080 --> 00:05:52,880
+Al no exis.
+
+92
+00:05:53,510 --> 00:05:56,600
+Ten mucho cuidado con la sintaxis y la forma en que escribes todo esto.
+
+93
+00:05:57,050 --> 00:06:02,180
+Vamos a borrar los cambios menú false all y para estar seguro de que todo es correcto, vamos a ejecutar
+
+94
+00:06:02,180 --> 00:06:02,750
+la página.
+
+95
+00:06:04,130 --> 00:06:06,500
+Esto es lo que el 8000 es la SCART.
+
+96
+00:06:06,830 --> 00:06:07,940
+Vamos a refrescar.
+
+97
+00:06:08,120 --> 00:06:08,660
+Perfecto.
+
+98
+00:06:08,660 --> 00:06:09,680
+No hay ningún problema.
+
+99
+00:06:10,070 --> 00:06:17,720
+Ahora, lo que deseo es que este template car reciba la información del function e imprima los car items
+
+100
+00:06:17,780 --> 00:06:19,190
+dentro de esta sección.
+
+101
+00:06:19,520 --> 00:06:20,510
+Vamos a trabajarlo.
+
+102
+00:06:21,550 --> 00:06:23,020
+Estamos en auto nuevamente.
+
+103
+00:06:23,030 --> 00:06:28,150
+Voy a minimizar esta sección para que muestre el explorador de archivos en la parte izquierda.
+
+104
+00:06:28,660 --> 00:06:30,700
+Y ahora vamos a la carpeta Templates.
+
+105
+00:06:31,730 --> 00:06:37,400
+Y aquí vamos a ubicar dentro de la carpeta start al carpeta HTML.
+
+106
+00:06:38,060 --> 00:06:39,110
+Lo tenemos listo.
+
+107
+00:06:40,160 --> 00:06:45,740
+Vamos a buscar ahora la sección donde imprimo los ítems del carrito de compra.
+
+108
+00:06:46,190 --> 00:06:49,520
+En mi caso, en la línea 25, voy a encontrarlo.
+
+109
+00:06:49,760 --> 00:06:55,160
+Está justamente cuando finaliza el tweet y empieza el the body.
+
+110
+00:06:55,160 --> 00:06:58,280
+Dentro del tema body vas a encontrar que aparece un TR.
+
+111
+00:06:59,260 --> 00:07:04,720
+Este TR representa una línea, un item del carrito de compra.
+
+112
+00:07:05,470 --> 00:07:09,160
+Para que lo entiendas, STR representa este bloque.
+
+113
+00:07:09,730 --> 00:07:10,810
+Este es un TR.
+
+114
+00:07:12,330 --> 00:07:19,290
+Entonces lo que debo aplicarle al TR es un bucle para que me imprima todos los elementos que tiene el
+
+115
+00:07:19,290 --> 00:07:21,390
+carrito de compra en la base de datos.
+
+116
+00:07:22,670 --> 00:07:22,940
+Aquí.
+
+117
+00:07:22,940 --> 00:07:27,590
+Voy a minimizar un momento el terre porque lo veas listo y lo minimice.
+
+118
+00:07:28,630 --> 00:07:30,520
+Es el único elemento que está dentro del Bori.
+
+119
+00:07:31,330 --> 00:07:37,420
+Y aquí antes del TR y después del Bori, que en este rango voy a crear el bucle.
+
+120
+00:07:38,080 --> 00:07:39,640
+Vamos a poner acá las llaves.
+
+121
+00:07:42,100 --> 00:07:51,310
+También es signo de porcentaje y escribimos un for card item im card para abajo items.
+
+122
+00:07:52,980 --> 00:07:55,320
+Y voy a cerrar después que termine el TR.
+
+123
+00:07:56,820 --> 00:08:01,200
+Le ponemos aquí las llaves y el porcentaje y le ponemos el END.
+
+124
+00:08:01,560 --> 00:08:02,550
+Aquí termina el bucle.
+
+125
+00:08:03,540 --> 00:08:09,870
+Entonces, por el momento lo que estamos haciendo es que el TR se repita n veces dependiendo de los
+
+126
+00:08:09,870 --> 00:08:15,450
+elementos que se encuentren en esta variable car items que viene desde la base de datos.
+
+127
+00:08:15,960 --> 00:08:17,970
+Vamos a guardar los cambios de null false all.
+
+128
+00:08:19,280 --> 00:08:21,740
+Y el Refrescamos nuestra página de carrito de compras.
+
+129
+00:08:23,750 --> 00:08:28,910
+Vamos a darle un f5, refrescar y solo me da que el carrito de compras tiene un solo elemento.
+
+130
+00:08:29,210 --> 00:08:32,240
+Vamos a agregarle más elementos para que notes la funcionalidad.
+
+131
+00:08:32,450 --> 00:08:40,040
+Vamos entonces a lo que el 8000 admin que apareció yo ya me logueado y ahora vamos a ir a la sección
+
+132
+00:08:40,040 --> 00:08:43,460
+que dice Cars, cargar items, seleccionamos.
+
+133
+00:08:44,790 --> 00:08:46,860
+Es que tengo solo un elemento en el carrito de compra.
+
+134
+00:08:46,890 --> 00:08:47,940
+Un item.
+
+135
+00:08:48,690 --> 00:08:49,590
+Agregamos otro.
+
+136
+00:08:50,800 --> 00:08:52,960
+Aquí dale click al botón Adquirir Item.
+
+137
+00:08:55,010 --> 00:09:00,710
+Que producto quiere seleccionar, voy a indicarle que sea computadora desktop en el cual este hoy día
+
+138
+00:09:00,710 --> 00:09:03,740
+el único hogar que tengo y la cantidad le coloco uno.
+
+139
+00:09:04,850 --> 00:09:05,570
+Es activ.
+
+140
+00:09:06,440 --> 00:09:07,220
+Guardamos.
+
+141
+00:09:07,730 --> 00:09:14,210
+Aquí me aparece un error porque la función STR está tratando de retornar un string cuando el objeto
+
+142
+00:09:14,210 --> 00:09:18,470
+que quiero imprimir ese tipo product que es parte del item.
+
+143
+00:09:19,310 --> 00:09:27,790
+Para solucionar ese problema vayamos hacia la carpeta cart y aquí aparece el archivo Models Punto Py
+
+144
+00:09:28,530 --> 00:09:32,030
+y dentro del class car item aparece el def str.
+
+145
+00:09:32,540 --> 00:09:35,660
+En vez de str vamos a ponerle un Unicode.
+
+146
+00:09:37,000 --> 00:09:38,200
+Vamos a borrar los cambios.
+
+147
+00:09:38,200 --> 00:09:40,840
+Me trufa el seafood y volvemos a probar.
+
+148
+00:09:41,410 --> 00:09:42,760
+Vamos de nuevo al local.
+
+149
+00:09:43,000 --> 00:09:45,550
+8000 Slash Admin para comenzar de cero.
+
+150
+00:09:46,000 --> 00:09:46,400
+Listo?
+
+151
+00:09:46,420 --> 00:09:47,350
+Estamos en CART.
+
+152
+00:09:47,830 --> 00:09:49,630
+Aquí aparece el car items.
+
+153
+00:09:49,960 --> 00:09:50,860
+Seleccionamos.
+
+154
+00:09:52,480 --> 00:09:55,060
+Vamos a agregar un nuevo elemento ad a item.
+
+155
+00:09:57,060 --> 00:09:59,760
+Produc product computadora desktop.
+
+156
+00:09:59,760 --> 00:10:02,250
+El kart este se la di el kart, el cual.
+
+157
+00:10:03,730 --> 00:10:09,040
+Uno clic al botón y ahora si ya se agrego, podría agregar otro más.
+
+158
+00:10:09,070 --> 00:10:11,010
+Vamos a agregar uno más producto.
+
+159
+00:10:11,380 --> 00:10:12,670
+Voy a colocar MacBook Pro.
+
+160
+00:10:14,110 --> 00:10:22,180
+El IDI a cantidad le colocó uno y entonces ya almacene tres elementos tres card items.
+
+161
+00:10:23,450 --> 00:10:24,650
+Vamos a nuestra página ahora.
+
+162
+00:10:24,650 --> 00:10:25,820
+Localhost 8000.
+
+163
+00:10:25,820 --> 00:10:28,190
+Es la SCART y voy a refrescar.
+
+164
+00:10:29,070 --> 00:10:34,560
+Y como puedes ver, ya está imprimiendo los tres elementos en mi carrito de compra.
+
+165
+00:10:34,950 --> 00:10:38,210
+Ahora me puede decir profesor, pero los nombres no coinciden.
+
+166
+00:10:38,220 --> 00:10:41,850
+Este no es el producto que usted seleccionó y tampoco es el precio.
+
+167
+00:10:41,850 --> 00:10:43,530
+Claro por estar codeado.
+
+168
+00:10:43,540 --> 00:10:47,940
+Vamos a cambiar la impresión de estos atributos dentro del template.
+
+169
+00:10:49,040 --> 00:10:54,470
+Vamos a ubicarnos ahora en Atom y Commerce que presenta la carpeta Templates dentro de Template Store
+
+170
+00:10:54,740 --> 00:10:56,900
+y vamos al carpeta HTML.
+
+171
+00:10:58,410 --> 00:10:58,770
+Aquí.
+
+172
+00:10:58,770 --> 00:11:03,300
+Ya anteriormente habíamos agregado este bucle para imprimir los items dentro de STR.
+
+173
+00:11:04,110 --> 00:11:10,140
+Ahora vamos a ingresar al TR y reemplazando los elementos de cada línea del carrito.
+
+174
+00:11:10,560 --> 00:11:16,490
+Por ejemplo, aquí puedes ver una imagen que representa la imagen del producto seleccionado del ítem.
+
+175
+00:11:17,010 --> 00:11:19,590
+Voy a reemplazarla en la propiedad SRC.
+
+176
+00:11:21,020 --> 00:11:28,030
+Voy a quitar esto y le vamos a poner doble llaves y en su interior le ponemos car item.
+
+177
+00:11:29,120 --> 00:11:30,200
+Punto product.
+
+178
+00:11:30,620 --> 00:11:33,230
+Punto y punto jurel.
+
+179
+00:11:35,470 --> 00:11:35,890
+Listo.
+
+180
+00:11:36,370 --> 00:11:39,280
+El siguiente es referente al nombre del producto.
+
+181
+00:11:39,760 --> 00:11:40,510
+Aquí también.
+
+182
+00:11:41,210 --> 00:11:41,550
+Vamos.
+
+183
+00:11:41,600 --> 00:11:42,880
+Este es el Camry Cannon.
+
+184
+00:11:42,910 --> 00:11:43,900
+Voy a reemplazarlo.
+
+185
+00:11:44,320 --> 00:11:45,310
+Doble llaves.
+
+186
+00:11:46,400 --> 00:11:48,030
+Y le pongo car item.
+
+187
+00:11:48,590 --> 00:11:51,080
+Product product name.
+
+188
+00:11:55,090 --> 00:11:59,920
+Por el momento voy a dejar esta categoría de Matrix 25 MP y marca Canon.
+
+189
+00:12:02,310 --> 00:12:05,300
+Vamos a la parte inferior y aquí me voy a aparecer.
+
+190
+00:12:05,310 --> 00:12:06,720
+Voy a maximizar un momento.
+
+191
+00:12:06,990 --> 00:12:13,410
+Para que lo veas, debe aparecer un input que representa la cantidad de elementos.
+
+192
+00:12:14,840 --> 00:12:15,570
+Es este input?
+
+193
+00:12:16,550 --> 00:12:17,990
+Por defecto de la cantidad.
+
+194
+00:12:17,990 --> 00:12:20,300
+Este for control en uno.
+
+195
+00:12:21,340 --> 00:12:23,580
+Pero va a ser dinámico porque yo puedo indicarle.
+
+196
+00:12:23,920 --> 00:12:25,750
+Quiero que me vendas ocho computadoras.
+
+197
+00:12:25,750 --> 00:12:26,800
+Cinco computadoras?
+
+198
+00:12:27,010 --> 00:12:28,060
+Por ahora tengo uno.
+
+199
+00:12:28,450 --> 00:12:29,290
+Voy a quitarlo.
+
+200
+00:12:29,800 --> 00:12:32,800
+Le pongo doble llave y le pongo car.
+
+201
+00:12:32,810 --> 00:12:33,310
+Item.
+
+202
+00:12:34,340 --> 00:12:34,950
+Quality.
+
+203
+00:12:37,330 --> 00:12:44,140
+Si te preguntas que son estos botones que aparecen por encima y por debajo de esta cantidad, estos
+
+204
+00:12:44,140 --> 00:12:49,400
+botones representan que puedes aumentar la cantidad de elementos o disminuirla.
+
+205
+00:12:49,420 --> 00:12:55,690
+Por ejemplo, si este dice FFA, minus significa que es un botón que tiene el icono para poder eliminar
+
+206
+00:12:55,690 --> 00:12:56,560
+las cantidades.
+
+207
+00:12:57,310 --> 00:13:04,000
+Y si ese es 1FA plus, significa que es el botón con el icono para poder aumentar la cantidad de elementos
+
+208
+00:13:04,750 --> 00:13:10,780
+si lo queremos ver en la interfaz gráfica se refiere a estos dos botones y este es el input que representa
+
+209
+00:13:10,780 --> 00:13:11,980
+la cantidad de elementos.
+
+210
+00:13:13,600 --> 00:13:20,740
+Más adelante vamos a crear unas funciones para poder disparar estos eventos de aminorar o aumentar la
+
+211
+00:13:20,740 --> 00:13:22,540
+cantidad de elementos de un item.
+
+212
+00:13:23,410 --> 00:13:24,160
+Continuemos.
+
+213
+00:13:24,460 --> 00:13:28,330
+Aquí tenemos otro segmento respecto del precio del producto.
+
+214
+00:13:29,110 --> 00:13:35,920
+Este se refiere al precio total de la línea porque recuerda un precio total de línea de línea de item
+
+215
+00:13:35,920 --> 00:13:42,100
+puede ser el precio unitario del producto multiplicado por la cantidad de productos que quieres comprar.
+
+216
+00:13:43,310 --> 00:13:47,120
+Pero aquí tengo otro, que es el precio unitario de cada producto.
+
+217
+00:13:47,330 --> 00:13:49,460
+Entonces vamos a reemplazar estas líneas.
+
+218
+00:13:50,890 --> 00:13:54,850
+Voy a colocarla aquí luego del signo de dólar doble llave y le coloco un card.
+
+219
+00:13:54,880 --> 00:13:56,020
+Item, punto.
+
+220
+00:13:57,930 --> 00:13:58,500
+Total.
+
+221
+00:14:00,530 --> 00:14:01,430
+Y en el siguiente.
+
+222
+00:14:04,260 --> 00:14:07,590
+Luego del signo de dólar le vamos a colocar un espacio.
+
+223
+00:14:08,870 --> 00:14:10,070
+Car item.
+
+224
+00:14:11,160 --> 00:14:11,700
+Punto.
+
+225
+00:14:11,700 --> 00:14:12,530
+Producto.
+
+226
+00:14:12,550 --> 00:14:13,680
+Punto Price.
+
+227
+00:14:16,250 --> 00:14:17,690
+Vamos a borrar los cambios.
+
+228
+00:14:18,060 --> 00:14:19,190
+Enchufa el Safe Hall.
+
+229
+00:14:19,940 --> 00:14:21,230
+Y ahora vayamos a la página.
+
+230
+00:14:22,040 --> 00:14:22,930
+Estamos en la página.
+
+231
+00:14:22,940 --> 00:14:23,900
+Vamos a refrescar.
+
+232
+00:14:24,810 --> 00:14:29,850
+Y mira, ya me aparecieron aquí los productos que he seleccionado y que vienen desde la base de datos
+
+233
+00:14:30,030 --> 00:14:32,160
+que pertenecen a este carrito de compra.
+
+234
+00:14:32,550 --> 00:14:37,320
+Aquí tengo un problema porque no me está pareciendo el precio de este producto.
+
+235
+00:14:37,590 --> 00:14:40,250
+El precio subtotal debería ser no total realmente.
+
+236
+00:14:40,980 --> 00:14:46,620
+Vamos a crear una función que me permita hacer esa operación de multiplicación entre la cantidad de
+
+237
+00:14:46,620 --> 00:14:50,130
+productos versus el precio individual del producto.
+
+238
+00:14:50,670 --> 00:14:56,670
+Estamos nuevamente dentro de Atom y en esta línea donde había indicado CAR y en total vamos a ponerle
+
+239
+00:14:56,670 --> 00:14:58,230
+punto subtotal.
+
+240
+00:14:59,820 --> 00:15:03,450
+Esto va a ser una función que voy a crear ahora y voy a copiar el nombre.
+
+241
+00:15:04,920 --> 00:15:10,590
+Vamos a ir ahora hacia la carpeta cars y al models paint pin.
+
+242
+00:15:11,790 --> 00:15:14,030
+Y aquí antes del único.
+
+243
+00:15:16,350 --> 00:15:19,620
+Vamos a agregarle un diff subtotal.
+
+244
+00:15:22,350 --> 00:15:30,280
+Que reciba como parámetro este y dos puntos y le digo que esto va a ser igual a que on self punto product,
+
+245
+00:15:30,300 --> 00:15:31,230
+punto price.
+
+246
+00:15:32,640 --> 00:15:35,430
+Multiplicado por shelf quality.
+
+247
+00:15:38,960 --> 00:15:40,100
+Vamos a guardar los cambios.
+
+248
+00:15:40,100 --> 00:15:41,150
+Me gusta el Safe Hall.
+
+249
+00:15:42,450 --> 00:15:49,020
+Volvemos al template un momento para estar seguros que todo está bien estor al crear HTML de aquí le
+
+250
+00:15:49,020 --> 00:15:53,680
+había agregado un item a punto subtotal, pero me faltó el sub raya para abajo.
+
+251
+00:15:53,750 --> 00:15:55,280
+Total, ahora sí.
+
+252
+00:15:55,290 --> 00:15:57,480
+Menú false all y vamos a la página.
+
+253
+00:15:58,410 --> 00:16:04,710
+Estamos en la página, voy a refrescar los cambios y ahora si ya me apareció el precio total me dirás.
+
+254
+00:16:04,710 --> 00:16:07,560
+Pero es lo mismo el precio unitario, claro, porque la cantidad es uno.
+
+255
+00:16:07,770 --> 00:16:15,300
+Vamos a reemplazarlo, vamos a ir un momento al modo administración de Chango y voy a ir a crear items.
+
+256
+00:16:16,230 --> 00:16:18,570
+Por ejemplo, quiero seleccionar este item object.
+
+257
+00:16:20,030 --> 00:16:21,320
+Que representa a los Stones.
+
+258
+00:16:21,350 --> 00:16:23,480
+Le voy a colocar aquí que sea, por ejemplo, tres.
+
+259
+00:16:24,450 --> 00:16:25,590
+Guardamos los cambios.
+
+260
+00:16:27,030 --> 00:16:29,040
+Ahora vamos a 8000 kart.
+
+261
+00:16:29,520 --> 00:16:33,330
+Refrescamos y mira, ya la cantidad cambió.
+
+262
+00:16:33,330 --> 00:16:36,060
+Ahora es tres, tres por 350.
+
+263
+00:16:36,060 --> 00:16:37,770
+Cuánto es el precio total de esta línea?
+
+264
+00:16:38,100 --> 00:16:39,090
+1050.
+
+265
+00:16:39,360 --> 00:16:41,130
+Está funcionando muy bien.

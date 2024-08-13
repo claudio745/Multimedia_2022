@@ -1,0 +1,899 @@
+1
+00:00:00,390 --> 00:00:06,300
+En el capítulo anterior trabajamos en la creación de la estructura de la tabla Variant dentro de la
+
+2
+00:00:06,300 --> 00:00:07,620
+administración del Chango.
+
+3
+00:00:08,160 --> 00:00:15,480
+Para este producto Camisa moderna habíamos creado dos variantes para talla y para color con diferentes
+
+4
+00:00:15,480 --> 00:00:16,110
+valores.
+
+5
+00:00:16,110 --> 00:00:21,330
+Para talla teníamos medium large y para color lila, naranja, negro y rojo.
+
+6
+00:00:21,900 --> 00:00:26,040
+Ahora lo que quiero hacer es imprimir esos valores dentro de la página.
+
+7
+00:00:26,850 --> 00:00:32,430
+Si voy aquí a la página del template, del detalle del producto, voy a notar que estos combobox aún
+
+8
+00:00:32,430 --> 00:00:33,600
+están rodeados.
+
+9
+00:00:33,960 --> 00:00:38,700
+Yo lo que quiero es que muestren la data de la base de datos de la tabla Variant.
+
+10
+00:00:39,000 --> 00:00:40,320
+Vamos a trabajar en esto.
+
+11
+00:00:41,510 --> 00:00:42,920
+Estamos dentro de Atton.
+
+12
+00:00:42,950 --> 00:00:50,510
+Vamos a ir a la carpeta Templates y acá dentro de Store vamos a ver al product detail a HTML.
+
+13
+00:00:51,410 --> 00:00:53,750
+Y ahora vamos a la línea más o menos 50.
+
+14
+00:00:53,750 --> 00:00:54,560
+55.
+
+15
+00:00:55,900 --> 00:01:00,070
+Yaquí aquí vamos a encontrar los combobox que representan los Variant.
+
+16
+00:01:00,790 --> 00:01:07,750
+El primero es para seleccionar el color que está rodeado y el segundo es para seleccionar la talla.
+
+17
+00:01:08,200 --> 00:01:09,250
+La talla de la camisa.
+
+18
+00:01:10,120 --> 00:01:10,300
+Bien.
+
+19
+00:01:10,300 --> 00:01:13,030
+Vamos a hacer dinámico este select que aparece aquí.
+
+20
+00:01:14,630 --> 00:01:21,100
+Primero voy a darle un enter al Select ante los Simpson y voy a remover los Options.
+
+21
+00:01:21,110 --> 00:01:22,520
+Solamente voy a mantener uno.
+
+22
+00:01:23,590 --> 00:01:30,430
+Y antes de la opción y después del select, entre los dos vamos a agregar una sentencia de servidor.
+
+23
+00:01:32,640 --> 00:01:35,190
+Entre llaves y signos de porcentaje.
+
+24
+00:01:35,370 --> 00:01:36,570
+Le vamos a escribir.
+
+25
+00:01:37,700 --> 00:01:42,230
+For i in single product.
+
+26
+00:01:43,930 --> 00:01:44,560
+Punto.
+
+27
+00:01:45,540 --> 00:01:46,320
+Variación.
+
+28
+00:01:46,950 --> 00:01:52,080
+Recuerda que variación es un objeto que está al interior de ya de tu producto.
+
+29
+00:01:53,000 --> 00:01:59,000
+Y ahora, para poder sacar todas las variaciones, voy a llamar a una función que es raya para abajo
+
+30
+00:01:59,000 --> 00:02:00,590
+Set pool.
+
+31
+00:02:03,700 --> 00:02:04,900
+Lo tenemos listo.
+
+32
+00:02:04,900 --> 00:02:06,370
+Ahora voy a cerrar el bucle aquí.
+
+33
+00:02:09,460 --> 00:02:10,690
+Cerramos con un.
+
+34
+00:02:13,600 --> 00:02:13,840
+Bien.
+
+35
+00:02:14,920 --> 00:02:17,710
+Y ahora para este opción vamos a colocarle que?
+
+36
+00:02:19,210 --> 00:02:22,270
+El value entre comillas y doble llave.
+
+37
+00:02:23,530 --> 00:02:26,900
+Se igualan y que la representación del varian.
+
+38
+00:02:27,390 --> 00:02:29,470
+Punto variación.
+
+39
+00:02:29,470 --> 00:02:30,340
+Punto value.
+
+40
+00:02:32,220 --> 00:02:36,780
+Y para el label que representa voy a colocarle entre doble Chávez.
+
+41
+00:02:38,530 --> 00:02:39,500
+Y punto.
+
+42
+00:02:39,520 --> 00:02:40,180
+Bar Jackson.
+
+43
+00:02:40,870 --> 00:02:41,290
+Vale.
+
+44
+00:02:43,730 --> 00:02:47,810
+Entonces, por ahora, vamos a vamos a darle el menú Field safe all.
+
+45
+00:02:49,340 --> 00:02:50,510
+Y probemos la página.
+
+46
+00:02:51,700 --> 00:02:52,690
+Estamos en la página.
+
+47
+00:02:52,690 --> 00:02:57,040
+Voy a refrescarlo y vamos a revisar este primer ComboBox de color.
+
+48
+00:02:57,920 --> 00:03:02,400
+Y vas a notar que ya me está devolviendo los valores de la base de datos.
+
+49
+00:03:02,420 --> 00:03:04,190
+Rojo, negro, naranja, lila.
+
+50
+00:03:04,790 --> 00:03:06,290
+Pero aquí tenemos un pequeño detalle.
+
+51
+00:03:06,470 --> 00:03:11,810
+Me muestra los colores que pertenecen al Variant de color rojo, negro, naranja, lila.
+
+52
+00:03:11,960 --> 00:03:18,500
+Pero también me está mostrando Larch y Miriam que pertenecen a otro Varian que habíamos creado, que
+
+53
+00:03:18,500 --> 00:03:20,360
+se llama Talla, recuerdas?
+
+54
+00:03:20,570 --> 00:03:26,510
+No deberían estar aquí estos dos desde Miriam, deberían estar en el otro, que por cierto, aún está
+
+55
+00:03:26,600 --> 00:03:27,050
+rodeado.
+
+56
+00:03:27,050 --> 00:03:34,130
+No he implementado la lógica dinámica de la consulta para talla, sólo para color, pero aquí tenemos
+
+57
+00:03:34,130 --> 00:03:34,880
+este problema.
+
+58
+00:03:35,330 --> 00:03:44,950
+Cómo vamos a hacer para poder separar, discernir entre un Variant de categoría color de otro de categoría
+
+59
+00:03:44,950 --> 00:03:45,410
+de talla?
+
+60
+00:03:46,930 --> 00:03:48,310
+Para resolver este problema.
+
+61
+00:03:48,310 --> 00:03:51,010
+Vamos a ir otra vez a la carpeta Store.
+
+62
+00:03:51,340 --> 00:03:58,120
+Dentro de esto vamos al archivo Models y aquí vamos a crear dentro de una función, dentro de una clase,
+
+63
+00:03:58,420 --> 00:04:02,680
+dos funciones para hacer el filtro por categoría Variant.
+
+64
+00:04:03,280 --> 00:04:04,290
+Vamos a la parte inferior.
+
+65
+00:04:04,300 --> 00:04:06,110
+Aquí aparece este class evaluation.
+
+66
+00:04:06,760 --> 00:04:08,880
+También aparece su aparición categoría choice.
+
+67
+00:04:09,670 --> 00:04:14,200
+Aquí separar un poco aquí antes del bautizo en categoría choice.
+
+68
+00:04:14,740 --> 00:04:15,880
+Voy a hacer un class.
+
+69
+00:04:17,260 --> 00:04:18,880
+Variety Manager.
+
+70
+00:04:20,660 --> 00:04:24,290
+Y le vamos a colocar aquí un Model Manager.
+
+71
+00:04:24,950 --> 00:04:25,700
+Dos puntos.
+
+72
+00:04:26,240 --> 00:04:29,030
+Y dentro de esta clase es donde vamos a crear las funciones.
+
+73
+00:04:29,450 --> 00:04:32,130
+Hacemos un def colors.
+
+74
+00:04:32,580 --> 00:04:33,230
+No sé llamarle.
+
+75
+00:04:35,520 --> 00:04:37,710
+Este el nombre de la función y lo que quiero.
+
+76
+00:04:38,580 --> 00:04:41,070
+Hago un return súper, lo que quiero es que me haga un filtro.
+
+77
+00:04:42,090 --> 00:04:44,760
+Entonces voy a llamar aquí al Variety Manager.
+
+78
+00:04:44,790 --> 00:04:46,110
+Supervisión Manager.
+
+79
+00:04:48,490 --> 00:04:49,600
+Coma self.
+
+80
+00:04:51,190 --> 00:04:51,790
+Punto.
+
+81
+00:04:52,960 --> 00:04:55,030
+De aquí aplicó el filtro filter.
+
+82
+00:04:55,780 --> 00:04:56,440
+Te pongo aquí.
+
+83
+00:04:56,440 --> 00:04:57,140
+Variación.
+
+84
+00:04:57,350 --> 00:04:57,950
+Category.
+
+85
+00:04:57,960 --> 00:04:59,130
+Category que apareció.
+
+86
+00:04:59,920 --> 00:05:00,430
+Va a ser igual.
+
+87
+00:05:00,430 --> 00:05:00,730
+A quién?
+
+88
+00:05:00,760 --> 00:05:02,140
+Por qué lo quiere filtrar?
+
+89
+00:05:02,470 --> 00:05:03,610
+Por el color.
+
+90
+00:05:05,060 --> 00:05:13,010
+Que devuelva sólo los que tengan el valor de color, la categoría valor, el brillo, categoría de color.
+
+91
+00:05:13,340 --> 00:05:16,760
+Y ahora también le indico que sea active, que esté activo.
+
+92
+00:05:16,940 --> 00:05:18,620
+Por eso llamo a su ID.
+
+93
+00:05:20,230 --> 00:05:22,030
+Active igual a true.
+
+94
+00:05:24,280 --> 00:05:30,310
+Esto sería todo esto es una función para obtener todos los variaciones que pertenezcan a la categoría
+
+95
+00:05:30,310 --> 00:05:30,880
+de color.
+
+96
+00:05:30,910 --> 00:05:35,800
+Para eso, en category color vamos a repetir la figura es muy similar para tallas.
+
+97
+00:05:35,920 --> 00:05:39,160
+Voy a copiar esto en esta función ya que la pego.
+
+98
+00:05:40,650 --> 00:05:42,960
+Le ponemos acá tallas.
+
+99
+00:05:44,240 --> 00:05:45,160
+Sería lo mismo.
+
+100
+00:05:45,170 --> 00:05:48,470
+Solo cambiaría el variacion category igual a quien?
+
+101
+00:05:49,940 --> 00:05:50,630
+Atalla.
+
+102
+00:05:53,550 --> 00:05:55,260
+Ahora, si me preguntas, profesor.
+
+103
+00:05:55,290 --> 00:05:56,760
+De dónde saca que es colorista?
+
+104
+00:05:57,300 --> 00:06:03,690
+Porque en el variación categoría choice, yo le coloque esas opciones color y talla.
+
+105
+00:06:04,870 --> 00:06:10,270
+Lo que tengo que hacer a continuación es ir al template donde voy a hacer la llamada de los variaciones
+
+106
+00:06:10,690 --> 00:06:17,590
+y hacer indicarle que llame también a esta función colors cuando corresponda o también a la función
+
+107
+00:06:17,590 --> 00:06:18,070
+tareas.
+
+108
+00:06:18,640 --> 00:06:24,460
+Bien, vamos a borrar los cambios del safe hall y vamos ahora a Templates, ya que aparece el producto
+
+109
+00:06:24,460 --> 00:06:24,850
+y tal.
+
+110
+00:06:25,960 --> 00:06:28,870
+Aquí tengo ya el bucle con el combo box.
+
+111
+00:06:30,070 --> 00:06:34,210
+Le había puesto anteriormente este for y single producto Harrison Set All.
+
+112
+00:06:34,690 --> 00:06:36,670
+En vez de este punto all.
+
+113
+00:06:37,090 --> 00:06:39,490
+Le vamos a agregar el punto.
+
+114
+00:06:40,450 --> 00:06:41,110
+Colors.
+
+115
+00:06:42,150 --> 00:06:43,400
+El nombre de la función.
+
+116
+00:06:43,410 --> 00:06:44,010
+Recuerdas?
+
+117
+00:06:44,250 --> 00:06:44,850
+Claro que sí.
+
+118
+00:06:46,010 --> 00:06:48,680
+Para el caso de Taya va a ser lo mismo.
+
+119
+00:06:48,680 --> 00:06:50,960
+Entonces voy a copiar este selec.
+
+120
+00:06:52,990 --> 00:06:54,040
+Lo copiamos.
+
+121
+00:06:56,190 --> 00:06:56,790
+Y aquí.
+
+122
+00:06:58,220 --> 00:07:04,430
+Voy a seleccionar este y lo voy a borrar el select y acá pego el select dinámico que había hecho antes.
+
+123
+00:07:05,750 --> 00:07:13,280
+Va a ser lo mismo, solo que aquí va a cambiar este for y ciclo por set colors en vez de colors.
+
+124
+00:07:13,310 --> 00:07:18,710
+Voy a ponerle punto tallas para verificar el nombre de las funciones, tallas y colores.
+
+125
+00:07:19,070 --> 00:07:23,990
+Volvamos un momento a Store y aquí vamos al Models y.
+
+126
+00:07:25,280 --> 00:07:28,850
+Aquí se comprueba colors y tallas solo el nombre de las funciones.
+
+127
+00:07:29,480 --> 00:07:30,950
+Pero aquí hay un detalle importante.
+
+128
+00:07:31,220 --> 00:07:36,110
+Yo tengo que hacer la instancia de variación Manager al interior de variación.
+
+129
+00:07:36,110 --> 00:07:40,190
+De lo contrario Variación no va a poder detectar estas funciones.
+
+130
+00:07:40,940 --> 00:07:42,770
+Entonces aquí dentro de variación.
+
+131
+00:07:44,010 --> 00:07:46,380
+No sale en internet, es más un top.
+
+132
+00:07:47,510 --> 00:07:51,920
+Voy a indicarle que haga un Object, una instancia de variación manager.
+
+133
+00:07:56,150 --> 00:08:01,520
+De esta forma ya lo va a poder leer, va a poder leer las funciones de colores y tallas.
+
+134
+00:08:01,790 --> 00:08:04,220
+Vamos ahora sí, a borrar los cambios de Newfield Safe Hall.
+
+135
+00:08:06,120 --> 00:08:07,710
+Y vamos a la página.
+
+136
+00:08:08,520 --> 00:08:11,100
+Estamos en la página del camisa moderna.
+
+137
+00:08:11,100 --> 00:08:11,960
+El producto de taller.
+
+138
+00:08:12,180 --> 00:08:13,110
+Vamos a refrescar.
+
+139
+00:08:14,620 --> 00:08:15,400
+Y perfecto.
+
+140
+00:08:15,400 --> 00:08:20,860
+Mira ahora si los combobox se están llenando de manera correcta para el color, te esta ofreciendo rojo,
+
+141
+00:08:20,860 --> 00:08:21,910
+negro, naranja, lila.
+
+142
+00:08:22,450 --> 00:08:25,300
+Y para la talla aparece solo large y medium.
+
+143
+00:08:26,830 --> 00:08:28,290
+Falta el de short.
+
+144
+00:08:28,420 --> 00:08:28,810
+Cierto.
+
+145
+00:08:28,810 --> 00:08:29,650
+De la talla S.
+
+146
+00:08:29,740 --> 00:08:30,520
+Vamos a hacerlo.
+
+147
+00:08:31,180 --> 00:08:36,250
+Vamos a ver aquí hacia la administración Giant Administration.
+
+148
+00:08:36,280 --> 00:08:41,620
+Es localhost 8000 admin y buscamos la app de Storm A que aparece.
+
+149
+00:08:43,780 --> 00:08:47,440
+Y vamos a crear un nuevo variación para camisa moderna aparición.
+
+150
+00:08:48,500 --> 00:08:50,030
+Produc camisa moderna.
+
+151
+00:08:51,440 --> 00:08:52,490
+Va de hecho en category.
+
+152
+00:08:52,820 --> 00:08:56,870
+Voy a indicarle que está ya aquí el valor que le voy a poner.
+
+153
+00:08:57,920 --> 00:08:59,600
+Va a ser sore or talla s.
+
+154
+00:09:00,860 --> 00:09:01,700
+Guardamos.
+
+155
+00:09:02,000 --> 00:09:03,290
+Perfecto, se guardó.
+
+156
+00:09:03,950 --> 00:09:05,750
+Volvemos a la página del producto.
+
+157
+00:09:05,760 --> 00:09:07,040
+Detalle camisa moderna.
+
+158
+00:09:07,580 --> 00:09:09,170
+Por ahora no aparece la medium.
+
+159
+00:09:09,200 --> 00:09:10,460
+Voy a actualizar la página.
+
+160
+00:09:12,320 --> 00:09:17,330
+Y cuando actualizo ya me aparece el variación que acabo de agregar.
+
+161
+00:09:19,400 --> 00:09:25,220
+Ahora, aquí hay un detalle, porque mira, algunos valores te van a aparecer como con mayúsculas y
+
+162
+00:09:25,220 --> 00:09:26,360
+otro con minúsculas.
+
+163
+00:09:27,080 --> 00:09:34,010
+Yo quisiera que siempre el primer valor, el primer carácter del texto, sea con letra mayúscula.
+
+164
+00:09:34,010 --> 00:09:35,060
+Cómo voy a hacer esto?
+
+165
+00:09:36,260 --> 00:09:37,480
+Hemos vuelto a Atton.
+
+166
+00:09:37,490 --> 00:09:42,020
+Vamos a la carpeta Templates Store, Producto Digital, Product Detail.
+
+167
+00:09:42,460 --> 00:09:45,410
+Y acá en la línea 47 50, más o menos.
+
+168
+00:09:45,410 --> 00:09:46,880
+Dónde están los boxes?
+
+169
+00:09:47,690 --> 00:09:51,920
+Vamos a comenzar con este ComboBox para lo que es el color.
+
+170
+00:09:53,020 --> 00:09:53,290
+Bien.
+
+171
+00:09:53,470 --> 00:09:58,270
+Lo primero es que también, ya que estoy dentro de este select, quiero que aparezca un primer select
+
+172
+00:09:58,270 --> 00:09:59,470
+como Label.
+
+173
+00:10:00,070 --> 00:10:01,540
+Entonces voy a copiar.
+
+174
+00:10:01,540 --> 00:10:02,350
+Voy a poner acá.
+
+175
+00:10:02,440 --> 00:10:03,370
+Después de este select.
+
+176
+00:10:03,370 --> 00:10:04,090
+Antes del form.
+
+177
+00:10:05,720 --> 00:10:06,640
+Crear una opción.
+
+178
+00:10:09,660 --> 00:10:11,520
+El ocho matadero en vacío.
+
+179
+00:10:12,740 --> 00:10:14,180
+Y también va a estar deseable.
+
+180
+00:10:14,330 --> 00:10:15,230
+Deshabilitado.
+
+181
+00:10:16,720 --> 00:10:17,620
+Ya que le digo.
+
+182
+00:10:18,880 --> 00:10:20,050
+El texto seleccione.
+
+183
+00:10:21,660 --> 00:10:22,050
+Esto.
+
+184
+00:10:23,890 --> 00:10:29,590
+Voy a copiar este botón y vamos al otro select antes del for.
+
+185
+00:10:31,020 --> 00:10:33,570
+Aquí le pongo también para que aparezca el seleccione.
+
+186
+00:10:35,040 --> 00:10:38,760
+Otra cosa adicional es que también este valor de select se ha requerido.
+
+187
+00:10:40,360 --> 00:10:42,580
+Entonces creo que el select se ha requerido.
+
+188
+00:10:42,580 --> 00:10:46,120
+Ambos select se han requerido hasta que el escribo required.
+
+189
+00:10:49,940 --> 00:10:55,700
+Y ahora si vamos a lo principal, lo primero es que recuerda que el valor que se va a almacenar en la
+
+190
+00:10:55,700 --> 00:10:57,680
+base de datos es este value.
+
+191
+00:10:58,580 --> 00:11:02,420
+Y yo quiero que el valor del variación siempre se almacene en minúscula.
+
+192
+00:11:03,260 --> 00:11:09,410
+Entonces, para que siempre sea minúscula todos los caracteres, le voy a poner este operador.
+
+193
+00:11:10,880 --> 00:11:11,450
+Lauer.
+
+194
+00:11:13,270 --> 00:11:16,120
+Con la barrita para que ejecute esta función.
+
+195
+00:11:17,900 --> 00:11:19,820
+Lo mismo hago para el otro.
+
+196
+00:11:20,990 --> 00:11:21,980
+Como un bucle.
+
+197
+00:11:22,550 --> 00:11:23,610
+Aquí está esta opción.
+
+198
+00:11:23,630 --> 00:11:26,570
+Vamos a ponerle barra.
+
+199
+00:11:27,630 --> 00:11:28,170
+Lower.
+
+200
+00:11:29,720 --> 00:11:30,710
+Se lo dirás, profesor?
+
+201
+00:11:30,710 --> 00:11:34,140
+Pero usted dijo que iba a ponerle siempre un carácter en mayúscula al primero.
+
+202
+00:11:34,180 --> 00:11:37,310
+Sí, pero eso lo quiero hacer solamente para el label.
+
+203
+00:11:37,460 --> 00:11:38,900
+Lo que se muestre en la página.
+
+204
+00:11:39,440 --> 00:11:46,940
+Entonces acá le vamos a poner otro operador que me permita capitalizar, hacer que el primer carácter
+
+205
+00:11:46,940 --> 00:11:47,930
+sea mayúscula.
+
+206
+00:11:48,350 --> 00:11:52,050
+Eso se hace con esta función minúscula.
+
+207
+00:11:54,880 --> 00:11:57,580
+Y también lo replicó para este otro bucle.
+
+208
+00:12:00,020 --> 00:12:01,610
+Cap First.
+
+209
+00:12:02,480 --> 00:12:06,470
+Aquí estamos dentro del segundo set que se supone que es, detalla.
+
+210
+00:12:06,890 --> 00:12:11,480
+Pero mira, aquí le había puesto mem, el del select le ha puesto color.
+
+211
+00:12:11,720 --> 00:12:13,670
+Debería ser talla perfecto.
+
+212
+00:12:14,510 --> 00:12:17,540
+Y también a este option que le puse como deseable.
+
+213
+00:12:17,750 --> 00:12:23,390
+Quiero que sea el que está por defecto seleccionado, así que le pongo acá select.
+
+214
+00:12:25,680 --> 00:12:29,520
+Y en la parte superior para el otro combobox de color.
+
+215
+00:12:30,090 --> 00:12:31,080
+Este primer opción.
+
+216
+00:12:32,870 --> 00:12:38,000
+También vamos a indicar lo que se ha dicho y también que se ha seleccionado por defecto.
+
+217
+00:12:40,240 --> 00:12:41,420
+Vamos a borrar los cambios.
+
+218
+00:12:41,440 --> 00:12:44,140
+Menú File Safe All y vamos a la página.
+
+219
+00:12:45,010 --> 00:12:46,050
+Ya estamos en la página.
+
+220
+00:12:46,060 --> 00:12:47,380
+Mira cómo se ve originalmente.
+
+221
+00:12:47,380 --> 00:12:48,730
+Vamos a refrescar.
+
+222
+00:12:49,700 --> 00:12:50,570
+Y ahora sí cambió.
+
+223
+00:12:51,700 --> 00:12:53,110
+Aparece ese seleccione.
+
+224
+00:12:54,380 --> 00:13:02,240
+Porque está el fútbol y aquí aparecen los elementos y ahora sí aparecen con el primer carácter en mayúscula.
+
+225
+00:13:04,260 --> 00:13:06,150
+Continuamos en el siguiente capítulo.

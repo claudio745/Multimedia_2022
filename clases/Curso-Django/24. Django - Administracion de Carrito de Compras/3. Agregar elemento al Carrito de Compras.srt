@@ -1,0 +1,855 @@
+1
+00:00:00,360 --> 00:00:03,270
+En este capítulo vamos a continuar trabajando en el carrito de compra.
+
+2
+00:00:03,720 --> 00:00:06,660
+En la siguiente funcionalidad estamos en el local 8000.
+
+3
+00:00:07,590 --> 00:00:10,260
+Aquí me están mostrando la serie de productos que yo puedo comprar.
+
+4
+00:00:10,260 --> 00:00:16,050
+Por ejemplo, voy a seleccionar este producto de acciones, me voy a llevar a la página detalle este
+
+5
+00:00:16,050 --> 00:00:16,680
+producto.
+
+6
+00:00:16,950 --> 00:00:21,390
+Dentro de la página de detalle aparece un botón que me indica agregar al Shopping card.
+
+7
+00:00:22,020 --> 00:00:28,530
+Lo que yo deseo es que cuando le dé clic a este botón, se registre un record en la base de datos que
+
+8
+00:00:28,530 --> 00:00:35,400
+represente la creación del carrito de compra y también la creación del récord que represente a este
+
+9
+00:00:35,400 --> 00:00:38,730
+ítem seleccionado y que a futuro voy a comprar.
+
+10
+00:00:39,520 --> 00:00:40,660
+Para realizar esta tarea.
+
+11
+00:00:40,660 --> 00:00:42,520
+Vamos a ir a nuestro proyecto Atom.
+
+12
+00:00:42,820 --> 00:00:45,340
+Vamos a la carpeta karts dentro de Cars.
+
+13
+00:00:45,400 --> 00:00:46,630
+Vamos a ir a buscar.
+
+14
+00:00:46,960 --> 00:00:50,290
+Y ya había creado anteriormente esta función.
+
+15
+00:00:51,420 --> 00:00:56,550
+Ahora vamos a crear otra que represente la creación de este carrito de compra.
+
+16
+00:00:56,790 --> 00:01:02,880
+Pero voy a tener que utilizar aquí la información del producto, por lo que voy a referenciar en la
+
+17
+00:01:02,880 --> 00:01:03,510
+parte superior.
+
+18
+00:01:03,540 --> 00:01:06,600
+Voy a hacer un from Stock Punto Models.
+
+19
+00:01:08,250 --> 00:01:10,110
+Import product.
+
+20
+00:01:11,590 --> 00:01:16,030
+De aquí vamos a crear la primera función def ad.
+
+21
+00:01:17,700 --> 00:01:18,150
+Card.
+
+22
+00:01:20,760 --> 00:01:26,310
+Para pasar un parámetro de tipo request y también tengo que indicarle cuál es el ID del producto que
+
+23
+00:01:26,310 --> 00:01:30,090
+estoy seleccionando y en base a este se creará el item.
+
+24
+00:01:30,720 --> 00:01:32,850
+Entonces voy a poner aquí el product Heidy.
+
+25
+00:01:37,120 --> 00:01:37,870
+Lo tenemos.
+
+26
+00:01:38,230 --> 00:01:43,060
+Bien, lo que tengo que hacer ahora es buscar al producto seleccionado que se encuentra en la base de
+
+27
+00:01:43,060 --> 00:01:44,170
+datos por el ID.
+
+28
+00:01:44,770 --> 00:01:52,540
+Así que aquí vamos a declarar una variable product igual a quién ha product la entidad Product con P
+
+29
+00:01:52,540 --> 00:01:54,970
+mayúscula Punto Object.
+
+30
+00:01:56,360 --> 00:02:01,280
+Object punto get que haga una consulta pero condicionada.
+
+31
+00:02:01,550 --> 00:02:07,520
+Le digo que por el ID me busque al propio query pero bajo ese parámetro que es ingresando.
+
+32
+00:02:09,060 --> 00:02:15,090
+Entonces va a buscarme el producto y dependiendo del producto voy a primero crear el carrito de compras,
+
+33
+00:02:15,090 --> 00:02:16,410
+si es que este no existiera.
+
+34
+00:02:17,250 --> 00:02:20,450
+Por eso voy a utilizar un traje, porque no estoy seguro de si el carrito existe o no.
+
+35
+00:02:21,720 --> 00:02:23,850
+Entonces primero busquemos al carrito.
+
+36
+00:02:23,880 --> 00:02:24,840
+Voy a poner kart.
+
+37
+00:02:26,510 --> 00:02:27,000
+Card.
+
+38
+00:02:27,860 --> 00:02:30,920
+Punto Object Object.
+
+39
+00:02:30,920 --> 00:02:31,730
+Punto get.
+
+40
+00:02:32,790 --> 00:02:34,980
+De qué voy a hacer la condición de búsqueda por el.
+
+41
+00:02:35,730 --> 00:02:36,960
+Tengo que buscar el carrito.
+
+42
+00:02:39,470 --> 00:02:40,180
+Igual a quién?
+
+43
+00:02:40,850 --> 00:02:47,570
+Aquí voy a crear una función que me permita hacer la búsqueda, porque este ID realmente quiero que
+
+44
+00:02:47,570 --> 00:02:51,020
+sea la sesión del usuario actual dentro del browser.
+
+45
+00:02:51,260 --> 00:02:55,470
+Para poder obtener esta sesión, tengo que crear una función.
+
+46
+00:02:55,480 --> 00:02:56,450
+Vamos a la parte superior.
+
+47
+00:02:56,450 --> 00:02:56,960
+Un momento.
+
+48
+00:02:58,010 --> 00:02:59,160
+Creamos una función.
+
+49
+00:02:59,210 --> 00:03:00,170
+Voy a ponerles DEF.
+
+50
+00:03:00,860 --> 00:03:04,190
+Como es una función privada que solo va a trabajar a nivel este archivo.
+
+51
+00:03:04,640 --> 00:03:10,940
+Comienzo a crear la función con una raya para abajo y luego le pongo cart re para abajo y di.
+
+52
+00:03:12,900 --> 00:03:14,850
+Y recibe ese parámetro request.
+
+53
+00:03:15,600 --> 00:03:16,530
+Luego dos puntos.
+
+54
+00:03:17,850 --> 00:03:24,180
+Y le digo que el kart va a ser igual a que el valor del Audi va a ser igual a que al request.
+
+55
+00:03:25,580 --> 00:03:25,970
+Los guetos.
+
+56
+00:03:25,990 --> 00:03:28,220
+Riqueza, posesión.
+
+57
+00:03:30,000 --> 00:03:30,840
+Entonces qué?
+
+58
+00:03:32,240 --> 00:03:32,630
+Listo.
+
+59
+00:03:36,440 --> 00:03:37,880
+Ahora voy a hacer una condición.
+
+60
+00:03:39,200 --> 00:03:40,460
+Si no existe el kart.
+
+61
+00:03:42,660 --> 00:03:48,540
+Entonces quiero que haga lo siguiente quiero que me genere este nuevo valor.
+
+62
+00:03:48,540 --> 00:03:53,160
+Por eso le hago un request punto sesión.
+
+63
+00:03:54,380 --> 00:03:55,370
+Punto Create.
+
+64
+00:03:57,640 --> 00:03:59,110
+Va a crear una nueva sesión.
+
+65
+00:04:00,250 --> 00:04:03,670
+Y aquí lo que va a hacer es retornar ese valor.
+
+66
+00:04:03,970 --> 00:04:04,960
+Return cart.
+
+67
+00:04:06,720 --> 00:04:12,390
+Entonces, si no existe la sesión, la voy a crear, pero si existe, entonces quiero que me la retorne.
+
+68
+00:04:13,200 --> 00:04:13,770
+Perfecto.
+
+69
+00:04:13,860 --> 00:04:14,860
+Entonces voy aquí.
+
+70
+00:04:15,060 --> 00:04:16,530
+Volvemos otra vez a la función.
+
+71
+00:04:16,540 --> 00:04:17,040
+Atacar.
+
+72
+00:04:18,640 --> 00:04:20,260
+Creo que el cara de ti va a ser igual.
+
+73
+00:04:20,260 --> 00:04:20,650
+A quién?
+
+74
+00:04:21,220 --> 00:04:23,170
+A esa función que acabo de crear.
+
+75
+00:04:23,460 --> 00:04:26,530
+Heidy y le paso como parámetro el objeto.
+
+76
+00:04:26,690 --> 00:04:27,010
+Pues.
+
+77
+00:04:29,520 --> 00:04:30,360
+Lo tenemos listo.
+
+78
+00:04:30,840 --> 00:04:31,110
+Bien.
+
+79
+00:04:31,260 --> 00:04:33,120
+Pero recuerda que estamos dentro de un droide.
+
+80
+00:04:33,390 --> 00:04:41,720
+Si no encuentra el kart en los que tocar de mi base de datos, entonces voy a llamar un exception except.
+
+81
+00:04:43,500 --> 00:04:44,580
+Cada punto.
+
+82
+00:04:46,470 --> 00:04:49,140
+Does not exist no existe.
+
+83
+00:04:51,360 --> 00:04:52,920
+Esto significa el karma no existe.
+
+84
+00:04:53,640 --> 00:04:56,670
+Entonces, en ese caso, voy a crear un nuevo objeto CAR.
+
+85
+00:04:57,270 --> 00:05:01,470
+Voy a indicar que Card va a ser igual a Card Object.
+
+86
+00:05:02,650 --> 00:05:03,060
+Punto.
+
+87
+00:05:03,120 --> 00:05:07,390
+Create va a crear un nuevo récord de tipo CAR en la base de datos.
+
+88
+00:05:09,420 --> 00:05:10,530
+Con qué parámetros?
+
+89
+00:05:10,560 --> 00:05:13,710
+Solamente le paso el carey di card y di.
+
+90
+00:05:14,850 --> 00:05:17,520
+Que es igual a la función Heidi.
+
+91
+00:05:21,630 --> 00:05:30,030
+Recuerda que esta función Karev va a buscar ese cargo a nivel local en el sesión X y si no existiera,
+
+92
+00:05:30,030 --> 00:05:32,250
+va a crearte lo positivo, o sea, sí o sí.
+
+93
+00:05:32,250 --> 00:05:33,330
+Te va a devolver un valor.
+
+94
+00:05:33,360 --> 00:05:34,410
+No te preocupes por eso.
+
+95
+00:05:35,340 --> 00:05:38,220
+Con ese cara y diez que se genera mi kart.
+
+96
+00:05:38,790 --> 00:05:41,040
+El carrito de compras en la base de datos.
+
+97
+00:05:43,180 --> 00:05:44,800
+Vamos a llamar ahora al cartero.
+
+98
+00:05:47,280 --> 00:05:52,500
+Para disparar el evento y ya se haga el registro de este nuevo record en mi base de datos.
+
+99
+00:05:53,420 --> 00:05:58,800
+Bien, pero aquí estoy solamente trabajando en la lógica para poder crear el carrito de compra.
+
+100
+00:05:59,100 --> 00:06:06,450
+Aún me falta agregar dentro del carrito de compra el récord que represente el item, el elemento seleccionado
+
+101
+00:06:06,720 --> 00:06:09,480
+del producto seleccionado que se va a comprar.
+
+102
+00:06:10,290 --> 00:06:14,370
+Entonces vamos con 1/2, que es la inserción de este record.
+
+103
+00:06:16,160 --> 00:06:18,320
+Vamos a colocarle aquí un traje también.
+
+104
+00:06:21,630 --> 00:06:27,810
+Y les digo que el item va a ser igual a cart item punto objects.
+
+105
+00:06:29,100 --> 00:06:33,870
+El punto KET de que hago la consulta por el producto.
+
+106
+00:06:33,960 --> 00:06:38,400
+Recuerda que el item realmente es la información del producto que tu vas a comprar.
+
+107
+00:06:39,090 --> 00:06:46,650
+Entonces le digo que producto que va a seleccionarlo va a ser un producto igual a un momento a producto.
+
+108
+00:06:48,030 --> 00:06:48,590
+Coma.
+
+109
+00:06:48,600 --> 00:06:50,160
+Y cart igual a cart.
+
+110
+00:06:51,830 --> 00:06:52,460
+Lo tenemos.
+
+111
+00:06:52,850 --> 00:06:54,440
+Estoy haciendo dos condiciones acá.
+
+112
+00:06:54,980 --> 00:07:01,100
+La primera que me busque por el producto y la segunda por el carrito de compras.
+
+113
+00:07:01,100 --> 00:07:05,540
+Porque, recuerda, cada usuario puede crear su propio carrito de compras.
+
+114
+00:07:05,690 --> 00:07:10,400
+Pueden haber cientos de carrito de compras y cada carrito de compra tiene una serie de elementos que
+
+115
+00:07:10,400 --> 00:07:12,410
+representan los productos que se comprarán.
+
+116
+00:07:13,070 --> 00:07:15,260
+A continuación voy a indicarle un carrito.
+
+117
+00:07:16,170 --> 00:07:18,380
+Item cuanti.
+
+118
+00:07:20,330 --> 00:07:24,260
+Para indicarle qué cantidad de productos vas a comprar.
+
+119
+00:07:24,260 --> 00:07:28,370
+Por ejemplo, seleccionaste a comprar una camiseta, pero cuantas camisetas quieres?
+
+120
+00:07:29,060 --> 00:07:32,240
+Entonces yo lo voy a colocar aquí, que por defecto sea más uno.
+
+121
+00:07:34,260 --> 00:07:39,780
+Y cada vez que selecciones el mismo producto para la compra, automáticamente la cantidad aumentará
+
+122
+00:07:39,780 --> 00:07:40,260
+en uno.
+
+123
+00:07:41,830 --> 00:07:44,380
+Finalmente voy a hacer un cart item.
+
+124
+00:07:46,120 --> 00:07:50,590
+Punto seis para generar el récord en mi tabla en la base de datos.
+
+125
+00:07:51,370 --> 00:07:57,640
+Pero este trae supone de que tú estás encontrando el producto dentro del carrito.
+
+126
+00:07:57,820 --> 00:08:04,150
+Pero si es la primera vez que estás seleccionando este producto para que se inserte dentro del carrito
+
+127
+00:08:04,150 --> 00:08:10,540
+de compras, entonces vamos a disparar un except, un excepción excep y le pongo cart.
+
+128
+00:08:10,540 --> 00:08:11,670
+Item punto.
+
+129
+00:08:12,700 --> 00:08:13,780
+Does not exist.
+
+130
+00:08:14,080 --> 00:08:14,740
+No existe.
+
+131
+00:08:15,880 --> 00:08:16,630
+Dos puntos.
+
+132
+00:08:17,470 --> 00:08:20,740
+En el caso de que no exista, entonces lo que tenemos que hacer es crearlo.
+
+133
+00:08:21,980 --> 00:08:22,970
+Por eso es que lo voy a poner.
+
+134
+00:08:22,970 --> 00:08:28,670
+Cada item es igual a cart item paint objects.
+
+135
+00:08:29,800 --> 00:08:30,770
+Punto Create.
+
+136
+00:08:33,760 --> 00:08:40,750
+De aquí le vamos a pasar como parámetros el producto que ha seleccionado Product.
+
+137
+00:08:42,320 --> 00:08:46,550
+También la cantidad que por defecto va a ser en uno un elemento.
+
+138
+00:08:47,980 --> 00:08:50,290
+Y también le paso el carrito de compras.
+
+139
+00:08:51,440 --> 00:08:57,380
+Esta es la forma en la cual yo indico que este item pertenece a este carrito de compras.
+
+140
+00:08:58,640 --> 00:08:59,630
+Lo tenemos listo.
+
+141
+00:09:00,080 --> 00:09:05,300
+Voy a hacer abroncar ítem seis para que se guarde ese rencor en la base de datos.
+
+142
+00:09:08,370 --> 00:09:10,140
+Y por último, le hacemos un retorno.
+
+143
+00:09:10,560 --> 00:09:11,220
+Retire.
+
+144
+00:09:13,210 --> 00:09:14,440
+A dónde quiero que me redirecciones.
+
+145
+00:09:14,830 --> 00:09:15,490
+Al kart.
+
+146
+00:09:17,710 --> 00:09:20,680
+Aquí me faltó colocarle una coma al final del card.
+
+147
+00:09:22,010 --> 00:09:26,720
+Y aquí también estoy llamando a direc to que también importa que se retire, que se.
+
+148
+00:09:27,210 --> 00:09:33,230
+Vamos a la parte superior y esta viene desde el render, desde el shortcuts, que importa también el
+
+149
+00:09:33,230 --> 00:09:33,590
+render.
+
+150
+00:09:33,830 --> 00:09:37,400
+Vamos a ponerle el render una coma y le ponemos redirige.
+
+151
+00:09:40,420 --> 00:09:41,010
+Tenemos listo.
+
+152
+00:09:41,020 --> 00:09:47,610
+Vamos a ir a File Safe All y a continuación, lo que tenemos que hacer es generar la VL, la variable
+
+153
+00:09:47,620 --> 00:09:52,360
+que a la cual dirigirse cuando le haces clic al botón Agregar al carrito de compras.
+
+154
+00:09:52,750 --> 00:09:54,100
+Entonces vayamos a karts.
+
+155
+00:09:55,090 --> 00:09:56,920
+Hasta que aparece yo en el punto pi y.
+
+156
+00:09:58,110 --> 00:09:59,030
+Y dentro el del.
+
+157
+00:10:00,630 --> 00:10:01,830
+Voy a copiar esta línea.
+
+158
+00:10:03,900 --> 00:10:07,430
+La pegamos acá y ponemos el path dentro del path.
+
+159
+00:10:07,440 --> 00:10:08,610
+Voy a agregar AT.
+
+160
+00:10:10,140 --> 00:10:10,620
+Kurt.
+
+161
+00:10:12,070 --> 00:10:14,350
+Es las que le ponemos.
+
+162
+00:10:15,950 --> 00:10:16,340
+Ent.
+
+163
+00:10:18,820 --> 00:10:23,200
+Product Heidy es el parámetro que tengo que enviar luego que cierre.
+
+164
+00:10:23,780 --> 00:10:26,320
+Signo de mayor ponemos es las.
+
+165
+00:10:28,390 --> 00:10:28,880
+Busca.
+
+166
+00:10:30,040 --> 00:10:32,590
+Como se llama la función Ad card.
+
+167
+00:10:34,400 --> 00:10:38,720
+Y le pongo también el nombre de Ad Card.
+
+168
+00:10:40,200 --> 00:10:40,760
+Perfecto.
+
+169
+00:10:40,770 --> 00:10:43,530
+Y luego como el final lo tenemos listo el pad.
+
+170
+00:10:43,530 --> 00:10:45,360
+Entonces voy a borrar los cambios.
+
+171
+00:10:47,020 --> 00:10:47,970
+En Falstaff Hall.
+
+172
+00:10:48,970 --> 00:10:52,060
+Y ahora vamos al templete que representa el detalle del producto.
+
+173
+00:10:52,570 --> 00:10:55,060
+Vamos a ver la carpeta templates a que me aparece.
+
+174
+00:10:56,080 --> 00:11:04,200
+El includes en store se encuentra dentro de store, se encuentra el raya por debajo del punto HTML y
+
+175
+00:11:04,210 --> 00:11:11,800
+aquí vamos a buscar el botón que dice Agregar al carrito de compras está en la parte inferior, más
+
+176
+00:11:11,800 --> 00:11:14,250
+o menos por la línea 75.
+
+177
+00:11:14,260 --> 00:11:15,520
+Aquí más o menos está.
+
+178
+00:11:15,730 --> 00:11:17,860
+Sí, voy a maximizar para que lo veas bien.
+
+179
+00:11:20,080 --> 00:11:29,140
+De qué me aparece este href indicándome al producto y del punto a html voy a quitarle remover esto y
+
+180
+00:11:29,140 --> 00:11:37,930
+entre llaves y si no de porcentajes vamos a indicarle un él que me redirecciona hacia el add cart.
+
+181
+00:11:41,060 --> 00:11:45,250
+Pero aquí ocurre algo muy interesante porque esta él me va a pedir un parámetro.
+
+182
+00:11:45,260 --> 00:11:46,280
+Cuál es el parámetro?
+
+183
+00:11:46,520 --> 00:11:48,770
+El allí del producto que está seleccionando.
+
+184
+00:11:49,130 --> 00:11:56,740
+Por eso aquí luego del attack le voy a poner single product, punto ID.
+
+185
+00:11:57,620 --> 00:12:02,330
+Ese es el que tengo que llevar como parámetro para utilizar este azúcar.
+
+186
+00:12:03,890 --> 00:12:12,380
+Vamos a volver un momento al archivo cart y buscar si y que aparece en la parte superior.
+
+187
+00:12:12,620 --> 00:12:15,950
+Le había escrito mal el direc re direc.
+
+188
+00:12:16,670 --> 00:12:21,410
+A que me faltó agregar un una c si eso me faltó.
+
+189
+00:12:22,160 --> 00:12:26,720
+Y también tengo que importar aquí el cart y el item para que puedan trabajar.
+
+190
+00:12:26,930 --> 00:12:29,600
+Así que hago un from models.
+
+191
+00:12:32,150 --> 00:12:32,840
+Import.
+
+192
+00:12:34,190 --> 00:12:37,220
+Pero aquí card y también el card item.
+
+193
+00:12:38,450 --> 00:12:45,330
+Una corrección adicional es que esta función cara y de estoy indicando que obtenga el car de es el request
+
+194
+00:12:45,440 --> 00:12:52,570
+la sesión aquí, pero aquí debería ser primeramente request punto sesión punto sesión que me faltó este
+
+195
+00:12:53,000 --> 00:12:54,410
+invocar este objeto sesión.
+
+196
+00:12:54,860 --> 00:12:59,930
+Ahora sí vamos a darle el menú File Save All y vamos a ejecutar nuestro proyecto.
+
+197
+00:13:00,820 --> 00:13:06,880
+Aquí escribimos Python Management, Python Server, le damos enter y vamos a lo del 8000.
+
+198
+00:13:07,750 --> 00:13:09,210
+Ya refrescamos la página.
+
+199
+00:13:09,220 --> 00:13:10,420
+Todo parece correcto.
+
+200
+00:13:10,720 --> 00:13:12,400
+Voy a seleccionar este producto.
+
+201
+00:13:13,990 --> 00:13:14,770
+Lo tengo listo.
+
+202
+00:13:14,770 --> 00:13:17,520
+Voy a darle clic al botón Agregar a Card.
+
+203
+00:13:19,680 --> 00:13:20,550
+Y perfecto.
+
+204
+00:13:20,760 --> 00:13:21,990
+Se ha generado el récord.
+
+205
+00:13:22,080 --> 00:13:25,440
+Por ahora estoy mostrando solamente el elemento codeado.
+
+206
+00:13:25,680 --> 00:13:32,250
+En los siguientes capítulos vamos a hacer el print en el bucle que me imprima el producto seleccionado,
+
+207
+00:13:33,060 --> 00:13:35,610
+pero podemos verlo si lo deseas dentro del local.
+
+208
+00:13:35,790 --> 00:13:42,990
+8000 Slash admin loguearse y aquí debe aparecer el cars y el Cars items Vamos a seleccionar cart.
+
+209
+00:13:44,210 --> 00:13:48,530
+Y mira, ya te aparece aquí el CAR que se acaba de crear con esta sección request.
+
+210
+00:13:49,650 --> 00:13:50,730
+Aparece la información?
+
+211
+00:13:51,150 --> 00:13:51,390
+Sí.
+
+212
+00:13:51,390 --> 00:13:53,400
+Vamos a darle clic a la entidad Card Items.
+
+213
+00:13:54,060 --> 00:13:59,100
+Aquí te aparece el producto que seleccionaste, que forma parte ahora del carrito de compras.
+
+214
+00:13:59,310 --> 00:14:01,080
+Continuamos en el siguiente capítulo.

@@ -1,0 +1,331 @@
+1
+00:00:00,480 --> 00:00:04,590
+En este capítulo vamos a hacer algunos ajustes a nuestra aplicación de e-commerce.
+
+2
+00:00:04,980 --> 00:00:10,440
+Vayamos, por ejemplo, localhost 8000 y ahora vayamos al store del botón de tienda.
+
+3
+00:00:12,760 --> 00:00:16,050
+Porque aquí, por ejemplo, aparece el botón de agregar al carrito.
+
+4
+00:00:16,230 --> 00:00:18,690
+Si le doy clic no va a suceder nada.
+
+5
+00:00:20,220 --> 00:00:26,460
+Y si vamos al carrito de compras, vas a notar que no aparece el elemento agregado.
+
+6
+00:00:27,030 --> 00:00:29,040
+Voy a dejarlo en blanco para que se note mejor.
+
+7
+00:00:30,230 --> 00:00:31,580
+Carrito de compras está vacío.
+
+8
+00:00:31,610 --> 00:00:32,570
+Volvamos a la tienda.
+
+9
+00:00:33,320 --> 00:00:35,510
+Por ejemplo, quisiera agregar este mouse.
+
+10
+00:00:36,850 --> 00:00:37,720
+Y no sucede nada.
+
+11
+00:00:37,870 --> 00:00:39,070
+El carrito sigue en blanco.
+
+12
+00:00:39,480 --> 00:00:41,860
+Bien, entonces lo que quiero trabajar ahora es esto.
+
+13
+00:00:42,160 --> 00:00:47,470
+Quiero que cuando esté en el estor, darle funcionalidad a este botón de agregar al carrito.
+
+14
+00:00:49,070 --> 00:00:51,350
+Para esto vayamos a nuestro AUTOM.
+
+15
+00:00:52,250 --> 00:00:57,710
+Y ahora vamos a la carpeta templates y dentro vamos a ubicarnos en la carpeta Store.
+
+16
+00:00:58,950 --> 00:01:02,460
+Y ahora vamos al editor HTML.
+
+17
+00:01:03,630 --> 00:01:04,350
+Lo abrimos.
+
+18
+00:01:05,400 --> 00:01:10,230
+Íbamos para la parte inferior, más o menos entre la línea 140 145.
+
+19
+00:01:10,620 --> 00:01:16,830
+Por aquí debe andar este botón que se llama que tiene el label de agregar al carrito.
+
+20
+00:01:18,180 --> 00:01:20,790
+Por el momento tiene un href con numeral.
+
+21
+00:01:21,870 --> 00:01:29,550
+Voy a quitarle ese numeral y entre Chávez y si no de porcentajes, le ponemos jurel.
+
+22
+00:01:30,970 --> 00:01:31,840
+Ad card.
+
+23
+00:01:34,200 --> 00:01:36,660
+Y que pase como parámetro el producto.
+
+24
+00:01:37,820 --> 00:01:38,480
+Junto a Ivy.
+
+25
+00:01:42,290 --> 00:01:43,220
+Eso sería todo.
+
+26
+00:01:43,400 --> 00:01:44,720
+Vamos a guardar los cambios.
+
+27
+00:01:44,740 --> 00:01:44,990
+Menús.
+
+28
+00:01:45,000 --> 00:01:45,890
+Falstaff all.
+
+29
+00:01:46,900 --> 00:01:47,920
+Y vamos a probar.
+
+30
+00:01:49,140 --> 00:01:52,980
+Estamos nuevamente en la Pagina Store, refrescamos.
+
+31
+00:01:54,460 --> 00:01:56,140
+Quiero agregar este mouse.
+
+32
+00:01:56,410 --> 00:01:58,890
+Agregar al carrito y perfecto.
+
+33
+00:01:58,900 --> 00:02:03,700
+Mira, se agregó el mouse y automáticamente me llevó a la página del carrito.
+
+34
+00:02:03,970 --> 00:02:09,670
+Y también se está actualizando el ícono del carrito global en la barra de navegación, ya que estamos
+
+35
+00:02:09,670 --> 00:02:11,590
+dentro de la página del carrito de compras.
+
+36
+00:02:12,310 --> 00:02:16,030
+Que aparece la imagen del carrito y un texto que lo representa.
+
+37
+00:02:16,480 --> 00:02:18,490
+Que tiene un link realmente hecho.
+
+38
+00:02:18,490 --> 00:02:24,070
+Al darle click a este link, lo que me gustaría que suceda es que me lleve a la página del detalle el
+
+39
+00:02:24,070 --> 00:02:24,640
+carrito.
+
+40
+00:02:25,830 --> 00:02:27,030
+Nuestra sociedad en este momento.
+
+41
+00:02:27,030 --> 00:02:28,590
+Si le doy clic, no pasa nada.
+
+42
+00:02:29,590 --> 00:02:34,780
+También hay que aparece en la parte derecha inferior este botón de continúa comprando.
+
+43
+00:02:34,960 --> 00:02:40,000
+Si le doy clic a este botón, me gustaría que me lleve nuevamente a la página de Store.
+
+44
+00:02:40,960 --> 00:02:47,110
+Vamos nuevamente a Atom a la carpeta Templates Store, ya que aparece el carpeta HTML.
+
+45
+00:02:47,380 --> 00:02:48,430
+Vamos a darle doble clic.
+
+46
+00:02:49,450 --> 00:02:53,080
+Y más o menos en la línea 37, 38, 39.
+
+47
+00:02:53,080 --> 00:02:58,630
+En mi caso, aparece la descripción del nombre del producto del carrito de compras.
+
+48
+00:02:59,640 --> 00:03:01,020
+Pero como puedes darte cuenta?
+
+49
+00:03:01,680 --> 00:03:03,000
+Bueno, parece que está en punto.
+
+50
+00:03:03,360 --> 00:03:03,690
+Punto.
+
+51
+00:03:03,690 --> 00:03:04,350
+Pero tu no?
+
+52
+00:03:05,410 --> 00:03:07,930
+Está apuntando hacia un href de numeral.
+
+53
+00:03:08,140 --> 00:03:09,280
+Voy a reemplazarlo.
+
+54
+00:03:11,120 --> 00:03:16,010
+Con doble llave, en este caso porque está dentro de un bucle y la variable la voy a obtener del objeto
+
+55
+00:03:16,010 --> 00:03:17,660
+carrito de compra del item.
+
+56
+00:03:20,130 --> 00:03:21,960
+Vamos entonces aquí a al href.
+
+57
+00:03:22,570 --> 00:03:23,790
+Entrevista sobre Chávez.
+
+58
+00:03:25,090 --> 00:03:28,090
+Le ponemos car item.
+
+59
+00:03:30,290 --> 00:03:31,490
+Punto produc.
+
+60
+00:03:32,520 --> 00:03:33,850
+Al punto que yo.
+
+61
+00:03:33,870 --> 00:03:38,310
+En la función que me permite obtener la variable del producto.
+
+62
+00:03:39,960 --> 00:03:44,040
+Y ahora vamos hacia el botón que me lleve a la página del editor.
+
+63
+00:03:44,850 --> 00:03:45,390
+Más o menos.
+
+64
+00:03:45,390 --> 00:03:47,040
+Debe estar por la línea 90.
+
+65
+00:03:47,040 --> 00:03:47,910
+94.
+
+66
+00:03:48,150 --> 00:03:48,810
+Vamos a ver.
+
+67
+00:03:50,320 --> 00:03:51,760
+Sí, ya que me aparece la.
+
+68
+00:03:53,200 --> 00:03:58,360
+En mi caso, la línea 98, donde tiene el texto de continúa comprando.
+
+69
+00:03:59,230 --> 00:04:02,830
+Aquí me aparece un href que apunta hacia el editor punto html.
+
+70
+00:04:03,220 --> 00:04:14,020
+Lo voy a quitar y entre llaves y ahora signos de porcentaje le ponemos la función y el destino que es
+
+71
+00:04:14,030 --> 00:04:14,560
+Store.
+
+72
+00:04:15,910 --> 00:04:16,750
+Lo tenemos listo.
+
+73
+00:04:16,780 --> 00:04:20,080
+Vamos a ir a Menú File Safe All y vamos a la página.
+
+74
+00:04:21,380 --> 00:04:22,820
+Estamos en la página del carrito.
+
+75
+00:04:22,880 --> 00:04:23,840
+Vamos a refrescar.
+
+76
+00:04:25,280 --> 00:04:32,180
+Le vamos a dar click a este mouse Logitech y ya me está llevando hacia el detalle del producto perfecto.
+
+77
+00:04:32,720 --> 00:04:34,250
+Volvemos a la página del carrito.
+
+78
+00:04:36,600 --> 00:04:39,400
+Y ahora vamos a probar este botón de continúa comprando.
+
+79
+00:04:39,400 --> 00:04:41,140
+Me debe llevar a la página de Store.
+
+80
+00:04:42,430 --> 00:04:43,900
+Y también ya está funcionando.
+
+81
+00:04:43,910 --> 00:04:45,790
+Me lleva hacia la página de Store.
+
+82
+00:04:46,090 --> 00:04:51,490
+De este modo, hemos hecho estos ajustes dentro de la interface del carrito de compras y también de
+
+83
+00:04:51,490 --> 00:04:51,940
+la Store.

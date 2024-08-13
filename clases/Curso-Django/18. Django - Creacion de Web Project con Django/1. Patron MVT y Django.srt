@@ -1,0 +1,307 @@
+1
+00:00:00,330 --> 00:00:04,800
+En este capítulo voy a explicarte como trabaja una aplicación web creada con Jango.
+
+2
+00:00:05,070 --> 00:00:11,400
+Como sabrás, en general un framework se basa en un patrón de desarrollo para poder crear el workflow
+
+3
+00:00:11,400 --> 00:00:12,030
+de la data.
+
+4
+00:00:12,540 --> 00:00:18,210
+En este caso, piensa que un patrón de desarrollo es un marco teórico o manual de trabajo.
+
+5
+00:00:18,210 --> 00:00:19,170
+Y el framework?
+
+6
+00:00:19,230 --> 00:00:20,550
+La implementación.
+
+7
+00:00:20,730 --> 00:00:24,960
+La realización de este trabajo para Jango es lo mismo.
+
+8
+00:00:25,200 --> 00:00:34,050
+La forma de trabajo del framework Jango se basa en el patrón de diseño y lógica del MBT Model Template
+
+9
+00:00:34,800 --> 00:00:37,350
+o en español modelo vista plantilla.
+
+10
+00:00:38,190 --> 00:00:41,670
+Veamos cada uno de los elementos de este patrón de diseño.
+
+11
+00:00:42,300 --> 00:00:49,920
+Primero está la capa de modelo llamado en inglés model, que se que es responsable de cada una de las
+
+12
+00:00:49,920 --> 00:00:51,870
+transacciones a la base de datos.
+
+13
+00:00:52,110 --> 00:00:59,100
+En otras palabras, en esta capa debe definir en detalle cómo se realizará la inserción, actualización,
+
+14
+00:00:59,370 --> 00:01:02,010
+eliminación o consulta de datos.
+
+15
+00:01:02,730 --> 00:01:05,640
+También tenemos otra capa denominada template.
+
+16
+00:01:06,120 --> 00:01:12,390
+Básicamente el template es un layout, una interface gráfica que es la puerta de comunicación con los
+
+17
+00:01:12,390 --> 00:01:13,080
+clientes.
+
+18
+00:01:13,440 --> 00:01:22,290
+Para poder construirlo utilizamos herramientas como HTML, CSS, JavaScript, etc y si quieres algo
+
+19
+00:01:22,290 --> 00:01:26,100
+más avanzado puedes utilizar Bootstrap o material design.
+
+20
+00:01:26,790 --> 00:01:32,640
+Pero la idea del template es desplegar, enseñar al cliente que ve en mi página la información que este
+
+21
+00:01:32,640 --> 00:01:35,760
+consultó hacia la base de datos de mi sistema.
+
+22
+00:01:36,090 --> 00:01:42,690
+Por este motivo necesito una capa intermedia, un agente intermediario que se encargue de hacer este
+
+23
+00:01:42,690 --> 00:01:49,380
+enlace entre mi capa modelo donde se llevan a cabo las transacciones de la base de datos y el template,
+
+24
+00:01:49,590 --> 00:01:51,540
+que es el objeto gráfico que ve el cliente.
+
+25
+00:01:52,440 --> 00:01:55,980
+A este agente intermediario le llamamos la capa de view.
+
+26
+00:01:56,580 --> 00:02:02,910
+De esta forma, cualquier tipo de request pedido que haga un cliente llega al template, el template
+
+27
+00:02:02,910 --> 00:02:09,210
+lo envía al view y el bus se encarga, mediante una particular lógica, distanciar a un proceso del
+
+28
+00:02:09,210 --> 00:02:13,380
+model para consultar o hacer una transacción a la base de datos.
+
+29
+00:02:14,340 --> 00:02:17,700
+Veamos un pequeño ejemplo de cómo trabajan estas capas.
+
+30
+00:02:19,470 --> 00:02:27,270
+Lo primero es que mi usuario cliente ingresa a un browser por el que quiere ver sus datos de perfil
+
+31
+00:02:27,270 --> 00:02:30,180
+de usuario, como por ejemplo nombre y apellido.
+
+32
+00:02:30,780 --> 00:02:37,890
+Al hacer el usuario el recurso pedido de estos datos a mi aplicación web de Jango, este pedido llega
+
+33
+00:02:37,890 --> 00:02:42,300
+a un primer componente denominado Wireless Punto Pi y.
+
+34
+00:02:43,280 --> 00:02:49,940
+Este RPI tiene como objetivo leer la URL que envió el usuario.
+
+35
+00:02:50,120 --> 00:02:58,040
+Y dependiendo de esto, redireccionar el pedido a un específico folder recurso donde se encuentra la
+
+36
+00:02:58,040 --> 00:02:59,000
+página archivo.
+
+37
+00:02:59,980 --> 00:03:06,970
+Este redireccionamiento se lleva a cabo gracias a la función Path, que es parte del framework Django.
+
+38
+00:03:08,700 --> 00:03:10,620
+Aquí puedes ver algunos ejemplos.
+
+39
+00:03:10,890 --> 00:03:13,440
+Si la URL que busca es profile.
+
+40
+00:03:14,690 --> 00:03:15,620
+Laureles Profile.
+
+41
+00:03:16,650 --> 00:03:25,890
+Entonces lo que debe hacer el path es buscar a ese especifico valor de profile y ubicar al recurso que
+
+42
+00:03:25,890 --> 00:03:28,260
+en este caso es buscar profile.
+
+43
+00:03:28,920 --> 00:03:36,300
+Adicionalmente, dentro de esta función path también invocamos como parámetro a un método de tipo DEF.
+
+44
+00:03:36,540 --> 00:03:39,400
+Aquí lo puedes ver poniendo un nombre al método.
+
+45
+00:03:39,420 --> 00:03:40,470
+Se llama profile.
+
+46
+00:03:40,890 --> 00:03:42,750
+Este método de tipo def.
+
+47
+00:03:43,750 --> 00:03:47,070
+Es el que dispara la lógica dentro de mi capa de video.
+
+48
+00:03:48,090 --> 00:03:53,640
+Es decir, si tú quieres ver la comunicación entre este componente, yo eres el que recibe en un primer
+
+49
+00:03:53,640 --> 00:03:55,770
+momento el pedido del cliente.
+
+50
+00:03:56,130 --> 00:03:57,960
+Y Wireless versus View.
+
+51
+00:03:58,830 --> 00:04:06,450
+La forma de comunicación es gracias a esta función de tipo DEAF, que en mi caso se llama profile.
+
+52
+00:04:07,140 --> 00:04:13,650
+Es muy importante este método def profile porque este es el encargado de llevar a cabo la llamada a
+
+53
+00:04:13,650 --> 00:04:17,130
+las transacciones y consultas a la base de datos.
+
+54
+00:04:17,490 --> 00:04:22,680
+En este caso particular, lo que queremos es consultar la base de datos para que me devuelva el nombre
+
+55
+00:04:22,680 --> 00:04:23,880
+y apellido del usuario.
+
+56
+00:04:24,360 --> 00:04:25,950
+Si así como lo ves.
+
+57
+00:04:26,040 --> 00:04:29,760
+Esta función def que se encuentra al interior de Views.
+
+58
+00:04:30,770 --> 00:04:39,230
+Invoca a la capa model para extraer la data del usuario y el Model se encargará de realizar la consulta
+
+59
+00:04:39,800 --> 00:04:44,690
+a la base de datos y te devolverá la data solicitada hacia la capa de View.
+
+60
+00:04:45,610 --> 00:04:52,690
+Una vez que Bug tenga la data del usuario, nombre y apellido, procederá a desplegar enviar esta ata
+
+61
+00:04:52,690 --> 00:04:53,410
+al template.
+
+62
+00:04:54,100 --> 00:04:57,370
+Recuerda que el template es una página HTML.
+
+63
+00:04:57,640 --> 00:04:58,420
+Es el front end.
+
+64
+00:04:58,690 --> 00:05:00,010
+Es lo que verá el usuario.
+
+65
+00:05:00,730 --> 00:05:03,130
+Como lo ves, no es tan complicado de entender.
+
+66
+00:05:03,490 --> 00:05:09,250
+Te voy a hacer un pequeño resumen rápidamente el cliente envío un request a mi aplicación web Django,
+
+67
+00:05:09,250 --> 00:05:10,140
+quien recibe la.
+
+68
+00:05:10,150 --> 00:05:12,250
+El request es el componente Where.
+
+69
+00:05:12,250 --> 00:05:14,590
+Él pide este aire.
+
+70
+00:05:14,590 --> 00:05:16,930
+Él dispara una función tipo Path.
+
+71
+00:05:17,950 --> 00:05:21,090
+Y quién recibe el resultado de este path?
+
+72
+00:05:21,100 --> 00:05:25,400
+Es el vivo gracias a una función de tipo Deaf y View.
+
+73
+00:05:25,690 --> 00:05:32,740
+Es el encargado de hacer la consulta hacia Model y Model se encarga ya de llamar a la instancia de la
+
+74
+00:05:32,740 --> 00:05:37,270
+base de datos para conseguir la data que tu solicitaste y devolvérsela al View.
+
+75
+00:05:37,570 --> 00:05:43,600
+Finalmente, el view tiene la data y se la entrega al template a la página para que se la muestre al
+
+76
+00:05:43,600 --> 00:05:44,140
+usuario.
+
+77
+00:05:44,920 --> 00:05:46,810
+Continuamos en el siguiente capítulo.

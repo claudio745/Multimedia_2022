@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Estilos adicionales para la página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container2 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Centrar contenido */
+            display: flex;
+            flex-direction: column;
+  
+            align-items: center;
+            min-height: 100vh; /* Para centrar verticalmente en la página */
+        }
+        .contacto-info {
+            margin-top: 50px; /* Ajustar según necesites */
+            text-align: left; /* Alinear texto al inicio */
+            
+        }
+        .contacto-info .square {
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            margin-left: 240px;
+        }
+        .footer {
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Portal de Juegos</h1>
+            <nav>
+                <a href="{{ url_for('index') }}" class="btn">Inicio</a>
+                <a href="{{ url_for('top_juegos') }}" class="btn">Top Juegos</a>
+                <a href="{{ url_for('acerca_de') }}" class="btn">Acerca de</a>
+            </nav>
+        </div>
+    </header>
+    <div class="container2">
+        <h2>Contacto</h2>
+        <div class="contacto-info">
+            <div class="square">
+                <p>Para cualquier consulta o información adicional, no dudes en contactar a <a href="mailto:claudio.alfaro@alumnos.upla.cl">claudio.alfaro@alumnos.upla.cl</a></p>
+                <h3>Datos de la Institución:</h3>
+                <p><strong>Dirección:</strong> Av. Leopoldo Carvallo 270, Playa Ancha, Valparaíso, Chile</p>
+                <p><strong>Teléfono:</strong> +56 32 250 8000</p>
+                <p><strong>Correo electrónico:</strong> <a href="mailto:info@upla.cl">info@upla.cl</a></p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Portal de Juegos. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,611 @@
+1
+00:00:00,450 --> 00:00:07,800
+En este capítulo vamos a trabajar nuestro primer objeto response generado desde nuestra Web Application.
+
+2
+00:00:07,830 --> 00:00:08,370
+Jango.
+
+3
+00:00:09,320 --> 00:00:14,030
+Primero vayamos a la carpeta que hemos venido trabajando en capítulos anteriores, que está en el disco
+
+4
+00:00:14,030 --> 00:00:19,730
+C, En el disco C creamos una carpeta que se llama Chango y dentro de esa carpeta una carpeta llamada
+
+5
+00:00:19,730 --> 00:00:20,810
+Basic o Basic.
+
+6
+00:00:21,560 --> 00:00:25,970
+Dentro de Basic habíamos creado ya la estructura de nuestro proyecto.
+
+7
+00:00:26,360 --> 00:00:30,470
+Lo que tenemos que hacer a continuación es levantarlo dentro del IDE Atom.
+
+8
+00:00:30,950 --> 00:00:33,620
+Así que primero está la forma en que yo lo hago más simple.
+
+9
+00:00:33,950 --> 00:00:41,000
+Copia la ubicación de la carpeta desde el Windows y ahora abrimos una consola de de ok.
+
+10
+00:00:42,300 --> 00:00:48,690
+Y dentro de la consola escribimos cd espacio y pegamos la ubicación de la carpeta que antes he copiado
+
+11
+00:00:49,380 --> 00:00:51,030
+y ahora le damos enter.
+
+12
+00:00:51,450 --> 00:01:00,690
+De esta forma entramos al contexto de la carpeta basic y aquí escribimos Atom Espacio, punto y le damos
+
+13
+00:01:00,690 --> 00:01:01,140
+Enter.
+
+14
+00:01:02,450 --> 00:01:08,180
+En este momento ya se está abriendo el ID Atom cargando todos los archivos de mi carpeta.
+
+15
+00:01:10,280 --> 00:01:15,260
+Pero también lo que deseo es ejecutar mi aplicación web mientras la voy trabajando.
+
+16
+00:01:15,560 --> 00:01:17,640
+Así que mira, volvemos a la carpeta otra vez.
+
+17
+00:01:17,660 --> 00:01:19,670
+Voy a cerrar esta consola.
+
+18
+00:01:21,280 --> 00:01:27,790
+De aquí a nivel de la carpeta de basic, vamos a darle click derecho al espacio de la carpeta y le damos
+
+19
+00:01:27,790 --> 00:01:29,770
+clic a la opción Git here.
+
+20
+00:01:31,200 --> 00:01:32,250
+Esperamos unos segundos.
+
+21
+00:01:32,250 --> 00:01:32,910
+Que se abra.
+
+22
+00:01:34,290 --> 00:01:38,790
+Aquí tenemos el shell y aquí aparece la ubicación shell chango.
+
+23
+00:01:38,910 --> 00:01:39,990
+Así que está perfecto.
+
+24
+00:01:40,280 --> 00:01:46,020
+Bien, lo que tenemos que hacer ahora es activar el Virtual Environment de mi proyecto.
+
+25
+00:01:46,020 --> 00:01:49,200
+Así que hacemos un Source espacio EMP.
+
+26
+00:01:50,360 --> 00:01:50,990
+Es la H?
+
+27
+00:01:51,890 --> 00:01:52,100
+Es.
+
+28
+00:01:54,120 --> 00:01:55,590
+Es Las Actívate.
+
+29
+00:01:55,800 --> 00:02:02,070
+Recuerda que este es la ubicación EM representa la ubicación de la carpeta donde se encuentra el Virtual
+
+30
+00:02:02,070 --> 00:02:04,060
+Environment y Scripts Activity.
+
+31
+00:02:04,170 --> 00:02:05,790
+Es el comando que ejecuta.
+
+32
+00:02:05,790 --> 00:02:07,740
+Levanta el servicio Environment.
+
+33
+00:02:08,590 --> 00:02:09,490
+Le damos enter.
+
+34
+00:02:10,320 --> 00:02:10,980
+Perfecto.
+
+35
+00:02:11,220 --> 00:02:16,470
+Ya se ejecutó y estamos dentro del ambiente del environment, porque pasa notar que en la cabecera aparece
+
+36
+00:02:16,770 --> 00:02:19,020
+entre paréntesis la palabra EMP.
+
+37
+00:02:19,770 --> 00:02:20,280
+Listo.
+
+38
+00:02:21,210 --> 00:02:24,270
+Ahora voy a ejecutar mi servicio a mi servidor.
+
+39
+00:02:25,290 --> 00:02:26,940
+Entonces escribimos Python.
+
+40
+00:02:28,860 --> 00:02:29,460
+Manage.
+
+41
+00:02:30,750 --> 00:02:36,240
+Punto pi y espacio ran server y le damos enter.
+
+42
+00:02:38,320 --> 00:02:43,950
+Esperamos unos segundos y ya automáticamente me apareció Coaching for Film Changes with Steve Reader.
+
+43
+00:02:44,080 --> 00:02:49,240
+Significa que ya se está ejecutando mi servidor y está ejecutando mi página web por defecto en Jango.
+
+44
+00:02:50,140 --> 00:02:56,530
+Y si abrimos una página del browser y vamos a localhost 2.81000, vas a darte cuenta que ya se está
+
+45
+00:02:56,530 --> 00:02:58,390
+ejecutando tu proyecto?
+
+46
+00:02:59,820 --> 00:03:05,400
+Recuerda que la manera en que trabaja el MBT es recibiendo los pedidos de un cliente.
+
+47
+00:03:05,880 --> 00:03:09,000
+A cada pedido del cliente lo llamamos un request.
+
+48
+00:03:09,660 --> 00:03:16,110
+Inicialmente, para esta funcionalidad que desarrollaremos, el cliente envía el pedido del request
+
+49
+00:03:16,380 --> 00:03:18,320
+dentro de la URL.
+
+50
+00:03:19,260 --> 00:03:21,750
+Veamos cuál es la base RL de mi página.
+
+51
+00:03:22,110 --> 00:03:29,880
+Es el localhost 8000, pero si el cliente me enviara un pedido en el localhost 8000, es el test.
+
+52
+00:03:30,630 --> 00:03:37,410
+Lo que en sí estaría solicitando es la información del recurso llamado test dentro de mi web application.
+
+53
+00:03:37,770 --> 00:03:46,110
+Y aquí es donde Jango debe disparar una serie de eventos para procesar este pedido y devolver una respuesta.
+
+54
+00:03:46,890 --> 00:03:53,130
+Claro, en este caso no existe aún un evento definido para la URL con el parámetro test.
+
+55
+00:03:53,610 --> 00:03:59,190
+Si yo lo ejecuto el test en ese momento me va a parecer un error porque no encuentra el recurso dentro
+
+56
+00:03:59,190 --> 00:04:00,090
+de mi aplicación.
+
+57
+00:04:00,690 --> 00:04:04,680
+Pero qué pasaría si el cliente no me envía ningún parámetro en la URL?
+
+58
+00:04:05,070 --> 00:04:08,040
+Es decir, solamente me envía el local en 8000.
+
+59
+00:04:08,310 --> 00:04:14,220
+En ese caso, tienes que suponer que el pedido que te hace es dirigido a la página principal o home
+
+60
+00:04:14,610 --> 00:04:19,440
+de tu proyecto y también debe disparar un evento a procesar.
+
+61
+00:04:19,680 --> 00:04:24,690
+Vamos a revisar en este capítulo cuando reciba un request de tipo home.
+
+62
+00:04:26,230 --> 00:04:32,230
+Volvemos a nuestro drama y vamos a revisar que el paso uno que tenemos que hacer es configurar el archivo
+
+63
+00:04:32,230 --> 00:04:37,900
+wireless Punto Pi y dentro de él agregar el nuevo pad para home.
+
+64
+00:04:38,620 --> 00:04:39,700
+Estamos en Atom.
+
+65
+00:04:40,000 --> 00:04:43,870
+Vamos a ir ahora a la carpeta Basic AMP a que aparece Proxy Project.
+
+66
+00:04:44,050 --> 00:04:48,940
+Vamos a abrir el Basic Project ya que aparece el archivo URL S.B.
+
+67
+00:04:48,970 --> 00:04:50,590
+Y lo vamos a abrir.
+
+68
+00:04:51,620 --> 00:04:58,190
+Vamos a notar que aquí aparece el VL Padres y aquí dentro de esta colección de patterns de wireless
+
+69
+00:04:58,580 --> 00:05:02,450
+de pads, vamos a darle un enter y agregamos un nuevo path.
+
+70
+00:05:03,570 --> 00:05:05,280
+En este caso quiero que sea para el home.
+
+71
+00:05:05,280 --> 00:05:08,580
+Por eso tiene un espacio en blanco entre apóstrofes.
+
+72
+00:05:09,120 --> 00:05:11,850
+Y a continuación le tengo que indicar cual va a ser la vista.
+
+73
+00:05:12,860 --> 00:05:15,190
+Le voy a indicar que sea Bush Home.
+
+74
+00:05:16,640 --> 00:05:18,620
+Y al final siempre recuerda ponerle la coma.
+
+75
+00:05:18,860 --> 00:05:21,320
+Pero este virus aún no existe.
+
+76
+00:05:21,830 --> 00:05:22,880
+Tengo que crearlo.
+
+77
+00:05:23,850 --> 00:05:24,750
+Vamos por esto.
+
+78
+00:05:24,750 --> 00:05:29,340
+A nivel de la carpeta Maxi Project, vamos a darle click derecho a la opción Newfield.
+
+79
+00:05:30,320 --> 00:05:33,050
+Y aquí me va a parecer Basic projects, es back slash.
+
+80
+00:05:33,740 --> 00:05:34,490
+Y aquí le escribo.
+
+81
+00:05:35,020 --> 00:05:36,980
+Bus y.
+
+82
+00:05:37,200 --> 00:05:39,500
+Y llega siempre y le damos enter.
+
+83
+00:05:40,280 --> 00:05:46,130
+Pero recuerda que el modo en que se comunica en la subred con las BIOS es a través de las funciones
+
+84
+00:05:46,130 --> 00:05:46,940
+de tipo DEF.
+
+85
+00:05:47,910 --> 00:05:54,300
+Por eso, en el siguiente paso lo que tenemos que definir es el nombre de la función DEF que se va a
+
+86
+00:05:54,300 --> 00:05:56,310
+encontrar dentro del archivo View.
+
+87
+00:05:57,700 --> 00:05:57,940
+Esto.
+
+88
+00:05:58,180 --> 00:06:00,040
+Si llamamos nuevamente a nuestro auto.
+
+89
+00:06:00,070 --> 00:06:06,490
+Vamos al archivo sobre el punto PI y vamos a anotar que en el path que acabo de definir yo le había
+
+90
+00:06:06,490 --> 00:06:07,400
+puesto virus.
+
+91
+00:06:07,450 --> 00:06:07,850
+Punto.
+
+92
+00:06:08,060 --> 00:06:15,280
+Home Ese virus representa el nombre del archivo que acabo de crear y el punto home el nombre de la función
+
+93
+00:06:15,280 --> 00:06:20,740
+def que que se va a disparar cuando el usuario me llame.
+
+94
+00:06:20,740 --> 00:06:21,190
+A quién?
+
+95
+00:06:21,280 --> 00:06:23,020
+Al home en la home?
+
+96
+00:06:24,860 --> 00:06:29,930
+Entonces esta función def tengo que declararla al interior del archivo bus.
+
+97
+00:06:30,440 --> 00:06:35,540
+Pero acá hay un detalle muy importante tú estás utilizando el recurso bus, pero este recurso no está
+
+98
+00:06:35,540 --> 00:06:44,090
+siendo importado al interior de este archivo VLC para que importes a views en la parte superior vamos
+
+99
+00:06:44,090 --> 00:06:45,170
+a escribir de FROM.
+
+100
+00:06:45,770 --> 00:06:53,480
+Le pongo un punto porque este archivo, el esquema y está al mismo nivel del de estructura de archivos
+
+101
+00:06:53,480 --> 00:06:59,240
+que el archivo bus y entonces simplemente le pongo el punto y ahora le pongo import.
+
+102
+00:07:02,360 --> 00:07:02,810
+Bush.
+
+103
+00:07:04,150 --> 00:07:09,240
+Y con esto ya es posible trabajar con este recurso de tipo bus.
+
+104
+00:07:09,610 --> 00:07:16,480
+A continuación, lo que tengo que hacer es crear esta función de tipo DEF al interior del archivo bus.
+
+105
+00:07:16,870 --> 00:07:19,480
+Vamos entonces al archivo bus que está en la parte izquierda.
+
+106
+00:07:19,960 --> 00:07:20,560
+Abrimos?
+
+107
+00:07:21,870 --> 00:07:23,700
+Y aquí vamos a escribir del.
+
+108
+00:07:24,940 --> 00:07:26,640
+El nombre de la función home.
+
+109
+00:07:28,140 --> 00:07:29,820
+Entre paréntesis y dos puntos.
+
+110
+00:07:31,110 --> 00:07:38,160
+El resultado usual de ejecutar una función de tipo DEF es un objeto de tipo response.
+
+111
+00:07:38,790 --> 00:07:44,910
+Nosotros llevamos un objeto response a la respuesta que me da mi aplicación web al cliente.
+
+112
+00:07:45,240 --> 00:07:51,990
+Es lo que va a devolver mi aplicación al cliente en un formato HTML, XML o JSON.
+
+113
+00:07:52,350 --> 00:07:54,210
+Depende del tipo objeto response.
+
+114
+00:07:54,570 --> 00:07:58,320
+Ahora, este objeto response es de tipo HTTP.
+
+115
+00:07:58,680 --> 00:08:04,140
+Por eso, cuando lo programemos, vas a notar que va a aparecer como si fuera un tipo.
+
+116
+00:08:04,760 --> 00:08:06,570
+HTTP response.
+
+117
+00:08:06,630 --> 00:08:07,290
+El comando.
+
+118
+00:08:08,200 --> 00:08:11,160
+Está manualmente dentro de Atom en el archivo BUSBY.
+
+119
+00:08:11,590 --> 00:08:16,990
+Y ya que aparece la función de Frame que había creado, le hemos puesto dos puntos, le damos un enter
+
+120
+00:08:17,830 --> 00:08:21,760
+y aquí le digo que lo que quiero que me retorne es un objeto de tipo response.
+
+121
+00:08:22,630 --> 00:08:25,660
+Entonces, para utilizar este response que es el http.
+
+122
+00:08:26,840 --> 00:08:27,570
+Responde.
+
+123
+00:08:29,100 --> 00:08:34,290
+Necesito importar esta librería, este recurso.
+
+124
+00:08:34,290 --> 00:08:38,480
+Por eso en la parte superior no centers voy a hacer importación.
+
+125
+00:08:38,490 --> 00:08:42,900
+Digo from de Jango punto a http.
+
+126
+00:08:46,150 --> 00:08:46,840
+Import.
+
+127
+00:08:47,880 --> 00:08:49,580
+HTTP response.
+
+128
+00:08:49,630 --> 00:08:50,740
+Es el objeto que yo quiero.
+
+129
+00:08:51,400 --> 00:08:51,640
+Bien.
+
+130
+00:08:52,000 --> 00:08:57,520
+Pero esta instancia de este objeto me va a pedir un parámetro.
+
+131
+00:08:58,390 --> 00:09:02,590
+Y ese parámetro es exactamente la respuesta que tu quieres que el cliente vea.
+
+132
+00:09:03,640 --> 00:09:12,910
+Yo quiero que vea por ejemplo un mensaje que diga en un código HTML, 1H3H donde voy a poner que lo
+
+133
+00:09:12,910 --> 00:09:15,430
+ponemos bienvenidos.
+
+134
+00:09:18,140 --> 00:09:20,480
+A Bakshi Dress punto com.
+
+135
+00:09:20,900 --> 00:09:29,000
+Visite nuestra página y aquí ya estaríamos devolviendo este HTML dentro de la página al cliente.
+
+136
+00:09:29,000 --> 00:09:30,800
+Y el cliente va a poder reconocerlo.
+
+137
+00:09:31,880 --> 00:09:33,350
+Entonces tenemos aquí dos partes.
+
+138
+00:09:33,590 --> 00:09:37,430
+La primera es el objeto request que envía el cliente.
+
+139
+00:09:37,820 --> 00:09:44,000
+Y 1/2 es el objeto response que genera mi aplicación para devolverle la respuesta al cliente.
+
+140
+00:09:44,480 --> 00:09:51,740
+Si estoy hablando de un objeto request, entonces por defecto, este de home debería recibir ese objeto
+
+141
+00:09:51,890 --> 00:09:53,480
+que es como un parámetro.
+
+142
+00:09:55,140 --> 00:10:00,300
+Y dentro de ese objeto request tu puedes agregar todos los parámetros que quisieras.
+
+143
+00:10:00,780 --> 00:10:02,370
+Esta función procesará.
+
+144
+00:10:02,940 --> 00:10:08,760
+Ahora, si vamos a borrar todos los cambios del menú File Safe All y vamos a nuestra página.
+
+145
+00:10:09,740 --> 00:10:14,540
+Y si refrescamos ya vamos a notar que mira en el local 8000, que es el home.
+
+146
+00:10:14,930 --> 00:10:18,260
+Ya me aparece el texto que estoy devolviendo como objeto de respuesta.
+
+147
+00:10:18,670 --> 00:10:21,710
+El Bienvenidos a Basic tres punto com.
+
+148
+00:10:22,750 --> 00:10:27,760
+Aquí me puedes indicar profesor, pero está muy chévere lo que he explicado, pero yo quiero crear páginas
+
+149
+00:10:27,760 --> 00:10:31,980
+más personalizadas, quiero crear un e-commerce, un carrito de compra.
+
+150
+00:10:32,140 --> 00:10:37,900
+Yo le voy a colocar todo este código HTML de mi carrito de compra dentro de este http response.
+
+151
+00:10:38,530 --> 00:10:40,990
+Y te doy la razón, eso no debes hacerlo.
+
+152
+00:10:41,620 --> 00:10:47,740
+En los siguientes capítulos vamos a utilizar templates que te van a permitir crear interfaces gráficas
+
+153
+00:10:47,770 --> 00:10:51,340
+mucho más potentes y dinámicas para tu cliente.

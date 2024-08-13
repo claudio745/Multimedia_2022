@@ -1,0 +1,207 @@
+1
+00:00:00,420 --> 00:00:06,150
+Antes de comenzar a crear aplicaciones con Jango, lo primero que tenemos que hacer es crear un ambiente
+
+2
+00:00:06,150 --> 00:00:11,520
+de desarrollo aislado de mi sistema operativo que sea lo más independiente posible.
+
+3
+00:00:11,760 --> 00:00:16,230
+Por este motivo vamos a crear primeramente un virtual environment.
+
+4
+00:00:17,400 --> 00:00:18,630
+Vamos a ir al disco.
+
+5
+00:00:18,670 --> 00:00:23,160
+Sé nuestra computadora y aquí he creado una carpeta que se llama Jango.
+
+6
+00:00:23,970 --> 00:00:26,550
+Dentro de la carpeta Jango, voy a crear otra.
+
+7
+00:00:28,610 --> 00:00:31,580
+Qué le vamos a poner a nombre Basic o Basic?
+
+8
+00:00:32,530 --> 00:00:33,130
+Lo tenemos.
+
+9
+00:00:33,130 --> 00:00:37,060
+Entonces tenemos esta carpeta ubicada en el disco C Jango Basic.
+
+10
+00:00:38,300 --> 00:00:44,570
+Y ahora le vamos a dar clic derecho y seleccionamos la opción Get Back Here.
+
+11
+00:00:46,950 --> 00:00:48,120
+Se abrió una consola.
+
+12
+00:00:50,010 --> 00:00:54,030
+En esta consola vamos a verificar que la ubicación del directorio es correcta.
+
+13
+00:00:54,450 --> 00:00:57,810
+Que aparece el disco C, aparece Jango y aparece Basic.
+
+14
+00:00:59,390 --> 00:01:02,450
+Y a continuación vamos a crear el Virtual Environment.
+
+15
+00:01:02,960 --> 00:01:13,880
+Por esto primeramente escribe el comando Python Espacio M y espacio virtual Environment BMP Espacio
+
+16
+00:01:13,880 --> 00:01:16,640
+el nombre que le vas a dar a este virtual environment.
+
+17
+00:01:16,940 --> 00:01:22,460
+Yo le podría poner bugs y tres si quisiera a este virtual environment, pero por un momento le voy a
+
+18
+00:01:22,460 --> 00:01:23,510
+poner solo EMP.
+
+19
+00:01:25,100 --> 00:01:26,720
+Y luego le damos enter.
+
+20
+00:01:29,290 --> 00:01:33,100
+Vamos a anotar que dentro de la carpeta de fics se ha creado este directorio EMP.
+
+21
+00:01:33,580 --> 00:01:35,740
+Este es el que representa el Virtual Environment.
+
+22
+00:01:36,010 --> 00:01:43,390
+Si ingresamos a la carpeta vamos a revisar que tiene una estructura de archivos como include lib scripts
+
+23
+00:01:43,690 --> 00:01:48,910
+y también un archivo CFG que con esto ha preparado.
+
+24
+00:01:48,910 --> 00:01:52,970
+Lo que nosotros queremos es crear nuestra aplicación web de Jango.
+
+25
+00:01:52,990 --> 00:02:00,880
+Al interior de esa carpeta EMP que acabo de crear para poder ingresar al contexto de este virtual environment.
+
+26
+00:02:01,180 --> 00:02:04,450
+Lo que tengo que hacer es escribir este comando.
+
+27
+00:02:05,110 --> 00:02:08,620
+Escribimos Source Source espacio amp.
+
+28
+00:02:10,080 --> 00:02:10,650
+Es las.
+
+29
+00:02:11,850 --> 00:02:14,950
+Escribes con la DS mayúscula.
+
+30
+00:02:15,390 --> 00:02:16,980
+Es las actividad.
+
+31
+00:02:19,890 --> 00:02:21,600
+Que significa activar.
+
+32
+00:02:21,990 --> 00:02:24,480
+Ten mucho cuidado con la S mayúscula, por favor.
+
+33
+00:02:24,960 --> 00:02:28,380
+Ese que serás, advierte el Virtual Environment de tu aplicación.
+
+34
+00:02:28,650 --> 00:02:32,790
+Simplemente escribirías el comando de Activate.
+
+35
+00:02:34,150 --> 00:02:41,380
+Eso sería todo y le damos un enter y de esta forma ya salimos del ambiente del Virtual Environment.
+
+36
+00:02:42,220 --> 00:02:48,610
+Vas a notar que saliste del ambiente porque el el cursor que está en la parte superior ya no va a tener
+
+37
+00:02:49,120 --> 00:02:52,090
+estos paréntesis con el nombre del ambiente en el cual se encuentra.
+
+38
+00:02:52,510 --> 00:02:53,440
+Que aparece en blanco.
+
+39
+00:02:54,100 --> 00:02:55,060
+Ahí lo vas a notar.
+
+40
+00:02:56,670 --> 00:02:57,660
+Aquí me puedes preguntar.
+
+41
+00:02:57,660 --> 00:02:58,530
+Pero, profesor.
+
+42
+00:02:58,770 --> 00:03:05,040
+Por qué instaló el Virtual Environment para esta aplicación web que usted va a crear?
+
+43
+00:03:05,370 --> 00:03:11,520
+Porque lo que yo quiero es que todos los paquetes que yo instale, librerías, que yo instale, que
+
+44
+00:03:11,520 --> 00:03:17,850
+necesiten mi aplicación web, no afecten los paquetes globales de Python de mi sistema operativo.
+
+45
+00:03:18,210 --> 00:03:19,440
+Ese es el principal motivo.
+
+46
+00:03:19,980 --> 00:03:26,340
+Y si a futuro yo necesito crear una aplicación de tipo escritorio con Python, también crearé otro virtual
+
+47
+00:03:26,340 --> 00:03:33,000
+environment y dentro de este virtual environment instalaré los paquetes y librerías que necesito para
+
+48
+00:03:33,000 --> 00:03:34,860
+crear esta aplicación de escritorio.
+
+49
+00:03:35,280 --> 00:03:42,270
+Entonces, de esta forma, voy manteniendo por cada aplicación sus propias librerías totalmente separadas
+
+50
+00:03:42,600 --> 00:03:44,070
+del sistema operativo.
+
+51
+00:03:44,760 --> 00:03:50,550
+En el próximo capítulo vamos a continuar instalando el Chango dentro de nuestro ambiente, dentro de
+
+52
+00:03:50,550 --> 00:03:52,020
+nuestro Virtual Environment.

@@ -1,0 +1,443 @@
+1
+00:00:00,330 --> 00:00:07,800
+En este capítulo vamos a continuar trabajando en la página de talle de producto y vamos a trabajar específicamente
+
+2
+00:00:07,800 --> 00:00:14,070
+en la consulta a la base de datos para poder llenar esta data dinámica al interior de la página.
+
+3
+00:00:14,970 --> 00:00:16,440
+Estamos dentro de Atom.
+
+4
+00:00:16,770 --> 00:00:23,390
+Vamos a ir ahora al Store, a la carpeta Store y dentro de la carpeta store está el archivo búsqueda
+
+5
+00:00:23,700 --> 00:00:24,060
+y.
+
+6
+00:00:25,130 --> 00:00:28,580
+Aquí va a parecer la función de producto.
+
+7
+00:00:29,360 --> 00:00:31,550
+Es aquí donde vamos a crear la consulta.
+
+8
+00:00:33,160 --> 00:00:39,250
+Pero aquí tengo un pequeño detalle porque podría hacer que el usuario me pase el slug del producto a
+
+9
+00:00:39,250 --> 00:00:43,240
+buscar en la base de datos y este slug de producto no exista.
+
+10
+00:00:43,660 --> 00:00:46,210
+Entonces tengo que hacer una validación aquí.
+
+11
+00:00:46,210 --> 00:00:51,070
+Por eso voy a colocar un trae una excepción, un posible excepción.
+
+12
+00:00:51,820 --> 00:00:53,920
+Voy a indicarle aquí single product.
+
+13
+00:00:55,590 --> 00:00:57,030
+El nombre de mi variable product.
+
+14
+00:00:58,280 --> 00:01:00,740
+Y esta va a venir de este producto.
+
+15
+00:01:03,360 --> 00:01:04,800
+Punto Object.
+
+16
+00:01:06,200 --> 00:01:07,100
+Punto get.
+
+17
+00:01:09,240 --> 00:01:12,740
+De aquí, voy a hacer dos condiciones para obtener un producto.
+
+18
+00:01:12,840 --> 00:01:21,390
+La primera es validar que el slug de la categoría a la cual pertenece el producto se valide.
+
+19
+00:01:21,570 --> 00:01:24,300
+Vamos a hacer un category Dos rayas para abajo.
+
+20
+00:01:25,390 --> 00:01:25,930
+Ese look.
+
+21
+00:01:27,270 --> 00:01:30,180
+Esta es la nomenclatura con dos rayas para abajo.
+
+22
+00:01:30,330 --> 00:01:34,830
+Para poder indicarle a obtener el valor del campo de una estructura.
+
+23
+00:01:34,830 --> 00:01:37,020
+En este caso la estructura de la tabla es categórica.
+
+24
+00:01:37,650 --> 00:01:45,100
+Entonces, yo quiero que comparar ese Slug versus Kim versus el category slug que está ingresando como
+
+25
+00:01:45,120 --> 00:01:46,500
+parámetro en mi función.
+
+26
+00:01:47,870 --> 00:01:49,340
+Voy a copiarlo acá.
+
+27
+00:01:49,340 --> 00:01:49,760
+Lo pego.
+
+28
+00:01:51,140 --> 00:01:56,060
+Lo vas a notar porque este solo tiene una raya para abajo a comparación del otro que tiene dos rayas
+
+29
+00:01:56,060 --> 00:01:56,450
+para abajo.
+
+30
+00:01:57,860 --> 00:01:59,000
+Esa es la primera condición.
+
+31
+00:01:59,300 --> 00:02:02,870
+La segunda es comparar por el estilo del producto.
+
+32
+00:02:03,290 --> 00:02:08,690
+Entonces acá le pongo este look igual a Kim, a Product raya para abajo es look.
+
+33
+00:02:10,960 --> 00:02:11,500
+Lo tengo.
+
+34
+00:02:11,920 --> 00:02:17,320
+Si ocurre un error en esta transacción, es decir que no encuentra el producto que estás buscando.
+
+35
+00:02:17,620 --> 00:02:19,740
+Entonces quiero que dispare una excepción.
+
+36
+00:02:19,750 --> 00:02:20,410
+Mi programa.
+
+37
+00:02:20,680 --> 00:02:22,360
+Por eso voy a escribir acá, except.
+
+38
+00:02:23,930 --> 00:02:24,590
+Excepción.
+
+39
+00:02:25,890 --> 00:02:26,640
+Así.
+
+40
+00:02:28,400 --> 00:02:30,770
+Siempre recuerda colocarle los dos puntos al final.
+
+41
+00:02:32,140 --> 00:02:36,970
+Y quiero que en este caso dispare una excepción que es el perfecto.
+
+42
+00:02:38,240 --> 00:02:39,080
+Después de esto.
+
+43
+00:02:39,080 --> 00:02:44,540
+Lo que quiero es que si todo es correcto y encontró el producto que estoy buscando por categoría sub
+
+44
+00:02:44,630 --> 00:02:51,620
+y por el producto Slug, entonces quiero que ese resultado que es el que es la variable single product
+
+45
+00:02:51,830 --> 00:02:53,330
+que tiene la información del producto.
+
+46
+00:02:54,470 --> 00:02:56,530
+Se almacene dentro de un diccionario.
+
+47
+00:02:56,540 --> 00:02:58,370
+Este diccionario lo voy a llamar context.
+
+48
+00:03:00,200 --> 00:03:02,660
+Y va a tener un atributo que va a ser cinco.
+
+49
+00:03:02,660 --> 00:03:04,310
+El producto único.
+
+50
+00:03:04,310 --> 00:03:05,330
+El producto encontrado.
+
+51
+00:03:06,290 --> 00:03:09,770
+Y tiene los valores de la variable sin el producto perfecto.
+
+52
+00:03:10,790 --> 00:03:15,440
+Finalmente dentro del return render vamos a colocarle después de la F una coma.
+
+53
+00:03:16,520 --> 00:03:19,670
+Y le pongo un contexto que es el diccionario.
+
+54
+00:03:21,370 --> 00:03:26,470
+Aquí me faltó colocarle dentro del contexto psicológico que al final del siglo produjo una coma.
+
+55
+00:03:27,960 --> 00:03:28,860
+Vamos a revisar.
+
+56
+00:03:28,860 --> 00:03:30,180
+Parece que todo es correcto.
+
+57
+00:03:30,180 --> 00:03:31,270
+Voy a guardar los cambios.
+
+58
+00:03:31,370 --> 00:03:32,550
+Minnifield Safe Hall.
+
+59
+00:03:34,720 --> 00:03:41,740
+Y ahora con esto estoy haciendo que la página producto del punto HTML tenga ya el objeto producto en
+
+60
+00:03:41,740 --> 00:03:42,370
+su interior.
+
+61
+00:03:42,610 --> 00:03:45,400
+Así que vayamos a ver a la carpeta Templates.
+
+62
+00:03:46,570 --> 00:03:50,230
+Hoy que aparece dentro de la carpeta store el producto del punto HTML.
+
+63
+00:03:50,230 --> 00:03:50,980
+Vamos a abrirlo.
+
+64
+00:03:52,650 --> 00:03:58,890
+Y dentro de este código HTML va a aparecer el título del producto en un H2 que por defecto tiene en
+
+65
+00:03:58,890 --> 00:04:00,910
+este momento este texto heads phones.
+
+66
+00:04:01,980 --> 00:04:02,940
+Voy a reemplazarlo.
+
+67
+00:04:03,950 --> 00:04:07,730
+Primero lo eliminamos y entre dos llaves vamos a escribirle.
+
+68
+00:04:09,100 --> 00:04:11,980
+Que imprima el objeto single product que ya está pasando.
+
+69
+00:04:11,980 --> 00:04:18,190
+Está recibiendo esta página punto la propiedad del producto que se llama Nombre Product Name.
+
+70
+00:04:18,700 --> 00:04:19,330
+Listo.
+
+71
+00:04:21,730 --> 00:04:22,930
+Veamos a continuación.
+
+72
+00:04:22,930 --> 00:04:26,980
+Aquí aparece otro otro diez para el precio del producto.
+
+73
+00:04:27,640 --> 00:04:30,430
+18 815 lo voy a borrar.
+
+74
+00:04:30,640 --> 00:04:35,850
+Este 815 dejo el signo de dólar y aquí le voy a poner single.
+
+75
+00:04:37,480 --> 00:04:38,460
+Punto, Price.
+
+76
+00:04:38,510 --> 00:04:40,160
+El precio del producto.
+
+77
+00:04:41,250 --> 00:04:46,290
+A continuación hay un párrafo que comienza con Churchill, Pavlov, etcétera bla, bla, bla.
+
+78
+00:04:46,590 --> 00:04:47,550
+Voy a seleccionarlo.
+
+79
+00:04:47,550 --> 00:04:48,890
+Todo esto termina hasta acá.
+
+80
+00:04:48,900 --> 00:04:55,950
+Mira, voy a borrarlo este párrafo y en su interior voy a colocar que imprima la descripción del producto.
+
+81
+00:04:56,310 --> 00:04:59,490
+Entonces pongo single product punto description.
+
+82
+00:05:02,060 --> 00:05:04,630
+Hay algo que se me pasó fue la imagen del producto.
+
+83
+00:05:04,640 --> 00:05:07,910
+Vamos a la parte superior a que aparece dentro de este dip.
+
+84
+00:05:08,990 --> 00:05:12,430
+Aquí está el href, que representa la imagen del producto.
+
+85
+00:05:12,440 --> 00:05:13,430
+Tiene un src.
+
+86
+00:05:14,030 --> 00:05:16,490
+Voy a borrar el contenido del atributo src.
+
+87
+00:05:17,780 --> 00:05:20,210
+Y entre doble llave le vamos a colocar.
+
+88
+00:05:21,150 --> 00:05:22,200
+Single product.
+
+89
+00:05:22,590 --> 00:05:24,580
+Punto y punto.
+
+90
+00:05:24,650 --> 00:05:30,060
+JL Vamos a borrar todos los cambios de Newfield Safe Hall y ahora vamos a la página.
+
+91
+00:05:30,480 --> 00:05:35,940
+Lo primero que voy a hacer es ingresar al local 8000 Slash Admin Yo ya estoy logueado aquí.
+
+92
+00:05:35,940 --> 00:05:39,360
+Voy a ver la lista de productos productos en la parte final.
+
+93
+00:05:39,540 --> 00:05:40,710
+Vamos a seleccionarlo.
+
+94
+00:05:41,340 --> 00:05:43,140
+Me va a aparecer la lista de productos.
+
+95
+00:05:43,830 --> 00:05:45,960
+El proyecto que quiero analizar es el iPad Pro.
+
+96
+00:05:46,230 --> 00:05:48,980
+Vamos a indicarle, pero antes darle clic.
+
+97
+00:05:48,990 --> 00:05:50,400
+Mira aquí algo muy importante.
+
+98
+00:05:50,400 --> 00:05:53,850
+Este iPad Pro pertenece a la categoría computadoras.
+
+99
+00:05:53,850 --> 00:05:56,820
+Tiene el Slug también que se llama Computadoras.
+
+100
+00:05:57,630 --> 00:05:58,470
+Muy importante esto.
+
+101
+00:05:58,470 --> 00:06:03,900
+Seleccionamos el iPad Pro y mira el slug del iPad Pro del producto iPad.
+
+102
+00:06:03,900 --> 00:06:06,180
+Pero es este iPad raya para abajo.
+
+103
+00:06:06,180 --> 00:06:07,650
+Pro es lo que yo necesito.
+
+104
+00:06:07,650 --> 00:06:08,580
+Voy a copiarlo.
+
+105
+00:06:09,600 --> 00:06:11,160
+Y ahora vamos a nuestra página.
+
+106
+00:06:12,810 --> 00:06:19,500
+Y en la página voy a agregar lo que el 8000 es la Store es las computadoras, que es la categoría SLUG,
+
+107
+00:06:20,280 --> 00:06:29,790
+es el slug del producto que es iPad, pero iPad raya pro y si le damos enter ya vas a notar que está
+
+108
+00:06:29,790 --> 00:06:33,510
+consumiendo la data del producto desde la base de datos.
+
+109
+00:06:33,720 --> 00:06:36,750
+Ya me está apareciendo la imagen que pertenece a este producto.
+
+110
+00:06:37,200 --> 00:06:41,610
+También el nombre del producto, el precio y también su descripción.
+
+111
+00:06:42,610 --> 00:06:44,530
+Continuamos en el siguiente capítulo.

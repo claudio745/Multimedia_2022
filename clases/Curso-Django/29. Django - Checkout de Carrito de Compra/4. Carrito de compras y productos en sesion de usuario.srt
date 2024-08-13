@@ -1,0 +1,239 @@
+1
+00:00:00,560 --> 00:00:06,320
+En el capítulo anterior desarrollamos la funcionalidad para que un ítem pueda ser seleccionado con un
+
+2
+00:00:06,320 --> 00:00:06,980
+usuario.
+
+3
+00:00:08,150 --> 00:00:13,940
+Pero este cambio no está siendo reflejado dentro de la página del e-commerce, porque aún el contador
+
+4
+00:00:13,940 --> 00:00:18,320
+de items de elementos del carrito de compras me sigue apuntando en cero.
+
+5
+00:00:18,680 --> 00:00:21,770
+Entonces quiero actualizar este número por el número real.
+
+6
+00:00:21,920 --> 00:00:24,290
+Cuando estoy en la sesión del usuario seleccionado.
+
+7
+00:00:25,160 --> 00:00:29,780
+Para arreglar ese problema tenemos que ir el archivo context procesos de la carpeta cars.
+
+8
+00:00:30,290 --> 00:00:36,530
+Vamos a la carpeta Cars ya que aparece el archivo con text procesos y lo abrimos.
+
+9
+00:00:37,250 --> 00:00:43,550
+Y aquí está esta función que se llama Counter, que es la encargada de saber, de devolverte un resultado
+
+10
+00:00:43,550 --> 00:00:46,040
+con la cantidad de elementos del carrito de compras.
+
+11
+00:00:46,820 --> 00:00:53,620
+En ese momento lo que está haciendo es haciendo una consulta por el Card Items Filter por el Card Card
+
+12
+00:00:53,630 --> 00:00:53,990
+uno.
+
+13
+00:00:55,330 --> 00:00:57,430
+Y esto a su vez viene de este.
+
+14
+00:00:58,870 --> 00:01:03,320
+Desde una búsqueda de un carro, de un carrito de compras utilizando el objeto.
+
+15
+00:01:03,610 --> 00:01:07,420
+Es lo que voy a hacer aquí es agregar una condición.
+
+16
+00:01:08,080 --> 00:01:10,690
+Vamos a ver después de este filter card.
+
+17
+00:01:12,120 --> 00:01:15,270
+Voy a colocar un if decreciente.
+
+18
+00:01:15,270 --> 00:01:17,580
+Si, request user.
+
+19
+00:01:18,920 --> 00:01:20,180
+Es out of the cat.
+
+20
+00:01:23,970 --> 00:01:30,300
+Si el usuario está autenticado, entonces creo que la búsqueda de elementos del items se lleva a cabo
+
+21
+00:01:30,300 --> 00:01:30,870
+de esta forma.
+
+22
+00:01:31,320 --> 00:01:31,710
+Item.
+
+23
+00:01:34,790 --> 00:01:35,840
+Punto Object.
+
+24
+00:01:36,470 --> 00:01:37,580
+Punto All.
+
+25
+00:01:39,770 --> 00:01:40,790
+Punto Filter.
+
+26
+00:01:43,710 --> 00:01:50,340
+Ser igual a rico es ser la búsqueda, en este caso de los items se va a llevar a cabo por el parámetro
+
+27
+00:01:50,340 --> 00:01:56,160
+del usuario, es decir, todos los items registrados por este usuario van a ser devueltos.
+
+28
+00:01:56,820 --> 00:02:02,220
+En caso contrario que el usuario registrado, entonces que continúe con la lógica anterior.
+
+29
+00:02:04,950 --> 00:02:07,110
+Vamos a borrar los cambios de menú Fields of all.
+
+30
+00:02:08,710 --> 00:02:16,090
+Vamos a la página cero, vamos a refrescar y como puede ver, ya me está apuntando la cantidad de elementos
+
+31
+00:02:16,090 --> 00:02:21,790
+del carrito de compras y si le damos click al carrito, el icono del carrito para ver la lista de elementos
+
+32
+00:02:21,790 --> 00:02:23,290
+aún no está apareciendo.
+
+33
+00:02:23,830 --> 00:02:25,810
+Vamos a tener que arreglar también este problema.
+
+34
+00:02:27,080 --> 00:02:28,430
+Vamos a la carpeta karts.
+
+35
+00:02:28,610 --> 00:02:32,900
+Dentro de Cars aparece el bus y lo abrimos.
+
+36
+00:02:33,230 --> 00:02:35,150
+Y ahora buscamos la función cart.
+
+37
+00:02:36,780 --> 00:02:37,490
+Hoy que aparece.
+
+38
+00:02:37,500 --> 00:02:40,740
+Esta es la función que me devuelve la lista de ítems.
+
+39
+00:02:41,380 --> 00:02:43,440
+Aquí lo estás viendo por completo.
+
+40
+00:02:44,820 --> 00:02:46,710
+Es muy similar a la operación anterior.
+
+41
+00:02:46,830 --> 00:02:48,540
+Vamos a ubicarnos en la sección del Tri.
+
+42
+00:02:50,100 --> 00:02:52,350
+Y antes del kart, iniciando el drive.
+
+43
+00:02:52,740 --> 00:02:54,120
+Voy a colocar una condición.
+
+44
+00:02:54,990 --> 00:02:56,180
+Vamos a indicarle aquí.
+
+45
+00:02:56,190 --> 00:02:56,700
+Si.
+
+46
+00:02:58,970 --> 00:03:02,540
+Paso request user punto is out and Tecate.
+
+47
+00:03:04,690 --> 00:03:19,480
+Entonces que los siguientes Que los item item vengan desde car item, punto object, punto filter y
+
+48
+00:03:19,480 --> 00:03:28,120
+la condición va a ser user igual a request, punto user y también que sea activo y se active igual a
+
+49
+00:03:28,120 --> 00:03:28,360
+true.
+
+50
+00:03:30,320 --> 00:03:31,340
+En caso contrario.
+
+51
+00:03:32,600 --> 00:03:33,840
+Que haga lo usual.
+
+52
+00:03:33,860 --> 00:03:35,540
+Lo que ha estado pasando en este momento.
+
+53
+00:03:35,960 --> 00:03:36,860
+Estas dos líneas.
+
+54
+00:03:38,990 --> 00:03:40,660
+Aquí cometió un pequeño detalle.
+
+55
+00:03:40,700 --> 00:03:42,320
+Me está indicando que es car items.
+
+56
+00:03:42,350 --> 00:03:43,970
+El bucle está buscando items.
+
+57
+00:03:43,970 --> 00:03:46,360
+Entonces a yo le había puesto un item sin la DS.
+
+58
+00:03:46,430 --> 00:03:48,680
+Me faltó agregar ese items.
+
+59
+00:03:49,460 --> 00:03:55,550
+Vamos a borrar los cambios menú false all y si refrescamos en la página del carrito, vas a notar que
+
+60
+00:03:55,550 --> 00:03:59,630
+ya te está apareciendo los productos cuando estás en la sesión.

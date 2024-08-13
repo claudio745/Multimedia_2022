@@ -1,0 +1,187 @@
+1
+00:00:00,450 --> 00:00:06,060
+En ese capítulo vamos a crear una cuenta dentro del portal Edelvives Amazon.com.
+
+2
+00:00:07,020 --> 00:00:12,720
+Primeramente debes entender que existen diversos planes a los cuales puedes agregarte dentro de la consola
+
+3
+00:00:12,720 --> 00:00:14,910
+de desarrollo del Edelvives.
+
+4
+00:00:15,300 --> 00:00:19,920
+Nosotros para este caso, vamos a escoger el plan gratuito más adelante.
+
+5
+00:00:20,130 --> 00:00:24,870
+Pero en todo caso, aquí la plataforma te solicita ingresar una tarjeta de crédito.
+
+6
+00:00:25,440 --> 00:00:27,870
+Esto no significa que te van a cobrar.
+
+7
+00:00:27,870 --> 00:00:33,570
+Desde el momento en que comencemos a utilizar el ídolo es porque, como te repito, utilizaremos una
+
+8
+00:00:33,570 --> 00:00:35,190
+cuenta gratuita.
+
+9
+00:00:35,670 --> 00:00:37,750
+Para ello, ingresa a esta página en español.
+
+10
+00:00:37,770 --> 00:00:43,620
+Te lo digo al doble de ese punto Amazon.com.
+
+11
+00:00:45,000 --> 00:00:47,700
+Aquí te va a aparecer un botón de Gettysburg free.
+
+12
+00:00:48,090 --> 00:00:52,080
+O también le puedes dar al botón Create and Blues Account.
+
+13
+00:00:52,080 --> 00:00:54,330
+Crea una cuenta de ídolo ese.
+
+14
+00:00:55,230 --> 00:00:56,430
+Vamos a darle clic a ese botón.
+
+15
+00:00:58,180 --> 00:01:03,640
+A que me está pidiendo que ingrese un correo electrónico, también un password y confirmar el password
+
+16
+00:01:04,180 --> 00:01:09,220
+y ingrese también un nombre account para el ídolo es.
+
+17
+00:01:10,780 --> 00:01:15,610
+He llenado el formulario con mis datos, el correo electrónico, el password y también la cuenta de
+
+18
+00:01:15,640 --> 00:01:16,180
+ídolo.
+
+19
+00:01:16,180 --> 00:01:19,660
+Es que vamos a crear y le damos clic al botón Continue.
+
+20
+00:01:21,890 --> 00:01:24,980
+A que me está pidiendo que ingrese la el contacto de información.
+
+21
+00:01:25,010 --> 00:01:27,170
+Le digo que se trata de una cuenta de tipo personal.
+
+22
+00:01:27,170 --> 00:01:28,250
+No es un negocio.
+
+23
+00:01:30,890 --> 00:01:37,220
+También me pide que ingrese esta data del nombre, un número telefónico, la dirección, la ciudad,
+
+24
+00:01:37,550 --> 00:01:39,230
+el código postal, etcétera.
+
+25
+00:01:39,230 --> 00:01:41,420
+Vamos a llenar este formulario y continuamos.
+
+26
+00:01:42,800 --> 00:01:48,350
+Ya he llenado toda la información referente y aquí le voy a dar un check para indicarle que estoy de
+
+27
+00:01:48,350 --> 00:01:50,270
+acuerdo con los términos del arreglo.
+
+28
+00:01:50,270 --> 00:01:50,540
+Es.
+
+29
+00:01:51,810 --> 00:01:53,880
+Y ahora le damos clic al botón Continue.
+
+30
+00:01:54,780 --> 00:01:58,890
+A continuación nos pide ingresar los datos de nuestra tarjeta de crédito.
+
+31
+00:01:59,220 --> 00:02:01,050
+Vamos a proceder a llenar este formulario.
+
+32
+00:02:01,840 --> 00:02:06,630
+Ya hemos llenado los datos de nuestra tarjeta de crédito y también hemos dado el cheque del Billing
+
+33
+00:02:06,630 --> 00:02:09,150
+Address de la dirección donde se va a enviar la factura.
+
+34
+00:02:09,780 --> 00:02:11,880
+Y le damos clic a Continue.
+
+35
+00:02:14,710 --> 00:02:21,910
+Como siguiente paso, va a enviarte un mensaje de texto a tu teléfono para verificar tu identidad.
+
+36
+00:02:22,810 --> 00:02:24,280
+Ingresé el número de teléfono.
+
+37
+00:02:24,290 --> 00:02:33,460
+Vamos a colocar aquí también la palabra clave que figura en esta imagen y le damos clic en SMS, Enviar
+
+38
+00:02:33,460 --> 00:02:34,180
+mensaje código.
+
+39
+00:02:34,390 --> 00:02:36,720
+Bueno, ahora me va a llegar un mensaje de texto en mi teléfono.
+
+40
+00:02:36,730 --> 00:02:37,600
+Voy a revisarlo.
+
+41
+00:02:38,950 --> 00:02:40,020
+Ya llegó el mensaje.
+
+42
+00:02:40,030 --> 00:02:45,460
+Este fue el código que me llegó y ahora le doy clic al botón con Tune y vamos al paso final.
+
+43
+00:02:48,220 --> 00:02:50,890
+Y aquí nos vamos a dar de alta en el plan free.
+
+44
+00:02:51,860 --> 00:02:58,690
+Parece que su frío lo hemos seleccionado y le damos clic al botón Complete Sign up.
+
+45
+00:02:58,700 --> 00:02:59,960
+Completar el registro.
+
+46
+00:03:02,200 --> 00:03:02,730
+Perfecto.
+
+47
+00:03:02,740 --> 00:03:05,320
+De esta forma, hemos completado ese capítulo.

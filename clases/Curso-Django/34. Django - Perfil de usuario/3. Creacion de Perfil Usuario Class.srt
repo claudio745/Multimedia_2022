@@ -1,0 +1,663 @@
+1
+00:00:00,330 --> 00:00:04,770
+En este capítulo vamos a trabajar en la edición del perfil del usuario.
+
+2
+00:00:04,920 --> 00:00:09,630
+Pero en este momento realmente no tenemos una entidad que se encargue de este mantenimiento, por lo
+
+3
+00:00:09,630 --> 00:00:15,330
+que vamos a tener que crear una nueva clase y crear esta tabla dentro del Django Framework.
+
+4
+00:00:16,080 --> 00:00:21,510
+Vamos a Atom y vamos a ir a la carpeta Account y ahora le doble clic al archivo Models.
+
+5
+00:00:21,870 --> 00:00:25,380
+Y aquí vas a notar que aparece el Class Account.
+
+6
+00:00:26,130 --> 00:00:31,650
+Es verdad, este class account tiene los datos como nombre, apellido, user, email y phone number,
+
+7
+00:00:31,920 --> 00:00:38,040
+pero no tiene los datos para almacenar, por ejemplo, la imagen del perfil del usuario, o tampoco
+
+8
+00:00:38,040 --> 00:00:43,110
+la dirección o la ciudad, el estado o el país de la persona.
+
+9
+00:00:43,620 --> 00:00:48,780
+Entonces vamos a crear otra clase en la parte inferior, vamos a ver.
+
+10
+00:00:50,420 --> 00:00:51,650
+Qué vamos a llamar?
+
+11
+00:00:52,280 --> 00:00:55,220
+Class User Profile.
+
+12
+00:00:58,200 --> 00:01:00,600
+Iba a venir de Model Model.
+
+13
+00:01:01,630 --> 00:01:06,550
+Le ponemos dos puntos y comenzamos a agregar las propiedades.
+
+14
+00:01:06,700 --> 00:01:14,140
+La primera y la más importante es que esta clase User Profile va a tener una relación de 1 a 1 con la
+
+15
+00:01:14,140 --> 00:01:15,250
+clase account.
+
+16
+00:01:16,940 --> 00:01:21,820
+Entonces vamos a agregar aquí user igual a models.
+
+17
+00:01:21,840 --> 00:01:22,370
+Punto.
+
+18
+00:01:23,000 --> 00:01:26,020
+Como de 1 a 1 le pongo el want to cam.
+
+19
+00:01:27,150 --> 00:01:32,790
+Ten mucho cuidado con las mayúsculas y minúsculas cuando definas este este método Want to field.
+
+20
+00:01:35,200 --> 00:01:37,660
+De que le pasó la clase de Account.
+
+21
+00:01:39,140 --> 00:01:47,360
+Y también si eliminamos ese user de account, también se debe eliminar el récord dentro de User Profile.
+
+22
+00:01:49,640 --> 00:01:51,500
+Ponemos modelos, casquetes.
+
+23
+00:01:54,300 --> 00:01:58,710
+Ahora creamos este atributo Address Line uno.
+
+24
+00:02:00,930 --> 00:02:01,560
+Traía uno.
+
+25
+00:02:03,950 --> 00:02:07,730
+Y es de tipo models o chart field.
+
+26
+00:02:10,300 --> 00:02:11,920
+Blank entró.
+
+27
+00:02:13,520 --> 00:02:15,350
+Permite blancos valores en blanco.
+
+28
+00:02:16,040 --> 00:02:18,680
+Bien, más le vamos a poner que se hacían.
+
+29
+00:02:21,770 --> 00:02:22,910
+Voy a copiar esta línea.
+
+30
+00:02:24,880 --> 00:02:26,830
+Y creamos otra Adrenaline TV.
+
+31
+00:02:28,360 --> 00:02:32,380
+También con las mismas propiedades Plant Truck y Max Valencia.
+
+32
+00:02:33,920 --> 00:02:37,130
+Ahora vamos a crear otra que va a ser el profile picture.
+
+33
+00:02:38,910 --> 00:02:41,730
+Iguala Models Punto y Match Field.
+
+34
+00:02:44,830 --> 00:02:49,780
+Le indico que puede ser en blanco, que no necesariamente tiene que haber una foto de perfil del usuario.
+
+35
+00:02:50,320 --> 00:02:58,120
+Y también le indicó dónde es que se va a guardar, se va a guardar dentro del bluetooth igual a este
+
+36
+00:02:58,120 --> 00:03:00,940
+directorio que se va a llamar user profile.
+
+37
+00:03:03,780 --> 00:03:04,590
+Conoces las.
+
+38
+00:03:05,610 --> 00:03:06,150
+Liso.
+
+39
+00:03:08,100 --> 00:03:10,590
+Pero vamos a ponerle City Ciudad.
+
+40
+00:03:10,920 --> 00:03:13,290
+Va a ser igual a Models Chart Field.
+
+41
+00:03:15,400 --> 00:03:16,180
+Que le ponemos.
+
+42
+00:03:17,100 --> 00:03:17,610
+Blank.
+
+43
+00:03:20,620 --> 00:03:21,230
+En el metro.
+
+44
+00:03:22,450 --> 00:03:23,450
+Y el Max Land.
+
+45
+00:03:23,470 --> 00:03:25,840
+Le indicamos que sea de 20.
+
+46
+00:03:28,310 --> 00:03:32,660
+Voy a copiar ese nombre, esta ciudad, y le pongo State.
+
+47
+00:03:32,840 --> 00:03:34,040
+Qué va a ser lo mismo?
+
+48
+00:03:35,430 --> 00:03:35,850
+También.
+
+49
+00:03:35,850 --> 00:03:38,130
+Ahora vamos por Country País.
+
+50
+00:03:40,050 --> 00:03:42,590
+Que también va a tener un plan dentro y un 20.
+
+51
+00:03:44,630 --> 00:03:47,750
+Vamos ahora a crear las funciones de tipo SRT.
+
+52
+00:03:49,550 --> 00:03:50,620
+Te pongo el sorete.
+
+53
+00:03:51,110 --> 00:03:53,030
+Dos rayas self.
+
+54
+00:03:55,900 --> 00:03:57,520
+Vamos a ponerla cada dos puntos.
+
+55
+00:03:58,990 --> 00:04:05,560
+Y aquí le vamos a indicar que haga un return self punto user point first name.
+
+56
+00:04:07,640 --> 00:04:08,330
+Tenemos.
+
+57
+00:04:08,510 --> 00:04:11,990
+Y también voy a crear otra función que va a ser full address.
+
+58
+00:04:15,900 --> 00:04:19,470
+Dos puntos y le indico que me haga un return.
+
+59
+00:04:20,760 --> 00:04:25,140
+Pero ahora con que esta nación del adres la uno y el adres Lintu.
+
+60
+00:04:26,170 --> 00:04:29,500
+Así que le ponemos llaves y le escribo self.
+
+61
+00:04:31,020 --> 00:04:37,610
+A uno concatenado con el self punto a tres lindos.
+
+62
+00:04:39,120 --> 00:04:39,690
+Perfecto.
+
+63
+00:04:40,000 --> 00:04:43,460
+Bien, entonces ya hemos creado esta clase Profile.
+
+64
+00:04:43,500 --> 00:04:47,130
+Vamos a tener que registrarla ahora dentro del Admin.
+
+65
+00:04:47,560 --> 00:04:49,380
+Y que es en Account.
+
+66
+00:04:50,070 --> 00:04:51,060
+Abrimos el archivo.
+
+67
+00:04:52,010 --> 00:04:58,400
+Y aquí vamos a agregar otro class para administrar ese user profile dentro del chat administration.
+
+68
+00:04:59,030 --> 00:05:00,380
+Así que le voy a escribir class.
+
+69
+00:05:01,800 --> 00:05:04,550
+Yo soy el profile admin.
+
+70
+00:05:06,240 --> 00:05:09,030
+Me paso el admin punto del admin.
+
+71
+00:05:11,110 --> 00:05:19,240
+Sé que lo primero que voy a hacer es definir un control que me permita manejar las imágenes dentro del
+
+72
+00:05:19,240 --> 00:05:20,230
+Chango Administration.
+
+73
+00:05:20,920 --> 00:05:24,940
+Por eso voy a crear esta función que va a ser Thumb nil.
+
+74
+00:05:27,350 --> 00:05:30,090
+Va a tener dos parámetros el self y el object.
+
+75
+00:05:33,580 --> 00:05:34,420
+Esta función.
+
+76
+00:05:34,810 --> 00:05:40,510
+Lo que tiene que retornar es un formato HTML que tenemos que declarar ahora en la parte superior.
+
+77
+00:05:42,350 --> 00:05:43,310
+En un momento lo hacemos.
+
+78
+00:05:44,260 --> 00:05:51,190
+Y lo que tengo que imprimir es img src igual a valor en blanco.
+
+79
+00:05:51,190 --> 00:05:52,780
+Todavía no tengo una ubicación.
+
+80
+00:05:55,790 --> 00:05:57,350
+Un kit de 30.
+
+81
+00:06:02,350 --> 00:06:08,350
+Un estilo o un estilo que yo quiero que el borde sea redondeado, así que le pongo border.
+
+82
+00:06:10,270 --> 00:06:10,990
+Radios.
+
+83
+00:06:12,910 --> 00:06:13,840
+Dos puntos.
+
+84
+00:06:15,360 --> 00:06:16,470
+50%.
+
+85
+00:06:18,380 --> 00:06:19,070
+Y punto y coma.
+
+86
+00:06:21,180 --> 00:06:22,560
+Esto lo tenemos ahí.
+
+87
+00:06:23,310 --> 00:06:26,280
+Y aquí le voy a poner un punto Format.
+
+88
+00:06:29,780 --> 00:06:34,730
+Y lo que tengo que hacer es un forma de tipo object profile picture.
+
+89
+00:06:35,720 --> 00:06:38,210
+Joder, esto es ese formato.
+
+90
+00:06:39,750 --> 00:06:40,740
+Lo tenemos.
+
+91
+00:06:41,070 --> 00:06:43,710
+Una vez que definió esta función, lo siguiente.
+
+92
+00:06:44,400 --> 00:06:45,870
+Recuerda, estamos en otra etapa.
+
+93
+00:06:45,900 --> 00:06:49,200
+A nivel del DF ya no dentro del DF, sino fuera del DF.
+
+94
+00:06:50,950 --> 00:06:52,230
+Es hacer un túnel.
+
+95
+00:06:52,610 --> 00:06:53,350
+Un punto.
+
+96
+00:06:54,500 --> 00:06:55,670
+Short description.
+
+97
+00:06:58,420 --> 00:07:00,850
+Entonces todo se ligó a la imagen de perfil.
+
+98
+00:07:03,890 --> 00:07:11,920
+También le voy a indicar qué campos voy a visualizar dentro de este grid que representa a usuarios,
+
+99
+00:07:11,930 --> 00:07:13,250
+así que vamos a colocarle aquí.
+
+100
+00:07:15,410 --> 00:07:17,630
+El túnel que acabo de decidir.
+
+101
+00:07:19,320 --> 00:07:20,250
+El user.
+
+102
+00:07:22,160 --> 00:07:22,780
+El Siri.
+
+103
+00:07:24,930 --> 00:07:25,620
+El State.
+
+104
+00:07:28,360 --> 00:07:28,970
+Jill Country.
+
+105
+00:07:29,890 --> 00:07:30,020
+Esto.
+
+106
+00:07:30,950 --> 00:07:32,720
+Bien, ahora vamos a registrar.
+
+107
+00:07:32,900 --> 00:07:35,690
+Hacemos un admin punto siete, punto Register.
+
+108
+00:07:38,040 --> 00:07:44,940
+De que voy a registrar el perfil y le paso la clase, el user profile admin que acabo de crear esto.
+
+109
+00:07:46,440 --> 00:07:47,380
+En la parte superior.
+
+110
+00:07:47,380 --> 00:07:51,940
+Vamos a ver lo que tengo que obtener los componentes.
+
+111
+00:07:52,000 --> 00:07:55,060
+Aquí está el user admin, el models.
+
+112
+00:07:55,720 --> 00:07:57,490
+Estoy utilizando la count y también.
+
+113
+00:07:58,530 --> 00:07:59,670
+El uso del perfil.
+
+114
+00:08:02,210 --> 00:08:07,970
+También voy a utilizar esta herramienta chango punto útil a HTML.
+
+115
+00:08:09,370 --> 00:08:11,740
+Import el format html.
+
+116
+00:08:12,750 --> 00:08:14,640
+Si este es el objeto que estoy utilizando aquí.
+
+117
+00:08:18,030 --> 00:08:18,270
+Bien.
+
+118
+00:08:18,840 --> 00:08:19,380
+Ya lo tengo.
+
+119
+00:08:19,380 --> 00:08:20,130
+Casi listo.
+
+120
+00:08:20,910 --> 00:08:23,650
+Vamos a volver un momento a la función.
+
+121
+00:08:23,940 --> 00:08:24,060
+Puse.
+
+122
+00:08:26,440 --> 00:08:27,520
+Vamos a la parte.
+
+123
+00:08:28,660 --> 00:08:32,440
+Vamos a movernos rápido a la clase Just Profiles.
+
+124
+00:08:33,040 --> 00:08:34,900
+Aquí tengo un pequeño detalle.
+
+125
+00:08:34,930 --> 00:08:39,850
+Estoy haciendo un blog hacia el user perfil, pero no es necesario colocarle este enlace.
+
+126
+00:08:41,410 --> 00:08:42,370
+Hay que quitárselos.
+
+127
+00:08:43,750 --> 00:08:49,780
+También esta función full address le había abierto el F apóstrofe, pero no lo estaba cerrando en la
+
+128
+00:08:49,780 --> 00:08:50,440
+parte final.
+
+129
+00:08:50,470 --> 00:08:51,340
+Me faltó cerrar.
+
+130
+00:08:52,240 --> 00:08:52,770
+Listo?
+
+131
+00:08:52,780 --> 00:08:54,320
+Ahora sí vamos a borrar los cambios.
+
+132
+00:08:54,340 --> 00:08:56,890
+Menú Field Save all y vamos a abrir el valle.
+
+133
+00:08:57,490 --> 00:09:03,250
+Y en el valle vamos a escribir el comando Python Espacio Manager Make Actions y le damos enter.
+
+134
+00:09:04,420 --> 00:09:07,960
+Ya se generó el archivo de migración con el nuevo modelo y el perfil.
+
+135
+00:09:08,970 --> 00:09:16,650
+Y ahora creemos el comando para ejecutar este archivo Python Management Espacio espacio y le damos Enter.
+
+136
+00:09:17,660 --> 00:09:18,290
+Perfecto.
+
+137
+00:09:18,290 --> 00:09:21,110
+Ya se generó entonces la tabla User Profile.
+
+138
+00:09:21,650 --> 00:09:25,220
+Vamos a ejecutar el comando Python Management Espacio Brand Server.
+
+139
+00:09:26,430 --> 00:09:27,180
+Le damos enter.
+
+140
+00:09:27,190 --> 00:09:29,010
+Ya levantamos el servidor web de Chango.
+
+141
+00:09:29,520 --> 00:09:31,290
+Vamos ahora al Chango Administration.
+
+142
+00:09:31,590 --> 00:09:34,770
+Vamos a ver lo que el 8000 es las admin.
+
+143
+00:09:35,700 --> 00:09:39,510
+Y aquí te va a aparecer en la app de account el user profiles.
+
+144
+00:09:39,540 --> 00:09:40,440
+Vamos a darle clic.
+
+145
+00:09:42,190 --> 00:09:44,380
+Y no me aparece aún el perfil.
+
+146
+00:09:45,130 --> 00:09:45,700
+No hay problema.
+
+147
+00:09:45,700 --> 00:09:47,440
+Vamos a crear este perfil aquí.
+
+148
+00:09:47,440 --> 00:09:48,310
+Dale click al botón.
+
+149
+00:09:48,610 --> 00:09:49,810
+Adios el perfil.
+
+150
+00:09:51,320 --> 00:09:55,260
+Y recuerda que una relación de 1 a 1 con la clase account.
+
+151
+00:09:55,400 --> 00:09:57,560
+Por eso es que aparece este atributo user.
+
+152
+00:09:57,710 --> 00:10:00,770
+Si le damos click a user, con cuál?
+
+153
+00:10:00,770 --> 00:10:02,480
+A Con cuál cuenta quieres relacionar?
+
+154
+00:10:02,480 --> 00:10:03,410
+Este yo es el profile.
+
+155
+00:10:03,590 --> 00:10:06,590
+Yo le voy a indicar que con y tres arroba gmail.com.
+
+156
+00:10:07,930 --> 00:10:09,220
+Le vamos a poner la dirección.
+
+157
+00:10:10,090 --> 00:10:12,970
+Y también ya agregué las direcciones.
+
+158
+00:10:13,390 --> 00:10:15,610
+El seleccionado, la ciudad, el Estado, el country.
+
+159
+00:10:15,640 --> 00:10:18,730
+Ahora voy a seleccionar una imagen desde mi computadora.
+
+160
+00:10:19,390 --> 00:10:23,590
+También ya selecciono una imagen dándole clic a ese botón de files.
+
+161
+00:10:24,040 --> 00:10:24,370
+Ya.
+
+162
+00:10:24,370 --> 00:10:26,050
+Listo, lo tengo preparado.
+
+163
+00:10:26,050 --> 00:10:27,460
+Voy a darle clic en el botón Safe.
+
+164
+00:10:28,500 --> 00:10:29,240
+Y perfecto.
+
+165
+00:10:29,250 --> 00:10:38,010
+Mira ya acabo de registrar mi mi perfil de usuario que esta relacionado con la cuenta de usuario Basic
+
+166
+00:10:38,010 --> 00:10:38,370
+tres.

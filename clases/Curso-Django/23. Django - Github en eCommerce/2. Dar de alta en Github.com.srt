@@ -1,0 +1,159 @@
+1
+00:00:00,060 --> 00:00:05,100
+En este vídeo vamos a crear nuestro repositorio en nuestro servidor de repositorio en la nube.
+
+2
+00:00:05,280 --> 00:00:09,210
+Para ello tenemos que darnos de alta en el portal de GitHub puntocom.
+
+3
+00:00:09,690 --> 00:00:11,580
+Vamos entonces a esta página web.
+
+4
+00:00:12,600 --> 00:00:19,410
+Yo me encuentro dentro de GitHub punto com y ahora voy a darle clic al botón Sign up o registrar.
+
+5
+00:00:21,940 --> 00:00:24,970
+En este formulario voy a colocar mis datos personales.
+
+6
+00:00:24,970 --> 00:00:26,650
+Crearon justamente un email address.
+
+7
+00:00:26,650 --> 00:00:27,280
+Un password?
+
+8
+00:00:27,820 --> 00:00:28,330
+Hagámoslo.
+
+9
+00:00:29,380 --> 00:00:30,880
+Ya he llenado el formulario.
+
+10
+00:00:31,480 --> 00:00:35,680
+Recuerda que el user name no puede tener puntos ni caracteres especiales.
+
+11
+00:00:35,680 --> 00:00:38,800
+Tiene que tener solo texto alfanumérico.
+
+12
+00:00:39,700 --> 00:00:44,320
+También he puesto mi correo electrónico, un password y aquí vamos a verificar.
+
+13
+00:00:44,320 --> 00:00:45,700
+Va a dar clic en el botón Verificar.
+
+14
+00:00:47,900 --> 00:00:49,790
+Me dice que dé un rol a la imagen.
+
+15
+00:00:50,540 --> 00:00:50,960
+Ok.
+
+16
+00:00:52,920 --> 00:00:53,650
+Ahí está.
+
+17
+00:00:53,760 --> 00:00:55,170
+Y le damos clic al botón Dom.
+
+18
+00:00:58,730 --> 00:00:59,420
+Perfecto.
+
+19
+00:00:59,750 --> 00:01:00,530
+Me da un cheque?
+
+20
+00:01:00,540 --> 00:01:05,960
+No soy un robot, así que ya puedo darme de alta dándole click al botón Great Account.
+
+21
+00:01:08,420 --> 00:01:10,730
+A que me va a pedir algunas características mías?
+
+22
+00:01:11,090 --> 00:01:13,700
+Vamos a poner acá que soy un software engineer.
+
+23
+00:01:16,500 --> 00:01:18,240
+Como amigos de Yoav.
+
+24
+00:01:18,270 --> 00:01:19,500
+Bueno, a Lot.
+
+25
+00:01:21,230 --> 00:01:26,660
+Cuando yo plantee yo es que sea para que lo vas a usar el github vamos a poner acá para leer Code y
+
+26
+00:01:27,290 --> 00:01:28,520
+Project Repositorio.
+
+27
+00:01:31,020 --> 00:01:33,900
+Y dale click finalmente al botón complete set up.
+
+28
+00:01:35,260 --> 00:01:40,210
+Y ahora apareció este mensaje que me indica que acaban de enviarme un correo electrónico a mi cuenta
+
+29
+00:01:40,210 --> 00:01:46,690
+de correo de bachilleres gmail.com y tengo que darle click a ese correo al link de confirmación del
+
+30
+00:01:46,690 --> 00:01:49,190
+correo para que puedan dar de alta mi cuenta.
+
+31
+00:01:49,210 --> 00:01:50,500
+Bien, entonces no hay problema.
+
+32
+00:01:50,590 --> 00:01:55,090
+Este es mi correo y efectivamente ha llegado este correo electrónico.
+
+33
+00:01:56,230 --> 00:01:58,720
+Voy a darle clic al botón Verificar y Mail Address.
+
+34
+00:01:58,900 --> 00:01:59,680
+Vamos a darle clic.
+
+35
+00:02:01,390 --> 00:02:02,080
+Y perfecto.
+
+36
+00:02:02,080 --> 00:02:03,310
+Ya está verificado.
+
+37
+00:02:03,310 --> 00:02:08,830
+Entonces significa que mi cuenta en GitHub ya está perfecta para poder trabajar.
+
+38
+00:02:09,640 --> 00:02:16,090
+Esto significa que mi solución con las macros, servicios de tienda o servicio puede ser enviada a este
+
+39
+00:02:16,090 --> 00:02:20,380
+servidor entre repositorios y comience a almacenar las versiones.
+
+40
+00:02:21,130 --> 00:02:27,130
+En el siguiente vídeo voy a enseñarte cómo sincronizar tu proyecto desde Visual Studio con GitHub.

@@ -1,0 +1,1027 @@
+1
+00:00:00,550 --> 00:00:05,740
+En este capítulo vamos a continuar trabajando en la construcción del formulario de registro de usuarios.
+
+2
+00:00:06,400 --> 00:00:11,770
+Evidentemente tenemos que tomar este formulario que me está enviando el Chango para que posteriormente
+
+3
+00:00:11,770 --> 00:00:14,290
+podamos realizar la transacción de inserción de nuevo usuario.
+
+4
+00:00:15,310 --> 00:00:21,100
+Y este formulario que por defecto estamos generando, vamos a eliminarlo poco a poco.
+
+5
+00:00:21,490 --> 00:00:24,100
+Vamos a tomar ciertos ciertos recursos.
+
+6
+00:00:24,880 --> 00:00:30,580
+Vamos entonces hacia eCommerce, la carpeta Templates Account que apareció Register.
+
+7
+00:00:30,910 --> 00:00:33,070
+Voy a maximizar para que lo pueda ver mejor.
+
+8
+00:00:33,890 --> 00:00:38,990
+Aquí aparece el form en la línea 14 15 y aparece también el form asp.
+
+9
+00:00:39,710 --> 00:00:41,990
+En esta parte del form voy a indicarle que.
+
+10
+00:00:43,150 --> 00:00:46,090
+Este foro va a tener un achuchón que me va a llevar a donde?
+
+11
+00:00:47,540 --> 00:00:49,880
+Debes llevarme a la URL que he definido.
+
+12
+00:00:51,050 --> 00:00:51,890
+Que se llama.
+
+13
+00:00:52,130 --> 00:00:54,380
+Vamos a ponerle acá Register.
+
+14
+00:00:55,590 --> 00:00:58,270
+Tanto que faltó el apóstrofe.
+
+15
+00:00:58,330 --> 00:00:59,640
+Si, la comida.
+
+16
+00:01:01,080 --> 00:01:01,280
+Bien.
+
+17
+00:01:01,380 --> 00:01:02,130
+Lo tengo.
+
+18
+00:01:02,770 --> 00:01:04,830
+Ahora también tengo que indicarle.
+
+19
+00:01:05,990 --> 00:01:09,410
+De que va a tener un método de tipo post.
+
+20
+00:01:11,690 --> 00:01:13,090
+Que me faltó el inicio de la acción.
+
+21
+00:01:13,100 --> 00:01:14,300
+Colocar la comilla.
+
+22
+00:01:14,900 --> 00:01:15,170
+Bien.
+
+23
+00:01:15,590 --> 00:01:23,420
+Entonces quiero que me envíe a este Path Register la data que va a tener este formulario por el método
+
+24
+00:01:23,420 --> 00:01:23,800
+Post.
+
+25
+00:01:25,720 --> 00:01:27,190
+Para que pueda enviarse los datos.
+
+26
+00:01:27,190 --> 00:01:32,650
+Ya sabes que tengo que agregarle también este c s RF.
+
+27
+00:01:34,370 --> 00:01:34,790
+Toquen.
+
+28
+00:01:37,350 --> 00:01:37,800
+Listo.
+
+29
+00:01:38,190 --> 00:01:40,320
+Ahora vayamos hacia el formulario.
+
+30
+00:01:40,530 --> 00:01:43,830
+El formulario está trabajando con unos diff por cada campo.
+
+31
+00:01:44,990 --> 00:01:45,500
+Puedes notarlo.
+
+32
+00:01:45,830 --> 00:01:47,720
+Tiene un clase, Farrow.
+
+33
+00:01:48,260 --> 00:01:49,100
+Es una fila.
+
+34
+00:01:49,550 --> 00:01:51,140
+Cada fila tiene dos controles.
+
+35
+00:01:52,220 --> 00:01:54,410
+Aquí tengo un primer control para lo que es el nombre.
+
+36
+00:01:54,740 --> 00:01:58,070
+Y tengo un siguiente control para lo que es el apellido.
+
+37
+00:01:59,270 --> 00:02:00,380
+Para el caso de nombre.
+
+38
+00:02:00,380 --> 00:02:01,640
+Vamos a hacer aquí el nombre.
+
+39
+00:02:02,650 --> 00:02:04,510
+Tiene un label que representa el nombre.
+
+40
+00:02:04,510 --> 00:02:05,830
+Y aquí está la caja de texto.
+
+41
+00:02:06,310 --> 00:02:08,890
+Esta caja de texto la voy a remover.
+
+42
+00:02:11,210 --> 00:02:15,950
+Y voy a colocar aquí el form y el nombre del campo First Name.
+
+43
+00:02:18,230 --> 00:02:19,320
+Vamos a borrar los cambios.
+
+44
+00:02:19,550 --> 00:02:23,840
+False all y vamos a la página a verificar este cambio.
+
+45
+00:02:24,380 --> 00:02:25,360
+Estamos en la página.
+
+46
+00:02:25,370 --> 00:02:26,210
+Aquí está el nombre.
+
+47
+00:02:26,240 --> 00:02:27,830
+Voy a refrescarlo para ver como se ve.
+
+48
+00:02:28,640 --> 00:02:34,070
+Y mira, ya cambió el estilo porque está tomando la caja de texto que me está enviando Chango desde
+
+49
+00:02:34,070 --> 00:02:34,790
+Chango Forms.
+
+50
+00:02:36,710 --> 00:02:42,140
+Este formulario que está en la parte superior, voy a eliminarlo para que no me estorbe la interfaz
+
+51
+00:02:42,140 --> 00:02:42,840
+gráfica por ahora.
+
+52
+00:02:42,840 --> 00:02:48,590
+Así que esta línea de for a s a ese rey ABAP lo quitó.
+
+53
+00:02:51,010 --> 00:02:52,540
+Bien, continuemos.
+
+54
+00:02:52,930 --> 00:02:59,530
+Ya tengo entonces el primer campo input que me está generando juego gracias a esta línea form first
+
+55
+00:02:59,530 --> 00:02:59,770
+name.
+
+56
+00:03:00,700 --> 00:03:01,750
+Vamos con el apellido.
+
+57
+00:03:01,750 --> 00:03:03,070
+Este es otro bloque.
+
+58
+00:03:03,370 --> 00:03:08,350
+El campo apellido tiene label apellido y este input lo voy a borrar.
+
+59
+00:03:10,120 --> 00:03:14,320
+Y en su lugar vamos a poner punto las.
+
+60
+00:03:16,230 --> 00:03:22,260
+Ahora vamos en la parte inferior, ya que aparece un div class phone group para lo que es el género
+
+61
+00:03:23,160 --> 00:03:23,850
+este que está aquí.
+
+62
+00:03:24,720 --> 00:03:26,190
+Aquí aparece masculino o femenino.
+
+63
+00:03:26,190 --> 00:03:27,960
+Todo esto está dentro de este div group.
+
+64
+00:03:28,410 --> 00:03:33,510
+Voy a seleccionarlo con mucho cuidado y lo quitamos.
+
+65
+00:03:34,350 --> 00:03:36,120
+No voy a utilizar el género de registro.
+
+66
+00:03:37,010 --> 00:03:41,930
+También aquí aparece otro grupo de teclas for Group para el email.
+
+67
+00:03:42,380 --> 00:03:44,120
+También voy a quitarlo por ahora.
+
+68
+00:03:46,120 --> 00:03:51,130
+Y aquí aparece otro fondo para ciudad país este diez de.
+
+69
+00:03:53,160 --> 00:03:54,300
+También lo voy a quitar.
+
+70
+00:03:59,340 --> 00:04:03,820
+A que me está pareciendo ya otro para lo que es el crear password y repetir password.
+
+71
+00:04:03,840 --> 00:04:04,980
+Eso por momento lo dejo ahí.
+
+72
+00:04:05,640 --> 00:04:10,860
+Entonces tendría solamente dos bloques por el momento, un bloque para lo que funcionó, para lo que
+
+73
+00:04:10,860 --> 00:04:11,910
+es el nombre y el apellido.
+
+74
+00:04:11,910 --> 00:04:13,770
+Y tengo otro bloque para lo que es el password.
+
+75
+00:04:14,590 --> 00:04:21,800
+Pero necesito otro bloque forum para lo que es el email y también el número telefónico.
+
+76
+00:04:21,820 --> 00:04:23,890
+Voy a copiar entonces esta estructura.
+
+77
+00:04:26,720 --> 00:04:27,590
+La copiamos.
+
+78
+00:04:30,430 --> 00:04:31,190
+Que cara pegamos?
+
+79
+00:04:32,740 --> 00:04:34,050
+Y voy al primer.
+
+80
+00:04:34,690 --> 00:04:37,600
+El primer bloque para el control de caja de texto.
+
+81
+00:04:38,200 --> 00:04:40,970
+Que va a ser número telefónico.
+
+82
+00:04:41,020 --> 00:04:42,580
+Le pongo acá número telefónico.
+
+83
+00:04:45,580 --> 00:04:47,350
+Y este debe ser form.
+
+84
+00:04:50,480 --> 00:04:52,220
+Fan number hay a presión.
+
+85
+00:04:52,730 --> 00:04:54,250
+El siguiente es para el email.
+
+86
+00:04:54,740 --> 00:04:55,490
+Voy a ponerle acá.
+
+87
+00:04:58,020 --> 00:04:58,470
+Ismael.
+
+88
+00:04:59,250 --> 00:05:00,480
+Aquí le ponemos.
+
+89
+00:05:01,500 --> 00:05:02,940
+Por email.
+
+90
+00:05:06,540 --> 00:05:06,990
+Listo.
+
+91
+00:05:09,000 --> 00:05:10,590
+Para el caso del password.
+
+92
+00:05:11,250 --> 00:05:13,020
+Aquí tengo un pequeño detalle.
+
+93
+00:05:13,320 --> 00:05:17,460
+Tengo un campo para crear el password y otro para repetir el password.
+
+94
+00:05:17,490 --> 00:05:22,980
+Entonces vamos a trabajar, personalizar estos campos dentro del account.
+
+95
+00:05:23,130 --> 00:05:24,960
+Vamos entonces a la carpeta account.
+
+96
+00:05:26,330 --> 00:05:28,550
+Y ahora vamos al Fons y.
+
+97
+00:05:31,030 --> 00:05:34,840
+Y aquí antes del clase Meta, vamos a ponerlo acá para tener un espaciado.
+
+98
+00:05:36,120 --> 00:05:39,610
+Voy a crear este password y le digo que va a ser igual a Forms.
+
+99
+00:05:41,630 --> 00:05:42,370
+Sarsfield.
+
+100
+00:05:45,710 --> 00:05:47,810
+Widget igual a forms.
+
+101
+00:05:48,030 --> 00:05:48,500
+Punto.
+
+102
+00:05:49,930 --> 00:05:51,160
+Password input.
+
+103
+00:05:55,270 --> 00:05:57,970
+Y le digo también los atributos que va a tener.
+
+104
+00:06:02,090 --> 00:06:04,280
+Aquí le digo que va a tener un placeholder.
+
+105
+00:06:08,700 --> 00:06:11,070
+Que un texto que diga ingrese password.
+
+106
+00:06:13,620 --> 00:06:14,070
+Listo.
+
+107
+00:06:14,490 --> 00:06:17,850
+También voy a crear otra columna que se llame Confirmar password.
+
+108
+00:06:24,750 --> 00:06:27,810
+Que le ponemos confirm trabajo, password.
+
+109
+00:06:29,430 --> 00:06:31,350
+También va a ser un chart fiel.
+
+110
+00:06:31,350 --> 00:06:37,830
+Widget Forms punto password input con los atributos Press folder.
+
+111
+00:06:39,220 --> 00:06:41,800
+De aquí le voy a decir confirmar password.
+
+112
+00:06:42,890 --> 00:06:43,250
+Esto.
+
+113
+00:06:44,310 --> 00:06:49,950
+Realmente lo que estoy haciendo aquí es creando dos nuevas cajas de texto utilizando la herramienta
+
+114
+00:06:49,950 --> 00:06:50,910
+de Jango Forms.
+
+115
+00:06:50,940 --> 00:06:52,080
+Eso es lo que está pasando.
+
+116
+00:06:52,290 --> 00:06:59,910
+Y como esto es una caja de texto, yo puedo agregarle si quisiera también estilo CSS o clases para manejar
+
+117
+00:06:59,910 --> 00:07:04,860
+mejor la interfaz gráfica de este objeto, que puede ser caja de texto, puede ser un botón, puede
+
+118
+00:07:04,860 --> 00:07:11,160
+ser cualquier elemento HTML que el chango va a procesar y va a convertir, va a pasarlo a tu template
+
+119
+00:07:11,190 --> 00:07:11,910
+html.
+
+120
+00:07:12,990 --> 00:07:18,840
+De esta forma, cuando estemos en el template vas a llamar simplemente a formato password y va a llamar
+
+121
+00:07:18,840 --> 00:07:22,140
+a esta sintaxis con el placeholder y ese password.
+
+122
+00:07:22,140 --> 00:07:26,250
+Y cuando llames a este confirm password, también llamar a este placeholder.
+
+123
+00:07:26,490 --> 00:07:27,540
+Confirmar password.
+
+124
+00:07:28,320 --> 00:07:34,410
+Y si tuvieras un estilo, si es o algo que agregar, también lo transformaría y lo llevaría a esta caja
+
+125
+00:07:34,410 --> 00:07:34,920
+de texto.
+
+126
+00:07:36,050 --> 00:07:42,290
+Vamos entonces al Templates en la carpeta templates y a la carpeta account y al archivo register punto
+
+127
+00:07:42,290 --> 00:07:42,950
+html.
+
+128
+00:07:44,560 --> 00:07:47,780
+Y aquí estamos dentro de este foro.
+
+129
+00:07:48,950 --> 00:07:52,850
+Comencemos con esto para con este primer bloque para crear el password.
+
+130
+00:07:53,720 --> 00:07:55,130
+Voy a eliminar este input.
+
+131
+00:07:57,150 --> 00:08:00,900
+Y acá, entre dobles llaves, le voy a colocar form.
+
+132
+00:08:03,940 --> 00:08:04,800
+Punto password.
+
+133
+00:08:06,120 --> 00:08:07,350
+La columna que acabo de crear.
+
+134
+00:08:08,130 --> 00:08:12,120
+Y para este repetir password también voy a eliminar este input.
+
+135
+00:08:13,990 --> 00:08:14,640
+Siempre doble.
+
+136
+00:08:14,750 --> 00:08:18,220
+A veces pongo fondo junto con el password.
+
+137
+00:08:19,540 --> 00:08:20,440
+Lo tenemos listo.
+
+138
+00:08:20,470 --> 00:08:21,520
+Voy a borrar todos los cambios.
+
+139
+00:08:21,550 --> 00:08:22,870
+Menú File Safe All.
+
+140
+00:08:24,140 --> 00:08:25,130
+Y vamos a la página.
+
+141
+00:08:25,700 --> 00:08:26,660
+Estamos en la página.
+
+142
+00:08:26,660 --> 00:08:29,330
+Voy a refrescar y mira lo que ha pasado.
+
+143
+00:08:29,600 --> 00:08:33,410
+Ya me generó el nombre, apellido, número telefónico y mail.
+
+144
+00:08:33,440 --> 00:08:35,720
+Crear password y repetir password.
+
+145
+00:08:36,290 --> 00:08:37,430
+Pero aún tengo un problema.
+
+146
+00:08:37,440 --> 00:08:39,500
+Acá no se ve bien, la verdad.
+
+147
+00:08:39,860 --> 00:08:42,710
+Quisiera aplicarle los estilos a cada caja de texto.
+
+148
+00:08:42,710 --> 00:08:43,790
+Cómo lo voy a hacer?
+
+149
+00:08:44,970 --> 00:08:53,040
+Recuerda que esas cajas de texto se están generando desde el meta que tenemos dentro de Account Force
+
+150
+00:08:53,440 --> 00:08:53,790
+y.
+
+151
+00:08:54,820 --> 00:08:58,810
+Y podría que simplemente así comience con password que le agregué un plesk folder.
+
+152
+00:08:59,440 --> 00:09:01,300
+También le podría colocar una coma.
+
+153
+00:09:02,290 --> 00:09:03,910
+Y le indicaría el class.
+
+154
+00:09:05,430 --> 00:09:11,820
+Una clase especial que yo he creado, ya que se llama For Control para que implemente esta clase de
+
+155
+00:09:11,820 --> 00:09:20,460
+estilo a este input password y para lo que es el confirm password también haría lo mismo, le pondría
+
+156
+00:09:20,460 --> 00:09:20,970
+un class.
+
+157
+00:09:25,370 --> 00:09:28,250
+Y aquí le pondríamos form control.
+
+158
+00:09:30,990 --> 00:09:32,130
+A quién le falta una coma?
+
+159
+00:09:32,280 --> 00:09:33,030
+Aquí arriba también.
+
+160
+00:09:33,060 --> 00:09:33,570
+Una coma?
+
+161
+00:09:34,200 --> 00:09:37,470
+Esto podría reutilizarlo para cada uno de los campos.
+
+162
+00:09:37,620 --> 00:09:37,890
+Pero.
+
+163
+00:09:37,890 --> 00:09:41,070
+Qué pasaría si tuvieras diez o 15 cajas de texto?
+
+164
+00:09:41,310 --> 00:09:42,540
+Tendrías que repetirlo.
+
+165
+00:09:43,460 --> 00:09:44,960
+Hay otra opción para trabajar esto?
+
+166
+00:09:45,800 --> 00:09:46,400
+Si la hay.
+
+167
+00:09:47,600 --> 00:09:51,230
+Otra opción es crear una función de tipo Def init.
+
+168
+00:09:51,560 --> 00:09:53,060
+Vamos a poner acá def espacio.
+
+169
+00:09:53,060 --> 00:09:54,100
+Dos rayas para abajo.
+
+170
+00:09:54,110 --> 00:09:54,500
+Init.
+
+171
+00:09:57,870 --> 00:10:06,600
+Llamar al self de la clase de registración form self coma el arreglo de argumentos args.
+
+172
+00:10:08,130 --> 00:10:11,370
+Y el arreglo de los quarks.
+
+173
+00:10:14,620 --> 00:10:15,730
+Que le ponemos dos puntos.
+
+174
+00:10:18,870 --> 00:10:20,040
+Y lo que tendría que hacer.
+
+175
+00:10:22,380 --> 00:10:24,570
+Es visualizarlo usando el super.
+
+176
+00:10:25,530 --> 00:10:25,670
+Aquí.
+
+177
+00:10:25,710 --> 00:10:27,150
+Llamo al registro de Fon.
+
+178
+00:10:29,180 --> 00:10:31,280
+La clase actual, la que estoy trabajando.
+
+179
+00:10:34,970 --> 00:10:35,480
+En Self.
+
+180
+00:10:35,930 --> 00:10:37,430
+Y luego vamos a poner acá.
+
+181
+00:10:39,540 --> 00:10:40,770
+A su método init.
+
+182
+00:10:42,510 --> 00:10:43,440
+Torres para abajo.
+
+183
+00:10:46,330 --> 00:10:48,910
+De aquí le paso el asterisco a Marx.
+
+184
+00:10:50,110 --> 00:10:51,070
+Y el asterisco.
+
+185
+00:10:51,550 --> 00:10:52,420
+Doble asterisco.
+
+186
+00:10:54,130 --> 00:10:55,930
+Q walks.
+
+187
+00:10:57,370 --> 00:10:58,720
+A que le falta un doble asterisco?
+
+188
+00:10:58,720 --> 00:10:59,620
+No, está perfecto.
+
+189
+00:11:01,310 --> 00:11:01,520
+Bien.
+
+190
+00:11:01,850 --> 00:11:02,570
+Ya lo tengo.
+
+191
+00:11:02,840 --> 00:11:08,990
+Y ahora, dentro de esta función, vamos a crear un bucle for field.
+
+192
+00:11:10,060 --> 00:11:12,310
+Kim Self Fields.
+
+193
+00:11:15,450 --> 00:11:23,340
+Y cada FIL representa cada caja de texto componente que tienes registrado que has registrado dentro
+
+194
+00:11:23,340 --> 00:11:23,940
+de este clase.
+
+195
+00:11:23,970 --> 00:11:24,330
+Meta.
+
+196
+00:11:25,860 --> 00:11:30,000
+Entonces simplemente harías un Self Fields.
+
+197
+00:11:31,840 --> 00:11:33,070
+Con el índice del field.
+
+198
+00:11:34,110 --> 00:11:35,040
+Punto Widget.
+
+199
+00:11:37,070 --> 00:11:37,940
+Punto AT.
+
+200
+00:11:38,660 --> 00:11:44,240
+De esta forma, nosotros estamos instanciado a cada caja de texto que está en tu formulario y llamando
+
+201
+00:11:44,240 --> 00:11:46,100
+a su propiedad atributos.
+
+202
+00:11:46,400 --> 00:11:49,970
+Que atributo esa caja de texto quieres reutilizar?
+
+203
+00:11:50,420 --> 00:11:55,790
+En este caso estamos hablando del atributo que se llama Class y quiero que todas las cajas de texto
+
+204
+00:11:56,120 --> 00:12:00,440
+de este formulario tengan el class que se llama For control.
+
+205
+00:12:02,850 --> 00:12:03,300
+Listo.
+
+206
+00:12:04,740 --> 00:12:06,480
+Ahora, pero tengo un pequeño detalle aquí.
+
+207
+00:12:07,420 --> 00:12:13,180
+Si vamos a formulario vamos a anotar que no solo necesito cambiar el class para que sea mejor la caja
+
+208
+00:12:13,180 --> 00:12:19,180
+de texto, también necesito cambiarle el placeholder o el label que representa a cada caja de texto.
+
+209
+00:12:19,780 --> 00:12:22,330
+Para crear password aparece ingrese password.
+
+210
+00:12:22,450 --> 00:12:24,970
+Para repetir password aparece confirmar password.
+
+211
+00:12:25,000 --> 00:12:28,150
+El texto es diferente e individual para cada caja de texto.
+
+212
+00:12:28,630 --> 00:12:33,900
+Entonces quiero agregarle ese texto también para el nombre que aparezca acá, ingrese el nombre otro
+
+213
+00:12:33,940 --> 00:12:37,180
+que diga ingrese apellido y otro que ingrese número telefónico.
+
+214
+00:12:37,180 --> 00:12:38,350
+Otro que ingrese email.
+
+215
+00:12:38,650 --> 00:12:39,610
+Cómo lo voy a hacer?
+
+216
+00:12:40,390 --> 00:12:42,970
+En ese caso, sí tendría que ser algo individual.
+
+217
+00:12:43,240 --> 00:12:47,920
+No te preocupes que dentro de esta función vamos a trabajarlo después de la línea del super.
+
+218
+00:12:48,370 --> 00:12:49,360
+Vamos a darle un enter.
+
+219
+00:12:51,870 --> 00:12:55,530
+Y hacemos un self fields.
+
+220
+00:12:56,870 --> 00:12:58,850
+Y llamamos al campo en particular.
+
+221
+00:12:58,850 --> 00:12:59,690
+Que quieres trabajar.
+
+222
+00:12:59,690 --> 00:13:01,310
+En este caso va a ser First Name.
+
+223
+00:13:03,410 --> 00:13:04,280
+Punto Widget.
+
+224
+00:13:06,080 --> 00:13:15,020
+Apuntó atributos AT MS y llamó al atributo que se llama placeholder.
+
+225
+00:13:15,980 --> 00:13:17,420
+Y cuál va a ser el folder?
+
+226
+00:13:18,280 --> 00:13:19,210
+Yo quiero que sea.
+
+227
+00:13:20,020 --> 00:13:20,980
+Ingrese nombre.
+
+228
+00:13:22,720 --> 00:13:23,230
+Listo.
+
+229
+00:13:24,480 --> 00:13:28,320
+Siguiente campo quiero ahora trabajar para el Sename.
+
+230
+00:13:30,800 --> 00:13:31,520
+Last name.
+
+231
+00:13:31,520 --> 00:13:32,240
+Entonces sería.
+
+232
+00:13:32,550 --> 00:13:33,050
+Order.
+
+233
+00:13:33,050 --> 00:13:33,680
+Ingrese.
+
+234
+00:13:37,910 --> 00:13:38,630
+Apellido.
+
+235
+00:13:38,960 --> 00:13:39,920
+Apellidos.
+
+236
+00:13:42,040 --> 00:13:42,790
+Sigamos.
+
+237
+00:13:43,800 --> 00:13:47,130
+También ahora, para el fan number, el número telefónico.
+
+238
+00:13:50,590 --> 00:13:51,700
+Phone number.
+
+239
+00:13:52,890 --> 00:13:54,090
+El va a ser.
+
+240
+00:13:55,380 --> 00:13:56,490
+Ingrese teléfono.
+
+241
+00:13:59,440 --> 00:14:01,140
+Y también quiero otro para el email.
+
+242
+00:14:01,210 --> 00:14:03,310
+Copiamos, pegamos.
+
+243
+00:14:04,840 --> 00:14:06,940
+El campo como se llama y.
+
+244
+00:14:09,870 --> 00:14:10,470
+Ingresé.
+
+245
+00:14:12,010 --> 00:14:12,400
+Email.
+
+246
+00:14:14,540 --> 00:14:15,560
+Y eso sería todo.
+
+247
+00:14:15,800 --> 00:14:17,270
+Vamos a borrar todos los cambios.
+
+248
+00:14:17,300 --> 00:14:18,650
+Menú File Safe All.
+
+249
+00:14:20,630 --> 00:14:21,890
+Vamos a la página nuevamente.
+
+250
+00:14:22,220 --> 00:14:22,810
+Register.
+
+251
+00:14:22,850 --> 00:14:23,720
+Voy a actualizar.
+
+252
+00:14:23,770 --> 00:14:26,060
+Mira cómo se veía antes y ahora como se va a ver.
+
+253
+00:14:26,810 --> 00:14:28,370
+Y mira cómo ha cambiado.
+
+254
+00:14:28,390 --> 00:14:34,960
+Ahora sí, ya aparece el estilo y también aparece el placeholder que he definido dentro de esta clase
+
+255
+00:14:34,970 --> 00:14:35,360
+meta.
+
+256
+00:14:36,610 --> 00:14:42,370
+Crear password, repetir password ingrese email, ingrese telefono, ingrese nombre y apellidos Continuamos
+
+257
+00:14:42,370 --> 00:14:43,390
+en el siguiente capítulo.

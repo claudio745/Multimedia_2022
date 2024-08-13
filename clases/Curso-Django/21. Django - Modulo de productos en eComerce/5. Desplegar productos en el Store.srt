@@ -1,0 +1,503 @@
+1
+00:00:00,420 --> 00:00:07,200
+En este capítulo vamos a crear la consulta que me permita llenar esta tabla de productos en la página
+
+2
+00:00:07,200 --> 00:00:07,710
+de Store.
+
+3
+00:00:08,650 --> 00:00:09,750
+Estamos en Atom.
+
+4
+00:00:10,000 --> 00:00:12,760
+Vamos a ir a la carpeta Store, la App Store.
+
+5
+00:00:13,150 --> 00:00:15,780
+Y ahora vamos a abrir el punto PIN.
+
+6
+00:00:15,850 --> 00:00:17,680
+Dónde está la función de Store?
+
+7
+00:00:18,910 --> 00:00:22,870
+En este caso lo que quiero es hacer la consulta de productos, por ello en la parte superior comienzo
+
+8
+00:00:22,870 --> 00:00:24,520
+importando el models.
+
+9
+00:00:26,610 --> 00:00:33,500
+Y aquí agregó que invoque a Product y dentro de la función vamos a indicarle products.
+
+10
+00:00:33,540 --> 00:00:40,020
+Esta variable va a ser igual a product, punto object, punto all.
+
+11
+00:00:41,780 --> 00:00:45,590
+Punto Filter porque quiero que solo me devuelva aquellos productos que están activos.
+
+12
+00:00:46,200 --> 00:00:47,300
+Es Available.
+
+13
+00:00:49,330 --> 00:00:50,260
+Igual a true.
+
+14
+00:00:52,160 --> 00:00:57,230
+Algo adicional que también quiero que me devuelve es la cantidad de productos que tengo en la base de
+
+15
+00:00:57,230 --> 00:00:57,810
+datos.
+
+16
+00:00:58,760 --> 00:01:03,350
+Por eso voy a crear aquí otra variable que va a ser igual a product.
+
+17
+00:01:03,810 --> 00:01:05,570
+Un momento, aquí Product.
+
+18
+00:01:06,840 --> 00:01:07,500
+Punto.
+
+19
+00:01:08,340 --> 00:01:08,820
+Count.
+
+20
+00:01:09,450 --> 00:01:10,410
+La función count.
+
+21
+00:01:11,960 --> 00:01:12,620
+Lo tenemos.
+
+22
+00:01:12,620 --> 00:01:16,190
+Y ahora estos dos valores voy a incorporarlos en un diccionario.
+
+23
+00:01:16,550 --> 00:01:18,320
+Este diccionario lo voy a llamar Context.
+
+24
+00:01:20,900 --> 00:01:21,860
+Y aquí la vamos a llamar.
+
+25
+00:01:21,860 --> 00:01:23,330
+Qué products.
+
+26
+00:01:25,360 --> 00:01:26,020
+Va a ser igual.
+
+27
+00:01:26,020 --> 00:01:26,350
+A quién?
+
+28
+00:01:26,740 --> 00:01:28,900
+A los productos que me vienen de la base de datos.
+
+29
+00:01:29,720 --> 00:01:30,580
+El producto con.
+
+30
+00:01:32,920 --> 00:01:38,410
+Va a ser igual al valor del blog con la cantidad de productos que tengo.
+
+31
+00:01:39,250 --> 00:01:46,540
+Está listo en la función return render luego del editor HTML y le voy a poner una coma y le paso este
+
+32
+00:01:46,570 --> 00:01:47,590
+diccionario de datos.
+
+33
+00:01:48,250 --> 00:01:48,850
+Perfecto.
+
+34
+00:01:48,880 --> 00:01:49,680
+Voy a guardar los cambios.
+
+35
+00:01:49,690 --> 00:01:50,470
+Menús falstaff.
+
+36
+00:01:50,470 --> 00:01:50,830
+Fool.
+
+37
+00:01:53,050 --> 00:01:55,240
+Vamos ahora a la carpeta Templates.
+
+38
+00:01:56,580 --> 00:02:00,270
+Y aquí aparece la carpeta store y vamos al editor punto HTML.
+
+39
+00:02:01,970 --> 00:02:07,400
+Dentro de esta estructura vamos a buscar al segmento que represente al producto.
+
+40
+00:02:07,400 --> 00:02:09,650
+Está un poquito desordenado, no hay problema.
+
+41
+00:02:09,980 --> 00:02:17,270
+Voy a seleccionar todo el código y vamos a ir al menú Edit Limes y aquí aparece el auto Intent.
+
+42
+00:02:17,690 --> 00:02:18,250
+Perfecto.
+
+43
+00:02:18,260 --> 00:02:19,400
+Se ha organizado mejor.
+
+44
+00:02:20,250 --> 00:02:21,600
+Vamos a la parte inferior.
+
+45
+00:02:21,930 --> 00:02:25,530
+Y aquí debe aparecer una sentencia de diff class row.
+
+46
+00:02:25,890 --> 00:02:30,120
+Luego debe aparecer un diff con M4.
+
+47
+00:02:32,100 --> 00:02:33,240
+Ya que aparece figure.
+
+48
+00:02:33,270 --> 00:02:34,710
+Vamos a reconocerlo de esta forma.
+
+49
+00:02:35,220 --> 00:02:42,180
+Este div class con M4 representa lo que es el producto.
+
+50
+00:02:42,570 --> 00:02:43,620
+Está dentro de un rango.
+
+51
+00:02:43,620 --> 00:02:46,710
+Si lo notas, el RAW lo está rodeando.
+
+52
+00:02:46,710 --> 00:02:49,710
+Vas a notar que tiene una una línea azul.
+
+53
+00:02:49,890 --> 00:02:51,760
+Este es el rojo donde van a ir todos los productos.
+
+54
+00:02:51,780 --> 00:02:53,370
+El container de todos los productos.
+
+55
+00:02:54,450 --> 00:02:55,800
+Aquí tengo un producto.
+
+56
+00:02:55,800 --> 00:02:56,400
+Por ahora.
+
+57
+00:02:56,970 --> 00:03:00,390
+Voy a tomar ese producto como si fuera mi base.
+
+58
+00:03:01,670 --> 00:03:09,510
+Entonces lo que voy a hacer es que en la cabecera voy a colocar aquí unas llaves, porcentaje muy similar
+
+59
+00:03:09,510 --> 00:03:11,030
+a lo que hicimos antes con la página home.
+
+60
+00:03:12,460 --> 00:03:13,030
+Le digo.
+
+61
+00:03:13,570 --> 00:03:15,040
+Voy a hacer un bucle for.
+
+62
+00:03:16,110 --> 00:03:16,710
+Producto.
+
+63
+00:03:19,520 --> 00:03:20,360
+Introducción.
+
+64
+00:03:22,280 --> 00:03:24,410
+Comienza acá y quiero que termine aquí.
+
+65
+00:03:26,550 --> 00:03:26,760
+Aquí.
+
+66
+00:03:26,760 --> 00:03:27,540
+Lo voy a poner.
+
+67
+00:03:27,840 --> 00:03:28,500
+Ya ves.
+
+68
+00:03:29,280 --> 00:03:30,000
+Porcentaje?
+
+69
+00:03:31,120 --> 00:03:33,070
+Y le pongo end for.
+
+70
+00:03:34,110 --> 00:03:34,650
+Perfecto.
+
+71
+00:03:35,490 --> 00:03:37,140
+Y vamos a ir reemplazando los valores.
+
+72
+00:03:37,500 --> 00:03:40,440
+Este, por ejemplo, representa el título del producto.
+
+73
+00:03:41,130 --> 00:03:42,150
+Voy a reemplazarlo.
+
+74
+00:03:44,370 --> 00:03:51,060
+Quito este texto y le voy a colocar en su lugar Product Product name.
+
+75
+00:03:52,520 --> 00:03:52,940
+Listo.
+
+76
+00:03:53,750 --> 00:03:56,000
+Y aquí aparece el precio del producto.
+
+77
+00:03:57,190 --> 00:03:58,780
+A mantener el signo de dólar por delante.
+
+78
+00:04:00,240 --> 00:04:02,040
+Aquí le pongo un product.
+
+79
+00:04:03,080 --> 00:04:03,680
+Punto.
+
+80
+00:04:04,190 --> 00:04:04,670
+Price.
+
+81
+00:04:07,380 --> 00:04:10,020
+Visto este siguiente Old Price Hall.
+
+82
+00:04:10,020 --> 00:04:11,190
+Lo voy a borrar por ahora.
+
+83
+00:04:13,060 --> 00:04:13,990
+No tengo un profesor.
+
+84
+00:04:14,680 --> 00:04:16,900
+El siguiente texto es un botón.
+
+85
+00:04:17,770 --> 00:04:19,360
+Agregar al carrito de compras.
+
+86
+00:04:20,960 --> 00:04:22,250
+Voy a poder quitarlo.
+
+87
+00:04:22,280 --> 00:04:23,300
+Este es un label simple.
+
+88
+00:04:23,300 --> 00:04:24,470
+Es un botón Agregar.
+
+89
+00:04:25,740 --> 00:04:26,760
+Al carrito le pongo.
+
+90
+00:04:29,740 --> 00:04:31,840
+Eso sería todo por ahora.
+
+91
+00:04:31,870 --> 00:04:31,990
+Ah!
+
+92
+00:04:32,020 --> 00:04:33,550
+Me falta la imagen.
+
+93
+00:04:34,060 --> 00:04:35,830
+Esta imagen también está rodeada.
+
+94
+00:04:36,510 --> 00:04:37,930
+A ver, vamos a colocarle aquí.
+
+95
+00:04:37,960 --> 00:04:38,920
+Voy a eliminar esto.
+
+96
+00:04:40,440 --> 00:04:41,550
+Y entre llaves.
+
+97
+00:04:41,760 --> 00:04:42,630
+Dobles llaves.
+
+98
+00:04:43,410 --> 00:04:45,060
+Vamos a ponerle producto.
+
+99
+00:04:46,230 --> 00:04:47,420
+Punto y Mechas.
+
+100
+00:04:47,460 --> 00:04:48,570
+Punto Llorente.
+
+101
+00:04:50,170 --> 00:04:50,620
+Listo.
+
+102
+00:04:51,070 --> 00:04:51,940
+Lo tenemos.
+
+103
+00:04:52,630 --> 00:04:54,610
+Voy a darle Mayfield Safe Hall.
+
+104
+00:04:56,940 --> 00:04:58,020
+Estamos en la página.
+
+105
+00:04:58,050 --> 00:05:05,340
+Voy a refrescar y ya está alistando los productos dentro de la página store.
+
+106
+00:05:06,390 --> 00:05:07,260
+Perfecto.
+
+107
+00:05:07,530 --> 00:05:13,050
+Pero algo adicional yo quiero que aquí aparezca el número de productos que estén en la base de datos.
+
+108
+00:05:13,060 --> 00:05:14,580
+En este momento está rodeado.
+
+109
+00:05:15,030 --> 00:05:16,140
+Vamos a reemplazarlo.
+
+110
+00:05:17,160 --> 00:05:18,420
+Vamos a la parte superior.
+
+111
+00:05:18,430 --> 00:05:19,260
+Si aquí aparece.
+
+112
+00:05:19,260 --> 00:05:20,820
+Mira ese stand que hice.
+
+113
+00:05:20,820 --> 00:05:23,130
+32 items encontrados.
+
+114
+00:05:23,550 --> 00:05:25,860
+Bien, vamos a reemplazar este 32.
+
+115
+00:05:27,400 --> 00:05:31,780
+Por la variable que estoy mandando que es product count.
+
+116
+00:05:32,960 --> 00:05:38,210
+Pero quiero que aparezca como si fuera en negrita este número para que se diferencie del otro texto.
+
+117
+00:05:38,210 --> 00:05:39,120
+Así que le pongo B.
+
+118
+00:05:41,310 --> 00:05:44,340
+Aquí le ponemos un flash para cerrar la negrita.
+
+119
+00:05:46,350 --> 00:05:48,030
+Le voy a poner productos.
+
+120
+00:05:50,230 --> 00:05:50,950
+Encontrados.
+
+121
+00:05:52,670 --> 00:05:54,170
+Vamos a borrar los cambios.
+
+122
+00:05:55,300 --> 00:05:56,470
+En Falstaff Hall.
+
+123
+00:05:57,860 --> 00:06:04,490
+Estamos en la página, vamos a refrescar y mira, ya apareció aquí el 11 11 productos encontrados.
+
+124
+00:06:04,910 --> 00:06:10,250
+Ya me estoy devolviendo entonces los productos de la base de datos y también la cantidad de productos
+
+125
+00:06:10,250 --> 00:06:11,900
+que tengo está contando los productos.
+
+126
+00:06:12,140 --> 00:06:17,780
+En el próximo capítulo vamos a trabajar para desplegar la data desde la base de datos de categorías.

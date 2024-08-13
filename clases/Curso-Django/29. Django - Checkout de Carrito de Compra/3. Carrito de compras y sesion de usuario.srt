@@ -1,0 +1,1175 @@
+1
+00:00:00,390 --> 00:00:05,070
+Vamos a continuar trabajando en el carrito de compra y la página de checkout.
+
+2
+00:00:05,760 --> 00:00:08,250
+Vamos a verificar primero que no estoy logueado.
+
+3
+00:00:09,240 --> 00:00:09,780
+Por si acaso.
+
+4
+00:00:09,780 --> 00:00:12,570
+Si estás logueado, dale sin salir sesión.
+
+5
+00:00:13,810 --> 00:00:15,410
+Y ahora vamos al carrito de compras.
+
+6
+00:00:15,430 --> 00:00:17,000
+Tengo dos elementos en el carrito.
+
+7
+00:00:17,100 --> 00:00:20,170
+Bueno, tengo un producto con una cantidad de dos elementos.
+
+8
+00:00:21,680 --> 00:00:27,230
+Yo era lo que yo decía, lo siguiente yo no estoy logueado, estoy como si fuera un usuario anónimo
+
+9
+00:00:27,230 --> 00:00:33,410
+en este momento, pero si quisiera entrar a la página de checkout, lo que quisiera es que me obligue
+
+10
+00:00:33,410 --> 00:00:35,060
+a primero hacer el login.
+
+11
+00:00:36,140 --> 00:00:38,860
+No que vaya directamente como está sucediendo en este momento.
+
+12
+00:00:38,950 --> 00:00:41,030
+Mira, si le doy clic a pagar.
+
+13
+00:00:41,950 --> 00:00:44,210
+Me lleva automáticamente a la página de checkout.
+
+14
+00:00:44,290 --> 00:00:45,090
+Esto está mal.
+
+15
+00:00:45,100 --> 00:00:46,540
+Yo no quisiera que esto ocurra.
+
+16
+00:00:46,930 --> 00:00:52,630
+Quisiera que primero aparezca Elokim en caso de que no haya iniciado sesión.
+
+17
+00:00:53,380 --> 00:01:00,370
+Pero si ya estoy iniciado con sesión y le hago clic a pagar, entonces sí debería llevarme directamente
+
+18
+00:01:00,940 --> 00:01:01,990
+a la página de checkout.
+
+19
+00:01:02,830 --> 00:01:06,190
+Vamos a crear esta lógica dentro de nuestro código.
+
+20
+00:01:06,760 --> 00:01:07,820
+Estamos dentro del auto.
+
+21
+00:01:07,840 --> 00:01:10,960
+Vamos a ir a la carpeta Cars y ahora al archivo Buscar.
+
+22
+00:01:11,830 --> 00:01:18,850
+Vamos a comenzar agregando una librería muy importante que nos va a servir acondicionar el acceso a
+
+23
+00:01:18,850 --> 00:01:20,800
+la página de checkout por él.
+
+24
+00:01:21,130 --> 00:01:31,680
+Así que hacemos un front go, punto country, punto output, decoradores y le digo que importe a Login
+
+25
+00:01:31,690 --> 00:01:32,350
+Required.
+
+26
+00:01:34,470 --> 00:01:36,000
+Ahora vamos a la parte inferior.
+
+27
+00:01:37,760 --> 00:01:38,990
+En la función de check out.
+
+28
+00:01:40,510 --> 00:01:46,060
+Y aquí, en la cabecera del método, antes del diff checkout, vamos a agregar.
+
+29
+00:01:47,550 --> 00:01:48,960
+Es el Aguirre Quartet.
+
+30
+00:01:50,430 --> 00:01:52,510
+Y como parámetro lo indicó Elojim.
+
+31
+00:01:53,190 --> 00:01:56,710
+JL va a ser ese templo y lo que.
+
+32
+00:01:58,740 --> 00:01:59,970
+Vamos a borrar los cambios.
+
+33
+00:02:00,000 --> 00:02:03,150
+Menú Field Safe all y vamos a probar la página.
+
+34
+00:02:03,960 --> 00:02:05,340
+Estamos dentro de él.
+
+35
+00:02:05,340 --> 00:02:08,970
+127 0018 cart en el página de carrito.
+
+36
+00:02:09,480 --> 00:02:10,380
+Voy a refrescar.
+
+37
+00:02:11,390 --> 00:02:13,640
+Y ahora le voy a dar clic a apagar.
+
+38
+00:02:13,640 --> 00:02:19,880
+Recuerda que no estoy logueado, vamos a ver que sucede y si me llevó directamente a la página de login.
+
+39
+00:02:21,090 --> 00:02:23,970
+He ingresado las credenciales correctas y le damos click al login.
+
+40
+00:02:24,980 --> 00:02:26,750
+Y ya me llevó hacia.
+
+41
+00:02:28,090 --> 00:02:30,820
+La página de Facebook está correcto.
+
+42
+00:02:31,900 --> 00:02:33,750
+Pero hay un detalle aquí que vas a anotar.
+
+43
+00:02:33,760 --> 00:02:36,220
+Mira el carrito que tenía un elemento ha desaparecido.
+
+44
+00:02:36,640 --> 00:02:40,180
+No te preocupes, que eso lo vamos a tratar más adelante.
+
+45
+00:02:40,660 --> 00:02:42,520
+Por ahora solamente quiero mostrarte esto.
+
+46
+00:02:42,520 --> 00:02:44,920
+Voy a agregar un elemento más a este carrito que está vacío.
+
+47
+00:02:46,820 --> 00:02:52,370
+Listo mi carrito y está con un elemento, un producto y también estoy en sesión.
+
+48
+00:02:52,820 --> 00:02:56,510
+A ver, ahora vamos a darle clic el botón Pagar para que me lleve a la página de checkout.
+
+49
+00:02:56,510 --> 00:02:57,350
+Debería llevarme?
+
+50
+00:02:57,980 --> 00:03:02,030
+Y si me está llevando en este caso, entonces ya funciona la lógica.
+
+51
+00:03:02,240 --> 00:03:07,640
+Si es que no estoy logueado, me voy a llevar a Login, pero si estoy logueado ya me va a llevar directamente
+
+52
+00:03:07,640 --> 00:03:08,990
+a la página de checkout.
+
+53
+00:03:09,560 --> 00:03:12,740
+Estando en la página de checkout voy a notar algo muy interesante.
+
+54
+00:03:13,010 --> 00:03:15,130
+Aquí aparece el botón Orden a los productos.
+
+55
+00:03:15,140 --> 00:03:23,000
+Cuando le de clic a este botón, lo que debe ocurrir es que este evento va a tomar todos los datos que
+
+56
+00:03:23,000 --> 00:03:28,100
+aparezcan en este formulario y va a comenzar el proceso de pago de los productos.
+
+57
+00:03:29,300 --> 00:03:36,170
+Entonces necesito aquí agregar la lógica para que pueda yo capturar datos de la dirección de facturación
+
+58
+00:03:36,170 --> 00:03:37,670
+de esta página checkout.
+
+59
+00:03:37,970 --> 00:03:46,010
+Vamos entonces hacia el Temples Store, ya que aparece el punto HTML y en la clase pasada habíamos agregado
+
+60
+00:03:46,010 --> 00:03:47,830
+un objeto de tipo formulario.
+
+61
+00:03:47,840 --> 00:03:48,650
+Aquí lo puedes ver.
+
+62
+00:03:49,130 --> 00:03:51,560
+En mi caso estoy en la línea 19.
+
+63
+00:03:51,560 --> 00:04:00,080
+Después del título Dirección de facturación le había puesto For Action Post Método Post y aquí le voy
+
+64
+00:04:00,080 --> 00:04:00,710
+a agregar.
+
+65
+00:04:02,200 --> 00:04:05,380
+La sintaxis para que pueda capturar los valores del formulario.
+
+66
+00:04:05,410 --> 00:04:06,150
+S es r.
+
+67
+00:04:06,160 --> 00:04:06,580
+F.
+
+68
+00:04:07,690 --> 00:04:08,050
+Toque.
+
+69
+00:04:11,180 --> 00:04:13,280
+Lo teníamos listo aquí.
+
+70
+00:04:13,280 --> 00:04:14,450
+Comenzar el formulario.
+
+71
+00:04:14,930 --> 00:04:15,650
+Voy a ponerlo.
+
+72
+00:04:16,430 --> 00:04:19,070
+Y culminaba en la parte inferior.
+
+73
+00:04:19,960 --> 00:04:20,260
+Aquí.
+
+74
+00:04:21,640 --> 00:04:27,550
+Pero voy a hacer que el término del formulario sea después de las declaraciones de los botones.
+
+75
+00:04:27,580 --> 00:04:28,230
+Voy a cortar.
+
+76
+00:04:28,240 --> 00:04:33,970
+Este es el form de Control X y vamos a más abajo.
+
+77
+00:04:35,770 --> 00:04:37,030
+Un poco más abajo.
+
+78
+00:04:37,420 --> 00:04:43,480
+Y mira, aquí aparecen estos dos botones que dicen ordenar los productos y continuar comprando.
+
+79
+00:04:43,690 --> 00:04:44,590
+Continúa comprando.
+
+80
+00:04:44,740 --> 00:04:45,700
+Voy a darle enter acá.
+
+81
+00:04:46,980 --> 00:04:48,480
+Y aquí cierro el formulario.
+
+82
+00:04:49,900 --> 00:04:57,400
+También voy a hacer que este href que representa ordenar los productos sea un botón, ya sea este tipo
+
+83
+00:04:57,400 --> 00:04:58,060
+href.
+
+84
+00:04:58,630 --> 00:05:00,850
+Entonces voy a quitar este href.
+
+85
+00:05:02,880 --> 00:05:04,830
+Desde que en vez de a él le voy a poner Button.
+
+86
+00:05:06,300 --> 00:05:07,140
+En la parte final.
+
+87
+00:05:07,170 --> 00:05:08,520
+Vamos a cerrar con Button.
+
+88
+00:05:09,420 --> 00:05:09,840
+Listo?
+
+89
+00:05:10,860 --> 00:05:11,970
+El tipo del botón.
+
+90
+00:05:12,240 --> 00:05:12,900
+Voy a ponerlo acá.
+
+91
+00:05:14,060 --> 00:05:14,690
+El tipo.
+
+92
+00:05:16,570 --> 00:05:17,830
+Va a ser submit.
+
+93
+00:05:20,050 --> 00:05:20,830
+Y el nombre.
+
+94
+00:05:21,810 --> 00:05:23,330
+Vamos a poner también un nombre bottom.
+
+95
+00:05:23,670 --> 00:05:25,320
+También le voy a poner submit.
+
+96
+00:05:26,860 --> 00:05:27,830
+Vamos a borrar los cambios.
+
+97
+00:05:27,860 --> 00:05:28,900
+Menú false all.
+
+98
+00:05:30,910 --> 00:05:34,000
+En la página, refrescamos y todo parece correcto.
+
+99
+00:05:34,510 --> 00:05:39,970
+Antes de continuar con el procedimiento para poder ordenar los productos, quiero enseñarte algo.
+
+100
+00:05:40,630 --> 00:05:45,910
+Hemos vuelto al carrito de compras y como puedes notar, yo estoy dentro de una sección que se llaman
+
+101
+00:05:45,970 --> 00:05:46,330
+Store.
+
+102
+00:05:47,770 --> 00:05:51,430
+Voy a eliminar el carrito de compras que pertenece al usuario Néstor.
+
+103
+00:05:52,800 --> 00:05:53,430
+Lo hemos quitado.
+
+104
+00:05:53,430 --> 00:05:54,240
+Está vacío.
+
+105
+00:05:54,870 --> 00:05:56,310
+Y también voy a salir de sesión.
+
+106
+00:05:56,950 --> 00:05:57,360
+Listo.
+
+107
+00:05:57,720 --> 00:06:00,590
+Hemos salido de sesión y ahora vuelvo.
+
+108
+00:06:00,600 --> 00:06:06,180
+Estoy como visitante sin una sesión iniciada y vuelvo al Store a la tienda.
+
+109
+00:06:07,150 --> 00:06:08,560
+Puede seleccionar este producto.
+
+110
+00:06:11,290 --> 00:06:12,970
+Y lo agrego a mi carrito de compras.
+
+111
+00:06:13,870 --> 00:06:14,260
+Listo?
+
+112
+00:06:14,830 --> 00:06:15,790
+Ya lo tengo agregado.
+
+113
+00:06:16,420 --> 00:06:18,400
+Ahora lo que quiero es hacer Elokim.
+
+114
+00:06:19,090 --> 00:06:22,510
+Entonces tendría que darle clic al botón Pagar.
+
+115
+00:06:23,380 --> 00:06:25,150
+Pero como no estoy logueado me lleva el login.
+
+116
+00:06:25,780 --> 00:06:30,700
+Entonces voy a agregar mis credenciales, ya las tengo agregadas.
+
+117
+00:06:30,700 --> 00:06:31,870
+Voy a darle clic al botón Login.
+
+118
+00:06:32,290 --> 00:06:33,220
+Perfecto.
+
+119
+00:06:33,580 --> 00:06:34,930
+Ya ingresado.
+
+120
+00:06:34,930 --> 00:06:36,880
+Entonces ha iniciado sesión.
+
+121
+00:06:37,240 --> 00:06:39,820
+Pero vamos al carrito de compras y mira lo que pasó.
+
+122
+00:06:40,480 --> 00:06:42,220
+El carrito de compras está vacío.
+
+123
+00:06:42,580 --> 00:06:48,550
+Entonces aquí tengo un gran problema, porque si no estoy en sesión y agrego un conjunto de productos
+
+124
+00:06:48,550 --> 00:06:53,890
+a mi carrito de compras y luego cuando quiero hacer el check out e iniciar sesión, mi carrito de compras
+
+125
+00:06:53,890 --> 00:06:55,240
+inmediatamente se limpia.
+
+126
+00:06:55,870 --> 00:06:56,950
+Hay una desconexión.
+
+127
+00:06:57,190 --> 00:06:59,230
+Vamos a trabajar esto en nuestro código.
+
+128
+00:07:00,480 --> 00:07:02,010
+Vamos a la carpeta cartas.
+
+129
+00:07:03,370 --> 00:07:05,020
+Y ahora nos ubicamos en el motel.
+
+130
+00:07:05,680 --> 00:07:06,190
+Por qué?
+
+131
+00:07:06,640 --> 00:07:12,070
+Porque lo que yo necesito ahora es que el Car item tenga una relación con el usuario.
+
+132
+00:07:12,310 --> 00:07:16,810
+Si lo notas, ninguna de estas propiedades está referida al usuario aún.
+
+133
+00:07:17,920 --> 00:07:19,480
+Vamos a agregar entonces aquí.
+
+134
+00:07:20,500 --> 00:07:24,240
+Un user y le digo que es el user models.
+
+135
+00:07:24,300 --> 00:07:25,420
+Punto, Frank.
+
+136
+00:07:29,720 --> 00:07:33,330
+Se va a relacionar un momento, se va a relacionar con account?
+
+137
+00:07:34,980 --> 00:07:36,810
+Le voy a indicar que sea un delito.
+
+138
+00:07:38,740 --> 00:07:39,250
+Models.
+
+139
+00:07:39,360 --> 00:07:40,870
+Punto Cascade.
+
+140
+00:07:44,200 --> 00:07:46,020
+Y también les digo que permitan módulos.
+
+141
+00:07:46,030 --> 00:07:47,710
+Por eso le pongo nul igual a true.
+
+142
+00:07:49,820 --> 00:07:52,100
+También aprovechó para indicarle que el kart.
+
+143
+00:07:52,640 --> 00:07:53,540
+La propiedad kart.
+
+144
+00:07:54,520 --> 00:07:57,010
+También permiten nulos null igual a true.
+
+145
+00:07:59,790 --> 00:08:00,510
+Lo tengo junto.
+
+146
+00:08:02,540 --> 00:08:12,770
+Vamos ahora a la parte superior y le agregamos el import para account from account models import account.
+
+147
+00:08:14,410 --> 00:08:18,100
+Como estoy agregando y cambiando la estructura de esta entidad.
+
+148
+00:08:18,100 --> 00:08:22,210
+Car item necesito volver a crear un archivo de migración y ejecutarlo.
+
+149
+00:08:23,110 --> 00:08:23,890
+Voy a mi base.
+
+150
+00:08:24,130 --> 00:08:25,510
+Vamos a detener el servidor.
+
+151
+00:08:27,210 --> 00:08:28,010
+Voy a limpiarlo.
+
+152
+00:08:28,800 --> 00:08:30,060
+Y aquí vamos a escribir.
+
+153
+00:08:30,060 --> 00:08:30,750
+Peyton.
+
+154
+00:08:32,740 --> 00:08:34,620
+Espacio y.
+
+155
+00:08:36,900 --> 00:08:37,770
+Espacio.
+
+156
+00:08:39,100 --> 00:08:40,450
+Make might lessons.
+
+157
+00:08:40,930 --> 00:08:42,670
+Pero aquí tengo un pequeño problema.
+
+158
+00:08:44,060 --> 00:08:44,540
+Porque.
+
+159
+00:08:44,540 --> 00:08:48,500
+Porque hay que tener cuidado con los archivos que vas editando.
+
+160
+00:08:48,530 --> 00:08:54,650
+No he grabado los cambios en este archivo, por eso voy a ir menú File Safe o el primero antes de ejecutarlo.
+
+161
+00:08:54,660 --> 00:08:57,230
+Ten mucho cuidado con la grabación de los archivos.
+
+162
+00:08:57,710 --> 00:09:02,560
+Ahora, si volvemos a la consola, hay que aparece el Python Manager Make Migration.
+
+163
+00:09:02,660 --> 00:09:03,470
+Le damos enter.
+
+164
+00:09:05,610 --> 00:09:05,940
+Listo.
+
+165
+00:09:05,940 --> 00:09:07,350
+Se generó el archivo de migración.
+
+166
+00:09:08,450 --> 00:09:10,010
+Y ahora vamos a ejecutarlo.
+
+167
+00:09:10,010 --> 00:09:17,990
+Para esto escribimos Python, espacio manage, punto pi y espacio y le damos enter.
+
+168
+00:09:21,530 --> 00:09:27,200
+Ahora escribimos el comando para ejecutar nuestro servidor web que es Python Manage API Server y le
+
+169
+00:09:27,200 --> 00:09:29,870
+vamos a entrar si vamos a mantener la página.
+
+170
+00:09:30,260 --> 00:09:33,830
+He salido de sesión mi problema y voy al componente de login.
+
+171
+00:09:34,010 --> 00:09:38,690
+Mi problema es cuando yo inicio Elojim, cuando le dé click a este botón de login.
+
+172
+00:09:38,700 --> 00:09:47,600
+Yo quiero que esta transacción busque si existe algún carrito de compras dentro del portal y si existe,
+
+173
+00:09:47,600 --> 00:09:50,990
+entonces que se agregue a la sesión del usuario.
+
+174
+00:09:52,250 --> 00:09:57,350
+Por ese motivo vamos a ir a la carpeta account y ahora al buscar y.
+
+175
+00:09:58,710 --> 00:10:05,250
+Y lo primero que tenemos que hacer es importar dentro de este archivo la función que me permite buscar
+
+176
+00:10:05,490 --> 00:10:06,960
+al carrito de compras.
+
+177
+00:10:07,830 --> 00:10:14,640
+Vamos a la parte superior y aquí le voy a poner from cards views.
+
+178
+00:10:15,890 --> 00:10:20,330
+Y que importe a esta función que antes hemos trabajado que es el CAR Heidy.
+
+179
+00:10:21,170 --> 00:10:28,160
+También vamos a necesitar importar a los modelos del kart, vamos a poner un kart models.
+
+180
+00:10:29,260 --> 00:10:30,730
+De aquí importamos.
+
+181
+00:10:32,450 --> 00:10:33,230
+Al kart.
+
+182
+00:10:33,230 --> 00:10:34,190
+A la entidad kart.
+
+183
+00:10:36,260 --> 00:10:37,790
+Y también al car ítem.
+
+184
+00:10:39,550 --> 00:10:40,000
+Listo.
+
+185
+00:10:40,000 --> 00:10:43,800
+Ahora sí, vayamos a la función donde realizamos.
+
+186
+00:10:44,020 --> 00:10:45,790
+Elokim está en la parte inferior.
+
+187
+00:10:46,800 --> 00:10:47,520
+Desde que apareció.
+
+188
+00:10:47,550 --> 00:10:49,350
+Mira el logging.
+
+189
+00:10:51,950 --> 00:10:57,920
+Y tenemos que trabajar exactamente en esta condición if, porque esta condición if es la que te está
+
+190
+00:10:57,920 --> 00:11:00,770
+indicando que el usuario ya esta logueado.
+
+191
+00:11:00,770 --> 00:11:03,650
+El usuario existe en la aplicación y se está apoyando.
+
+192
+00:11:04,820 --> 00:11:08,210
+Bien, entonces vamos a ingresar este if.
+
+193
+00:11:11,270 --> 00:11:15,290
+Y antes del Outlook, voy a hacer un espaciado y elipse aquí.
+
+194
+00:11:16,730 --> 00:11:20,990
+Y vamos a agregar esta primera lógica para encontrar el carrito de compras.
+
+195
+00:11:21,620 --> 00:11:23,710
+Voy a buscar el carrito de compras y vamos al carro.
+
+196
+00:11:24,170 --> 00:11:26,720
+Object punto Get.
+
+197
+00:11:27,780 --> 00:11:30,780
+Y lo busco por su propiedad.
+
+198
+00:11:30,780 --> 00:11:31,600
+Karl Heidi.
+
+199
+00:11:32,010 --> 00:11:37,080
+Por ese motivo llamo a la función que definió en la parte superior que se llama cara y di con raya para
+
+200
+00:11:37,080 --> 00:11:37,560
+adelante.
+
+201
+00:11:39,240 --> 00:11:39,960
+Y le paso.
+
+202
+00:11:39,960 --> 00:11:40,950
+El objeto rico es.
+
+203
+00:11:42,970 --> 00:11:50,380
+Lo siguiente que voy a hacer es saber si este carrito Heidy tiene items, tiene elementos, líneas,
+
+204
+00:11:50,380 --> 00:11:52,120
+productos que ya agregaste al carrito.
+
+205
+00:11:53,890 --> 00:11:56,950
+Voy a utilizar entonces esta variable head start y then exist.
+
+206
+00:11:57,640 --> 00:11:59,410
+Tiene elementos el carrito de compras.
+
+207
+00:12:00,680 --> 00:12:03,380
+Por esto llamo al Card y Team Object.
+
+208
+00:12:05,030 --> 00:12:05,900
+Punto filter.
+
+209
+00:12:08,250 --> 00:12:13,560
+Y voy a filtrarlos por su propiedad cart igual a car, que es el objeto que he encontrado en la parte
+
+210
+00:12:13,560 --> 00:12:14,100
+superior.
+
+211
+00:12:15,800 --> 00:12:20,150
+Y llamó al operador Exit que me devuelve booleano en True False.
+
+212
+00:12:22,650 --> 00:12:27,000
+Y a continuación voy a hacer la condición si es Card y Teng Exit.
+
+213
+00:12:28,460 --> 00:12:29,990
+Entonces que haga lo siguiente.
+
+214
+00:12:29,990 --> 00:12:30,950
+Qué es lo que quiero que haga?
+
+215
+00:12:31,400 --> 00:12:37,940
+Quiero que me obtenga a esa variable item igual a cart.
+
+216
+00:12:38,660 --> 00:12:41,150
+Item object.
+
+217
+00:12:43,410 --> 00:12:44,540
+Font Filter.
+
+218
+00:12:46,490 --> 00:12:47,600
+Card igual a car.
+
+219
+00:12:47,600 --> 00:12:50,480
+O sea, me va a entrar, me va a resolver realmente un arreglo.
+
+220
+00:12:51,260 --> 00:12:57,650
+Este item representa un arreglo, la colección de todos los items elementos que contiene al carrito
+
+221
+00:12:57,650 --> 00:12:58,250
+de compras.
+
+222
+00:12:59,460 --> 00:13:00,450
+Una vez que lo tenga.
+
+223
+00:13:02,390 --> 00:13:08,930
+Si esto tiene, entonces voy a crear un bucle for item id ídem.
+
+224
+00:13:11,260 --> 00:13:12,250
+Uno de los puntos.
+
+225
+00:13:13,490 --> 00:13:19,730
+Y lo que quiero es que item users, la propia user que ha creado hace su momento sea igual al usuario,
+
+226
+00:13:19,730 --> 00:13:21,560
+al user que yo tengo en la parte superior.
+
+227
+00:13:21,570 --> 00:13:27,530
+Mirad de aquí, tengo el objeto de usarlo, estoy agregando el objeto user al item, al car item a cada
+
+228
+00:13:27,530 --> 00:13:30,170
+car item que pertenece al carrito de compras.
+
+229
+00:13:31,610 --> 00:13:33,170
+Y luego voy a hacer un item.
+
+230
+00:13:33,170 --> 00:13:34,390
+Punto safe.
+
+231
+00:13:35,300 --> 00:13:36,680
+Es decir, estoy actualizando.
+
+232
+00:13:37,220 --> 00:13:42,260
+Vamos a agregar colocar toda esta lógica que acabo de escribir dentro de un try exception.
+
+233
+00:13:42,950 --> 00:13:44,190
+Voy a darle un espaciado.
+
+234
+00:13:44,210 --> 00:13:45,530
+Este es todo el código que he hecho.
+
+235
+00:13:47,150 --> 00:13:47,810
+Para separar.
+
+236
+00:13:47,810 --> 00:13:50,150
+No le voy a poner un try en la parte superior.
+
+237
+00:13:52,310 --> 00:13:57,350
+Ya sabes que es muy necesario poner después la siguiente línea del trip con un top.
+
+238
+00:13:58,280 --> 00:13:59,210
+Para que se entienda.
+
+239
+00:13:59,720 --> 00:14:00,200
+Listo.
+
+240
+00:14:00,890 --> 00:14:02,390
+Y ahora a nivel del Tri.
+
+241
+00:14:03,340 --> 00:14:04,210
+Después de Lichtenstein.
+
+242
+00:14:05,140 --> 00:14:06,760
+Voy a colocarle LSP.
+
+243
+00:14:08,260 --> 00:14:09,010
+Dos puntos.
+
+244
+00:14:09,880 --> 00:14:11,950
+Ya que lo colocamos, eso lo hago en paz.
+
+245
+00:14:12,610 --> 00:14:13,660
+Vamos a revisar aquí.
+
+246
+00:14:13,670 --> 00:14:14,590
+Mira esta línea.
+
+247
+00:14:14,590 --> 00:14:17,170
+La puedes tocar y ten con raya para abajo.
+
+248
+00:14:17,170 --> 00:14:21,160
+Y no es con car item sin raya y con la I mayúscula.
+
+249
+00:14:21,520 --> 00:14:27,190
+Ahora sí, vamos a darle menú File Safe All antes de comenzar nuestras pruebas, primero vamos a localhost
+
+250
+00:14:27,220 --> 00:14:34,240
+8000 admin, voy a seleccionar Car Items y me van a aparecer todos estos ítems que tengo almacenados.
+
+251
+00:14:34,720 --> 00:14:37,690
+Tengo aparece los cards que he tenido, he venido trabajando.
+
+252
+00:14:38,020 --> 00:14:39,880
+Voy a seleccionar todos los cards.
+
+253
+00:14:42,310 --> 00:14:46,440
+Que voy a seleccionar aquí la lista de cartas y le doy clic al botón Go.
+
+254
+00:14:47,280 --> 00:14:47,710
+Me dice.
+
+255
+00:14:47,730 --> 00:14:48,780
+Me pregunta si estoy.
+
+256
+00:14:49,290 --> 00:14:50,550
+Si estoy seguro de eliminarlo.
+
+257
+00:14:50,560 --> 00:14:51,810
+Le digo Just and sure.
+
+258
+00:14:52,940 --> 00:14:53,270
+Listo.
+
+259
+00:14:53,270 --> 00:14:53,870
+Se eliminó.
+
+260
+00:14:54,140 --> 00:14:55,160
+Vamos a sacar items.
+
+261
+00:14:55,190 --> 00:14:56,210
+También se eliminó.
+
+262
+00:14:56,330 --> 00:14:56,930
+Perfecto.
+
+263
+00:14:57,200 --> 00:15:00,450
+Ahora, si vamos a la página de nuestro e-commerce.
+
+264
+00:15:01,280 --> 00:15:02,990
+Estamos en la página del e-commerce.
+
+265
+00:15:03,410 --> 00:15:05,270
+Como verás, he salido de sesión.
+
+266
+00:15:05,270 --> 00:15:06,320
+No estoy en sesión.
+
+267
+00:15:07,470 --> 00:15:09,360
+Ahora voy a ir a la tienda.
+
+268
+00:15:09,360 --> 00:15:11,730
+Voy a darle click al navegador al botón tienda.
+
+269
+00:15:12,600 --> 00:15:14,480
+Aquí aparece este producto Camisa moderna.
+
+270
+00:15:14,490 --> 00:15:15,120
+Le doy clic.
+
+271
+00:15:15,690 --> 00:15:18,330
+Seleccionamos un color rojo large.
+
+272
+00:15:19,510 --> 00:15:21,940
+Y le damos clic a agregar a pintar.
+
+273
+00:15:22,330 --> 00:15:23,340
+Se negó a pintar.
+
+274
+00:15:23,350 --> 00:15:24,520
+Perfecto.
+
+275
+00:15:24,850 --> 00:15:26,710
+Ahora voy a iniciar sesión.
+
+276
+00:15:27,670 --> 00:15:29,140
+Darle clic al botón aquí.
+
+277
+00:15:29,140 --> 00:15:29,830
+Pagar.
+
+278
+00:15:31,090 --> 00:15:31,600
+Listo.
+
+279
+00:15:31,600 --> 00:15:34,000
+Aquí ingresé las credenciales para Isabel Login.
+
+280
+00:15:34,330 --> 00:15:35,440
+Vamos a darle login.
+
+281
+00:15:36,510 --> 00:15:37,140
+Y listo.
+
+282
+00:15:37,140 --> 00:15:37,650
+He iniciado.
+
+283
+00:15:38,640 --> 00:15:40,920
+Vayamos otra vez a la página.
+
+284
+00:15:40,920 --> 00:15:42,210
+Administrador de Chango.
+
+285
+00:15:43,140 --> 00:15:49,200
+Está en la página de administración de Jango que aparece en la app de Cards, ya que aparece Card Items.
+
+286
+00:15:49,260 --> 00:15:50,640
+Dale click a Card Items.
+
+287
+00:15:53,150 --> 00:15:58,370
+Y ya te está apareciendo aquí ese elemento que tenemos que es camisa moderna, vamos a réplica, camisa
+
+288
+00:15:58,370 --> 00:16:05,840
+moderna y vas a darte cuenta que este item ya tiene un usuario asignado que es taxi, derecho y mail
+
+289
+00:16:05,840 --> 00:16:06,350
+punto com.
+
+290
+00:16:06,680 --> 00:16:13,100
+El producto, las variaciones, el kart aid y también la cantidad de elementos de este ítem.
+
+291
+00:16:14,030 --> 00:16:16,970
+Entonces, con esto hemos completado la tarea.
+
+292
+00:16:17,390 --> 00:16:22,580
+Si volvemos al carrito de compra, vas a notar que en el carrito de compras aún sigue apareciendo como
+
+293
+00:16:22,580 --> 00:16:23,060
+cero.
+
+294
+00:16:23,570 --> 00:16:28,370
+No te preocupes, en el siguiente capítulo vamos a trabajar dentro de esta lógica.

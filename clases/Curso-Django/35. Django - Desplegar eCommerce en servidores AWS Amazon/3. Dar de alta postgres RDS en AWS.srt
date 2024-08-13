@@ -1,0 +1,947 @@
+1
+00:00:00,390 --> 00:00:04,140
+En este capítulo vamos a continuar trabajando en el tema de la base de datos.
+
+2
+00:00:04,770 --> 00:00:06,900
+Vayamos ahora a la consola principal.
+
+3
+00:00:06,930 --> 00:00:09,760
+Ya sabes, a es Management Console.
+
+4
+00:00:10,410 --> 00:00:12,590
+Aquí te va a aparecer el stock.
+
+5
+00:00:13,020 --> 00:00:13,950
+Vamos a darle clic.
+
+6
+00:00:16,210 --> 00:00:18,220
+Hasta aquí el e-commerce EMP.
+
+7
+00:00:18,790 --> 00:00:20,020
+Vamos a darle click también.
+
+8
+00:00:22,840 --> 00:00:26,940
+Y vamos a ver qué aparece en la parte izquierda.
+
+9
+00:00:26,950 --> 00:00:28,750
+La opción de configuration.
+
+10
+00:00:30,420 --> 00:00:32,940
+La Eléctrica Configuration si esperamos unos segundos.
+
+11
+00:00:35,150 --> 00:00:40,640
+Y dentro de esta lista de opciones, en la parte final aparece la opción de de la vez.
+
+12
+00:00:42,050 --> 00:00:44,060
+Y ahora le vamos a dar clic al botón Edit.
+
+13
+00:00:45,440 --> 00:00:45,650
+Aquí.
+
+14
+00:00:45,650 --> 00:00:50,660
+En este formulario vamos a ir seleccionando y haciendo el será de la base de datos.
+
+15
+00:00:50,870 --> 00:00:57,140
+Para el caso de Shop no vamos a hacer una restauración desde ningún punto, por eso le pongo None y
+
+16
+00:00:57,140 --> 00:01:00,740
+el siguiente es que seleccione el motor de base de datos.
+
+17
+00:01:01,070 --> 00:01:05,210
+Aquí me aparece por defecto mi si, pero yo voy a trabajar con PostgreSQL.
+
+18
+00:01:05,360 --> 00:01:06,560
+Seleccionamos PostgreSQL.
+
+19
+00:01:08,700 --> 00:01:10,500
+Para la versión de la base de datos.
+
+20
+00:01:10,980 --> 00:01:13,370
+Voy a trabajar con la versión 12.5.
+
+21
+00:01:13,380 --> 00:01:14,670
+Selecciona la de la lista.
+
+22
+00:01:16,460 --> 00:01:23,300
+Le haz clic a actualizar y te va a setear un valor en el siguiente campo, que es el instant class,
+
+23
+00:01:23,750 --> 00:01:27,950
+que en este caso es el DB todo db ti dos micro.
+
+24
+00:01:28,280 --> 00:01:29,230
+Déjalo así como está.
+
+25
+00:01:29,240 --> 00:01:29,900
+No lo toques.
+
+26
+00:01:31,340 --> 00:01:32,490
+A quién va a pedir un storage?
+
+27
+00:01:32,620 --> 00:01:35,360
+Por defecto le dejo en cinco el username.
+
+28
+00:01:35,870 --> 00:01:38,300
+Vamos a colocarle aquí que sea Back tres.
+
+29
+00:01:40,480 --> 00:01:41,860
+También a pedir un password.
+
+30
+00:01:42,780 --> 00:01:48,480
+Le sistema su password recuerda que tiene que tener mayúsculas, minúsculas, números y también un carácter
+
+31
+00:01:48,510 --> 00:01:49,110
+especial.
+
+32
+00:01:50,600 --> 00:01:52,190
+Continuamos en la parte inferior.
+
+33
+00:01:52,670 --> 00:01:54,510
+Retención, placer, creatividad.
+
+34
+00:01:54,510 --> 00:01:57,100
+Schott La ability slow es.
+
+35
+00:01:57,140 --> 00:01:57,560
+Es esta.
+
+36
+00:01:57,560 --> 00:01:58,130
+Correcto?
+
+37
+00:02:00,020 --> 00:02:06,200
+Y ahora si le vamos a hacer click al botón a play, vamos a esperar unos segundos que termine de actualizarse
+
+38
+00:02:06,200 --> 00:02:07,370
+y regresamos.
+
+39
+00:02:08,630 --> 00:02:10,100
+Mientras se va actualizando.
+
+40
+00:02:10,670 --> 00:02:16,310
+Lo que tenemos que hacer ahora es configurar un enlace, un puente de comunicación entre mi aplicación
+
+41
+00:02:16,310 --> 00:02:19,250
+de dicho banco y la base de datos en PostgreSQL.
+
+42
+00:02:19,670 --> 00:02:26,590
+Entonces vayamos hacia mi proyecto y nos ubicamos dentro de eCommerce a que aparece también la carpeta
+
+43
+00:02:26,590 --> 00:02:29,420
+de commerce y vamos a ser instrumento y.
+
+44
+00:02:30,740 --> 00:02:31,970
+De qué me va a parecer?
+
+45
+00:02:32,390 --> 00:02:34,010
+La configuración de la base de datos.
+
+46
+00:02:34,010 --> 00:02:37,850
+Nosotros en el desarrollo del proyecto hemos trabajado con SQL Light.
+
+47
+00:02:38,220 --> 00:02:43,880
+Vamos a reemplazar este texto dentro de los recursos compartidos de este video, de este capítulo.
+
+48
+00:02:44,060 --> 00:02:47,930
+Vas a encontrar un archivo que se llama Desplegar Proyecto Punto API.
+
+49
+00:02:48,170 --> 00:02:48,890
+Descárgalo.
+
+50
+00:02:49,610 --> 00:02:54,350
+Ahora lo estamos abriendo como bloc de notas y quiero que copies esta primera sección que hice configuración
+
+51
+00:02:54,350 --> 00:02:55,250
+de la base de datos.
+
+52
+00:02:56,730 --> 00:03:00,930
+Voy a primeramente copiar este segmento desde el IF.
+
+53
+00:03:02,230 --> 00:03:03,970
+Hasta que se cierre el ll.
+
+54
+00:03:05,330 --> 00:03:06,140
+Lo copiamos.
+
+55
+00:03:06,590 --> 00:03:07,460
+Vamos a Atton.
+
+56
+00:03:08,420 --> 00:03:09,080
+Y aquí.
+
+57
+00:03:10,700 --> 00:03:19,130
+Voy a remover primeramente este segmento de veces lo quitamos y pego lo que había seleccionado antes,
+
+58
+00:03:19,940 --> 00:03:21,850
+pero aquí estoy haciendo uso de este paquete.
+
+59
+00:03:21,860 --> 00:03:26,600
+Ok, tengo que importarlo en la parte superior, vamos a la parte superior de este archivo.
+
+60
+00:03:28,990 --> 00:03:34,330
+Sexy después de de couple import config voy a ponerle import o s.
+
+61
+00:03:36,200 --> 00:03:40,010
+Pero para que trabaje esta librería, también necesitamos instalar ese paquete.
+
+62
+00:03:40,280 --> 00:03:41,900
+Así que abramos el bash.
+
+63
+00:03:42,680 --> 00:03:48,380
+Estoy en el bus y este paquete necesito instalarla, pero dentro del Virtual Environment, por lo que
+
+64
+00:03:48,380 --> 00:03:50,450
+vamos a ingresar primero al Environment.
+
+65
+00:03:51,570 --> 00:03:52,550
+Escribimos acá.
+
+66
+00:03:52,560 --> 00:03:55,740
+Source Espacio amp.
+
+67
+00:03:56,340 --> 00:03:57,720
+Espacio Scripps.
+
+68
+00:03:59,200 --> 00:03:59,980
+Espacio.
+
+69
+00:03:59,990 --> 00:04:00,870
+Bueno, no, Slash.
+
+70
+00:04:01,690 --> 00:04:06,250
+Aquí le ponemos lo que es el comando Activate y le damos Enter.
+
+71
+00:04:07,370 --> 00:04:08,420
+Ya estoy en el environment.
+
+72
+00:04:09,470 --> 00:04:14,330
+Y ahora si vamos a escribir el comando para instalarlo, hacemos un install.
+
+73
+00:04:15,910 --> 00:04:16,890
+La vamos a poner acá.
+
+74
+00:04:16,970 --> 00:04:19,420
+Saco sacó.
+
+75
+00:04:21,900 --> 00:04:23,220
+PG dos.
+
+76
+00:04:25,130 --> 00:04:25,340
+Va.
+
+77
+00:04:28,030 --> 00:04:29,710
+Verificamos que esté bien escrito.
+
+78
+00:04:30,610 --> 00:04:31,120
+Perfecto.
+
+79
+00:04:31,130 --> 00:04:32,230
+Le vamos a dar enter.
+
+80
+00:04:34,950 --> 00:04:43,350
+Si aquí cometió un pequeño error en el comando es la S, PS y COPE G dos Raya Binary.
+
+81
+00:04:43,350 --> 00:04:45,190
+Hay que tener mucho cuidado con los paquetes.
+
+82
+00:04:45,240 --> 00:04:51,690
+Ahora, si le damos enter y ya está instalado, pero recuerda que todas las librerías que vayamos instalando
+
+83
+00:04:51,690 --> 00:04:57,120
+localmente en mi proyecto, posteriormente van a tener que subirse al servidor de Amazon.
+
+84
+00:04:57,690 --> 00:05:03,600
+Entonces, esa lista de paquetes que Amazon va a leer se encuentra dentro del archivo en la carpeta
+
+85
+00:05:03,600 --> 00:05:06,690
+raíz y comerse el archivo require que esté.
+
+86
+00:05:07,990 --> 00:05:14,170
+Entonces tengo que volver a generar un txt con la librería que acabo de instalar en mi proyecto en el
+
+87
+00:05:14,170 --> 00:05:17,740
+Virtual Environment para volver a regenerar este archivo.
+
+88
+00:05:18,520 --> 00:05:26,920
+Vamos entonces a escribir un pip free espacio mayor que punto.
+
+89
+00:05:27,700 --> 00:05:28,480
+TXT.
+
+90
+00:05:29,260 --> 00:05:30,160
+Lo tenemos listo.
+
+91
+00:05:31,380 --> 00:05:32,790
+Ahora si le damos enter.
+
+92
+00:05:34,460 --> 00:05:38,550
+El Esto ya se reinició nuevamente con la librería que instalé.
+
+93
+00:05:39,150 --> 00:05:46,370
+Puedes ver que aquí aparece esa línea del Seiko, Peugeot Copec y tu binary dos n1.
+
+94
+00:05:47,220 --> 00:05:51,720
+Una vez configurado esto, vamos nuevamente a la carpeta de e-commerce, al serial y.
+
+95
+00:05:53,370 --> 00:05:58,890
+Y lo que tienes que entender es que cuando nosotros estemos ejecutando la aplicación localmente, la
+
+96
+00:05:58,890 --> 00:06:03,510
+base de datos que voy a leer va a ser el Sico Lite, como hemos venido haciendo a través de todo el
+
+97
+00:06:03,510 --> 00:06:03,960
+curso.
+
+98
+00:06:04,320 --> 00:06:10,980
+Pero cuando lo ejecute a nivel de producción, a nivel de los servidores de Amazon, tendría que leerlo
+
+99
+00:06:10,980 --> 00:06:13,320
+desde la base de datos de PostgreSQL.
+
+100
+00:06:14,160 --> 00:06:19,740
+Pero recordarás que a través de todo el curso, nosotros hemos estado ejecutando manualmente los archivos
+
+101
+00:06:19,740 --> 00:06:20,810
+de migración.
+
+102
+00:06:20,820 --> 00:06:26,400
+Es decir, creamos el archivo de migración que contenía, que estaba basado en las clases que yo crea
+
+103
+00:06:26,400 --> 00:06:28,910
+con Python y luego ejecutaba esto.
+
+104
+00:06:29,220 --> 00:06:32,800
+Estos generando tablas dentro de mi base de datos.
+
+105
+00:06:33,960 --> 00:06:40,050
+De la misma forma, tengo que crear un script para poder generar estos archivos de migración y ejecutar
+
+106
+00:06:40,050 --> 00:06:43,720
+las tablas dentro de mi base de datos PostgreSQL.
+
+107
+00:06:44,220 --> 00:06:45,180
+Cómo lo voy a hacer?
+
+108
+00:06:45,900 --> 00:06:53,130
+Vayamos hacia el archivo que está en la parte superior que se llama Punto EBT Extensions aquí y vamos
+
+109
+00:06:53,130 --> 00:06:58,890
+a crear un nuevo archivo, darle clic derecho Newfield y le vamos a poner el nombre de V.
+
+110
+00:07:00,450 --> 00:07:01,290
+Raya.
+
+111
+00:07:01,290 --> 00:07:03,390
+My great to.
+
+112
+00:07:05,500 --> 00:07:07,540
+Mi punto con.
+
+113
+00:07:09,080 --> 00:07:16,130
+Lo tenemos listo, le damos enter y quedamos a copiar aquí o que vamos a escribir en el archivo que
+
+114
+00:07:16,490 --> 00:07:17,540
+te estoy compartiendo.
+
+115
+00:07:17,540 --> 00:07:22,910
+En este capítulo que se llama Desplegar proyecto, hay una secuencia que dice Container comandos.
+
+116
+00:07:23,480 --> 00:07:25,220
+Vas a copiar esta secuencia?
+
+117
+00:07:25,220 --> 00:07:30,050
+Ten mucho cuidado con eso aquí, con tener comandos y termina en Chango, serie, Module y Conversations.
+
+118
+00:07:31,390 --> 00:07:32,260
+Vamos a copiarlo.
+
+119
+00:07:34,810 --> 00:07:38,620
+Y lo vamos a pegar dentro de este archivo db create config.
+
+120
+00:07:40,270 --> 00:07:40,660
+Listo.
+
+121
+00:07:40,900 --> 00:07:42,910
+Voy a maximizar para que lo puedas ver bien.
+
+122
+00:07:44,510 --> 00:07:47,360
+Y aquí se está ejecutando dos tareas principales.
+
+123
+00:07:47,630 --> 00:07:56,300
+Primero el comando para poder crear el archivo Django Admin, Pep Maigret, Only True y el segundo es
+
+124
+00:07:56,300 --> 00:08:02,210
+para poder crear el super user que tenga acceso a la aplicación en juego en sí.
+
+125
+00:08:02,570 --> 00:08:09,830
+Entonces esto se está generando dentro de Account Models Account y aquí te va a solicitar que ingreses
+
+126
+00:08:10,340 --> 00:08:16,940
+los datos como el first name, las name también tu email, tu usuario y tu password.
+
+127
+00:08:17,870 --> 00:08:23,330
+Vamos a setear estos valores aquí, por ejemplo, le voy a poner first name, cambiarle.
+
+128
+00:08:27,240 --> 00:08:28,350
+Te pongo, Bugsy.
+
+129
+00:08:30,750 --> 00:08:33,390
+Las le ponemos tres.
+
+130
+00:08:35,380 --> 00:08:37,740
+Y en e-mail le vamos a colocar así.
+
+131
+00:08:37,750 --> 00:08:38,860
+Punto tres.
+
+132
+00:08:38,860 --> 00:08:39,910
+Punto social.
+
+133
+00:08:40,450 --> 00:08:42,400
+Gmail.com y tu usuario?
+
+134
+00:08:42,940 --> 00:08:44,500
+Le voy a poner Bakshi Dress.
+
+135
+00:08:45,720 --> 00:08:46,380
+El password.
+
+136
+00:08:46,380 --> 00:08:53,250
+Recuerda que siempre le colocamos un password con mayúsculas y minúsculas números y también un carácter
+
+137
+00:08:53,250 --> 00:08:53,850
+especial.
+
+138
+00:08:56,150 --> 00:08:57,440
+El resto lo dejamos igual.
+
+139
+00:08:58,590 --> 00:09:04,320
+Y algo muy importante es que yo le he puesto mi proyecto de nombre e-commerce, por eso es que le estoy
+
+140
+00:09:04,320 --> 00:09:09,330
+indicando que cargue los settings desde el Commercial Settings.
+
+141
+00:09:09,630 --> 00:09:13,950
+Si tú por algún motivo le estás colocando otro nombre al proyecto que hemos desarrollado en el curso,
+
+142
+00:09:14,240 --> 00:09:15,210
+tendrás que cambiarlo aquí.
+
+143
+00:09:15,780 --> 00:09:17,760
+De repente tú lo llamaste e-commerce, Juan.
+
+144
+00:09:20,240 --> 00:09:24,170
+O de repente le llamaste fiesta 2015.
+
+145
+00:09:24,260 --> 00:09:24,920
+Lo que sea.
+
+146
+00:09:25,130 --> 00:09:26,850
+Realmente tienes que tener mucho cuidado aquí.
+
+147
+00:09:26,870 --> 00:09:28,460
+Este es el nombre del proyecto.
+
+148
+00:09:29,240 --> 00:09:33,900
+Otra cosa que también tienes que hacer muy importante es ir al archivo recuadro en este punto.
+
+149
+00:09:33,960 --> 00:09:36,740
+TXT y la versión de la librería.
+
+150
+00:09:36,740 --> 00:09:38,840
+Cinco pg dos binary.
+
+151
+00:09:39,080 --> 00:09:42,770
+Vas a colocarle dos punto 8.6.
+
+152
+00:09:43,850 --> 00:09:48,530
+No importa la versión que te he escrito, tú tienes que enviarla a Amazon esta versión.
+
+153
+00:09:49,100 --> 00:09:51,260
+Ahora si vamos a guardar todos los cambios.
+
+154
+00:09:51,260 --> 00:09:52,460
+Menú Field Safe all.
+
+155
+00:09:54,170 --> 00:09:58,520
+De aquí tienes que tener mucho cuidado porque mira, nosotros estamos dentro del Virtual Environment
+
+156
+00:09:58,520 --> 00:09:59,870
+para hacer el deploy.
+
+157
+00:09:59,870 --> 00:10:02,120
+Necesitamos estar fuera del Environment.
+
+158
+00:10:03,130 --> 00:10:08,620
+Así que vamos a escribir el comando de Activate, Sally, el Environment.
+
+159
+00:10:08,650 --> 00:10:13,960
+Ahora, si escribimos el kit Add espacio punto para cargar todos los archivos.
+
+160
+00:10:13,990 --> 00:10:16,390
+Luego el git commit m.
+
+161
+00:10:18,260 --> 00:10:20,420
+Tú a la que deposites.
+
+162
+00:10:22,870 --> 00:10:26,230
+Le damos enter y ahora vamos a hacer un git push.
+
+163
+00:10:29,820 --> 00:10:30,630
+Lo tenemos.
+
+164
+00:10:31,020 --> 00:10:34,770
+Y por último, hacemos un breve deploy.
+
+165
+00:10:35,870 --> 00:10:36,770
+Y le damos enter.
+
+166
+00:10:37,670 --> 00:10:42,500
+Luego de algunos minutos ya me pareció que todo es correcto, pero hay algo que tenemos que modificar
+
+167
+00:10:42,500 --> 00:10:42,710
+aquí.
+
+168
+00:10:42,950 --> 00:10:49,340
+Vamos a la carpeta de extensions, al archivo de capa config y en este bloque que dice número dos que
+
+169
+00:10:49,450 --> 00:10:50,310
+super user.
+
+170
+00:10:51,050 --> 00:10:56,960
+Vamos a borrarlo porque yo no quiero que la próxima vez que ejecute se ejecute este archivo vuelva a
+
+171
+00:10:56,960 --> 00:10:58,120
+generar un super usuario.
+
+172
+00:10:58,130 --> 00:11:00,290
+Entonces por ese motivo lo quitamos.
+
+173
+00:11:00,620 --> 00:11:05,750
+Lo que sí va a ejecutar múltiples veces es el proceso de migrar tantas veces como sea necesario o lo
+
+174
+00:11:05,750 --> 00:11:06,250
+necesite.
+
+175
+00:11:06,260 --> 00:11:07,040
+Mi negocio.
+
+176
+00:11:07,760 --> 00:11:08,810
+Vamos a borrar los cambios.
+
+177
+00:11:08,810 --> 00:11:09,950
+Nenúfar, el Safe Hall.
+
+178
+00:11:11,370 --> 00:11:18,090
+Vamos ahora nuevamente al ídolo es ya que aparece el applications y commerce.
+
+179
+00:11:19,160 --> 00:11:20,390
+Desde que aparece el e-commerce.
+
+180
+00:11:21,020 --> 00:11:22,490
+Vamos a darle o copiar.
+
+181
+00:11:22,490 --> 00:11:23,450
+Aquí está él.
+
+182
+00:11:24,720 --> 00:11:25,290
+La copiamos.
+
+183
+00:11:25,500 --> 00:11:28,320
+Podemos abrir un nuevo TAB.
+
+184
+00:11:28,320 --> 00:11:31,450
+Y aquí me aparece que hay un http oz.
+
+185
+00:11:33,230 --> 00:11:34,160
+Me indica que.
+
+186
+00:11:35,470 --> 00:11:38,290
+Necesito permitirle el Allowed House.
+
+187
+00:11:40,480 --> 00:11:40,690
+Aquí.
+
+188
+00:11:40,690 --> 00:11:44,380
+Cometimos un pequeño error dentro del archivo de e-commerce.
+
+189
+00:11:44,860 --> 00:11:46,930
+No debe haberle puesto el http.
+
+190
+00:11:48,550 --> 00:11:51,070
+Ese pequeño error que hemos cometido.
+
+191
+00:11:51,070 --> 00:11:52,540
+Vamos a borrar los cambios ahora.
+
+192
+00:11:53,080 --> 00:11:53,910
+Menú false.
+
+193
+00:11:53,980 --> 00:11:55,930
+All llega el bash.
+
+194
+00:11:55,960 --> 00:11:57,160
+Vamos a repetir la figura.
+
+195
+00:11:57,160 --> 00:11:57,780
+Quitad.
+
+196
+00:11:58,690 --> 00:12:00,520
+Punto G.
+
+197
+00:12:02,150 --> 00:12:03,620
+Con mi m.
+
+198
+00:12:05,150 --> 00:12:06,020
+A Boikot.
+
+199
+00:12:08,390 --> 00:12:09,610
+Cristo Jesús.
+
+200
+00:12:12,200 --> 00:12:14,300
+Y le ponemos deploy.
+
+201
+00:12:18,290 --> 00:12:22,760
+Esperamos un minuto o tres y vemos los resultados.
+
+202
+00:12:23,240 --> 00:12:25,700
+Se ha completado la operación sin ningún problema.
+
+203
+00:12:26,360 --> 00:12:29,510
+Vamos nuevamente a la página a actualizar y ver los cambios.
+
+204
+00:12:32,310 --> 00:12:38,310
+Ya que me está apareciendo un error dentro del archivo, me dice eso es un error de codificación.
+
+205
+00:12:38,790 --> 00:12:44,460
+Me dicen en el archivo y comencé a buscar mi línea 12.
+
+206
+00:12:44,820 --> 00:12:45,810
+Vamos a revisarlo.
+
+207
+00:12:48,430 --> 00:12:51,480
+Aquí que me faltó inicializar la variable rebus.
+
+208
+00:12:51,760 --> 00:12:53,320
+Vamos a ubicarla sobre el bucle.
+
+209
+00:12:55,010 --> 00:12:56,530
+De que le ponemos reviews.
+
+210
+00:12:56,570 --> 00:12:57,590
+Igual anonimo.
+
+211
+00:12:59,780 --> 00:13:06,220
+Vamos a borrar todos los cambios del fútbol y tenemos que otra vez ejecutar los comandos de kit y el
+
+212
+00:13:06,260 --> 00:13:06,800
+bit replay.
+
+213
+00:13:08,040 --> 00:13:09,060
+Vamos nuevamente.
+
+214
+00:13:09,690 --> 00:13:11,420
+Hacemos un kit adjunto.
+
+215
+00:13:12,070 --> 00:13:12,540
+Kit.
+
+216
+00:13:13,990 --> 00:13:14,560
+Con Mitt.
+
+217
+00:13:15,250 --> 00:13:15,870
+El mensaje.
+
+218
+00:13:15,880 --> 00:13:16,780
+Le voy a dedicar.
+
+219
+00:13:19,220 --> 00:13:21,940
+Fix got, entre comillas.
+
+220
+00:13:24,100 --> 00:13:24,790
+Jebús.
+
+221
+00:13:27,320 --> 00:13:27,740
+Punto.
+
+222
+00:13:27,800 --> 00:13:30,410
+Y ahora el IBI Play y le damos enter.
+
+223
+00:13:32,940 --> 00:13:38,070
+Después de unos tres minutos ya se subió y se procesó correctamente.
+
+224
+00:13:38,100 --> 00:13:39,510
+Vamos ahora a la página.
+
+225
+00:13:40,440 --> 00:13:41,330
+Estoy en la página.
+
+226
+00:13:41,340 --> 00:13:42,390
+Vamos a refrescar.
+
+227
+00:13:43,510 --> 00:13:46,600
+Va a demorar repente unos segundos en actualizarse.
+
+228
+00:13:46,610 --> 00:13:54,340
+Refrescamos de nuevo y como puedes ver ya, mi página está publicada dentro de los servidores de Amazon.
+
+229
+00:13:55,180 --> 00:14:02,950
+Ya aparece aquí la página principal Home, pero ahora quiero entrar al juego Administration desde el
+
+230
+00:14:02,950 --> 00:14:06,790
+servidor Amazon, así que elaboré la base que es esta.
+
+231
+00:14:07,330 --> 00:14:14,350
+Vamos a colocarle un slash y le escribes Secure Secure Login y Le Center.
+
+232
+00:14:16,560 --> 00:14:17,370
+Aquí te voy a ingresar.
+
+233
+00:14:17,520 --> 00:14:21,120
+Te voy a pedir que ingreses el usuario del password que hemos agregado hace un momento.
+
+234
+00:14:22,290 --> 00:14:25,820
+Vamos a agregarle aquí mis credenciales.
+
+235
+00:14:25,860 --> 00:14:27,670
+Ahora sí le damos click a login.
+
+236
+00:14:28,820 --> 00:14:33,320
+Y como puedes ver, ya hemos ingresado a que aparecen todas las entidades.
+
+237
+00:14:33,320 --> 00:14:36,530
+La migración se ejecutó sin ningún problema.

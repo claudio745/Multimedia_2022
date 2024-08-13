@@ -1,0 +1,1595 @@
+1
+00:00:00,420 --> 00:00:06,180
+En este capítulo trabajaremos el módulo de Seguridad y Administración de Usuarios en nuestro proyecto
+
+2
+00:00:06,180 --> 00:00:06,690
+Django.
+
+3
+00:00:06,900 --> 00:00:12,660
+Para esto revisaremos la estructura de seguridad que nos trae por defecto el framework Jango.
+
+4
+00:00:12,840 --> 00:00:19,020
+Pero aquí tenemos un problema, porque el modelo de seguridad de Jango maneja por default el acceso
+
+5
+00:00:19,020 --> 00:00:24,420
+de los usuarios a la aplicación web utilizando el username y el password.
+
+6
+00:00:24,900 --> 00:00:33,210
+Mientras que usualmente en aplicaciones web de tipo e-commerce lo que se usa es el e-mail o correo electrónico.
+
+7
+00:00:33,690 --> 00:00:40,440
+Por este motivo, vamos a tener que reescribir las estructuras internas de Chango y permitir que de
+
+8
+00:00:40,440 --> 00:00:47,490
+ahora en adelante me solicite el email como valor principal para iniciar sesión o registrar un nuevo
+
+9
+00:00:47,490 --> 00:00:49,080
+usuario en mi aplicación.
+
+10
+00:00:49,560 --> 00:00:56,010
+Lo primero que vamos a hacer es crear una app dentro de nuestro proyecto que represente el módulo de
+
+11
+00:00:56,010 --> 00:00:58,470
+seguridad que llamaremos Account.
+
+12
+00:00:59,460 --> 00:01:04,040
+Por ese motivo vamos al base principal que ejecuta nuestro servidor web Django.
+
+13
+00:01:04,750 --> 00:01:08,000
+Ese momento está prendido, por eso lo voy a detener con Control Set.
+
+14
+00:01:08,970 --> 00:01:14,640
+Limpiamos la consola y ahora aquí vamos a escribir este comando para crear una nueva app.
+
+15
+00:01:15,270 --> 00:01:20,640
+Escribo Python, espacio Manager y espacio esta app.
+
+16
+00:01:21,960 --> 00:01:23,020
+Espacio acá.
+
+17
+00:01:23,090 --> 00:01:23,430
+11.
+
+18
+00:01:23,940 --> 00:01:27,450
+Este es el nombre de la aplicación que vamos a crear y le damos Enter.
+
+19
+00:01:29,750 --> 00:01:34,280
+Vas a notar que ya se acaba de crear una nueva carpeta en la raíz de mi proyecto que se llama Account.
+
+20
+00:01:36,080 --> 00:01:41,930
+A continuación, la primera cosa que tenemos que hacer es registrar esta nueva app account dentro de
+
+21
+00:01:41,930 --> 00:01:42,860
+nuestro proyecto.
+
+22
+00:01:43,100 --> 00:01:48,990
+Así que vamos a ir al interior de la carpeta e-commerce y al archivo Crystal API.
+
+23
+00:01:50,310 --> 00:01:53,310
+Y aquí vamos a buscar el atributo InStyle it up.
+
+24
+00:01:53,880 --> 00:01:54,360
+Aquí está.
+
+25
+00:01:55,430 --> 00:01:57,710
+Y luego de category vamos a entrar.
+
+26
+00:01:58,340 --> 00:02:02,600
+Aquí le pongo el nombre de la nueva app account y una coma al final.
+
+27
+00:02:03,260 --> 00:02:06,050
+Vamos a darle clic a Menú File Safe All.
+
+28
+00:02:06,080 --> 00:02:07,430
+Guardamos todos los cambios.
+
+29
+00:02:08,450 --> 00:02:11,840
+Vamos ahora a crear el modelo de mi clase account.
+
+30
+00:02:12,110 --> 00:02:16,730
+Por esto minimizamos y como en su momento íbamos a la app account.
+
+31
+00:02:18,300 --> 00:02:20,610
+Vamos al archivo models punto pi y.
+
+32
+00:02:22,260 --> 00:02:25,770
+Y antes de comenzar a crear mis modelos, mis clases modelos.
+
+33
+00:02:25,980 --> 00:02:28,110
+Voy a hacer la importación de estos.
+
+34
+00:02:28,590 --> 00:02:37,230
+Estas herramientas que necesito que vienen desde Chango, punto con Drive, punto at, punto Models
+
+35
+00:02:37,920 --> 00:02:42,270
+y lo que quiero importar es el abstract user.
+
+36
+00:02:44,310 --> 00:02:48,000
+Hashtag Voice User Coma.
+
+37
+00:02:48,000 --> 00:02:52,410
+Y también quiero el Voice User Manager.
+
+38
+00:02:53,220 --> 00:02:53,700
+Lo tenemos.
+
+39
+00:02:53,700 --> 00:02:54,120
+Listo?
+
+40
+00:02:54,750 --> 00:02:55,290
+Perfecto.
+
+41
+00:02:55,560 --> 00:02:57,210
+Ahora vamos a crear la clase.
+
+42
+00:02:57,780 --> 00:03:03,330
+Creamos una clase que va a ser account que se extienda desde el abstract.
+
+43
+00:03:03,350 --> 00:03:03,450
+Hashtag.
+
+44
+00:03:04,410 --> 00:03:04,840
+Base.
+
+45
+00:03:04,950 --> 00:03:05,460
+User.
+
+46
+00:03:07,360 --> 00:03:14,050
+Le ponemos dos puntos luego de paréntesis del cierre paréntesis y comenzamos a agregar los campos personalizados
+
+47
+00:03:14,050 --> 00:03:14,770
+que quiero crear.
+
+48
+00:03:14,980 --> 00:03:21,390
+Primeramente voy a hacer un feathers name y este va a ser de tipo models.
+
+49
+00:03:21,400 --> 00:03:22,080
+Punto.
+
+50
+00:03:23,490 --> 00:03:24,750
+Char field.
+
+51
+00:03:26,810 --> 00:03:28,640
+Que le indicamos que el Max Land.
+
+52
+00:03:30,910 --> 00:03:34,080
+La longitud máxima para este campo va a ser 50 caracteres.
+
+53
+00:03:34,800 --> 00:03:35,760
+Voy a copiarlo.
+
+54
+00:03:36,210 --> 00:03:36,870
+Seguimos.
+
+55
+00:03:38,160 --> 00:03:40,020
+El siguiente va a ser el last name.
+
+56
+00:03:40,440 --> 00:03:41,160
+El apellido.
+
+57
+00:03:41,820 --> 00:03:42,840
+El primero es el nombre.
+
+58
+00:03:43,290 --> 00:03:44,640
+El siguiente es el apellido.
+
+59
+00:03:44,970 --> 00:03:45,630
+Last Name.
+
+60
+00:03:46,350 --> 00:03:47,220
+Continuemos.
+
+61
+00:03:48,340 --> 00:03:51,910
+También vamos a crear otro campo que va a ser el username.
+
+62
+00:03:55,230 --> 00:04:01,290
+Y va a tener una longitud de 50, pero este aparte de tener un max length de 50 le digo que sea único.
+
+63
+00:04:01,290 --> 00:04:05,220
+Por eso le pongo un igual a TRUE con la T mayúscula.
+
+64
+00:04:07,240 --> 00:04:07,980
+Continuemos.
+
+65
+00:04:08,040 --> 00:04:09,550
+También voy a crear otro.
+
+66
+00:04:10,720 --> 00:04:11,860
+Que se llame email.
+
+67
+00:04:14,170 --> 00:04:16,600
+Y la longitud que le voy a dar es de 100.
+
+68
+00:04:19,130 --> 00:04:21,050
+Y también le digo que sea único.
+
+69
+00:04:22,350 --> 00:04:24,570
+Con mayúscula unique igual a true.
+
+70
+00:04:27,020 --> 00:04:27,740
+Siguiente.
+
+71
+00:04:27,800 --> 00:04:28,790
+Le vamos a poner.
+
+72
+00:04:29,570 --> 00:04:30,260
+Phone number.
+
+73
+00:04:31,100 --> 00:04:32,090
+Número telefónico.
+
+74
+00:04:35,170 --> 00:04:37,630
+La longitud que le voy a dar es de 50.
+
+75
+00:04:39,090 --> 00:04:44,550
+Ahora también tengo que declarar los campos por defecto que tiene el chango.
+
+76
+00:04:45,540 --> 00:04:47,340
+Entonces acá voy a poner campos.
+
+77
+00:04:48,920 --> 00:04:50,900
+Atributos de Chango.
+
+78
+00:04:52,590 --> 00:04:56,670
+Entonces estos son los que necesita el juego por defecto, de lo contrario te va a dar errores.
+
+79
+00:04:57,570 --> 00:05:00,210
+Hay un campo de juego que se llama el Date Jeunet.
+
+80
+00:05:00,450 --> 00:05:04,050
+La fecha en la cual se está incluyendo, se está creando su usuario.
+
+81
+00:05:05,500 --> 00:05:06,820
+Que le ponemos models.
+
+82
+00:05:07,830 --> 00:05:10,150
+Time Field.
+
+83
+00:05:12,390 --> 00:05:15,960
+Y el valor por defecto que va a generarse es un atonal.
+
+84
+00:05:17,300 --> 00:05:17,660
+AT.
+
+85
+00:05:19,920 --> 00:05:20,610
+Igual a true.
+
+86
+00:05:24,270 --> 00:05:26,550
+También hay otro campo que es el azul.
+
+87
+00:05:26,790 --> 00:05:31,620
+La última vez que este usuario hizo un login o iniciar sesión dentro de una aplicación.
+
+88
+00:05:32,640 --> 00:05:34,170
+Vamos a poner esto aquí.
+
+89
+00:05:34,980 --> 00:05:40,260
+Copié pegue del anterior para hacerlo más rápido y le pongo las redes de trabajo.
+
+90
+00:05:40,260 --> 00:05:46,260
+Login Models DateTime DateTime Field Auto Now at igual a true.
+
+91
+00:05:47,010 --> 00:05:47,700
+Perfecto.
+
+92
+00:05:49,030 --> 00:05:53,260
+También tiene otro campo que se llama y es raya para abajo.
+
+93
+00:05:53,260 --> 00:05:55,030
+Admin es administrador.
+
+94
+00:05:55,040 --> 00:05:57,640
+Este usuario le voy a indicar estos models.
+
+95
+00:05:58,830 --> 00:06:01,740
+Punto boolean field es un valor booleano.
+
+96
+00:06:01,740 --> 00:06:02,970
+Puede ser verdadero o falso.
+
+97
+00:06:03,840 --> 00:06:06,810
+Y le digo que por defecto el valor sea falso.
+
+98
+00:06:09,690 --> 00:06:14,460
+También va a tener otro staff.
+
+99
+00:06:14,490 --> 00:06:15,630
+Es parte del staff.
+
+100
+00:06:16,880 --> 00:06:18,920
+Es parte del equipo de la plataforma.
+
+101
+00:06:19,280 --> 00:06:22,100
+Yo le digo que no es un Bloomfield.
+
+102
+00:06:22,370 --> 00:06:23,690
+Con The Fall End Falls.
+
+103
+00:06:25,410 --> 00:06:26,580
+Creamos otra propiedad.
+
+104
+00:06:27,450 --> 00:06:28,320
+Es Active.
+
+105
+00:06:29,570 --> 00:06:31,580
+Por defecto lo que está en false también.
+
+106
+00:06:33,800 --> 00:06:35,660
+Y otra propiedad más que va a ser.
+
+107
+00:06:35,960 --> 00:06:41,900
+Si es un super admin y es super admin le digo que sea un false.
+
+108
+00:06:43,220 --> 00:06:48,710
+Bien, ya entonces hemos alterado las propiedades, tanto las personalizadas como las que por defecto
+
+109
+00:06:48,710 --> 00:06:55,070
+me solicita el chango declarar dentro de esta clase account que se está dando desde el abstract based
+
+110
+00:06:55,070 --> 00:06:55,550
+user.
+
+111
+00:06:57,080 --> 00:06:58,730
+Pero aquí vamos al tema de fondo.
+
+112
+00:06:58,910 --> 00:07:00,080
+Recuerdas lo que te dije?
+
+113
+00:07:00,500 --> 00:07:07,640
+Lo que yo quiero es que cuando el usuario quiera iniciar sesión, lo haga utilizando el email, no el
+
+114
+00:07:07,640 --> 00:07:11,780
+username, que por defecto está configurado en blanco para hacer este cambio.
+
+115
+00:07:12,290 --> 00:07:18,650
+Aquí vamos a agregarle un user name field igual a email.
+
+116
+00:07:20,190 --> 00:07:27,240
+De esta forma, cada vez que yo ingrese el email va a tomarlo como el valor a realizar el proceso de
+
+117
+00:07:27,270 --> 00:07:29,040
+login o validación de datos.
+
+118
+00:07:30,250 --> 00:07:31,990
+También aprovechó para indicarle.
+
+119
+00:07:33,160 --> 00:07:37,450
+Qué campos son requeridos dentro del formulario de registro de un nuevo usuario?
+
+120
+00:07:38,470 --> 00:07:40,130
+Por eso le pongo Quartz Field.
+
+121
+00:07:40,360 --> 00:07:47,260
+Igual aquí abro los corchetes y le digo que los campos obligatorios de ingreso son el username.
+
+122
+00:07:49,830 --> 00:07:50,970
+El First name.
+
+123
+00:07:54,240 --> 00:07:54,840
+Y él las.
+
+124
+00:07:58,120 --> 00:07:58,720
+Perfecto.
+
+125
+00:07:59,920 --> 00:08:06,700
+Siguiendo la secuencia de las clases anteriores que te expliqué también dentro de la plataforma de administrador
+
+126
+00:08:06,700 --> 00:08:13,210
+del Chango, a la hora de listar los récords de una entidad de una tabla, yo quiero que se liste por
+
+127
+00:08:13,210 --> 00:08:15,730
+defecto un label que represente cada record.
+
+128
+00:08:16,450 --> 00:08:25,300
+Por ese motivo aquí siempre utilizo esta función def es areté con dos rayas para abajo al inicio, etcétera
+
+129
+00:08:25,390 --> 00:08:27,850
+str y luego dos rayas para abajo al final.
+
+130
+00:08:28,940 --> 00:08:32,090
+Y aquí inmediatamente abro paréntesis y le pongo sal.
+
+131
+00:08:32,930 --> 00:08:33,980
+Y luego dos puntos.
+
+132
+00:08:35,600 --> 00:08:38,000
+Y le digo que es lo que quiero que me retorne.
+
+133
+00:08:38,720 --> 00:08:40,190
+Es el punto y.
+
+134
+00:08:42,290 --> 00:08:48,030
+Entonces lo que yo quiero en este caso que sea el valor que se pinte cuando quiera alistar los elementos
+
+135
+00:08:48,030 --> 00:08:52,850
+del grupo de usuarios de mi aplicación, sea el email, el label que represente a cada usuario.
+
+136
+00:08:53,000 --> 00:08:57,710
+Podría ponerle también si quisiera el first time, pero me parece más cómodo utilizar el email.
+
+137
+00:08:59,640 --> 00:09:01,530
+También voy a declarar otra función.
+
+138
+00:09:03,150 --> 00:09:05,450
+Has reprobado perm.
+
+139
+00:09:05,880 --> 00:09:07,140
+Si tiene permisos.
+
+140
+00:09:07,830 --> 00:09:11,520
+Yo le digo que esa función para indicarle si tiene permisos de administrador.
+
+141
+00:09:11,640 --> 00:09:19,950
+Si tiene permisos para acceder a la boleta administrador solo va a retornar si y si el atributo admin
+
+142
+00:09:20,220 --> 00:09:21,180
+me devuelve como true.
+
+143
+00:09:23,000 --> 00:09:26,210
+Entonces, antes de hacer esto, primero le paso los parámetros self.
+
+144
+00:09:28,050 --> 00:09:28,470
+Van.
+
+145
+00:09:29,930 --> 00:09:31,100
+Y el DJ qué?
+
+146
+00:09:31,100 --> 00:09:32,690
+Por defecto le digo que es un none.
+
+147
+00:09:34,170 --> 00:09:36,210
+Cuando entro aquí le pongo los dos puntos al final.
+
+148
+00:09:36,480 --> 00:09:39,120
+Ahora si le digo que me retorne.
+
+149
+00:09:41,490 --> 00:09:45,630
+El self punto es con el trabajo admin.
+
+150
+00:09:46,680 --> 00:09:52,770
+Solo si es admin de los permisos para hacer modificaciones y claro si es administrador tambien debo
+
+151
+00:09:52,770 --> 00:09:58,570
+indicarle que tenga acceso a los módulos, por eso voy a crear esta otra función que se llama Def as
+
+152
+00:09:58,620 --> 00:09:59,280
+Module.
+
+153
+00:10:00,150 --> 00:10:01,500
+Encontré trabajo, pan.
+
+154
+00:10:02,920 --> 00:10:06,340
+Que le ponemos el parámetro self y label.
+
+155
+00:10:08,020 --> 00:10:13,830
+Dos puntos al final y le digo que siempre retorne para hacer estos cambios como admin.
+
+156
+00:10:13,870 --> 00:10:16,270
+Las dos funciones trabajan casi al mismo tiempo.
+
+157
+00:10:18,820 --> 00:10:25,690
+A continuación vamos a crear una clase que tenga las operaciones que me permitan crear un nuevo usuario
+
+158
+00:10:26,140 --> 00:10:29,230
+y también un super admin usuario.
+
+159
+00:10:29,650 --> 00:10:32,770
+Vamos a la parte superior sobre este Class Account.
+
+160
+00:10:34,660 --> 00:10:36,220
+Así que voy a crear un class.
+
+161
+00:10:37,380 --> 00:10:40,500
+Mi Account manager es el nombre que le voy a poner.
+
+162
+00:10:42,500 --> 00:10:44,540
+Mi manager va a recibir.
+
+163
+00:10:44,540 --> 00:10:46,340
+Va a extenderse desde Boise.
+
+164
+00:10:47,470 --> 00:10:49,000
+Yo ser manager.
+
+165
+00:10:50,760 --> 00:10:53,610
+Dos puntos y comenzamos a escribirlo.
+
+166
+00:10:53,880 --> 00:10:56,780
+Primeramente, la primera función que voy a definir es un DEF.
+
+167
+00:10:58,010 --> 00:10:58,610
+Grite.
+
+168
+00:11:00,220 --> 00:11:00,820
+Yusef.
+
+169
+00:11:01,890 --> 00:11:04,380
+Y ese va a recibir unos parámetros de tipo self.
+
+170
+00:11:06,430 --> 00:11:07,960
+También el first name.
+
+171
+00:11:09,900 --> 00:11:11,790
+También va a recibir el Last Name.
+
+172
+00:11:13,840 --> 00:11:15,250
+También va a recibir el email.
+
+173
+00:11:16,440 --> 00:11:19,860
+Y el password que por defecto le voy a indicar que sea un valor de none.
+
+174
+00:11:20,910 --> 00:11:23,190
+Proponemos dos puntos para definir la función.
+
+175
+00:11:23,910 --> 00:11:30,180
+Si no tiene un email, si no le estoy pasando al email, si el valor del email es nulo, entonces lo
+
+176
+00:11:30,180 --> 00:11:31,860
+que quiero es que dispare un error.
+
+177
+00:11:32,100 --> 00:11:37,410
+Por eso llamo a este raise function para que me imprima ese error en la pantalla.
+
+178
+00:11:37,440 --> 00:11:38,100
+Vale, error.
+
+179
+00:11:39,320 --> 00:11:41,120
+El indicó acá que.
+
+180
+00:11:42,500 --> 00:11:46,670
+El usuario debe tener un email.
+
+181
+00:11:49,370 --> 00:11:50,030
+Correcto.
+
+182
+00:11:51,370 --> 00:11:54,280
+Y si no tiene tampoco if not username.
+
+183
+00:11:55,840 --> 00:11:57,010
+Hubo un momento que me equivoqué.
+
+184
+00:11:57,160 --> 00:11:58,060
+Debe ser minúscula.
+
+185
+00:11:58,760 --> 00:11:59,350
+Username.
+
+186
+00:12:00,860 --> 00:12:01,790
+Dos puntos.
+
+187
+00:12:02,540 --> 00:12:05,180
+Entonces tiene que dispararse.
+
+188
+00:12:05,180 --> 00:12:05,810
+Otro error.
+
+189
+00:12:06,260 --> 00:12:06,920
+Resbalo.
+
+190
+00:12:06,920 --> 00:12:07,370
+Error.
+
+191
+00:12:09,150 --> 00:12:10,830
+Que diga el usuario.
+
+192
+00:12:11,910 --> 00:12:14,050
+Debe tener un username.
+
+193
+00:12:17,400 --> 00:12:17,730
+Esto.
+
+194
+00:12:18,090 --> 00:12:24,930
+Entonces si tiene email y si tiene y no se va a disparar ninguna de estas condicionales y va a continuar
+
+195
+00:12:25,380 --> 00:12:29,760
+en esta siguiente línea, que es la definición de un objeto de tipo user.
+
+196
+00:12:30,570 --> 00:12:31,740
+Entonces digo user.
+
+197
+00:12:31,740 --> 00:12:36,180
+Este objeto user va a ser creado utilizando el self, el self punto model.
+
+198
+00:12:37,640 --> 00:12:38,720
+Abrimos paréntesis.
+
+199
+00:12:40,020 --> 00:12:42,660
+Le digo que el email va a ser igual al self.
+
+200
+00:12:44,320 --> 00:12:45,160
+Normalice.
+
+201
+00:12:45,910 --> 00:12:47,680
+Punto trabajo.
+
+202
+00:12:47,680 --> 00:12:49,630
+Normalice trabajo y mil.
+
+203
+00:12:52,160 --> 00:12:54,800
+Y le paso el valor del email que es ingresando a la función.
+
+204
+00:12:57,210 --> 00:13:03,060
+José va a ser igual a Self, a username set, en este caso a user.
+
+205
+00:13:03,120 --> 00:13:04,410
+No utilizo el self aquí.
+
+206
+00:13:05,690 --> 00:13:13,940
+Yo ser igual al username ingresando como parámetro first name igual al first name ingresar como parámetro
+
+207
+00:13:15,050 --> 00:13:19,220
+last name y last name que es ingresando como parámetro.
+
+208
+00:13:20,880 --> 00:13:22,590
+Lo tenemos listo ahora.
+
+209
+00:13:22,590 --> 00:13:22,890
+Para el.
+
+210
+00:13:23,160 --> 00:13:24,030
+Para el password.
+
+211
+00:13:24,180 --> 00:13:25,150
+Tengo que hacerlo a mano.
+
+212
+00:13:25,170 --> 00:13:27,870
+Hago un user punto set.
+
+213
+00:13:27,870 --> 00:13:28,530
+Password.
+
+214
+00:13:32,710 --> 00:13:35,530
+Y le paso el valor del password que ingresa desde la función.
+
+215
+00:13:37,360 --> 00:13:44,140
+Y finalmente llamó al User Safe para hacer la transacción e insertar este valor en la base de datos.
+
+216
+00:13:44,710 --> 00:13:52,720
+Le digo entonces using self self self self punto raya para abajo de V.
+
+217
+00:13:54,920 --> 00:13:59,330
+Y lo que quiero que me retorne es este objeto que se acaba de crear el objeto user.
+
+218
+00:13:59,990 --> 00:14:02,060
+Entonces retorno return user.
+
+219
+00:14:02,450 --> 00:14:04,040
+Perfecto, ya lo tengo.
+
+220
+00:14:04,040 --> 00:14:09,920
+Entonces esta es la función que me permite crear un nuevo usuario dentro de mi aplicación.
+
+221
+00:14:10,880 --> 00:14:16,130
+Vamos a crear ahora otra función que me permita crear un súper usuario.
+
+222
+00:14:16,460 --> 00:14:17,960
+Entonces hacemos un DEF.
+
+223
+00:14:19,660 --> 00:14:20,290
+Cuídate.
+
+224
+00:14:21,500 --> 00:14:25,180
+Super user y va a recibir estos parámetros.
+
+225
+00:14:25,190 --> 00:14:34,250
+El self también, el first name también last name, email, username.
+
+226
+00:14:35,480 --> 00:14:36,200
+Y el password.
+
+227
+00:14:37,720 --> 00:14:39,160
+Y al final le pongo dos puntos.
+
+228
+00:14:39,670 --> 00:14:40,360
+Perfecto.
+
+229
+00:14:41,080 --> 00:14:44,620
+Y aquí lo que voy a hacer directamente es crear el objeto user.
+
+230
+00:14:45,950 --> 00:14:49,910
+Utilizando el self create user.
+
+231
+00:14:52,630 --> 00:14:54,520
+Lo tenemos aquí.
+
+232
+00:14:54,520 --> 00:14:58,780
+Vamos a agregar el email que tiene que normalizarse, por eso le pongo self.
+
+233
+00:14:59,230 --> 00:14:59,920
+Punto.
+
+234
+00:15:00,820 --> 00:15:04,360
+Normalice Ismael y le paso el email como parámetro.
+
+235
+00:15:06,960 --> 00:15:07,650
+Le pongo una coma.
+
+236
+00:15:07,770 --> 00:15:08,130
+Listo.
+
+237
+00:15:08,520 --> 00:15:10,740
+Y ahora le vamos a pasar el username.
+
+238
+00:15:13,580 --> 00:15:15,350
+Ingresa con el parámetro de username.
+
+239
+00:15:16,940 --> 00:15:17,660
+Password.
+
+240
+00:15:18,140 --> 00:15:19,760
+Directamente lo voy a poner el password aquí.
+
+241
+00:15:20,890 --> 00:15:27,490
+Ingrese el password First name ingresa el first name que el parámetro.
+
+242
+00:15:28,590 --> 00:15:29,010
+Las.
+
+243
+00:15:31,890 --> 00:15:33,870
+Plan perfecto.
+
+244
+00:15:34,850 --> 00:15:42,380
+Pero adicionalmente a esto voy a setear algunos atributos, valores que debe tener un administrador.
+
+245
+00:15:42,740 --> 00:15:45,710
+Por ejemplo, le pongo user y admin.
+
+246
+00:15:46,960 --> 00:15:47,740
+Un momento.
+
+247
+00:15:48,070 --> 00:15:51,100
+Es admin igual que a True.
+
+248
+00:15:53,190 --> 00:15:56,010
+Qué más le pongo a un momento que se me fue Tru?
+
+249
+00:15:56,520 --> 00:15:56,970
+Listo.
+
+250
+00:15:57,720 --> 00:16:00,030
+También le pongo que el user is active.
+
+251
+00:16:02,410 --> 00:16:03,040
+Igual a true.
+
+252
+00:16:05,620 --> 00:16:08,380
+Yusef es staff, es parte del staff.
+
+253
+00:16:09,370 --> 00:16:10,570
+También le digo que se van a True.
+
+254
+00:16:12,990 --> 00:16:17,640
+Yo ser es y super admin.
+
+255
+00:16:18,970 --> 00:16:20,860
+Le digo también que es igual a True.
+
+256
+00:16:22,190 --> 00:16:22,760
+Estoy sintiendo.
+
+257
+00:16:22,760 --> 00:16:26,420
+Entonces estos valores que hacen que el usuario sea un administrador.
+
+258
+00:16:27,600 --> 00:16:30,560
+Finalmente le digo Usher punto safe.
+
+259
+00:16:30,570 --> 00:16:34,780
+Guárdese record y le digo que haga un using.
+
+260
+00:16:36,120 --> 00:16:37,170
+Igual a self.
+
+261
+00:16:37,830 --> 00:16:38,430
+Punto.
+
+262
+00:16:38,430 --> 00:16:39,300
+Raya para abajo.
+
+263
+00:16:40,260 --> 00:16:40,620
+Debe.
+
+264
+00:16:42,220 --> 00:16:43,990
+Y quiero que finalmente retorne.
+
+265
+00:16:45,230 --> 00:16:49,040
+Este usuario es super admin que se acaba de crear perfecto.
+
+266
+00:16:50,430 --> 00:16:57,900
+Entonces ya he creado dentro de este class manager el create user y también el Create Super User.
+
+267
+00:16:58,200 --> 00:17:05,520
+Pero yo quiero que estos métodos se incluyan dentro del modelo principal account, el class account
+
+268
+00:17:05,520 --> 00:17:07,560
+que al inicio había estado trabajando.
+
+269
+00:17:08,040 --> 00:17:12,090
+Entonces lo que tengo que hacer es copiar este account manager.
+
+270
+00:17:12,210 --> 00:17:16,170
+Voy a copiar el nombre y vamos al interior de la count.
+
+271
+00:17:17,930 --> 00:17:21,540
+Justo antes del después de estos Waterfall.
+
+272
+00:17:21,620 --> 00:17:21,800
+Waterfall?
+
+273
+00:17:21,980 --> 00:17:22,640
+Voy a dar un entorno.
+
+274
+00:17:23,770 --> 00:17:25,270
+Idéntico que Object.
+
+275
+00:17:27,230 --> 00:17:30,350
+Va a ser igual a una instancia de mi account manager.
+
+276
+00:17:31,600 --> 00:17:31,980
+Perfecto.
+
+277
+00:17:31,990 --> 00:17:38,620
+De esta forma ya voy a poder utilizar las funciones de crear un usuario y crear un super usuario instanciado
+
+278
+00:17:38,620 --> 00:17:40,150
+este class account.
+
+279
+00:17:41,870 --> 00:17:47,810
+Algo también muy importante que debo configurar es que de ahora en adelante quiero que el chango reconozca
+
+280
+00:17:48,200 --> 00:17:53,510
+como clase principal de almacenamiento de las cuentas de usuario este account.
+
+281
+00:17:54,290 --> 00:17:57,380
+Entonces vamos a ir a la raíz y commerce.
+
+282
+00:17:58,920 --> 00:17:59,190
+Llora.
+
+283
+00:17:59,190 --> 00:18:03,650
+Vamos al proyecto I Commerce y vamos al ser picky.
+
+284
+00:18:05,510 --> 00:18:06,860
+Vamos a la parte inferior.
+
+285
+00:18:08,100 --> 00:18:09,630
+Donde dice el.
+
+286
+00:18:12,230 --> 00:18:13,400
+Double you.
+
+287
+00:18:15,310 --> 00:18:15,560
+Ok.
+
+288
+00:18:16,270 --> 00:18:17,530
+Ese que application.
+
+289
+00:18:17,760 --> 00:18:18,280
+Vamos a ver.
+
+290
+00:18:18,280 --> 00:18:18,700
+Aquí está.
+
+291
+00:18:20,410 --> 00:18:21,820
+Subí más o menos después de esto.
+
+292
+00:18:22,540 --> 00:18:23,060
+Un enter.
+
+293
+00:18:24,170 --> 00:18:25,720
+Voy a definir un out.
+
+294
+00:18:27,130 --> 00:18:28,920
+User model.
+
+295
+00:18:29,790 --> 00:18:33,390
+El modelo de autenticación de autorización va a ser igual a que.
+
+296
+00:18:34,540 --> 00:18:37,510
+Al Account punto account.
+
+297
+00:18:39,530 --> 00:18:46,280
+Recuerda que la aplicación se llama account y la clase que va a manejar ahora la estructura de usuarios
+
+298
+00:18:46,640 --> 00:18:48,620
+es Account, la que acabo de crear.
+
+299
+00:18:49,990 --> 00:18:58,150
+Ahora tenemos que registrar esta clase account como parte del modelo de Chango Framework.
+
+300
+00:18:58,360 --> 00:19:03,310
+Entonces vamos a ir nuevamente a Account dentro de la carpeta account.
+
+301
+00:19:03,400 --> 00:19:06,100
+Vamos ahora al admin y.
+
+302
+00:19:07,590 --> 00:19:08,490
+De aquí dentro.
+
+303
+00:19:08,490 --> 00:19:14,190
+Vamos a registrarlo o vamos a ponerle un admin punto siete, punto register?
+
+304
+00:19:15,730 --> 00:19:20,230
+Y le digo que registre esta clase account que representa a los usuarios.
+
+305
+00:19:21,320 --> 00:19:25,790
+Pero para que reconozca esta clase account que llamar al from Punto Models.
+
+306
+00:19:27,190 --> 00:19:28,570
+Import account.
+
+307
+00:19:30,720 --> 00:19:36,030
+Antes de continuar, voy a hacer una revisada al archivo models de la carpeta account.
+
+308
+00:19:37,850 --> 00:19:41,800
+Vamos a la parte superior en esta función create user.
+
+309
+00:19:42,790 --> 00:19:44,450
+Y aquí tengo un pequeño detalle.
+
+310
+00:19:44,470 --> 00:19:50,110
+Estoy llamando aquí al parámetro username, pero no lo he colocado en la parte superior antes del email
+
+311
+00:19:50,260 --> 00:19:54,100
+lo voy a colocar user name, coma, email.
+
+312
+00:19:55,130 --> 00:19:55,760
+Perfecto.
+
+313
+00:19:56,570 --> 00:20:02,930
+Algo que vamos a corregir es en la parte inferior a que aparece el Def Leppard.
+
+314
+00:20:03,290 --> 00:20:05,840
+Debería ser ese al final.
+
+315
+00:20:06,500 --> 00:20:08,840
+Hay un pequeño detalle ahí que nos faltó corregir.
+
+316
+00:20:10,410 --> 00:20:11,220
+Bueno, ahora sí.
+
+317
+00:20:11,220 --> 00:20:14,010
+Vamos a darle clic al menú File y Safe All.
+
+318
+00:20:14,520 --> 00:20:15,720
+Guardamos todos los cambios.
+
+319
+00:20:16,410 --> 00:20:23,100
+Como paso siguiente, lo que debería hacer es crear un archivo de Migration y luego ejecutar un comando
+
+320
+00:20:23,100 --> 00:20:28,230
+para generar las tablas y estructuras dentro de mi aplicación Jango.
+
+321
+00:20:29,170 --> 00:20:34,600
+Pero lo que tenemos que hacer antes de la migración es resetear todas las estructuras que hemos venido
+
+322
+00:20:34,600 --> 00:20:35,260
+trabajando.
+
+323
+00:20:35,560 --> 00:20:38,930
+Recuerdas que hemos creado, por ejemplo, un super user?
+
+324
+00:20:39,010 --> 00:20:42,220
+También hemos creado una estructura de tipo categoría.
+
+325
+00:20:42,880 --> 00:20:43,110
+Sí.
+
+326
+00:20:43,570 --> 00:20:50,950
+Entonces y todo eso se ha estado grabando dentro de una base de datos local de tipo SQL Light, que
+
+327
+00:20:50,950 --> 00:20:51,610
+lo puedes ver acá.
+
+328
+00:20:51,650 --> 00:20:52,720
+Mira, aquí aparece el archivo.
+
+329
+00:20:52,720 --> 00:20:53,110
+Dev.
+
+330
+00:20:53,860 --> 00:20:54,150
+Second.
+
+331
+00:20:54,370 --> 00:20:54,970
+Hay tres.
+
+332
+00:20:55,210 --> 00:21:01,720
+Si lo abres, vas a anotar en un código binario boyscout toda la estructura que se está grabando de
+
+333
+00:21:01,720 --> 00:21:05,050
+la data que has estado manejando directamente para esta aplicación de Jango.
+
+334
+00:21:06,210 --> 00:21:09,060
+Pero yo lo que quiero es resetearlo todo.
+
+335
+00:21:09,480 --> 00:21:11,880
+Comenzar de cero otra vez el manejo de la data.
+
+336
+00:21:12,570 --> 00:21:17,640
+Entonces voy a eliminar este archivo de ver si hay tres clic derecho.
+
+337
+00:21:19,000 --> 00:21:20,090
+Y la opción Delete.
+
+338
+00:21:22,840 --> 00:21:23,440
+Perfecto.
+
+339
+00:21:24,250 --> 00:21:27,130
+También dentro de la carpeta categoría Category.
+
+340
+00:21:28,100 --> 00:21:29,300
+Aquí en la carpeta Migration.
+
+341
+00:21:30,020 --> 00:21:37,190
+Yo había creado ya dos archivos de migración el 001 inicial punto Pi y el 002 Alter categoría Options.
+
+342
+00:21:37,520 --> 00:21:39,380
+Voy a seleccionar ambos archivos.
+
+343
+00:21:41,950 --> 00:21:43,050
+Con la tecla Control.
+
+344
+00:21:43,060 --> 00:21:45,430
+Selecciono los dos y voy a eliminarlos.
+
+345
+00:21:45,580 --> 00:21:47,310
+Click derecho de.
+
+346
+00:21:50,480 --> 00:21:58,280
+Vamos a abrir el bash ahora y ejecutar este comando que es el Python Espacio Management y espacio Ram
+
+347
+00:21:58,310 --> 00:21:59,870
+Server y le damos enter.
+
+348
+00:22:00,110 --> 00:22:06,170
+Solo lo hacemos para poder generar nueva, regenerar nuevamente el archivo DB si hay tres.
+
+349
+00:22:07,260 --> 00:22:08,550
+Te van a parecer errores.
+
+350
+00:22:08,550 --> 00:22:09,450
+Pero no te preocupes.
+
+351
+00:22:09,450 --> 00:22:10,530
+Está bien, está bien.
+
+352
+00:22:10,530 --> 00:22:11,550
+No hay ningún problema aquí.
+
+353
+00:22:11,880 --> 00:22:15,120
+Solo lo hacemos para generar nuevamente el archivos de Six Light.
+
+354
+00:22:15,780 --> 00:22:19,170
+Voy a darle aquí un control C para que no me dé problemas.
+
+355
+00:22:19,200 --> 00:22:19,860
+Perfecto.
+
+356
+00:22:20,860 --> 00:22:24,550
+Y ahora si vamos a ejecutar la migración.
+
+357
+00:22:25,830 --> 00:22:32,550
+Y en el nuevamente escribo Python espacio manage pide espacio Make Migration.
+
+358
+00:22:33,690 --> 00:22:34,590
+Lo tienes escrito.
+
+359
+00:22:35,070 --> 00:22:35,610
+Perfecto.
+
+360
+00:22:35,620 --> 00:22:36,570
+Ahora dale enter.
+
+361
+00:22:38,150 --> 00:22:45,980
+Y ya se generaron exitosamente los archivos, tanto para la clase Model Account y también para Category.
+
+362
+00:22:47,290 --> 00:22:53,850
+Y a continuación escribimos este comando que es el Python Espacio Manage, punto pi, espacio migration
+
+363
+00:22:54,580 --> 00:22:55,600
+y Le amos enter.
+
+364
+00:22:57,580 --> 00:23:02,440
+De aquí ya me generó todas las estructuras al interior del framework Janko.
+
+365
+00:23:03,710 --> 00:23:08,030
+Y a continuación vamos a aprovechar para crear el super user.
+
+366
+00:23:08,420 --> 00:23:09,550
+Así que hacemos.
+
+367
+00:23:09,600 --> 00:23:11,180
+Escribimos este comando wimps?
+
+368
+00:23:11,540 --> 00:23:11,850
+Si.
+
+369
+00:23:13,260 --> 00:23:13,830
+Peyton.
+
+370
+00:23:15,200 --> 00:23:22,550
+Espacio Management api espacio create super user.
+
+371
+00:23:24,060 --> 00:23:24,870
+Y le damos enter.
+
+372
+00:23:27,040 --> 00:23:33,460
+Te pide el correo electrónico y le voy a poner maxi punto tres punto social arroba gmail punto com le
+
+373
+00:23:33,460 --> 00:23:37,240
+vamos a entrar un username, le pongo un y tres.
+
+374
+00:23:39,690 --> 00:23:40,410
+El nombre?
+
+375
+00:23:40,420 --> 00:23:41,040
+Bakshi.
+
+376
+00:23:42,000 --> 00:23:43,110
+Apellido tres.
+
+377
+00:23:44,210 --> 00:23:45,110
+El password.
+
+378
+00:23:45,350 --> 00:23:51,110
+Recuerda colocarle un password en mayúscula, minúscula, números y también un carácter especial y que
+
+379
+00:23:51,110 --> 00:23:54,800
+no tenga un texto parecido al email y al username.
+
+380
+00:23:56,220 --> 00:23:57,330
+Vamos a pegarlo aquí.
+
+381
+00:23:57,510 --> 00:23:58,290
+Mi password.
+
+382
+00:24:00,830 --> 00:24:01,880
+Me pide repetirlo.
+
+383
+00:24:02,690 --> 00:24:03,350
+Ya le ingresé.
+
+384
+00:24:03,920 --> 00:24:08,270
+Le hemos dado enter y puedes ver que ya se creó exitosamente el usuario.
+
+385
+00:24:08,600 --> 00:24:12,720
+Vamos a ejecutar entonces nuestra aplicación web, nuestro servidor Jango.
+
+386
+00:24:13,520 --> 00:24:18,710
+Escribimos aquí el comando Python Espacio Management, Espacio Ram Server y le damos Enter.
+
+387
+00:24:19,960 --> 00:24:21,310
+Prefecto se está ejecutando.
+
+388
+00:24:21,310 --> 00:24:22,450
+Voy a levantar un browser.
+
+389
+00:24:23,420 --> 00:24:30,470
+Y como puedes ver ya me está pareciendo en el local 8000 es la admin, la ventana de login.
+
+390
+00:24:30,800 --> 00:24:33,440
+Aquí me está pidiendo el email y el password.
+
+391
+00:24:34,010 --> 00:24:37,340
+Vamos a escribir nuestro email, ya lo escribimos.
+
+392
+00:24:37,340 --> 00:24:44,060
+También hemos ingresado nuestro password y le vamos a dar clic al botón de login ingresado al portal
+
+393
+00:24:44,060 --> 00:24:46,040
+principal de administración de Jango.
+
+394
+00:24:46,370 --> 00:24:50,240
+Ya que puedes ver el account, vamos a darle clic a Count.
+
+395
+00:24:50,390 --> 00:24:52,130
+La entidad que estamos trabajando.
+
+396
+00:24:52,190 --> 00:24:56,240
+Y mira, aquí me aparece el usuario Bags de Social Arroba gmail.com.
+
+397
+00:24:56,810 --> 00:25:03,740
+Vamos a seleccionarlo y puedes darte cuenta de que ya aparece la información, name, username, email
+
+398
+00:25:04,070 --> 00:25:06,830
+y también los valores booleanos.
+
+399
+00:25:06,830 --> 00:25:10,760
+Que es administrador y staff es y es super admin.

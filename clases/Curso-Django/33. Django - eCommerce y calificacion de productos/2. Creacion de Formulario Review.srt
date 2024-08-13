@@ -1,0 +1,1011 @@
+1
+00:00:00,420 --> 00:00:05,430
+En este capítulo vamos a seguir trabajando en el mantenimiento de los comentarios o reviews que nos
+
+2
+00:00:05,430 --> 00:00:09,780
+dejan los clientes respecto de un producto que han comprado.
+
+3
+00:00:10,200 --> 00:00:18,090
+Por este motivo vamos a la carpeta store y dentro de store vamos a crear un archivo que vamos a llamar
+
+4
+00:00:18,090 --> 00:00:26,700
+Forms CPA y dale click derecho Newfield y le ponemos de nombre Forms con ese punto y.
+
+5
+00:00:27,970 --> 00:00:35,860
+Este archivo va a representar la plantilla que posteriormente generará un formulario dentro del template
+
+6
+00:00:35,860 --> 00:00:38,410
+HTML para ingresar un nuevo comentario.
+
+7
+00:00:39,400 --> 00:00:46,870
+Así que vamos a comenzar en este archivo a importar frontal chango import forms.
+
+8
+00:00:48,250 --> 00:00:54,220
+Y también vamos a importar el Mothers Import Review.
+
+9
+00:00:55,800 --> 00:00:56,340
+Rating.
+
+10
+00:00:57,460 --> 00:01:00,040
+Esta clase de modelo que creamos en el capítulo anterior.
+
+11
+00:01:00,730 --> 00:01:02,950
+Y ahora si creamos el Review Form.
+
+12
+00:01:05,080 --> 00:01:10,120
+Agregándole forms punto model form y dos puntos.
+
+13
+00:01:12,720 --> 00:01:18,360
+Vamos a agregar el class meta para indicarle qué atributos va a tener este formulario.
+
+14
+00:01:19,410 --> 00:01:25,410
+Le voy a indicar que el modelo se va a basar en los atributos, sea basado en la clase Review Reading.
+
+15
+00:01:27,160 --> 00:01:30,660
+Y los campos que este va a tener le pongo fieles.
+
+16
+00:01:31,740 --> 00:01:39,120
+Van a ser subject el título del comentario review, el comentario en sí y rating.
+
+17
+00:01:39,390 --> 00:01:41,890
+Cuántas estrellas le das a este producto?
+
+18
+00:01:41,910 --> 00:01:43,050
+Eso significa el rating.
+
+19
+00:01:44,110 --> 00:01:45,480
+Vamos a borrar los cambios.
+
+20
+00:01:45,490 --> 00:01:46,750
+Mayfield Seafood.
+
+21
+00:01:48,020 --> 00:01:51,820
+Y ahora abramos un momento nuestra página en el servidor de Chango.
+
+22
+00:01:52,340 --> 00:01:53,810
+Estamos en nuestra página home.
+
+23
+00:01:53,840 --> 00:01:54,800
+Vamos a la tienda.
+
+24
+00:01:55,190 --> 00:01:57,830
+Y por ejemplo, voy a darle click acá a misa moderna.
+
+25
+00:01:58,670 --> 00:02:04,820
+Dentro de esta página, que es el detalle, en la página detalle, vamos a encontrar que en la parte
+
+26
+00:02:04,820 --> 00:02:10,010
+inferior es donde van a ir los costumes, reviews o comentarios de los clientes.
+
+27
+00:02:10,850 --> 00:02:13,310
+Entonces vamos a este template page detail.
+
+28
+00:02:14,090 --> 00:02:16,370
+Vamos a ir a la carpeta Templates.
+
+29
+00:02:16,880 --> 00:02:19,430
+Ahora vamos a ir hacia Store.
+
+30
+00:02:20,390 --> 00:02:22,580
+Y dentro de Store está el producto detail.
+
+31
+00:02:23,780 --> 00:02:25,370
+Vamos a ubicarnos en la parte inferior.
+
+32
+00:02:25,400 --> 00:02:27,470
+Voy a maximizar para que se pueda ver mejor.
+
+33
+00:02:28,130 --> 00:02:30,260
+Vas a reconocerlo porque está al final.
+
+34
+00:02:30,870 --> 00:02:33,620
+Aquí está en el blog, sección article.
+
+35
+00:02:34,280 --> 00:02:36,680
+Y aquí aparece el Costume Reviews.
+
+36
+00:02:37,730 --> 00:02:38,540
+Voy a poner aquí.
+
+37
+00:02:39,990 --> 00:02:41,820
+Calificación de clientes.
+
+38
+00:02:44,800 --> 00:02:45,730
+Calificación.
+
+39
+00:02:49,560 --> 00:02:50,310
+De clientes.
+
+40
+00:02:52,660 --> 00:02:54,580
+Está dentro de este disfraz.
+
+41
+00:02:55,270 --> 00:02:57,670
+Si lo minimizamos, vamos a minimizar este libro.
+
+42
+00:02:58,150 --> 00:03:03,970
+Te vas a dar cuenta de que esto es lo que representa el bloque de comentarios.
+
+43
+00:03:04,690 --> 00:03:07,090
+Este es el título del bloque de comentarios.
+
+44
+00:03:08,710 --> 00:03:12,160
+Y aquí te va a aparecer un avatar que representa los comentarios.
+
+45
+00:03:12,940 --> 00:03:14,590
+También me aparece un spam.
+
+46
+00:03:15,820 --> 00:03:19,240
+Un título de la persona del usuario que dejó el mensaje.
+
+47
+00:03:19,870 --> 00:03:24,340
+Y aquí vas a notar que esto representa este párrafo, representa el comentario.
+
+48
+00:03:25,350 --> 00:03:26,280
+Voy a borrar los cambios.
+
+49
+00:03:26,320 --> 00:03:27,510
+Menú false all.
+
+50
+00:03:28,530 --> 00:03:31,050
+Y si vamos a la página, voy a actualizarlo.
+
+51
+00:03:33,110 --> 00:03:37,820
+Vamos a anotar que aquí me aparece la calificación de cliente si este review está codeado.
+
+52
+00:03:38,150 --> 00:03:44,420
+Lo que quiero crear ahora es un formulario para poder registrar el review del cliente.
+
+53
+00:03:45,050 --> 00:03:46,010
+Estamos nuevamente en.
+
+54
+00:03:46,790 --> 00:03:53,660
+Este formulario para ingresar los datos lo voy a generar antes del artículo y después del header.
+
+55
+00:03:54,320 --> 00:03:57,470
+Este eje que contiene el texto de calificación de clientes.
+
+56
+00:03:57,500 --> 00:03:58,460
+Aquí termina el header.
+
+57
+00:03:58,760 --> 00:04:02,840
+Voy a darle un enter, un espaciado y voy a crear aquí un form.
+
+58
+00:04:04,850 --> 00:04:05,540
+Este form.
+
+59
+00:04:05,720 --> 00:04:10,250
+Vamos a vamos a indicarle que tenga un action por ahora en blanco.
+
+60
+00:04:12,220 --> 00:04:13,840
+Y el método es de tipo post.
+
+61
+00:04:15,510 --> 00:04:21,180
+Para que sea posible enviar los datos, vamos a indicarle un toque CS RF.
+
+62
+00:04:21,450 --> 00:04:26,030
+Así que aquí le colocamos un CS, RF token.
+
+63
+00:04:27,910 --> 00:04:30,100
+Y ahora vamos a crear la interface gráfica.
+
+64
+00:04:30,970 --> 00:04:36,130
+Voy a crear un título que diga Escribe tu comentario.
+
+65
+00:04:39,650 --> 00:04:41,230
+Por qué le ponemos con mayúscula?
+
+66
+00:04:41,530 --> 00:04:42,670
+Escribe tu comentario
+
+67
+00:04:45,310 --> 00:04:50,270
+y ahora voy a crear un div un container para esta sección.
+
+68
+00:04:50,290 --> 00:04:53,650
+A ver, dentro del container vamos a agregar un label.
+
+69
+00:04:56,340 --> 00:05:02,550
+Un texto que diga cómo calificarías este producto?
+
+70
+00:05:05,700 --> 00:05:09,840
+Luego le voy a dar un espaciado de agarre.
+
+71
+00:05:11,670 --> 00:05:13,880
+Y a continuación, voy a crear un GIF.
+
+72
+00:05:15,000 --> 00:05:15,960
+Vamos a crear un gif.
+
+73
+00:05:17,920 --> 00:05:21,550
+Que represente la calificación que le vas a dar en estrellas.
+
+74
+00:05:22,920 --> 00:05:24,840
+Que le voy a poner a este clásico.
+
+75
+00:05:27,660 --> 00:05:30,230
+Y recuerda, tú puedes colocarle una estrella.
+
+76
+00:05:30,240 --> 00:05:31,680
+Dos estrellas, cinco estrellas.
+
+77
+00:05:32,220 --> 00:05:34,440
+No puede seleccionar todas las estrellas al mismo tiempo.
+
+78
+00:05:34,470 --> 00:05:36,120
+Tienes que seleccionar una calificación.
+
+79
+00:05:36,540 --> 00:05:38,900
+Entonces es un input de tipo radio.
+
+80
+00:05:40,410 --> 00:05:41,880
+Vamos a colocar aquí input.
+
+81
+00:05:43,180 --> 00:05:44,710
+Type radio.
+
+82
+00:05:46,560 --> 00:05:48,690
+El name va a ser rating.
+
+83
+00:05:50,890 --> 00:05:51,580
+Y el value.
+
+84
+00:05:51,730 --> 00:05:52,900
+Va a ser rating.
+
+85
+00:05:53,770 --> 00:05:54,610
+Voy a poner diez.
+
+86
+00:05:57,630 --> 00:06:01,980
+Vamos a colocarle aquí un palo y vamos a colocarle cinco.
+
+87
+00:06:05,010 --> 00:06:07,620
+Y nadie voy a indicarle que tenga un rating.
+
+88
+00:06:07,620 --> 00:06:08,070
+Diez.
+
+89
+00:06:09,880 --> 00:06:13,900
+Listo y le indico que no se ha requerido todavía.
+
+90
+00:06:14,770 --> 00:06:15,580
+Voy a copiarlo.
+
+91
+00:06:16,270 --> 00:06:16,900
+De que lo pegó?
+
+92
+00:06:18,590 --> 00:06:19,880
+Vamos a comprar otro radio.
+
+93
+00:06:20,810 --> 00:06:26,120
+Este nombre va a ser el rating y el value va a ser 4,5.
+
+94
+00:06:28,430 --> 00:06:31,150
+El le voy a poner que sea Rating nueve.
+
+95
+00:06:32,890 --> 00:06:43,240
+Vamos a crear otro que diga ocho vale cuatro value, cuatro, cuatro estrellas, name, rating, type,
+
+96
+00:06:43,240 --> 00:06:43,690
+radio.
+
+97
+00:06:45,780 --> 00:06:47,970
+Generamos otro aquí se me fue.
+
+98
+00:06:49,160 --> 00:06:49,790
+Un momento.
+
+99
+00:06:51,950 --> 00:06:53,060
+Rating seis.
+
+100
+00:06:56,670 --> 00:06:59,550
+Value sería 3.5.
+
+101
+00:07:01,490 --> 00:07:02,900
+Rating y radio.
+
+102
+00:07:02,900 --> 00:07:03,980
+Por ahora, dejémoslo ahí.
+
+103
+00:07:04,820 --> 00:07:13,400
+Y ahora voy a colocarle un input tex que represente el input del del título del comentario.
+
+104
+00:07:13,610 --> 00:07:14,540
+Por eso lo pongo aquí.
+
+105
+00:07:17,210 --> 00:07:18,710
+Título de comentario.
+
+106
+00:07:22,450 --> 00:07:24,880
+El input es un input text.
+
+107
+00:07:25,810 --> 00:07:28,150
+Vamos a poner el que sea que tenga un class.
+
+108
+00:07:30,190 --> 00:07:32,530
+Igual a form control.
+
+109
+00:07:35,870 --> 00:07:37,250
+Voy a poner un espaciador aquí.
+
+110
+00:07:37,370 --> 00:07:37,790
+Listo.
+
+111
+00:07:38,570 --> 00:07:41,120
+El nombre que le vamos a dar es subject.
+
+112
+00:07:43,250 --> 00:07:44,780
+Y por ahora el bable en vacío.
+
+113
+00:07:45,830 --> 00:07:46,430
+Perfecto.
+
+114
+00:07:47,180 --> 00:07:48,020
+Le pongo un pr.
+
+115
+00:07:48,860 --> 00:07:52,220
+Es continuación, vamos a agregar el comentario.
+
+116
+00:07:55,560 --> 00:07:57,930
+Esto va a ser un textarea listo.
+
+117
+00:07:58,500 --> 00:08:01,650
+El nombre que le voy a dar es comentario.
+
+118
+00:08:03,810 --> 00:08:05,300
+Cuántas filas le voy a dar aquí?
+
+119
+00:08:05,490 --> 00:08:06,890
+Vamos a indicarle cuatro, cuatro.
+
+120
+00:08:06,990 --> 00:08:07,440
+Otros.
+
+121
+00:08:09,000 --> 00:08:11,160
+El Klass le voy a indicar que sea.
+
+122
+00:08:11,370 --> 00:08:12,030
+Vamos a ver aquí.
+
+123
+00:08:13,900 --> 00:08:15,010
+Un control.
+
+124
+00:08:17,910 --> 00:08:18,600
+Eso sería todo.
+
+125
+00:08:18,610 --> 00:08:19,620
+No le voy a poner un color.
+
+126
+00:08:22,080 --> 00:08:22,690
+Ahí está.
+
+127
+00:08:22,690 --> 00:08:23,770
+El textarea se cerró.
+
+128
+00:08:24,520 --> 00:08:27,070
+Pero voy a poder hacer un BR perfecto.
+
+129
+00:08:28,040 --> 00:08:31,820
+Y a continuación, vamos a agregar un botón para registrar los datos.
+
+130
+00:08:32,420 --> 00:08:34,040
+Así que hacemos un input.
+
+131
+00:08:35,940 --> 00:08:39,040
+En este caso sería submit.
+
+132
+00:08:40,820 --> 00:08:43,190
+El valor que le voy a colocar va a ser.
+
+133
+00:08:46,430 --> 00:08:47,720
+Enviar comentario.
+
+134
+00:08:51,320 --> 00:08:54,620
+El Class no significa que sea BTN.
+
+135
+00:08:54,830 --> 00:08:59,090
+Recuerda que estamos en Bootstrap BTN Raya Primary.
+
+136
+00:09:01,740 --> 00:09:02,560
+Y bueno, esto es serio.
+
+137
+00:09:02,580 --> 00:09:04,590
+Entonces el formulario, la interfaz gráfica.
+
+138
+00:09:04,590 --> 00:09:07,320
+Aún estoy trabajando en la inserción propiamente dicha.
+
+139
+00:09:08,690 --> 00:09:10,760
+Pero ya tenemos acá el form.
+
+140
+00:09:14,080 --> 00:09:15,100
+Este es el formulario.
+
+141
+00:09:17,020 --> 00:09:18,610
+Chequeaste con la estructura principal?
+
+142
+00:09:18,640 --> 00:09:23,470
+Lo que voy a hacer ahora es agregar los input radio para los ratings.
+
+143
+00:09:24,070 --> 00:09:24,800
+Voy a colocar aquí.
+
+144
+00:09:24,820 --> 00:09:25,690
+Voy a copiarla.
+
+145
+00:09:27,040 --> 00:09:28,400
+Sé que le pongo un rating.
+
+146
+00:09:28,420 --> 00:09:29,050
+Cinco.
+
+147
+00:09:33,260 --> 00:09:35,450
+Y el Balo y le voy a poner que sea tres.
+
+148
+00:09:40,140 --> 00:09:40,950
+Seguimos.
+
+149
+00:09:43,220 --> 00:09:46,490
+No supondrá un problema.
+
+150
+00:09:47,000 --> 00:09:49,940
+Rating nueve Aquí es el Rating ocho.
+
+151
+00:09:50,630 --> 00:09:51,830
+Rating siete.
+
+152
+00:09:52,850 --> 00:09:53,390
+Rating.
+
+153
+00:09:54,590 --> 00:09:56,840
+Nueve, diez, 9876.
+
+154
+00:09:58,640 --> 00:09:59,720
+Rating cinco.
+
+155
+00:10:00,050 --> 00:10:00,440
+Listo.
+
+156
+00:10:01,220 --> 00:10:03,800
+Aquí debería ser 2.5.
+
+157
+00:10:04,790 --> 00:10:05,600
+Copiamos.
+
+158
+00:10:05,930 --> 00:10:07,670
+Pegamos Rating cuatro.
+
+159
+00:10:09,740 --> 00:10:10,940
+Aquí debería ser dos.
+
+160
+00:10:11,750 --> 00:10:12,500
+Copiamos.
+
+161
+00:10:12,770 --> 00:10:14,390
+Pegamos rating tres.
+
+162
+00:10:15,670 --> 00:10:17,740
+Aquí debería ser 1.5.
+
+163
+00:10:18,550 --> 00:10:21,160
+Aquí voy a pegar uno más para recibir dos.
+
+164
+00:10:21,880 --> 00:10:27,820
+Y aquí le pongo Rating uno y el vale 0.5.
+
+165
+00:10:28,930 --> 00:10:32,940
+Vamos a borrar todos los cambios de luz Mayfair safe all y vamos a la página de.
+
+166
+00:10:34,150 --> 00:10:38,480
+Ya estamos dentro de la página y tal, y voy a refrescarla.
+
+167
+00:10:39,600 --> 00:10:47,010
+Y ya puedes ver que en la parte inferior ya me aparece el formulario para ingresar un nuevo comentario
+
+168
+00:10:47,010 --> 00:10:47,700
+o review.
+
+169
+00:10:48,240 --> 00:10:50,670
+Pero lo que yo deseo es que no me aparezcan estos.
+
+170
+00:10:51,120 --> 00:10:54,180
+Realmente lo que yo deseo es que me aparezca algunas estrellas.
+
+171
+00:10:54,420 --> 00:10:59,700
+Entonces aquí vamos a tener que trabajar con unos estilos extra y un componente de tipo label.
+
+172
+00:10:59,880 --> 00:11:02,070
+Te voy a enseñar paso a paso cómo implementarlo.
+
+173
+00:11:02,760 --> 00:11:06,150
+Primero vamos aquí al producto detail, la sección del right.
+
+174
+00:11:07,140 --> 00:11:13,260
+Y aquí voy a agregar un objeto de tipo label que va a ser como el ancla para llamar a los cierres de
+
+175
+00:11:13,260 --> 00:11:13,980
+las estrellas.
+
+176
+00:11:14,430 --> 00:11:15,360
+Escribo Label.
+
+177
+00:11:16,530 --> 00:11:18,330
+Aquí tengo este label label for.
+
+178
+00:11:19,050 --> 00:11:22,470
+Le voy a indicar que sea por Rating diez.
+
+179
+00:11:24,600 --> 00:11:25,410
+Y el título.
+
+180
+00:11:25,470 --> 00:11:27,480
+Vamos a colocar aquí el título.
+
+181
+00:11:28,800 --> 00:11:29,550
+Igual a cinco.
+
+182
+00:11:30,800 --> 00:11:31,520
+Lo tiene listo.
+
+183
+00:11:31,940 --> 00:11:32,150
+Bien.
+
+184
+00:11:32,480 --> 00:11:34,010
+Voy a copiar este lado nuevamente.
+
+185
+00:11:34,550 --> 00:11:35,120
+Acá lo pego.
+
+186
+00:11:35,810 --> 00:11:37,640
+Sería Rating nueve.
+
+187
+00:11:39,490 --> 00:11:40,240
+Y el título.
+
+188
+00:11:42,170 --> 00:11:43,280
+4.5.
+
+189
+00:11:44,030 --> 00:11:48,170
+En este caso le voy a poner un Klass que se que va a ser.
+
+190
+00:11:48,740 --> 00:11:49,940
+Uff half.
+
+191
+00:11:52,230 --> 00:11:57,630
+Voy a copiar nuevamente y pego acá la rating que sea.
+
+192
+00:11:58,500 --> 00:11:58,890
+Ocho.
+
+193
+00:11:59,940 --> 00:12:01,910
+El título cuatro.
+
+194
+00:12:03,090 --> 00:12:03,960
+Este no tiene label.
+
+195
+00:12:05,350 --> 00:12:09,580
+Voy a copiar este label del 4.5 y es el que pego aquí para el raiting siete.
+
+196
+00:12:11,360 --> 00:12:13,190
+Label for Rating siete.
+
+197
+00:12:14,810 --> 00:12:15,140
+Aquí.
+
+198
+00:12:15,140 --> 00:12:17,750
+Este debe ser 3.5.
+
+199
+00:12:20,280 --> 00:12:21,330
+Y el Class of.
+
+200
+00:12:22,260 --> 00:12:22,640
+Listo.
+
+201
+00:12:23,850 --> 00:12:24,600
+Continuemos.
+
+202
+00:12:24,630 --> 00:12:26,760
+Voy a copiar este label sin el class.
+
+203
+00:12:29,340 --> 00:12:31,830
+Se lo pegamos sería un rating seis.
+
+204
+00:12:33,710 --> 00:12:34,280
+Terol.
+
+205
+00:12:34,970 --> 00:12:35,540
+Tres.
+
+206
+00:12:38,510 --> 00:12:39,530
+Continuemos.
+
+207
+00:12:40,580 --> 00:12:41,600
+Ahora, para el siguiente.
+
+208
+00:12:41,600 --> 00:12:42,740
+Si me va a tocar un.
+
+209
+00:12:44,280 --> 00:12:44,610
+Alf.
+
+210
+00:12:45,300 --> 00:12:46,500
+Lo copio y pego.
+
+211
+00:12:46,980 --> 00:12:50,370
+Alf, este sería un 2.5.
+
+212
+00:12:51,420 --> 00:12:52,470
+2.5.
+
+213
+00:12:53,070 --> 00:12:54,630
+Un rating de cinco.
+
+214
+00:12:56,580 --> 00:12:57,360
+El siguiente.
+
+215
+00:12:59,800 --> 00:13:02,410
+Label Rating cuatro.
+
+216
+00:13:03,160 --> 00:13:04,480
+Título dos.
+
+217
+00:13:05,080 --> 00:13:05,530
+Listo.
+
+218
+00:13:06,370 --> 00:13:07,120
+Siguiente.
+
+219
+00:13:07,120 --> 00:13:09,460
+Copio otra vez el label del Half.
+
+220
+00:13:12,410 --> 00:13:14,090
+Sería 1.5.
+
+221
+00:13:15,350 --> 00:13:16,640
+Rating tres.
+
+222
+00:13:19,070 --> 00:13:19,810
+Siguiente.
+
+223
+00:13:20,120 --> 00:13:22,430
+Vamos a ver este label sin el half.
+
+224
+00:13:24,140 --> 00:13:26,700
+Sería uno rating.
+
+225
+00:13:27,980 --> 00:13:28,550
+Dos.
+
+226
+00:13:30,240 --> 00:13:30,660
+Listo.
+
+227
+00:13:32,070 --> 00:13:34,320
+Vamos por el último que es el 0.5.
+
+228
+00:13:34,500 --> 00:13:36,720
+Copio el de Alf y lo pego aquí.
+
+229
+00:13:37,820 --> 00:13:43,370
+Aquí sería 0.5 y este sería el Rating uno.
+
+230
+00:13:44,800 --> 00:13:50,560
+Y ahora, a continuación, vamos a crear un archivo que me permita dar soporte a esta funcionalidad
+
+231
+00:13:50,560 --> 00:13:51,370
+de las estrellas.
+
+232
+00:13:51,760 --> 00:13:58,480
+Vamos a ir entonces hacia la carpeta e-commerce y dentro de ecommerce está estático.
+
+233
+00:13:58,780 --> 00:14:04,600
+Dentro de static aparece el CSS folder y aquí le damos al clic derecho Newfield.
+
+234
+00:14:05,610 --> 00:14:10,260
+Y le ponemos de nombre Custom CSS y le damos enter.
+
+235
+00:14:11,610 --> 00:14:17,580
+Aún no hemos escrito nada en este custom CSS, pero vamos a importarlo dentro de nuestro proyecto.
+
+236
+00:14:17,880 --> 00:14:22,860
+La página principal de nuestro proyecto, que hace las referencias a los archivos y es es y JavaScript
+
+237
+00:14:22,860 --> 00:14:24,180
+el template principal.
+
+238
+00:14:24,450 --> 00:14:25,620
+Vamos a la carpeta template.
+
+239
+00:14:26,040 --> 00:14:28,590
+Es el archivo base del HTML.
+
+240
+00:14:28,860 --> 00:14:29,670
+Vamos a abrirlo.
+
+241
+00:14:31,600 --> 00:14:36,610
+Y como pueden notar en las primeras líneas hacemos referencia a diferentes librerías de JavaScript.
+
+242
+00:14:36,610 --> 00:14:42,760
+Y si es eso, por ejemplo aquí tengo una llamada estática.
+
+243
+00:14:42,760 --> 00:14:43,720
+Si es es UI.
+
+244
+00:14:44,470 --> 00:14:46,090
+Si es eso, voy a copiarla.
+
+245
+00:14:46,180 --> 00:14:49,270
+Voy a copiar esta línea como referencia.
+
+246
+00:14:50,340 --> 00:14:54,060
+Y después de la línea que le sigue, que responsive es que aparece responsive.
+
+247
+00:14:54,360 --> 00:14:56,940
+Le voy a dar un espaciado ya que lo pego nuevamente.
+
+248
+00:14:58,250 --> 00:15:05,510
+Y en vez de static si es Yui Paint, si le voy a poner custom el archivo que acabo de crear, que va
+
+249
+00:15:05,520 --> 00:15:08,930
+a tener que estar referenciado en mi proyecto principal de template.
+
+250
+00:15:09,830 --> 00:15:15,320
+Vamos a guardar los cambios Menú File Safe All y continuamos en la siguiente clase trabajando dentro
+
+251
+00:15:15,590 --> 00:15:16,730
+del archivo Custom.
+
+252
+00:15:16,730 --> 00:15:17,000
+Punto.
+
+253
+00:15:17,000 --> 00:15:17,630
+Así es, es.

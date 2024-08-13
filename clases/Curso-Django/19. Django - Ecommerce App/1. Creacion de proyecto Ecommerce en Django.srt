@@ -1,0 +1,279 @@
+1
+00:00:00,800 --> 00:00:06,320
+Vamos a ir al disco en nuestra computadora y crear una carpeta que se va a llamar E-commerce.
+
+2
+00:00:06,740 --> 00:00:08,090
+Dentro de ecommerce.
+
+3
+00:00:08,300 --> 00:00:09,650
+Vamos a darle clic derecho.
+
+4
+00:00:11,030 --> 00:00:13,490
+Y luego la opción Get here.
+
+5
+00:00:16,220 --> 00:00:16,490
+Aquí.
+
+6
+00:00:16,490 --> 00:00:18,560
+Se va a abrir nuestro vaso dentro de este vaso.
+
+7
+00:00:18,590 --> 00:00:20,030
+Vamos a crear un comando.
+
+8
+00:00:20,030 --> 00:00:24,680
+Escribir un comando para poder crear el virtual environment de nuestro proyecto.
+
+9
+00:00:24,860 --> 00:00:26,300
+Por eso escribo Python.
+
+10
+00:00:26,420 --> 00:00:32,150
+Espacio menos m espacio virtual env bmp.
+
+11
+00:00:32,560 --> 00:00:36,050
+Ese comando y el nombre de la carpeta que le voy a poner env.
+
+12
+00:00:37,140 --> 00:00:38,160
+Le damos a Enter.
+
+13
+00:00:39,990 --> 00:00:45,960
+Y vamos a hacer notar que en la carpeta de discos de e-commerce ya se generó la carpeta y si notamos
+
+14
+00:00:45,960 --> 00:00:50,040
+dentro de EM se encuentran estas carpetas include lib y scripts.
+
+15
+00:00:50,290 --> 00:00:55,560
+Lo más importante que vamos a utilizar es scripts, porque dentro de scripts están los comandos que
+
+16
+00:00:55,560 --> 00:01:00,540
+te permiten activar el virtual environment y también desactivarlo.
+
+17
+00:01:00,720 --> 00:01:05,310
+Por ejemplo, aquí aparece el Activity Path, que es el que vamos a utilizar en breve.
+
+18
+00:01:05,850 --> 00:01:08,580
+Volvamos a la raíz de nuestra carpeta y commerce.
+
+19
+00:01:09,670 --> 00:01:11,320
+Y ahora vamos al baño nuevamente.
+
+20
+00:01:12,420 --> 00:01:16,100
+Y ejecutemos el comando para activar Virtual Environment.
+
+21
+00:01:16,140 --> 00:01:19,410
+Escribimos Source espacio EMP.
+
+22
+00:01:21,020 --> 00:01:24,890
+Es las aquí en la carpeta scripts donde quiero ingresar.
+
+23
+00:01:26,840 --> 00:01:29,930
+Es el comando que es Activate.
+
+24
+00:01:31,940 --> 00:01:32,710
+Y le damos enter.
+
+25
+00:01:33,590 --> 00:01:34,310
+Perfecto.
+
+26
+00:01:34,490 --> 00:01:37,010
+Ya ingresamos entonces al Virtual Environment.
+
+27
+00:01:37,400 --> 00:01:38,210
+Vas a anotarlo?
+
+28
+00:01:38,210 --> 00:01:44,720
+Porque de ahora en adelante, sobre el cursor de la línea de comandos va a aparecer este texto que dice.
+
+29
+00:01:45,470 --> 00:01:46,670
+Entre paréntesis.
+
+30
+00:01:48,330 --> 00:01:53,250
+A continuación vamos a proceder a instalar Jango dentro de este virtual environment.
+
+31
+00:01:53,400 --> 00:02:00,030
+Por eso escribimos Pip espacio install espacio Jango con la de por delante.
+
+32
+00:02:00,480 --> 00:02:02,100
+Y ahora le damos enter.
+
+33
+00:02:03,170 --> 00:02:06,920
+Y comenzó la instalación de los paquetes, descarga e instalación.
+
+34
+00:02:08,060 --> 00:02:11,060
+Luego de algunos segundos se ha instalado correctamente Jango.
+
+35
+00:02:11,420 --> 00:02:12,230
+Perfecto.
+
+36
+00:02:12,240 --> 00:02:16,780
+Ahora voy a verificar que esta instalación sea correcta dentro de mi virtual environment.
+
+37
+00:02:16,790 --> 00:02:24,140
+Por eso escribo Pip Espacio Freeze con doble z e y le damos Enter.
+
+38
+00:02:24,590 --> 00:02:30,770
+Y aquí vamos a ver los paquetes que se han instalado dentro de la marihuana, el Chango y el SQL Park
+
+39
+00:02:30,800 --> 00:02:37,910
+y el TS, que son librerías paquetes complementarios al Chango que ya no necesita para poder ejecutarse.
+
+40
+00:02:39,400 --> 00:02:43,240
+A continuación vamos a crear nuestro proyecto Jango de tipo e-commerce.
+
+41
+00:02:43,510 --> 00:02:47,290
+Por esto, en la línea de comandos vas a escribir Touch and go.
+
+42
+00:02:48,880 --> 00:02:49,500
+Raya.
+
+43
+00:02:49,570 --> 00:02:50,200
+Admin.
+
+44
+00:02:50,410 --> 00:02:51,250
+Desde el comando.
+
+45
+00:02:52,120 --> 00:02:54,520
+Y ahora le digo que creo en proyecto.
+
+46
+00:02:54,520 --> 00:02:56,440
+Por eso le escribo Star Project.
+
+47
+00:02:58,320 --> 00:03:01,920
+Y ahora el nombre del proyecto voy a indicar que se llame E-commerce.
+
+48
+00:03:03,440 --> 00:03:04,130
+Espacio.
+
+49
+00:03:04,140 --> 00:03:04,520
+Punto.
+
+50
+00:03:04,520 --> 00:03:10,310
+Porque le pongo el punto, porque quiero que este directorio del proyecto se genere a nivel de la carpeta
+
+51
+00:03:10,310 --> 00:03:10,790
+raíz.
+
+52
+00:03:11,480 --> 00:03:15,950
+Entonces, teniendo esto en cuenta, vamos ahora a darle un enter al comando.
+
+53
+00:03:16,940 --> 00:03:22,070
+De aquí va a hacer notar que se ha generado la carpeta e-commerce con el proyecto y también el archivo
+
+54
+00:03:22,070 --> 00:03:23,660
+manage punto y.
+
+55
+00:03:24,790 --> 00:03:30,670
+Ya anteriormente te había explicado en el proyecto anterior cómo trabajaba esta estructura de archivos.
+
+56
+00:03:31,660 --> 00:03:34,090
+Para verificar que todo es correcto.
+
+57
+00:03:34,090 --> 00:03:36,850
+Vamos a ejecutar nuestro servidor de Jango.
+
+58
+00:03:37,270 --> 00:03:39,550
+Entonces vamos nuevamente hacia el Bash.
+
+59
+00:03:39,850 --> 00:03:40,690
+Y dentro del Bash.
+
+60
+00:03:40,750 --> 00:03:41,590
+Voy a escribir.
+
+61
+00:03:43,450 --> 00:03:43,960
+Peyton.
+
+62
+00:03:46,850 --> 00:03:53,660
+Espacio Manage y Espacio Ran Server y le damos enter.
+
+63
+00:03:55,230 --> 00:03:59,220
+Se me apareció este mensaje que dice que ya está cargándose el servidor.
+
+64
+00:03:59,340 --> 00:04:01,140
+Vamos ahora a abrir un browser.
+
+65
+00:04:02,010 --> 00:04:08,480
+Hemos abierto el browser y estamos en el 127 001 puerto 8000, que también puedes colocar en el hogar
+
+66
+00:04:08,490 --> 00:04:08,700
+host.
+
+67
+00:04:08,720 --> 00:04:09,510
+No hay ningún problema.
+
+68
+00:04:10,680 --> 00:04:14,490
+Y aquí vamos a notar que se está ejecutando ya mi proyecto Jango.
+
+69
+00:04:14,760 --> 00:04:20,490
+En los siguientes capítulos vamos a comenzar a editar la página de inicio y también las transacciones
+
+70
+00:04:20,490 --> 00:04:22,140
+que va a tener mi ecommerce.

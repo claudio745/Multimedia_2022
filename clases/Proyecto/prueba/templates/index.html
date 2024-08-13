@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Juegos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1>Portal de Juegos</h1>
+      <nav>
+        <a href="{{ url_for('top_juegos') }}" class="btn">Top Juegos</a>
+        <a href="{{ url_for('acerca_de') }}" class="btn">Acerca de</a>
+        <a href="{{ url_for('contacto') }}" class="btn">Contacto</a>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <div class="square" id="scrap1-info">
+      <h2>Explicación Scrap 1</h2>
+      <p>Detalles sobre el primer scrap:</p><br>
+      <p>Este scrap realiza lo siguiente:</p><br>
+      <p><strong>El scrap obtiene los datos de la página <a href="https://store.steampowered.com/search/?sort_by=_ASC&supportedlang=latam&os=win&filter=globaltopsellers" target="_blank">https://store.steampowered.com/search/?sort_by=_ASC&supportedlang=latam&os=win&filter=globaltopsellers</a>, donde obtiene el Nombre, Desarrollador, Editor, Número de reseñas, Fecha de lanzamiento y Precio.</strong></p>
+      <p>Este es capaz de obtener los datos internos del juego y saber si tiene DLC, si llega a tener DLC este obtiene el precio total del juego con el DLC.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2024 Portal de Juegos. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

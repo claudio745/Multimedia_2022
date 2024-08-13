@@ -1,0 +1,555 @@
+1
+00:00:00,600 --> 00:00:03,270
+En capítulos anteriores desarrollamos el proceso de login.
+
+2
+00:00:05,770 --> 00:00:10,970
+Y al ingresar a nuestro portal vamos a ver que en la parte superior derecha aparece la opción de salir
+
+3
+00:00:10,990 --> 00:00:11,440
+sesión.
+
+4
+00:00:11,890 --> 00:00:16,720
+También el texto indicando el bienvenido al usuario y aparece un link para Dashboard.
+
+5
+00:00:17,020 --> 00:00:19,990
+Si le damos clic al password no me va a llevar a ningún sitio.
+
+6
+00:00:20,380 --> 00:00:24,490
+En este capítulo vamos a crear el template que represente a Dashboard.
+
+7
+00:00:25,490 --> 00:00:30,860
+Comencemos ubicándonos dentro de la carpeta account y luego vamos hacia el archivo.
+
+8
+00:00:30,860 --> 00:00:35,870
+Yo era el punto API y aquí vamos a crear un path especial para el dashboard.
+
+9
+00:00:36,110 --> 00:00:38,030
+Voy a copiar esa línea de Path Lock out.
+
+10
+00:00:40,000 --> 00:00:40,720
+Aquí la pegó.
+
+11
+00:00:42,170 --> 00:00:43,190
+Le ponemos el PAT.
+
+12
+00:00:46,430 --> 00:00:47,030
+Dashboard.
+
+13
+00:00:48,160 --> 00:00:51,770
+También a la función que va a gestionar esta este path.
+
+14
+00:00:51,790 --> 00:00:54,280
+Vamos a indicarle aquí que sea dashboard.
+
+15
+00:00:56,630 --> 00:01:00,320
+Y ahora vamos al template del nav bar donde está el link hacia dashboard.
+
+16
+00:01:01,250 --> 00:01:05,320
+Vamos a la carpeta templates que aparece en includes ya que aparece el nav.
+
+17
+00:01:05,320 --> 00:01:10,650
+VAR punto html más o menos en la línea 67 70.
+
+18
+00:01:13,680 --> 00:01:20,280
+Aquí en este lado aparece ya el link para el dashboard aquí en 81.
+
+19
+00:01:20,730 --> 00:01:23,400
+En mi casa de la 81 dice Dashboard.
+
+20
+00:01:24,430 --> 00:01:25,210
+Perfecto.
+
+21
+00:01:25,570 --> 00:01:26,230
+Y el que aparecerá.
+
+22
+00:01:27,220 --> 00:01:28,240
+Qué tiene un humeral?
+
+23
+00:01:28,810 --> 00:01:31,300
+Voy a eliminar ese numeral y voy a poner acá.
+
+24
+00:01:33,080 --> 00:01:40,400
+Ya ves, porcentajes si le pongo yo en el espacio entre apóstrofes el nombre del pad, que es Dashboard.
+
+25
+00:01:42,800 --> 00:01:51,710
+Ahora volvemos a la carpeta account y al archivo Buscar y en la parte final del archivo, luego de esta
+
+26
+00:01:51,710 --> 00:01:53,000
+función Activate.
+
+27
+00:01:54,430 --> 00:01:55,540
+Vamos a ponerlo entre acá.
+
+28
+00:01:56,020 --> 00:01:57,660
+Vamos a crear la función def.
+
+29
+00:01:59,620 --> 00:02:07,720
+Dashboard que la que va a gestionar el path del mismo nombre, este recibe un objeto request, pero
+
+30
+00:02:07,720 --> 00:02:13,900
+a esta función solo van a poder acceder aquellos usuarios que ya estén logrados por ese motivo.
+
+31
+00:02:14,570 --> 00:02:14,720
+Quiero.
+
+32
+00:02:14,740 --> 00:02:17,140
+Voy a poner la cabecera Login Required.
+
+33
+00:02:19,580 --> 00:02:22,340
+Te digo que en lo que él va a ser igual.
+
+34
+00:02:24,580 --> 00:02:25,110
+A lo que.
+
+35
+00:02:27,850 --> 00:02:34,990
+Finalmente hubo momento dashboard request siempre los puntos al final y aquí le indico que me haga un
+
+36
+00:02:35,360 --> 00:02:36,580
+render hacia.
+
+37
+00:02:38,490 --> 00:02:39,120
+Rico es.
+
+38
+00:02:41,180 --> 00:02:41,830
+Account.
+
+39
+00:02:42,260 --> 00:02:48,020
+Haz el template account dashboard HTML que aún no existe.
+
+40
+00:02:48,050 --> 00:02:48,740
+Vamos a crearlo.
+
+41
+00:02:48,740 --> 00:02:49,940
+Ahora voy a copiar este nombre.
+
+42
+00:02:52,280 --> 00:02:55,280
+Y ahora vamos nuevamente a la carpeta Templates.
+
+43
+00:02:56,340 --> 00:02:57,120
+Y dentro de.
+
+44
+00:02:59,730 --> 00:03:00,810
+Aquí en la carpeta account.
+
+45
+00:03:00,870 --> 00:03:01,950
+Vamos a darle clic derecho.
+
+46
+00:03:03,030 --> 00:03:03,660
+Newfield.
+
+47
+00:03:05,220 --> 00:03:06,720
+De que pegamos el nombre.
+
+48
+00:03:07,680 --> 00:03:10,770
+Dashboard HTML y le damos enter.
+
+49
+00:03:12,180 --> 00:03:14,400
+Y vamos a agregar en la parte superior.
+
+50
+00:03:16,090 --> 00:03:19,930
+Ya sabes, la extensión, el include, el extenso del HTML.
+
+51
+00:03:20,890 --> 00:03:30,550
+Por eso me veis HTML, para que tenga el VAR y también el el pie de página.
+
+52
+00:03:33,280 --> 00:03:39,610
+También el contenido dinámico que este va a tener porque le ponemos block content.
+
+53
+00:03:40,610 --> 00:03:41,450
+Y cerramos.
+
+54
+00:03:44,730 --> 00:03:50,640
+End Blog dentro de la sección de recursos de este vídeo, de este capítulo te estoy compartiendo un
+
+55
+00:03:50,640 --> 00:03:55,050
+archivo que se llama Dashboard Templates Punto HTML.
+
+56
+00:03:56,070 --> 00:04:02,700
+Lo estoy abriendo con un block de notas, pues voy a seleccionarlo todo el contenido del archivo HTML
+
+57
+00:04:03,030 --> 00:04:05,460
+y lo pegamos aquí dentro del blog content.
+
+58
+00:04:08,680 --> 00:04:14,020
+Vamos a guardar ahora todos los cambios en los false all y vamos a ejecutar nuestra página.
+
+59
+00:04:15,170 --> 00:04:16,280
+Estamos en nuestra página.
+
+60
+00:04:16,310 --> 00:04:17,330
+Voy a refrescarla.
+
+61
+00:04:18,140 --> 00:04:19,580
+Vamos ahora a Dashboard.
+
+62
+00:04:20,120 --> 00:04:23,480
+Y mira, ya me llevó aquí a la página de Dashboard.
+
+63
+00:04:24,790 --> 00:04:27,410
+Por el momento están mostrando una información copiada.
+
+64
+00:04:27,430 --> 00:04:33,310
+No te preocupes que en el transcurso de las clases vamos a ir convirtiendo esto con datos dinámicos
+
+65
+00:04:33,310 --> 00:04:34,300
+de la base de datos.
+
+66
+00:04:34,720 --> 00:04:40,900
+Pero algo que quería enseñarte es que, por ejemplo, cuando salgamos de sesión y queramos volver a
+
+67
+00:04:40,900 --> 00:04:48,820
+iniciar sesión con tu cuenta, lo que yo quisiera que cuando sea exitoso me llevará al dashboard, no
+
+68
+00:04:48,820 --> 00:04:50,250
+me llevará a la página de home.
+
+69
+00:04:50,350 --> 00:04:54,550
+Mira, si lo de click en ese momento me va a llevar a la página de venta de productos.
+
+70
+00:04:54,760 --> 00:04:55,930
+No quiero que suceda esto.
+
+71
+00:04:56,320 --> 00:04:59,320
+Yo quiero que directamente me lleve a esta página dashboard.
+
+72
+00:05:00,640 --> 00:05:01,990
+Vamos a hacer este ajuste.
+
+73
+00:05:01,990 --> 00:05:05,980
+Volvemos a Atom, vamos a Account y al archivo.
+
+74
+00:05:06,800 --> 00:05:08,800
+Y ahora busquemos.
+
+75
+00:05:08,800 --> 00:05:11,710
+Aquí aparece la función de lo que esta es la función de login.
+
+76
+00:05:13,330 --> 00:05:20,170
+De aquí me está indicando que si el user is not now, es decir que inició sesión correctamente, entonces
+
+77
+00:05:20,440 --> 00:05:22,780
+en este momento me está retornando al home.
+
+78
+00:05:23,440 --> 00:05:25,960
+Voy a cambiar esto porque quiero que me retorne ahora.
+
+79
+00:05:26,940 --> 00:05:27,690
+Al dashboard.
+
+80
+00:05:30,520 --> 00:05:32,530
+Pero quiero que también le agregue un mensaje.
+
+81
+00:05:32,530 --> 00:05:35,920
+Que envíe un mensaje indicándome de que fue exitoso Elojim.
+
+82
+00:05:36,250 --> 00:05:38,560
+Por este motivo, aquí lo voy a poner un message.
+
+83
+00:05:38,560 --> 00:05:42,490
+Es un punto success.
+
+84
+00:05:43,540 --> 00:05:44,530
+Aquí le agregamos.
+
+85
+00:05:46,360 --> 00:05:48,030
+El rico es coma.
+
+86
+00:05:49,560 --> 00:05:50,390
+Si el mensaje.
+
+87
+00:05:53,140 --> 00:05:54,610
+Has iniciado sesión.
+
+88
+00:05:56,670 --> 00:05:57,540
+Exitosamente.
+
+89
+00:05:58,470 --> 00:06:04,830
+Pero para que se imprima este mensaje al interior del Dashboard del Template Dashboard, necesito incluir
+
+90
+00:06:04,830 --> 00:06:07,650
+en el interior de dashboard el template alerts.
+
+91
+00:06:08,780 --> 00:06:15,470
+Vamos entonces hacia la carpeta Templates Account, ya que aparece el dashboard HTML, vamos a abrirlo
+
+92
+00:06:16,130 --> 00:06:21,730
+en la parte superior, justo al inicio del section class, section content, padding y BG.
+
+93
+00:06:22,550 --> 00:06:29,930
+Vamos a darle un enter y aquí le escribimos las llaves de porcentaje y le pongo el include.
+
+94
+00:06:30,830 --> 00:06:37,970
+Le ponemos includes includes en la carpeta alert a html.
+
+95
+00:06:38,920 --> 00:06:40,480
+Vamos ahora a guardar los cambios.
+
+96
+00:06:40,480 --> 00:06:43,810
+Menú del safe all y vamos a probar a la página.
+
+97
+00:06:44,740 --> 00:06:45,700
+Estamos en la página.
+
+98
+00:06:45,730 --> 00:06:46,840
+Voy a salir de sesión.
+
+99
+00:06:47,650 --> 00:06:51,760
+Vamos a actualizarla y vamos a iniciar sesión nuevamente.
+
+100
+00:06:52,360 --> 00:06:53,500
+Vamos a crear el botón de login.
+
+101
+00:06:54,820 --> 00:06:58,960
+Y mira, ya me llevó hasta el dashboard y ha aparecido también el mensaje.
+
+102
+00:06:59,200 --> 00:07:01,300
+Has iniciado sesión exitosamente?
+
+103
+00:07:02,470 --> 00:07:07,720
+Ya que estamos en esta página, aprovechemos para darle la funcionalidad de recepción en este botón
+
+104
+00:07:07,720 --> 00:07:09,670
+que dice salir de sesión justamente.
+
+105
+00:07:10,330 --> 00:07:11,350
+Vayamos al dashboard.
+
+106
+00:07:12,210 --> 00:07:14,660
+Y busquemos ese botón de salir sesión.
+
+107
+00:07:14,660 --> 00:07:16,520
+Voy a maximizar para que lo puedas ver.
+
+108
+00:07:16,520 --> 00:07:17,180
+Aquí aparece.
+
+109
+00:07:17,220 --> 00:07:23,540
+Mira salir de sesión por el momento tiene un href que apunta hacia el numeral.
+
+110
+00:07:23,720 --> 00:07:34,130
+Voy a reemplazarlo y le ponemos aquí un href entre llaves y también porcentajes que apuntan rl lock
+
+111
+00:07:34,130 --> 00:07:34,490
+out.
+
+112
+00:07:34,880 --> 00:07:36,890
+Este es el path que necesita para salir de sesión.
+
+113
+00:07:37,520 --> 00:07:41,480
+Vamos a borrar los cambios default safe all y vamos a probar.
+
+114
+00:07:42,080 --> 00:07:43,460
+Estamos en la página de Dashboard.
+
+115
+00:07:43,460 --> 00:07:47,360
+Voy a actualizarla y le doy clic al botón Salir de sesión.
+
+116
+00:07:48,110 --> 00:07:48,890
+Perfecto.
+
+117
+00:07:48,890 --> 00:07:50,000
+Hemos salido de sesión.
+
+118
+00:07:51,330 --> 00:07:52,650
+Vamos a volver a iniciar sesión.
+
+119
+00:07:52,660 --> 00:07:53,760
+Quiero mostrarte algo.
+
+120
+00:07:55,050 --> 00:07:55,260
+Mira.
+
+121
+00:07:55,260 --> 00:07:57,510
+Qué pasaría si dentro de la URL?
+
+122
+00:07:58,640 --> 00:08:04,370
+No le pongo el template final, por ejemplo, le voy a poner acá en vez de account dashboard, solo
+
+123
+00:08:04,370 --> 00:08:06,280
+lo voy a colocar acá.
+
+124
+00:08:07,610 --> 00:08:09,020
+Mire el error que me está generando.
+
+125
+00:08:09,770 --> 00:08:18,080
+Lo que yo quisiera es que cuando el cliente por error envíe esta rl account, quiero que me redirecciona
+
+126
+00:08:18,110 --> 00:08:19,820
+automáticamente al dashboard.
+
+127
+00:08:20,240 --> 00:08:21,230
+Como hacemos esto?
+
+128
+00:08:22,070 --> 00:08:23,690
+Estamos en auto nuevamente.
+
+129
+00:08:25,240 --> 00:08:31,420
+Íbamos a ubicarnos en la parte superior account y dentro del Hotels.com y.
+
+130
+00:08:32,540 --> 00:08:32,820
+De aquí.
+
+131
+00:08:32,820 --> 00:08:34,140
+Vamos a crear un nuevo Path.
+
+132
+00:08:34,500 --> 00:08:36,090
+Voy a copiar este par de dashboard.
+
+133
+00:08:39,240 --> 00:08:44,460
+Y solo voy a indicarle que cuando esté en blanco también me lleve directamente a la función dashboard.
+
+134
+00:08:45,340 --> 00:08:47,340
+Eso sería todo menos false all.
+
+135
+00:08:47,680 --> 00:08:48,730
+Íbamos a probar.
+
+136
+00:08:49,960 --> 00:08:52,620
+Estamos en la página 8000 account.
+
+137
+00:08:52,630 --> 00:08:55,780
+Refrescamos y mira automáticamente.
+
+138
+00:08:55,780 --> 00:08:58,780
+Ya me lleva hacia la página de taller.
+
+139
+00:08:59,380 --> 00:09:01,180
+Continuamos en el siguiente capítulo.

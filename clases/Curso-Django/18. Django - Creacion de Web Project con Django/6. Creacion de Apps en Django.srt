@@ -1,0 +1,895 @@
+1
+00:00:00,450 --> 00:00:03,750
+Vamos a continuar la construcción de nuestro proyecto Jango.
+
+2
+00:00:04,050 --> 00:00:10,920
+Hay que tener en cuenta que un proyecto Jango puede contener una o muchas apps, tal como puedes ver
+
+3
+00:00:10,920 --> 00:00:11,520
+en la imagen.
+
+4
+00:00:11,760 --> 00:00:18,780
+Mi proyecto original Jango puede contener apps como usuarios account y contactos.
+
+5
+00:00:19,410 --> 00:00:26,280
+Para este caso específico que estamos desarrollando, vamos a crear una app que llamaremos usuarios
+
+6
+00:00:27,090 --> 00:00:30,330
+para iniciar la creación de esta app al interior del proyecto.
+
+7
+00:00:30,540 --> 00:00:35,520
+Vamos a primero a detener el Bash que está ejecutando nuestro servidor web.
+
+8
+00:00:36,600 --> 00:00:37,950
+Hemos abierto el valle.
+
+9
+00:00:37,980 --> 00:00:41,520
+Este es el valle el cual te indico y como puedo notar, se está ejecutando.
+
+10
+00:00:42,390 --> 00:00:46,770
+Para poder detener al servidor de Jango, simplemente presione las teclas Control C.
+
+11
+00:00:48,050 --> 00:00:49,910
+Ya automáticamente se detuvo.
+
+12
+00:00:50,900 --> 00:00:55,760
+Hay que notar también que nosotros estamos apuntando el vaso hacia la carpeta.
+
+13
+00:00:55,760 --> 00:01:00,050
+Se llama Kovacic y estamos dentro del Virtual Environment.
+
+14
+00:01:00,350 --> 00:01:05,750
+Lo reconozco porque en la cabecera aparece el nombre de la carpeta que entre paréntesis, que es ENV.
+
+15
+00:01:06,380 --> 00:01:10,880
+Y a continuación, en el base, voy a escribir un comando para crear una nueva app.
+
+16
+00:01:11,750 --> 00:01:12,980
+Escribo Python.
+
+17
+00:01:15,450 --> 00:01:21,390
+Espacio Manager y Espacio Start Up.
+
+18
+00:01:22,320 --> 00:01:27,720
+Este es el comando que crea la app y ahora el espacio, el nombre de la app.
+
+19
+00:01:28,770 --> 00:01:33,000
+Que en este caso va a ser usuarios y le damos enter.
+
+20
+00:01:33,950 --> 00:01:40,370
+A continuación vamos a nuestro IDE Atom en el proyecto Basic y vas a notar que se ha generado ya la
+
+21
+00:01:40,370 --> 00:01:45,230
+carpeta Usuarios que aparece Usuarios y aquí está la carpeta de Proyecto Basic Project.
+
+22
+00:01:45,830 --> 00:01:51,830
+Si abrimos usuarios verá que lo que ha creado ha creado un archivo de views, un archivo de test donde
+
+23
+00:01:51,830 --> 00:01:57,950
+puedes escribir tus pruebas, también models, que es el lugar donde vas a colocar las transacciones
+
+24
+00:01:58,190 --> 00:02:00,620
+o consultas a la base de datos que realizas a futuro.
+
+25
+00:02:02,070 --> 00:02:08,340
+También el app Punto Pi y que se colocará la instancia de los objetos que utilizará tu proyecto web.
+
+26
+00:02:09,380 --> 00:02:16,820
+Y el admin punto Pi, que es básicamente la logica y el registro de los modelos de tu base de datos.
+
+27
+00:02:17,450 --> 00:02:23,030
+A continuación, lo que tenemos que hacer es registrar esta app como parte de mi proyecto.
+
+28
+00:02:23,300 --> 00:02:25,400
+Por eso vamos a ir al Bakshi Project.
+
+29
+00:02:26,500 --> 00:02:28,990
+Y nos ubicamos en el Settings y.
+
+30
+00:02:30,040 --> 00:02:35,540
+Y aquí vamos a buscar la variable instales apps en la parte superior.
+
+31
+00:02:37,780 --> 00:02:45,010
+Hoy que aparece instalar apps en las apps instaladas y aquí le vamos a dar un espacio y vamos a agregar
+
+32
+00:02:45,010 --> 00:02:47,440
+el nombre de nuestra app que es usuarios.
+
+33
+00:02:48,250 --> 00:02:49,300
+Punto apps.
+
+34
+00:02:49,990 --> 00:02:52,390
+Punto usuarios.
+
+35
+00:02:52,990 --> 00:02:53,680
+Config.
+
+36
+00:02:55,800 --> 00:02:57,030
+Y le pongo una coma al final.
+
+37
+00:02:57,860 --> 00:03:00,770
+Si te preguntas por qué le puse usuarios config.
+
+38
+00:03:01,070 --> 00:03:09,830
+Mira, vamos a ir hacia la carpeta de usuario que representa el app y ahora vamos al app py y aquí es
+
+39
+00:03:09,830 --> 00:03:11,660
+donde aparece el usuario config.
+
+40
+00:03:12,080 --> 00:03:18,590
+Esta clase de usuario config es la que inicia la ejecución de la app dentro de mi proyecto.
+
+41
+00:03:18,620 --> 00:03:26,060
+Por este motivo es que dentro del project setting y en la sección de apps tengo que hacer la llamada
+
+42
+00:03:26,060 --> 00:03:29,030
+a este archivo main a este archivo ejecutable.
+
+43
+00:03:30,290 --> 00:03:36,260
+Entonces, si a futuro quieres crear muchas más apps dentro de ese proyecto, lo que tienes que hacer
+
+44
+00:03:36,260 --> 00:03:40,670
+es posteriormente registrarlas en esta sección de install apps.
+
+45
+00:03:41,270 --> 00:03:44,100
+Registrar usuarios usuarios.
+
+46
+00:03:44,290 --> 00:03:44,600
+Config.
+
+47
+00:03:44,600 --> 00:03:46,160
+Ten mucho cuidado con el nombre.
+
+48
+00:03:46,610 --> 00:03:52,880
+Si a futuro quieres crear otra app que se llame por ejemplo contactos seria contactos, apps, punto,
+
+49
+00:03:52,880 --> 00:03:54,050
+contactos, config.
+
+50
+00:03:55,500 --> 00:03:58,260
+Siempre verificando el nombre de la clase.
+
+51
+00:03:59,250 --> 00:04:02,030
+Del app y siempre verifícalo.
+
+52
+00:04:02,040 --> 00:04:03,000
+Es una recomendación.
+
+53
+00:04:03,000 --> 00:04:05,220
+De lo contrario puede romper tu código.
+
+54
+00:04:06,100 --> 00:04:11,200
+También vamos a recordar algo muy interesante en los capítulos anteriores te dije que la forma en que
+
+55
+00:04:11,200 --> 00:04:18,010
+un usuario se comunica con mi web Project Chango es a través del archivo Juarez, recuerdas?
+
+56
+00:04:18,280 --> 00:04:25,000
+Claro, si vamos a Bakshi Project Bakshi Project, aquí aparece el You are happy y aquí tenía un path.
+
+57
+00:04:25,390 --> 00:04:32,010
+Entonces, cuando un usuario llama a una URL, lo que hace realmente es llamando a este componente URLs
+
+58
+00:04:32,050 --> 00:04:32,710
+de Yanko.
+
+59
+00:04:33,740 --> 00:04:40,520
+Pero si yo quisiera que esa comunicación se diera directamente hacia mi aplicación, mi app usuarios,
+
+60
+00:04:40,820 --> 00:04:47,420
+entonces también debería crear al interior de usuarios un archivo de tipo Juarez, que es básicamente
+
+61
+00:04:47,420 --> 00:04:48,740
+lo que haremos en este momento.
+
+62
+00:04:49,100 --> 00:04:50,960
+Dale click derecho a usuarios.
+
+63
+00:04:52,100 --> 00:04:52,760
+Newfield.
+
+64
+00:04:53,940 --> 00:04:56,400
+Y aquí le vamos a poner precio usuarios para que slash.
+
+65
+00:04:56,820 --> 00:05:01,890
+Le ponemos u rl s punto PI y leamos enter.
+
+66
+00:05:02,520 --> 00:05:05,770
+En el capitulo anterior desarrollamos la pagina de home, recuerdas?
+
+67
+00:05:05,790 --> 00:05:09,480
+Y esta página de home tiene un botón que se llama Lista de usuarios.
+
+68
+00:05:09,630 --> 00:05:17,040
+Lo que yo quiero es que cuando el cliente le de clic a este botón, se redirija a la página hacia la
+
+69
+00:05:17,040 --> 00:05:18,450
+app de usuarios.
+
+70
+00:05:19,080 --> 00:05:26,250
+Lo primero que tenemos que hacer es registrar este nuevo Path dentro del proyecto Jango, y este path
+
+71
+00:05:26,520 --> 00:05:28,050
+va a tener dos partes.
+
+72
+00:05:28,260 --> 00:05:37,080
+1/1 es apuntando hacia la aplicación que sería usuario y cuando llegue hacia la aplicación usuario,
+
+73
+00:05:37,080 --> 00:05:40,440
+recuerda que la aplicación va a tener su propio yo.
+
+74
+00:05:40,440 --> 00:05:40,880
+RL.
+
+75
+00:05:41,190 --> 00:05:47,460
+Entonces, dentro de ese archivo yo RL voy a registrar esta segunda parte que es lista.
+
+76
+00:05:48,570 --> 00:05:54,160
+Vamos a ver entonces dos partes la primera registro de la world solamente para usuario, lo que es la
+
+77
+00:05:54,210 --> 00:06:00,660
+parte rojo y la parte verde que representa lista se va a registrar dentro de la app.
+
+78
+00:06:02,660 --> 00:06:05,060
+Estamos dentro de nuestro y de Atom.
+
+79
+00:06:05,390 --> 00:06:07,850
+Vamos a ir entonces al Bakshi Project.
+
+80
+00:06:08,120 --> 00:06:16,610
+Dentro del Basic Project aparece JL y aquí dentro de este yo, en el panel del proyecto, vamos a registrar
+
+81
+00:06:16,610 --> 00:06:19,100
+ese primer pad para usuario.
+
+82
+00:06:19,820 --> 00:06:21,050
+Así que escribo path.
+
+83
+00:06:22,770 --> 00:06:23,610
+Le digo que va a ser.
+
+84
+00:06:23,620 --> 00:06:24,210
+Recuerdas?
+
+85
+00:06:24,240 --> 00:06:26,250
+Usuario Slash, nada más.
+
+86
+00:06:27,540 --> 00:06:29,100
+Coma included que llame.
+
+87
+00:06:29,100 --> 00:06:30,900
+A quién va a llamar?
+
+88
+00:06:30,900 --> 00:06:31,710
+A la app.
+
+89
+00:06:32,130 --> 00:06:34,350
+Exactamente al archivo.
+
+90
+00:06:34,680 --> 00:06:35,010
+Yo?
+
+91
+00:06:35,010 --> 00:06:37,020
+Eres de la app usuarios.
+
+92
+00:06:37,230 --> 00:06:39,760
+Así que mira, entre apóstrofes.
+
+93
+00:06:39,780 --> 00:06:41,430
+Le voy a poner usuarios.
+
+94
+00:06:41,820 --> 00:06:42,430
+Punto.
+
+95
+00:06:43,410 --> 00:06:43,650
+Yo.
+
+96
+00:06:43,730 --> 00:06:45,550
+Eres perfecto.
+
+97
+00:06:45,570 --> 00:06:46,100
+Ya lo tengo.
+
+98
+00:06:46,110 --> 00:06:48,480
+Y al final siempre la coma.
+
+99
+00:06:49,050 --> 00:06:53,580
+Pero esta palabra reservada incluso tengo que importarla dentro de este archivo.
+
+100
+00:06:54,090 --> 00:06:59,910
+Así que vamos a la parte superior, ya que esta línea que dice from tachán go punto journals y por path
+
+101
+00:07:00,330 --> 00:07:04,590
+le pongo coma también que importe a la palabra reservada include.
+
+102
+00:07:06,540 --> 00:07:14,460
+Entonces con esto hemos registrado un nuevo path dentro de mi proyecto para que sea redireccionado hacia
+
+103
+00:07:14,460 --> 00:07:15,930
+la app de usuarios.
+
+104
+00:07:16,380 --> 00:07:19,440
+Es decir, la parte roja ya está lista que me falta.
+
+105
+00:07:19,440 --> 00:07:25,560
+Ahora me falta registrar la parte del path dentro de la app usuarios esta esté lista.
+
+106
+00:07:26,880 --> 00:07:35,210
+Entonces vayamos una vez más al AUTOM y vamos ahora a la app usuarios y busquemos el archivo del punto
+
+107
+00:07:35,220 --> 00:07:37,250
+PI y este en blanco.
+
+108
+00:07:37,260 --> 00:07:38,010
+No hay problema.
+
+109
+00:07:38,340 --> 00:07:39,810
+Como vamos a registrar un path?
+
+110
+00:07:40,740 --> 00:07:46,200
+Voy a importar el from jango punto JL.
+
+111
+00:07:47,690 --> 00:07:48,310
+Import.
+
+112
+00:07:48,800 --> 00:07:50,240
+La palabra reservada path.
+
+113
+00:07:52,520 --> 00:07:56,480
+También tengo que importar lo que son los videos.
+
+114
+00:07:59,090 --> 00:08:02,810
+Y a continuación vamos a registrar este mural Patterns.
+
+115
+00:08:04,580 --> 00:08:07,970
+Y dentro de este Art Patterns es donde voy a colocar el pad.
+
+116
+00:08:09,220 --> 00:08:13,240
+Puede indicarle que en este caso sea un path que me lleve a dónde?
+
+117
+00:08:13,480 --> 00:08:14,140
+Recuerdas?
+
+118
+00:08:14,750 --> 00:08:15,310
+Lista?
+
+119
+00:08:16,930 --> 00:08:18,520
+Le ponemos acaso las.
+
+120
+00:08:20,840 --> 00:08:28,970
+Le pongo una coma y le pongo el nombre de la view que va a procesar este evento que se llama usuario.
+
+121
+00:08:30,460 --> 00:08:31,180
+Usuario.
+
+122
+00:08:31,180 --> 00:08:32,380
+Liz, le voy a poner.
+
+123
+00:08:33,210 --> 00:08:34,110
+Porque todavía no existe.
+
+124
+00:08:34,140 --> 00:08:35,220
+Ahora lo vamos a crear.
+
+125
+00:08:35,460 --> 00:08:39,420
+Y también le voy a poner un nombre name que se llame usuario.
+
+126
+00:08:39,780 --> 00:08:40,800
+Raya para abajo.
+
+127
+00:08:41,220 --> 00:08:41,670
+List.
+
+128
+00:08:43,140 --> 00:08:50,100
+Vamos entonces al archivo bus que está en mi proyecto de usuarios para crear esta función de tipo usuario
+
+129
+00:08:50,100 --> 00:08:50,430
+list.
+
+130
+00:08:50,460 --> 00:08:52,230
+Recuerda, es una función de tipo DEV.
+
+131
+00:08:52,490 --> 00:08:56,070
+Ya en capítulos pasados te expliqué que era una función de tipo DEF.
+
+132
+00:08:56,580 --> 00:08:57,540
+Voy a copiar el nombre.
+
+133
+00:08:59,520 --> 00:09:00,420
+Lo tenemos.
+
+134
+00:09:01,580 --> 00:09:06,800
+Y vamos ahora dentro de usuarios a buscar el bus y.
+
+135
+00:09:08,610 --> 00:09:11,310
+Aquí está referenciado el render.
+
+136
+00:09:11,400 --> 00:09:12,240
+Este está perfecto.
+
+137
+00:09:13,060 --> 00:09:14,460
+Aquí le voy a poner def.
+
+138
+00:09:15,700 --> 00:09:16,630
+Usuario, Liz.
+
+139
+00:09:18,020 --> 00:09:19,130
+Es el nombre de la función.
+
+140
+00:09:19,370 --> 00:09:22,280
+Va a recibir un objeto de tipo del cliente.
+
+141
+00:09:23,430 --> 00:09:25,050
+Y lo que me tiene que retornar.
+
+142
+00:09:26,370 --> 00:09:29,280
+Es un código HTML, un archivo HTML, un render.
+
+143
+00:09:30,280 --> 00:09:35,470
+Que va a tener dos parámetros un primero que es el request que me envió el cliente y lo que retorne
+
+144
+00:09:35,470 --> 00:09:38,620
+es el archivo HTML en el template, recuerdas?
+
+145
+00:09:38,650 --> 00:09:39,250
+Claro que sí.
+
+146
+00:09:39,610 --> 00:09:42,580
+Aquí tenemos que poner el template que representa la lista de usuarios.
+
+147
+00:09:42,940 --> 00:09:45,790
+Lo voy a poner usuario list.
+
+148
+00:09:46,600 --> 00:09:47,380
+HTML.
+
+149
+00:09:47,800 --> 00:09:50,240
+Por supuesto que ese template aún no existe.
+
+150
+00:09:50,260 --> 00:09:51,460
+Ahora lo vamos a crear.
+
+151
+00:09:52,540 --> 00:09:54,040
+Vamos a la carpeta Templates.
+
+152
+00:09:54,320 --> 00:09:56,440
+Está en la parte superior a nivel de BASIC.
+
+153
+00:09:56,440 --> 00:10:02,110
+Dentro de BASIC aparece Templates y dentro de Templates vamos a hacer clic derecho Newfield y aquí le
+
+154
+00:10:02,110 --> 00:10:08,080
+ponemos usuario list a HTML y le damos enter.
+
+155
+00:10:09,290 --> 00:10:14,570
+De aquí vamos a escribir a HTML, le damos enter y ya me creo la estructura HTML y le vamos a poner
+
+156
+00:10:14,570 --> 00:10:16,100
+un título dentro del get.
+
+157
+00:10:17,950 --> 00:10:18,850
+Le ponemos.
+
+158
+00:10:20,630 --> 00:10:21,770
+Lista de usuarios.
+
+159
+00:10:22,870 --> 00:10:25,690
+Mucha ahora dentro del body y le voy a poner un h1.
+
+160
+00:10:31,400 --> 00:10:33,890
+Ponemos acá una lista de usuarios.
+
+161
+00:10:35,520 --> 00:10:37,110
+Vamos a borrar todos los cambios.
+
+162
+00:10:37,140 --> 00:10:38,640
+Menú File Safe All.
+
+163
+00:10:40,530 --> 00:10:41,760
+Y vamos al valle.
+
+164
+00:10:42,250 --> 00:10:47,160
+Aquí está el valle y vamos a ejecutar acá nuestro proyecto, nuestro servidor web.
+
+165
+00:10:48,120 --> 00:10:53,070
+Ya escribí aquí Python, Espacio Manager, punto Pi, espacio Run Server.
+
+166
+00:10:53,340 --> 00:10:54,090
+Lo tengo listo.
+
+167
+00:10:54,090 --> 00:10:54,840
+Le voy a entrar.
+
+168
+00:10:56,590 --> 00:10:57,780
+Se ejecuta sin problemas.
+
+169
+00:10:57,790 --> 00:10:59,650
+Vamos ahora a abrir un browser.
+
+170
+00:11:00,830 --> 00:11:04,400
+Ya puede notar que en el local 8000 se está ejecutando sin problemas.
+
+171
+00:11:04,820 --> 00:11:06,560
+A ver, voy a poner ahora las.
+
+172
+00:11:07,890 --> 00:11:08,670
+Usuario.
+
+173
+00:11:10,410 --> 00:11:11,190
+Un momento.
+
+174
+00:11:13,830 --> 00:11:16,020
+Es la más lista.
+
+175
+00:11:16,740 --> 00:11:18,240
+Recuerdas 1/1?
+
+176
+00:11:18,240 --> 00:11:20,380
+Es para que entre la app y dentro de la app.
+
+177
+00:11:20,400 --> 00:11:26,430
+Yo he creado su propio joer, él que es lista, le damos enter y mira, ya me está ejecutando.
+
+178
+00:11:26,640 --> 00:11:32,550
+Ya está llevandome al template del HTML que muestra un título que dice Lista de usuarios.
+
+179
+00:11:33,380 --> 00:11:33,830
+Pero.
+
+180
+00:11:33,830 --> 00:11:35,390
+Recuerdas el recuento original?
+
+181
+00:11:35,460 --> 00:11:35,600
+Bueno.
+
+182
+00:11:35,600 --> 00:11:37,730
+Recuerdas el pedido original que yo te había dicho?
+
+183
+00:11:37,730 --> 00:11:38,870
+Vamos a los 8000.
+
+184
+00:11:39,350 --> 00:11:45,740
+Lo que yo quería es que cuando le presione a este botón lista de usuarios me lleve hacia esa página
+
+185
+00:11:45,740 --> 00:11:47,570
+de la app de usuarios.
+
+186
+00:11:47,750 --> 00:11:48,900
+Y no está ocurriendo aún.
+
+187
+00:11:48,920 --> 00:11:50,870
+Vamos entonces a programar este botón.
+
+188
+00:11:52,080 --> 00:11:57,210
+Recuerda que el template de esa página principal está dentro de la carpeta templates.
+
+189
+00:11:57,270 --> 00:12:02,100
+Aquí aparece el home HTML y voy a maximizar aquí para que lo veas mejor.
+
+190
+00:12:03,180 --> 00:12:06,960
+Y aquí aparece el botón que es lista de usuarios.
+
+191
+00:12:07,680 --> 00:12:14,610
+Entonces lo que voy a hacer aquí es agregarle un href a este botón para que haga el redireccionamiento
+
+192
+00:12:14,610 --> 00:12:15,390
+hacia la app.
+
+193
+00:12:16,200 --> 00:12:18,120
+Entonces acá le voy a poner href.
+
+194
+00:12:20,960 --> 00:12:21,650
+Iguala.
+
+195
+00:12:21,860 --> 00:12:22,670
+Vamos a ponerle.
+
+196
+00:12:24,190 --> 00:12:26,020
+Entre llaves.
+
+197
+00:12:27,040 --> 00:12:32,170
+Y entre los porcentajes le colocamos jurel.
+
+198
+00:12:34,500 --> 00:12:39,850
+Y aquí le tenemos que colocar el nombre de la URL que ha registrado en la app.
+
+199
+00:12:39,900 --> 00:12:44,550
+Entonces vamos entonces a la app que se llama Usuarios, que aparece en el punto PI.
+
+200
+00:12:44,910 --> 00:12:46,860
+Y recuerdas que le había puesto al pato un nombre?
+
+201
+00:12:47,280 --> 00:12:49,740
+Si se llama usuario Luis, no hay problema.
+
+202
+00:12:49,740 --> 00:12:50,910
+Copie ese nombre.
+
+203
+00:12:51,570 --> 00:12:56,100
+Volvamos ahora a la carpeta Templates Home Paint html.
+
+204
+00:12:57,100 --> 00:12:58,690
+Voy a maximizar nuevamente esto.
+
+205
+00:12:59,900 --> 00:13:01,310
+Y aquí le voy a poner.
+
+206
+00:13:02,420 --> 00:13:08,900
+Entre apóstrofes el nombre de shared que sería usuario holis que me redirecciona a este componente de
+
+207
+00:13:08,900 --> 00:13:09,950
+la app usuario list.
+
+208
+00:13:11,100 --> 00:13:13,050
+Pero aquí también hay un pequeño detalle.
+
+209
+00:13:13,290 --> 00:13:18,840
+Yo estoy colocando este atributo href, pero mi componente, mi objeto es un botón.
+
+210
+00:13:19,620 --> 00:13:20,730
+Entonces tengo que cambiarlo.
+
+211
+00:13:20,730 --> 00:13:23,490
+Ya no va a ser un botón, va a ser un link en vez de button.
+
+212
+00:13:23,520 --> 00:13:25,980
+Le pongo a tanto al inicio.
+
+213
+00:13:26,990 --> 00:13:28,760
+Como en la parte final.
+
+214
+00:13:30,280 --> 00:13:33,190
+Y este tipo Button también lo voy a borrar.
+
+215
+00:13:34,280 --> 00:13:42,920
+De esta forma es como quedaría este nuevo componente agregándole el href que me redirecciona hacia la
+
+216
+00:13:42,920 --> 00:13:45,290
+página que representa el usuario list.
+
+217
+00:13:45,440 --> 00:13:46,670
+El template usuario list.
+
+218
+00:13:47,300 --> 00:13:50,000
+Vamos a borrar todos los cambios menus false all.
+
+219
+00:13:51,100 --> 00:13:52,030
+Y vamos a la página.
+
+220
+00:13:52,180 --> 00:13:53,200
+Vamos a hacer la prueba.
+
+221
+00:13:54,130 --> 00:13:55,450
+Voy a refrescar la página.
+
+222
+00:13:56,020 --> 00:13:56,680
+Perfecto.
+
+223
+00:13:57,130 --> 00:14:00,650
+Voy a darle click a este botón inmediatamente.
+
+224
+00:14:00,670 --> 00:14:05,680
+Ya me llevo hacia la app el template que representa la lista de usuarios.

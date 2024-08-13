@@ -1,0 +1,623 @@
+1
+00:00:00,450 --> 00:00:03,960
+En este capítulo continuaremos trabajando en la página de Store.
+
+2
+00:00:04,560 --> 00:00:10,200
+En el capítulo anterior incluimos una funcionalidad para poder filtrar por categoría de la lista de
+
+3
+00:00:10,200 --> 00:00:10,890
+productos.
+
+4
+00:00:11,820 --> 00:00:18,660
+En este caso, en la parte superior, en Laurel colocaba el slug que correspondía a una categoría determinada
+
+5
+00:00:19,140 --> 00:00:23,100
+y este nos servía como filtro para después desplegar los productos.
+
+6
+00:00:23,880 --> 00:00:28,830
+Ahora lo que voy a trabajar es en este menú desplegable que veis aquí, que se llama Categorías.
+
+7
+00:00:29,760 --> 00:00:34,830
+Como puedes ver en este momento, la lista de elementos de categorías es odiada.
+
+8
+00:00:35,040 --> 00:00:38,460
+No pertenece a la lista que yo tengo mi base de datos.
+
+9
+00:00:38,970 --> 00:00:44,700
+Esta será una de las tareas que trabajaremos en este capítulo crear una consulta para que se listen
+
+10
+00:00:44,700 --> 00:00:47,010
+los elementos directamente desde mi base de datos.
+
+11
+00:00:47,400 --> 00:00:52,770
+Y otra tarea que también realizaremos es que cuando ya tenga el elemento de dinámico dentro de esta
+
+12
+00:00:52,770 --> 00:01:00,900
+lista, yo al darle clic quiero que automáticamente ejecute el proceso de filtro y me devuelva la lista
+
+13
+00:01:00,900 --> 00:01:05,070
+de productos que pertenecen a esta categoría que yo voy a seleccionar.
+
+14
+00:01:06,360 --> 00:01:13,620
+Para poder realizar esta tarea necesito trabajar con una función de chango que se llama Contact Procesos.
+
+15
+00:01:14,250 --> 00:01:15,510
+Estamos dentro de Atton.
+
+16
+00:01:15,510 --> 00:01:17,970
+Vamos a ubicarnos en la carpeta Category.
+
+17
+00:01:18,300 --> 00:01:20,490
+Vamos a darle clic derecho y la opción New File.
+
+18
+00:01:20,700 --> 00:01:24,150
+Y aquí vamos a ponerle nombre a este archivo Context.
+
+19
+00:01:24,180 --> 00:01:25,200
+Raya para abajo.
+
+20
+00:01:25,920 --> 00:01:31,590
+Proceso con doble s y una vez al final, professors y.
+
+21
+00:01:32,620 --> 00:01:33,460
+Y le damos enter.
+
+22
+00:01:36,170 --> 00:01:38,030
+Y aquí vamos a crear una función.
+
+23
+00:01:38,030 --> 00:01:41,540
+Por eso le pongo DEF, que se va a llamar Menu Links.
+
+24
+00:01:44,020 --> 00:01:46,420
+Iba a recibir un request como parámetro.
+
+25
+00:01:48,830 --> 00:01:53,300
+Y le digo que estos links, una variable links, van a venir de la base de datos.
+
+26
+00:01:53,300 --> 00:01:55,910
+Por eso llamo a Category y Punto Objects.
+
+27
+00:01:56,920 --> 00:01:59,020
+Junto con todas las categorías.
+
+28
+00:01:59,020 --> 00:02:04,150
+Estoy haciendo la consulta aquí a la tabla de categorías de mi base de datos, pero como estoy llamando
+
+29
+00:02:04,150 --> 00:02:07,420
+a category, necesito importarla en la parte superior.
+
+30
+00:02:09,200 --> 00:02:12,650
+Por eso aquí pongo From models import category.
+
+31
+00:02:15,690 --> 00:02:17,490
+Y ahora voy a indicarle que la función.
+
+32
+00:02:17,490 --> 00:02:19,170
+Más que un diccionario.
+
+33
+00:02:21,030 --> 00:02:22,630
+Con el valor de los links.
+
+34
+00:02:22,680 --> 00:02:28,140
+Por eso le pongo links igual al valor de links que me está retornando.
+
+35
+00:02:28,710 --> 00:02:33,450
+Tenemos ahora que registrar esta función menu links dentro de nuestro proyecto.
+
+36
+00:02:33,450 --> 00:02:39,600
+Por eso vamos a la carpeta E-commerce y comercio que apareció y vamos al archivo Settings y.
+
+37
+00:02:40,930 --> 00:02:44,110
+Y vamos a la propiedad templates en la parte inferior.
+
+38
+00:02:44,200 --> 00:02:45,220
+Aquí lo vas a encontrar.
+
+39
+00:02:46,240 --> 00:02:49,780
+Y dentro de la sección de Options, aquí está el Options.
+
+40
+00:02:50,530 --> 00:02:54,010
+Luego de este messages coma, vamos a darle un enter.
+
+41
+00:02:54,670 --> 00:02:56,920
+Y aquí registro esta función proceso.
+
+42
+00:02:57,490 --> 00:02:59,660
+Le pongo category el nombre de la app.
+
+43
+00:02:59,980 --> 00:03:00,950
+Luego el nombre punto.
+
+44
+00:03:00,970 --> 00:03:03,100
+El nombre del archivo que es Context Resource.
+
+45
+00:03:03,400 --> 00:03:03,810
+Punto.
+
+46
+00:03:03,940 --> 00:03:06,430
+El nombre de la función que es Menú Links.
+
+47
+00:03:07,420 --> 00:03:08,190
+Lo tenemos.
+
+48
+00:03:08,200 --> 00:03:10,840
+Y ahora, luego del apóstrofe y le pongo una coma.
+
+49
+00:03:12,110 --> 00:03:17,840
+Al hacer este registro, lo que estamos haciendo realmente es que estamos haciendo público este menú
+
+50
+00:03:17,840 --> 00:03:24,080
+links, es decir, cualquier tipo de template de mi aplicación, de mi proyecto va a tener acceso ahora
+
+51
+00:03:24,080 --> 00:03:26,150
+a la lista de categorías como links.
+
+52
+00:03:27,290 --> 00:03:33,410
+Vamos a borrar los cambios Menú False All y ahora vamos al template donde tenemos que desplegar esta
+
+53
+00:03:33,410 --> 00:03:34,490
+lista de categorías.
+
+54
+00:03:35,120 --> 00:03:40,130
+Por eso vamos a la carpeta templates dentro de template includes.
+
+55
+00:03:40,190 --> 00:03:41,350
+Y aquí está el nav bar.
+
+56
+00:03:41,780 --> 00:03:44,180
+Esa lista de categorías realmente está en el VAR.
+
+57
+00:03:44,240 --> 00:03:45,170
+Vamos a darle doble clic.
+
+58
+00:03:46,380 --> 00:03:52,500
+Te va a parecer justamente esta lista este club que se llama Drop Drop Down.
+
+59
+00:03:53,400 --> 00:04:00,960
+Aquí lo puedes ver y este if tiene una lista de elementos href que representan las categorías.
+
+60
+00:04:01,800 --> 00:04:02,760
+Qué es lo que voy a hacer?
+
+61
+00:04:03,060 --> 00:04:04,980
+Voy a eliminar todos excepto uno.
+
+62
+00:04:05,070 --> 00:04:06,780
+Voy a quedarme con este que dice electrónica.
+
+63
+00:04:07,950 --> 00:04:09,270
+El resto lo voy a eliminar.
+
+64
+00:04:11,570 --> 00:04:12,220
+Tienes acá.
+
+65
+00:04:12,230 --> 00:04:16,850
+Este es entonces el drag down menu que representa la lista de categorías.
+
+66
+00:04:17,930 --> 00:04:19,970
+Vamos a hacerlo meter acá y otro link acá.
+
+67
+00:04:20,450 --> 00:04:21,330
+Porque voy a crear.
+
+68
+00:04:21,650 --> 00:04:24,040
+Voy a crear un bucle dinámico.
+
+69
+00:04:24,530 --> 00:04:27,110
+Abro unas llaves de inicio final.
+
+70
+00:04:27,800 --> 00:04:30,110
+También abro los signos de porcentaje.
+
+71
+00:04:31,390 --> 00:04:34,000
+Y hago un bucle for category.
+
+72
+00:04:35,030 --> 00:04:36,440
+In links.
+
+73
+00:04:36,710 --> 00:04:41,270
+Recuerda que así se llama la variable que me está retornando la función proceso.
+
+74
+00:04:42,550 --> 00:04:47,230
+Entonces y en la parte final le pongo también llaves, porcentajes.
+
+75
+00:04:48,410 --> 00:04:55,220
+Y le digo Ford, perfecto, me voy a imprimir entonces en este contenido la lista de categorías como
+
+76
+00:04:55,220 --> 00:04:57,080
+si fuera un draw down idem.
+
+77
+00:04:58,650 --> 00:05:03,570
+Voy a eliminar este label que está aquí y en su lugar, voy a colocar un contenido dinámico.
+
+78
+00:05:04,020 --> 00:05:06,900
+Vamos a colocar un category punto.
+
+79
+00:05:07,740 --> 00:05:09,750
+Category name.
+
+80
+00:05:10,710 --> 00:05:11,460
+Eso es lo que quiero.
+
+81
+00:05:12,360 --> 00:05:16,320
+Voy a borrar los cambios de menú File Safe All y vamos a probar.
+
+82
+00:05:17,660 --> 00:05:19,940
+Estamos en la página que es el Store.
+
+83
+00:05:20,610 --> 00:05:23,960
+Voy a ponerle solamente el Store local 8000 Store.
+
+84
+00:05:24,920 --> 00:05:26,870
+Y ahora voy a darle el refrescada a la página.
+
+85
+00:05:26,870 --> 00:05:27,170
+Eso sí.
+
+86
+00:05:27,620 --> 00:05:30,470
+Y ahora vamos a darle clic a este menú, a este group download.
+
+87
+00:05:31,340 --> 00:05:36,230
+Y mira, ya me aparecen ahora las categorías que vienen desde la base de datos.
+
+88
+00:05:37,380 --> 00:05:39,140
+1/1 está completada.
+
+89
+00:05:39,150 --> 00:05:40,590
+Ahora vamos con la segunda tarea.
+
+90
+00:05:40,950 --> 00:05:46,440
+La segunda tarea es que cuando yo le dé clic a uno de estos elementos, automáticamente ejecute un proceso
+
+91
+00:05:46,440 --> 00:05:52,140
+para filtrar la lista de productos por esta categoría que he seleccionado.
+
+92
+00:05:52,770 --> 00:05:54,240
+Eso aún no está trabajando.
+
+93
+00:05:54,600 --> 00:05:55,650
+Volvamos al addon.
+
+94
+00:05:57,010 --> 00:06:01,930
+Vamos a notar que dentro del bucle que aparece ella, este es el ítem de la categoría.
+
+95
+00:06:02,470 --> 00:06:04,000
+Está teniendo un href.
+
+96
+00:06:04,300 --> 00:06:09,280
+Se supone que esta propiedad es la que me permite redireccionar y ejecutar el proceso de filtrado.
+
+97
+00:06:09,700 --> 00:06:15,430
+Lo que debería hacer entonces es aquí agregar la URL que incluya el logo, recuerdas?
+
+98
+00:06:16,060 --> 00:06:16,420
+Claro.
+
+99
+00:06:16,420 --> 00:06:23,860
+Yo necesito agregar el que corresponde a esta categoría para que me filtre por la lista de productos.
+
+100
+00:06:24,610 --> 00:06:27,310
+Entonces aquí debería de colocar algo parecido a esto.
+
+101
+00:06:27,910 --> 00:06:29,740
+Debería llamar al objeto Category.
+
+102
+00:06:30,840 --> 00:06:32,490
+Y luego a una función.
+
+103
+00:06:33,570 --> 00:06:35,100
+Que se llame jet jurel.
+
+104
+00:06:36,690 --> 00:06:43,800
+Y ese get you en él debe contener el Slack, el tipo de categoría que va a filtrar y que me va a refrescar
+
+105
+00:06:43,800 --> 00:06:45,870
+la página con la nueva lista de productos.
+
+106
+00:06:47,280 --> 00:06:49,770
+Pero él aún existe.
+
+107
+00:06:50,980 --> 00:06:55,180
+Tenemos que crearlo dentro de la clase modelo que pertenece a categoría.
+
+108
+00:06:55,930 --> 00:07:01,480
+No te preocupes, voy a copiar este jurel, este método y vamos ahora a category.
+
+109
+00:07:01,690 --> 00:07:04,240
+Aquí está Category y vamos al models.
+
+110
+00:07:04,740 --> 00:07:09,790
+Y lo hemos abierto ya aquí antes del def str.
+
+111
+00:07:10,170 --> 00:07:10,780
+Colocar aquí.
+
+112
+00:07:11,930 --> 00:07:13,810
+Pasa un poco más despacio.
+
+113
+00:07:13,820 --> 00:07:22,910
+Voy a crear este def get en él o tengo que va a recibir como parámetro este self y le ponemos dos puntos.
+
+114
+00:07:24,360 --> 00:07:30,270
+Y lo que quiero que me retorne es la RL, pero para que mantenga el, le tengo que llamar a esta función
+
+115
+00:07:30,270 --> 00:07:37,200
+Roberts, Lawrence, de quien quiero, tengo que trabajar en este caso, recuerda que nosotros dentro
+
+116
+00:07:37,200 --> 00:07:46,560
+del store aquí tenemos la carpeta Store, vamos a abrirla y aquí aparece el archivo RLC y nosotros antes
+
+117
+00:07:46,560 --> 00:07:52,050
+habíamos definido un path para definir el slug, recuerdas que aparece?
+
+118
+00:07:52,500 --> 00:07:56,370
+Y ese path para el slug se llamaba Product Category.
+
+119
+00:07:56,880 --> 00:08:04,590
+Entonces voy a tomar este product category y volvemos a la carpeta category y al models y.
+
+120
+00:08:06,390 --> 00:08:11,190
+Aquí está la función que estamos trabajando, el que él hace aquí dentro del Rivers.
+
+121
+00:08:11,760 --> 00:08:12,570
+Voy a agregar esto.
+
+122
+00:08:12,570 --> 00:08:18,510
+Voy a indicarle que me devuelva la URL, incluyendo el Slack.
+
+123
+00:08:20,600 --> 00:08:28,880
+Y también le digo que como argumento aquí le vamos a poner arcos con S sea igual al.
+
+124
+00:08:30,110 --> 00:08:30,730
+Self.
+
+125
+00:08:32,480 --> 00:08:33,050
+Es loco.
+
+126
+00:08:34,480 --> 00:08:36,010
+Que le pase ese parametro.
+
+127
+00:08:36,010 --> 00:08:38,670
+El valor actual que esta tomando el usuario.
+
+128
+00:08:38,680 --> 00:08:41,500
+Este self representa el objeto categoría.
+
+129
+00:08:42,190 --> 00:08:47,830
+Entonces le estoy pasando ese objeto categoría y estoy capturando la columna.
+
+130
+00:08:47,830 --> 00:08:50,140
+Es la propiedad, es el valor de slug.
+
+131
+00:08:50,800 --> 00:08:58,150
+En conclusión, lo que hace este return reverse es creando, generando esta variable local ocho store
+
+132
+00:08:58,660 --> 00:08:59,620
+y agregándole.
+
+133
+00:09:00,760 --> 00:09:06,670
+El slug que corresponde a la categoría que seleccionaste en el ComboBox, por ejemplo, puede ser computadora.
+
+134
+00:09:07,300 --> 00:09:15,910
+Esta es la URL que esta generando y que esta disparando este get haciendo posteriormente que se ejecute
+
+135
+00:09:15,910 --> 00:09:23,230
+el evento para realizar la consulta a la base de datos y devolverme la lista de productos que corresponden
+
+136
+00:09:23,230 --> 00:09:26,740
+a esta categoría que está dentro de la variable.
+
+137
+00:09:27,260 --> 00:09:33,490
+Bien, voy a borrar este texto que había puesto solo para ejemplos y ahora hay algo adicional.
+
+138
+00:09:33,670 --> 00:09:37,540
+Me faltó aquí importar esta función Rivers en la parte superior.
+
+139
+00:09:38,020 --> 00:09:39,730
+Vamos a la parte superior de aquí.
+
+140
+00:09:39,730 --> 00:09:45,220
+Le voy a poner from chango punto Juarez import.
+
+141
+00:09:47,060 --> 00:09:47,630
+Rivers.
+
+142
+00:09:48,560 --> 00:09:49,040
+Lo tenemos.
+
+143
+00:09:49,040 --> 00:09:49,430
+Listo.
+
+144
+00:09:50,130 --> 00:09:50,870
+Menú File.
+
+145
+00:09:51,910 --> 00:09:52,660
+Safe all.
+
+146
+00:09:53,260 --> 00:09:54,940
+Y ahora vamos a ejecutar la página.
+
+147
+00:09:55,960 --> 00:09:57,280
+Ya refresca mi página.
+
+148
+00:09:57,460 --> 00:09:59,980
+Aquí voy a darle click al ComboBox de categorías.
+
+149
+00:10:01,270 --> 00:10:02,080
+Si aparecen éstas.
+
+150
+00:10:02,080 --> 00:10:06,160
+Por ejemplo, voy a seleccionar computadoras y mira, está funcionando.
+
+151
+00:10:06,370 --> 00:10:13,030
+Está disparando el evento y generando esta URL de tal como te lo dije, y me está filtrando por los
+
+152
+00:10:13,030 --> 00:10:16,590
+productos que pertenecen a la categoría computadoras.
+
+153
+00:10:17,790 --> 00:10:24,660
+Si selecciono música y media, también Laureles, actualizo y me está poniendo aquí el loop que pertenece
+
+154
+00:10:24,660 --> 00:10:25,680
+a música y media.
+
+155
+00:10:27,050 --> 00:10:34,730
+Y si voy a accesorios tech también ya me está filtrando por este look en la parte superior y devolviéndome
+
+156
+00:10:34,730 --> 00:10:36,590
+la lista de productos de esta categoría.

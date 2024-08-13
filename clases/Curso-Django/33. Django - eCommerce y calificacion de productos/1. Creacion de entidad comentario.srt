@@ -1,0 +1,423 @@
+1
+00:00:00,360 --> 00:00:07,050
+En este capítulo vamos a trabajar en el mantenimiento de los reviews, puntajes que nos pueden dejar
+
+2
+00:00:07,050 --> 00:00:09,750
+los usuarios respecto de un producto.
+
+3
+00:00:10,410 --> 00:00:16,800
+Por ejemplo, yo podría seleccionar camisa moderna y una vez que haya comprado ese producto podría agregar
+
+4
+00:00:17,130 --> 00:00:23,160
+un comentario respecto si estoy conforme con el producto y también podría agregar un puntaje.
+
+5
+00:00:24,710 --> 00:00:30,320
+Para poder almacenar esta información del puntaje y comentario del producto por parte de los usuarios.
+
+6
+00:00:30,500 --> 00:00:31,970
+Vamos a crear una entidad.
+
+7
+00:00:32,420 --> 00:00:34,970
+Vayamos entonces a la carpeta Store.
+
+8
+00:00:35,810 --> 00:00:38,090
+Dentro de Store nos ubicamos en Models.
+
+9
+00:00:39,530 --> 00:00:40,460
+Y en la parte final.
+
+10
+00:00:40,490 --> 00:00:41,470
+Luego de varias son.
+
+11
+00:00:42,660 --> 00:00:45,270
+Que vamos a crear un class.
+
+12
+00:00:47,140 --> 00:00:48,820
+Que llamaremos Review.
+
+13
+00:00:50,960 --> 00:00:51,500
+Rating.
+
+14
+00:00:55,100 --> 00:00:59,120
+Y consumiendo un model a Model le vamos a dar dos puntos.
+
+15
+00:01:01,310 --> 00:01:07,760
+Y la primera característica que quiero agregar es el atributo es producto, pero este producto va a
+
+16
+00:01:07,760 --> 00:01:08,350
+ser un foro en.
+
+17
+00:01:12,250 --> 00:01:13,750
+Relacionado con la entidad product.
+
+18
+00:01:14,830 --> 00:01:16,470
+También en On Gilead.
+
+19
+00:01:17,320 --> 00:01:23,320
+Es decir, si se elimina el producto referenciado, también se va a eliminar el record del review rating
+
+20
+00:01:24,130 --> 00:01:28,150
+on igual a models punto Cascade.
+
+21
+00:01:31,070 --> 00:01:33,310
+Voy a tener también un objeto de tipo user.
+
+22
+00:01:33,320 --> 00:01:35,750
+Voy a ponerle un models punto focal.
+
+23
+00:01:38,850 --> 00:01:44,670
+Relacionado con la entidad account y de la misma forma parte de un hotel en Cascade.
+
+24
+00:01:47,110 --> 00:01:48,580
+Que le ponemos models.
+
+25
+00:01:52,200 --> 00:01:56,040
+También vamos a agregar un título al comentario, por eso le pongo subject.
+
+26
+00:01:57,290 --> 00:01:58,790
+Hacemos un models punto.
+
+27
+00:01:58,940 --> 00:02:00,170
+Chart Field.
+
+28
+00:02:01,880 --> 00:02:06,590
+Esto va a ser un Max Planck en 100 longitudes siempre.
+
+29
+00:02:07,190 --> 00:02:09,650
+Y también un Planck igual a true.
+
+30
+00:02:14,190 --> 00:02:15,330
+Y aquí el comentario.
+
+31
+00:02:15,330 --> 00:02:16,800
+Vamos a ponerle aquí review.
+
+32
+00:02:18,480 --> 00:02:20,910
+Este va a ser un modelo Sarsfield.
+
+33
+00:02:21,390 --> 00:02:25,200
+La longitud de ese comentario va a ser de 500 caracteres y también con blanco.
+
+34
+00:02:27,330 --> 00:02:28,560
+El siguiente es el rating.
+
+35
+00:02:29,070 --> 00:02:31,170
+El puntaje que le vas a dar al producto.
+
+36
+00:02:31,260 --> 00:02:34,170
+Por eso le pongo un models float field.
+
+37
+00:02:34,170 --> 00:02:36,120
+Puede ser un decimal el puntaje que le des.
+
+38
+00:02:38,400 --> 00:02:39,230
+También el hip.
+
+39
+00:02:40,680 --> 00:02:43,290
+La dirección desde la cual se está enviando este puntaje.
+
+40
+00:02:43,470 --> 00:02:44,850
+Voy a poner aquí un char field.
+
+41
+00:02:47,170 --> 00:02:49,030
+En Max Planck de 20.
+
+42
+00:02:50,710 --> 00:02:52,000
+Y puede ser blanco también.
+
+43
+00:02:54,630 --> 00:02:55,320
+Continuando.
+
+44
+00:02:55,320 --> 00:02:57,060
+También vamos a agregar un estatus.
+
+45
+00:02:58,260 --> 00:02:59,430
+Estatus del comentario.
+
+46
+00:03:00,530 --> 00:03:01,820
+Este va a ser el tipo.
+
+47
+00:03:02,060 --> 00:03:03,050
+William Field.
+
+48
+00:03:04,790 --> 00:03:05,600
+William Field.
+
+49
+00:03:06,540 --> 00:03:08,720
+Y vamos a inicializar dentro.
+
+50
+00:03:10,110 --> 00:03:11,490
+Default igual a true.
+
+51
+00:03:13,820 --> 00:03:15,110
+Vamos a crear otro más.
+
+52
+00:03:15,500 --> 00:03:17,000
+Este va a ser el.
+
+53
+00:03:17,720 --> 00:03:18,680
+La fecha de creación.
+
+54
+00:03:18,700 --> 00:03:20,480
+Create at.
+
+55
+00:03:21,670 --> 00:03:31,030
+Va a ser en este caso un tipo Model Punto DateTime Field y vamos a agregarle que sea un auto now.
+
+56
+00:03:32,250 --> 00:03:33,480
+AT igual a true.
+
+57
+00:03:35,110 --> 00:03:35,770
+Lo tenemos.
+
+58
+00:03:35,800 --> 00:03:36,970
+Voy a copiar este.
+
+59
+00:03:37,390 --> 00:03:39,400
+Este tributo para el Update.
+
+60
+00:03:39,940 --> 00:03:40,900
+Update at.
+
+61
+00:03:44,160 --> 00:03:48,150
+Y aquí le ponemos que sea también atinado sin el AT.
+
+62
+00:03:48,420 --> 00:03:51,020
+Listo, igual a True lo tenemos.
+
+63
+00:03:51,030 --> 00:03:56,760
+Ahora tenemos que crear también una función que represente la cabecera en el CRIT, que se pinte.
+
+64
+00:03:57,060 --> 00:04:01,500
+Entonces hacemos un espacio doble de trabajo STR.
+
+65
+00:04:03,250 --> 00:04:03,910
+Serf.
+
+66
+00:04:04,270 --> 00:04:05,680
+Vamos a ponerle dos puntos.
+
+67
+00:04:07,110 --> 00:04:07,820
+Y lo ponemos acá.
+
+68
+00:04:07,830 --> 00:04:08,200
+Un reto.
+
+69
+00:04:08,230 --> 00:04:09,750
+Un selfie.
+
+70
+00:04:12,720 --> 00:04:19,230
+Entonces cuando imprima ese grito dentro del Chango Administration, me va a pintar los records en los
+
+71
+00:04:19,230 --> 00:04:22,710
+reviews con el título del comentario.
+
+72
+00:04:23,220 --> 00:04:28,020
+Y ya sabes que para que sea visible dentro del juego administración tenemos que ir a la carpeta store
+
+73
+00:04:28,020 --> 00:04:32,670
+y aquí al admin punto PI y voy a copiar este admin register.
+
+74
+00:04:35,420 --> 00:04:35,900
+Lo pego.
+
+75
+00:04:37,060 --> 00:04:41,620
+Y vamos a registrar a esta nueva entidad review rating.
+
+76
+00:04:42,040 --> 00:04:44,350
+Ya lo agregué en la parte superior.
+
+77
+00:04:44,350 --> 00:04:47,530
+También vamos a ponerle front models por Product.
+
+78
+00:04:48,190 --> 00:04:49,030
+Coma variación.
+
+79
+00:04:49,060 --> 00:04:50,710
+Coma Review reading.
+
+80
+00:04:51,370 --> 00:04:58,210
+Vamos nuevamente al archivo models de la carpeta Store y voy a fijarme si estoy importando adecuadamente
+
+81
+00:04:58,210 --> 00:05:02,290
+el product y el account que estoy referenciando en este class.
+
+82
+00:05:02,650 --> 00:05:05,020
+En la parte superior vamos a la parte superior.
+
+83
+00:05:05,900 --> 00:05:11,240
+A quien estoy importando lo que es el product y tampoco el account.
+
+84
+00:05:11,250 --> 00:05:17,330
+Así que comencemos con el account, hagamos un from account punto models.
+
+85
+00:05:18,690 --> 00:05:19,950
+Import account.
+
+86
+00:05:22,350 --> 00:05:23,670
+Cuando el Account ya está declarado.
+
+87
+00:05:23,670 --> 00:05:24,720
+Aquí no hay ningún problema.
+
+88
+00:05:25,320 --> 00:05:25,860
+Perfecto.
+
+89
+00:05:25,890 --> 00:05:30,000
+Voy a guardar los cambios en el Safe Hall y vamos a generar su archivo de inmigración.
+
+90
+00:05:30,600 --> 00:05:31,710
+Estamos dentro del valle.
+
+91
+00:05:31,770 --> 00:05:36,210
+Voy a escribir Python Space Mensch Make My Reasons.
+
+92
+00:05:36,840 --> 00:05:37,800
+El comando está listo.
+
+93
+00:05:37,810 --> 00:05:40,410
+Le damos enter y se generó.
+
+94
+00:05:41,010 --> 00:05:42,280
+Se genera el archivo de migración.
+
+95
+00:05:42,300 --> 00:05:43,590
+Ahora vamos a ejecutarlo.
+
+96
+00:05:44,220 --> 00:05:49,230
+Y para ejecutarlo escribo el Python Manager y Migration y le damos Enter.
+
+97
+00:05:50,510 --> 00:05:52,220
+Perfecto ya se ha generado.
+
+98
+00:05:52,520 --> 00:05:54,860
+Vamos a ejecutar también mi servidor de Jango.
+
+99
+00:05:55,910 --> 00:05:59,150
+Para esto ya sabes que somos un pito y un puto management de ron Zoidberg.
+
+100
+00:05:59,450 --> 00:06:00,640
+Se ejecutó sin problemas.
+
+101
+00:06:00,650 --> 00:06:03,140
+Vamos a ejecutar la página en el Jango Administration.
+
+102
+00:06:03,810 --> 00:06:10,130
+Ya estamos en el chat de administración y vamos a buscar en la aplicación de Store.
+
+103
+00:06:10,160 --> 00:06:11,800
+Aparece el review relations.
+
+104
+00:06:11,870 --> 00:06:12,920
+Vamos a darle Enter.
+
+105
+00:06:13,580 --> 00:06:17,800
+Y aquí puedes notar que ya se ha creado la entidad de manera exitosa.
+
+106
+00:06:17,810 --> 00:06:19,310
+Continuamos en el siguiente capítulo.

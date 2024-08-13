@@ -1,0 +1,403 @@
+1
+00:00:00,330 --> 00:00:06,360
+En esta sección trabajaremos en la integración de PayPal en nuestro web application de e-commerce para
+
+2
+00:00:06,360 --> 00:00:07,380
+realizar esta tarea.
+
+3
+00:00:07,590 --> 00:00:12,270
+Un requisito importante es tener una cuenta de PayPal, pero de tipo business.
+
+4
+00:00:12,930 --> 00:00:19,080
+Además, recuerda que estamos en modo desarrollo o en modo pruebas, por lo que no podemos hacer pagos
+
+5
+00:00:19,080 --> 00:00:20,310
+reales en PayPal.
+
+6
+00:00:20,550 --> 00:00:27,450
+Por este motivo, una vez creada esta cuenta business, tendremos la opción de crear un sandbox account
+
+7
+00:00:27,450 --> 00:00:31,260
+en PayPal que usaremos para simular los pagos de productos.
+
+8
+00:00:31,770 --> 00:00:38,520
+Pero para que funcione esta cuenta sandbox, necesitaremos cargarle con algún dinero que puede ser 50 $.
+
+9
+00:00:39,330 --> 00:00:44,190
+Respecto de la creación de una cuenta business en PayPal, esto cambia dependiendo del país donde te
+
+10
+00:00:44,190 --> 00:00:46,470
+encuentres, por lo que enseñarte.
+
+11
+00:00:46,470 --> 00:00:52,140
+Mi proceso local de creación de la cuenta puede cambiar en mayor o menor medida del proceso para tu
+
+12
+00:00:52,140 --> 00:00:52,590
+país.
+
+13
+00:00:53,400 --> 00:00:59,160
+Por ese motivo te recomiendo ir a YouTube y en YouTube puedes buscar tu la opción para crear Business
+
+14
+00:00:59,160 --> 00:01:00,990
+Account PayPal en Estados Unidos.
+
+15
+00:01:01,320 --> 00:01:08,040
+Si vives en Chile puedes también buscarlo por Chile o si vives en Colombia o Perú también o en España.
+
+16
+00:01:08,400 --> 00:01:15,000
+Te recomiendo esto para poder trabajar la creación de la cuenta Business Account para crear tu cuenta
+
+17
+00:01:15,000 --> 00:01:16,410
+PayPal en Estados Unidos.
+
+18
+00:01:16,410 --> 00:01:18,380
+Como en mi caso puedes ir a paypal.
+
+19
+00:01:18,390 --> 00:01:19,640
+Punto com yo es.
+
+20
+00:01:19,680 --> 00:01:26,520
+Com y aquí te aparece la página principal y dale clic al botón Sign up o registrar.
+
+21
+00:01:28,830 --> 00:01:31,980
+Aquí te va a pedir la opción que tipo de cuenta quieres crear.
+
+22
+00:01:32,550 --> 00:01:38,280
+A continuación seleccionamos el tipo Business Account y ahora le damos clic al botón Next.
+
+23
+00:01:40,760 --> 00:01:43,670
+A continuación te va a pedir que ingreses tu correo electrónico.
+
+24
+00:01:44,300 --> 00:01:45,170
+Voy a escribir acá.
+
+25
+00:01:45,180 --> 00:01:51,050
+Mi correo es social, arroba gmail punto com y le damos clic al botón Continue.
+
+26
+00:01:52,840 --> 00:01:54,220
+A quién va a pedir un password?
+
+27
+00:01:55,670 --> 00:02:00,140
+Ya he ingresado un password y vamos a darle click ahora al botón continue.
+
+28
+00:02:03,610 --> 00:02:03,820
+Aquí.
+
+29
+00:02:03,820 --> 00:02:10,390
+Me está preguntando si mi negocio está registrado como un tipo LLC Corporation Partnership o Charity?
+
+30
+00:02:10,660 --> 00:02:12,760
+Le digo que no, no está registrado.
+
+31
+00:02:13,420 --> 00:02:15,460
+Me está pidiendo aquí un nombre de mi negocio.
+
+32
+00:02:17,110 --> 00:02:17,650
+También.
+
+33
+00:02:17,650 --> 00:02:23,230
+Mi nombre es segundo nombre y luego un número de teléfono del país donde yo me encuentro.
+
+34
+00:02:24,170 --> 00:02:25,160
+Que es Estados Unidos.
+
+35
+00:02:25,190 --> 00:02:27,710
+Te voy a pedir una dirección física.
+
+36
+00:02:28,870 --> 00:02:36,130
+La ciudad, el estado, el Sabbat, código postal y luego darle check a este botón que dice aquí que
+
+37
+00:02:36,160 --> 00:02:39,490
+estoy de acuerdo con todas las políticas de comunicación de PayPal.
+
+38
+00:02:40,800 --> 00:02:45,000
+Y luego aparece el botón de que estoy de acuerdo y crea la cuenta.
+
+39
+00:02:45,450 --> 00:02:46,580
+Vamos a llenar este formulario.
+
+40
+00:02:46,590 --> 00:02:48,830
+Entonces aquí tienes que tener mucho cuidado.
+
+41
+00:02:48,840 --> 00:02:50,580
+Tienes que ingresar el nombre de tu negocio.
+
+42
+00:02:50,580 --> 00:02:51,360
+Eso está correcto.
+
+43
+00:02:51,360 --> 00:02:57,210
+Pero lo que tienes que tener cuidado es que vas a colocar el nombre o los nombres que tengas y también
+
+44
+00:02:57,210 --> 00:03:03,330
+los apellidos que tengas que estén registrados con tu documento de identidad del país donde te encuentras.
+
+45
+00:03:04,080 --> 00:03:06,150
+Es lo que yo he hecho en este momento.
+
+46
+00:03:07,290 --> 00:03:13,440
+Aquí te va a pedir en 1/2 del formulario que ingreses el número de teléfono del país donde te encuentras.
+
+47
+00:03:13,440 --> 00:03:20,340
+En mi caso es Estados Unidos y también te va a pedir que coloques una dirección física real.
+
+48
+00:03:21,330 --> 00:03:21,570
+Aquí.
+
+49
+00:03:21,570 --> 00:03:22,890
+He colocado mi dirección.
+
+50
+00:03:23,370 --> 00:03:24,840
+Estados Unidos, evidentemente.
+
+51
+00:03:25,350 --> 00:03:27,740
+Y ahora vamos a la parte inferior de aquí.
+
+52
+00:03:27,750 --> 00:03:30,960
+Le vamos a dar clic al botón and Create Account.
+
+53
+00:03:32,200 --> 00:03:33,550
+Esperamos unos segundos.
+
+54
+00:03:34,500 --> 00:03:40,410
+Y a continuación me va a pedir que describa el negocio que estamos registrando como una cuenta business.
+
+55
+00:03:40,890 --> 00:03:45,570
+Entonces aquí va a indicarme el tipo de business que voy a seleccionar que se trata.
+
+56
+00:03:47,490 --> 00:03:48,840
+De un individuo al sol?
+
+57
+00:03:49,420 --> 00:03:49,580
+Sip.
+
+58
+00:03:49,680 --> 00:03:50,280
+En mi caso.
+
+59
+00:03:50,760 --> 00:03:54,000
+Y ahora me pide aquí que productos o servicios.
+
+60
+00:03:54,330 --> 00:03:55,620
+Tú estás trabajando?
+
+61
+00:03:56,460 --> 00:03:59,540
+He escogido Schools Educational Services.
+
+62
+00:04:00,200 --> 00:04:04,460
+Cuáles son los el monto total de ventas que haces mensualmente?
+
+63
+00:04:04,490 --> 00:04:09,710
+Yo le he dicho que por ahora he escogido el mínimo que es 5.000 $, 4999.
+
+64
+00:04:10,220 --> 00:04:16,310
+Por supuesto que he tenido que seleccionar ese monto de la lista que me ofrece PayPal aquí me ofrece
+
+65
+00:04:16,310 --> 00:04:22,650
+opciones hasta más de 1 millón de dólares, pero yo en mi caso estoy seleccionando 4999.
+
+66
+00:04:22,670 --> 00:04:23,600
+El valor mínimo.
+
+67
+00:04:24,860 --> 00:04:30,830
+Finalmente me dice que de manera opcional puede ingresar a la página web de mi negocio y aquí se la
+
+68
+00:04:30,830 --> 00:04:31,490
+pongo aquí.
+
+69
+00:04:31,490 --> 00:04:32,470
+Tres punto com.
+
+70
+00:04:32,480 --> 00:04:33,410
+Visite nuestra web.
+
+71
+00:04:35,380 --> 00:04:41,320
+Y ahora en la parte inferior me dice que me está ofreciendo una tarjeta de tipo Mastercard.
+
+72
+00:04:41,890 --> 00:04:44,080
+Yo le digo que no, no quiero ninguna Mastercard.
+
+73
+00:04:45,820 --> 00:04:48,250
+Y finalmente le damos clic al botón Continue.
+
+74
+00:04:50,710 --> 00:04:56,950
+Y ahora aquí me va a indicar que ingrese el Social Security Number, el SSN.
+
+75
+00:04:56,980 --> 00:04:59,890
+Esto aplica solo para personas que viven en Estados Unidos.
+
+76
+00:05:00,190 --> 00:05:03,280
+También me va a pedir que ingrese la fecha de nacimiento.
+
+77
+00:05:03,790 --> 00:05:09,670
+Ya en la parte inferior de este formulario me va a pedir que ingrese otra vez la dirección de mi casa.
+
+78
+00:05:10,060 --> 00:05:15,460
+Una vez que ya he llenado esos datos, vamos a darle clic a este botón que dice Submit.
+
+79
+00:05:18,220 --> 00:05:23,110
+A continuación me solicita qué tipo de servicios o productos son los que vendo.
+
+80
+00:05:23,530 --> 00:05:28,000
+Yo voy a seleccionar aquí servicios y luego le damos clic al botón Next.
+
+81
+00:05:29,210 --> 00:05:32,300
+Luego me indica cómo te gustaría vender.
+
+82
+00:05:33,330 --> 00:05:38,040
+Yo le indico que voy a tomar pagos desde mi página web o desde mi app.
+
+83
+00:05:38,460 --> 00:05:39,750
+Selecciono esta opción.
+
+84
+00:05:41,460 --> 00:05:43,230
+Y ahora le doy clic al botón Next.
+
+85
+00:05:47,400 --> 00:05:50,730
+Me pregunto ahora cómo los clientes van a comprar tus productos.
+
+86
+00:05:52,130 --> 00:05:54,830
+Les digo que compren una transacción simple.
+
+87
+00:05:55,890 --> 00:05:56,340
+Inex.
+
+88
+00:05:58,050 --> 00:06:02,310
+Aquí me pregunta cuál es el tipo de experiencia mejor para ti.
+
+89
+00:06:02,470 --> 00:06:05,040
+Yo le digo que no voy a seleccionar nada todavía.
+
+90
+00:06:05,100 --> 00:06:05,970
+Eso lo vemos después.
+
+91
+00:06:06,810 --> 00:06:08,250
+Me está pidiendo seleccionarlo?
+
+92
+00:06:09,000 --> 00:06:12,870
+Le voy a indicar entonces que el Lead Your Development of it for you.
+
+93
+00:06:14,460 --> 00:06:15,200
+Y le damos Next.
+
+94
+00:06:15,720 --> 00:06:16,410
+Perfecto.
+
+95
+00:06:17,670 --> 00:06:23,430
+Mientras estamos haciendo todo este proceso, es muy seguro que te va a llegar un email a tu cuenta
+
+96
+00:06:23,430 --> 00:06:24,390
+de correo electrónico.
+
+97
+00:06:25,020 --> 00:06:31,710
+Dentro de ese email te indica que verifiques que se trata de ti y desde alta tu cuenta de PayPal Account
+
+98
+00:06:32,010 --> 00:06:38,250
+y luego de darle clic a ese link e ingresar el password de tu cuenta, ya vas a poder acceder a este
+
+99
+00:06:38,250 --> 00:06:38,820
+dashboard.
+
+100
+00:06:39,300 --> 00:06:44,070
+En los siguientes capítulos vamos a comenzar la integración entre mi cuenta de PayPal, Visa Account
+
+101
+00:06:44,400 --> 00:06:45,900
+y nuestro e-commerce.

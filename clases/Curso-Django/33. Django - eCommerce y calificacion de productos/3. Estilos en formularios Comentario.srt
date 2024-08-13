@@ -1,0 +1,767 @@
+1
+00:00:00,690 --> 00:00:05,670
+En este capítulo vamos a continuar trabajando en el formulario para dejar un comentario.
+
+2
+00:00:06,450 --> 00:00:12,540
+En este momento tengo esta interface gráfica para calificar el producto.
+
+3
+00:00:12,930 --> 00:00:17,460
+Yo quiero reemplazar esto con una interface que muestre estrellas.
+
+4
+00:00:17,880 --> 00:00:21,530
+Entonces para esto vamos a tener que trabajar en mi archivo Custom Paint.
+
+5
+00:00:21,540 --> 00:00:21,940
+Si es.
+
+6
+00:00:21,960 --> 00:00:24,540
+Es que he generado en el capítulo anterior.
+
+7
+00:00:25,200 --> 00:00:26,340
+Estamos en Atom.
+
+8
+00:00:26,730 --> 00:00:35,240
+Vamos a ir ahora hacia la carpeta eCommerce dentro eCommerce aparece static dentro de static CSS ya
+
+9
+00:00:35,250 --> 00:00:37,340
+que aparece el archivo Custom Paint.
+
+10
+00:00:37,350 --> 00:00:37,770
+Así es.
+
+11
+00:00:37,770 --> 00:00:40,140
+Es que lo tengo localizado.
+
+12
+00:00:40,590 --> 00:00:47,550
+Lo que voy a hacer es crear aquí los estilos que van a aplicarse sobre este archivo templates.
+
+13
+00:00:48,240 --> 00:00:52,800
+Vamos a ver que aparece Store ya que aparece el producto detail.
+
+14
+00:00:54,180 --> 00:00:55,830
+Que se ha de aplicar sobre esto.
+
+15
+00:00:56,040 --> 00:01:01,590
+Sobre estos input radio que se encuentran en el container right.
+
+16
+00:01:03,450 --> 00:01:03,660
+Bien.
+
+17
+00:01:03,660 --> 00:01:05,300
+Volvamos entonces al Custom Point.
+
+18
+00:01:05,310 --> 00:01:05,640
+Así es.
+
+19
+00:01:05,640 --> 00:01:05,910
+Es.
+
+20
+00:01:06,510 --> 00:01:09,630
+Lo primero que quiero hacer es ocultar todos los input radio.
+
+21
+00:01:10,900 --> 00:01:17,200
+Por eso voy a llamar al container Wright primero y le indico que aplique estos estilos a todos los hijos
+
+22
+00:01:17,890 --> 00:01:21,720
+que sean de tipo input y que se encuentren dentro del container right.
+
+23
+00:01:24,120 --> 00:01:28,140
+Entonces le digo que haga un display neón para ocultar todos los inputs.
+
+24
+00:01:31,140 --> 00:01:34,770
+Vamos a guardar los cambios manuales a full y veamos la página.
+
+25
+00:01:35,460 --> 00:01:36,440
+Estamos en la página.
+
+26
+00:01:36,450 --> 00:01:40,380
+Voy a refrescar y como puedes ver, ya no aparecen.
+
+27
+00:01:41,160 --> 00:01:41,670
+Eso está bien.
+
+28
+00:01:41,680 --> 00:01:42,380
+No te preocupes.
+
+29
+00:01:42,390 --> 00:01:48,180
+Dentro de un momento vamos a reemplazar estos inputs por el estilo de una estrella.
+
+30
+00:01:48,540 --> 00:01:53,490
+Por el momento vamos a seguir trabajando en el container de estos inputs.
+
+31
+00:01:53,790 --> 00:01:58,770
+Radio Le voy a indicar que el container tenga un display inline block.
+
+32
+00:02:00,950 --> 00:02:03,170
+También que tengo un border de cero.
+
+33
+00:02:06,900 --> 00:02:11,040
+Y ahora si, lo que quiero a continuación es mostrar las estrellas.
+
+34
+00:02:11,040 --> 00:02:12,240
+Por este motivo, voy a hacer un.
+
+35
+00:02:14,730 --> 00:02:18,090
+Sobre todos los hijos que se encuentren en el red.
+
+36
+00:02:18,720 --> 00:02:20,130
+Que sean de tipo label.
+
+37
+00:02:23,320 --> 00:02:29,890
+Y aquí le indico que sea un float Wright, es decir, que comiencen a mostrarse desde la parte derecha.
+
+38
+00:02:32,850 --> 00:02:41,970
+Y también les digo que todos los hijos del rey en label before que se vayan desplegando de esta forma,
+
+39
+00:02:42,210 --> 00:02:45,750
+haciendo un display inline block.
+
+40
+00:02:47,730 --> 00:02:51,660
+También le aplicó una fuente a cada uno de estos elementos que se va a desplegar con seis.
+
+41
+00:02:53,000 --> 00:02:53,880
+Igual a uno.
+
+42
+00:02:53,890 --> 00:02:54,290
+Uno.
+
+43
+00:02:58,300 --> 00:03:03,670
+Y aquí les digo que la fuente que voy a utilizar para representar a cada uno de estos elementos.
+
+44
+00:03:03,670 --> 00:03:05,020
+Label que se va a pintar.
+
+45
+00:03:06,280 --> 00:03:07,720
+Va a venir desde Font.
+
+46
+00:03:13,690 --> 00:03:17,980
+Pero aquí tengo un problema porque no estoy importando aún esta fuente.
+
+47
+00:03:19,270 --> 00:03:27,880
+Si no le importo no voy a poder incorporar el icono que representa la estrella que es content y tiene
+
+48
+00:03:27,880 --> 00:03:29,680
+este código back slash.
+
+49
+00:03:31,600 --> 00:03:31,990
+F.
+
+50
+00:03:33,500 --> 00:03:34,970
+005.
+
+51
+00:03:35,570 --> 00:03:40,940
+Este código representa un estrella si utilizas la fuente Photoshop.
+
+52
+00:03:41,510 --> 00:03:45,470
+Pero esta fuente tenemos que incorporarla dentro de nuestro template base.
+
+53
+00:03:45,500 --> 00:03:47,360
+No te preocupes, lo vamos a hacer.
+
+54
+00:03:49,500 --> 00:03:51,630
+También le coloco que el margen sea cero.
+
+55
+00:03:53,710 --> 00:03:54,370
+El parking.
+
+56
+00:03:54,820 --> 00:03:57,610
+Vamos a indicarle que sea 0.3.
+
+57
+00:03:59,360 --> 00:04:02,150
+REM y punto.
+
+58
+00:04:02,150 --> 00:04:02,990
+Dos REM.
+
+59
+00:04:05,620 --> 00:04:06,340
+El cursor.
+
+60
+00:04:08,570 --> 00:04:09,120
+Un painting.
+
+61
+00:04:09,310 --> 00:04:12,610
+Cuando apunte con mi cursor sobre una estrella quiero que sea un pointer.
+
+62
+00:04:14,950 --> 00:04:15,340
+Listo.
+
+63
+00:04:15,640 --> 00:04:16,420
+Pero esto.
+
+64
+00:04:16,990 --> 00:04:21,070
+Este estilo lo aplicó sobre aquellas.
+
+65
+00:04:21,070 --> 00:04:23,320
+Aquellas estrellas que tengan un volar entero.
+
+66
+00:04:23,620 --> 00:04:27,280
+Pero qué pasaría si escojo un puntaje de 3.5 o 2.5?
+
+67
+00:04:27,550 --> 00:04:30,640
+En ese caso, quiero que me muestre una media estrella.
+
+68
+00:04:31,920 --> 00:04:34,590
+Entonces voy a crear otro estilo para ese caso.
+
+69
+00:04:35,220 --> 00:04:37,440
+Hago un punto half.
+
+70
+00:04:39,060 --> 00:04:39,570
+Before.
+
+71
+00:04:41,800 --> 00:04:42,700
+Y le damos dos puntos.
+
+72
+00:04:42,710 --> 00:04:46,900
+Bueno, abrimos llaves y aquí le colocamos el content.
+
+73
+00:04:47,740 --> 00:04:56,260
+En este caso, el icono que va a representar representar a la estrella va a ser un bake slash f cero
+
+74
+00:04:56,260 --> 00:04:56,950
+89.
+
+75
+00:05:00,100 --> 00:05:01,810
+La posición va a ser absoluta.
+
+76
+00:05:04,670 --> 00:05:05,690
+Y el padre Wright.
+
+77
+00:05:07,600 --> 00:05:08,530
+Va a ser de cero.
+
+78
+00:05:10,690 --> 00:05:12,720
+Lo tenemos listo y casi preparado.
+
+79
+00:05:12,730 --> 00:05:18,880
+Lo que me falta ahora es importar al Photoshop, porque mira, si en este momento yo guardo los cambios
+
+80
+00:05:18,880 --> 00:05:20,770
+y ejecuto la página, veamos que sucede.
+
+81
+00:05:21,700 --> 00:05:22,560
+Estamos en la página.
+
+82
+00:05:22,570 --> 00:05:23,380
+Voy a refrescar.
+
+83
+00:05:25,040 --> 00:05:26,680
+Y mira, no me aparece nada.
+
+84
+00:05:26,690 --> 00:05:29,590
+No reconoce aún la estrella?
+
+85
+00:05:29,600 --> 00:05:31,470
+Tengo que incorporar al oso.
+
+86
+00:05:31,880 --> 00:05:34,640
+La forma más sencilla de hacerlo es que vayas a google.com.
+
+87
+00:05:34,910 --> 00:05:42,560
+Llega el buscador Escribas Font, espacio oso, espacio Intro, espacio CDN y luego le das enter y te
+
+88
+00:05:42,560 --> 00:05:47,750
+aparece esta primera opción Intro W33 Schools.
+
+89
+00:05:48,260 --> 00:05:55,880
+Vamos a darle enter, ingresamos y mira, aquí me va a aparecer el link que necesito para incorporar
+
+90
+00:05:55,940 --> 00:05:56,780
+estos estilos.
+
+91
+00:05:57,230 --> 00:05:58,220
+Lo voy a copiar.
+
+92
+00:05:59,110 --> 00:06:01,780
+Y ahora vamos a ubicarnos dentro de la carpeta Templates.
+
+93
+00:06:01,810 --> 00:06:02,740
+Dentro de templates.
+
+94
+00:06:02,770 --> 00:06:07,180
+Vamos a ir a la carpeta, al archivo base punto HTML.
+
+95
+00:06:07,660 --> 00:06:12,550
+Aquí buscamos la línea que hace la referencia al ID de CSS Custom Point CSS.
+
+96
+00:06:13,090 --> 00:06:15,550
+Le damos al enter y acá pegamos.
+
+97
+00:06:16,420 --> 00:06:16,990
+Listo.
+
+98
+00:06:17,500 --> 00:06:19,000
+Ya hemos pegado la referencia.
+
+99
+00:06:19,000 --> 00:06:22,990
+Entonces, desde el cierre del doble U3 voy a borrar los cambios.
+
+100
+00:06:22,990 --> 00:06:26,410
+Menú False all y vamos a la página a probar.
+
+101
+00:06:26,950 --> 00:06:28,030
+Estamos en la página.
+
+102
+00:06:28,950 --> 00:06:30,050
+Pues no me parece nada.
+
+103
+00:06:30,060 --> 00:06:37,170
+Voy a refrescar y mira ahora si llama me apareció, ya me aparecen las estrellas, pero ahora, a continuación,
+
+104
+00:06:37,170 --> 00:06:43,920
+lo que quiero que suceda es que me aparezca, que cuando yo ponga el cursor sobre alguna estrella,
+
+105
+00:06:44,580 --> 00:06:47,310
+este reaccione con un color de tipo amarillo.
+
+106
+00:06:48,400 --> 00:06:54,010
+Vamos a volver ahora al archivo dentro de la carpeta de comercio static CSS que aparece el Custom Paint.
+
+107
+00:06:54,010 --> 00:06:58,780
+Así que si es eso, y después de eso, vamos a agregar aquí un.
+
+108
+00:07:00,160 --> 00:07:00,820
+Input.
+
+109
+00:07:02,570 --> 00:07:03,260
+Paso por acá.
+
+110
+00:07:03,350 --> 00:07:05,360
+Input dos puntos.
+
+111
+00:07:05,360 --> 00:07:05,930
+Checked.
+
+112
+00:07:06,710 --> 00:07:08,690
+Cuando sea seleccionado el radio.
+
+113
+00:07:10,320 --> 00:07:10,980
+Y también.
+
+114
+00:07:12,870 --> 00:07:17,580
+El label está en un label over cuando pasa el cursor sobre el label.
+
+115
+00:07:19,640 --> 00:07:22,370
+Quiero que ocurra lo siguiente A mí me falta colocar el label.
+
+116
+00:07:22,700 --> 00:07:23,290
+Qué es lo que ocurre?
+
+117
+00:07:23,300 --> 00:07:25,310
+Lo siguiente quiero que cambie el color.
+
+118
+00:07:26,060 --> 00:07:27,330
+Y ese color cuál va a ser?
+
+119
+00:07:27,350 --> 00:07:28,670
+Creo que es en color amarillo.
+
+120
+00:07:28,730 --> 00:07:34,160
+Entonces aquí le pongo un FF b5 cero tres.
+
+121
+00:07:36,390 --> 00:07:37,800
+Vamos a borrar los cambios de Luffy.
+
+122
+00:07:37,800 --> 00:07:38,460
+El safe all!
+
+123
+00:07:40,510 --> 00:07:41,620
+Vamos a refrescar.
+
+124
+00:07:43,430 --> 00:07:52,460
+Y mira ahora si se me aparece puedo seleccionar cuando es una estrella y media, 234 y si en este caso
+
+125
+00:07:52,460 --> 00:07:57,410
+por ejemplo ya seleccioné tres y comienzo a escribir el título del comentario, el comentario y luego
+
+126
+00:07:57,410 --> 00:07:59,330
+digo no, realmente quería escribir.
+
+127
+00:07:59,330 --> 00:08:06,500
+Cinco Entonces si yo paso mi cursor sobre las estrellas que ya marqué, no voy a saber exactamente cuáles
+
+128
+00:08:06,500 --> 00:08:11,150
+ya marqué y cuáles son las nuevas que estoy marcando el puntaje que está subiendo.
+
+129
+00:08:11,840 --> 00:08:15,110
+Entonces aquí tengo un problema para poder resolverlo.
+
+130
+00:08:15,560 --> 00:08:20,870
+Vamos a hacer un highlights sobre las estrellas que ya he marcado versus las estrellas nuevas que estoy
+
+131
+00:08:20,870 --> 00:08:21,500
+agregando.
+
+132
+00:08:22,960 --> 00:08:25,280
+Volvamos entonces al Customer SSS.
+
+133
+00:08:25,960 --> 00:08:30,640
+Después de este tiempo checked, vamos a agregar otro input checked.
+
+134
+00:08:34,010 --> 00:08:35,510
+Concatenado con el label.
+
+135
+00:08:35,720 --> 00:08:36,440
+Dos puntos.
+
+136
+00:08:36,440 --> 00:08:36,920
+Over.
+
+137
+00:08:39,070 --> 00:08:40,960
+También le pongo input checked.
+
+138
+00:08:43,930 --> 00:08:44,720
+Un momento.
+
+139
+00:08:46,440 --> 00:08:47,430
+Label over.
+
+140
+00:08:49,230 --> 00:08:50,790
+Coma input checked.
+
+141
+00:08:55,210 --> 00:08:57,250
+Aquí le vamos a poner una triple condición.
+
+142
+00:08:57,490 --> 00:08:58,660
+Es el label over.
+
+143
+00:09:00,920 --> 00:09:01,460
+Y Label.
+
+144
+00:09:05,470 --> 00:09:07,420
+Coma la emoción enter.
+
+145
+00:09:07,870 --> 00:09:10,870
+Y luego colocamos otra expresión label over.
+
+146
+00:09:14,910 --> 00:09:15,870
+Input check it.
+
+147
+00:09:19,250 --> 00:09:19,760
+Y ave.
+
+148
+00:09:22,200 --> 00:09:25,260
+Cuando esto ocurra, voy a indicar que el color cambie.
+
+149
+00:09:26,430 --> 00:09:31,020
+Voy a cambiarle de color a las estrellas que previamente ya he seleccionado.
+
+150
+00:09:32,380 --> 00:09:34,420
+Con un color amarillo oscuro.
+
+151
+00:09:35,120 --> 00:09:35,420
+Se.
+
+152
+00:09:36,590 --> 00:09:37,550
+900.
+
+153
+00:09:38,730 --> 00:09:42,040
+Y como al final vamos a borrar los cambios menos fieles.
+
+154
+00:09:42,120 --> 00:09:42,580
+Rafael.
+
+155
+00:09:43,920 --> 00:09:46,490
+Y probemos esto en la página.
+
+156
+00:09:46,500 --> 00:09:47,490
+Vamos a refrescar.
+
+157
+00:09:48,990 --> 00:09:54,010
+Y ahora así voy a seleccionar, por ejemplo, cuatro estrellas de tres y medio.
+
+158
+00:09:54,610 --> 00:09:55,010
+Listo.
+
+159
+00:09:55,030 --> 00:09:56,490
+Y cuando vuelvo a pasar mi cursor.
+
+160
+00:09:56,500 --> 00:09:57,340
+Qué sucede?
+
+161
+00:09:58,540 --> 00:10:01,720
+Ya el color del High Lights sobre lo marcado ha cambiado.
+
+162
+00:10:02,440 --> 00:10:03,090
+Perfecto.
+
+163
+00:10:03,100 --> 00:10:04,840
+Está funcionando como yo quiero.
+
+164
+00:10:06,460 --> 00:10:07,040
+Ahora aquí.
+
+165
+00:10:07,060 --> 00:10:09,850
+Mira el título de comentario está muy a la derecha.
+
+166
+00:10:10,150 --> 00:10:11,650
+Yo quisiera que se pegue a la izquierda.
+
+167
+00:10:11,650 --> 00:10:14,410
+Tengo que colocarle un espaciado después de las estrellas.
+
+168
+00:10:14,950 --> 00:10:22,330
+Para esto vamos a ubicarnos dentro del ya no vamos a Store Product Detail Stop.
+
+169
+00:10:23,410 --> 00:10:24,130
+La parte final.
+
+170
+00:10:24,130 --> 00:10:25,420
+Aquí están los radios.
+
+171
+00:10:25,420 --> 00:10:25,750
+Aquí está.
+
+172
+00:10:25,750 --> 00:10:26,980
+Título de comentario.
+
+173
+00:10:27,700 --> 00:10:29,710
+Este es el de los radios de las estrellas.
+
+174
+00:10:30,040 --> 00:10:30,970
+Le voy a dar un enter.
+
+175
+00:10:31,420 --> 00:10:32,710
+Le pongo un BR.
+
+176
+00:10:32,890 --> 00:10:33,790
+Un salto de línea.
+
+177
+00:10:34,850 --> 00:10:36,110
+Vamos a borrar los cambios.
+
+178
+00:10:36,830 --> 00:10:39,140
+Y ahora vamos a la página y actualizamos.
+
+179
+00:10:39,560 --> 00:10:40,160
+Y perfecto.
+
+180
+00:10:40,240 --> 00:10:41,000
+Déjame ver eso aquí.
+
+181
+00:10:41,650 --> 00:10:46,520
+Ah, mira, aquí hay algo también como que quieres este curso y me aparece con este signo de menor.
+
+182
+00:10:46,910 --> 00:10:49,220
+Vamos a remover ese signo.
+
+183
+00:10:50,350 --> 00:10:52,120
+Vamos aquí en el título Label.
+
+184
+00:10:52,150 --> 00:10:54,070
+Cómo calificarías este producto?
+
+185
+00:10:55,200 --> 00:10:56,400
+Este signo estaba de más.
+
+186
+00:10:56,940 --> 00:10:58,890
+Ahora, si vamos a guardar false.
+
+187
+00:10:58,890 --> 00:10:59,220
+False.
+
+188
+00:11:00,830 --> 00:11:02,160
+Ya aquí refrescamos.
+
+189
+00:11:02,580 --> 00:11:03,210
+Perfecto.
+
+190
+00:11:03,750 --> 00:11:06,560
+Entonces ya hemos concluido esta sección.
+
+191
+00:11:06,570 --> 00:11:12,430
+Continuamos en el siguiente en el manejo de la transacción para guardar los datos de este formulario
+
+192
+00:11:12,430 --> 00:11:14,310
+de comentario en nuestra base de datos.

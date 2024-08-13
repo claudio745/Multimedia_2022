@@ -1,0 +1,1023 @@
+1
+00:00:00,330 --> 00:00:06,240
+En este capítulo trabajaremos en la transacción para registrar ese comentario en nuestra base de datos.
+
+2
+00:00:06,750 --> 00:00:13,710
+Como ya sabes, cada formulario tiene un link que nos lleva hacia un path que a su vez está conectado
+
+3
+00:00:13,710 --> 00:00:18,300
+a una función, a una función de tipo dev, que es la que se encarga de hacer la transacción.
+
+4
+00:00:18,780 --> 00:00:21,870
+Entonces, lo que tenemos que hacer primero es crear ese path.
+
+5
+00:00:23,080 --> 00:00:27,310
+Vamos hacia la carpeta store.
+
+6
+00:00:27,730 --> 00:00:33,910
+Dentro de la store aparece el yo en el apartado Pick y ya antes había creado otros pads.
+
+7
+00:00:34,240 --> 00:00:41,380
+Voy a tomar por ejemplo este path de search, lo copio ya que lo pego y le vamos a poner de nombre.
+
+8
+00:00:43,550 --> 00:00:46,340
+Submit abajo review.
+
+9
+00:00:47,630 --> 00:00:52,340
+Iba a tener un parámetro porque este comentario está relacionado con un producto, entonces tengo que
+
+10
+00:00:52,340 --> 00:00:53,840
+indicarle qué producto va a hacer.
+
+11
+00:00:55,080 --> 00:00:59,250
+Por eso el parámetro va a ser de tipo int product.
+
+12
+00:01:00,470 --> 00:01:00,890
+Heidi.
+
+13
+00:01:02,730 --> 00:01:03,540
+Y el slash.
+
+14
+00:01:03,660 --> 00:01:04,860
+Hay que tener siempre cuidado acá.
+
+15
+00:01:06,310 --> 00:01:10,330
+Y el nombre de la función va a ser Submit Review.
+
+16
+00:01:16,130 --> 00:01:16,550
+Listo.
+
+17
+00:01:17,440 --> 00:01:18,210
+Lo tenemos.
+
+18
+00:01:18,220 --> 00:01:24,280
+Ahora vamos a crear esta función Submit Review al interior de nuestro archivo Views que se encuentra
+
+19
+00:01:24,280 --> 00:01:25,670
+en Store en la carpeta Store.
+
+20
+00:01:25,720 --> 00:01:26,500
+Vamos a abrirlo.
+
+21
+00:01:27,570 --> 00:01:28,860
+Vamos a la parte inferior.
+
+22
+00:01:31,630 --> 00:01:34,060
+De que escribimos Def submit review.
+
+23
+00:01:35,500 --> 00:01:41,050
+Y le ponemos dos puntos y comenzamos la lógica para poder registrar un comentario.
+
+24
+00:01:41,800 --> 00:01:48,850
+Vamos a la parte superior y aquí vamos a indicar lo siguiente Primeramente en el frame models voy a
+
+25
+00:01:48,850 --> 00:01:52,000
+importar a product y también quiero importar al review.
+
+26
+00:01:54,560 --> 00:02:01,240
+También pude utilizar el redil, por eso lo coloco en este nivel del shortcuts después del Get Objects
+
+27
+00:02:01,250 --> 00:02:03,320
+or 404 coma.
+
+28
+00:02:03,320 --> 00:02:04,000
+Ahí le puse el.
+
+29
+00:02:05,200 --> 00:02:05,650
+Listo.
+
+30
+00:02:06,100 --> 00:02:10,930
+Algo adicional que voy a utilizar es el review form que he creado en clases pasadas.
+
+31
+00:02:11,200 --> 00:02:15,730
+Por eso que le pongo From Point Form Import Review Form.
+
+32
+00:02:17,470 --> 00:02:24,070
+Entonces ya con esto he actualizado las importaciones de librerías y componentes que utilizaré para
+
+33
+00:02:24,070 --> 00:02:24,850
+esta transacción.
+
+34
+00:02:25,420 --> 00:02:26,890
+Vamos ahora a la parte inferior.
+
+35
+00:02:29,570 --> 00:02:31,850
+Y comencemos capturando lo que es la VL.
+
+36
+00:02:32,920 --> 00:02:36,540
+Dentro de la función submit review le voy a indicar que Laurel es igual a Rico.
+
+37
+00:02:36,550 --> 00:02:40,330
+Es punto meta, punto get checking.
+
+38
+00:02:40,330 --> 00:02:43,210
+Le paso el HTTP.
+
+39
+00:02:44,650 --> 00:02:45,370
+Referir.
+
+40
+00:02:48,410 --> 00:02:54,800
+También voy a indicarle que va a recibir unos parámetros dentro del método Request Pass, por lo que
+
+41
+00:02:54,800 --> 00:02:56,900
+voy a indicar aquí if request.
+
+42
+00:02:58,500 --> 00:02:59,100
+Punto.
+
+43
+00:02:59,590 --> 00:03:00,060
+Método.
+
+44
+00:03:01,080 --> 00:03:02,040
+Es igual a vos.
+
+45
+00:03:03,970 --> 00:03:04,850
+Dos puntos.
+
+46
+00:03:04,900 --> 00:03:12,270
+Le voy a pedir que capture esos valores, pero para que los capture o trabaje esta transacción, voy
+
+47
+00:03:12,280 --> 00:03:13,600
+a utilizar un método.
+
+48
+00:03:13,600 --> 00:03:14,480
+Trae exception.
+
+49
+00:03:14,920 --> 00:03:15,850
+Colocamos el drive.
+
+50
+00:03:16,840 --> 00:03:23,440
+Y dentro de este trailer indicar que me capture todos los objetos prohibidos que tengo.
+
+51
+00:03:24,010 --> 00:03:25,920
+Por eso aquí lo voy a poner review rating.
+
+52
+00:03:30,360 --> 00:03:31,470
+Punto Objects.
+
+53
+00:03:34,400 --> 00:03:35,130
+Punto ket.
+
+54
+00:03:37,690 --> 00:03:39,640
+De que digo que haga un user.
+
+55
+00:03:40,560 --> 00:03:41,760
+Dos rayas para abajo.
+
+56
+00:03:42,390 --> 00:03:43,740
+Este es el objeto Usher.
+
+57
+00:03:43,980 --> 00:03:48,180
+Le digo que me capture por el ID y la columna de igual a Request.
+
+58
+00:03:49,390 --> 00:03:50,400
+Punto User.
+
+59
+00:03:50,830 --> 00:03:51,410
+Punto aquí.
+
+60
+00:03:52,690 --> 00:03:53,950
+Por el producto mismo.
+
+61
+00:03:54,880 --> 00:03:57,400
+La distancia de dos rayas para abajo.
+
+62
+00:03:57,400 --> 00:04:01,480
+Id igual al product Heidy Parámetro.
+
+63
+00:04:02,150 --> 00:04:04,450
+Aquí me faltó agregar ese parámetro Product.
+
+64
+00:04:04,480 --> 00:04:09,550
+En la cabecera del método, luego del rico le ponemos una coma y le agregamos ese product id.
+
+65
+00:04:11,330 --> 00:04:13,400
+A continuación, vamos a instanciar al Form.
+
+66
+00:04:14,900 --> 00:04:18,530
+Digo que es un Riu Form desde el Request Pass.
+
+67
+00:04:22,840 --> 00:04:25,550
+Haciendo una instancia de reviews.
+
+68
+00:04:26,500 --> 00:04:26,920
+Listo.
+
+69
+00:04:29,100 --> 00:04:30,900
+Y vamos a guardar ese form.
+
+70
+00:04:33,640 --> 00:04:39,280
+De esta forma, lo que está pasando realmente aquí es que los parámetros que tú estás enviando desde
+
+71
+00:04:39,280 --> 00:04:47,530
+su formulario HTML van a hacer un match con él, con el formulario chango que hemos definido en el archivo
+
+72
+00:04:47,530 --> 00:04:48,850
+Fonts y.
+
+73
+00:04:50,230 --> 00:04:51,340
+Que realmente solo son tres.
+
+74
+00:04:51,730 --> 00:04:53,500
+Subject Reviewed Rating.
+
+75
+00:04:53,740 --> 00:04:54,720
+Qué significa esto?
+
+76
+00:04:54,730 --> 00:05:01,240
+Que más adelante, dentro del formulario Template HTML vas a tener que crear estos tres atributos con
+
+77
+00:05:01,240 --> 00:05:02,080
+estos nombres.
+
+78
+00:05:02,350 --> 00:05:05,050
+Si los nombres no son iguales, te va a dar un error.
+
+79
+00:05:05,620 --> 00:05:12,760
+Esto entonces, automáticamente está haciendo un match de estos files contra los Fields que tienes en
+
+80
+00:05:12,760 --> 00:05:14,380
+tu formulario HTML.
+
+81
+00:05:17,240 --> 00:05:23,090
+De esta forma está capturando esos valores dentro de form y está almacenando ese valor.
+
+82
+00:05:24,230 --> 00:05:28,460
+Entonces, en este momento ya estamos almacenando la data dentro de la tabla.
+
+83
+00:05:30,100 --> 00:05:34,840
+Por eso hacemos aquí un mensaje que diga Success Success.
+
+84
+00:05:36,890 --> 00:05:37,550
+Rico es.
+
+85
+00:05:41,120 --> 00:05:42,110
+Muchas gracias.
+
+86
+00:05:46,030 --> 00:05:47,020
+Tu comentario.
+
+87
+00:05:48,900 --> 00:05:50,340
+Ha sido actualizado.
+
+88
+00:05:53,970 --> 00:06:01,050
+Y luego le digo que haga un return to directo hacia el Aurélia desde la cual se está haciendo este proceso.
+
+89
+00:06:02,800 --> 00:06:05,500
+En caso contrario voy a indicarle un excep.
+
+90
+00:06:07,650 --> 00:06:10,380
+Pero validando con review rating.
+
+91
+00:06:11,470 --> 00:06:12,060
+Punto.
+
+92
+00:06:12,070 --> 00:06:13,510
+Does not exist.
+
+93
+00:06:15,380 --> 00:06:17,330
+Existe sin la s not existe.
+
+94
+00:06:19,230 --> 00:06:24,600
+Entonces lo que quiero que haga es que instancia este formulario Review Form.
+
+95
+00:06:27,530 --> 00:06:29,480
+Con un request post.
+
+96
+00:06:32,030 --> 00:06:36,410
+Y aquí le voy a indicar lo siguiente If form is valid.
+
+97
+00:06:43,770 --> 00:06:47,460
+Entonces le digo que genere un nuevo objeto review rating.
+
+98
+00:06:52,740 --> 00:06:55,140
+Y ahora voy a aceptar cada uno de estos valores.
+
+99
+00:06:55,290 --> 00:06:56,010
+El subject.
+
+100
+00:06:58,740 --> 00:06:59,220
+Que sería.
+
+101
+00:07:01,920 --> 00:07:03,930
+Créeme, te irá.
+
+102
+00:07:06,400 --> 00:07:07,450
+Me pongo subject.
+
+103
+00:07:10,650 --> 00:07:12,900
+Copiar esta línea y la pego.
+
+104
+00:07:15,760 --> 00:07:18,010
+Y también vamos a copiar el rating.
+
+105
+00:07:19,300 --> 00:07:20,200
+Copie esta línea.
+
+106
+00:07:21,800 --> 00:07:23,120
+Y también el review.
+
+107
+00:07:25,840 --> 00:07:27,430
+Listo aquí lo reemplazamos.
+
+108
+00:07:29,510 --> 00:07:30,010
+Rating.
+
+109
+00:07:34,330 --> 00:07:36,010
+Qué momento?
+
+110
+00:07:37,670 --> 00:07:38,510
+Si es que apareció.
+
+111
+00:07:39,560 --> 00:07:40,370
+Lo tenemos.
+
+112
+00:07:40,790 --> 00:07:42,560
+También necesito otro.
+
+113
+00:07:42,680 --> 00:07:44,690
+Otra columna que es el IP este.
+
+114
+00:07:44,690 --> 00:07:46,140
+Lo obtengo desde el request.
+
+115
+00:07:46,160 --> 00:07:47,020
+Punto Meta.
+
+116
+00:07:47,420 --> 00:07:48,290
+Punto Quest.
+
+117
+00:07:51,850 --> 00:07:54,310
+Hemos reprobado a DDR.
+
+118
+00:07:55,510 --> 00:07:55,940
+Esto.
+
+119
+00:07:56,730 --> 00:07:58,200
+Cambiemos a hacer un producto.
+
+120
+00:07:58,650 --> 00:08:04,330
+Data Product ID igual al parámetro que ingresa en la cabecera del método Product y.
+
+121
+00:08:06,490 --> 00:08:08,830
+Y un día a punto de ser Heidi.
+
+122
+00:08:10,680 --> 00:08:12,870
+Igual a rico es punto user.
+
+123
+00:08:12,870 --> 00:08:14,400
+Punto Heidi.
+
+124
+00:08:17,250 --> 00:08:17,430
+Tom.
+
+125
+00:08:17,970 --> 00:08:18,420
+Ahora sí.
+
+126
+00:08:19,320 --> 00:08:23,130
+Y vamos ahora a guardar este récord en la base de datos en la tabla.
+
+127
+00:08:24,210 --> 00:08:24,840
+Data seis.
+
+128
+00:08:26,690 --> 00:08:29,690
+De aquí voy a indicarle que haga un success.
+
+129
+00:08:32,460 --> 00:08:33,200
+Henriquez.
+
+130
+00:08:36,350 --> 00:08:38,720
+Y aquí el mensaje que le voy a indicar es Muchas gracias.
+
+131
+00:08:40,300 --> 00:08:41,260
+Tu comentario.
+
+132
+00:08:43,080 --> 00:08:44,400
+Fue enviado con éxito.
+
+133
+00:08:49,080 --> 00:08:51,180
+Y finalmente le pongo un reto directo.
+
+134
+00:08:53,410 --> 00:08:54,780
+Hacia la RL.
+
+135
+00:08:55,630 --> 00:08:58,150
+Entonces tenemos dos condiciones aquí.
+
+136
+00:08:58,360 --> 00:09:05,470
+La primera es que yo pueda encontrar el río por el río Gidi y también por el Just Adi.
+
+137
+00:09:05,800 --> 00:09:10,990
+Si este río existe, lo que voy a lo que estoy haciendo es actualizándolo.
+
+138
+00:09:11,680 --> 00:09:18,070
+Si no existe, lo que estoy haciendo es creando un nuevo review desde cero y almacenando ese nuevo récord
+
+139
+00:09:18,100 --> 00:09:19,930
+en la tabla Review Rating.
+
+140
+00:09:21,520 --> 00:09:25,990
+A continuación vamos a trabajar en el template html del producto.
+
+141
+00:09:26,590 --> 00:09:29,430
+Vamos a ubicarnos entonces dentro de la carpeta Templates.
+
+142
+00:09:29,650 --> 00:09:33,790
+Aquí aparece Story y aquí me aparece el producto del punto a HTML.
+
+143
+00:09:34,390 --> 00:09:37,150
+Listo, voy a maximizar mi archivo.
+
+144
+00:09:37,690 --> 00:09:42,970
+Aquí puedes ver el formulario que he generado For method post.
+
+145
+00:09:43,480 --> 00:09:45,820
+Aquí aparece el título Escribe tu comentario.
+
+146
+00:09:46,660 --> 00:09:48,430
+Como calificarías este producto?
+
+147
+00:09:48,440 --> 00:09:52,660
+Bueno, aquí como este producto le pongo el signo de interrogación.
+
+148
+00:09:53,970 --> 00:09:55,320
+Y comencemos por este foro.
+
+149
+00:09:56,490 --> 00:10:01,890
+Dentro de este foro tengo que indicarle cuál es el path que va a ejecutar la acción de registrar este
+
+150
+00:10:01,890 --> 00:10:09,330
+comentario, por lo que le voy a poner aquí unas llaves sino de porcentajes y le coloco que el path
+
+151
+00:10:09,660 --> 00:10:13,950
+jurel path es submit raya para abajo review.
+
+152
+00:10:15,120 --> 00:10:18,150
+Si el parámetro que le tengo que pasar recuerdas cuál es?
+
+153
+00:10:18,150 --> 00:10:19,080
+Es el producto que hay ahí.
+
+154
+00:10:19,770 --> 00:10:26,130
+Pero en este contexto el product ID es tiene está dentro de esta variable que se llama single product.
+
+155
+00:10:27,070 --> 00:10:27,430
+Heidi.
+
+156
+00:10:28,270 --> 00:10:34,120
+Ahora tengo que indicarle cuáles son los input que van a viajar en el método Post hacia mi método,
+
+157
+00:10:34,120 --> 00:10:36,250
+hacia la función submit review.
+
+158
+00:10:38,070 --> 00:10:41,850
+Para el caso de los radio, recuerda que todos los radios tienen el mismo nombre.
+
+159
+00:10:41,850 --> 00:10:48,740
+Cuál es rating y si es un radio solamente puedo seleccionar uno de estos, así que no hay ningún problema.
+
+160
+00:10:48,750 --> 00:10:50,550
+Ya tengo el dato.
+
+161
+00:10:50,550 --> 00:10:57,210
+El nombre del primer control ratings seteado dentro de formulario para el segundo, que es el título
+
+162
+00:10:57,210 --> 00:10:58,020
+del comentario.
+
+163
+00:10:59,190 --> 00:11:01,410
+Se había puesto también el nombre ese que es.
+
+164
+00:11:04,000 --> 00:11:07,780
+Y el texto del comentario es un textarea que también tiene un nombre.
+
+165
+00:11:08,140 --> 00:11:12,610
+Le hemos puesto comentario, pero en su lugar le vamos a llamar Review.
+
+166
+00:11:16,130 --> 00:11:19,320
+De aquí tengo el input submit.
+
+167
+00:11:19,330 --> 00:11:24,670
+Es el que va a llamar al path, el que activa el action del formulario.
+
+168
+00:11:24,670 --> 00:11:25,330
+Recuerdas?
+
+169
+00:11:27,160 --> 00:11:34,210
+Pero yo solamente quiero que se envíen los comentarios por aquellos usuarios que ya están logueado,
+
+170
+00:11:34,450 --> 00:11:35,760
+no los usuarios anónimos.
+
+171
+00:11:36,920 --> 00:11:38,720
+Entonces aquí voy a colocar una condición.
+
+172
+00:11:39,740 --> 00:11:41,600
+Este botón sólo va a aparecer.
+
+173
+00:11:42,710 --> 00:11:48,980
+Si el user es Authentic Kate es autenticado.
+
+174
+00:11:50,320 --> 00:11:54,130
+Si está autenticado, entonces va a aparecer este botón.
+
+175
+00:11:54,790 --> 00:11:57,520
+En caso contrario, vamos a colocar aquí el.
+
+176
+00:11:59,130 --> 00:12:00,130
+Quiero que haga esto.
+
+177
+00:12:00,180 --> 00:12:02,160
+Y ya que terminó la función.
+
+178
+00:12:04,220 --> 00:12:04,880
+And if.
+
+179
+00:12:06,660 --> 00:12:06,870
+Aquí.
+
+180
+00:12:06,870 --> 00:12:09,810
+Vamos a colocar un párrafo dentro de este golpe.
+
+181
+00:12:11,290 --> 00:12:12,220
+Escribimos.
+
+182
+00:12:13,730 --> 00:12:14,210
+Para.
+
+183
+00:12:15,680 --> 00:12:17,030
+Enviar un comentario.
+
+184
+00:12:17,870 --> 00:12:19,880
+Debes estar registrado.
+
+185
+00:12:22,830 --> 00:12:24,720
+Y le voy a poner acá un span.
+
+186
+00:12:27,380 --> 00:12:29,210
+Lo ponemos dentro de este pan.
+
+187
+00:12:29,270 --> 00:12:30,230
+Un href.
+
+188
+00:12:32,440 --> 00:12:38,230
+Para que redirecciones hacia el login pongo yo del login.
+
+189
+00:12:40,740 --> 00:12:41,680
+Y el texto que.
+
+190
+00:12:44,410 --> 00:12:45,340
+Inicia sesión.
+
+191
+00:12:50,150 --> 00:12:53,560
+Lo tengo listo, pero algo adicional que también tengo que hacer.
+
+192
+00:12:53,560 --> 00:13:01,180
+Recuerda que cuando estás registrando este comentario puede ser que tengas un mensaje de error o también
+
+193
+00:13:01,180 --> 00:13:03,040
+puede lanzarte un mensaje de éxito.
+
+194
+00:13:03,610 --> 00:13:07,090
+Entonces yo quiero que aparezca ese mensaje de éxito donde va a aparecer.
+
+195
+00:13:08,380 --> 00:13:08,860
+Veamos.
+
+196
+00:13:08,860 --> 00:13:13,540
+Aquí termina el DIF y luego terminé de formulario.
+
+197
+00:13:14,620 --> 00:13:19,840
+Después del DIF y antes del formulario que terminé de formulario voy a colocar que se incluya.
+
+198
+00:13:21,040 --> 00:13:23,410
+El template para que muestre los mensajes de alerta.
+
+199
+00:13:25,140 --> 00:13:26,850
+Por eso lo voy a poner acá include.
+
+200
+00:13:29,940 --> 00:13:30,690
+Includes.
+
+201
+00:13:31,780 --> 00:13:32,480
+Alert.
+
+202
+00:13:33,010 --> 00:13:33,850
+HTML.
+
+203
+00:13:35,820 --> 00:13:36,810
+Lo tenemos listo.
+
+204
+00:13:37,890 --> 00:13:44,040
+Pero ya que estamos viendo esta parte, déjame ir un momento hacia el Archivo Store.
+
+205
+00:13:44,690 --> 00:13:45,090
+Busca.
+
+206
+00:13:47,090 --> 00:13:48,690
+Y aquí estoy utilizando mensajes.
+
+207
+00:13:48,710 --> 00:13:49,130
+Verdad?
+
+208
+00:13:49,460 --> 00:13:50,570
+Vamos a la parte superior.
+
+209
+00:13:50,570 --> 00:13:52,430
+Quiero saber si lo estoy importando.
+
+210
+00:13:53,690 --> 00:13:54,890
+Y no lo estaba importando.
+
+211
+00:13:54,890 --> 00:13:56,180
+Realmente me faltó esto.
+
+212
+00:13:56,570 --> 00:14:04,010
+Voy a hacer un front da chango punto con Tribe Import Messages.
+
+213
+00:14:04,700 --> 00:14:05,900
+Es muy importante porque.
+
+214
+00:14:05,900 --> 00:14:07,850
+Mira, necesito esta librería para.
+
+215
+00:14:08,300 --> 00:14:14,990
+Vamos a la parte final para poder dentro de la función Submit Review enviar este messages a success.
+
+216
+00:14:15,620 --> 00:14:22,130
+Si no tengo esta instancia, como no la había puesto, me puede dar muchos errores, pero ya le importé.
+
+217
+00:14:23,260 --> 00:14:29,790
+Volvamos entonces hacia el archivo Templates Store, producto del punto HTML para verificar que todo
+
+218
+00:14:29,800 --> 00:14:30,370
+es correcto.
+
+219
+00:14:31,340 --> 00:14:36,910
+Si está bien, entonces los mensajes van a aparecer en esta sección dentro de includes.
+
+220
+00:14:36,940 --> 00:14:38,140
+Includes alert.
+
+221
+00:14:38,500 --> 00:14:39,310
+HTML.
+
+222
+00:14:40,660 --> 00:14:46,060
+Ya verificamos los nombres de los del review, también del subject.
+
+223
+00:14:47,600 --> 00:14:49,770
+Y también del input que se llama rating.
+
+224
+00:14:51,520 --> 00:14:52,360
+Y también el padre.
+
+225
+00:14:52,720 --> 00:14:53,110
+Review.
+
+226
+00:14:53,740 --> 00:14:54,140
+Un momento.
+
+227
+00:14:54,140 --> 00:14:56,370
+Aquí cometimos un pequeño detalle en el single.
+
+228
+00:14:57,670 --> 00:14:58,610
+Aquí el single.
+
+229
+00:14:58,670 --> 00:14:59,740
+Product punto.
+
+230
+00:14:59,740 --> 00:15:00,220
+Heidi.
+
+231
+00:15:01,450 --> 00:15:05,380
+Ahora sí vamos a borrar todos los cambios y vamos a probar.
+
+232
+00:15:06,130 --> 00:15:08,560
+Estamos en el detalle del producto de camisa moderna.
+
+233
+00:15:09,420 --> 00:15:11,260
+Aquí aparece el formulario.
+
+234
+00:15:11,530 --> 00:15:12,730
+Escribe tu comentario.
+
+235
+00:15:13,120 --> 00:15:15,220
+Vamos a poner aquí cinco estrellas.
+
+236
+00:15:15,970 --> 00:15:17,890
+Título de comentario le ponemos.
+
+237
+00:15:19,360 --> 00:15:20,110
+Es una.
+
+238
+00:15:20,350 --> 00:15:22,150
+Es un excelente producto.
+
+239
+00:15:24,280 --> 00:15:30,130
+Estoy muy contento con llevar esta camisa puesta.
+
+240
+00:15:32,710 --> 00:15:35,770
+Y ahora vamos a darle clic a enviar comentario.
+
+241
+00:15:37,940 --> 00:15:38,720
+Perfecto.
+
+242
+00:15:39,530 --> 00:15:41,060
+No me ha dado errores en el bus.
+
+243
+00:15:41,390 --> 00:15:49,490
+Entonces vayamos hacia el 8000 admin, el Senado Administration y busquemos la entidad en la App de
+
+244
+00:15:49,490 --> 00:15:49,880
+Store.
+
+245
+00:15:49,910 --> 00:15:52,280
+Se encuentra en Reviews Ratings.
+
+246
+00:15:52,340 --> 00:15:56,340
+Vamos a darle click y aquí ya puedes ver que aparece el rating.
+
+247
+00:15:56,360 --> 00:15:57,650
+Es un excelente producto.
+
+248
+00:15:57,650 --> 00:16:00,380
+Si le damos click ya te aparece la data.
+
+249
+00:16:00,920 --> 00:16:03,550
+El rating se hizo el producto camisa moderna.
+
+250
+00:16:03,560 --> 00:16:05,870
+El rating fue hecho por base y red social.
+
+251
+00:16:05,870 --> 00:16:06,590
+El usuario.
+
+252
+00:16:06,920 --> 00:16:10,700
+El título del comentario es eso es un excelente producto el review.
+
+253
+00:16:11,210 --> 00:16:12,610
+Estoy muy contento con esta camisa.
+
+254
+00:16:12,620 --> 00:16:19,070
+El rating es cinco y el hype desde el cual se llevo a cabo es siendo 27 001.
+
+255
+00:16:19,520 --> 00:16:20,100
+Perfecto.
+
+256
+00:16:20,120 --> 00:16:24,920
+De esta forma, entonces ya estamos almacenando los ratings en nuestra base de datos.

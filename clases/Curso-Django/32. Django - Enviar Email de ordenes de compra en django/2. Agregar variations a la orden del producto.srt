@@ -1,0 +1,219 @@
+1
+00:00:00,420 --> 00:00:04,230
+En el capítulo anterior trabajamos en la transacción para almacenar el orden.
+
+2
+00:00:04,440 --> 00:00:10,470
+En este capítulo vamos a complementar esto almacenando los variaciones que tiene cada producto.
+
+3
+00:00:10,500 --> 00:00:17,040
+Dentro de este orden vamos a ir al archivo de la carpeta Orders Views y.
+
+4
+00:00:18,320 --> 00:00:20,090
+Hasta que me aparece la función payment.
+
+5
+00:00:21,020 --> 00:00:26,500
+Este es el bucle que había creado en el capítulo anterior para almacenar cada orden product.
+
+6
+00:00:26,690 --> 00:00:27,650
+Cada orden product.
+
+7
+00:00:29,120 --> 00:00:34,190
+Y ahora lo que voy a hacer dentro de dentro de este bucle luego de almacenar el producto en la base
+
+8
+00:00:34,190 --> 00:00:34,700
+de datos.
+
+9
+00:00:36,400 --> 00:00:37,870
+Es buscar al item.
+
+10
+00:00:38,860 --> 00:00:40,120
+Item igual a car.
+
+11
+00:00:40,120 --> 00:00:41,160
+Item punto.
+
+12
+00:00:42,410 --> 00:00:44,180
+Object Punto Quest.
+
+13
+00:00:45,970 --> 00:00:46,440
+De aquí.
+
+14
+00:00:46,440 --> 00:00:47,760
+Vamos a indicarle.
+
+15
+00:00:48,920 --> 00:00:52,850
+Que me busque por el Haití del Caribe sería igual.
+
+16
+00:00:52,940 --> 00:00:53,860
+Y te pregunto a ti.
+
+17
+00:00:56,200 --> 00:00:59,170
+Luego voy a buscar a la variación del producto.
+
+18
+00:00:59,390 --> 00:01:01,780
+Producto variación va a ser igual a car item.
+
+19
+00:01:03,600 --> 00:01:05,140
+Punto variaciones.
+
+20
+00:01:06,830 --> 00:01:07,670
+Punto Tool.
+
+21
+00:01:11,310 --> 00:01:18,720
+Y ahora vamos a buscar al Lord del producto y reiniciarlo y usarlo haciendo un order product.
+
+22
+00:01:19,820 --> 00:01:21,050
+Punto Object.
+
+23
+00:01:21,130 --> 00:01:22,130
+Punto Get.
+
+24
+00:01:24,430 --> 00:01:26,880
+De que le demos una id igual a order product.
+
+25
+00:01:28,840 --> 00:01:29,590
+En A B.
+
+26
+00:01:32,790 --> 00:01:33,660
+Tenemos listo.
+
+27
+00:01:34,140 --> 00:01:37,440
+Y ahora hacemos un order product punto.
+
+28
+00:01:37,530 --> 00:01:38,430
+Variaciones.
+
+29
+00:01:39,430 --> 00:01:40,660
+Punto Set.
+
+30
+00:01:42,720 --> 00:01:44,640
+Y le agregamos este objeto.
+
+31
+00:01:44,640 --> 00:01:45,590
+Producto Watson.
+
+32
+00:01:48,700 --> 00:01:50,590
+Y finalmente hacemos una actualización.
+
+33
+00:01:50,590 --> 00:01:54,580
+Hacemos un order product punto safe aquí.
+
+34
+00:01:54,580 --> 00:01:57,070
+Vamos a revisar por variación.
+
+35
+00:01:57,220 --> 00:01:58,900
+Aquí es variación en la S.
+
+36
+00:01:59,930 --> 00:02:04,460
+Ahora, si vamos a borrar los cambios de Newfield, safe Hall y vamos a ejecutar.
+
+37
+00:02:05,120 --> 00:02:10,760
+Estamos en la página home de mi I Commerce y voy a darle click ahora al e-commerce con e-commerce.
+
+38
+00:02:10,790 --> 00:02:11,960
+Me lleva al carrito de compra.
+
+39
+00:02:13,010 --> 00:02:17,040
+Aquí voy a darle clic al botón Pagar y me pide llenar la dirección de facturación.
+
+40
+00:02:17,060 --> 00:02:23,180
+Vamos a llenarla ya, a llenar el formulario y le damos clic a orden a los productos.
+
+41
+00:02:23,870 --> 00:02:28,790
+Que me parece un resumen de la dirección de facturación, método de pago, revisión de productos.
+
+42
+00:02:28,970 --> 00:02:30,500
+Le damos clic al botón PayPal.
+
+43
+00:02:33,500 --> 00:02:35,690
+Ya me aparece que el comprador es Banksy.
+
+44
+00:02:35,690 --> 00:02:36,380
+Comprador?
+
+45
+00:02:36,890 --> 00:02:37,850
+El total a pagar.
+
+46
+00:02:38,510 --> 00:02:41,330
+Vamos a la parte inferior y le damos clic en el botón peinado.
+
+47
+00:02:44,570 --> 00:02:45,380
+Si vamos al valle.
+
+48
+00:02:45,440 --> 00:02:46,880
+No me pareció ningún error.
+
+49
+00:02:46,910 --> 00:02:49,160
+Significa que la transacción fue correcta.
+
+50
+00:02:50,670 --> 00:02:54,390
+Entonces vamos ahora hacia el administrador de Chango.
+
+51
+00:02:55,170 --> 00:02:56,820
+Estamos en el Chango Administrator.
+
+52
+00:02:56,820 --> 00:03:02,790
+Vamos a ir a Order Products que aparece Camisa Moderna, el último que he agregado y mira, aquí ya
+
+53
+00:03:02,790 --> 00:03:08,610
+me está apareciendo la orden de compra, la order producto y me aparecen los pares seleccionados, el
+
+54
+00:03:08,610 --> 00:03:13,740
+color negro y la talla large que he seleccionado para este producto.
+
+55
+00:03:14,220 --> 00:03:15,930
+Continuamos en el próximo capítulo.

@@ -1,0 +1,331 @@
+1
+00:00:00,540 --> 00:00:06,150
+Hola amigos, en este capítulo instalaremos la herramienta que necesitas para poder trabajar y construir
+
+2
+00:00:06,150 --> 00:00:08,490
+aplicaciones con Jango y Python en la web.
+
+3
+00:00:08,760 --> 00:00:14,790
+Primeramente déjame explicarte que este curso ha sido creado con el IDE Atom en la sección de archivos
+
+4
+00:00:14,790 --> 00:00:16,320
+adjuntos de este vídeo.
+
+5
+00:00:16,560 --> 00:00:24,480
+Te estoy compartiendo el archivo instalador de Atom por si acaso, para que puedas descargarlo y proceder
+
+6
+00:00:24,660 --> 00:00:26,850
+a instalarlo en tu computadora.
+
+7
+00:00:27,240 --> 00:00:33,360
+Pero adicionalmente he recibido muchas consultas de alumnos que me preguntan si pueden desarrollar este
+
+8
+00:00:33,360 --> 00:00:38,010
+curso utilizando Visual Studio Code y déjame indicarte que sí.
+
+9
+00:00:38,520 --> 00:00:45,960
+Para esto puedes ir a la página de Visual Studio Code, aquí la puedes ver Code Visual Studio punto
+
+10
+00:00:45,960 --> 00:00:48,330
+com y procedes a instalar.
+
+11
+00:00:48,330 --> 00:00:53,010
+Una vez que lo descargues, puedes a continuación seguir los pasos del Wizard.
+
+12
+00:00:53,340 --> 00:00:58,290
+Una vez instalado, tienes que agregar la sección, agregarle las extensiones de Python y Jango.
+
+13
+00:00:58,650 --> 00:01:05,280
+Te vas a la sección de extensiones y aquí escribes en el buscador Python y te va a aparecer este Python
+
+14
+00:01:05,310 --> 00:01:06,480
+Extension Pack.
+
+15
+00:01:06,990 --> 00:01:10,470
+Lo seleccionas y procedes a instalarlo.
+
+16
+00:01:11,670 --> 00:01:13,410
+Va a ser lo mismo para la extinción de Chango.
+
+17
+00:01:13,440 --> 00:01:14,430
+Buscas a Chango?
+
+18
+00:01:14,730 --> 00:01:17,910
+Lo seleccionas y también lo instalas.
+
+19
+00:01:18,660 --> 00:01:25,110
+Y ya con esto estarías listo para poder utilizar el Visual Studio Code para el desarrollo del proyecto
+
+20
+00:01:25,110 --> 00:01:25,830
+del curso.
+
+21
+00:01:26,370 --> 00:01:32,100
+Pero aquí me puedes indicar profesor, pero si usted desarrolló el curso en Atom, habrá mucha diferencia
+
+22
+00:01:32,100 --> 00:01:33,660
+con usar Visual Studio Code.
+
+23
+00:01:34,110 --> 00:01:41,970
+La verdad que no solo usamos el editor de Visual Studio Code o de Atom para poder crear los archivos
+
+24
+00:01:41,970 --> 00:01:42,720
+del proyecto.
+
+25
+00:01:42,720 --> 00:01:44,700
+Por ejemplo, estoy en Visual Studio Code.
+
+26
+00:01:44,940 --> 00:01:51,150
+Lo que yo voy a hacer aquí para crear una carpeta simplemente clic derecho, New Folder o New directorio
+
+27
+00:01:51,450 --> 00:01:55,010
+y aquí le pongo mi directorio listo.
+
+28
+00:01:55,020 --> 00:02:02,490
+Y si quiero crear un archivo al interior del directorio, echo el directorio new file y le pongo mi
+
+29
+00:02:02,490 --> 00:02:06,090
+archivo txt y listo.
+
+30
+00:02:06,540 --> 00:02:11,820
+Eso es todo lo que hago dentro de Atom o de Visual Studio Code.
+
+31
+00:02:12,030 --> 00:02:16,220
+Solamente lo utilizo para administrar los archivos y directorios de mi proyecto.
+
+32
+00:02:16,260 --> 00:02:21,990
+Claro que evidentemente, en el momento en que yo escriba el código Django y Python en estos archivos
+
+33
+00:02:22,200 --> 00:02:28,260
+me van a aparecer la sintaxis correcta me va a mostrar el IDE si lo que escribo esta bien o si hay un
+
+34
+00:02:28,260 --> 00:02:29,280
+error que corregir.
+
+35
+00:02:29,550 --> 00:02:35,670
+Pero yo al haber instalado las extensiones dentro de Visual Studio Code me va a ayudar bastante con
+
+36
+00:02:35,670 --> 00:02:36,810
+este pequeño detalle.
+
+37
+00:02:37,820 --> 00:02:39,500
+Y va a pasar lo mismo para auto.
+
+38
+00:02:39,800 --> 00:02:42,470
+Este es el líder de auto en que acabo de abrir.
+
+39
+00:02:42,560 --> 00:02:43,550
+Te lo estoy mostrando aquí.
+
+40
+00:02:43,850 --> 00:02:44,990
+Es lo mismo.
+
+41
+00:02:45,240 --> 00:02:48,780
+Yo aquí también puedo escribir código.
+
+42
+00:02:48,860 --> 00:02:54,260
+Puedo también, por ejemplo, ver la sintaxis en rango.
+
+43
+00:02:55,460 --> 00:02:59,990
+Puedes ver que el Atom automáticamente ya me muestra la sintaxis en auto.
+
+44
+00:03:00,080 --> 00:03:02,210
+Yo no necesito instalar extensiones.
+
+45
+00:03:02,600 --> 00:03:07,400
+Esa es una de las virtudes que tiene para poder trabajar el código de chango y de Python.
+
+46
+00:03:07,970 --> 00:03:13,550
+Pero como te repito, no necesito hacer más que crear archivos y aquí es muy similar al de haz clic
+
+47
+00:03:13,550 --> 00:03:18,260
+derecho y la opción New Folder crea su nuevo folder, crea su nuevo archivo.
+
+48
+00:03:18,560 --> 00:03:23,540
+Esa es la forma en la cual trabajamos con el IDE, sea de Visual Studio Code, o sea de Atom.
+
+49
+00:03:24,470 --> 00:03:27,860
+Es decir, y te recalco esto al 100%.
+
+50
+00:03:27,860 --> 00:03:35,450
+No utilizamos ningún comando de compilación ni de debug en Visual Studio o en Atom, así que es totalmente
+
+51
+00:03:35,450 --> 00:03:37,610
+independiente lo que tu utilices.
+
+52
+00:03:38,060 --> 00:03:43,130
+Si quieres seguir el curso con Atom, perfecto, aquí te dejamos el instalador como archivo adjunto
+
+53
+00:03:43,130 --> 00:03:48,410
+y procede a instalarlo o si quieres seguir el curso con Visual Studio Code también no hay ningún problema,
+
+54
+00:03:48,590 --> 00:03:54,440
+simplemente agregarle las extensiones que acabo de mostrarte y te repito nuevamente los comandos para
+
+55
+00:03:54,440 --> 00:04:00,620
+compilar el código y demás lo hacemos de manera independiente de la herramienta Visual Studio Code o
+
+56
+00:04:00,620 --> 00:04:01,100
+de Atom.
+
+57
+00:04:01,550 --> 00:04:07,490
+Toda la ejecución de comandos lo hacemos con otra herramienta llamada git bash que a continuación te
+
+58
+00:04:07,490 --> 00:04:12,470
+enseñare a instalar y que claro, a través del curso te iré mostrando paso a paso como utilizarla.
+
+59
+00:04:12,950 --> 00:04:19,320
+Y repito una vez más la herramienta que es totalmente independiente de Visual Studio Code o de Atom.
+
+60
+00:04:19,340 --> 00:04:25,940
+Ok, lo entendiste bien, entonces lo dejo en tus manos, tu decide si quieres bajar el instalador de
+
+61
+00:04:25,940 --> 00:04:30,800
+Atom que te comparto como archivo adjunto o tu decides descargar y piso el Studio Code.
+
+62
+00:04:31,250 --> 00:04:37,250
+Una vez completes la instalación del IDE de tu preferencia, entonces vamos a continuar con la instalación
+
+63
+00:04:37,490 --> 00:04:40,430
+del git bash, que eso sí es muy importante.
+
+64
+00:04:41,150 --> 00:04:43,250
+A continuación vamos a instalar el Git.
+
+65
+00:04:43,580 --> 00:04:47,060
+Para esto vamos a ir a la página git raya.
+
+66
+00:04:47,060 --> 00:04:47,690
+S.
+
+67
+00:04:47,690 --> 00:04:48,630
+CMP.
+
+68
+00:04:48,900 --> 00:04:49,190
+Com.
+
+69
+00:04:50,600 --> 00:04:51,350
+Le damos enter.
+
+70
+00:04:51,350 --> 00:04:52,550
+Ingresamos a la página.
+
+71
+00:04:53,300 --> 00:04:58,490
+En la parte derecha inferior te va a aparecer una ventana de color verde y el botón de Download for
+
+72
+00:04:58,490 --> 00:04:59,060
+Windows.
+
+73
+00:04:59,270 --> 00:05:00,680
+Vamos a darle clic a este botón.
+
+74
+00:05:03,260 --> 00:05:06,380
+Y aquí comienza la descarga del archivo instalador.
+
+75
+00:05:07,880 --> 00:05:10,280
+Vamos a darle click al instalador una vez descargado.
+
+76
+00:05:11,440 --> 00:05:14,320
+Voy a parecer un asistente.
+
+77
+00:05:15,970 --> 00:05:20,200
+Checa me está pidiendo el Wizard asistente que le exija el botón Next.
+
+78
+00:05:21,040 --> 00:05:24,640
+Voy a tomar las opciones por defecto que están marcadas.
+
+79
+00:05:25,150 --> 00:05:25,540
+Next.
+
+80
+00:05:26,230 --> 00:05:29,590
+Y la opción finalmente instala el botón Install.
+
+81
+00:05:30,810 --> 00:05:35,160
+Esperamos unos segundos que termine la instalación de librerías y regresamos.
+
+82
+00:05:36,950 --> 00:05:38,300
+Ha concluido correctamente.
+
+83
+00:05:38,330 --> 00:05:40,100
+Vamos a darle clic al botón Finish.

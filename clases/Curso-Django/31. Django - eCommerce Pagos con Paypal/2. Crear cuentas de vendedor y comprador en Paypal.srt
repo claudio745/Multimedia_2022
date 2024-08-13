@@ -1,0 +1,607 @@
+1
+00:00:00,390 --> 00:00:07,080
+En este capítulo vamos a continuar la configuración de nuestra cuenta a Business Account PayPal dentro
+
+2
+00:00:07,080 --> 00:00:08,820
+de nuestro proyecto e-commerce.
+
+3
+00:00:09,690 --> 00:00:15,420
+Recuerda que nuestro objetivo es crear un sandbox, entonces tenemos que ir a la página de developer
+
+4
+00:00:15,570 --> 00:00:16,320
+de PayPal.
+
+5
+00:00:16,950 --> 00:00:20,520
+Por esto vamos a la página developer punto PayPal.
+
+6
+00:00:20,520 --> 00:00:21,480
+Punto com.
+
+7
+00:00:22,020 --> 00:00:25,190
+Vamos a darle enter y aquí me va a pedir que haga un login.
+
+8
+00:00:25,200 --> 00:00:28,350
+Vamos a darle clic a ese botón de log y en to Dashboard.
+
+9
+00:00:30,780 --> 00:00:30,990
+Aquí.
+
+10
+00:00:30,990 --> 00:00:32,940
+Me va a solicitar las credenciales.
+
+11
+00:00:34,060 --> 00:00:37,080
+Y ahora luego de ingresar el password vamos a darle clic a Login.
+
+12
+00:00:37,750 --> 00:00:42,640
+Ahora aparece el dashboard y nos vamos a ubicar en la parte izquierda que aparece Sandbox.
+
+13
+00:00:42,910 --> 00:00:45,160
+Vamos a darle clic al item.
+
+14
+00:00:45,160 --> 00:00:47,530
+Al submenú de Account le damos clic.
+
+15
+00:00:47,800 --> 00:00:51,880
+Vamos a esperar unos segundos que se cargue la página mientras se carga.
+
+16
+00:00:51,880 --> 00:00:58,930
+Recuerda de que nosotros estamos haciendo este procedimiento de PayPal para una cuenta que se encuentra
+
+17
+00:00:58,930 --> 00:01:00,870
+en Estados Unidos.
+
+18
+00:01:00,880 --> 00:01:07,600
+Puede ser un poco diferente respecto a la cuenta a la creación de la cuenta visitas account el sandbox
+
+19
+00:01:07,930 --> 00:01:09,010
+de otro país.
+
+20
+00:01:09,640 --> 00:01:12,010
+Vamos a darle clic al botón Create Account.
+
+21
+00:01:13,900 --> 00:01:16,750
+Hasta que me aparece esta ventana.
+
+22
+00:01:16,780 --> 00:01:20,380
+Voy a darle click a este link que dice Create Custom Account.
+
+23
+00:01:22,890 --> 00:01:26,700
+En este formulario vas a ingresar una cuenta de email y un password.
+
+24
+00:01:26,910 --> 00:01:30,120
+También te va a pedir que ingreses tu nombre.
+
+25
+00:01:30,120 --> 00:01:32,730
+Apellido el payment method.
+
+26
+00:01:33,210 --> 00:01:34,650
+También el Visa Card.
+
+27
+00:01:35,220 --> 00:01:42,540
+Pero recuerda que estos datos son para crear un account de tipo sandbox, que es una cuenta ficticia
+
+28
+00:01:42,690 --> 00:01:47,220
+que vamos a utilizar para las pruebas cuando lo integremos con el e-commerce.
+
+29
+00:01:47,760 --> 00:01:53,130
+Algo también muy importante a tomar en cuenta es que este email address que te piden este formulario
+
+30
+00:01:53,370 --> 00:01:59,670
+debe ser diferente a la cuenta de email que utilizaste para crear el Business Account de PayPal en el
+
+31
+00:01:59,670 --> 00:02:00,540
+capítulo anterior.
+
+32
+00:02:01,350 --> 00:02:03,900
+Entonces puedes utilizar otra cuenta de correo.
+
+33
+00:02:04,830 --> 00:02:08,850
+También vas a colocar tu propio password, nombres, apellidos, etcétera.
+
+34
+00:02:09,090 --> 00:02:10,620
+Voy a llenar este formulario.
+
+35
+00:02:11,010 --> 00:02:12,510
+Ya hemos llenado este formulario.
+
+36
+00:02:12,510 --> 00:02:18,360
+Para esto hemos seleccionado el personal, va a ir account y luego ingresamos este email diferente que
+
+37
+00:02:18,360 --> 00:02:19,710
+te repito al pin de account.
+
+38
+00:02:19,980 --> 00:02:23,490
+También un password, un nombre y un apellido.
+
+39
+00:02:23,900 --> 00:02:28,440
+Aquí vamos a agregarle un monto y en la parte inferior aparece este formulario.
+
+40
+00:02:28,620 --> 00:02:30,330
+Lo voy a poner que sea de mil.
+
+41
+00:02:31,420 --> 00:02:32,830
+Banbury Field account.
+
+42
+00:02:32,830 --> 00:02:33,510
+Le digo que sí.
+
+43
+00:02:33,550 --> 00:02:36,190
+Select payment apart and Discover.
+
+44
+00:02:37,430 --> 00:02:41,540
+Y ahora vamos a la parte inferior y vamos a darle clic al botón Create Account.
+
+45
+00:02:42,760 --> 00:02:45,010
+Ya se ha creado la cuenta de prueba de sandbox.
+
+46
+00:02:45,190 --> 00:02:50,080
+Pero esta cuenta que acabo de crear, que es la que ves aquí con este signo de Processing, es la que
+
+47
+00:02:50,080 --> 00:02:55,060
+vamos a utilizar para poder hacer las compras dentro de mi página de eCommerce.
+
+48
+00:02:55,330 --> 00:03:02,320
+Recuerda, yo necesito dos elementos para poder hacer el test de la compra y venta de productos.
+
+49
+00:03:02,500 --> 00:03:09,940
+Necesito una cuenta de PayPal que simule ser el comprador y necesito otra cuenta de PayPal de que simule
+
+50
+00:03:09,940 --> 00:03:11,050
+ser el vendedor.
+
+51
+00:03:11,230 --> 00:03:14,920
+En este caso, la cuenta que acabo de crear es de un comprador.
+
+52
+00:03:16,520 --> 00:03:21,380
+Ahora me toca crear la siguiente cuenta que es referente al vendedor.
+
+53
+00:03:21,920 --> 00:03:24,590
+Vamos entonces a darle clic a este botón de Credit Account.
+
+54
+00:03:24,590 --> 00:03:28,450
+Vamos a crear la siguiente cuenta que aparece Create Custom Account.
+
+55
+00:03:28,460 --> 00:03:29,180
+Le damos clic.
+
+56
+00:03:30,820 --> 00:03:33,560
+De aquí me va a tocar de nuevo llenar este formulario.
+
+57
+00:03:34,240 --> 00:03:37,040
+En este caso va a ser un business account.
+
+58
+00:03:37,580 --> 00:03:39,680
+El email puede ser ficticio también.
+
+59
+00:03:39,710 --> 00:03:42,860
+Vamos a colocarle, por ejemplo, Business Bags Bakshi.
+
+60
+00:03:42,860 --> 00:03:43,460
+Punto.
+
+61
+00:03:45,210 --> 00:03:45,710
+Business.
+
+62
+00:03:45,720 --> 00:03:46,380
+Le voy a poner.
+
+63
+00:03:47,490 --> 00:03:48,270
+Arroba gmail.
+
+64
+00:03:48,270 --> 00:03:48,750
+Punto com.
+
+65
+00:03:49,290 --> 00:03:50,850
+Hemos llenado el password.
+
+66
+00:03:50,880 --> 00:03:52,440
+El maxi, el nombre.
+
+67
+00:03:52,440 --> 00:03:53,550
+También el apellido.
+
+68
+00:03:53,820 --> 00:03:59,250
+Recuerda siempre este es el email que vas a usar para configurar la cuenta de vendedor en tu proyecto
+
+69
+00:03:59,250 --> 00:04:00,420
+de e-commerce en Yanko.
+
+70
+00:04:01,050 --> 00:04:02,340
+Vamos a la parte inferior.
+
+71
+00:04:02,570 --> 00:04:06,630
+Aquí me pidieron para el balance del ingreso a mil van verifi account.
+
+72
+00:04:06,630 --> 00:04:12,180
+Le digo que sí Credit Card Visa y ahora le doy clic al botón Create Account.
+
+73
+00:04:13,350 --> 00:04:17,310
+Luego que se cargue vas a notar que ya aparece aquí las dos cuentas que he creado.
+
+74
+00:04:17,610 --> 00:04:19,840
+La primera que he creado es Bakshi, comprador.
+
+75
+00:04:19,860 --> 00:04:25,260
+Al inicio de este vídeo que aparece personal y la segunda, la última, la que acabo de crear es Bakshi
+
+76
+00:04:25,290 --> 00:04:25,800
+Business.
+
+77
+00:04:26,820 --> 00:04:27,540
+Perfecto.
+
+78
+00:04:28,290 --> 00:04:33,150
+Ahora vamos a gestionar la app a la cual se tiene que conectar estas cuentas.
+
+79
+00:04:33,420 --> 00:04:38,660
+En la parte izquierda aparece el dashboard y aparece Ángel sin credenciales.
+
+80
+00:04:39,000 --> 00:04:39,540
+Dale clic.
+
+81
+00:04:41,520 --> 00:04:49,650
+Y en la parte superior te aparece esta opción de apps credenciales Spy Apps, ya que aparece el botón
+
+82
+00:04:49,650 --> 00:04:52,590
+de WhatsApp, vamos a darle clic a este botón Create App.
+
+83
+00:04:54,060 --> 00:04:56,280
+Le vamos a poner acá un nombre business.
+
+84
+00:04:57,420 --> 00:04:59,820
+App for para e-commerce.
+
+85
+00:05:05,020 --> 00:05:10,140
+A que me va a pedir el tipo de AP, que en este caso es de Merchant para comprar productos frente a
+
+86
+00:05:10,150 --> 00:05:10,930
+productos?
+
+87
+00:05:12,060 --> 00:05:15,420
+Aquí me indica cuál es el Santo Sabbath Witness Account.
+
+88
+00:05:15,840 --> 00:05:21,210
+Aquí aparece Bugsy Business, la cuenta que acabo de crear hace unos segundos y ahora le vamos a dar
+
+89
+00:05:21,210 --> 00:05:22,710
+clic al botón Create App.
+
+90
+00:05:26,600 --> 00:05:27,560
+Se está cargando.
+
+91
+00:05:30,610 --> 00:05:36,990
+Ya tenemos aquí las credenciales que voy a necesitar para conectar mi rango y commerce con esta cuenta
+
+92
+00:05:36,990 --> 00:05:37,710
+de PayPal.
+
+93
+00:05:38,460 --> 00:05:43,110
+Aquí me aparece el client ID y también me aparece el ciclo de show.
+
+94
+00:05:43,680 --> 00:05:48,150
+Te va a aparecer una clave secreta que vamos a tener que integrar al interior de nuestra app.
+
+95
+00:05:48,960 --> 00:05:52,230
+Vamos a verificar una vez en la parte izquierda Sandbox Account.
+
+96
+00:05:53,600 --> 00:05:56,570
+Quiero verificar que ya están dadas de alta las dos cuentas.
+
+97
+00:05:56,930 --> 00:06:00,470
+Aquí me aparece Bakshi comprador y el Bakshi Business.
+
+98
+00:06:02,050 --> 00:06:08,020
+Vamos a comenzar la integración de PayPal dentro de nuestro portal dentro del e-commerce.
+
+99
+00:06:08,170 --> 00:06:14,230
+Lo que quiero que aparezca dentro de esta página de Place Order es el botón de PayPal donde cuando el
+
+100
+00:06:14,230 --> 00:06:20,560
+cliente lee click automáticamente me aparezca un diálogo donde PayPal solicite el usuario y el password
+
+101
+00:06:20,560 --> 00:06:24,010
+para que realice el pago de los productos.
+
+102
+00:06:25,040 --> 00:06:30,470
+Para incorporar este botón tenemos que hacerlo desde el dashboard de PayPal, pero por algún motivo
+
+103
+00:06:30,470 --> 00:06:34,280
+no me está apareciendo dentro de esta lista de opciones en el menú.
+
+104
+00:06:34,970 --> 00:06:37,280
+Pero no te preocupes, vamos a ir a google.com.
+
+105
+00:06:37,280 --> 00:06:44,720
+En el buscador ponemos PayPal, check out button y ahora buscamos y busca por la opción que te diga
+
+106
+00:06:44,720 --> 00:06:48,530
+Smart payment, buttons, overview, paypal developer.
+
+107
+00:06:48,830 --> 00:06:49,670
+Vamos a darle clic.
+
+108
+00:06:51,450 --> 00:06:53,720
+De aquí te va a llevar a esta página.
+
+109
+00:06:55,500 --> 00:06:56,550
+En el mundo de la izquierda.
+
+110
+00:06:56,550 --> 00:06:58,860
+Dale click a la opción Basic Integration.
+
+111
+00:07:01,070 --> 00:07:02,950
+Vamos hacia el final de la página.
+
+112
+00:07:04,890 --> 00:07:08,940
+Y al final de la página te aparece esta opción de de Interactive Smart Payment.
+
+113
+00:07:10,350 --> 00:07:13,440
+Dale click a ese test de Bronco in Interactive Demo.
+
+114
+00:07:15,720 --> 00:07:19,890
+O sea que esperamos unos segundos y te aparece este dashboard.
+
+115
+00:07:20,490 --> 00:07:24,750
+Vamos a seleccionar la primera opción en la parte izquierda, que es Integration, dice Client.
+
+116
+00:07:24,840 --> 00:07:26,130
+Dale clic a esta opción.
+
+117
+00:07:27,250 --> 00:07:33,820
+Y lo que tenemos que hacer ahora es seleccionar este botón de PayPal, este botón de PayPal, el código
+
+118
+00:07:33,820 --> 00:07:36,910
+HTML lo vas a notar en la parte derecha.
+
+119
+00:07:37,420 --> 00:07:42,520
+Justamente en esta línea 14 aparece el div de PayPal en container.
+
+120
+00:07:42,850 --> 00:07:44,110
+Voy a copiar esta línea.
+
+121
+00:07:45,480 --> 00:07:47,580
+Ahora vamos a nuestro proyecto en Atom.
+
+122
+00:07:47,850 --> 00:07:49,820
+Ubícate en la carpeta Templates Orders.
+
+123
+00:07:49,830 --> 00:07:52,230
+Ay, que aparece Payment en HTML.
+
+124
+00:07:53,010 --> 00:07:58,560
+Vamos a ubicarnos en la parte final de la página y aquí aparece justo este botón que tiene el haber
+
+125
+00:07:58,560 --> 00:08:05,280
+confirmar pago ya no lo vamos a necesitar, así que seleccionarlo y lo eliminamos y en su lugar vamos
+
+126
+00:08:05,280 --> 00:08:08,100
+a pegar este botón de PayPal.
+
+127
+00:08:09,550 --> 00:08:14,710
+Volvemos a la página del dashboard donde están los botones de PayPal y luego de este de PayPal el puto
+
+128
+00:08:14,800 --> 00:08:16,390
+container va a aparecer.
+
+129
+00:08:16,390 --> 00:08:21,370
+Esta línea de script pasa a seleccionar esa línea de script y la copias.
+
+130
+00:08:22,530 --> 00:08:28,320
+Vamos ahora nuevamente a Atom y vamos a abrir el archivo que está a nivel de templates que se llama
+
+131
+00:08:28,350 --> 00:08:30,690
+base base puto HTML.
+
+132
+00:08:31,720 --> 00:08:34,240
+Y vamos a buscar este link que dice.
+
+133
+00:08:35,720 --> 00:08:42,080
+Scrip static js scripts js vamos a darle un enter luego de esa línea.
+
+134
+00:08:42,290 --> 00:08:45,740
+Aquí pego esta línea de script de paypal.
+
+135
+00:08:47,680 --> 00:08:49,750
+Volvemos al dashboard de Pipe PPal.
+
+136
+00:08:49,750 --> 00:08:50,860
+Y ahora aquí, mira.
+
+137
+00:08:51,250 --> 00:08:58,300
+Aparece una sección de scripts donde está el PayPal, botón render, paypal, container, etcétera Todo
+
+138
+00:08:58,300 --> 00:09:02,890
+este bloque script lo vamos a seleccionar y lo copiamos.
+
+139
+00:09:05,180 --> 00:09:12,180
+Estamos nuevamente en Atom y voy a ir ahora a Templates Orders, ya que ese payment HTML lo vamos a
+
+140
+00:09:12,180 --> 00:09:16,260
+abrir y vamos a la parte final luego que termine el sexo.
+
+141
+00:09:16,350 --> 00:09:23,010
+Y antes del blog aquí justamente vamos a pegar ese código script javascript que había copiado.
+
+142
+00:09:23,670 --> 00:09:25,080
+Listo, ya lo pegué.
+
+143
+00:09:27,080 --> 00:09:28,400
+Vamos a borrar todos los cambios.
+
+144
+00:09:28,430 --> 00:09:31,730
+Menú false all y vamos a la página de e-commerce.
+
+145
+00:09:32,270 --> 00:09:34,640
+Estamos aquí en la página de placeholder.
+
+146
+00:09:35,000 --> 00:09:36,740
+Voy a refrescar la página.
+
+147
+00:09:38,350 --> 00:09:43,660
+Y mira, ya me aparece el paypal y el débito o crédito y spoiler también.
+
+148
+00:09:44,320 --> 00:09:50,170
+Y si le damos click al botón de PayPal se va a levantar una ventana en la cual me va a pedir iniciar
+
+149
+00:09:50,170 --> 00:09:54,820
+sesión para comenzar la transacción de hacer los pagos de los productos.
+
+150
+00:09:55,360 --> 00:10:02,350
+Pero aún no he configurado esa acción del comprador y vendedor dentro de esta secuencia de PayPal dentro
+
+151
+00:10:02,350 --> 00:10:03,010
+de mi página.
+
+152
+00:10:03,010 --> 00:10:04,810
+Lo vamos a hacer en el siguiente capítulo.

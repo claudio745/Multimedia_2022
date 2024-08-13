@@ -1,0 +1,128 @@
+--  TABLAS
+
+CREATE TABLE CLIENTE
+( rut               CHAR(9)         NOT NULL,
+  nombreRazonSocial VARCHAR2(80)    NOT NULL,
+  primerApellido    VARCHAR2(25)    NULL,
+  segundoApellido   VARCHAR2(25)    NULL,
+  fechaNacForm      DATE            NOT NULL,
+  genero            CHAR(1)         NULL,
+  estadoCivil       NUMBER(1,0)     NULL,
+  nivelEstudios     CHAR(2)         NOT NULL,
+  tipo              CHAR(1)         NOT NULL
+);
+  
+CREATE TABLE CREDITO
+( numeroCred        NUMBER(9,0)     NOT NULL,
+  rut               CHAR(9)         NOT NULL,
+  fechaSolicitud    DATE            NOT NULL,
+  fechaOtorgamiento DATE            NULL,
+  capitalSolicitado NUMBER(9,0)     NOT NULL,
+  tasaInteres       NUMBER(3,2)     NOT NULL,
+  cantidadCuotas    NUMBER(2,0)     NOT NULL,
+  fechaPrimerVencim DATE            NOT NULL,
+  incluyeSeguros    NUMBER(1,0)     NOT NULL,
+  montoSeguros      NUMBER(7,0)     NOT NULL,
+  montoInteres      NUMBER(8,0)     NOT NULL,
+  montoCredito      NUMBER(9,0)     NOT NULL,
+  estado            NUMBER(1,0)     NOT NULL
+);
+  
+--  CLAVES PRIMARIAS
+
+ALTER TABLE CLIENTE ADD CONSTRAINT PK_CLIENTE PRIMARY KEY(rut);
+ALTER TABLE CREDITO ADD CONSTRAINT PK_CREDITO PRIMARY KEY(numeroCred);
+
+--  CLAVE FORANEA
+
+ALTER TABLE CREDITO
+ADD CONSTRAINT FK_CLIENTE_CREDITO FOREIGN KEY(rut)
+REFERENCES CLIENTE(rut);
+
+
+--  INTEGRIDAD DE DOMINIO
+
+ALTER TABLE CLIENTE
+ADD CONSTRAINT CK_genero CHECK (genero IN ('F','M','O'));
+
+ALTER TABLE CLIENTE
+ADD CONSTRAINT CK_estadoCivil CHECK (estadoCivil IN (0,1,2,3,4));
+
+ALTER TABLE CLIENTE
+ADD CONSTRAINT CK_nivelEstudios CHECK (nivelEstudios IN ('EB','EM','ET','TI','TU','PR','NA'));
+
+ALTER TABLE CLIENTE
+ADD CONSTRAINT CK_tipo CHECK (tipo IN ('N','E'));
+
+ALTER TABLE CREDITO
+MODIFY fechaSolicitud DEFAULT TO_DATE(SYSDATE);
+
+ALTER TABLE CREDITO
+ADD CONSTRAINT CK_fechaOtorgamiento CHECK (fechaOtorgamiento >= fechaSolicitud);
+
+ALTER TABLE CREDITO
+ADD CONSTRAINT CK_capitalSolicitado CHECK (capitalSolicitado >= 500000);
+
+ALTER TABLE CREDITO
+ADD CONSTRAINT CK_tasaInteres CHECK (tasaInteres BETWEEN 0.01 AND 9.99);
+
+ALTER TABLE CREDITO
+ADD CONSTRAINT CK_cantidadCuotas CHECK (cantidadCuotas BETWEEN 6 AND 72);
+
+ALTER TABLE CREDITO
+ADD CONSTRAINT CK_incluyeSeguros CHECK (incluyeSeguros IN (0,1));
+
+ALTER TABLE CREDITO
+MODIFY incluyeSeguros DEFAULT 0;
+
+ALTER TABLE CREDITO
+ADD CONSTRAINT CK_montoSeguros CHECK (montoSeguros BETWEEN 0 AND 1000000);
+
+ALTER TABLE CREDITO
+MODIFY montoSeguros DEFAULT 0;
+
+ALTER TABLE CREDITO
+ADD CONSTRAINT CK_montoInteres CHECK (montoInteres > 0);  
+
+ALTER TABLE CREDITO
+ADD CONSTRAINT CK_montoCredito CHECK (montoCredito > 0);  
+
+ALTER TABLE CREDITO
+ADD CONSTRAINT CK_estado CHECK (estado IN (0,1,2,3,4,5));
+
+ALTER TABLE CREDITO
+MODIFY estado DEFAULT 0;
+
+--  DATOS
+
+INSERT INTO CLIENTE VALUES('711111111','PALTA EXPORT S.A', NULL, NULL, '05-01-2005',NULL, NULL, 'NA','E');
+
+INSERT INTO CLIENTE VALUES('722222222','FABRICA DE MUEBLES PALITO', NULL, NULL, '28-07-2014',NULL, NULL, 'NA','E');
+
+INSERT INTO CLIENTE VALUES('111111111','FRANCISCO', 'SAN MARTIN', 'VERA', '09-11-1992','M', 0, 'TU','N');
+
+INSERT INTO CLIENTE VALUES('733333333','VEGAN FOOD LTDA ', NULL, NULL, '15-05-2020',NULL, NULL, 'NA','E');
+
+INSERT INTO CLIENTE VALUES('744444444','TRANSPORTES FIU FIU', NULL, NULL, '21-08-2021',NULL, NULL, 'NA','E');
+
+INSERT INTO CLIENTE VALUES('222222222','ELOISA', 'HERRERA', 'CIFUENTES', '03-06-1957','F', 2, 'PR','N');
+
+
+
+
+
+
+
+CREATE TABLE ESTADISTICAS_MES
+(mes                NUMBER(4,0) NOT NULL,
+ cantCliPerNat      NUMBER(8,0) NOT NULL,
+ cantCliEmp         NUMBER(4,0) NOT NULL,
+ cantCredSol        NUMBER(3,0) NOT NULL,
+ cantCredAut        NUMBER(3,0) NOT NULL,
+ montoTotalCredAut  NUMBER(9,0) NOT NULL,
+ montoTotalIntAut   NUMBER(8,0) NOT NULL
+);
+
+ALTER TABLE ESTADISTICAS_MES ADD CONSTRAINT PK_ESTADISTICAS_MES PRIMARY KEY(mes);
+ 
+

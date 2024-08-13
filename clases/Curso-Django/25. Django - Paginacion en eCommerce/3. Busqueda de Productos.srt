@@ -1,0 +1,1191 @@
+1
+00:00:00,450 --> 00:00:03,750
+En este capítulo vamos a trabajar en la funcionalidad de búsqueda.
+
+2
+00:00:03,930 --> 00:00:11,010
+Para esto vamos a ir a la página store, darle click al botón de tienda y vamos a notar que en el par
+
+3
+00:00:11,100 --> 00:00:13,680
+aparece una caja de texto que dice Search.
+
+4
+00:00:14,670 --> 00:00:16,920
+Y también aparece un botón con una lupa.
+
+5
+00:00:17,870 --> 00:00:24,140
+Se supone que cuando nosotros escribamos el nombre de algún producto o la descripción de algún producto
+
+6
+00:00:24,140 --> 00:00:30,140
+y le damos click a este botón, se debe de actualizar la lista de productos que me muestra esta página.
+
+7
+00:00:31,630 --> 00:00:36,520
+Entonces comencemos a trabajar esta nueva funcionalidad en nuestro proyecto e-commerce.
+
+8
+00:00:37,540 --> 00:00:40,900
+Primero tenemos que registrar esta nota de búsqueda.
+
+9
+00:00:41,380 --> 00:00:44,170
+Vayamos entonces a la carpeta de Commerce.
+
+10
+00:00:44,200 --> 00:00:47,890
+Estamos dentro de Store y en el interior de Store.
+
+11
+00:00:47,920 --> 00:00:50,800
+Vamos a ir hacia Wireless y.
+
+12
+00:00:52,930 --> 00:01:00,280
+A Antes había registrado ya los paths para category slug category slug slug lo primero que voy a hacer
+
+13
+00:01:00,280 --> 00:01:05,050
+es agregar dentro de estos path de categoría Slug y Slug.
+
+14
+00:01:07,070 --> 00:01:08,030
+Una línea adicional.
+
+15
+00:01:08,060 --> 00:01:09,980
+Vamos a poner aquí categorías por delante.
+
+16
+00:01:11,770 --> 00:01:12,730
+Categories las.
+
+17
+00:01:15,640 --> 00:01:18,270
+Si le ponemos también que sea un category slash.
+
+18
+00:01:21,570 --> 00:01:22,140
+Perfecto.
+
+19
+00:01:22,590 --> 00:01:24,180
+Ahora voy a crear un nuevo path.
+
+20
+00:01:27,820 --> 00:01:28,900
+Qué le vamos a poner?
+
+21
+00:01:28,970 --> 00:01:30,460
+Search Slash.
+
+22
+00:01:31,650 --> 00:01:38,130
+De búsqueda search en inglés significa búsqueda y vamos a trabajar dentro de una función que también
+
+23
+00:01:38,130 --> 00:01:39,210
+se va a llamar Search.
+
+24
+00:01:40,850 --> 00:01:42,140
+Aquí la estoy definiendo.
+
+25
+00:01:42,900 --> 00:01:43,460
+Search.
+
+26
+00:01:44,640 --> 00:01:45,870
+Y al final la coma.
+
+27
+00:01:48,170 --> 00:01:53,660
+Y ahora vamos a ubicarnos dentro del archivo, dentro de la carpeta Store Views, punto y.
+
+28
+00:01:55,670 --> 00:02:01,850
+De aquí a la parte superior voy a importar una librería que voy a utilizar para la consulta del query
+
+29
+00:02:01,850 --> 00:02:02,510
+que voy a hacer.
+
+30
+00:02:03,230 --> 00:02:05,120
+Entonces vamos a hacer un from.
+
+31
+00:02:07,200 --> 00:02:08,010
+Está Jango?
+
+32
+00:02:10,660 --> 00:02:13,190
+El punto de punto models.
+
+33
+00:02:14,700 --> 00:02:16,170
+Importa el Q.
+
+34
+00:02:16,590 --> 00:02:20,940
+No te preocupes que ahora te voy a explicar y te voy a demostrar con un ejemplo como trabaja esto.
+
+35
+00:02:22,260 --> 00:02:23,790
+Ahora vamos a la parte inferior.
+
+36
+00:02:24,150 --> 00:02:26,430
+Y después de esta función de producto.
+
+37
+00:02:26,850 --> 00:02:27,780
+Voy a darle un enter.
+
+38
+00:02:29,820 --> 00:02:32,220
+De aquí voy a crear la función de search.
+
+39
+00:02:35,450 --> 00:02:37,520
+Que va a recibir un parámetro de tipo request.
+
+40
+00:02:40,660 --> 00:02:40,840
+Bien.
+
+41
+00:02:40,900 --> 00:02:48,670
+Lo primero que voy a indicarle es saber si estoy recibiendo como parámetro desde la borel la palabra
+
+42
+00:02:48,670 --> 00:02:49,330
+quick work.
+
+43
+00:02:50,020 --> 00:02:52,210
+Por eso voy a colocarle aquí la condición if.
+
+44
+00:02:53,890 --> 00:02:55,780
+Qué Worth está recibiendo ese.
+
+45
+00:02:57,420 --> 00:02:58,670
+Dentro del recuento.
+
+46
+00:03:01,790 --> 00:03:04,250
+Lamento que un jet con mayúscula.
+
+47
+00:03:07,190 --> 00:03:12,860
+Entonces quiero obtener este parámetro desde la URL que me envía el cliente.
+
+48
+00:03:13,280 --> 00:03:14,180
+Por eso le pongo aquí.
+
+49
+00:03:16,250 --> 00:03:18,680
+Igual a request to get.
+
+50
+00:03:21,690 --> 00:03:25,260
+Aquí le pongo el nombre de la palabra del parámetro keyword.
+
+51
+00:03:26,330 --> 00:03:29,000
+Ahora si que Word existe.
+
+52
+00:03:29,330 --> 00:03:29,950
+Voy a poner acá.
+
+53
+00:03:35,140 --> 00:03:41,950
+Entonces voy a hacer la consulta para obtener el conjunto de productos que corresponden.
+
+54
+00:03:42,310 --> 00:03:46,030
+El keyword en español significa palabra clave.
+
+55
+00:03:46,420 --> 00:03:52,150
+En este caso es lo que me está enviando el cliente para yo hacer la búsqueda con este valor dentro de
+
+56
+00:03:52,150 --> 00:03:52,980
+mi base de datos.
+
+57
+00:03:52,990 --> 00:03:58,840
+Encontrar los productos, el nombre del producto o la descripción del producto que concuerden con este
+
+58
+00:03:58,840 --> 00:04:01,990
+valor de keyword que me está enviando el cliente.
+
+59
+00:04:03,860 --> 00:04:08,900
+Vamos a indicarle que voy a buscar esta lista de productos desde.
+
+60
+00:04:10,170 --> 00:04:12,030
+La estructura, la tabla producto.
+
+61
+00:04:13,080 --> 00:04:16,020
+Haciendo un Object punto Order.
+
+62
+00:04:16,020 --> 00:04:20,730
+Voy a poner aquí el orden que es el ordenamiento.
+
+63
+00:04:20,760 --> 00:04:23,010
+Quiero ordenarlo por el nombre, por la descripción.
+
+64
+00:04:23,490 --> 00:04:30,330
+Yo en este caso le voy a indicar que lo ordene por la fecha de creación de este producto, pero quiero
+
+65
+00:04:30,330 --> 00:04:33,030
+que la fecha de creación sea descendente.
+
+66
+00:04:33,390 --> 00:04:38,580
+Entonces, primeramente aquí le pongo apóstrofe al crear la fecha de creación.
+
+67
+00:04:39,680 --> 00:04:45,380
+Y para que sea descendente tienes que ponerle el signo de menos antes del nombre Create Date.
+
+68
+00:04:46,070 --> 00:04:51,320
+De esta forma voy a organizar la lista de productos que me va a generar y que voy a enviar posteriormente
+
+69
+00:04:51,320 --> 00:04:51,950
+a este cliente.
+
+70
+00:04:53,060 --> 00:04:55,330
+Y ahora, aquí viene lo más importante el filter.
+
+71
+00:04:55,340 --> 00:04:57,080
+La condición lógica.
+
+72
+00:04:57,350 --> 00:04:58,730
+Voy a maximizar mi archivo.
+
+73
+00:04:59,480 --> 00:04:59,810
+Esto.
+
+74
+00:05:00,910 --> 00:05:02,860
+Y a este filter le vamos a colocar.
+
+75
+00:05:03,890 --> 00:05:07,560
+A que supone el cuerpo y la condición para hacer la condición.
+
+76
+00:05:07,630 --> 00:05:15,770
+Yo quiero que el keyword se compare contra la columna del nombre del producto y también la descripción
+
+77
+00:05:15,770 --> 00:05:16,260
+del producto.
+
+78
+00:05:16,280 --> 00:05:18,530
+Entonces tengo dos condiciones aquí.
+
+79
+00:05:19,510 --> 00:05:22,030
+Que no son ant, sino que son de tipo or.
+
+80
+00:05:23,420 --> 00:05:26,510
+Al Debo decir que se trata de una condición de tipo OR.
+
+81
+00:05:26,810 --> 00:05:34,940
+Estoy indicándole que si el valor de keyword concuerda con nombre traelo o si el valor de keyword concuerda
+
+82
+00:05:34,940 --> 00:05:37,340
+con la descripción del producto, también traelo.
+
+83
+00:05:37,880 --> 00:05:39,980
+Entonces voy a hacer una doble búsqueda aquí.
+
+84
+00:05:40,870 --> 00:05:48,580
+Para poder hacer este orden necesito llamar justamente a esta a esta herramienta llamada Ç que hemos
+
+85
+00:05:48,580 --> 00:05:50,740
+importado en la parte superior al inicio.
+
+86
+00:05:51,820 --> 00:05:54,430
+Que viene el chango tipo Models.
+
+87
+00:05:56,490 --> 00:05:59,100
+Y ahora haciendo el cubo, vamos a.
+
+88
+00:06:00,720 --> 00:06:02,670
+Definir nuestro primer.
+
+89
+00:06:03,000 --> 00:06:04,200
+Nuestra primera consulta.
+
+90
+00:06:05,880 --> 00:06:10,080
+Le digo que llame a la columna de productos que se llama description.
+
+91
+00:06:12,160 --> 00:06:15,760
+Y ahora le tengo que indicar qué tipo de operación quiero hacer sobre descripción.
+
+92
+00:06:17,190 --> 00:06:22,170
+Que contenga que la que la descripción contenga algo del valor del keyword.
+
+93
+00:06:22,650 --> 00:06:23,640
+Por ejemplo.
+
+94
+00:06:24,030 --> 00:06:28,860
+Si yo estoy recibiendo del cliente la palabra pantalón.
+
+95
+00:06:30,670 --> 00:06:33,430
+Y realmente la descripción que está.
+
+96
+00:06:33,430 --> 00:06:36,580
+Registrar el producto en la base de datos es pantalón de verano.
+
+97
+00:06:37,000 --> 00:06:44,140
+Entonces la palabra pantalón está incluida dentro de la descripción total del producto y lo va a devolver,
+
+98
+00:06:44,170 --> 00:06:51,700
+va a encontrar y va a devolver este registro para poder colocar este operador de si contiene o no contiene
+
+99
+00:06:51,700 --> 00:06:53,240
+parte de la descripción del producto.
+
+100
+00:06:53,260 --> 00:07:01,150
+La búsqueda del cliente pasa a colocar doble raya para abajo y el operador se llama Icon Tens.
+
+101
+00:07:04,610 --> 00:07:10,040
+Y esto lo comparo contra el valor que me esté enviando el cliente desde la página que es keyword.
+
+102
+00:07:11,360 --> 00:07:18,290
+Visto de esta forma, entonces ya hemos hecho un primer filtro para buscar la descripción del producto
+
+103
+00:07:19,130 --> 00:07:20,360
+en base al keyword.
+
+104
+00:07:20,390 --> 00:07:21,470
+Lo que vemos del cliente.
+
+105
+00:07:21,740 --> 00:07:22,610
+Pero no es lo único.
+
+106
+00:07:22,610 --> 00:07:26,150
+También table del nombre del producto, que va a ser muy similar.
+
+107
+00:07:26,420 --> 00:07:28,850
+Pero esto tiene que ser un error.
+
+108
+00:07:29,960 --> 00:07:37,100
+Pero yo no puedo colocarle por aquí la nomenclatura para hacer el orden chango es utilizando ese operador.
+
+109
+00:07:38,480 --> 00:07:39,320
+De la barrita.
+
+110
+00:07:39,980 --> 00:07:44,590
+Esto como es muy similar la operación voy a copiar este q.
+
+111
+00:07:47,320 --> 00:07:48,010
+Ya que lo pego.
+
+112
+00:07:49,890 --> 00:07:51,690
+De aquí sería en vez de descripción.
+
+113
+00:07:52,890 --> 00:07:59,310
+La columna es product name de trabajo name y luego dos rayas para abajo.
+
+114
+00:08:00,380 --> 00:08:09,140
+Y con el operador para saber si coincide la búsqueda del cuerpo por la descripción o por el nombre del
+
+115
+00:08:09,140 --> 00:08:09,740
+producto.
+
+116
+00:08:11,420 --> 00:08:13,430
+Esta es la forma en que lo vamos a trabajar.
+
+117
+00:08:13,910 --> 00:08:17,990
+Vamos a organizar mejor el código para que no tenga tantos espacios en blanco.
+
+118
+00:08:18,420 --> 00:08:20,030
+Solamente un espacio de separación.
+
+119
+00:08:21,020 --> 00:08:26,620
+Entre ese operador de por aquí al inicio, el coup pegado al paréntesis.
+
+120
+00:08:26,630 --> 00:08:28,910
+Perfecto, ya lo tenemos.
+
+121
+00:08:29,150 --> 00:08:32,270
+También quiero saber la cantidad de productos que me está devolviendo.
+
+122
+00:08:32,270 --> 00:08:39,320
+Por eso llamo crea una variable que se va a llamar product commit y va a ser product punto y llama su
+
+123
+00:08:39,340 --> 00:08:42,380
+función count con paréntesis.
+
+124
+00:08:44,260 --> 00:08:45,220
+Lo tenemos listo.
+
+125
+00:08:45,640 --> 00:08:45,970
+Bien.
+
+126
+00:08:46,480 --> 00:08:53,350
+Ahora lo que voy a hacer es crear un diccionario para devolverle estos datos a mi página de Play Store.
+
+127
+00:08:53,980 --> 00:08:56,080
+Ten mucho cuidado con las tabs.
+
+128
+00:08:57,420 --> 00:08:59,370
+En este caso, para poder crear el diccionario.
+
+129
+00:09:00,150 --> 00:09:01,020
+Voy a crear el tap.
+
+130
+00:09:01,380 --> 00:09:03,510
+Voy a crear el diccionario a nivel del primer if.
+
+131
+00:09:03,960 --> 00:09:04,530
+Ahí está.
+
+132
+00:09:05,950 --> 00:09:07,480
+Voy a ponerle contexto.
+
+133
+00:09:07,510 --> 00:09:11,740
+Igual a aquí le ponemos product.
+
+134
+00:09:12,520 --> 00:09:13,450
+Dos puntos.
+
+135
+00:09:15,290 --> 00:09:15,860
+Products.
+
+136
+00:09:17,840 --> 00:09:20,610
+También le voy a poner a prueba.
+
+137
+00:09:20,640 --> 00:09:20,790
+Ok?
+
+138
+00:09:22,940 --> 00:09:26,750
+Dos puntos producto para abajo counter.
+
+139
+00:09:28,220 --> 00:09:29,050
+Y al final.
+
+140
+00:09:30,500 --> 00:09:31,760
+Y lo que quiero que me devuelva.
+
+141
+00:09:32,980 --> 00:09:35,140
+Es un render.
+
+142
+00:09:36,800 --> 00:09:44,510
+Pasan de la riqueza y hacia el template store es las store html.
+
+143
+00:09:47,200 --> 00:09:52,750
+Y le paso el diccionario context que contiene la lista de productos que me está devolviendo la base
+
+144
+00:09:52,750 --> 00:09:56,470
+de datos con el filtro y también la cantidad de productos.
+
+145
+00:09:58,220 --> 00:09:59,170
+Eso sería todo.
+
+146
+00:09:59,180 --> 00:10:00,770
+Voy a guardar los cambios.
+
+147
+00:10:00,950 --> 00:10:02,300
+Menú Falstaff all.
+
+148
+00:10:04,480 --> 00:10:10,050
+Vamos a implementar hacer la llamada de esta función search dentro de nuestro template de tipo var,
+
+149
+00:10:10,060 --> 00:10:13,870
+porque ahí se encuentra la caja de texto y el botón de hacer búsqueda.
+
+150
+00:10:14,350 --> 00:10:19,120
+Entonces vamos a meter el explorador de mi proyecto, vamos a la carpeta Templates.
+
+151
+00:10:19,490 --> 00:10:23,710
+Aquí aparece includes, dentro de aparece el VAR.
+
+152
+00:10:24,280 --> 00:10:29,020
+Vamos a ubicarnos más o menos en la línea 50 59.
+
+153
+00:10:31,300 --> 00:10:32,200
+Si vamos a ver acá.
+
+154
+00:10:32,250 --> 00:10:34,600
+En mi caso está en la línea.
+
+155
+00:10:36,030 --> 00:10:37,290
+55.
+
+156
+00:10:37,300 --> 00:10:40,500
+Aquí está el botón de envío de valores de FSH.
+
+157
+00:10:41,880 --> 00:10:47,160
+Y también aquí aparece la caja de texto input, como la puedes ver aquí aparece Please folder search,
+
+158
+00:10:47,160 --> 00:10:48,170
+que significa búsqueda.
+
+159
+00:10:48,180 --> 00:10:49,230
+Vamos a ponerle búsqueda.
+
+160
+00:10:51,520 --> 00:10:52,650
+O buscar productos.
+
+161
+00:10:52,990 --> 00:10:54,190
+Buscar productos.
+
+162
+00:10:56,940 --> 00:10:57,480
+Ahí está.
+
+163
+00:10:58,470 --> 00:11:00,320
+Y todo esto está dentro de un formulario.
+
+164
+00:11:00,330 --> 00:11:03,030
+Como puedes ver, voy a ponerle unos espacios para que lo veas mejor.
+
+165
+00:11:03,030 --> 00:11:03,750
+El formulario.
+
+166
+00:11:05,940 --> 00:11:08,760
+Por ahora, el formulario está apuntando a un.
+
+167
+00:11:10,790 --> 00:11:13,640
+Que tiene un operador de numeral no está llevando a ningún sitio.
+
+168
+00:11:13,970 --> 00:11:20,810
+Pero yo lo que quiero que haga este es que me lleve los campos que tiene este formulario como parámetros
+
+169
+00:11:21,230 --> 00:11:22,910
+a una URL en específico.
+
+170
+00:11:22,910 --> 00:11:23,930
+Cuál es esta variable?
+
+171
+00:11:25,430 --> 00:11:29,180
+Voy a ponerle entre signos de Chávez y porcentajes.
+
+172
+00:11:30,680 --> 00:11:32,660
+Que me tiene que llevar a la URL.
+
+173
+00:11:32,660 --> 00:11:37,370
+Nestor Porque ahí es donde se van a desplegar los resultados de mi búsqueda.
+
+174
+00:11:39,960 --> 00:11:44,790
+También tengo que indicarle cuál es el valor que tengo que enviarle como parámetro.
+
+175
+00:11:46,060 --> 00:11:49,120
+Como el input forma parte del formulario.
+
+176
+00:11:50,080 --> 00:11:53,650
+Entonces se va a convertir en parte el valor del input.
+
+177
+00:11:53,800 --> 00:11:59,740
+El valor del input se va a convertir en parte del parámetro del formulario y se va a enviar a la función.
+
+178
+00:12:00,860 --> 00:12:06,530
+Bien, entonces lo que tenemos que hacer dentro de este input es primeramente agregarle un nombre.
+
+179
+00:12:07,910 --> 00:12:10,460
+Cuál es el nombre del parámetro para este input?
+
+180
+00:12:10,550 --> 00:12:13,640
+Recuerdas que hemos trabajado esto hace un momento en la función?
+
+181
+00:12:14,300 --> 00:12:15,560
+Si, es keyword.
+
+182
+00:12:18,270 --> 00:12:24,630
+Entonces cuando haga un cuando se dispare el evento del formulario para enviarlo al servidor, lo que
+
+183
+00:12:24,630 --> 00:12:29,490
+va a pasar es que este keyword se va a enviar como parte de la URL.
+
+184
+00:12:30,360 --> 00:12:34,980
+El keyword es el nombre del parámetro y el valor, el valor que coloques dentro de la caja de texto.
+
+185
+00:12:35,790 --> 00:12:41,580
+Aquí tenemos un pequeño detalle, porque yo lo había puesto en Action Store y no, yo quiero que me
+
+186
+00:12:41,580 --> 00:12:45,510
+lleve hacia el Where le Search de búsqueda.
+
+187
+00:12:46,260 --> 00:12:51,000
+Ahora vamos a borrar los cambios minus false all y vamos a probar a nuestra página.
+
+188
+00:12:52,770 --> 00:12:54,040
+Estamos en la página.
+
+189
+00:12:54,060 --> 00:12:55,020
+Voy a refrescar.
+
+190
+00:12:55,420 --> 00:12:56,400
+Todo perfecto.
+
+191
+00:12:57,030 --> 00:12:59,310
+Y aquí vamos a agregar una búsqueda.
+
+192
+00:12:59,760 --> 00:13:02,430
+Puedes escribir cualquier texto para probar cualquier texto.
+
+193
+00:13:03,000 --> 00:13:04,830
+Y le damos clic al botón de búsqueda.
+
+194
+00:13:06,420 --> 00:13:07,030
+Y perfecto.
+
+195
+00:13:07,110 --> 00:13:10,110
+Mira, vamos a anotar en la parte superior lo que se ha formado.
+
+196
+00:13:10,350 --> 00:13:14,040
+Se está llevando al Store Search Keyword.
+
+197
+00:13:14,260 --> 00:13:15,360
+Aquí de lo importante.
+
+198
+00:13:16,140 --> 00:13:20,040
+A ese track, cualquier valor que he colocado dentro de la caja de texto.
+
+199
+00:13:20,190 --> 00:13:21,240
+Puedo colocar también aquí.
+
+200
+00:13:21,270 --> 00:13:21,630
+Tres.
+
+201
+00:13:24,410 --> 00:13:27,660
+Y como puedes ver, también se está generando ese valor.
+
+202
+00:13:27,680 --> 00:13:31,070
+Está pasando, profesor, pero la idea era buscar productos.
+
+203
+00:13:31,100 --> 00:13:31,680
+Así es.
+
+204
+00:13:31,700 --> 00:13:33,200
+Busquemos entonces un producto.
+
+205
+00:13:33,830 --> 00:13:35,660
+Por ejemplo, voy a buscar a computadora.
+
+206
+00:13:37,080 --> 00:13:38,400
+Dale click y mira.
+
+207
+00:13:38,400 --> 00:13:40,830
+Ya me encontró a computadora.
+
+208
+00:13:41,160 --> 00:13:42,270
+Perfecto.
+
+209
+00:13:42,270 --> 00:13:43,770
+Está funcionando muy bien.
+
+210
+00:13:44,280 --> 00:13:45,240
+Los servos.
+
+211
+00:13:46,460 --> 00:13:51,200
+También vamos a hemos escrito el pots, le damos click y también llama.
+
+212
+00:13:51,220 --> 00:13:52,880
+Encontró a los iPods.
+
+213
+00:13:53,600 --> 00:14:00,170
+Bien, de esta forma, entonces hemos implementado la búsqueda que puede trabajar en cualquier página
+
+214
+00:14:00,650 --> 00:14:05,390
+de nuestro proyecto, porque recuerda que la barra de navegación es un componente global.
+
+215
+00:14:05,630 --> 00:14:07,730
+Por ejemplo, si vamos a la página home.
+
+216
+00:14:09,260 --> 00:14:15,200
+Aquí también aparece la búsqueda de productos, así que le podemos poner hedge funds que busque los
+
+217
+00:14:15,260 --> 00:14:15,800
+hedge funds.
+
+218
+00:14:17,120 --> 00:14:18,220
+Solamente le pongo it.
+
+219
+00:14:18,560 --> 00:14:18,890
+A ver.
+
+220
+00:14:20,430 --> 00:14:21,090
+Le damos enter.
+
+221
+00:14:21,090 --> 00:14:22,980
+Y mira, ya me encontró a los iPhones.
+
+222
+00:14:23,310 --> 00:14:28,410
+No es necesario colocar la palabra completa, solamente parte de la palabra.
+
+223
+00:14:28,410 --> 00:14:32,760
+Automáticamente el operador y contains va a buscar.
+
+224
+00:14:33,000 --> 00:14:38,670
+Va a buscar a aquellos productos que hagan un match con la palabra clave que ingresaste.
+
+225
+00:14:39,840 --> 00:14:45,600
+Algo que vas a ver dentro de la base de Jango es que te va a aparecer un warning.
+
+226
+00:14:46,830 --> 00:14:54,330
+Este warning es referente a que la paginación te está pidiendo que hagas un ordenamiento, un orden.
+
+227
+00:14:54,370 --> 00:14:58,800
+By Mira profesor, pero yo echo eso dentro del query que usted hizo.
+
+228
+00:14:58,800 --> 00:15:03,750
+Si lo hice, pero realmente para los anteriores casos no lo había implementado.
+
+229
+00:15:04,590 --> 00:15:12,810
+Vayamos por esto a nuestra carpeta Store, vamos al punto P y y aquí dentro de la función search ya
+
+230
+00:15:12,810 --> 00:15:14,220
+le había puesto yo el orden.
+
+231
+00:15:14,250 --> 00:15:16,950
+Voy por Create Date, voy a copiarlo.
+
+232
+00:15:19,680 --> 00:15:25,470
+Voy a otra ciudad y vamos a otro que está en la parte superior.
+
+233
+00:15:26,750 --> 00:15:28,280
+El que dice Store.
+
+234
+00:15:29,870 --> 00:15:32,480
+Aquí tengo un ex y un chef.
+
+235
+00:15:33,590 --> 00:15:40,760
+De acá en este Product Objects All Filter, vamos a colocarle también su orden.
+
+236
+00:15:41,060 --> 00:15:42,890
+Aquí vamos a ponerle un punto.
+
+237
+00:15:44,040 --> 00:15:45,410
+Y pegamos order by.
+
+238
+00:15:45,750 --> 00:15:47,250
+Que puede ser por cliente.
+
+239
+00:15:47,280 --> 00:15:48,930
+Puede ser por el nombre del producto.
+
+240
+00:15:49,710 --> 00:15:51,690
+Por ejemplo, aquí le voy a poner que sea por el ID.
+
+241
+00:15:53,110 --> 00:15:53,770
+No hay problema.
+
+242
+00:15:55,540 --> 00:15:56,390
+Voy a copiarlo.
+
+243
+00:15:57,830 --> 00:16:01,230
+Y también para este esta condición paralela.
+
+244
+00:16:02,180 --> 00:16:04,790
+Le pongo su punto y su orden.
+
+245
+00:16:04,820 --> 00:16:06,350
+Voy por Heidi.
+
+246
+00:16:09,130 --> 00:16:10,120
+Lo tenemos listo.
+
+247
+00:16:10,130 --> 00:16:12,460
+Voy a borrar los cambios del sifón.
+
+248
+00:16:13,150 --> 00:16:16,450
+Y de esta forma también ya arreglamos este warning.
+
+249
+00:16:17,480 --> 00:16:18,510
+Volvamos a la página.
+
+250
+00:16:18,530 --> 00:16:19,190
+Un momento.
+
+251
+00:16:19,580 --> 00:16:21,530
+Quiero buscar por un producto que no existe.
+
+252
+00:16:21,600 --> 00:16:23,330
+A ver, vamos a ponerle 23.
+
+253
+00:16:24,510 --> 00:16:28,740
+Me pongo la búsqueda y me aparece cero productos encontrados.
+
+254
+00:16:28,980 --> 00:16:32,020
+Pero yo no quisiera que aparezca de esta forma.
+
+255
+00:16:32,040 --> 00:16:34,920
+Quisiera que aparezca otro mensaje aquí en vez de la tabla.
+
+256
+00:16:36,210 --> 00:16:38,550
+Entonces vamos a Atton nuevamente.
+
+257
+00:16:38,880 --> 00:16:45,420
+Y ahora vamos a la carpeta Templates en la carpeta Store y vamos al Store punto a HTML.
+
+258
+00:16:47,000 --> 00:16:50,180
+Vamos más o menos a la línea 130.
+
+259
+00:16:51,470 --> 00:16:56,360
+Entonces la parte inferior más o menos, ya que aparece en la línea 130.
+
+260
+00:16:56,360 --> 00:16:58,820
+El bucle para los productos, verdad?
+
+261
+00:16:59,210 --> 00:16:59,480
+La.
+
+262
+00:17:00,080 --> 00:17:05,660
+Aquí podemos desplegar los productos, pero yo no quiero que aparezca este bucle a menos de que tenga
+
+263
+00:17:06,020 --> 00:17:08,750
+un producto que el producto tenga algún valor.
+
+264
+00:17:09,350 --> 00:17:12,350
+Voy a minimizar este clase que continúa después del bucle.
+
+265
+00:17:13,820 --> 00:17:16,520
+Vamos a minimizarla porque este es el foro.
+
+266
+00:17:16,530 --> 00:17:16,970
+Verdad?
+
+267
+00:17:17,300 --> 00:17:19,850
+Bueno, entonces lo que voy a hacer es colocar.
+
+268
+00:17:21,680 --> 00:17:22,610
+Antes del foro.
+
+269
+00:17:23,560 --> 00:17:26,170
+Una lógica para que no se pinte si no hay productos.
+
+270
+00:17:27,720 --> 00:17:33,480
+Podemos sacar los signos de llaves porcentajes si hacemos un if product exist.
+
+271
+00:17:34,470 --> 00:17:36,090
+Si esto existe.
+
+272
+00:17:37,150 --> 00:17:39,430
+Entonces imprímelo aquí.
+
+273
+00:17:39,430 --> 00:17:43,170
+Le voy a indicar que lo imprima y aquí lo cierro después del informe.
+
+274
+00:17:45,560 --> 00:17:46,910
+Y pongo su end if.
+
+275
+00:17:49,030 --> 00:17:50,530
+Pero qué pasaría si no?
+
+276
+00:17:50,740 --> 00:17:51,760
+Qué pasaría si no?
+
+277
+00:17:52,540 --> 00:17:57,680
+Entonces, en ese caso, lo que quiero es que haga un.
+
+278
+00:17:58,720 --> 00:17:59,710
+Un else.
+
+279
+00:18:00,460 --> 00:18:02,920
+Entonces, antes de en if, vamos a colocarle aquí.
+
+280
+00:18:03,190 --> 00:18:03,780
+Después.
+
+281
+00:18:05,270 --> 00:18:05,930
+Un herpes.
+
+282
+00:18:09,120 --> 00:18:11,970
+Y dentro de este DLC vamos a pintar un div.
+
+283
+00:18:16,160 --> 00:18:19,940
+Son minúsculas y dentro de este diff voy a colocar un H2.
+
+284
+00:18:21,300 --> 00:18:23,490
+Y el texto que vamos a colocar es.
+
+285
+00:18:25,910 --> 00:18:28,220
+No se encontraron resultados.
+
+286
+00:18:30,610 --> 00:18:31,810
+Intenté después.
+
+287
+00:18:35,690 --> 00:18:36,710
+Eso sería todo.
+
+288
+00:18:37,100 --> 00:18:38,810
+Vamos a guardar los cambios.
+
+289
+00:18:38,820 --> 00:18:40,190
+Me trufa el safe hall?
+
+290
+00:18:41,780 --> 00:18:42,740
+Íbamos a probar.
+
+291
+00:18:43,780 --> 00:18:45,360
+Estamos nuevamente en la página home.
+
+292
+00:18:45,490 --> 00:18:47,050
+Voy a colocar los bastidores.
+
+293
+00:18:48,380 --> 00:18:49,040
+Y el botón.
+
+294
+00:18:49,310 --> 00:18:49,870
+Ahora sí.
+
+295
+00:18:49,880 --> 00:18:50,720
+Mira lo que apareció.
+
+296
+00:18:50,960 --> 00:18:52,640
+No se encontraron resultados.
+
+297
+00:18:52,640 --> 00:18:53,720
+Intenté después.
+
+298
+00:18:54,950 --> 00:18:56,930
+Continuamos en el siguiente capítulo.

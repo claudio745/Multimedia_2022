@@ -1,0 +1,123 @@
+1
+00:00:00,810 --> 00:00:06,510
+Vamos a orar en este capítulo a registrar nuevos productos para mi estructura products.
+
+2
+00:00:06,990 --> 00:00:12,210
+Vamos a ver, estamos en Products A que aparece el botón Add Product Dale click product name.
+
+3
+00:00:12,480 --> 00:00:13,380
+Voy a indicarle aquí.
+
+4
+00:00:17,190 --> 00:00:18,300
+Para la descripción.
+
+5
+00:00:19,140 --> 00:00:21,130
+Vamos a utilizar un texto por defecto.
+
+6
+00:00:21,130 --> 00:00:21,990
+Un texto de prueba.
+
+7
+00:00:22,470 --> 00:00:23,910
+Puedes ir a la página lib.
+
+8
+00:00:23,910 --> 00:00:24,870
+Zoom, punto com.
+
+9
+00:00:25,410 --> 00:00:27,160
+Aquí vas a encontrar bastante texto de prueba.
+
+10
+00:00:27,180 --> 00:00:31,590
+Voy a tomar, por ejemplo, un corto de esto desde este punto.
+
+11
+00:00:34,650 --> 00:00:35,220
+Copió.
+
+12
+00:00:36,640 --> 00:00:38,440
+Y aquí lo voy a pegar en la descripción.
+
+13
+00:00:39,740 --> 00:00:40,630
+Precio de los.
+
+14
+00:00:41,240 --> 00:00:42,710
+Le voy a poner 350.
+
+15
+00:00:43,160 --> 00:00:44,630
+Escogemos el archivo.
+
+16
+00:00:47,750 --> 00:00:49,610
+A que aparece a seleccionar el archivo.
+
+17
+00:00:49,610 --> 00:00:50,180
+El stock.
+
+18
+00:00:50,180 --> 00:00:50,720
+Le pongo que.
+
+19
+00:00:52,200 --> 00:00:53,850
+Es bailable la categoría.
+
+20
+00:00:54,780 --> 00:00:56,670
+Le voy a indicar que son accesorios tech.
+
+21
+00:00:57,120 --> 00:00:59,880
+Lo tengo y ahora le damos clic al botón Safe.
+
+22
+00:01:01,020 --> 00:01:01,560
+Perfecto.
+
+23
+00:01:01,560 --> 00:01:08,190
+Como puedes ver, ya se acaba de agregar este nuevo producto que pertenece a la categoría Accesorios
+
+24
+00:01:08,190 --> 00:01:08,280
+de.
+
+25
+00:01:09,060 --> 00:01:11,190
+Vamos a agregar algunos más productos.
+
+26
+00:01:12,250 --> 00:01:15,760
+Ya han ingresado algunos productos seleccionando una imagen.
+
+27
+00:01:16,000 --> 00:01:20,530
+Recuerda que en el capítulo anterior, en los capítulos anteriores te expliqué que te estoy compartiendo
+
+28
+00:01:20,530 --> 00:01:24,960
+un comprimido con imágenes de prueba o también puedes tú seleccionar tus propias imágenes.
+
+29
+00:01:24,970 --> 00:01:26,110
+No hay ningún problema en eso.
+
+30
+00:01:26,890 --> 00:01:33,280
+También es seleccionado la categoría a la cual pertenece cada producto y ya podemos continuar en el
+
+31
+00:01:33,280 --> 00:01:38,470
+siguiente capítulo trabajando en la elaboración de la página Store.

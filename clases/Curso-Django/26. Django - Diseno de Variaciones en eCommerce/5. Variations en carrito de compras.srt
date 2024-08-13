@@ -1,0 +1,699 @@
+1
+00:00:00,840 --> 00:00:08,310
+Vamos a hacer el carrito de compras y vamos a ejecutar la aplicación en el siete y 27.0 punto uno,
+
+2
+00:00:08,310 --> 00:00:18,480
+que es muy similar a lo que el costo 127.0 punto 0.1 le damos enter y aquí me va a aparecer un pequeño
+
+3
+00:00:18,480 --> 00:00:22,890
+problema con la variable Tax Reference Before Ascendant.
+
+4
+00:00:23,460 --> 00:00:24,450
+Vamos a resolverlo.
+
+5
+00:00:25,200 --> 00:00:26,460
+Estamos en Atom.
+
+6
+00:00:26,460 --> 00:00:28,170
+Vamos a la carpeta Quartz.
+
+7
+00:00:29,420 --> 00:00:30,480
+Al archivo buscar.
+
+8
+00:00:30,810 --> 00:00:33,140
+Si vamos a la parte inferior.
+
+9
+00:00:33,140 --> 00:00:34,730
+Más o menos en la línea 100.
+
+10
+00:00:36,000 --> 00:00:38,850
+De aquí ese problema dentro de este método kart.
+
+11
+00:00:41,180 --> 00:00:44,440
+Me está indicando que no estoy inicializando ese valor de tax.
+
+12
+00:00:45,160 --> 00:00:45,980
+No te preocupes.
+
+13
+00:00:46,000 --> 00:00:53,140
+Antes del try dentro de la función de cart, voy a ponerle que tax sea igual a cero.
+
+14
+00:00:54,790 --> 00:00:56,200
+Vamos a borrar los cambios.
+
+15
+00:00:57,290 --> 00:00:58,420
+Bueno, Falstaff Hall.
+
+16
+00:00:59,780 --> 00:01:01,310
+Y ahora vamos a probar nuevamente.
+
+17
+00:01:02,240 --> 00:01:05,720
+Estamos en la página 127 0018 mil cart.
+
+18
+00:01:07,430 --> 00:01:10,480
+Conste que me parece otro error con la variable gran total.
+
+19
+00:01:11,450 --> 00:01:12,290
+No hay problema.
+
+20
+00:01:12,290 --> 00:01:18,380
+Vuelvo al archivo puppy de la carpeta cards, ya que tengo este gran total, voy a copiarlo.
+
+21
+00:01:19,560 --> 00:01:23,580
+En la parte superior antes del Tri le pongo gran total igual a cero.
+
+22
+00:01:24,660 --> 00:01:29,600
+Vamos a borrar los cambios default safe all y volvemos a refrescar la página.
+
+23
+00:01:30,280 --> 00:01:33,260
+Estamos en la página, damos un refresh y perfecto.
+
+24
+00:01:33,270 --> 00:01:36,240
+Ya este pequeño error ha sido subsanado.
+
+25
+00:01:37,110 --> 00:01:39,600
+Ahora vamos a ubicarnos dentro del Store.
+
+26
+00:01:39,630 --> 00:01:41,790
+Dale click al botón de tienda.
+
+27
+00:01:42,150 --> 00:01:44,220
+Voy a seleccionar esta camisa moderna.
+
+28
+00:01:45,970 --> 00:01:48,220
+Y voy a agregarle un rojo.
+
+29
+00:01:49,850 --> 00:01:53,440
+Medium y le doy clic al botón Agregar a Chopin Piccard.
+
+30
+00:01:55,390 --> 00:02:00,550
+Ya he agregado una línea en el carrito de compras y ahora vamos a la página.
+
+31
+00:02:00,580 --> 00:02:02,080
+Lo que el 8000 admin.
+
+32
+00:02:03,610 --> 00:02:06,340
+También puede ser 127 00128.
+
+33
+00:02:07,240 --> 00:02:12,970
+Y aquí vamos a darle clic al Card Items y ya me aparece el camisa moderna.
+
+34
+00:02:13,210 --> 00:02:19,810
+Si lo selecciono me va a aparecer los campos de los atributos que tiene este item.
+
+35
+00:02:20,710 --> 00:02:24,130
+Vamos a ver el nombre del producto que está dentro de la línea.
+
+36
+00:02:24,550 --> 00:02:30,040
+Y también me aparecen las variaciones, pero no me aparecen los nombres, las categorías que representan
+
+37
+00:02:30,040 --> 00:02:30,730
+al variación.
+
+38
+00:02:31,120 --> 00:02:36,250
+Vamos a cambiar esto porque para que me aparezca el nombre de la categoría, vamos a ubicarnos en la
+
+39
+00:02:36,250 --> 00:02:41,080
+carpeta store y dentro de store aparece el Models Punto Pi y.
+
+40
+00:02:42,120 --> 00:02:43,350
+Vamos a abrir el archivo.
+
+41
+00:02:44,310 --> 00:02:52,080
+En la parte final de este archivo aparece el Klass variación y aquí yo había definido un def abajo Unicode
+
+42
+00:02:52,320 --> 00:02:57,930
+con Self y estaba retornando un objeto Product aquí voy a cambiarlo.
+
+43
+00:02:58,380 --> 00:03:04,260
+Quiero que ahora me retorne el nombre de la categoría concatenado con el valor del variación.
+
+44
+00:03:05,160 --> 00:03:07,830
+Así que en vez de Unicode le voy a poner STR.
+
+45
+00:03:09,820 --> 00:03:10,870
+Y que me retorne.
+
+46
+00:03:11,320 --> 00:03:13,150
+En este caso le voy a indicar un self.
+
+47
+00:03:13,990 --> 00:03:16,300
+Punto Variación Category.
+
+48
+00:03:17,900 --> 00:03:24,230
+Concatenado, concatenado con dos puntos y concatenado con self.
+
+49
+00:03:24,230 --> 00:03:24,820
+Punto.
+
+50
+00:03:25,900 --> 00:03:26,660
+Variación.
+
+51
+00:03:27,850 --> 00:03:28,300
+Vale.
+
+52
+00:03:31,220 --> 00:03:36,230
+Vamos a borrar los cambios en los false all y actualizamos nuestra página.
+
+53
+00:03:37,190 --> 00:03:44,780
+Y cuando hemos actualizado el local 8000 admin, vas a notar que ahora aparece el color, la categoría
+
+54
+00:03:44,780 --> 00:03:47,840
+concatenado con el valor que corresponde.
+
+55
+00:03:48,440 --> 00:03:54,410
+Esto es, por supuesto, son opciones cuando nosotros ya estemos trabajando con las variaciones que
+
+56
+00:03:54,410 --> 00:03:55,820
+corresponden a este producto.
+
+57
+00:03:56,270 --> 00:03:58,940
+El elemento de esta lista va a aparecer seleccionado.
+
+58
+00:04:00,080 --> 00:04:01,090
+Volvamos a la página.
+
+59
+00:04:01,100 --> 00:04:03,500
+Vamos al carrito de compras y coge un elemento.
+
+60
+00:04:03,800 --> 00:04:05,990
+Voy a eliminar lo que lo que esté en blanco.
+
+61
+00:04:07,650 --> 00:04:08,780
+Y vamos a la tienda.
+
+62
+00:04:09,760 --> 00:04:10,660
+Dentro de la tienda.
+
+63
+00:04:10,660 --> 00:04:11,260
+Recuerdas?
+
+64
+00:04:11,260 --> 00:04:12,580
+Voy a ir al producto detalle.
+
+65
+00:04:13,000 --> 00:04:15,820
+Yo lo que estaba haciendo aquí es seleccionando.
+
+66
+00:04:17,180 --> 00:04:25,160
+El color, la talla y el darle click al shopping card debería de capturar estos valores y enviarlos
+
+67
+00:04:25,490 --> 00:04:31,260
+dentro del método Post hacia el carrito de compras para poder capturar esos valores.
+
+68
+00:04:31,280 --> 00:04:38,170
+Vayamos primero a la página al Templates, la carpeta Templates que aparece dentro de esto aparece Product
+
+69
+00:04:38,170 --> 00:04:38,660
+y Tails.
+
+70
+00:04:39,900 --> 00:04:43,920
+Y ahora vamos a la sección del formulario que he creado en su momento.
+
+71
+00:04:46,380 --> 00:04:47,730
+Aquí aparece este formulario.
+
+72
+00:04:47,730 --> 00:04:48,150
+Recuerdas?
+
+73
+00:04:48,150 --> 00:04:49,230
+En la línea 20?
+
+74
+00:04:49,410 --> 00:04:51,030
+Alrededor de la línea 21.
+
+75
+00:04:52,060 --> 00:04:56,170
+Y yo estaba trabajando como método GET, pero esto lo voy a modificar.
+
+76
+00:04:58,510 --> 00:05:04,120
+Quiero que sea un método post y para que sea posible capturar esos valores.
+
+77
+00:05:04,900 --> 00:05:06,970
+Vamos a agregarle aquí debajo del form.
+
+78
+00:05:08,710 --> 00:05:17,050
+Esta sintaxis llaves, porcentajes y le indicó el c s rf token.
+
+79
+00:05:18,950 --> 00:05:25,040
+Para que sea posible que los valores de este formulario puedan ser capturados dentro del servidor de
+
+80
+00:05:25,040 --> 00:05:25,550
+Jango.
+
+81
+00:05:26,330 --> 00:05:28,830
+Vamos a la parte inferior a revisar este tema.
+
+82
+00:05:28,850 --> 00:05:34,630
+Los combobox que aparecen el primer select para color y aquí los options.
+
+83
+00:05:34,640 --> 00:05:42,130
+Estoy imprimiendo y varian variación debería ser raya, pero bajo value, no value.
+
+84
+00:05:42,740 --> 00:05:44,360
+Ahí cometí un pequeño error.
+
+85
+00:05:44,720 --> 00:05:45,800
+Vamos al siguiente.
+
+86
+00:05:47,370 --> 00:05:55,110
+El combo box para Taia también el ocho le estaba poniendo y varian varía un punto vale debería ser punto
+
+87
+00:05:55,110 --> 00:05:57,260
+variación raya para abajo.
+
+88
+00:05:57,270 --> 00:05:57,780
+Vale.
+
+89
+00:05:59,760 --> 00:06:00,890
+Lo tenemos listo.
+
+90
+00:06:01,050 --> 00:06:02,430
+Voy a guardar los cambios.
+
+91
+00:06:04,340 --> 00:06:04,620
+Se.
+
+92
+00:06:05,000 --> 00:06:05,930
+Y vamos a probar.
+
+93
+00:06:06,960 --> 00:06:07,950
+Estamos en la página.
+
+94
+00:06:07,950 --> 00:06:09,120
+Vamos a refrescar.
+
+95
+00:06:09,360 --> 00:06:14,310
+Selecciono este producto de camisa moderna y ahora le voy a dar a selecciones.
+
+96
+00:06:15,000 --> 00:06:16,500
+Pongo aquí naranja.
+
+97
+00:06:17,340 --> 00:06:17,970
+La tacha.
+
+98
+00:06:17,970 --> 00:06:18,990
+Le voy a poner Medium.
+
+99
+00:06:20,190 --> 00:06:23,660
+Y ahora vamos a darle clic al botón Agregar al Chopin Card.
+
+100
+00:06:25,170 --> 00:06:31,340
+Y ya se agregó para verificar que tengo los varianza las variaciones para este producto.
+
+101
+00:06:31,350 --> 00:06:33,180
+Vayamos a la página de administración.
+
+102
+00:06:34,190 --> 00:06:38,750
+Aquí ya me aparece el item items, lo voy a seleccionar y me aparece Camisa moderna.
+
+103
+00:06:39,470 --> 00:06:47,810
+Voy a ingresar y como puedes darte cuenta, ya me aparecen las variaciones dentro del detalle del item
+
+104
+00:06:48,230 --> 00:06:50,600
+y vas a notar que me estás seleccionando.
+
+105
+00:06:50,840 --> 00:06:56,870
+Los variaciones que agregué para este producto que es el color naranja y la talla de la camisa medium.
+
+106
+00:06:58,450 --> 00:07:00,220
+Pero volvamos al carrito de compras.
+
+107
+00:07:00,880 --> 00:07:05,830
+Si notas, yo quisiera que aquí los variaciones también aparecieran para este producto.
+
+108
+00:07:06,280 --> 00:07:12,250
+En este momento los pasillos están rodeados, tiene un Matrix y tiene una marca canon.
+
+109
+00:07:12,820 --> 00:07:18,310
+Vamos a modificarlo para que aparezcan aquí la talla y el color que seleccioné para esta camisa.
+
+110
+00:07:19,310 --> 00:07:26,740
+Vamos entonces hacia la carpeta Templates y ahora dentro de la carpeta Store nos ubicamos en el punto
+
+111
+00:07:26,870 --> 00:07:27,740
+HTML.
+
+112
+00:07:29,090 --> 00:07:31,820
+Y más o menos en la línea 40 39.
+
+113
+00:07:32,750 --> 00:07:35,480
+Alrededor de esa línea vamos a encontrar.
+
+114
+00:07:36,620 --> 00:07:42,580
+Este pe este párrafo class text small matrix 25 mx.
+
+115
+00:07:42,590 --> 00:07:44,420
+El texto rodeado de variaciones.
+
+116
+00:07:45,290 --> 00:07:46,280
+Este es el párrafo.
+
+117
+00:07:47,350 --> 00:07:51,100
+El contenido del párrafo lo voy a eliminar y.
+
+118
+00:07:52,080 --> 00:07:52,740
+Voy a desplegarlo.
+
+119
+00:07:52,740 --> 00:07:58,710
+Para que veas, este es el párrafo donde tiene que ir los brillos dinámicos que he seleccionado para
+
+120
+00:07:58,710 --> 00:07:59,460
+el producto.
+
+121
+00:08:00,760 --> 00:08:03,070
+Entonces, aquí vamos a agregar lo siguiente.
+
+122
+00:08:03,550 --> 00:08:05,530
+Voy a poner primeramente una condición.
+
+123
+00:08:08,440 --> 00:08:14,080
+Sino de porcentajes y le ponemos if card item.
+
+124
+00:08:15,610 --> 00:08:17,270
+Un punto para aquellos.
+
+125
+00:08:18,600 --> 00:08:19,680
+Un punto cool.
+
+126
+00:08:20,210 --> 00:08:23,570
+Si esto existe, si tiene valores, entonces que los siguientes.
+
+127
+00:08:23,570 --> 00:08:27,130
+Pero tengo que cerrar aquí primero también el if.
+
+128
+00:08:28,460 --> 00:08:29,270
+Te pongo un if.
+
+129
+00:08:30,420 --> 00:08:31,200
+Si existe.
+
+130
+00:08:31,320 --> 00:08:34,800
+Si tiene valores esta colección, entonces quiero que los imprima.
+
+131
+00:08:34,800 --> 00:08:37,200
+Pero para imprimirlos tengo que llamar un bucle.
+
+132
+00:08:39,160 --> 00:08:43,690
+Por eso, entre llaves y porcentajes, voy a poner un for ídem.
+
+133
+00:08:43,810 --> 00:08:46,330
+Ídem ídem.
+
+134
+00:08:47,660 --> 00:08:48,260
+Punto.
+
+135
+00:08:48,430 --> 00:08:50,570
+Variaciones cool.
+
+136
+00:08:53,440 --> 00:08:59,980
+Y luego voy a cerrar este foro llaves y porcentajes y le pongo end for.
+
+137
+00:09:02,190 --> 00:09:04,200
+Yo interior voy a imprimir.
+
+138
+00:09:05,360 --> 00:09:11,810
+Este texto donde pongo el item punto variación category El nombre de la variación.
+
+139
+00:09:14,700 --> 00:09:15,630
+Dos puntos.
+
+140
+00:09:17,130 --> 00:09:18,840
+Le pongo item punto.
+
+141
+00:09:19,230 --> 00:09:21,120
+Variación value.
+
+142
+00:09:23,180 --> 00:09:24,030
+Lo tenemos.
+
+143
+00:09:24,110 --> 00:09:25,190
+Voy a borrar los cambios.
+
+144
+00:09:25,220 --> 00:09:26,420
+Mayfield Safe Hall.
+
+145
+00:09:28,190 --> 00:09:30,380
+Íbamos a la página del carrito de compras.
+
+146
+00:09:31,280 --> 00:09:34,100
+Estamos en la página del carrito de compras con el producto camisa.
+
+147
+00:09:34,250 --> 00:09:37,100
+Por el momento tiene algo ideado Matrix 25 y marca Canon.
+
+148
+00:09:37,400 --> 00:09:40,400
+Voy a refrescar y mira lo que sucedió.
+
+149
+00:09:40,520 --> 00:09:41,630
+Ya me está apareciendo.
+
+150
+00:09:41,630 --> 00:09:45,260
+Ahora la las variantes que yo he escogido.
+
+151
+00:09:45,260 --> 00:09:50,860
+Aparece el color de la camisa que va a ser naranja y también la talla que va a ser un medium.
+
+152
+00:09:51,260 --> 00:09:56,660
+Pero qué te parece si hacemos que aparezca un Baratheon detrás del otro, que salte una línea?
+
+153
+00:09:57,110 --> 00:10:02,570
+Y aparte, quisiera que también para que se vea mejor el primer carácter apareciera en mayúscula.
+
+154
+00:10:03,750 --> 00:10:04,770
+Hemos vuelto, Atton.
+
+155
+00:10:04,800 --> 00:10:06,060
+Estamos en el archivo KAR.
+
+156
+00:10:06,060 --> 00:10:09,510
+Punto HTML más o menos alrededor de la línea 42.
+
+157
+00:10:09,840 --> 00:10:11,730
+Y aquí tengo el bucle.
+
+158
+00:10:11,940 --> 00:10:13,320
+Dentro del bucle for.
+
+159
+00:10:13,650 --> 00:10:18,720
+Estamos imprimiendo este item variación Category y el item variación value.
+
+160
+00:10:19,080 --> 00:10:20,130
+Vamos a agregarle aquí.
+
+161
+00:10:20,160 --> 00:10:20,910
+Voy a maximizar.
+
+162
+00:10:21,480 --> 00:10:26,130
+Vamos a agregar una función para el category y para que el primer carácter sea en mayúscula.
+
+163
+00:10:26,130 --> 00:10:27,150
+Por eso aquí le pongo.
+
+164
+00:10:30,060 --> 00:10:32,340
+Para el value voy a aplicar la misma lógica.
+
+165
+00:10:33,240 --> 00:10:35,190
+Le pongo también un cap first.
+
+166
+00:10:36,910 --> 00:10:38,560
+Y luego que se imprime esa línea.
+
+167
+00:10:38,800 --> 00:10:42,850
+Quiero que pase al siguiente renglón la siguiente iteración.
+
+168
+00:10:43,420 --> 00:10:45,340
+Por eso lo voy a poner aquí un PR.
+
+169
+00:10:47,080 --> 00:10:48,070
+Ahora sí lo tenemos.
+
+170
+00:10:48,070 --> 00:10:48,490
+Listo.
+
+171
+00:10:48,850 --> 00:10:50,710
+Menu File Save All.
+
+172
+00:10:52,230 --> 00:10:53,220
+Estamos en la página.
+
+173
+00:10:53,230 --> 00:10:54,150
+Voy a refrescar.
+
+174
+00:10:55,190 --> 00:10:56,780
+Y mira, ahora sí cambió.
+
+175
+00:10:57,080 --> 00:11:03,890
+Se me aparece con el texto la letra en mayúscula y aparece uno detrás del otro en un siguiente renglón.

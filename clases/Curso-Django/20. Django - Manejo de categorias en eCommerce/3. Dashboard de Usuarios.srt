@@ -1,0 +1,363 @@
+1
+00:00:00,900 --> 00:00:06,360
+Vamos a seguir trabajando en la administración de las cuentas de los usuarios de mi aplicación Jango.
+
+2
+00:00:06,780 --> 00:00:09,090
+Aquí vamos a 8000 admin.
+
+3
+00:00:10,090 --> 00:00:14,500
+La música country, qué me parece el nombre de mi cuenta?
+
+4
+00:00:14,500 --> 00:00:21,100
+Pero quisiera que adicionalmente apareciera el nombre de la cuenta, el apellido del del usuario, el
+
+5
+00:00:21,100 --> 00:00:21,820
+username.
+
+6
+00:00:22,270 --> 00:00:29,860
+La última vez que utilizó Elokim, la fecha en que se unió a nuestra aplicación es El usuario está activo.
+
+7
+00:00:31,180 --> 00:00:31,780
+También.
+
+8
+00:00:31,780 --> 00:00:34,960
+Adicionalmente, vamos a ingresar este usuario para su ingreso social.
+
+9
+00:00:35,680 --> 00:00:38,470
+Quisiera que no sea editable el password.
+
+10
+00:00:38,680 --> 00:00:40,780
+Quisiera que solo sea de lectura.
+
+11
+00:00:41,590 --> 00:00:44,590
+Entonces vamos a aplicar estos cambios en nuestro proyecto.
+
+12
+00:00:45,640 --> 00:00:46,690
+Estamos en Atton.
+
+13
+00:00:46,690 --> 00:00:50,500
+Vamos a ir a eCommerce a la carpeta account de Account.
+
+14
+00:00:50,830 --> 00:00:59,410
+Ubiquémonos dentro de Admin Punto P y vamos a abrir el archivo y vamos a trabajar dentro de este archivo
+
+15
+00:00:59,410 --> 00:01:01,780
+con la clase account que antes he creado.
+
+16
+00:01:02,990 --> 00:01:06,360
+Por eso en la parte superior se me aparece Models Account.
+
+17
+00:01:06,380 --> 00:01:07,220
+Eso está perfecto.
+
+18
+00:01:07,610 --> 00:01:14,150
+Pero también necesito importar otra librería que es el From Touch and Go.
+
+19
+00:01:15,010 --> 00:01:16,520
+Punto nueve.
+
+20
+00:01:17,480 --> 00:01:18,140
+Punto.
+
+21
+00:01:19,210 --> 00:01:29,350
+AT punto admin y vamos a importar el user admin, ten cuidado con las mayúsculas y minúsculas.
+
+22
+00:01:30,990 --> 00:01:38,970
+Y ahora aquí vamos a crear una clase que se va a llamar Class Account Admin y va a recibir como parámetro
+
+23
+00:01:40,170 --> 00:01:41,430
+el user admin.
+
+24
+00:01:43,680 --> 00:01:45,000
+Le ponemos los dos puntos.
+
+25
+00:01:45,900 --> 00:01:52,230
+Chiqui, voy a definir por ejemplo una propiedad que se va a llamar Li Display, es decir, las propiedades
+
+26
+00:01:52,230 --> 00:01:57,810
+que quiero que se muestren dentro del grid de la tabla que me muestre la lista de usuarios.
+
+27
+00:01:58,830 --> 00:02:00,300
+Entonces aquí le voy a indicar.
+
+28
+00:02:02,020 --> 00:02:03,370
+Que se muestre el email.
+
+29
+00:02:04,630 --> 00:02:07,000
+Que se muestre el primer nombre.
+
+30
+00:02:07,000 --> 00:02:08,340
+El nombre First.
+
+31
+00:02:10,590 --> 00:02:13,260
+Name también el apellido.
+
+32
+00:02:13,260 --> 00:02:14,430
+Las name.
+
+33
+00:02:16,410 --> 00:02:18,840
+También quiero que se muestre el username.
+
+34
+00:02:20,840 --> 00:02:28,550
+También la última fecha en la cual el usuario se lo guió a mi aplicación y también la fecha en la cual
+
+35
+00:02:28,580 --> 00:02:30,080
+se unió a mi aplicación.
+
+36
+00:02:31,130 --> 00:02:31,610
+Coma.
+
+37
+00:02:32,860 --> 00:02:36,130
+Y también quiero saber si está activo o no es Active.
+
+38
+00:02:40,520 --> 00:02:43,760
+Otra propiedad que también quiero agregar es el link display.
+
+39
+00:02:43,760 --> 00:02:44,150
+Link.
+
+40
+00:02:46,560 --> 00:02:53,200
+Es decir, quiero que cuando el usuario lee click a un particular, una particular columna, este link
+
+41
+00:02:53,200 --> 00:02:55,860
+que hacia el detalle el usuario.
+
+42
+00:02:56,370 --> 00:03:02,850
+Entonces para crear un link yo quiero que se aplique el link para la columna que representa el email
+
+43
+00:03:02,850 --> 00:03:03,510
+del usuario.
+
+44
+00:03:04,950 --> 00:03:05,670
+El name.
+
+45
+00:03:07,540 --> 00:03:08,530
+Y también en las.
+
+46
+00:03:11,980 --> 00:03:20,260
+Algo adicional es que quiero que los campos de lectura sean las Lucky y de Jeunet, o sea, la última
+
+47
+00:03:20,260 --> 00:03:25,960
+vez que salga el usuario, la fecha en la cual sea lo que el usuario y también la fecha en la cual se
+
+48
+00:03:25,960 --> 00:03:27,250
+unió a mi aplicación.
+
+49
+00:03:27,610 --> 00:03:29,260
+Por eso que le pongo Read only.
+
+50
+00:03:31,690 --> 00:03:32,200
+Fields.
+
+51
+00:03:35,520 --> 00:03:37,230
+Y le ponemos acá las.
+
+52
+00:03:40,570 --> 00:03:42,800
+Y también Dave Jeunet.
+
+53
+00:03:46,150 --> 00:03:53,320
+Adicionalmente, también quiero que se organice de forma ascendente dependiendo la fecha en la cual
+
+54
+00:03:53,350 --> 00:03:55,330
+el usuario se unió a mi aplicación.
+
+55
+00:03:55,960 --> 00:03:58,750
+Por eso le voy a indicar que sea mejor ordenamiento.
+
+56
+00:04:01,030 --> 00:04:05,530
+De tipo ascendente dependiendo del Date Jeunet.
+
+57
+00:04:05,770 --> 00:04:07,840
+La fecha en la cual se unió a mi aplicación.
+
+58
+00:04:10,150 --> 00:04:12,940
+También le indico cuál es el filter horizontal.
+
+59
+00:04:14,610 --> 00:04:16,050
+Es solamente para inicializar.
+
+60
+00:04:17,220 --> 00:04:19,020
+No le voy a pasar realmente ningún parámetro.
+
+61
+00:04:19,530 --> 00:04:21,750
+Y también le voy a pasar un filter.
+
+62
+00:04:24,270 --> 00:04:28,170
+También inicializa y también inicializa los Fields.
+
+63
+00:04:29,960 --> 00:04:33,770
+Field sets son el visualizo.
+
+64
+00:04:33,770 --> 00:04:43,340
+No voy a pasar a ningún parámetro y a continuación voy a pasarle como parámetro ese acá a esta clase
+
+65
+00:04:43,340 --> 00:04:45,130
+que contiene la lista de propiedades y se acabo.
+
+66
+00:04:45,140 --> 00:04:50,960
+También se lo paso a este register account, le pongo account coma.
+
+67
+00:04:52,150 --> 00:04:52,680
+Account.
+
+68
+00:04:52,840 --> 00:04:53,110
+Fin.
+
+69
+00:04:55,320 --> 00:04:56,310
+Eso sería todo.
+
+70
+00:04:56,310 --> 00:04:57,510
+Puede guardar los cambios?
+
+71
+00:04:57,510 --> 00:05:00,960
+Menús false all y vamos a nuestra página.
+
+72
+00:05:01,980 --> 00:05:04,080
+Recuerda que tienes que ejecutar tu servidor.
+
+73
+00:05:04,080 --> 00:05:08,130
+Hacemos un Python Espacio Manager y espacio Ram Server.
+
+74
+00:05:08,910 --> 00:05:09,930
+Ejecutamos.
+
+75
+00:05:09,930 --> 00:05:12,300
+Y aquí me está apareciendo un error.
+
+76
+00:05:13,020 --> 00:05:14,970
+Volvemos nuevamente al código.
+
+77
+00:05:15,480 --> 00:05:17,220
+Si, aquí tengo un pequeño error.
+
+78
+00:05:17,250 --> 00:05:24,920
+Es el orden que me está indicando que luego del date y apóstrofe cerrando le pongo una coma aquí antes
+
+79
+00:05:24,920 --> 00:05:26,460
+de que cierre el paréntesis.
+
+80
+00:05:27,420 --> 00:05:28,760
+Vamos a guardar los cambios.
+
+81
+00:05:28,770 --> 00:05:29,940
+Me los false f all.
+
+82
+00:05:32,310 --> 00:05:33,660
+Y volvemos a ejecutar.
+
+83
+00:05:35,410 --> 00:05:39,130
+Que hemos vuelto a escribir el Python Manage y Run Server.
+
+84
+00:05:40,500 --> 00:05:42,120
+Y ahora si se ejecuta sin problemas.
+
+85
+00:05:42,120 --> 00:05:42,990
+Vamos a la página.
+
+86
+00:05:44,170 --> 00:05:50,410
+Estamos cerca de localhost 8000 slash admin aquí aparece account, vamos a darle clic account y mira,
+
+87
+00:05:50,410 --> 00:05:59,140
+ahora sí, ya me está apareciendo el email first name, las name username, las skin y de Jeunet perfecto.
+
+88
+00:05:59,530 --> 00:06:02,470
+Y se lo explica a de Bachillerato Social.
+
+89
+00:06:02,710 --> 00:06:03,610
+Vamos a darle click.
+
+90
+00:06:05,000 --> 00:06:13,460
+Ya me está llevando hacia el detalle y esta vez ya me está mostrando que el password está en solo lectura.
+
+91
+00:06:13,580 --> 00:06:14,660
+Ya no es editable.

@@ -1,0 +1,851 @@
+1
+00:00:00,450 --> 00:00:04,560
+En este capítulo vamos a crear un repositorio dentro del GitHub Ya.com.
+
+2
+00:00:04,920 --> 00:00:08,070
+Primero ingresamos al portal GitHub Ya.com.
+
+3
+00:00:08,100 --> 00:00:11,730
+Ya nos hemos logueado con las credenciales, en mi caso de Proxy tres.
+
+4
+00:00:12,030 --> 00:00:17,310
+En tu caso puedes ingresar tu correo electrónico y password y ahora vamos al tacho principal y en la
+
+5
+00:00:17,310 --> 00:00:19,620
+parte superior te va a aparecer un signo de suma.
+
+6
+00:00:19,890 --> 00:00:24,300
+Aquí aparece dale click y te aparece la opción de new repositorio.
+
+7
+00:00:24,630 --> 00:00:29,820
+Vamos a darle clic también al repositorio y aparece aquí tu username.
+
+8
+00:00:29,880 --> 00:00:35,730
+En mi caso es tres y a continuación te pide que ingreses el nombre de tu repositorio, que yo le voy
+
+9
+00:00:35,730 --> 00:00:37,050
+a poner e-commerce.
+
+10
+00:00:38,700 --> 00:00:39,270
+Jango.
+
+11
+00:00:40,380 --> 00:00:42,490
+Va a ser un repositorio de tipo público.
+
+12
+00:00:43,490 --> 00:00:47,630
+Vamos a la parte final y le voy a dar clic al botón Create Repositorio.
+
+13
+00:00:50,310 --> 00:00:52,650
+Vamos a ahora abrir nuestro proyecto en Hatton.
+
+14
+00:00:53,720 --> 00:00:55,610
+Y también vamos a abrir el bass.
+
+15
+00:00:57,610 --> 00:01:00,430
+Que está apuntando hacia nuestro directorio.
+
+16
+00:01:00,970 --> 00:01:03,160
+Recuerda que también estás en el Virtual Environment.
+
+17
+00:01:04,240 --> 00:01:08,980
+Lo que voy a hacer aquí dentro del Bash es escribir este comando git espacio init.
+
+18
+00:01:11,180 --> 00:01:16,460
+Vas a notar que dentro del directorio se ha creado una nueva carpeta kit.
+
+19
+00:01:18,080 --> 00:01:22,160
+A continuación vamos a crear a nivel de la raíz de e-commerce.
+
+20
+00:01:22,220 --> 00:01:29,900
+A nivel de e-commerce el haber hecho un nuevo archivo que le vamos a poner punto git ignore.
+
+21
+00:01:31,300 --> 00:01:32,200
+Y le damos a Enter.
+
+22
+00:01:33,680 --> 00:01:39,890
+Dentro de este archivo kit y voy a colocar todos los archivos, la nomenclatura, las expresiones regulares
+
+23
+00:01:40,100 --> 00:01:46,940
+que me impidan subir ciertos archivos de mi proyecto hacia mi repositorio ancla en GitHub.
+
+24
+00:01:48,190 --> 00:01:53,740
+No te preocupes que no necesitas hacer desde cero la estructura de este kit y ignore.
+
+25
+00:01:55,370 --> 00:02:02,180
+Para generar esa estructura, simplemente anda a esta página que se llama With ignore, punto io y le
+
+26
+00:02:02,180 --> 00:02:02,930
+das enter.
+
+27
+00:02:03,320 --> 00:02:07,310
+Se va a cargar este buscador de git ignores.
+
+28
+00:02:07,340 --> 00:02:08,830
+En este caso yo lo quiero para Yanko.
+
+29
+00:02:08,840 --> 00:02:14,090
+Así que mira, aquí en el buscador escribe chango, aquí te va a aparecer inclusive ya la palabra reservada
+
+30
+00:02:14,090 --> 00:02:16,700
+lo seleccionas y le das clic a create.
+
+31
+00:02:17,770 --> 00:02:19,210
+Y este es el archivo.
+
+32
+00:02:19,210 --> 00:02:22,570
+Ignora que necesitas para el kit up de tu proyecto.
+
+33
+00:02:22,870 --> 00:02:24,250
+Vamos a copiarlo todo.
+
+34
+00:02:24,280 --> 00:02:25,570
+Seleccionamos Control A.
+
+35
+00:02:27,970 --> 00:02:33,760
+Y vamos nuevamente a nuestro proyecto de e-commerce, que aparece el punto de honor y aquí voy a pegar
+
+36
+00:02:33,760 --> 00:02:34,690
+todo el contenido.
+
+37
+00:02:36,580 --> 00:02:38,020
+Vamos ahora a guardar los cambios.
+
+38
+00:02:38,060 --> 00:02:39,160
+Me enchufa el Safe Hall.
+
+39
+00:02:39,820 --> 00:02:45,860
+Y ahora vamos a continuar con el proceso para subir todo mi proyecto al repositorio anclado en GitHub
+
+40
+00:02:45,860 --> 00:02:46,390
+puntocom.
+
+41
+00:02:46,870 --> 00:02:48,760
+Vamos a ir entonces a nuestro bash.
+
+42
+00:02:49,240 --> 00:02:55,420
+Abrimos el bash y aquí lo primero que tenemos que hacer es indicarle qué archivos son los que quiero
+
+43
+00:02:55,420 --> 00:02:57,820
+enviar hacia el repositorio en GitHub.
+
+44
+00:02:58,630 --> 00:03:06,040
+En este caso, voy a indicarle todos los que sean posibles, menos los que por defecto estoy ignorando
+
+45
+00:03:06,040 --> 00:03:12,490
+dentro del archivo para que ignore que usualmente son los archivos medias imágenes y también la base
+
+46
+00:03:12,490 --> 00:03:15,640
+de datos del cual hay que se encuentra aquí en el directorio.
+
+47
+00:03:16,210 --> 00:03:18,880
+Por esto voy a indicarle git espacio add.
+
+48
+00:03:19,870 --> 00:03:24,540
+Menos puedes ponerte menos o si quieres también le puedes poner el punto cualquiera.
+
+49
+00:03:24,560 --> 00:03:30,220
+Los comandos va a funcionar y va agregar todos los archivos de tu proyecto.
+
+50
+00:03:31,240 --> 00:03:38,050
+Como aún no se van a enviar, solamente los está agregando dentro de un paquete temporal en tu computadora.
+
+51
+00:03:39,070 --> 00:03:40,150
+Vamos a darle enter.
+
+52
+00:03:42,930 --> 00:03:48,240
+Algo que también tienes que tener en cuenta es que cuando instalaste la primera vez el GitHub, esta
+
+53
+00:03:48,240 --> 00:03:54,780
+herramienta te va a solicitar que ingreses un nombre, un username y también un email que lo representa
+
+54
+00:03:54,780 --> 00:03:55,890
+un email de la cuenta.
+
+55
+00:03:57,010 --> 00:03:58,720
+Si no lo has hecho aquí, lo vamos a hacer.
+
+56
+00:03:58,900 --> 00:03:59,650
+Lo podemos repetir?
+
+57
+00:03:59,650 --> 00:04:02,860
+Voy a escribir, por ejemplo, este git config.
+
+58
+00:04:05,470 --> 00:04:10,120
+Global Espacio Rayas Raya Global Espacio Giusseppe Name.
+
+59
+00:04:11,210 --> 00:04:16,160
+Y entre comillas, aquí le ponemos el nombre del usuario, que en este caso es Maxi tres.
+
+60
+00:04:16,880 --> 00:04:18,620
+Lo tenemos listo, le damos enter.
+
+61
+00:04:18,950 --> 00:04:19,640
+Perfecto.
+
+62
+00:04:20,120 --> 00:04:29,030
+También voy a hacer otro quit config, espacio global, espacio user, punto y mail.
+
+63
+00:04:29,930 --> 00:04:36,200
+Si las comillas le coloco aquí el maxi punto tres arroba gmail punto com El correo electrónico que estás
+
+64
+00:04:36,200 --> 00:04:39,680
+usando para hacer el login en tu cuenta de GitHub.
+
+65
+00:04:39,680 --> 00:04:41,900
+Punto com le vamos a dar enter.
+
+66
+00:04:43,930 --> 00:04:49,090
+Esta configuración del git config para el nombre y para el email solo se hace una sola vez.
+
+67
+00:04:49,390 --> 00:04:50,340
+Solo di stop.
+
+68
+00:04:50,350 --> 00:04:52,480
+No te vayas a confundir solo una vez.
+
+69
+00:04:52,480 --> 00:04:58,210
+Las siguientes veces que vayas a enviar código nuevo hacia tu repositorio no necesitas hacer este git
+
+70
+00:04:58,210 --> 00:05:00,610
+config global user may o user name.
+
+71
+00:05:02,160 --> 00:05:02,430
+Bien.
+
+72
+00:05:02,430 --> 00:05:06,480
+Continuemos con el proceso de envío de archivos hacia mi repositorio.
+
+73
+00:05:07,080 --> 00:05:13,020
+Entonces yo anteriormente ya había agregado todos los archivos que quisiera enviar al repositorio,
+
+74
+00:05:13,230 --> 00:05:18,210
+pero para confirmar el envío necesito crear un commit, una confirmación.
+
+75
+00:05:18,210 --> 00:05:27,000
+Por eso escribo un git commit m y aquí le pongo un mensaje que represente al paquete que estoy creando
+
+76
+00:05:27,000 --> 00:05:29,280
+de archivos que se enviará al repositorio.
+
+77
+00:05:29,610 --> 00:05:34,710
+Este voy a indicar acá este es mi primer paquete commit.
+
+78
+00:05:36,330 --> 00:05:37,230
+De mi proyecto.
+
+79
+00:05:38,680 --> 00:05:45,180
+Entonces dentro de este cómic van a estar todos los archivos que vas a enviar al GitHub.
+
+80
+00:05:45,180 --> 00:05:45,740
+Ya.com?
+
+81
+00:05:46,950 --> 00:05:48,240
+Aún estamos a nivel local.
+
+82
+00:05:48,270 --> 00:05:51,360
+El cómic también se genera a nivel local en tu computadora.
+
+83
+00:05:51,930 --> 00:05:52,920
+Le vamos a dar enter.
+
+84
+00:05:53,960 --> 00:05:54,560
+Perfecto.
+
+85
+00:05:54,560 --> 00:05:56,510
+Como puedes ver, ya hemos confirmado.
+
+86
+00:05:56,510 --> 00:05:59,450
+Entonces todos los archivos que se enviarán.
+
+87
+00:06:00,460 --> 00:06:01,660
+Ya tenemos casi todo listo.
+
+88
+00:06:01,660 --> 00:06:07,540
+Pero ahora, a continuación, tengo que indicarle a dónde es que van a ir estos archivos, porque yo
+
+89
+00:06:07,540 --> 00:06:13,630
+en mi repositorio, en mi cuenta de GitHub punto com yo tengo puedo tener diferentes repositorios,
+
+90
+00:06:13,630 --> 00:06:16,780
+puede tener, puedo tener uno o puedo tener 100, puedo tener 20?
+
+91
+00:06:17,380 --> 00:06:21,940
+Tengo que indicarle exactamente a qué repositorio es que voy a enviar todos estos archivos.
+
+92
+00:06:22,510 --> 00:06:27,550
+Por ese motivo, si volvemos a la página de Proxy tres al repositorio y con los bancos que acabo de
+
+93
+00:06:27,550 --> 00:06:31,930
+crear y que esté en blanco, aún me van a aparecer estos comandos de ejemplo.
+
+94
+00:06:32,170 --> 00:06:40,240
+Mira, aquí me aparece uno este comando git remote add origin con la URL que representa a mi repositorio
+
+95
+00:06:40,240 --> 00:06:46,780
+anclado, es el que yo necesito para indicarle a mi computadora dónde se deben llevar estos archivos
+
+96
+00:06:46,780 --> 00:06:48,250
+de mi locales.
+
+97
+00:06:48,280 --> 00:06:49,990
+Entonces voy a copiar ese comando.
+
+98
+00:06:52,000 --> 00:06:52,960
+He vuelto a mi base.
+
+99
+00:06:53,020 --> 00:06:54,670
+Y aquí voy a pegar ese comando.
+
+100
+00:06:56,310 --> 00:07:04,080
+Mira, aquí aparece git remote add origin http y el nombre de la variable donde va almacenarse van a
+
+101
+00:07:04,080 --> 00:07:08,160
+almacenarse estos archivos que tengo ya confirmados todavía a nivel local.
+
+102
+00:07:08,970 --> 00:07:10,110
+Vamos a darle enter.
+
+103
+00:07:13,420 --> 00:07:18,550
+A continuación, tengo que indicarle en qué branch del repositorio.
+
+104
+00:07:18,550 --> 00:07:20,140
+Quieres enviar los archivos?
+
+105
+00:07:20,440 --> 00:07:23,740
+Porque recuerda, un repositorio puede tener diferentes.
+
+106
+00:07:23,740 --> 00:07:24,130
+Branch.
+
+107
+00:07:24,310 --> 00:07:28,150
+Imagina que un repositorio es como si fuera una tienda.
+
+108
+00:07:28,480 --> 00:07:31,090
+Esta tienda puede tener diferentes departamentos.
+
+109
+00:07:31,390 --> 00:07:34,210
+Entonces a cada departamento se le llama un branch.
+
+110
+00:07:34,570 --> 00:07:38,230
+Tienes que indicarle por eso cuál es el nombre del branch?
+
+111
+00:07:38,440 --> 00:07:42,370
+En este caso, mi branch por defecto se va a llamar Main.
+
+112
+00:07:42,790 --> 00:07:45,550
+Voy a copiar esta línea de código también copy.
+
+113
+00:07:47,350 --> 00:07:49,420
+Hemos vuelto al valle y aquí lo voy a pegar.
+
+114
+00:07:50,510 --> 00:07:50,900
+Pase.
+
+115
+00:07:52,860 --> 00:07:53,400
+Listo.
+
+116
+00:07:53,760 --> 00:08:01,040
+Entonces ya he configurado la ubicación del repositorio y dentro del repositorio también estoy indicándole
+
+117
+00:08:01,050 --> 00:08:04,620
+la ubicación del branch donde van a estar mis archivos.
+
+118
+00:08:05,930 --> 00:08:10,190
+Lo que me falta es este último comando que es el git push, origin main.
+
+119
+00:08:10,730 --> 00:08:11,360
+Origin, main.
+
+120
+00:08:11,900 --> 00:08:12,920
+Qué es lo que hace esto?
+
+121
+00:08:12,950 --> 00:08:19,130
+Este es el comando que ya envía los archivos desde tu computadora hacia el destino que anteriormente
+
+122
+00:08:19,130 --> 00:08:19,820
+configuras.
+
+123
+00:08:20,720 --> 00:08:22,370
+Entonces voy a copiar esta línea.
+
+124
+00:08:22,920 --> 00:08:23,380
+Copie.
+
+125
+00:08:25,640 --> 00:08:26,570
+Acá lo voy a pegar.
+
+126
+00:08:27,860 --> 00:08:29,870
+Si no tenemos listo, le damos a Enter.
+
+127
+00:08:30,710 --> 00:08:35,150
+Y aquí comienza ya el envío de los archivos hacia la nube.
+
+128
+00:08:36,070 --> 00:08:36,610
+Perfecto.
+
+129
+00:08:36,610 --> 00:08:38,470
+Ha culminado exitosamente.
+
+130
+00:08:38,480 --> 00:08:39,340
+Vamos a verlo.
+
+131
+00:08:40,670 --> 00:08:42,000
+Esta es la página de mi branch.
+
+132
+00:08:42,020 --> 00:08:43,850
+Como ves, no tenía antes nada.
+
+133
+00:08:44,000 --> 00:08:45,710
+Pero qué pasaría ahora si lo refresco?
+
+134
+00:08:45,740 --> 00:08:46,970
+Vamos a refrescar la página.
+
+135
+00:08:47,870 --> 00:08:49,160
+Y mira, ha cambiado.
+
+136
+00:08:49,160 --> 00:08:54,020
+Ahora ya aparecen aquí todos los códigos de mi proyecto acá.
+
+137
+00:08:54,230 --> 00:08:58,310
+Category y Commerce Static Store Templates Aparece todo.
+
+138
+00:08:58,550 --> 00:08:59,810
+Sigamos, por ejemplo, templates.
+
+139
+00:09:00,530 --> 00:09:04,490
+Aquí aparece el el home en el HTML.
+
+140
+00:09:04,520 --> 00:09:05,240
+Mira, vas a anotar.
+
+141
+00:09:05,240 --> 00:09:09,410
+Aquí está todo el código que hemos venido trabajando en nuestro curso.
+
+142
+00:09:12,060 --> 00:09:13,350
+Entonces, profesor.
+
+143
+00:09:13,560 --> 00:09:14,460
+Qué significa esto?
+
+144
+00:09:14,460 --> 00:09:19,530
+Que voy a tener que repetir cada vez este procedimiento cuando actualice mi proyecto.
+
+145
+00:09:20,070 --> 00:09:23,610
+Realmente no todo el procedimiento va a ser muy sencillo a la siguiente vez.
+
+146
+00:09:23,910 --> 00:09:30,960
+Ahora hemos demorado unos pasos extra porque fue la primera vez que estabas dado de alta un repositorio
+
+147
+00:09:30,960 --> 00:09:31,980
+dentro de GitHub.
+
+148
+00:09:32,280 --> 00:09:37,470
+Pero por ejemplo, si quisiera hacer un cambio dentro de mi proyecto y quisiera actualizar ese cambio
+
+149
+00:09:37,500 --> 00:09:38,460
+dentro de este branch.
+
+150
+00:09:39,470 --> 00:09:40,340
+Hagamos un ejemplo.
+
+151
+00:09:41,180 --> 00:09:42,440
+Estoy dentro de mi código.
+
+152
+00:09:42,440 --> 00:09:44,120
+Vamos a ir a Templates un momento.
+
+153
+00:09:44,480 --> 00:09:48,040
+Quiero hacer un pequeño cambio dentro del HTML.
+
+154
+00:09:48,830 --> 00:09:50,600
+Aquí dice productos populares.
+
+155
+00:09:50,870 --> 00:09:52,370
+Le voy a poner productos.
+
+156
+00:09:54,270 --> 00:09:55,050
+Bakshi tres.
+
+157
+00:09:55,350 --> 00:09:55,950
+Qué te parece?
+
+158
+00:09:57,080 --> 00:09:58,140
+Y voy a guardar los cambios.
+
+159
+00:09:58,160 --> 00:09:59,420
+Menú File Safe All.
+
+160
+00:10:00,110 --> 00:10:01,760
+Vamos ahora a abrir el batch.
+
+161
+00:10:02,890 --> 00:10:03,880
+Voy a limpiar obra.
+
+162
+00:10:04,480 --> 00:10:05,950
+Vas a ver a un Clair.
+
+163
+00:10:07,310 --> 00:10:07,480
+Aquí.
+
+164
+00:10:07,480 --> 00:10:10,050
+Le voy a decir el comando kit at punto.
+
+165
+00:10:10,150 --> 00:10:14,800
+Nada más para que agregue todos los cambios que he hecho en mi proyecto.
+
+166
+00:10:15,400 --> 00:10:19,240
+Entonces, el único cambio que va a reconocer es este el cambio del título por ahora.
+
+167
+00:10:19,720 --> 00:10:22,670
+Si quisiera, podría seguir cambiando más y más archivos.
+
+168
+00:10:22,690 --> 00:10:28,660
+Y todos esos cambios se van a incluir dentro de un paquete, simplemente haciendo el git ad espacio.
+
+169
+00:10:28,660 --> 00:10:29,170
+Punto.
+
+170
+00:10:29,320 --> 00:10:30,010
+No hay problema.
+
+171
+00:10:30,850 --> 00:10:31,660
+Le damos enter.
+
+172
+00:10:31,930 --> 00:10:32,650
+Perfecto.
+
+173
+00:10:33,130 --> 00:10:37,840
+Entonces ya reconoció y ha adjuntado los cambios que quiero agregar a mi servidor.
+
+174
+00:10:38,750 --> 00:10:39,320
+Siguiente.
+
+175
+00:10:39,320 --> 00:10:40,760
+Voy a hacer el commit git.
+
+176
+00:10:42,030 --> 00:10:43,680
+Commit menos.
+
+177
+00:10:43,680 --> 00:10:47,820
+Hazme un mensaje y le digo Este es un segundo.
+
+178
+00:10:47,820 --> 00:10:49,050
+Commit es un ejemplo.
+
+179
+00:10:50,840 --> 00:10:51,730
+Lo tenemos listo.
+
+180
+00:10:51,740 --> 00:10:52,580
+Le damos a Enter.
+
+181
+00:10:53,180 --> 00:10:55,670
+Listo, ya he creado el commit.
+
+182
+00:10:56,180 --> 00:11:01,040
+Y ahora, a continuación, lo que tengo que hacer es hacer un git push.
+
+183
+00:11:01,550 --> 00:11:02,330
+Eso es todo.
+
+184
+00:11:02,870 --> 00:11:04,970
+Haciendo este push, voy a cambiar.
+
+185
+00:11:04,970 --> 00:11:12,230
+Voy a enviar este cambio que he hecho en el archivo de home punto HTML para que aparezca productos visibles
+
+186
+00:11:12,410 --> 00:11:13,160
+antes de hacer el git.
+
+187
+00:11:13,160 --> 00:11:15,320
+Buzz, quiero que veas el repositorio.
+
+188
+00:11:16,070 --> 00:11:17,210
+Estoy en el repositorio.
+
+189
+00:11:17,210 --> 00:11:18,200
+Aquí está Templates.
+
+190
+00:11:18,500 --> 00:11:20,180
+Aquí está el home punto HTML.
+
+191
+00:11:21,270 --> 00:11:22,260
+Y vamos a ver.
+
+192
+00:11:22,270 --> 00:11:23,590
+Aquí aparece el producto.
+
+193
+00:11:23,650 --> 00:11:24,620
+Es popular todavía.
+
+194
+00:11:25,470 --> 00:11:29,250
+Esto va a cambiar ahora una vez que yo haga el kit push.
+
+195
+00:11:31,740 --> 00:11:32,760
+Aquí tengo el kit push.
+
+196
+00:11:32,850 --> 00:11:33,870
+Le voy a dar enter.
+
+197
+00:11:36,990 --> 00:11:40,650
+Y ya se está enviando hacia el GitHub mi cambio.
+
+198
+00:11:41,570 --> 00:11:42,800
+Ya se envió exitosamente.
+
+199
+00:11:42,800 --> 00:11:43,400
+Qué significa?
+
+200
+00:11:43,400 --> 00:11:46,520
+Que cuando yo actualice este título, va a cambiar?
+
+201
+00:11:46,790 --> 00:11:47,190
+Veamos.
+
+202
+00:11:47,210 --> 00:11:48,440
+Voy a hacer una actualización.
+
+203
+00:11:49,740 --> 00:11:50,820
+Y mira, ya cambió.
+
+204
+00:11:50,860 --> 00:11:51,630
+Te diste cuenta?
+
+205
+00:11:51,900 --> 00:11:54,840
+Ahora parece productos Bakshi tres.
+
+206
+00:11:55,350 --> 00:11:56,190
+Exactamente.
+
+207
+00:11:56,400 --> 00:11:57,480
+De ahora en adelante.
+
+208
+00:11:58,430 --> 00:12:04,910
+Cada vez que hagamos cambios en nuestro proyecto o agreguemos nuevos archivos, simplemente esta va
+
+209
+00:12:04,910 --> 00:12:05,910
+a ser la secuencia.
+
+210
+00:12:06,050 --> 00:12:09,050
+Primero haz un kit espacio, espacio, punto.
+
+211
+00:12:09,290 --> 00:12:13,220
+Luego haces un git commit scheme y le pones un mensaje.
+
+212
+00:12:14,190 --> 00:12:19,710
+Y luego haces el kit push para poder enviar estos cambios al repositorio.
+
+213
+00:12:19,710 --> 00:12:21,990
+En GitLab solo son tres pasos.

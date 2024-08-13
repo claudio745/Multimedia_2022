@@ -1,0 +1,747 @@
+1
+00:00:00,480 --> 00:00:06,780
+En este capítulo vamos a trabajar en la creación de las URLs dinámicas que me permitan llegar hacia
+
+2
+00:00:06,780 --> 00:00:09,690
+el producto de detalle que he creado en el capítulo anterior.
+
+3
+00:00:09,990 --> 00:00:15,690
+Por ejemplo, si voy a localhost 8000 a la página home donde tengo todos mis productos y le doy clic
+
+4
+00:00:15,690 --> 00:00:22,080
+a cualquiera de estos, lo que va a suceder es que el chango no va a reconocer la variable por defecto
+
+5
+00:00:22,290 --> 00:00:27,240
+y me va a dar un resultado de error como page not found, página no encontrada.
+
+6
+00:00:27,900 --> 00:00:32,340
+Entonces lo que necesito es crear un dinámico al interior de mi proyecto.
+
+7
+00:00:33,820 --> 00:00:41,740
+Para esto vamos a ingresar a Atom y ahora a la carpeta Store, a la App Store y ahora a Models y.
+
+8
+00:00:43,150 --> 00:00:51,570
+Y aquí vamos a crear una función sobre este STR, una función que se va a llamar GET en él.
+
+9
+00:00:54,140 --> 00:00:56,870
+Este que en él va a tener un parámetro self.
+
+10
+00:00:56,930 --> 00:01:03,710
+Luego le pongo los dos puntos y le digo que haga un return utilizando la función rivers que hemos utilizado
+
+11
+00:01:03,710 --> 00:01:05,510
+antes, recuerdas para Categories?
+
+12
+00:01:05,600 --> 00:01:06,590
+Sí, es muy similar.
+
+13
+00:01:06,920 --> 00:01:11,610
+En este caso, lo que quiero crear es un producto detail detail.
+
+14
+00:01:11,660 --> 00:01:13,070
+Se va a llamar detalle producto.
+
+15
+00:01:14,930 --> 00:01:19,850
+Y para llevarme a este link lo que necesito son estos argumentos args.
+
+16
+00:01:21,250 --> 00:01:23,820
+Que es primero self, el category slug.
+
+17
+00:01:28,240 --> 00:01:33,100
+Y también necesito del producto, que en este caso es la representación del producto de self.
+
+18
+00:01:34,000 --> 00:01:34,650
+Punto.
+
+19
+00:01:34,660 --> 00:01:36,130
+El slug del producto punto es.
+
+20
+00:01:37,510 --> 00:01:41,830
+Recuerda que este período detail viene desde.
+
+21
+00:01:42,840 --> 00:01:48,550
+La URL que hemos definido al interior del archivo en el esquema y vamos a abrirlo para que lo veas.
+
+22
+00:01:48,650 --> 00:01:56,250
+Mira, cuando creamos el path le indicamos que este iba a depender de Kem de un product detail.
+
+23
+00:01:56,610 --> 00:01:58,560
+Este es justamente el que estoy consumiendo.
+
+24
+00:01:58,620 --> 00:02:05,310
+Pero para que pueda procesarse esta variable te va a pedir dos parámetros el category slug y el product
+
+25
+00:02:05,310 --> 00:02:05,730
+slug.
+
+26
+00:02:06,030 --> 00:02:08,820
+Por ese motivo vamos a volver al top model point.
+
+27
+00:02:09,690 --> 00:02:14,880
+Por ese motivo, dentro de esta función, yo le estoy indicando que llame a ese producto, pero le estoy
+
+28
+00:02:14,880 --> 00:02:19,560
+pasando el slug de la categoría y el slug del producto.
+
+29
+00:02:22,060 --> 00:02:25,480
+Algo adicional que tengo que hacer es llamar a esta función Rivers.
+
+30
+00:02:26,020 --> 00:02:28,390
+Vamos a la parte superior para importarla.
+
+31
+00:02:28,840 --> 00:02:29,770
+Hacemos un from.
+
+32
+00:02:31,090 --> 00:02:33,590
+Puta Jango, joder.
+
+33
+00:02:34,810 --> 00:02:36,130
+Import Rivers.
+
+34
+00:02:37,610 --> 00:02:38,480
+Lo tengo listo.
+
+35
+00:02:39,480 --> 00:02:41,700
+Guardemos todos los cambios de Newfield Safe Hall.
+
+36
+00:02:42,270 --> 00:02:46,020
+Y ahora vamos a ir al tema para implementar esta nueva URL.
+
+37
+00:02:46,440 --> 00:02:54,180
+Vamos a Templates, vamos al Home Templates que aparece en Home punto HTML y vamos a buscar el product.
+
+38
+00:02:55,630 --> 00:03:01,200
+El link para el product html, product y tail HTML está aquí.
+
+39
+00:03:01,210 --> 00:03:02,170
+Vamos a ver hoy que apareció.
+
+40
+00:03:02,190 --> 00:03:02,430
+Mira.
+
+41
+00:03:03,960 --> 00:03:10,770
+Dentro del bucle del Ford Products sin products a que aparece este href que me está llevando en este
+
+42
+00:03:10,770 --> 00:03:13,410
+momento a un producto del punto HTML.
+
+43
+00:03:13,410 --> 00:03:14,850
+Vamos a borrar este contenido.
+
+44
+00:03:17,510 --> 00:03:20,510
+Ya le vamos a poner entre Double Chávez.
+
+45
+00:03:24,440 --> 00:03:25,070
+Produc.
+
+46
+00:03:26,480 --> 00:03:27,200
+El punto.
+
+47
+00:03:28,310 --> 00:03:29,180
+Perfecto.
+
+48
+00:03:29,480 --> 00:03:30,560
+Voy a copiar esto.
+
+49
+00:03:32,250 --> 00:03:33,270
+Esta expresión.
+
+50
+00:03:33,810 --> 00:03:35,070
+Y aquí hay otro link.
+
+51
+00:03:35,080 --> 00:03:36,630
+Mira, un hacha.
+
+52
+00:03:36,630 --> 00:03:38,430
+Ref también.
+
+53
+00:03:38,430 --> 00:03:39,090
+Aquí está hecho.
+
+54
+00:03:39,090 --> 00:03:39,410
+Ref.
+
+55
+00:03:39,420 --> 00:03:45,420
+Lovey, voy a quitarle esa parte y pego el expression product get url.
+
+56
+00:03:46,520 --> 00:03:48,680
+Vamos a borrar los cambios de Mayfield Safe all.
+
+57
+00:03:49,580 --> 00:03:50,750
+Y ahora vamos a la página.
+
+58
+00:03:51,910 --> 00:03:52,670
+Estoy en el local.
+
+59
+00:03:52,960 --> 00:03:53,740
+8000.
+
+60
+00:03:54,280 --> 00:03:55,360
+Vamos a refrescar.
+
+61
+00:03:55,990 --> 00:03:56,760
+Está perfecto.
+
+62
+00:03:56,770 --> 00:03:58,540
+Voy a seleccionar, por ejemplo, addons.
+
+63
+00:03:58,810 --> 00:04:06,480
+Le damos click y mira, ya me está llevando a la página detalles de producto, que en este caso es perfecto.
+
+64
+00:04:06,490 --> 00:04:07,180
+Voy para atrás.
+
+65
+00:04:07,420 --> 00:04:14,710
+Por ejemplo, ahora escojo Camisa moderna y ya me lleva también al detalle de camisa moderna y seleccionamos
+
+66
+00:04:14,710 --> 00:04:15,730
+Computadora de Shop.
+
+67
+00:04:15,940 --> 00:04:19,120
+También me está llevando al detalle de computadora Desktop.
+
+68
+00:04:20,300 --> 00:04:23,720
+Ya que estamos dentro del dentro del detalle del producto.
+
+69
+00:04:24,020 --> 00:04:30,080
+Mira si le doy click a este, el botón de tienda debería llevarme a la página de stop nuevamente, pero
+
+70
+00:04:30,080 --> 00:04:31,190
+no lo está haciendo.
+
+71
+00:04:31,670 --> 00:04:36,590
+Entonces vamos a arreglar el link para este botón de tienda.
+
+72
+00:04:36,890 --> 00:04:39,740
+Este se encuentra dentro del header.
+
+73
+00:04:41,730 --> 00:04:47,820
+Vamos entonces a la carpeta templates, aquí en la carpeta includes, ya que aparece el nav que representa
+
+74
+00:04:47,820 --> 00:04:48,420
+el error.
+
+75
+00:04:48,690 --> 00:04:50,270
+Vamos a abrirlo ya.
+
+76
+00:04:50,280 --> 00:04:52,960
+Ahora busquemos el texto que representa.
+
+77
+00:04:52,980 --> 00:04:54,930
+La tienda estaba un poco para abajo.
+
+78
+00:04:56,190 --> 00:04:57,300
+Por aquí aparece.
+
+79
+00:04:58,970 --> 00:05:00,290
+Esta es la línea 48.
+
+80
+00:05:00,290 --> 00:05:01,820
+En mi caso, más o menos.
+
+81
+00:05:01,820 --> 00:05:03,020
+Búscala en tu código.
+
+82
+00:05:04,080 --> 00:05:05,580
+Y ese es el texto de tienda.
+
+83
+00:05:05,580 --> 00:05:08,810
+Es el botón y tiene el href hacia el store.
+
+84
+00:05:08,890 --> 00:05:16,740
+HTML paint html Voy a borrarlo y en su lugar vamos a poner doble llaves y le coloco este comando js
+
+85
+00:05:16,890 --> 00:05:18,780
+para que me lleve hacia el store.
+
+86
+00:05:19,290 --> 00:05:24,960
+Aquí cometí un pequeño error porque no estoy imprimiendo una variable de servidor de Python que va con
+
+87
+00:05:24,960 --> 00:05:27,000
+doble llave, sino que estoy ejecutando un comando.
+
+88
+00:05:27,000 --> 00:05:30,510
+Por este motivo voy a borrar esa llave, esa doble llave.
+
+89
+00:05:30,510 --> 00:05:33,300
+Solamente hay que una llave de inicio y una llave de cierre.
+
+90
+00:05:33,930 --> 00:05:36,330
+Y aquí debería colocarle el signo de porcentaje.
+
+91
+00:05:37,670 --> 00:05:38,180
+Ahora sí.
+
+92
+00:05:39,800 --> 00:05:40,880
+Vamos a borrar los cambios.
+
+93
+00:05:40,910 --> 00:05:43,850
+Menú File Safe All y vamos a la página.
+
+94
+00:05:45,210 --> 00:05:53,880
+Vamos a refrescar y ahora vamos a darle clic al botón de tienda y ya me lleva hacia la página de Store.
+
+95
+00:05:55,610 --> 00:06:00,620
+Algo también que quisiera agregar dentro de la VAR es que cuando le explica este logo al logo de mi
+
+96
+00:06:00,620 --> 00:06:08,510
+página de mi empresa, quiero que me lleve hacia la página Home Channel Store, a la página store,
+
+97
+00:06:09,020 --> 00:06:09,710
+a la página home.
+
+98
+00:06:09,710 --> 00:06:11,230
+Pero no está sucediendo eso.
+
+99
+00:06:11,330 --> 00:06:12,530
+Mira si le doy clic al logo.
+
+100
+00:06:13,640 --> 00:06:14,450
+No hace nada.
+
+101
+00:06:15,670 --> 00:06:24,190
+Estamos nuevamente dentro de Atom, vamos a Template and Hubbard y vamos ahora a buscar el link que
+
+102
+00:06:24,190 --> 00:06:27,170
+representa el logo a que aparece.
+
+103
+00:06:27,190 --> 00:06:28,000
+Lo puedes ver?
+
+104
+00:06:29,780 --> 00:06:32,670
+Aquí aparece Luis M.G.
+
+105
+00:06:33,210 --> 00:06:35,630
+Loco y está dentro de un H.
+
+106
+00:06:35,630 --> 00:06:36,160
+Ref.
+
+107
+00:06:36,170 --> 00:06:37,530
+Un listo.
+
+108
+00:06:37,550 --> 00:06:39,710
+Este o REF lo voy a modificar.
+
+109
+00:06:41,180 --> 00:06:46,580
+Y acá, entre llaves y signos de porcentaje le voy a colocar un RL.
+
+110
+00:06:47,910 --> 00:06:49,140
+Y entre apóstrofes.
+
+111
+00:06:51,080 --> 00:06:51,590
+Listo.
+
+112
+00:06:52,250 --> 00:06:55,700
+Vamos a borrar los cambios en el Safe Hall y vamos a probar.
+
+113
+00:06:56,870 --> 00:07:02,840
+Vamos a refrescar la pagina, estoy en un store y si le doy clic al logo, veamos qué es lo que sucede.
+
+114
+00:07:03,590 --> 00:07:04,190
+Exacto.
+
+115
+00:07:04,190 --> 00:07:08,120
+Ya me está llevando a la página de mi web application.
+
+116
+00:07:09,710 --> 00:07:11,540
+Y ya que estamos, entrar en la página home.
+
+117
+00:07:11,870 --> 00:07:14,150
+Mira, acá hay un botón que dice ver todo.
+
+118
+00:07:14,630 --> 00:07:20,270
+Realmente cuando le doy clic a ese botón lo que debe hacer es llevarme a la página del editor.
+
+119
+00:07:20,900 --> 00:07:21,770
+Vamos a programarlo.
+
+120
+00:07:21,770 --> 00:07:24,230
+Pero recuerda, estamos dentro del home.
+
+121
+00:07:24,620 --> 00:07:25,820
+Vayamos al template home.
+
+122
+00:07:26,720 --> 00:07:27,950
+Estamos nuevamente en Atom.
+
+123
+00:07:27,950 --> 00:07:31,610
+Vamos a la carpeta Templates y acá aparece el home junto a HTML.
+
+124
+00:07:31,880 --> 00:07:35,360
+Vamos a dar doble clic y busquemos ahora este botón.
+
+125
+00:07:35,360 --> 00:07:40,400
+Ver todo aquí aparece dentro de este header la línea 23 24.
+
+126
+00:07:40,400 --> 00:07:43,550
+Por aquí vas a notar que aparece el querer y querer.
+
+127
+00:07:43,580 --> 00:07:48,500
+Aparece este botón que dice ver todo y tiene un href.
+
+128
+00:07:49,010 --> 00:07:51,140
+Este href voy a quitarlo.
+
+129
+00:07:54,560 --> 00:07:57,700
+Y entre llaves dice final y también porcentaje.
+
+130
+00:07:57,730 --> 00:08:02,420
+Lo voy a colocar del espacio y entre apóstrofes estaré.
+
+131
+00:08:03,350 --> 00:08:05,470
+Vamos a borrar los cambios en Mayfield Safe Hall.
+
+132
+00:08:07,460 --> 00:08:08,240
+Y probemos.
+
+133
+00:08:09,110 --> 00:08:10,310
+Estoy en la pagina home.
+
+134
+00:08:10,880 --> 00:08:11,810
+Voy a actualizar.
+
+135
+00:08:12,890 --> 00:08:14,840
+Y ahora le doy clic al botón Ver todo.
+
+136
+00:08:16,580 --> 00:08:20,450
+Y ya me está llevando hacia la página de Store.
+
+137
+00:08:20,600 --> 00:08:21,380
+Perfecto.
+
+138
+00:08:22,440 --> 00:08:26,580
+Y ya que estamos dentro de la página store, vamos a ver algo interesante dentro de Store.
+
+139
+00:08:26,620 --> 00:08:32,310
+Aquí aparece el link para poder ir hacia la página de detalle del producto.
+
+140
+00:08:32,520 --> 00:08:33,210
+Si lo hay, click.
+
+141
+00:08:34,210 --> 00:08:35,230
+No me está pareciendo.
+
+142
+00:08:35,800 --> 00:08:39,100
+Vamos a solucionar este problema dentro del Store.
+
+143
+00:08:40,450 --> 00:08:41,570
+Estamos nuevamente en Atton.
+
+144
+00:08:41,590 --> 00:08:42,490
+Vamos a Templates.
+
+145
+00:08:42,520 --> 00:08:48,260
+Dentro de se aparece la carpeta Store, ya que aparece el Store punto HTML.
+
+146
+00:08:48,280 --> 00:08:54,250
+Vamos a doble clic y vamos hacia la sección donde implementé el bucle.
+
+147
+00:08:54,340 --> 00:08:55,660
+Esta es la parte inferior.
+
+148
+00:08:57,480 --> 00:08:58,260
+Aquí.
+
+149
+00:08:58,320 --> 00:08:59,610
+Vamos a ver un momento.
+
+150
+00:09:01,260 --> 00:09:06,300
+Aquí aparece el Ford for Products in Products, que aparece más o menos en la línea 130.
+
+151
+00:09:07,850 --> 00:09:12,740
+Y aquí aparece el href que está imprimiendo el nombre del producto.
+
+152
+00:09:13,430 --> 00:09:17,410
+Y tiene este este atributo href apuntando a un producto.
+
+153
+00:09:18,050 --> 00:09:24,140
+HTML vamos a reemplazar esto y este href y le pongo con doble llave porque en este caso se trata de
+
+154
+00:09:24,140 --> 00:09:24,830
+una propiedad.
+
+155
+00:09:25,430 --> 00:09:27,690
+Entonces le pongo un product punto.
+
+156
+00:09:28,340 --> 00:09:29,740
+Get getter es una.
+
+157
+00:09:30,060 --> 00:09:33,260
+Es un método que se encuentra dentro del objeto.
+
+158
+00:09:33,260 --> 00:09:33,890
+Producto.
+
+159
+00:09:34,370 --> 00:09:34,920
+Listo?
+
+160
+00:09:35,030 --> 00:09:35,870
+Ya lo tengo.
+
+161
+00:09:36,560 --> 00:09:38,090
+Voy a copiar este.
+
+162
+00:09:39,560 --> 00:09:40,050
+Produc.
+
+163
+00:09:40,580 --> 00:09:41,270
+Yo daré el porque.
+
+164
+00:09:41,270 --> 00:09:45,830
+Mira, también quiero que la imagen del producto con el click, el usuario, la imagen del producto
+
+165
+00:09:46,040 --> 00:09:47,840
+también me lleve al detalle del producto.
+
+166
+00:09:48,320 --> 00:09:51,890
+Y aquí, mira, en esta línea estoy imprimiendo la imagen del producto.
+
+167
+00:09:52,490 --> 00:09:56,330
+Lo voy a poner por delante de este img a.
+
+168
+00:09:58,020 --> 00:09:59,570
+De aquí se cierra el año.
+
+169
+00:10:02,260 --> 00:10:02,600
+Stop.
+
+170
+00:10:03,070 --> 00:10:06,610
+Y aquí le vamos a colocar un href.
+
+171
+00:10:07,510 --> 00:10:08,200
+Igual a quién?
+
+172
+00:10:08,890 --> 00:10:12,340
+A este producto, que es doble llave.
+
+173
+00:10:13,880 --> 00:10:14,420
+Listo.
+
+174
+00:10:14,930 --> 00:10:15,950
+Ya lo tenemos.
+
+175
+00:10:17,030 --> 00:10:18,710
+Le voy a poner aquí un class.
+
+176
+00:10:19,390 --> 00:10:21,200
+No, no le pongo ningún class, sino me quedaría.
+
+177
+00:10:21,860 --> 00:10:25,850
+Vamos a ir a menú File Safe All y vamos a probar.
+
+178
+00:10:26,990 --> 00:10:27,830
+Estamos en el local.
+
+179
+00:10:28,070 --> 00:10:29,590
+8000 Slash Store.
+
+180
+00:10:29,630 --> 00:10:30,680
+Vamos a actualizar.
+
+181
+00:10:31,340 --> 00:10:32,210
+Perfecto.
+
+182
+00:10:32,540 --> 00:10:38,480
+Voy a darle click a Link y efectivamente, ya me está llevando a la página de TA y producto.
+
+183
+00:10:39,230 --> 00:10:40,010
+Y si quiero?
+
+184
+00:10:40,010 --> 00:10:44,900
+Y si le doy click a la imagen, también me redirecciona al detalle producto.
+
+185
+00:10:46,190 --> 00:10:53,420
+De esta forma ya hemos solucionado la navegación entre los componentes principales de productos de nuestra
+
+186
+00:10:53,420 --> 00:10:53,930
+página.
+
+187
+00:10:54,500 --> 00:10:56,150
+Continuamos en el siguiente capítulo.

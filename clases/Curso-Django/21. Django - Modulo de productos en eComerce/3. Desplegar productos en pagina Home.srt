@@ -1,0 +1,571 @@
+1
+00:00:00,450 --> 00:00:06,300
+Si ejecutamos nuestro proyecto en Jango en el local OSS 8000, vamos a notar que lo que se despliega
+
+2
+00:00:06,300 --> 00:00:11,850
+es la página de home que hemos configurado en capítulos anteriores y dentro de esta página voy a ver
+
+3
+00:00:11,850 --> 00:00:18,360
+una lista de productos, pero esta lista de productos es copiada, no son los productos que yo he registrado
+
+4
+00:00:18,360 --> 00:00:21,260
+en mi base de datos y rango dentro del Sika Light.
+
+5
+00:00:21,750 --> 00:00:23,380
+Entonces, qué necesito?
+
+6
+00:00:23,460 --> 00:00:30,420
+Lo que necesito es ingresar a mi proyecto en rango, hacer la consulta a la base de datos y luego ese
+
+7
+00:00:30,420 --> 00:00:33,000
+resultado, la lista de productos que viene en mi base de datos.
+
+8
+00:00:33,240 --> 00:00:39,210
+Enviarla a esta página home para desplegar los productos dentro de este grid.
+
+9
+00:00:40,090 --> 00:00:40,440
+Ese.
+
+10
+00:00:40,470 --> 00:00:42,270
+Ese es el objetivo de este capítulo.
+
+11
+00:00:43,640 --> 00:00:45,640
+Para comenzar, vayamos a nuestro Atom.
+
+12
+00:00:45,650 --> 00:00:47,130
+Estamos en e-commerce hoy.
+
+13
+00:00:47,160 --> 00:00:48,770
+Aquí aparece la carpeta de comercio.
+
+14
+00:00:49,460 --> 00:00:52,490
+Y ahora vamos al archivo Buscar py.
+
+15
+00:00:52,550 --> 00:00:57,020
+Y aquí yo tenía definido esta función de home.
+
+16
+00:00:57,740 --> 00:00:58,850
+Voy a modificarla.
+
+17
+00:00:59,870 --> 00:01:01,310
+Ahora voy a indicarle que.
+
+18
+00:01:02,740 --> 00:01:08,470
+Haga dentro de esta función una consulta que me retorne una lista de productos, por eso que le pongo
+
+19
+00:01:08,470 --> 00:01:14,770
+product igual a a product a la entidad product punto object punto all.
+
+20
+00:01:15,840 --> 00:01:17,550
+Que me traiga todos los productos.
+
+21
+00:01:17,730 --> 00:01:19,620
+Pero aquí voy a hacer una condición.
+
+22
+00:01:19,880 --> 00:01:22,950
+Yo quiero que me traiga aquellos productos que estén activos.
+
+23
+00:01:23,130 --> 00:01:25,020
+Por eso aplico un punto Filter.
+
+24
+00:01:26,550 --> 00:01:28,050
+Y le indico que si.
+
+25
+00:01:28,650 --> 00:01:30,570
+Su atributo Available.
+
+26
+00:01:33,120 --> 00:01:34,170
+Es Available.
+
+27
+00:01:34,680 --> 00:01:36,300
+Es igual a true.
+
+28
+00:01:37,370 --> 00:01:40,100
+Si esto es verdad, entonces me va a traer todos esos productos.
+
+29
+00:01:40,530 --> 00:01:44,870
+Bien, ahora estoy llamando a productos que importaron en la parte superior.
+
+30
+00:01:44,900 --> 00:01:47,400
+Voy a colocar Front Store.
+
+31
+00:01:47,400 --> 00:01:47,780
+Punto.
+
+32
+00:01:47,840 --> 00:01:50,780
+Models import product.
+
+33
+00:01:53,650 --> 00:01:57,700
+Tengo que ahora envolver este resultado de productos dentro de un Dictionary.
+
+34
+00:01:58,870 --> 00:02:01,930
+Por eso voy a crear un contexto de tipo Dictionary.
+
+35
+00:02:03,420 --> 00:02:10,080
+Y le digo que le voy a dar un atributo de este diccionario con el resultado que obtiene la base de datos
+
+36
+00:02:10,080 --> 00:02:10,620
+products.
+
+37
+00:02:10,860 --> 00:02:11,670
+Le pongo una coma aquí.
+
+38
+00:02:13,160 --> 00:02:20,420
+Y ahora en el return render, luego del home paint html, voy a indicarle que ese context se envíe a
+
+39
+00:02:20,420 --> 00:02:21,080
+la página.
+
+40
+00:02:22,840 --> 00:02:23,910
+Vamos a borrar los cambios.
+
+41
+00:02:23,920 --> 00:02:25,000
+Mayfield Safe Hall.
+
+42
+00:02:26,260 --> 00:02:27,610
+Y ahora vamos a la página Home.
+
+43
+00:02:28,000 --> 00:02:30,070
+Recuerda que la página home es un template.
+
+44
+00:02:30,340 --> 00:02:34,170
+Vamos a la carpeta templates, ya que aparece el home html.
+
+45
+00:02:34,480 --> 00:02:39,120
+Vamos a abrirlo y si vamos a la parte inferior, vamos a anotar que aquí mira.
+
+46
+00:02:39,190 --> 00:02:44,930
+Aparecen dentro de este div class row aparecen todos los productos copiados.
+
+47
+00:02:45,250 --> 00:02:46,690
+Aquí aparece un producto.
+
+48
+00:02:48,150 --> 00:02:51,150
+Este es el comienzo del cool MP3.
+
+49
+00:02:51,450 --> 00:02:52,380
+Este es un producto.
+
+50
+00:02:53,190 --> 00:02:57,150
+Aquí tengo otro producto codeado y aquí tengo otro más.
+
+51
+00:02:57,150 --> 00:02:58,230
+Y así sucesivamente.
+
+52
+00:02:59,340 --> 00:03:03,930
+Mira, lo que voy a hacer es eliminar todos los productos odiados, excepto uno.
+
+53
+00:03:04,230 --> 00:03:05,700
+El primero, este que está aquí.
+
+54
+00:03:06,210 --> 00:03:10,950
+Voy a seleccionarlo primero para estar seguros y lo voy a minimizar.
+
+55
+00:03:12,270 --> 00:03:14,610
+Sí, pero te aseguro que comienza aquí y termina aquí.
+
+56
+00:03:15,640 --> 00:03:18,820
+Y el resto de productos odiados los voy a eliminar.
+
+57
+00:03:19,160 --> 00:03:20,080
+Este, por ejemplo.
+
+58
+00:03:21,330 --> 00:03:22,920
+Se elimina este.
+
+59
+00:03:24,100 --> 00:03:25,000
+También se elimina.
+
+60
+00:03:25,510 --> 00:03:27,520
+Este de aquí comienza y aquí termina.
+
+61
+00:03:27,520 --> 00:03:29,290
+Puedes ver ahí la marca azul.
+
+62
+00:03:30,670 --> 00:03:32,500
+También elimino el siguiente.
+
+63
+00:03:32,950 --> 00:03:37,170
+También hay que tener mucho cuidado con eliminamos esto de la marca azul.
+
+64
+00:03:37,180 --> 00:03:39,760
+A la marca azul lo eliminamos.
+
+65
+00:03:42,300 --> 00:03:43,050
+Eliminamos.
+
+66
+00:03:44,940 --> 00:03:47,550
+A este último producto también lo seleccionamos bien.
+
+67
+00:03:48,090 --> 00:03:50,130
+Ten cuidado aquí y lo eliminamos.
+
+68
+00:03:50,620 --> 00:03:53,820
+Bien, entonces ya quedaría de esta forma Mi Rou.
+
+69
+00:03:54,120 --> 00:03:59,820
+Y dentro del río tengo un solo colum m3 que representa un producto que es este.
+
+70
+00:04:00,540 --> 00:04:07,500
+Lo que quiero es que esa estructura gráfica que representa un producto se repita n veces dependiendo
+
+71
+00:04:07,500 --> 00:04:10,470
+de los elementos de la lista de productos que tenga mi base de datos.
+
+72
+00:04:11,190 --> 00:04:17,940
+Entonces lo que voy a hacer es antes del M3 y antes y después del RAW.
+
+73
+00:04:18,540 --> 00:04:24,480
+Aquí voy a crear un código de servidor de chango, llaves, porcentajes y voy a hacer un bucle.
+
+74
+00:04:25,110 --> 00:04:29,220
+Voy a hacer un form product im product.
+
+75
+00:04:29,490 --> 00:04:30,630
+Así se llama la variable.
+
+76
+00:04:32,390 --> 00:04:33,260
+Va a comenzar aquí.
+
+77
+00:04:33,950 --> 00:04:36,440
+Tengo que indicarle dónde va a terminar el bucle.
+
+78
+00:04:36,740 --> 00:04:41,720
+El bucle va a terminar después del diff que representa el fin del producto.
+
+79
+00:04:42,050 --> 00:04:44,000
+Que es este diff que esta aquí en marcado azul.
+
+80
+00:04:44,450 --> 00:04:46,130
+Entonces aquí, después de hacer if.
+
+81
+00:04:47,680 --> 00:04:51,250
+Pon unas llaves en ese final y también si no hay porcentajes.
+
+82
+00:04:51,250 --> 00:04:52,690
+Y aquí le pongo end for.
+
+83
+00:04:54,720 --> 00:04:58,680
+Con esto le estoy indicando que la variable el objeto product.
+
+84
+00:04:59,630 --> 00:05:05,310
+Que representa una iteración dentro de la colección de productos que viene de la base de datos.
+
+85
+00:05:05,330 --> 00:05:06,470
+Este es un objeto producto.
+
+86
+00:05:06,860 --> 00:05:11,060
+Voy a poder tomarlo e imprimirlo en este contexto, en este diez.
+
+87
+00:05:12,850 --> 00:05:13,450
+No me crees?
+
+88
+00:05:13,480 --> 00:05:14,230
+Bueno, hagámoslo.
+
+89
+00:05:14,230 --> 00:05:21,820
+Por ejemplo, mira aquí dentro de este a href producto item class title que aparece en MacBook Pro el
+
+90
+00:05:21,820 --> 00:05:23,740
+texto del producto que yo estoy guardando.
+
+91
+00:05:24,760 --> 00:05:32,680
+Voy a quitar esto y lo que quiero que es que entre doble llave de inicio y doble llave final se imprima
+
+92
+00:05:32,680 --> 00:05:33,550
+el producto.
+
+93
+00:05:34,620 --> 00:05:35,190
+Punto.
+
+94
+00:05:36,130 --> 00:05:36,670
+Produc.
+
+95
+00:05:39,250 --> 00:05:43,870
+Entonces de esta forma ya voy a estar imprimiendo el nombre del producto solamente este.
+
+96
+00:05:45,070 --> 00:05:46,840
+Vamos a guardar los cambios.
+
+97
+00:05:46,870 --> 00:05:49,720
+Menú FA el safe all y vamos a nuestra página.
+
+98
+00:05:50,760 --> 00:05:55,980
+A quién está imprimiendo un error dentro del bus y me dice que no hay un módulo llamado Store.
+
+99
+00:05:55,990 --> 00:05:58,200
+Parece que escribí mal el nombre de Store.
+
+100
+00:05:58,530 --> 00:06:00,930
+Vayamos entonces otra vez a eCommerce.
+
+101
+00:06:01,200 --> 00:06:03,760
+La carpeta de comercio al archivo búsqueda.
+
+102
+00:06:05,040 --> 00:06:06,560
+Y en la parte superior.
+
+103
+00:06:06,570 --> 00:06:11,430
+Si aquí había cometido un pequeño detalle, era store, no con doble e.
+
+104
+00:06:12,090 --> 00:06:13,710
+Ese es un pequeño problema.
+
+105
+00:06:14,520 --> 00:06:15,640
+Voy a guardar los cambios ahora.
+
+106
+00:06:15,640 --> 00:06:18,840
+Así safe all y volvemos a ejecutar la página.
+
+107
+00:06:19,710 --> 00:06:19,920
+Aquí.
+
+108
+00:06:19,920 --> 00:06:20,880
+Vamos a detener.
+
+109
+00:06:22,030 --> 00:06:28,120
+El servidor nuevamente voy a hacer un clic y vuelvo a ejecutar el Python Management un server.
+
+110
+00:06:29,430 --> 00:06:31,020
+Ahora, si no me dio ningún tipo de error.
+
+111
+00:06:31,020 --> 00:06:31,890
+Vamos a la página.
+
+112
+00:06:32,640 --> 00:06:34,380
+Estamos en el local 8000.
+
+113
+00:06:34,530 --> 00:06:38,730
+Vamos a la parte inferior y mira, ya me está apareciendo el nombre.
+
+114
+00:06:39,330 --> 00:06:41,700
+El nombre del producto que viene de la base de datos.
+
+115
+00:06:42,000 --> 00:06:42,780
+Perfecto.
+
+116
+00:06:42,780 --> 00:06:43,460
+Me dirás, profesor.
+
+117
+00:06:43,470 --> 00:06:43,620
+Pero.
+
+118
+00:06:43,620 --> 00:06:45,240
+Por qué está repitiéndose la imagen?
+
+119
+00:06:45,540 --> 00:06:49,380
+Es porque aún no ha reemplazado la variable dinámica que viene de la base de datos.
+
+120
+00:06:49,380 --> 00:06:50,730
+Y tampoco es reemplazado el precio.
+
+121
+00:06:50,730 --> 00:06:52,680
+Solo ha reemplazado el nombre del producto.
+
+122
+00:06:52,950 --> 00:06:55,860
+Vayamos a reemplazar entonces también el precio y la imagen.
+
+123
+00:06:56,640 --> 00:07:01,020
+Estamos nuevamente en la carpeta templates en el archivo Home punto HTML.
+
+124
+00:07:01,770 --> 00:07:05,550
+Voy a maximizar para que puedas ver mejor todo lo que voy a hacer.
+
+125
+00:07:06,510 --> 00:07:08,640
+Y aquí está el link para la imagen.
+
+126
+00:07:10,140 --> 00:07:11,970
+Aquí tiene el image SEC.
+
+127
+00:07:12,240 --> 00:07:22,080
+El valor del CRC lo voy a eliminar por ahora y le pongo doble llaves ya que lo voy a poner Product Image
+
+128
+00:07:22,620 --> 00:07:23,190
+o RL.
+
+129
+00:07:24,280 --> 00:07:28,210
+Que las imágenes vengan de ese atributo o el servidor perfecto.
+
+130
+00:07:29,330 --> 00:07:30,560
+Y también por el precio.
+
+131
+00:07:31,070 --> 00:07:32,990
+Mira este precio también está rodeado.
+
+132
+00:07:33,710 --> 00:07:34,970
+Voy a quitarlo.
+
+133
+00:07:37,810 --> 00:07:40,240
+Y con doble llave le voy a poner producto.
+
+134
+00:07:41,370 --> 00:07:42,510
+Punto Pris.
+
+135
+00:07:45,810 --> 00:07:46,330
+Tenemos.
+
+136
+00:07:46,350 --> 00:07:48,180
+Vamos a darle minus fil safe all.
+
+137
+00:07:49,630 --> 00:07:51,190
+Y vamos a probar en la página.
+
+138
+00:07:52,410 --> 00:07:54,030
+Estamos en la página ocho.
+
+139
+00:07:54,240 --> 00:07:55,200
+Voy a refrescarla.
+
+140
+00:07:55,590 --> 00:07:56,760
+Y mira ahora.
+
+141
+00:07:56,760 --> 00:07:58,500
+Si ya me está apareciendo.
+
+142
+00:07:58,710 --> 00:08:00,900
+Me está apareciendo el precio.
+
+143
+00:08:01,020 --> 00:08:04,980
+También las imágenes que vienen desde mi base de datos.

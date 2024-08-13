@@ -1,0 +1,439 @@
+1
+00:00:00,420 --> 00:00:06,660
+Vamos a continuar trabajando en mi proyecto de Yanko, en particular dentro de la funcionalidad de la
+
+2
+00:00:06,660 --> 00:00:09,840
+app que me muestre la lista de usuarios en esta tabla.
+
+3
+00:00:10,080 --> 00:00:16,260
+En este momento lo que tengo es data ideada, pero lo que yo deseo es de que esta data provenga desde
+
+4
+00:00:16,500 --> 00:00:17,540
+mi base de datos.
+
+5
+00:00:17,580 --> 00:00:22,140
+Aún no tengo creado la tabla, ni tampoco el modelo de objetos.
+
+6
+00:00:22,650 --> 00:00:24,660
+Vamos entonces a nuestro proyecto.
+
+7
+00:00:26,010 --> 00:00:27,280
+Estamos dentro de Atton.
+
+8
+00:00:27,300 --> 00:00:32,550
+Vamos a ir a la carpeta que representa la aplicación la app, en este caso de usuarios.
+
+9
+00:00:32,580 --> 00:00:33,630
+Vamos a desplegarla.
+
+10
+00:00:34,500 --> 00:00:41,120
+En el interior de la carpeta usuario se encuentra el archivo Models y vamos a abrirlo aquí.
+
+11
+00:00:41,130 --> 00:00:47,490
+Vamos a crear una clase que represente los atributos y propiedades que va a tener un usuario dentro
+
+12
+00:00:47,490 --> 00:00:49,440
+de mi aplicación a futuro.
+
+13
+00:00:49,680 --> 00:00:56,160
+Los atributos de esta clase van a convertirse en columnas de una tabla en mi base de datos PostgreSQL.
+
+14
+00:00:56,760 --> 00:01:04,560
+Comencemos entonces escribiendo acá algo de este modo, el siguiente línea escribimos Class.
+
+15
+00:01:06,200 --> 00:01:09,650
+Y le pongo usuario con la mayúscula.
+
+16
+00:01:11,600 --> 00:01:17,300
+Puede indicarle que ingrese un parámetro Models punto Model.
+
+17
+00:01:19,330 --> 00:01:25,870
+Le ponemos dos puntos y a continuación agregamos la primera columna que yo quiero que represente el
+
+18
+00:01:25,870 --> 00:01:26,770
+avi del usuario.
+
+19
+00:01:27,130 --> 00:01:28,570
+Por eso le pongo el ID.
+
+20
+00:01:30,440 --> 00:01:33,650
+Y ahora le paso a definir el tipo de dato que va almacenar.
+
+21
+00:01:33,980 --> 00:01:38,780
+Creo que le dice a un valor numérico, por lo que le voy a escribir models, punto.
+
+22
+00:01:41,240 --> 00:01:42,620
+Integer Field.
+
+23
+00:01:45,080 --> 00:01:45,920
+Lo tenemos listo.
+
+24
+00:01:46,400 --> 00:01:50,450
+También me gustaría que los usuarios tengan una imagen que lo represente.
+
+25
+00:01:50,450 --> 00:01:51,470
+Una imagen de perfil.
+
+26
+00:01:52,450 --> 00:01:53,600
+Entonces lo voy a poner acá.
+
+27
+00:01:53,620 --> 00:01:58,660
+Foto igual a Models y Mach Field.
+
+28
+00:02:01,670 --> 00:02:06,180
+Si quiere tengo que indicar la ubicación donde se van a almacenar esas imágenes.
+
+29
+00:02:06,750 --> 00:02:10,200
+Dentro de mi directorio, mi directorio del proyecto.
+
+30
+00:02:10,500 --> 00:02:12,840
+Entonces aquí lo voy a poner que se van a almacenar dentro del.
+
+31
+00:02:12,840 --> 00:02:13,620
+Hablo a tu.
+
+32
+00:02:14,970 --> 00:02:15,690
+Igual a quien?
+
+33
+00:02:16,890 --> 00:02:19,220
+Dentro de una carpeta que se va a llamar fotos.
+
+34
+00:02:20,060 --> 00:02:26,060
+Y para tenerlo más organizado vamos a indicarle que se almacene también dentro de una estructura que
+
+35
+00:02:26,060 --> 00:02:32,270
+muestre el año, mes y día en el cual se está tomando esa foto en el servidor.
+
+36
+00:02:32,840 --> 00:02:36,410
+Así que por este motivo le vamos a poner aquí año.
+
+37
+00:02:37,390 --> 00:02:39,520
+Que sería un signo de porcentaje.
+
+38
+00:02:43,350 --> 00:02:45,240
+I mayúscula.
+
+39
+00:02:47,470 --> 00:02:48,040
+Es las.
+
+40
+00:02:49,390 --> 00:02:54,070
+El mes m minúscula es las.
+
+41
+00:02:56,350 --> 00:03:00,100
+Sería porcentaje letra de minúscula y le pongo un slash.
+
+42
+00:03:02,140 --> 00:03:07,660
+Este porcentaje y griega representa el año actual del servidor.
+
+43
+00:03:08,350 --> 00:03:12,700
+Esto representa el mes actual y esto representa el día actual.
+
+44
+00:03:12,880 --> 00:03:13,570
+Entonces.
+
+45
+00:03:13,570 --> 00:03:14,770
+Dentro de esta ubicación.
+
+46
+00:03:14,770 --> 00:03:15,550
+Fotos.
+
+47
+00:03:17,240 --> 00:03:19,260
+Es el año, es el mes.
+
+48
+00:03:19,280 --> 00:03:22,490
+El día es donde se va a almacenar esta imagen.
+
+49
+00:03:23,950 --> 00:03:24,640
+Continuamos.
+
+50
+00:03:25,400 --> 00:03:31,250
+También creo que mencioné el nombre del usuario y le ponemos nombre y aquí le ponemos Mothers.
+
+51
+00:03:31,840 --> 00:03:34,690
+En este caso va a ser un tipo cadena de texto.
+
+52
+00:03:35,350 --> 00:03:38,080
+Por eso le voy a poner un char field.
+
+53
+00:03:40,040 --> 00:03:44,990
+Pero tengo que indicarle que longitud va a tener esta columna de tipo varchar varchar.
+
+54
+00:03:45,790 --> 00:03:46,930
+Entonces lo voy a poner acá.
+
+55
+00:03:46,930 --> 00:03:48,220
+Este man leg.
+
+56
+00:03:49,220 --> 00:03:52,400
+Longitud máxima que va a ser igual a 100.
+
+57
+00:03:54,760 --> 00:04:00,220
+También quiero que se almacene, que se genere otra columna que represente la profesión del usuario.
+
+58
+00:04:01,690 --> 00:04:05,080
+Te voy a poner entonces que este tipo marcar también char field models.
+
+59
+00:04:05,410 --> 00:04:06,280
+Char field.
+
+60
+00:04:07,750 --> 00:04:12,100
+Y de la misma forma que tenga un Max, una longitud máxima de 100.
+
+61
+00:04:13,900 --> 00:04:19,390
+También voy a agregar una columna que represente el género del usuario, que puede ser masculino o femenino.
+
+62
+00:04:19,690 --> 00:04:24,430
+Entonces voy a crear una lista de opciones de selección única.
+
+63
+00:04:25,420 --> 00:04:27,580
+Por eso voy a poner acá en la parte superior.
+
+64
+00:04:29,010 --> 00:04:31,020
+Género raya abajo.
+
+65
+00:04:31,260 --> 00:04:31,950
+Elección.
+
+66
+00:04:34,530 --> 00:04:39,990
+De aquí le voy a poner entre paréntesis las opciones que puede seleccionar el usuario.
+
+67
+00:04:41,610 --> 00:04:46,170
+Si le pongo M va a representar aquí el valor masculino.
+
+68
+00:04:47,640 --> 00:04:48,060
+Coma.
+
+69
+00:04:49,450 --> 00:04:52,930
+Si le ponemos F va a representar.
+
+70
+00:04:54,720 --> 00:04:55,440
+A femenino.
+
+71
+00:04:58,690 --> 00:04:59,620
+Y como al final.
+
+72
+00:05:01,520 --> 00:05:04,790
+Y cuando definimos la columna, le voy a poner un género.
+
+73
+00:05:06,930 --> 00:05:08,310
+Va a ser igual a Models.
+
+74
+00:05:09,680 --> 00:05:10,280
+Punto.
+
+75
+00:05:11,270 --> 00:05:11,990
+Garfield.
+
+76
+00:05:18,220 --> 00:05:25,240
+De aquí le voy a poner que este atributo choices, que significa selección, va a depender de Kem,
+
+77
+00:05:25,810 --> 00:05:28,840
+de esta selección múltiple que he creado, que se llama género elección.
+
+78
+00:05:30,210 --> 00:05:30,450
+Aquí.
+
+79
+00:05:30,450 --> 00:05:31,020
+Se lo pegó.
+
+80
+00:05:33,490 --> 00:05:39,880
+Y también lo que va almacenarse finalmente, luego que selecciones femenino masculino es un tipo marcar
+
+81
+00:05:39,880 --> 00:05:45,130
+un string, una cadena de caracteres, tienes que indicarle también cuál es la longitud máxima de almacenamiento,
+
+82
+00:05:45,460 --> 00:05:48,250
+por lo que aquí le vamos a poner un Max Land.
+
+83
+00:05:49,370 --> 00:05:50,090
+Igual a 100.
+
+84
+00:05:52,760 --> 00:05:53,800
+Vamos a crear uno.
+
+85
+00:05:53,840 --> 00:05:54,980
+Uno más adicional.
+
+86
+00:05:55,610 --> 00:06:00,340
+Le digo la ciudad donde vive este usuario le voy a poner un models.
+
+87
+00:06:01,960 --> 00:06:03,700
+Punto Chart Field.
+
+88
+00:06:06,300 --> 00:06:07,710
+Y le ponemos un Max Lang.
+
+89
+00:06:08,280 --> 00:06:09,060
+También decían.
+
+90
+00:06:10,030 --> 00:06:12,040
+Aquí vamos a hacer una pequeña corrección.
+
+91
+00:06:12,400 --> 00:06:17,800
+Porque por defecto Jango toma como reserva el ID y el valor Heidy.
+
+92
+00:06:18,610 --> 00:06:25,540
+Entonces en vez de colocarle ID como valor único del usuario, vamos a colocarle que se llame código.
+
+93
+00:06:27,080 --> 00:06:28,820
+Ese sería todo el cambio que voy a hacer.
+
+94
+00:06:28,820 --> 00:06:30,170
+Menos Fa el Safe Hall.
+
+95
+00:06:30,920 --> 00:06:36,590
+Y si vamos a nuestra consola al valle a que me está indicando el base de que hay un error?
+
+96
+00:06:36,950 --> 00:06:43,130
+El error sucede porque me dice que no puedo utilizar el manejador de archivos.
+
+97
+00:06:43,130 --> 00:06:43,320
+El.
+
+98
+00:06:43,330 --> 00:06:46,550
+La de archivos, el almacenamiento de archivos.
+
+99
+00:06:46,550 --> 00:06:51,230
+Si es que no he instalado el paquete piloto dentro de mi proyecto.
+
+100
+00:06:52,230 --> 00:06:54,180
+Entonces vamos a realizarlo.
+
+101
+00:06:54,360 --> 00:06:56,700
+Voy a tener mi servidor control C.
+
+102
+00:06:58,340 --> 00:07:07,700
+Y ahora voy a instalar el paquete pilo, voy a escribir pip espacio install espacio pilot y le damos
+
+103
+00:07:07,700 --> 00:07:08,050
+enter.
+
+104
+00:07:09,970 --> 00:07:12,430
+Luego de algunos segundos ya se instaló correctamente.
+
+105
+00:07:12,430 --> 00:07:15,310
+Voy a levantar nuevamente mi servidor de Jango.
+
+106
+00:07:16,540 --> 00:07:17,650
+Ya levante el servidor.
+
+107
+00:07:17,650 --> 00:07:24,310
+Como ves ya escribí Python Espacio Manager y espacio Ram Server y no me has dado ningún tipo de error.
+
+108
+00:07:24,970 --> 00:07:30,310
+En los siguientes capítulos voy a enseñarte el procedimiento paso a paso para poder generar el proceso
+
+109
+00:07:30,310 --> 00:07:37,720
+de migración, haciendo que esta clase usuario se convierta en una tabla dentro de la base de datos
+
+110
+00:07:37,900 --> 00:07:38,590
+de Jango.

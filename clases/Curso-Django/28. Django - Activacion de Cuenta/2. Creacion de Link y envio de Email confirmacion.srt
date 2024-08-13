@@ -1,0 +1,1247 @@
+1
+00:00:00,420 --> 00:00:05,760
+En el capítulo anterior desarrollamos un template llamado Account verificación email.
+
+2
+00:00:06,090 --> 00:00:13,470
+Dentro de ese template teníamos el que representaba el contenido del email que iba a recibir el cliente
+
+3
+00:00:13,470 --> 00:00:19,830
+para que pueda activar su cuenta dentro de este post y vamos a encontrar que aparece un Activity.
+
+4
+00:00:19,890 --> 00:00:28,320
+Este path tiene dos parámetros, un parámetro de tipo head base64 y uno que representa el token.
+
+5
+00:00:29,420 --> 00:00:34,730
+Lo que vamos a hacer ahora es crear este pack de activate con sus respectivos parámetros.
+
+6
+00:00:35,060 --> 00:00:39,290
+Vamos entonces a la carpeta account en la parte superior.
+
+7
+00:00:41,100 --> 00:00:43,010
+Y ahora vamos al archivo.
+
+8
+00:00:43,010 --> 00:00:44,370
+Yo iré al spa y.
+
+9
+00:00:45,980 --> 00:00:48,800
+De aquí voy a copiar este va de lock out.
+
+10
+00:00:50,210 --> 00:00:53,120
+Lo pegamos y vamos a agregar aquí en vez de lock out.
+
+11
+00:00:55,290 --> 00:00:56,040
+El Actívate.
+
+12
+00:00:57,940 --> 00:01:00,130
+Con otros parámetros que necesita.
+
+13
+00:01:01,750 --> 00:01:05,710
+El primer parámetro es el Audi 64.
+
+14
+00:01:06,490 --> 00:01:12,220
+Lo tenemos y también otro parámetro que es el token.
+
+15
+00:01:14,940 --> 00:01:16,380
+Y al final subes las.
+
+16
+00:01:17,640 --> 00:01:27,060
+Y está este Pat Barre va a trabajarse dentro de una función que vamos a llamarle de la capa Actívate,
+
+17
+00:01:27,840 --> 00:01:28,800
+una función de tipo de.
+
+18
+00:01:33,300 --> 00:01:34,850
+Vamos ahora a crear esta función.
+
+19
+00:01:34,860 --> 00:01:41,100
+Vamos al archivo que está dentro de la carpeta account que se llama Punto P y vamos a la parte inferior.
+
+20
+00:01:41,850 --> 00:01:43,470
+Luego desde Lock out.
+
+21
+00:01:44,560 --> 00:01:46,080
+Ya que creamos un débil.
+
+22
+00:01:47,670 --> 00:01:48,300
+Actívate.
+
+23
+00:01:50,060 --> 00:01:51,020
+Qué hacer un parámetro.
+
+24
+00:01:51,140 --> 00:01:58,190
+El juez también va a tener un parámetro Jaidev seis cuatro y el parámetro token.
+
+25
+00:02:01,040 --> 00:02:02,210
+Ponemos dos puntos.
+
+26
+00:02:03,400 --> 00:02:06,940
+Y voy a agregarle un try dentro de este try.
+
+27
+00:02:07,480 --> 00:02:08,240
+Voy a obtener.
+
+28
+00:02:08,260 --> 00:02:10,150
+Quiero obtener el ID.
+
+29
+00:02:11,080 --> 00:02:13,960
+Para esto utilizo la función safe.
+
+30
+00:02:15,740 --> 00:02:16,280
+Veis?
+
+31
+00:02:16,550 --> 00:02:17,300
+64.
+
+32
+00:02:17,310 --> 00:02:18,530
+En este caso sería un boicot.
+
+33
+00:02:21,500 --> 00:02:21,770
+Aquí.
+
+34
+00:02:21,770 --> 00:02:23,750
+Le llamo al Heidi.
+
+35
+00:02:25,310 --> 00:02:26,360
+B 64.
+
+36
+00:02:28,010 --> 00:02:29,300
+Es su función de Scott.
+
+37
+00:02:32,710 --> 00:02:33,790
+Lo tenemos también.
+
+38
+00:02:33,810 --> 00:02:38,590
+Voy a obtener el objeto usuario llamando a la Entidad Account.
+
+39
+00:02:38,920 --> 00:02:39,490
+Punto.
+
+40
+00:02:41,200 --> 00:02:43,350
+Default para abajo.
+
+41
+00:02:43,460 --> 00:02:44,290
+Manager.
+
+42
+00:02:46,900 --> 00:02:50,170
+Punto get y le paso el primario aquí.
+
+43
+00:02:51,070 --> 00:02:54,790
+Qué sería en este caso el parámetro PK igual a Kim al geoide.
+
+44
+00:02:58,290 --> 00:03:01,860
+En caso de que estas sentencias algún tipo de error.
+
+45
+00:03:02,520 --> 00:03:06,690
+Voy a hacer un except que va a tener estos parámetros.
+
+46
+00:03:06,720 --> 00:03:07,650
+Un tipo de error.
+
+47
+00:03:07,920 --> 00:03:11,220
+Tipo error value error.
+
+48
+00:03:13,050 --> 00:03:13,920
+Overflow.
+
+49
+00:03:15,490 --> 00:03:15,910
+Error.
+
+50
+00:03:18,650 --> 00:03:19,970
+Aquí le pongo account.
+
+51
+00:03:20,600 --> 00:03:21,000
+Punto.
+
+52
+00:03:21,680 --> 00:03:22,970
+Does not exist?
+
+53
+00:03:26,010 --> 00:03:27,900
+Sigla S es SIX.
+
+54
+00:03:28,620 --> 00:03:29,310
+Dos puntos.
+
+55
+00:03:30,840 --> 00:03:35,520
+Ya que en este caso lo voy a indicar solamente que el user es igual a nada nulo none.
+
+56
+00:03:38,300 --> 00:03:41,260
+No tenemos cuando tenemos otra condición.
+
+57
+00:03:41,270 --> 00:03:41,690
+Sí.
+
+58
+00:03:42,500 --> 00:03:47,390
+El user is not Nancy no es vacío si existe.
+
+59
+00:03:48,170 --> 00:03:51,380
+Y además el default token generator.
+
+60
+00:03:51,920 --> 00:03:52,340
+Punto.
+
+61
+00:03:52,340 --> 00:03:53,150
+Check token.
+
+62
+00:03:54,860 --> 00:03:57,620
+Me da un valor que lo voy a poner.
+
+63
+00:03:57,730 --> 00:03:58,640
+User coma.
+
+64
+00:03:58,640 --> 00:03:59,090
+Token.
+
+65
+00:04:01,930 --> 00:04:08,140
+Si esto se cumple, entonces voy a hacer que el user cambie su estado actual que es inactivo.
+
+66
+00:04:08,860 --> 00:04:10,690
+Llama a su propiedad is active.
+
+67
+00:04:13,840 --> 00:04:15,070
+Y que va a ser ahora.
+
+68
+00:04:16,810 --> 00:04:20,590
+Y ese cambio lo actualizo en la base de datos y hago un user.
+
+69
+00:04:23,880 --> 00:04:28,500
+Luego de esto quiero enviar un mensaje indicando que ya se activó este usuario.
+
+70
+00:04:29,160 --> 00:04:30,830
+Entonces voy a llamar a Messages.
+
+71
+00:04:31,860 --> 00:04:32,550
+Success.
+
+72
+00:04:35,700 --> 00:04:37,710
+Le paso el objeto request y el mensaje.
+
+73
+00:04:39,300 --> 00:04:40,280
+Felicidades.
+
+74
+00:04:40,290 --> 00:04:41,070
+Tu cuenta.
+
+75
+00:04:42,870 --> 00:04:43,800
+Está activa.
+
+76
+00:04:46,230 --> 00:04:47,670
+Es el mensaje que estamos enviando.
+
+77
+00:04:49,430 --> 00:04:51,370
+Y luego un rato retiré.
+
+78
+00:04:53,050 --> 00:04:54,690
+Hacia la página de login.
+
+79
+00:04:57,680 --> 00:05:02,510
+En caso contrario que hubieron errores en la activación de este usuario.
+
+80
+00:05:03,560 --> 00:05:04,190
+Voy a crear.
+
+81
+00:05:04,190 --> 00:05:06,350
+Voy a enviar un mensaje de error messages.
+
+82
+00:05:06,350 --> 00:05:07,400
+Punto error.
+
+83
+00:05:09,870 --> 00:05:10,750
+Y le pasó rico.
+
+84
+00:05:11,670 --> 00:05:17,700
+Y también le digo la activación es inválida.
+
+85
+00:05:22,390 --> 00:05:25,180
+Y aunque retorne algún redil hacia.
+
+86
+00:05:27,040 --> 00:05:28,540
+La página register.
+
+87
+00:05:28,990 --> 00:05:36,010
+Pero recuerda este esta función, este método Actívate se va a disparar cuando el usuario reciba el
+
+88
+00:05:36,010 --> 00:05:39,130
+correo electrónico y le dé clic al link de activar.
+
+89
+00:05:39,520 --> 00:05:46,480
+En ese momento va a comenzar a validar que ese link sea correcto, que el usuario exista y luego va
+
+90
+00:05:46,480 --> 00:05:51,550
+a cambiar el estatus del usuario a un activo en TRUE y lo almacena en la base de datos.
+
+91
+00:05:51,790 --> 00:05:55,450
+Posteriormente va a generar este mensaje de bienvenida.
+
+92
+00:05:56,730 --> 00:05:59,040
+Y lo redireccionar hacia la página de.
+
+93
+00:05:59,850 --> 00:06:03,960
+Este es el paso final para poder actualizar un usuario.
+
+94
+00:06:04,620 --> 00:06:06,930
+Pero volvamos un momento al registro.
+
+95
+00:06:07,740 --> 00:06:13,500
+Cuando estés en la página de registro de usuario, pase llenar tus datos y vas a darle clic a registrar.
+
+96
+00:06:13,860 --> 00:06:18,750
+En ese momento es que se produce el evento para enviar el correo electrónico.
+
+97
+00:06:19,920 --> 00:06:21,400
+Entonces lo que yo quisiera.
+
+98
+00:06:21,420 --> 00:06:27,990
+Inmediatamente después de que se registre el usuario en la base de datos y que aún si su estatus es
+
+99
+00:06:27,990 --> 00:06:34,830
+inactivo, es de que aquí me aparezca un mensaje, se borre todo, se borre todo, toda esta pantalla
+
+100
+00:06:34,830 --> 00:06:39,240
+y me aparezca un mensaje indicándome que hemos enviado un correo electrónico.
+
+101
+00:06:39,390 --> 00:06:41,430
+Por favor, dale click al link.
+
+102
+00:06:42,450 --> 00:06:45,060
+De ese correo electrónico para poder activar tu cuenta.
+
+103
+00:06:45,870 --> 00:06:48,330
+Entonces la pregunta es cómo voy a hacer eso?
+
+104
+00:06:48,810 --> 00:06:54,330
+Necesito trabajar ese proceso dentro de la transacción del registro de usuario.
+
+105
+00:06:55,260 --> 00:06:57,030
+Estamos dentro de Account Bus.
+
+106
+00:06:57,840 --> 00:06:59,190
+Vamos a la parte superior.
+
+107
+00:06:59,510 --> 00:07:02,040
+Aquí aparece la función para registrar un usuario.
+
+108
+00:07:03,690 --> 00:07:09,270
+Y recuerdas, este es el método para poder enviar el correo electrónico.
+
+109
+00:07:11,250 --> 00:07:17,430
+Y yo lo que anteriormente estaba haciendo era enviando un mensaje de tipo success indicando que el usuario
+
+110
+00:07:17,430 --> 00:07:18,660
+se registró exitosamente.
+
+111
+00:07:18,660 --> 00:07:20,500
+Pero voy a bloquear esto por el momento.
+
+112
+00:07:20,530 --> 00:07:21,600
+Yo no quiero que esto ocurra.
+
+113
+00:07:22,290 --> 00:07:28,020
+Lo que yo quiero, primeramente, es que ya no se redirigir la dirección de la página de Register,
+
+114
+00:07:28,320 --> 00:07:33,330
+sino que se redirecciona hacia la página de login.
+
+115
+00:07:34,500 --> 00:07:35,560
+Por eso es que lo voy a poner.
+
+116
+00:07:35,750 --> 00:07:40,380
+Direct Account Slash Login.
+
+117
+00:07:41,130 --> 00:07:47,850
+Quiero que vaya hacia el tema de login, pero quiero que adicionalmente también envíe ciertos parámetros.
+
+118
+00:07:48,880 --> 00:07:53,440
+Por ejemplo, le voy a poner acá un parámetro que diga comment igual a.
+
+119
+00:07:54,530 --> 00:07:55,430
+Verificación.
+
+120
+00:07:59,610 --> 00:08:00,600
+No me lo voy a poner.
+
+121
+00:08:00,720 --> 00:08:01,680
+Jim Slash.
+
+122
+00:08:03,350 --> 00:08:09,470
+El signo de interrogación toman igualdad, verificación, verificación.
+
+123
+00:08:09,470 --> 00:08:11,300
+Y también le voy a pasar otro parámetro.
+
+124
+00:08:11,930 --> 00:08:13,340
+Les pongo el signo de antes.
+
+125
+00:08:15,020 --> 00:08:16,490
+Y le quiero pasar el e-mail.
+
+126
+00:08:19,140 --> 00:08:22,520
+Este caso el email del usuario y concatenando con la variable mail.
+
+127
+00:08:23,360 --> 00:08:26,300
+Aquí me faltó agregarle el slash antes del account.
+
+128
+00:08:27,760 --> 00:08:34,210
+Entonces lo que está sucediendo es que cuando ya registre el usuario y envié el correo electrónico,
+
+129
+00:08:34,480 --> 00:08:38,050
+quiero que inmediatamente mas redirecciones a la pagina de login.
+
+130
+00:08:38,320 --> 00:08:41,290
+Con estos dos valores, con estos dos parámetros.
+
+131
+00:08:41,290 --> 00:08:43,000
+El command y el email.
+
+132
+00:08:44,690 --> 00:08:51,620
+Pero quiero que cuando eso ocurra, cuando aquí aparezca el parámetro command y luego el email dentro
+
+133
+00:08:51,620 --> 00:08:56,480
+de la RL este detecte que se trata de un command y desaparezca el login.
+
+134
+00:08:57,230 --> 00:09:03,770
+Claro que no se despliegue el formulario de que esto se oculte y solo me aparezca un texto que me indique
+
+135
+00:09:04,010 --> 00:09:06,490
+que hemos enviado un correo electrónico.
+
+136
+00:09:06,500 --> 00:09:11,090
+Por favor ingresa tu cuenta y dale clic al link de activación.
+
+137
+00:09:12,130 --> 00:09:18,310
+Por este motivo tenemos que ingresar al template login, hacer esta validación que cuando reciba estos
+
+138
+00:09:18,310 --> 00:09:26,650
+parámetros entonces oculte el formulario de login y en su lugar me muestre un texto indicándome que
+
+139
+00:09:26,650 --> 00:09:28,090
+revise mi correo electrónico.
+
+140
+00:09:28,570 --> 00:09:33,730
+Vayamos entonces a la carpeta Templates que aparece Account y vamos a Login.
+
+141
+00:09:35,120 --> 00:09:37,520
+Dentro de lo que vamos a ubicarnos.
+
+142
+00:09:39,680 --> 00:09:41,700
+Más o menos en la línea diez nueve.
+
+143
+00:09:41,720 --> 00:09:42,290
+Aquí aparece.
+
+144
+00:09:42,290 --> 00:09:45,470
+Mira, te aparece una marca que dice el componente de login.
+
+145
+00:09:47,520 --> 00:09:52,760
+A que aparece una marca del copón de Elokim y aquí te indica cuándo termina el componente de login.
+
+146
+00:09:53,090 --> 00:09:53,810
+Es perfecto.
+
+147
+00:09:54,650 --> 00:09:57,950
+Entonces sobre esta marca darle un enter.
+
+148
+00:10:00,200 --> 00:10:03,140
+Vamos a agregar la siguiente línea.
+
+149
+00:10:04,400 --> 00:10:05,480
+Voy a hacer la condición.
+
+150
+00:10:08,610 --> 00:10:09,720
+Aquí le voy a poner.
+
+151
+00:10:11,220 --> 00:10:11,640
+Es.
+
+152
+00:10:12,970 --> 00:10:14,530
+Rico es punto jet.
+
+153
+00:10:15,930 --> 00:10:16,280
+Punto.
+
+154
+00:10:16,280 --> 00:10:16,730
+Coman.
+
+155
+00:10:17,830 --> 00:10:19,720
+Es igual la verificación.
+
+156
+00:10:20,500 --> 00:10:26,830
+Recuerda que aquí estoy obteniendo desde la RL el parámetro que se llama command y le estoy indicando
+
+157
+00:10:26,830 --> 00:10:32,230
+si command es igual a verificación, entonces que haga lo siguiente Qué es lo que quiero que muestre
+
+158
+00:10:32,230 --> 00:10:33,310
+un texto, verdad?
+
+159
+00:10:33,610 --> 00:10:36,250
+Le voy a poner aquí ese texto dentro de un div.
+
+160
+00:10:37,800 --> 00:10:38,730
+Escribir a Cádiz.
+
+161
+00:10:39,890 --> 00:10:42,410
+Esto el Klauss que va a tener este dif.
+
+162
+00:10:42,770 --> 00:10:48,200
+Vamos a ponerle que se trate de un container mx auto.
+
+163
+00:10:49,730 --> 00:10:50,330
+Alert.
+
+164
+00:10:52,300 --> 00:10:52,830
+Alert.
+
+165
+00:10:52,840 --> 00:10:53,380
+Info.
+
+166
+00:10:55,430 --> 00:10:57,710
+Aquí está el rol.
+
+167
+00:10:57,890 --> 00:11:03,010
+Lo voy a poner que se trate de un alert y vamos a agregarle un Max Switch.
+
+168
+00:11:03,020 --> 00:11:06,950
+Por eso voy a utilizar un style y le pongo Max.
+
+169
+00:11:09,470 --> 00:11:09,840
+Puede.
+
+170
+00:11:10,980 --> 00:11:14,190
+Esto le vamos a poner que sea 380 píxeles.
+
+171
+00:11:17,010 --> 00:11:17,790
+Y el margen.
+
+172
+00:11:17,820 --> 00:11:18,810
+Vamos a ponerle punto y coma.
+
+173
+00:11:18,820 --> 00:11:21,090
+Margin, margin top.
+
+174
+00:11:23,960 --> 00:11:24,980
+Sea igual de.
+
+175
+00:11:26,990 --> 00:11:28,490
+1100 píxeles.
+
+176
+00:11:29,240 --> 00:11:29,600
+No mil.
+
+177
+00:11:30,110 --> 00:11:31,070
+Punto y coma final.
+
+178
+00:11:32,840 --> 00:11:33,300
+Lo tenemos.
+
+179
+00:11:33,320 --> 00:11:35,060
+Voy a maximizar mi pantalla.
+
+180
+00:11:36,250 --> 00:11:37,750
+Y ahora aquí escribimos el texto.
+
+181
+00:11:37,990 --> 00:11:39,310
+Lo voy a reivindicar.
+
+182
+00:11:39,340 --> 00:11:40,420
+Muchas gracias.
+
+183
+00:11:42,190 --> 00:11:46,330
+Por registrarte en nuestro portal Black Dress.
+
+184
+00:11:49,330 --> 00:11:50,530
+Te hemos enviado.
+
+185
+00:11:53,450 --> 00:11:54,140
+Un email.
+
+186
+00:11:56,000 --> 00:11:58,550
+Para confirmar tu cuenta.
+
+187
+00:12:01,250 --> 00:12:02,060
+Porque lo voy a poner.
+
+188
+00:12:02,060 --> 00:12:06,860
+Que la cuenta sea va a poner aquí entre corchetes.
+
+189
+00:12:08,130 --> 00:12:10,080
+Y doble un momento doble.
+
+190
+00:12:10,080 --> 00:12:15,750
+Chávez Aquí le ponemos hacer request, punto get, punto email.
+
+191
+00:12:16,470 --> 00:12:17,610
+Ese parámetro de email.
+
+192
+00:12:22,060 --> 00:12:24,820
+Y ahora le voy a poner un espacio en blanco b r.
+
+193
+00:12:26,800 --> 00:12:30,220
+Veremos a ver todo el espacio.
+
+194
+00:12:32,960 --> 00:12:34,700
+Si ya verificaste tu cuenta.
+
+195
+00:12:37,590 --> 00:12:40,430
+Puedes ir al lounge.
+
+196
+00:12:42,980 --> 00:12:44,180
+Entonces acá le pongo.
+
+197
+00:12:45,550 --> 00:12:47,050
+Que vaya hacia.
+
+198
+00:12:48,960 --> 00:12:52,860
+Como se puede ver, la RL que representa Elokim o RL.
+
+199
+00:12:53,230 --> 00:12:53,490
+Dos.
+
+200
+00:12:53,810 --> 00:12:54,030
+Dos.
+
+201
+00:12:54,270 --> 00:12:55,980
+Espacio apóstrofe.
+
+202
+00:12:58,150 --> 00:12:58,630
+Alguien.
+
+203
+00:13:01,110 --> 00:13:01,950
+Me pongo lo.
+
+204
+00:13:05,160 --> 00:13:05,310
+Bien.
+
+205
+00:13:05,790 --> 00:13:07,260
+Puedes iniciar sesión.
+
+206
+00:13:10,020 --> 00:13:10,440
+Esto.
+
+207
+00:13:11,620 --> 00:13:11,860
+Bien.
+
+208
+00:13:11,860 --> 00:13:18,460
+Todo eso va a ocurrir siempre y cuando el coma sea igual a verificación, pero en caso contrario que
+
+209
+00:13:18,460 --> 00:13:19,240
+no lo sea.
+
+210
+00:13:19,900 --> 00:13:24,460
+Entonces quiero que imprima el componente de login que comienza aquí.
+
+211
+00:13:25,450 --> 00:13:27,750
+Por esto lo voy a poner acá un else.
+
+212
+00:13:31,940 --> 00:13:32,600
+Tenemos.
+
+213
+00:13:34,270 --> 00:13:35,140
+Y dónde termina?
+
+214
+00:13:35,620 --> 00:13:37,030
+Vamos a ver el componente Login.
+
+215
+00:13:37,930 --> 00:13:38,320
+Aquí.
+
+216
+00:13:38,470 --> 00:13:40,090
+Aquí con el componente Login.
+
+217
+00:13:41,050 --> 00:13:42,160
+Aquí le ponemos un.
+
+218
+00:13:43,810 --> 00:13:44,650
+And if.
+
+219
+00:13:48,310 --> 00:13:48,520
+Bien.
+
+220
+00:13:48,610 --> 00:13:49,840
+Lo tenemos todo listo.
+
+221
+00:13:50,200 --> 00:13:54,940
+Voy a borrar los cambios de Mayfield Safe Hall y vamos a nuestra página.
+
+222
+00:13:55,940 --> 00:13:57,500
+Hemos refrescado la página.
+
+223
+00:13:58,910 --> 00:14:03,350
+Y ahora vamos a registrar o ingresar un usuario.
+
+224
+00:14:03,920 --> 00:14:10,190
+Ya hemos ingresado este usuario nestor arcila número telefónico el correo electrónico es 23 arroba gmail
+
+225
+00:14:10,190 --> 00:14:11,390
+punto com por si acaso.
+
+226
+00:14:11,630 --> 00:14:18,470
+No lo confundas con el otro email que yo utilicé como súper administrador que es es validez social?
+
+227
+00:14:18,500 --> 00:14:19,190
+Es diferente.
+
+228
+00:14:19,820 --> 00:14:21,140
+También le he puesto un password.
+
+229
+00:14:21,800 --> 00:14:24,110
+Vamos a darle clic al botón Registrar.
+
+230
+00:14:25,930 --> 00:14:27,310
+Que me ha parecido este error.
+
+231
+00:14:27,550 --> 00:14:33,340
+No necesariamente porque se trate de un error de malas credenciales, sino porque la cuenta de Gmail
+
+232
+00:14:33,370 --> 00:14:40,240
+que yo he ingresado para configurar el puerto de MS TPS, recuerda en el capítulo anterior que agregamos
+
+233
+00:14:40,480 --> 00:14:44,230
+el M STP para mi cuenta de proxy, de social, etcétera.
+
+234
+00:14:45,570 --> 00:14:51,300
+Si recuerda dentro de la carpeta y commerce en el archivo asterisco y en el capítulo anterior nosotros
+
+235
+00:14:51,300 --> 00:14:56,460
+agregamos estas propiedades para dar de alta el SMTP gmail.com.
+
+236
+00:14:57,180 --> 00:15:02,700
+Para eso estaba utilizando en mi caso esta cuenta de correo electrónico, mi cuenta personal con ese
+
+237
+00:15:02,700 --> 00:15:03,240
+password.
+
+238
+00:15:03,390 --> 00:15:04,050
+Esto está correcto.
+
+239
+00:15:04,060 --> 00:15:07,400
+Evidentemente ese password no es el password de mi mail, pero.
+
+240
+00:15:07,990 --> 00:15:08,840
+Pero es.
+
+241
+00:15:09,020 --> 00:15:11,700
+He puesto el paso correcto en su momento cuando hice la prueba.
+
+242
+00:15:12,300 --> 00:15:18,390
+Entonces me está dando un error, me está dando un error porque me indica que tengo que desactivar y
+
+243
+00:15:18,390 --> 00:15:20,280
+hacer menos segura esta cuenta.
+
+244
+00:15:21,780 --> 00:15:26,340
+Para hacer que sea menos que permita el acceso a aplicaciones externas.
+
+245
+00:15:26,640 --> 00:15:38,010
+Tienes que ir a este link https my account google.com slash o slash uno slash less secure apps y tienes
+
+246
+00:15:38,010 --> 00:15:44,700
+que tener cuidado porque hay personas como yo que a veces utilizamos múltiples cuentas de Gmail.
+
+247
+00:15:45,090 --> 00:15:51,420
+Entonces tienes que tener cuidado a la hora de que te aparezca el icono en la parte derecha que muestre
+
+248
+00:15:51,420 --> 00:15:55,920
+que es la cuenta de Gmail en la cual tú estás configurando el SMTP.
+
+249
+00:15:56,700 --> 00:16:05,040
+Entonces ya le das clic aquí para que active que permita el acceso desde aplicaciones externas.
+
+250
+00:16:05,040 --> 00:16:05,580
+Ya tengo que.
+
+251
+00:16:05,580 --> 00:16:06,180
+En mi caso.
+
+252
+00:16:08,780 --> 00:16:10,250
+Y ahora voy a volver a probar.
+
+253
+00:16:11,500 --> 00:16:12,610
+Vamos a actualizar.
+
+254
+00:16:14,660 --> 00:16:15,380
+La página.
+
+255
+00:16:16,560 --> 00:16:18,510
+Me dice que el usuario ya existe.
+
+256
+00:16:18,660 --> 00:16:19,030
+Claro.
+
+257
+00:16:19,350 --> 00:16:21,520
+Voy a tener que volver a repetir la secuencia.
+
+258
+00:16:21,540 --> 00:16:22,800
+Voy a eliminar este usuario.
+
+259
+00:16:22,800 --> 00:16:24,150
+Proxy tres punto com.
+
+260
+00:16:25,880 --> 00:16:33,380
+He ingresado al juego administration con mi super user base de social, mi super user voy a los account
+
+261
+00:16:33,740 --> 00:16:34,880
+y aquí aparece el back.
+
+262
+00:16:34,880 --> 00:16:38,150
+Si es gmail.com voy a eliminarlo.
+
+263
+00:16:39,650 --> 00:16:44,690
+Selecciono la cuenta, voy a acciones de Select Cams y le explico al boton Code.
+
+264
+00:16:45,660 --> 00:16:46,050
+Sí.
+
+265
+00:16:46,200 --> 00:16:47,520
+Estoy seguro de querer eliminarlo.
+
+266
+00:16:47,850 --> 00:16:48,310
+And sure.
+
+267
+00:16:48,990 --> 00:16:49,380
+Listo.
+
+268
+00:16:49,380 --> 00:16:50,190
+Ya lo eliminé.
+
+269
+00:16:50,700 --> 00:16:52,620
+Vamos a repetir el procedimiento.
+
+270
+00:16:54,060 --> 00:16:59,730
+Vamos ahora a vacilar el home para y le vamos a dar clic a salir sesión.
+
+271
+00:17:01,190 --> 00:17:02,960
+También Emma salió de sesión.
+
+272
+00:17:03,560 --> 00:17:08,420
+Vamos a darle clic al botón Registrar y aquí vuelvo a llenar los datos.
+
+273
+00:17:09,080 --> 00:17:10,490
+Ya he llenado los datos.
+
+274
+00:17:10,490 --> 00:17:13,310
+Nestor Arcila Teléfono Bak 6.3 arroba.
+
+275
+00:17:13,310 --> 00:17:14,150
+Gmail punto com.
+
+276
+00:17:14,630 --> 00:17:16,610
+Repito, no es el super user.
+
+277
+00:17:16,610 --> 00:17:18,680
+Es un usuario común que yo tengo por fuera.
+
+278
+00:17:19,220 --> 00:17:22,970
+Y ahora sí, vamos a darle clic al botón Registrar.
+
+279
+00:17:26,450 --> 00:17:27,530
+Perfecto.
+
+280
+00:17:27,890 --> 00:17:29,030
+Mira lo que ha sucedido.
+
+281
+00:17:29,450 --> 00:17:35,240
+Me ha llevado directamente a la página de login con el command, verificación y el email.
+
+282
+00:17:35,870 --> 00:17:36,710
+Y que me dice acá?
+
+283
+00:17:36,740 --> 00:17:39,110
+Muchas gracias por registrarte en nuestro portal vacío.
+
+284
+00:17:39,110 --> 00:17:42,170
+Tres demás Enviado un email para confirmar tu cuenta.
+
+285
+00:17:42,830 --> 00:17:45,920
+Si ya verificaste tu cuenta, puedes iniciar sesión en login.
+
+286
+00:17:46,610 --> 00:17:52,580
+Bien, vayamos a nuestro correo de bachilleres a verificar si me llegó este email y como puedes notarlo
+
+287
+00:17:52,580 --> 00:17:54,800
+ya me llegó el correo electrónico.
+
+288
+00:17:54,800 --> 00:17:55,580
+Quien me lo envió?
+
+289
+00:17:55,850 --> 00:18:02,090
+Base social el master y me dice hola nestor porfavor activa tu cuenta dándole click al siguiente link
+
+290
+00:18:02,660 --> 00:18:08,420
+y donde apunte el link a lo que 8011 actívate, etc vamos a darle clic.
+
+291
+00:18:10,410 --> 00:18:11,910
+Y que me dice Felicidades.
+
+292
+00:18:11,910 --> 00:18:13,350
+Tu cuenta esta activa.
+
+293
+00:18:13,590 --> 00:18:14,230
+En serio?
+
+294
+00:18:14,250 --> 00:18:15,390
+Vamos a verificarlo.
+
+295
+00:18:16,020 --> 00:18:22,620
+Vamos a la pagina de administración de Yahoo a que aparecen los account ya que aparece maxi tres gmail.com
+
+296
+00:18:22,620 --> 00:18:27,240
+y puedes darte cuenta que ya esta activo significa que ya puedo hacer elojim.
+
+297
+00:18:28,460 --> 00:18:31,000
+Vayamos a nuestra página que dice que ella.
+
+298
+00:18:31,340 --> 00:18:33,830
+Si ya verificaste tu cuenta, puedes iniciar sesión en login.
+
+299
+00:18:34,100 --> 00:18:35,180
+Vamos a darle clic a Login.
+
+300
+00:18:36,400 --> 00:18:40,690
+Y aquí le voy a poner Bakshi Dress en social sin social.
+
+301
+00:18:41,330 --> 00:18:41,530
+Aquí.
+
+302
+00:18:41,860 --> 00:18:42,610
+Este social.
+
+303
+00:18:43,680 --> 00:18:44,470
+Bachilleres.
+
+304
+00:18:44,470 --> 00:18:44,520
+Tres.
+
+305
+00:18:44,520 --> 00:18:46,950
+Le pongo aquí el correo electrónico, el password.
+
+306
+00:18:47,790 --> 00:18:49,980
+Listo, ya tenemos las credenciales correctas.
+
+307
+00:18:49,980 --> 00:18:51,150
+Le damos clic a Login.
+
+308
+00:18:52,860 --> 00:18:54,960
+Y ya hemos iniciado sesión.
+
+309
+00:18:54,990 --> 00:18:56,160
+Bienvenido, Nestor.
+
+310
+00:18:56,730 --> 00:18:57,720
+Perfecto.
+
+311
+00:18:57,930 --> 00:19:04,920
+Entonces, de esta forma ya hemos comprobado cómo funciona crear un link de acceso y activación de cuentas
+
+312
+00:19:04,920 --> 00:19:06,000
+utilizando Jango.

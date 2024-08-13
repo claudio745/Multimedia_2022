@@ -1,0 +1,747 @@
+1
+00:00:00,450 --> 00:00:03,790
+En este capítulo vamos a continuar trabajando en los Guardians.
+
+2
+00:00:04,350 --> 00:00:06,810
+En el capítulo anterior creamos la interfaz gráfica.
+
+3
+00:00:07,020 --> 00:00:13,770
+Agregamos dos Variant para este producto de camisa moderna para seleccionar un color y también una talla.
+
+4
+00:00:14,310 --> 00:00:17,900
+Pero en este momento, estos son arco odiados.
+
+5
+00:00:17,910 --> 00:00:22,650
+Son de valores duros, tanto el nombre del Variant como el Value.
+
+6
+00:00:23,220 --> 00:00:30,000
+Lo que quiero hacer ahora es crear, hacer que estos valores sean totalmente dinámicos y se almacenen
+
+7
+00:00:30,000 --> 00:00:31,200
+en la base de datos.
+
+8
+00:00:31,380 --> 00:00:36,780
+Por este motivo vamos a crear una estructura nueva que llamaremos variación.
+
+9
+00:00:38,440 --> 00:00:44,560
+Recuerda, aquí tenemos dos valores principales que almacenar en esta nueva tabla lo que es el nombre
+
+10
+00:00:44,560 --> 00:00:49,630
+del Variant o categoría del Variant, que podría ser en este caso el tipo de color.
+
+11
+00:00:50,260 --> 00:00:54,520
+Y otro es el valor del Variant, que podría ser rojo.
+
+12
+00:00:56,000 --> 00:00:59,760
+Vamos a Hatton y nos ubicamos en la carpeta Store.
+
+13
+00:00:59,960 --> 00:01:03,020
+Dentro de Store vamos a abrir Models y.
+
+14
+00:01:05,160 --> 00:01:11,400
+Y aquí vamos a crear el neoclásico luego del la función def str del product name, vamos a darle un
+
+15
+00:01:11,400 --> 00:01:13,540
+enter y ten cuidado con los stops.
+
+16
+00:01:13,560 --> 00:01:18,330
+Tiene que estar este nuevo tab al nivel del class, que es en la parte superior que representa producto.
+
+17
+00:01:19,440 --> 00:01:20,670
+Aquí tenemos el cursor.
+
+18
+00:01:21,130 --> 00:01:23,230
+Escribimos class variación.
+
+19
+00:01:25,430 --> 00:01:29,720
+Que reciba un model model como parámetro.
+
+20
+00:01:31,490 --> 00:01:35,420
+Este batallón tiene que tener una relación directa con el producto.
+
+21
+00:01:35,600 --> 00:01:37,670
+Realmente forma parte del producto.
+
+22
+00:01:37,880 --> 00:01:41,420
+Entonces vamos a indicarle aquí de que este variación.
+
+23
+00:01:42,560 --> 00:01:50,960
+Tenga un producto igual a la escuela Models for Camp como una clave foránea a producto.
+
+24
+00:01:53,410 --> 00:01:54,790
+Y le agregamos el producto.
+
+25
+00:01:57,270 --> 00:02:05,490
+Con una dependencia para on Gilead significa que cuando se elimine un producto, también va a eliminarse
+
+26
+00:02:05,490 --> 00:02:07,200
+el variación automáticamente.
+
+27
+00:02:09,500 --> 00:02:15,360
+Vamos a crear otro que es el variación category, que también le podríamos poner el nombre del payaso.
+
+28
+00:02:16,830 --> 00:02:18,040
+Les podemos sacar modales.
+
+29
+00:02:18,090 --> 00:02:19,860
+Punto, Garfield.
+
+30
+00:02:22,580 --> 00:02:23,430
+Max Link.
+
+31
+00:02:23,480 --> 00:02:29,540
+Le ponemos en Steam y a continuación vamos a escribir una propiedad que va a ser choices.
+
+32
+00:02:30,260 --> 00:02:31,400
+Qué significará esto?
+
+33
+00:02:31,640 --> 00:02:36,530
+Significa que va a ser un elemento seleccionable ya pre-existente.
+
+34
+00:02:36,710 --> 00:02:41,570
+Puedes llamarle una especie de diccionario que vamos a crear.
+
+35
+00:02:41,810 --> 00:02:47,710
+Vamos a la parte superior sobre el class, al nivel de class, y creamos acá una variación.
+
+36
+00:02:49,600 --> 00:02:52,450
+Category Raya para abajo Choice.
+
+37
+00:02:56,640 --> 00:03:02,220
+De esta forma hacemos que las variaciones puedan ser seleccionables.
+
+38
+00:03:03,500 --> 00:03:04,700
+Ponemos un color.
+
+39
+00:03:07,000 --> 00:03:07,600
+Color.
+
+40
+00:03:09,350 --> 00:03:11,000
+Te vamos a poner una talla.
+
+41
+00:03:11,480 --> 00:03:11,960
+Talla?
+
+42
+00:03:15,610 --> 00:03:16,900
+Aquí le ponemos también su coma.
+
+43
+00:03:18,200 --> 00:03:19,340
+Voy a copiar este nombre.
+
+44
+00:03:20,030 --> 00:03:23,840
+Y ahora vamos a indicar que esta propiedad variación category.
+
+45
+00:03:24,110 --> 00:03:30,560
+Parta sea seleccionable con este choice igual a variación category choices.
+
+46
+00:03:31,040 --> 00:03:31,760
+Perfecto.
+
+47
+00:03:32,030 --> 00:03:32,870
+Vamos a continuar.
+
+48
+00:03:33,050 --> 00:03:34,820
+Ahora vamos con el variación value.
+
+49
+00:03:36,470 --> 00:03:37,630
+Que este es un bar.
+
+50
+00:03:38,600 --> 00:03:39,470
+Un Sarsfield.
+
+51
+00:03:39,890 --> 00:03:40,580
+Sarsfield?
+
+52
+00:03:42,260 --> 00:03:44,040
+Que le ponemos un link.
+
+53
+00:03:45,150 --> 00:03:45,780
+Igual hacían.
+
+54
+00:03:49,400 --> 00:03:51,060
+También vamos a crear otro que es.
+
+55
+00:03:51,080 --> 00:03:51,980
+Es Active.
+
+56
+00:03:52,490 --> 00:03:53,120
+Está activo.
+
+57
+00:03:54,610 --> 00:03:56,290
+Esto va a ser un Bull y Anfield.
+
+58
+00:03:59,000 --> 00:04:01,160
+Y por defecto le vamos a indicar que esté dentro.
+
+59
+00:04:03,490 --> 00:04:05,260
+También le voy a poner un Creative Date.
+
+60
+00:04:07,430 --> 00:04:09,530
+Models to date.
+
+61
+00:04:10,960 --> 00:04:11,830
+Stanfield.
+
+62
+00:04:13,240 --> 00:04:14,740
+Y por defecto el indico que.
+
+63
+00:04:16,470 --> 00:04:17,740
+Agregue la fecha actual.
+
+64
+00:04:17,760 --> 00:04:19,590
+Entonces le pongo aquí un true.
+
+65
+00:04:20,750 --> 00:04:21,350
+Atrapado.
+
+66
+00:04:22,470 --> 00:04:28,080
+Y para poder listar los variaciones, recuerdas que utilizamos una función de tipo test que se llama
+
+67
+00:04:28,320 --> 00:04:34,530
+dos rayas para abajo STR dos rayas para abajo self que representa el variación.
+
+68
+00:04:35,600 --> 00:04:38,970
+En este caso es lo que quiero que pinte sea el producto.
+
+69
+00:04:41,130 --> 00:04:46,140
+Vamos a darle una última revisada a las propiedades aquí en producto.
+
+70
+00:04:46,380 --> 00:04:48,270
+Estoy indicándole en Cascade.
+
+71
+00:04:48,570 --> 00:04:52,360
+Pero debería indicarle que este Cascade viene desde Models.
+
+72
+00:04:53,250 --> 00:04:54,780
+Pues aquí le pongo Models.
+
+73
+00:04:56,220 --> 00:04:56,850
+Cascade?
+
+74
+00:04:57,900 --> 00:04:58,590
+Perfecto.
+
+75
+00:04:59,100 --> 00:05:05,640
+Ahora sí vamos a registrar esta nueva estructura, esta clase, para que se visualice dentro del módulo
+
+76
+00:05:05,640 --> 00:05:06,810
+de administración de Jango.
+
+77
+00:05:07,110 --> 00:05:12,300
+Así que vamos al archivo admin punto Pi, que está en la carpeta Store.
+
+78
+00:05:13,460 --> 00:05:19,280
+Lo abrimos y aquí vamos a escribir Admin punto siete, punto Register.
+
+79
+00:05:21,780 --> 00:05:25,770
+El nombre de la nueva estructura varía y en la parte superior.
+
+80
+00:05:25,800 --> 00:05:28,770
+Asegúrate de que aparezca el models in por producto.
+
+81
+00:05:28,770 --> 00:05:30,130
+Coma producto.
+
+82
+00:05:30,150 --> 00:05:31,200
+Coma variación.
+
+83
+00:05:33,040 --> 00:05:33,930
+Lo tenemos listo.
+
+84
+00:05:33,940 --> 00:05:35,980
+Voy a borrar los cambios del Safe Hall.
+
+85
+00:05:36,880 --> 00:05:40,990
+Y ahora vamos a crear el proceso de migración para que se genere esta tabla.
+
+86
+00:05:42,510 --> 00:05:43,020
+Vamos, Al.
+
+87
+00:05:43,020 --> 00:05:43,350
+Vas.
+
+88
+00:05:44,310 --> 00:05:46,420
+Voy a detener la ejecución del servidor.
+
+89
+00:05:46,440 --> 00:05:47,100
+Voy a limpiar el.
+
+90
+00:05:47,460 --> 00:05:48,390
+Hago un Sinclair.
+
+91
+00:05:49,830 --> 00:05:55,290
+Y ahora aquí voy a escribir primeramente el comando para poder generar el archivo de migración.
+
+92
+00:05:56,190 --> 00:05:59,370
+Hago un Python manage y espacio.
+
+93
+00:06:00,360 --> 00:06:00,590
+Me.
+
+94
+00:06:03,680 --> 00:06:04,520
+Y le damos enter.
+
+95
+00:06:05,870 --> 00:06:08,480
+Se ha generado exitosamente de archivos de migración.
+
+96
+00:06:09,140 --> 00:06:13,220
+Y a continuación, vamos a escribir un comando para ejecutar este archivo de migración.
+
+97
+00:06:13,580 --> 00:06:21,080
+Hacemos un pito manager y espacio migrante y le damos enter.
+
+98
+00:06:23,930 --> 00:06:24,520
+Perfecto.
+
+99
+00:06:24,530 --> 00:06:29,870
+Se ha creado sin ningún problema antes de ejecutar el servidor web para hacer las pruebas.
+
+100
+00:06:30,080 --> 00:06:34,220
+Vamos un momento a Store y ahora al archivo Models.
+
+101
+00:06:34,610 --> 00:06:38,900
+Y aquí había definido esta función def STR.
+
+102
+00:06:38,900 --> 00:06:43,730
+Pero esta función es para que imprima devuelva un valor de tipo string.
+
+103
+00:06:44,090 --> 00:06:46,910
+Y este es no es un string, es un objeto.
+
+104
+00:06:47,850 --> 00:06:53,620
+Entonces aquí en vez de STR le vamos a poner un Unicode para que no me dé ningún problema.
+
+105
+00:06:53,640 --> 00:06:55,500
+Menu file Safe all.
+
+106
+00:06:57,370 --> 00:07:03,160
+Y otra vez vamos al valle y dentro del valle más escribir Python espacio management, espacio run,
+
+107
+00:07:03,350 --> 00:07:05,230
+harvard enter.
+
+108
+00:07:06,440 --> 00:07:07,110
+Se ejecutó.
+
+109
+00:07:07,460 --> 00:07:08,660
+Vamos ahora a la página.
+
+110
+00:07:10,050 --> 00:07:17,130
+Estamos dentro de 8000 islas Admin y aquí puedo ver dentro de la App Store que aparece varias.
+
+111
+00:07:17,940 --> 00:07:18,540
+Perfecto.
+
+112
+00:07:18,540 --> 00:07:20,130
+Vamos a darle un clic Editions.
+
+113
+00:07:21,490 --> 00:07:22,870
+No tengo derecho a un registro.
+
+114
+00:07:23,170 --> 00:07:25,870
+Voy a crear una nueva aparición.
+
+115
+00:07:26,680 --> 00:07:30,790
+Me pide aquí agregar a qué producto quieres darle esa variación?
+
+116
+00:07:31,270 --> 00:07:33,760
+Voy a indicarle que sea a camisa moderna.
+
+117
+00:07:34,630 --> 00:07:36,160
+Category versión Category.
+
+118
+00:07:36,700 --> 00:07:38,500
+Voy a indicarle que seleccione Color.
+
+119
+00:07:40,790 --> 00:07:41,690
+Que sea rojo.
+
+120
+00:07:42,850 --> 00:07:43,900
+Lo explica Guardar.
+
+121
+00:07:45,010 --> 00:07:45,490
+Perfecto.
+
+122
+00:07:45,490 --> 00:07:46,420
+Se guardó la aparición.
+
+123
+00:07:46,840 --> 00:07:47,860
+Vamos a agregar otra.
+
+124
+00:07:49,270 --> 00:07:51,670
+Camisa moderna color.
+
+125
+00:07:54,190 --> 00:07:54,640
+Negro.
+
+126
+00:07:56,610 --> 00:07:57,450
+Y guardamos ese va.
+
+127
+00:07:57,810 --> 00:07:58,950
+Vamos a guardar otro más.
+
+128
+00:07:59,730 --> 00:08:00,840
+Camisa moderna.
+
+129
+00:08:02,180 --> 00:08:02,900
+Color.
+
+130
+00:08:05,360 --> 00:08:05,900
+Naranja.
+
+131
+00:08:09,250 --> 00:08:10,160
+Otro más.
+
+132
+00:08:10,210 --> 00:08:11,350
+Camisa moderna.
+
+133
+00:08:11,980 --> 00:08:12,640
+Color.
+
+134
+00:08:14,670 --> 00:08:17,790
+Si le ponemos Lila, estamos probando.
+
+135
+00:08:18,950 --> 00:08:19,490
+Perfecto.
+
+136
+00:08:20,420 --> 00:08:22,220
+Y así podemos ir grabando más variantes.
+
+137
+00:08:22,310 --> 00:08:24,050
+Voy a ponerle uno para talla.
+
+138
+00:08:24,410 --> 00:08:27,050
+También vamos a ponerle Large.
+
+139
+00:08:30,560 --> 00:08:31,350
+Hacemos otro.
+
+140
+00:08:31,650 --> 00:08:32,720
+Camisa moderna.
+
+141
+00:08:33,170 --> 00:08:33,710
+Talla.
+
+142
+00:08:37,080 --> 00:08:37,680
+Medium.
+
+143
+00:08:43,090 --> 00:08:43,560
+Solo eso.
+
+144
+00:08:43,750 --> 00:08:44,350
+Le voy a agarrar.
+
+145
+00:08:44,860 --> 00:08:45,270
+Listo.
+
+146
+00:08:45,280 --> 00:08:48,790
+Vamos ahora hacia la lista de Nations para verlos.
+
+147
+00:08:49,210 --> 00:08:50,470
+Y aquí tengo seis variaciones.
+
+148
+00:08:50,740 --> 00:08:52,110
+Me puedes indicar aquí, profesor?
+
+149
+00:08:52,120 --> 00:08:53,650
+Pero no se ve muy bien.
+
+150
+00:08:54,370 --> 00:08:55,470
+Y te doy la razón.
+
+151
+00:08:55,480 --> 00:09:01,150
+Vamos a hacerle una pequeña modificación a mi programa para que este muestre más detalles de la variación.
+
+152
+00:09:02,380 --> 00:09:05,380
+Para esto vamos a la carpeta store y al archivo Add MPI.
+
+153
+00:09:06,570 --> 00:09:13,790
+Y ahora después de este class product admin voy a crear otro class que lo voy a poner class Variación
+
+154
+00:09:13,800 --> 00:09:14,340
+Admin.
+
+155
+00:09:16,410 --> 00:09:17,870
+Y le ponemos un admin.
+
+156
+00:09:18,240 --> 00:09:18,750
+Punto.
+
+157
+00:09:20,020 --> 00:09:20,980
+Motel Admin.
+
+158
+00:09:22,400 --> 00:09:23,270
+Dos puntos.
+
+159
+00:09:26,130 --> 00:09:28,170
+Y le agrego este list display.
+
+160
+00:09:29,570 --> 00:09:30,560
+Que va a ser igual.
+
+161
+00:09:30,950 --> 00:09:33,770
+Vamos a poner aquí que quiero que se vea el producto.
+
+162
+00:09:33,770 --> 00:09:34,180
+Que el nombre.
+
+163
+00:09:34,190 --> 00:09:34,790
+Producto.
+
+164
+00:09:36,330 --> 00:09:38,100
+El variación category.
+
+165
+00:09:41,520 --> 00:09:42,900
+El variación value.
+
+166
+00:09:45,630 --> 00:09:47,670
+Y también saber si está activo o no el.
+
+167
+00:09:51,430 --> 00:09:54,520
+También indico los campos editables y editables.
+
+168
+00:09:57,360 --> 00:09:59,490
+Digo que se active.
+
+169
+00:10:03,980 --> 00:10:05,930
+Los campos para filtrar los filter.
+
+170
+00:10:05,960 --> 00:10:06,680
+Le ponemos.
+
+171
+00:10:06,680 --> 00:10:07,790
+Que sea un.
+
+172
+00:10:09,550 --> 00:10:10,210
+Produc.
+
+173
+00:10:12,110 --> 00:10:13,400
+Varias son category.
+
+174
+00:10:17,020 --> 00:10:17,410
+Vale.
+
+175
+00:10:17,620 --> 00:10:18,070
+Vale.
+
+176
+00:10:19,900 --> 00:10:21,900
+Y también es Active.
+
+177
+00:10:23,430 --> 00:10:26,060
+Aquí me faltó agregar una coma luego del IS active.
+
+178
+00:10:26,070 --> 00:10:30,630
+Cuando tenga un solo elemento dentro de este arreglo siempre es bueno colocarle esta coma.
+
+179
+00:10:30,630 --> 00:10:33,420
+En caso contrario me va a dar un error en la compilación.
+
+180
+00:10:34,480 --> 00:10:34,930
+Lo tenemos.
+
+181
+00:10:34,930 --> 00:10:35,260
+Listo.
+
+182
+00:10:35,290 --> 00:10:36,520
+Menú File Safe All.
+
+183
+00:10:38,320 --> 00:10:39,610
+Vamos ahora a la página.
+
+184
+00:10:40,670 --> 00:10:47,060
+Y como puedes ver refrescando la pagina ya me aparece el producto, la variación, el value.
+
+185
+00:10:47,720 --> 00:10:54,260
+También el status es activo y aquí puedes notar que me aparecen los filtros que quiero activar.
+
+186
+00:10:54,740 --> 00:11:00,080
+Por producto, por category, por value o también si está activo o no.
+
+187
+00:11:01,540 --> 00:11:03,520
+Continuamos en el siguiente capítulo.

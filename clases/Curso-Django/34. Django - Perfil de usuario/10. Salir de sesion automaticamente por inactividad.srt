@@ -1,0 +1,287 @@
+1
+00:00:00,420 --> 00:00:04,140
+Vamos a continuar trabajando en nuestro e-commerce ahora con un tema muy importante.
+
+2
+00:00:04,330 --> 00:00:10,830
+Mira, estoy en sesión en este momento, pero qué pasaría si dejara mi computadora prendida y con la
+
+3
+00:00:10,830 --> 00:00:11,850
+sesión abierta?
+
+4
+00:00:12,540 --> 00:00:14,910
+No debería de automáticamente salir sesión?
+
+5
+00:00:15,180 --> 00:00:21,540
+No debería tener un timer, un reloj que me permita controlar el tiempo que la sesión del usuario está
+
+6
+00:00:21,540 --> 00:00:24,270
+inactiva y posteriormente cerrarla.
+
+7
+00:00:24,710 --> 00:00:31,820
+Si ahora vamos a trabajar en ese tema, en el expirar la sesión automáticamente cuando la cuenta se
+
+8
+00:00:31,820 --> 00:00:32,280
+inactiva.
+
+9
+00:00:33,110 --> 00:00:36,410
+Para esto vamos a instalar un paquete importante de chango.
+
+10
+00:00:37,190 --> 00:00:39,410
+Primero vamos a detener nuestro servidor.
+
+11
+00:00:40,730 --> 00:00:41,840
+Limpiamos la consola.
+
+12
+00:00:43,400 --> 00:00:48,710
+Y aquí vamos a escribir Pip install jango.
+
+13
+00:00:52,210 --> 00:00:52,690
+Raya.
+
+14
+00:00:52,700 --> 00:00:54,280
+Sesión doble s.
+
+15
+00:00:54,550 --> 00:00:55,000
+La segunda.
+
+16
+00:00:55,040 --> 00:00:55,240
+Ese.
+
+17
+00:00:56,750 --> 00:00:57,560
+Time out.
+
+18
+00:00:58,820 --> 00:00:59,630
+Y le damos enter.
+
+19
+00:01:01,010 --> 00:01:02,390
+Perfecto se ha instalado.
+
+20
+00:01:03,320 --> 00:01:09,170
+Y ahora vamos a ir al archivo Settings de nuestro proyecto E-commerce y Commerce y Commerce que aparece
+
+21
+00:01:09,170 --> 00:01:14,390
+el punto PI y nos ubicamos en la propiedad middleware.
+
+22
+00:01:14,510 --> 00:01:15,650
+A que aparece el middleware.
+
+23
+00:01:16,220 --> 00:01:16,580
+Esto.
+
+24
+00:01:17,560 --> 00:01:24,580
+Y vamos a incluir la línea para acceder a este paquete que es Jango Ra y para abajo doble sesión.
+
+25
+00:01:26,140 --> 00:01:26,860
+Time out.
+
+26
+00:01:29,310 --> 00:01:31,050
+Punto Middleware.
+
+27
+00:01:32,200 --> 00:01:35,290
+Punto sesión con la primera S mayúscula.
+
+28
+00:01:36,610 --> 00:01:38,140
+TIME mayúscula.
+
+29
+00:01:41,150 --> 00:01:44,000
+Middleware M mayúscula con doble de.
+
+30
+00:01:45,420 --> 00:01:47,640
+Lo tenemos y al final siempre es su coma.
+
+31
+00:01:49,110 --> 00:01:53,310
+Y ahora nos toca configurar el tiempo en el cual se va a expirar la sesión.
+
+32
+00:01:53,910 --> 00:01:56,850
+Por eso aquí voy a escribir Este en mayúscula.
+
+33
+00:01:57,060 --> 00:02:02,220
+Esta propiedad sesión raya para abajo, espiral para abajo seconds.
+
+34
+00:02:02,610 --> 00:02:03,390
+Y le indico que.
+
+35
+00:02:04,410 --> 00:02:09,600
+En 60 segundos por ahora, para hacer una prueba que es 60 segundos, automáticamente termine la sesión.
+
+36
+00:02:10,290 --> 00:02:16,260
+También le tengo que indicar que espere la sesión, pero que está en función a la última, al último
+
+37
+00:02:16,260 --> 00:02:20,220
+momento, al último segundo en el cual el usuario interactuó con la aplicación.
+
+38
+00:02:20,340 --> 00:02:24,000
+Si no interactúa después de 60 segundos, va a expirar su sesión.
+
+39
+00:02:24,780 --> 00:02:28,380
+Por eso le pongo acá sesión para abajo.
+
+40
+00:02:28,380 --> 00:02:29,100
+Expire.
+
+41
+00:02:29,610 --> 00:02:30,540
+Raya para abajo.
+
+42
+00:02:30,650 --> 00:02:31,200
+Hacer.
+
+43
+00:02:32,440 --> 00:02:34,270
+Las Activity.
+
+44
+00:02:36,110 --> 00:02:37,480
+Y le digo que esto va a ser true.
+
+45
+00:02:39,450 --> 00:02:45,030
+Yo una propiedad final es indicarte OK, va a perder la sesión, pero a qué página quieres redireccionar?
+
+46
+00:02:45,870 --> 00:02:46,920
+Es una buena pregunta.
+
+47
+00:02:47,220 --> 00:02:50,850
+Debe ser hacia la página de login para que vuelva a iniciar sesión.
+
+48
+00:02:50,880 --> 00:02:52,260
+Le voy a poner entonces sesión.
+
+49
+00:02:53,290 --> 00:03:01,600
+Time Out Corre Direct se tiene que ir hacia Account Slash Login.
+
+50
+00:03:02,740 --> 00:03:06,190
+Entonces, por ahora le estoy dando 60 segundos.
+
+51
+00:03:06,220 --> 00:03:10,030
+Voy a ponerle mejor 20 segundos para hacer mi prueba.
+
+52
+00:03:10,600 --> 00:03:11,020
+Está bien.
+
+53
+00:03:11,050 --> 00:03:12,550
+Voy a hacer una prueba de 20 segundos.
+
+54
+00:03:12,570 --> 00:03:17,590
+Esperar 20 segundos para que automáticamente sienta que ya perdió la sesión, que no estoy actuando
+
+55
+00:03:17,590 --> 00:03:22,180
+sobre la página y automáticamente me redirecciona a la página de login.
+
+56
+00:03:22,750 --> 00:03:28,450
+Vamos a guardar los cambios del Safe Hall y vamos rápidamente a la página.
+
+57
+00:03:28,740 --> 00:03:28,950
+Claro.
+
+58
+00:03:28,990 --> 00:03:34,060
+Primero, no te olvides, tenemos que ir al vas a ejecutar el servidor Django Python Manager Rand Server
+
+59
+00:03:34,570 --> 00:03:36,820
+es el hilo de sesión para poder ingresar desde cero.
+
+60
+00:03:36,950 --> 00:03:38,710
+Ingrese aquí las credenciales.
+
+61
+00:03:38,710 --> 00:03:39,790
+Vamos a usar el login.
+
+62
+00:03:40,390 --> 00:03:42,070
+Estoy en el dashboard principal.
+
+63
+00:03:42,100 --> 00:03:47,860
+Voy a ir a la página de home y voy a No voy a hacer ninguna actividad por diez segundos dentro de esta
+
+64
+00:03:47,860 --> 00:03:50,590
+página para ver cómo me redirecciona.
+
+65
+00:03:53,360 --> 00:03:54,890
+Ya pasaron más de diez segundos.
+
+66
+00:03:55,130 --> 00:03:59,540
+Vamos a darle click al icono de tres y mira automáticamente.
+
+67
+00:03:59,540 --> 00:04:02,660
+Ya me está redireccionando hacia la página de login.
+
+68
+00:04:02,660 --> 00:04:07,760
+Significa que automáticamente está sacándome de sesión después de diez segundos.
+
+69
+00:04:08,680 --> 00:04:15,580
+Volvamos nuevamente a eCommerce Settings, porque lo que yo quiero es que realmente no suceda después
+
+70
+00:04:15,580 --> 00:04:18,400
+de 20 segundos, sino después de una hora de inactividad.
+
+71
+00:04:18,760 --> 00:04:22,390
+Así que para que sea una hora, aquí le tengo que poner 3600.
+
+72
+00:04:23,340 --> 00:04:26,700
+Vamos a borrar los cambios y continuamos en el próximo capítulo.

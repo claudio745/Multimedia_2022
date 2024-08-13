@@ -1,0 +1,811 @@
+1
+00:00:00,580 --> 00:00:03,890
+En este capítulo vamos a trabajar en la página de orden.
+
+2
+00:00:03,940 --> 00:00:04,450
+Cumplid.
+
+3
+00:00:04,660 --> 00:00:06,130
+Cuando va a aparecer esta página?
+
+4
+00:00:06,400 --> 00:00:12,220
+Cuando le das clic a este botón PayPal, ingreses los datos del usuario que está haciendo la transacción
+
+5
+00:00:12,220 --> 00:00:14,560
+bancaria inmediatamente después.
+
+6
+00:00:14,560 --> 00:00:19,420
+Si fue correcta, debe redireccionar a esta nueva página Add Order.
+
+7
+00:00:19,420 --> 00:00:19,900
+Cumplid.
+
+8
+00:00:20,740 --> 00:00:21,520
+Estamos en auto.
+
+9
+00:00:21,550 --> 00:00:26,650
+Vamos a ubicarnos en la carpeta orders y ahora vamos al archivo el pi.
+
+10
+00:00:26,730 --> 00:00:32,530
+Y aquí habíamos agregado antes estos pads referentes a Payment y Play Order.
+
+11
+00:00:32,770 --> 00:00:34,270
+Voy a copiar el último de Payment.
+
+12
+00:00:35,920 --> 00:00:36,930
+Aquí le pegamos.
+
+13
+00:00:37,260 --> 00:00:39,630
+Voy a indicarle que ahora se va a llamar ese pad.
+
+14
+00:00:41,080 --> 00:00:42,040
+Orden completo.
+
+15
+00:00:44,920 --> 00:00:47,770
+Y aquí le vamos a poner orden completo.
+
+16
+00:00:51,450 --> 00:00:55,170
+Order Complete List es el nombre de la función de F que vamos a trabajar.
+
+17
+00:00:55,170 --> 00:00:57,000
+Nunca te olvides de colocar la coma al final.
+
+18
+00:00:58,020 --> 00:01:03,390
+Y ahora vamos a irnos hacia el archivo bus que está el interior de Orders también.
+
+19
+00:01:05,560 --> 00:01:05,860
+Esto.
+
+20
+00:01:05,860 --> 00:01:07,240
+Vamos a la parte inferior.
+
+21
+00:01:08,510 --> 00:01:11,000
+Si quieres minimizarlo para que se pueda ver mejor.
+
+22
+00:01:11,000 --> 00:01:15,050
+Por ejemplo, voy a minimizar el desfase y el placeholder.
+
+23
+00:01:15,890 --> 00:01:20,960
+Lo hemos minimizado y ahora después del placeholder vamos a crear.
+
+24
+00:01:22,150 --> 00:01:22,960
+Este orden.
+
+25
+00:01:28,420 --> 00:01:29,130
+Que ponemos acá.
+
+26
+00:01:29,280 --> 00:01:31,280
+Que reciba un parámetro de tipo request.
+
+27
+00:01:31,350 --> 00:01:32,070
+Dos puntos.
+
+28
+00:01:33,540 --> 00:01:37,360
+Y le digo que haga un tour hacia Vamos a escribirle.
+
+29
+00:01:38,530 --> 00:01:39,250
+Render.
+
+30
+00:01:41,260 --> 00:01:43,450
+Rico es coma orders.
+
+31
+00:01:44,620 --> 00:01:49,690
+Es las horas de trabajo con Please punto html.
+
+32
+00:01:53,640 --> 00:01:58,380
+Vamos a copiar el nombre de ese template o del HTML.
+
+33
+00:01:59,800 --> 00:02:02,020
+Y ubiquémonos ahora en la carpeta Templates.
+
+34
+00:02:02,110 --> 00:02:03,430
+Aquí aparece Orders.
+
+35
+00:02:04,840 --> 00:02:09,640
+Y le damos clic derecho Newfield y le ponemos el nombre order cómplice html.
+
+36
+00:02:11,680 --> 00:02:14,050
+Aquí vamos a comenzar a trabajar con este template.
+
+37
+00:02:14,350 --> 00:02:19,080
+Primeramente le indicamos que extienda desde el HTML.
+
+38
+00:02:20,100 --> 00:02:22,030
+Este punto HTML lo tenemos.
+
+39
+00:02:22,360 --> 00:02:29,650
+Vamos ahora con el contenido variable y este sería dentro de un block content.
+
+40
+00:02:32,000 --> 00:02:33,680
+Aquí le ponemos el end block.
+
+41
+00:02:36,290 --> 00:02:41,740
+Esto ya tenemos preparado el template dentro de los recursos de este capítulo.
+
+42
+00:02:41,750 --> 00:02:46,760
+Este video vas a encontrar un archivo que se llama order cumplir el HTML.
+
+43
+00:02:47,000 --> 00:02:48,650
+Aquí lo he abierto como bloc de notas.
+
+44
+00:02:48,680 --> 00:02:50,510
+Voy a seleccionar todo el código.
+
+45
+00:02:51,650 --> 00:02:54,620
+Yo ahora le voy a pegar dentro de este blog content.
+
+46
+00:02:56,690 --> 00:02:57,860
+Vamos a borrar todos los cambios.
+
+47
+00:02:57,890 --> 00:02:59,990
+Menú False All Chat.
+
+48
+00:02:59,990 --> 00:03:02,690
+Ahora vamos hacia la página de home.
+
+49
+00:03:02,690 --> 00:03:03,590
+Voy a refrescar.
+
+50
+00:03:04,190 --> 00:03:05,870
+Voy a poner aquí un las.
+
+51
+00:03:07,230 --> 00:03:09,320
+Orders es la AGE.
+
+52
+00:03:09,510 --> 00:03:10,710
+En este caso debe ser.
+
+53
+00:03:11,830 --> 00:03:12,790
+No vamos a poner aquí.
+
+54
+00:03:12,820 --> 00:03:14,740
+Order abajo.
+
+55
+00:03:14,780 --> 00:03:18,880
+Complete Snatch Enter y mira este.
+
+56
+00:03:18,880 --> 00:03:21,910
+La interfaz gráfica que te da para hacer el pago se realizó con éxito.
+
+57
+00:03:21,910 --> 00:03:28,420
+Sigue comprando y aquí te aparece el detalle de los productos que has adquirido.
+
+58
+00:03:29,140 --> 00:03:30,810
+Pero por supuesto, estos son datos.
+
+59
+00:03:31,080 --> 00:03:31,650
+Datos.
+
+60
+00:03:32,230 --> 00:03:38,110
+Vamos a trabajar en que estos datos vengan de una transacción, de un orden de compra real.
+
+61
+00:03:39,040 --> 00:03:40,640
+Voy a comenzar a trabajarlo.
+
+62
+00:03:40,660 --> 00:03:42,750
+Primeramente el logo del inbox.
+
+63
+00:03:43,630 --> 00:03:45,040
+Estamos nuevamente dentro del código.
+
+64
+00:03:45,040 --> 00:03:48,010
+Vamos a ubicarnos en la sección que muestra el logo.
+
+65
+00:03:49,050 --> 00:03:50,340
+La parte superior.
+
+66
+00:03:50,760 --> 00:04:00,380
+Aquí me debe aparecer más o menos en la línea 27 aparece este envase logo CRS y lo voy a maximizar solo
+
+67
+00:04:00,390 --> 00:04:01,290
+para que lo veas bien.
+
+68
+00:04:02,640 --> 00:04:04,380
+Y luego pensé.
+
+69
+00:04:05,040 --> 00:04:07,080
+Voy a quitarlo de su lugar.
+
+70
+00:04:07,080 --> 00:04:08,040
+Vamos a colocar.
+
+71
+00:04:09,260 --> 00:04:13,870
+Ese código dinámico entre apóstrofes comillas.
+
+72
+00:04:13,880 --> 00:04:16,730
+Y aquí le ponemos un static.
+
+73
+00:04:18,340 --> 00:04:20,020
+Y aquí le pongo los apóstrofes.
+
+74
+00:04:20,590 --> 00:04:22,510
+Es las imágenes.
+
+75
+00:04:22,600 --> 00:04:30,220
+Es las logo cero uno punto PNG y para que cargue este static tenemos que ir a la parte superior.
+
+76
+00:04:31,140 --> 00:04:33,840
+Aquí después del stent, le vamos a agregar.
+
+77
+00:04:35,120 --> 00:04:35,720
+Chávez.
+
+78
+00:04:35,720 --> 00:04:37,340
+Porcentajes y décimas.
+
+79
+00:04:37,340 --> 00:04:39,080
+Un look estático de Carrie.
+
+80
+00:04:39,470 --> 00:04:41,900
+Este directorio lo tenemos.
+
+81
+00:04:41,900 --> 00:04:45,710
+Vamos a borrar los cambios de menú false all y vamos a probar.
+
+82
+00:04:46,430 --> 00:04:49,670
+Y si refrescamos la página, ya me aparece el logo.
+
+83
+00:04:50,950 --> 00:04:57,040
+Pero recuerda que esta página va a venir directamente desde la página de Payment.
+
+84
+00:04:57,220 --> 00:05:01,150
+Cuando tengamos un carrito de compras, voy a colocar un producto para que lo puedas ver.
+
+85
+00:05:03,390 --> 00:05:08,850
+Cuando tenga un elemento con el carrito de compras y quiera pagar ya que le diga ordenar los productos.
+
+86
+00:05:09,150 --> 00:05:12,020
+En este momento se va a producir la transacción con PayPal.
+
+87
+00:05:12,120 --> 00:05:19,240
+Si todo es correcto, lo que quiero es que me redirecciona donde me redirecciona a la página del orden
+
+88
+00:05:19,290 --> 00:05:19,830
+completo.
+
+89
+00:05:20,340 --> 00:05:26,550
+Entonces tengo que entender que quien me lleva indirectamente hacia la página order es el evento que
+
+90
+00:05:26,550 --> 00:05:29,730
+se dispara por la función payment.
+
+91
+00:05:31,150 --> 00:05:33,430
+Por eso vamos a ubicarnos nuevamente en esta función.
+
+92
+00:05:34,180 --> 00:05:36,460
+Voy a ir a la carpeta orders y vamos a buscar.
+
+93
+00:05:36,910 --> 00:05:41,080
+Y aquí aparece la función payment que trabajé en el capítulo anterior.
+
+94
+00:05:43,900 --> 00:05:46,480
+Esa es la última línea de la función payment.
+
+95
+00:05:47,810 --> 00:05:53,780
+Estoy aquí indicandole que me retorne un orders payment en HTML, pero voy a cambiarlo.
+
+96
+00:05:55,780 --> 00:05:57,370
+Luego de enviar el correo electrónico.
+
+97
+00:05:57,370 --> 00:06:03,550
+Lo que quiero que ocurra es que me envíe realmente un objeto tipo JSON de vuelta a mi página.
+
+98
+00:06:04,270 --> 00:06:10,450
+Entonces voy a colocar aquí que este JSON va a tener estos elementos orders number.
+
+99
+00:06:12,390 --> 00:06:14,520
+Que viene de la variable order number.
+
+100
+00:06:15,680 --> 00:06:15,860
+Qué?
+
+101
+00:06:15,860 --> 00:06:17,180
+Vamos a ponerle los puntos.
+
+102
+00:06:18,150 --> 00:06:21,120
+Coma también el trans id.
+
+103
+00:06:23,740 --> 00:06:25,950
+Dos puntos y este viene desde Payment.
+
+104
+00:06:26,010 --> 00:06:26,460
+Punto.
+
+105
+00:06:27,850 --> 00:06:28,900
+Payment Aid.
+
+106
+00:06:30,070 --> 00:06:30,430
+Coma.
+
+107
+00:06:32,120 --> 00:06:37,160
+Y lo que quiero que me retorne es un objeto JSON de vuelta a la página que invocó inicialmente este
+
+108
+00:06:37,160 --> 00:06:38,090
+método, este path.
+
+109
+00:06:38,810 --> 00:06:46,190
+Por eso voy a borrar este return render y voy a colocar return json response.
+
+110
+00:06:48,610 --> 00:06:51,370
+Se tele colocó la data que quiero que devuelva.
+
+111
+00:06:52,510 --> 00:06:58,210
+Te repito nuevamente para retornar la data a la función, al temple que está invocando este método.
+
+112
+00:06:58,360 --> 00:07:00,400
+Que template esta invocando este método?
+
+113
+00:07:00,730 --> 00:07:02,170
+El template payment.
+
+114
+00:07:02,380 --> 00:07:07,900
+Entonces a ese point es a donde yo estoy devolviendo este JSON con esta data.
+
+115
+00:07:08,350 --> 00:07:15,520
+Vamos al template, vamos a templates que aparece orders payment en HTML.
+
+116
+00:07:15,550 --> 00:07:18,970
+Este es el que va a recibir la data para que lo puedas ver.
+
+117
+00:07:18,970 --> 00:07:20,260
+Vamos a la parte final.
+
+118
+00:07:23,610 --> 00:07:27,450
+Aquí en la parte final me recuerdas que yo había hecho capítulos anteriores.
+
+119
+00:07:27,840 --> 00:07:33,750
+La elaboración de este método de una proof, claro, era para llamar justamente a esta función payment.
+
+120
+00:07:33,990 --> 00:07:40,740
+Pero también tenía aquí unos métodos de tipo Tim, que son los que iban a capturar la data de respuesta
+
+121
+00:07:40,740 --> 00:07:41,970
+que me enviaba el servidor.
+
+122
+00:07:42,690 --> 00:07:45,870
+Pero volvamos un momento al bus donde está la función payment.
+
+123
+00:07:46,590 --> 00:07:55,320
+Aquí me faltó agregar algo muy importante en la parte superior donde dice el rango HTTP y lo estoy importando,
+
+124
+00:07:55,740 --> 00:07:57,030
+no voy a importar.
+
+125
+00:07:57,040 --> 00:07:59,310
+Entonces aquí el front.
+
+126
+00:08:02,290 --> 00:08:02,790
+And Chango.
+
+127
+00:08:04,840 --> 00:08:06,670
+Punto a http.
+
+128
+00:08:08,550 --> 00:08:09,240
+Import.
+
+129
+00:08:10,990 --> 00:08:13,900
+El JSON response es el objeto que necesito.
+
+130
+00:08:15,040 --> 00:08:16,510
+Ahora vamos a la parte inferior.
+
+131
+00:08:17,710 --> 00:08:20,530
+Del método donde estoy enviando el objeto JSON.
+
+132
+00:08:21,160 --> 00:08:22,540
+Aquí está la data de JSON.
+
+133
+00:08:22,540 --> 00:08:23,300
+Está correcta.
+
+134
+00:08:23,320 --> 00:08:30,880
+Order number está bien, pero aquí este orders number viene desde el objeto Order Order Orden Number.
+
+135
+00:08:31,030 --> 00:08:33,190
+El payment está correcto.
+
+136
+00:08:34,210 --> 00:08:34,700
+Ahora sí.
+
+137
+00:08:34,720 --> 00:08:36,490
+Vayamos nuevamente hacia.
+
+138
+00:08:37,710 --> 00:08:45,120
+La carpeta Templates Orders que presenta el payment en HTML y en la parte final del archivo aparece
+
+139
+00:08:45,120 --> 00:08:45,810
+esta función.
+
+140
+00:08:46,280 --> 00:08:46,530
+Una.
+
+141
+00:08:48,190 --> 00:08:52,750
+Aquí tenemos entonces las funciones DAM, que representan la respuesta del servidor.
+
+142
+00:08:53,050 --> 00:08:53,590
+Aquí un momento.
+
+143
+00:08:53,590 --> 00:08:55,840
+Me faltó colocarle entre paréntesis ese objeto.
+
+144
+00:08:58,370 --> 00:09:00,620
+Y también entre paréntesis, ese objeto data.
+
+145
+00:09:02,150 --> 00:09:05,390
+Ahora lo que necesito es que cuando me devuelva la data.
+
+146
+00:09:05,600 --> 00:09:06,140
+Quiero.
+
+147
+00:09:06,500 --> 00:09:13,050
+Quiero que se redirecciones hacia la página order complete utilizando esta función.
+
+148
+00:09:14,000 --> 00:09:19,340
+Que se supone está recibiendo los datos de la función Dev Payment.
+
+149
+00:09:19,400 --> 00:09:23,540
+Entonces voy aquí a borrar este console log.
+
+150
+00:09:24,140 --> 00:09:25,250
+Le pongo unas llaves.
+
+151
+00:09:27,880 --> 00:09:30,170
+Yaquí vamos a aumento.
+
+152
+00:09:30,340 --> 00:09:31,450
+Me falta un paréntesis.
+
+153
+00:09:32,000 --> 00:09:33,340
+Si después le un paréntesis.
+
+154
+00:09:34,260 --> 00:09:38,010
+Y le voy a poner un punto y coma listo aquí dentro de esta función.
+
+155
+00:09:38,340 --> 00:09:40,180
+Vamos a indicarle que haga un retire.
+
+156
+00:09:40,200 --> 00:09:41,040
+Voy a hacer 1/5.
+
+157
+00:09:41,070 --> 00:09:41,670
+Lo que se llama.
+
+158
+00:09:42,810 --> 00:09:44,760
+Punto a href igual a qué?
+
+159
+00:09:45,880 --> 00:09:48,880
+Al ver el pase de mí, de mi página.
+
+160
+00:09:50,170 --> 00:09:53,950
+Voy a colocarle que se llama redireccionar y en un momento lo voy a definir como variable en la parte
+
+161
+00:09:53,950 --> 00:09:54,400
+superior.
+
+162
+00:09:55,000 --> 00:09:57,770
+Voy a maximizar mi código para que lo pueda ver bien.
+
+163
+00:09:57,790 --> 00:10:03,250
+Redireccionar el concatenado con con los parámetros que me está enviando de vuelta a la función.
+
+164
+00:10:03,610 --> 00:10:09,700
+Entonces acá le voy a poner el primer parámetro que se llame Order Number.
+
+165
+00:10:11,740 --> 00:10:12,070
+Igual.
+
+166
+00:10:12,070 --> 00:10:12,700
+A quién va a ser?
+
+167
+00:10:12,730 --> 00:10:17,710
+A la data que te está devolviendo el servidor que es data punto order number.
+
+168
+00:10:21,010 --> 00:10:27,880
+Y esto concatenado con otro parámetro que es el payment para abajo Audi.
+
+169
+00:10:30,250 --> 00:10:34,060
+Igual a la data que te el servidor, que es el punto.
+
+170
+00:10:35,740 --> 00:10:36,200
+Trans.
+
+171
+00:10:36,460 --> 00:10:36,850
+Heidi.
+
+172
+00:10:37,390 --> 00:10:37,870
+Listo.
+
+173
+00:10:38,740 --> 00:10:40,120
+Le vamos a poner un punto y coma.
+
+174
+00:10:40,420 --> 00:10:47,680
+Voy a minimizar el archivo porque quiero que valides que la data que estás consumiendo tenga esos parámetros.
+
+175
+00:10:47,680 --> 00:10:49,590
+Orden Number y Transit.
+
+176
+00:10:50,260 --> 00:10:52,420
+Vayamos a la función Payment.
+
+177
+00:10:53,460 --> 00:10:54,570
+Aquí está la función payment.
+
+178
+00:10:55,670 --> 00:10:58,880
+Y efectivamente, lo que yo estoy devolviendo es este objeto.
+
+179
+00:10:58,910 --> 00:11:05,690
+Data con order number y el transition en un JSON Response, que es justamente lo que está consumiendo
+
+180
+00:11:05,690 --> 00:11:07,490
+mi función de data.
+
+181
+00:11:08,090 --> 00:11:15,890
+Como paso final me falta setear esta variable Direcc URL, voy a copiarla y vamos a la parte superior
+
+182
+00:11:15,890 --> 00:11:18,290
+donde definió las variables anteriormente.
+
+183
+00:11:19,250 --> 00:11:21,140
+Aquí aparece el payment method PayPal.
+
+184
+00:11:21,170 --> 00:11:27,590
+Voy a darle un enter aquí y declaro el VAR va a ser igual a entre comillas.
+
+185
+00:11:28,160 --> 00:11:31,130
+Le pongo también porcentajes.
+
+186
+00:11:31,640 --> 00:11:34,850
+Yo haré el order completo.
+
+187
+00:11:35,210 --> 00:11:37,430
+A ese template es a donde redirigir.
+
+188
+00:11:38,920 --> 00:11:40,540
+Ahora si vamos a borrar los cambios.
+
+189
+00:11:40,570 --> 00:11:43,780
+Menú File Safe all y vamos a probar la pagina.
+
+190
+00:11:44,530 --> 00:11:45,990
+Estoy en el fondo de mi pagina.
+
+191
+00:11:46,510 --> 00:11:51,700
+Voy a ir a la tienda aqui selecciono camisa moderna negro y short.
+
+192
+00:11:52,240 --> 00:11:53,890
+Lo agregamos al carrito de compras.
+
+193
+00:11:54,460 --> 00:11:56,260
+Ahora vamos a darle clic a pagar.
+
+194
+00:11:57,160 --> 00:12:03,190
+Aqui seleccionamos, ingresamos en la direccion de facturación, llenamos el formulario esta listo,
+
+195
+00:12:03,190 --> 00:12:05,500
+vamos a darle clic a ordenar los productos.
+
+196
+00:12:05,770 --> 00:12:09,010
+Me lleva al detalle y ahora le doy clic al botón de PayPal.
+
+197
+00:12:11,540 --> 00:12:16,610
+Se me aparece la información de la transacción en la parte final de hoy clic al botón Peinado.
+
+198
+00:12:20,670 --> 00:12:27,040
+Esperamos unos segundos y mira automáticamente redireccionado hacia la página.
+
+199
+00:12:27,100 --> 00:12:27,900
+Orden cumplido.
+
+200
+00:12:28,060 --> 00:12:34,950
+Como puedes ver, está enviándome con estos parámetros el Order Number y el Payment ID y también mi
+
+201
+00:12:34,950 --> 00:12:35,320
+lista.
+
+202
+00:12:35,340 --> 00:12:40,140
+El pago se realizo con éxito factura a nombre de Rolando Maristas.
+
+203
+00:12:40,170 --> 00:12:43,860
+Bueno, estos son datos que aún tengo que trabajar en los próximos capítulos.

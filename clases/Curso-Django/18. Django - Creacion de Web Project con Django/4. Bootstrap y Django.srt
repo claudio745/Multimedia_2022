@@ -1,0 +1,327 @@
+1
+00:00:00,450 --> 00:00:04,830
+En este capítulo vamos a trabajar en la integración entre Django y Bootstrap.
+
+2
+00:00:05,070 --> 00:00:06,990
+Primera pregunta Qué cosa es But Strap?
+
+3
+00:00:07,380 --> 00:00:15,240
+Es un framework de tipo CSS que te ayuda a generar interfaces gráficas avanzadas que pueden ejecutarse
+
+4
+00:00:15,540 --> 00:00:22,240
+en diferentes dispositivos como desktop, tablets, laptops, teléfonos móviles, etc.
+
+5
+00:00:22,740 --> 00:00:28,110
+A esta capacidad de poder ejecutarse en múltiples ambientes se le denomina responsive.
+
+6
+00:00:29,280 --> 00:00:34,940
+Y algo también muy importante respecto de Bootstrap es que tiene una excelente documentación.
+
+7
+00:00:35,580 --> 00:00:39,600
+Vamos a ir a la página get bootstrap punto com.
+
+8
+00:00:40,440 --> 00:00:47,280
+Y aquí vas a encontrar toda la documentación y ejemplos de cada uno de los componentes de este importante
+
+9
+00:00:47,280 --> 00:00:47,760
+framework.
+
+10
+00:00:48,330 --> 00:00:49,650
+Se llama a la parte superior.
+
+11
+00:00:50,040 --> 00:00:52,320
+Aquí aparece una sección que dice Examples.
+
+12
+00:00:52,800 --> 00:01:00,720
+Dale click y aquí vas a encontrar una gran variedad de ejemplos de componentes landing page, feature
+
+13
+00:01:00,960 --> 00:01:05,400
+sidebar, headers que puedes incorporar dentro de tu proyecto web.
+
+14
+00:01:06,270 --> 00:01:12,690
+Vamos a comenzar por incorporar este elemento que se llama Jump Bottom dentro de mi proyecto Juego Web.
+
+15
+00:01:14,090 --> 00:01:20,810
+Si tu quisieras podrías darle click a este botón de download examples para descargar todos los ejemplos
+
+16
+00:01:20,810 --> 00:01:22,730
+que están dentro de esta página.
+
+17
+00:01:23,630 --> 00:01:29,210
+Pero no te preocupes, voy a compartirte dentro de la sección de recursos de este vídeo.
+
+18
+00:01:29,690 --> 00:01:31,400
+El ejemplo de Jump Bottom.
+
+19
+00:01:31,790 --> 00:01:38,840
+Básicamente, si un bottom es solo un car que te muestra información de un título, descripción y un
+
+20
+00:01:38,840 --> 00:01:39,770
+botón detalle.
+
+21
+00:01:41,300 --> 00:01:44,630
+Vayamos entonces a nuestro y de Hatton.
+
+22
+00:01:46,140 --> 00:01:51,600
+Y aquí vamos a ir a la carpeta que aquí aparece Maxi Project y también aparece la carpeta Templates.
+
+23
+00:01:52,050 --> 00:01:55,890
+Vamos a desplegar templates y aparece el home punto HTML.
+
+24
+00:01:56,550 --> 00:01:58,920
+Por el momento solamente había creado este mensaje.
+
+25
+00:01:59,650 --> 00:02:03,800
+Bien, vamos ahora a crear una estructura de una página HTML.
+
+26
+00:02:03,810 --> 00:02:11,340
+Voy a borrar este mensaje y aquí le escribo HTML y luego le doy enter y automáticamente la herramienta
+
+27
+00:02:11,340 --> 00:02:14,790
+de a dónde va a generar la estructura de la página html.
+
+28
+00:02:15,800 --> 00:02:20,180
+Vamos a agregarle en la sección del Tirol del Get de la página.
+
+29
+00:02:22,820 --> 00:02:23,690
+Lista de usuario.
+
+30
+00:02:23,700 --> 00:02:24,440
+Te voy a poner.
+
+31
+00:02:26,130 --> 00:02:32,610
+Y aquí dentro del body lo que voy a hacer es pegar el código que te estoy compartiendo de la sección
+
+32
+00:02:32,610 --> 00:02:34,140
+de recursos de ese capítulo.
+
+33
+00:02:35,240 --> 00:02:38,690
+Aquí está el código que te voy a compartir en un archivo de bloc de notas.
+
+34
+00:02:38,690 --> 00:02:40,640
+Lo estoy abriendo por ahora, porque es un recurso.
+
+35
+00:02:41,060 --> 00:02:42,020
+Voy a copiarlo.
+
+36
+00:02:44,260 --> 00:02:46,600
+Y lo voy a pegar dentro de la sección del body.
+
+37
+00:02:48,120 --> 00:02:49,680
+Para que se organice mejor el código.
+
+38
+00:02:49,860 --> 00:02:51,690
+Vamos a presionar Control A.
+
+39
+00:02:52,960 --> 00:02:56,230
+Seleccionamos todo el código y ahora vamos al menú Edit.
+
+40
+00:02:57,220 --> 00:03:01,960
+La opción ligth y ahora el auto perfecto.
+
+41
+00:03:02,290 --> 00:03:06,790
+De esta forma intentamos el código HTML de nuestro archivo.
+
+42
+00:03:07,510 --> 00:03:08,770
+Vamos a borrar los cambios.
+
+43
+00:03:08,770 --> 00:03:10,180
+Menú Fail Save all.
+
+44
+00:03:11,290 --> 00:03:12,400
+Y vamos a la página.
+
+45
+00:03:13,390 --> 00:03:17,200
+Refrescamos localhost 8000 y mira el código que se generó.
+
+46
+00:03:17,830 --> 00:03:19,090
+Alguien me puede decir profesor?
+
+47
+00:03:19,090 --> 00:03:21,010
+Pero usted me prometió algo bonito.
+
+48
+00:03:21,010 --> 00:03:21,970
+Y esto está.
+
+49
+00:03:22,270 --> 00:03:24,010
+La verdad, no se ve muy bien.
+
+50
+00:03:24,790 --> 00:03:25,600
+No te preocupes.
+
+51
+00:03:25,600 --> 00:03:33,220
+Esto sucede porque aún no hemos importado la librería Bootstrap dentro de nuestro proyecto web.
+
+52
+00:03:33,730 --> 00:03:38,170
+Para poder hacerlo online, vamos a ir a la página primero Bootstrap.
+
+53
+00:03:40,000 --> 00:03:40,620
+Bootstrap.
+
+54
+00:03:41,410 --> 00:03:42,700
+CDN.
+
+55
+00:03:43,360 --> 00:03:43,690
+Com.
+
+56
+00:03:45,950 --> 00:03:50,240
+Si vamos al contenido, aquí aparece la referencia para la versión cinco de Bootstrap.
+
+57
+00:03:51,240 --> 00:03:52,440
+Y este es el link.
+
+58
+00:03:54,150 --> 00:03:55,320
+Vamos a despegar el botón.
+
+59
+00:03:57,090 --> 00:04:00,450
+Ya que aparece este link, voy a darle clic a copiar.
+
+60
+00:04:01,950 --> 00:04:03,780
+Ya se copió el código de link.
+
+61
+00:04:04,890 --> 00:04:15,630
+Vamos a nuestro Atom y dentro del HTML aquí aparece el GET luego del Tirol Enter y acá pego lo que antes.
+
+62
+00:04:15,630 --> 00:04:20,490
+He copiado el link de la referencia a la librería de Bootstrap que sería este link.
+
+63
+00:04:23,530 --> 00:04:24,670
+Ahora voy a guardar los cambios.
+
+64
+00:04:24,880 --> 00:04:25,810
+Failed safe all.
+
+65
+00:04:27,560 --> 00:04:28,610
+Y probemos la página.
+
+66
+00:04:29,870 --> 00:04:31,550
+Y ahora sí, refrescando en la página.
+
+67
+00:04:31,580 --> 00:04:35,000
+Mira lo que sucede ahora sí, se ve diferente.
+
+68
+00:04:35,930 --> 00:04:39,260
+Vamos a hacerle algunos cambios al título y al contenido y al botón.
+
+69
+00:04:40,380 --> 00:04:43,890
+Estamos en Atton, ya que aparece el título.
+
+70
+00:04:45,030 --> 00:04:48,230
+Del container, a quién le vamos a poner en vez de custom jumbo?
+
+71
+00:04:48,450 --> 00:04:49,290
+Jumbo Drum?
+
+72
+00:04:50,680 --> 00:04:51,610
+Bienvenidos.
+
+73
+00:04:52,780 --> 00:04:53,330
+A Bakshi.
+
+74
+00:04:53,350 --> 00:04:53,770
+Eres.
+
+75
+00:04:55,820 --> 00:04:58,010
+Aquí aparece también el título del botón.
+
+76
+00:04:58,490 --> 00:05:01,760
+El label del botón en vez de este example button.
+
+77
+00:05:04,320 --> 00:05:05,190
+Voy a colocarle.
+
+78
+00:05:07,000 --> 00:05:08,470
+Lista de usuarios.
+
+79
+00:05:09,070 --> 00:05:12,400
+Por el momento vamos a borrar los cambios de menú false all.
+
+80
+00:05:13,870 --> 00:05:15,250
+Y volvemos a probar la página.
+
+81
+00:05:16,220 --> 00:05:21,190
+Refrescamos y como puedes ver, ya me aparece acá el título que cambié y también el botón.
+
+82
+00:05:21,260 --> 00:05:27,650
+Lista de usuarios utilizando los estilos de la herramienta del framework Bootstrap.

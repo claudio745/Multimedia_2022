@@ -1,0 +1,359 @@
+1
+00:00:00,450 --> 00:00:04,770
+Vamos a continuar trabajando dentro del portal de Store.
+
+2
+00:00:05,400 --> 00:00:07,170
+Y ahora aquí tenemos un pequeño detalle.
+
+3
+00:00:07,440 --> 00:00:10,350
+En la parte izquierda también me aparece una lista de categorías.
+
+4
+00:00:10,560 --> 00:00:12,000
+Pero esto está rodeado.
+
+5
+00:00:12,030 --> 00:00:13,770
+Vamos a hacer que también sea dinámico.
+
+6
+00:00:14,280 --> 00:00:16,470
+De la misma forma como lo hicimos con el ComboBox.
+
+7
+00:00:18,240 --> 00:00:21,150
+Vamos entonces a la sección, a la carpeta templates.
+
+8
+00:00:21,690 --> 00:00:27,060
+Y ahora ubiquémonos dentro de la carpeta Store, ya que aparece en este punto HTML.
+
+9
+00:00:28,700 --> 00:00:34,430
+En esta sección ya me aparece una lista de menús que representa la lista de categorías.
+
+10
+00:00:35,870 --> 00:00:37,280
+Creo que ya sabes lo que voy a hacer.
+
+11
+00:00:37,310 --> 00:00:37,810
+Exacto.
+
+12
+00:00:37,820 --> 00:00:40,520
+Voy a crear un bucle que represente esta lista.
+
+13
+00:00:40,940 --> 00:00:45,550
+Voy a eliminar todos los elementos en ley, excepto uno, el de accesorios.
+
+14
+00:00:46,340 --> 00:00:52,280
+Y sobre él, voy a colocar un código del servidor con llaves, porcentajes.
+
+15
+00:00:53,240 --> 00:00:59,660
+Y aquí voy a colocar for un bucle category em links.
+
+16
+00:01:01,810 --> 00:01:02,860
+De aquí lo cierro.
+
+17
+00:01:03,640 --> 00:01:06,850
+Ya ves, porcentaje en Ford.
+
+18
+00:01:07,590 --> 00:01:07,900
+Esto.
+
+19
+00:01:08,880 --> 00:01:09,960
+Estás en el interior.
+
+20
+00:01:09,990 --> 00:01:10,980
+Vamos a colocar.
+
+21
+00:01:13,470 --> 00:01:21,050
+En vez de texto doble llaves y colocamos Category category name.
+
+22
+00:01:23,330 --> 00:01:25,700
+Y para el caso de su et r href.
+
+23
+00:01:25,700 --> 00:01:29,900
+Para que vea el redireccionamiento y filtre por productos cuando la eléctrica.
+
+24
+00:01:29,900 --> 00:01:31,250
+De 1 a 1 de estos menús.
+
+25
+00:01:33,430 --> 00:01:34,900
+Voy a colocarle category.
+
+26
+00:01:36,200 --> 00:01:36,800
+Punto.
+
+27
+00:01:37,280 --> 00:01:39,080
+Get raya abajo, joder.
+
+28
+00:01:39,920 --> 00:01:45,230
+Pero algo muy interesante también es que yo quiero que cierto caso aparezca y para que me muestre todos
+
+29
+00:01:45,230 --> 00:01:46,130
+los productos.
+
+30
+00:01:47,300 --> 00:01:54,470
+Entonces, mira, antes de este for category y dentro del hule, vamos a agregar un nuevo l'i.
+
+31
+00:01:54,920 --> 00:01:55,790
+Voy a copiar este.
+
+32
+00:01:58,430 --> 00:01:59,030
+Lo tengo aquí.
+
+33
+00:02:00,310 --> 00:02:02,290
+Y en vez de este href.
+
+34
+00:02:05,000 --> 00:02:06,200
+Depende el contenido de la href.
+
+35
+00:02:06,200 --> 00:02:09,110
+Vamos a colocarle unas llaves.
+
+36
+00:02:10,420 --> 00:02:14,200
+Signo de porcentaje y le ponemos acá.
+
+37
+00:02:14,200 --> 00:02:14,860
+Water.
+
+38
+00:02:16,120 --> 00:02:16,600
+Store.
+
+39
+00:02:18,920 --> 00:02:20,810
+Y el texto, lo que sea.
+
+40
+00:02:23,710 --> 00:02:24,430
+Todos.
+
+41
+00:02:24,970 --> 00:02:25,960
+Todo me lo colocó.
+
+42
+00:02:28,480 --> 00:02:29,650
+Vamos a borrar los cambios.
+
+43
+00:02:29,680 --> 00:02:32,710
+Menú File Safe All y vamos a probar.
+
+44
+00:02:34,080 --> 00:02:40,530
+Actualizamos la página y mira, ya me aparece el las categorías desde la base de datos.
+
+45
+00:02:40,710 --> 00:02:45,550
+Si le doy clic a computadoras, me refresca listando los productos de computadoras.
+
+46
+00:02:45,600 --> 00:02:46,470
+Ropa de verano?
+
+47
+00:02:46,950 --> 00:02:48,570
+Solo los de ropa de verano.
+
+48
+00:02:48,570 --> 00:02:49,470
+Muebles de oficina.
+
+49
+00:02:49,740 --> 00:02:50,490
+Perfecto.
+
+50
+00:02:50,940 --> 00:02:52,050
+Y si lo veía todos?
+
+51
+00:02:52,710 --> 00:02:53,220
+Exacto.
+
+52
+00:02:53,220 --> 00:02:55,890
+Me devuelve todos los productos que tengo en mi base de datos.
+
+53
+00:02:56,930 --> 00:02:57,140
+Aquí.
+
+54
+00:02:57,150 --> 00:02:58,610
+Me puede decir algo, profesor?
+
+55
+00:02:58,640 --> 00:03:00,410
+Está muy interesante esto de todos.
+
+56
+00:03:00,410 --> 00:03:00,560
+Pero.
+
+57
+00:03:00,570 --> 00:03:02,450
+Por qué no lo implementa también en el ComboBox?
+
+58
+00:03:02,960 --> 00:03:04,520
+En este no ha puesto el de todos.
+
+59
+00:03:04,910 --> 00:03:05,850
+Tienes mucha razón.
+
+60
+00:03:05,870 --> 00:03:06,620
+Hagámoslo.
+
+61
+00:03:07,280 --> 00:03:08,300
+Estamos en auto.
+
+62
+00:03:08,300 --> 00:03:11,210
+Nuevamente vamos a templates que aparece includes.
+
+63
+00:03:11,910 --> 00:03:13,100
+Aparece el VAR.
+
+64
+00:03:14,550 --> 00:03:16,680
+Vamos a la sección donde había puesto el código.
+
+65
+00:03:17,080 --> 00:03:17,580
+Aquí está.
+
+66
+00:03:17,690 --> 00:03:21,690
+Mira, este es el drop down menú list, el for category links.
+
+67
+00:03:22,470 --> 00:03:23,550
+Y antes del for.
+
+68
+00:03:23,850 --> 00:03:25,470
+Aquí voy a agregar.
+
+69
+00:03:25,470 --> 00:03:33,270
+Voy a copiar esta línea del atlas, ya que la pego y el texto que voy a poner.
+
+70
+00:03:34,650 --> 00:03:35,160
+Todos.
+
+71
+00:03:36,330 --> 00:03:37,580
+Y dentro de la href.
+
+72
+00:03:37,710 --> 00:03:40,080
+Sólo le coloco una llave.
+
+73
+00:03:40,500 --> 00:03:41,580
+Se abre y cierra.
+
+74
+00:03:42,390 --> 00:03:43,650
+Signo de porcentaje.
+
+75
+00:03:44,760 --> 00:03:47,790
+De aquí le vamos a colocar el Store.
+
+76
+00:03:50,020 --> 00:03:50,520
+Yo era el.
+
+77
+00:03:51,990 --> 00:03:52,890
+A que me equivoque.
+
+78
+00:03:53,010 --> 00:03:53,640
+Era al revés.
+
+79
+00:03:54,990 --> 00:03:56,880
+Era el jurel.
+
+80
+00:03:58,820 --> 00:03:59,120
+Storm.
+
+81
+00:03:59,870 --> 00:04:00,320
+Listo.
+
+82
+00:04:01,580 --> 00:04:02,870
+Vamos a borrar todos los cambios.
+
+83
+00:04:02,870 --> 00:04:05,420
+Mayfield, Safe Hall y probemos.
+
+84
+00:04:06,570 --> 00:04:07,710
+Voy a actualizar la página.
+
+85
+00:04:09,020 --> 00:04:10,540
+Y ya me aparece aquí todo saber.
+
+86
+00:04:10,600 --> 00:04:12,380
+Probemos con computadoras.
+
+87
+00:04:13,010 --> 00:04:16,260
+Ahora le doy clic a todos y me trae ya todos los productos.
+
+88
+00:04:16,280 --> 00:04:16,910
+Perfecto.
+
+89
+00:04:16,920 --> 00:04:23,060
+Ya hemos implementado entonces dinámicamente las categorías para mis productos en la parte izquierda
+
+90
+00:04:23,060 --> 00:04:23,660
+del Store.

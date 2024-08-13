@@ -1,0 +1,503 @@
+1
+00:00:00,520 --> 00:00:05,110
+En este capítulo vamos a trabajar en la página template de tienda o store.
+
+2
+00:00:05,890 --> 00:00:11,280
+Si vamos a localhost 8000 que estamos ejecutando en Xango, aquí aparece un botón que dice tienda.
+
+3
+00:00:11,380 --> 00:00:12,250
+Cuando le doy clic.
+
+4
+00:00:13,190 --> 00:00:16,280
+Debería llevarme hacia la ubicación de esta página local.
+
+5
+00:00:16,580 --> 00:00:18,260
+8000, pero estaré.
+
+6
+00:00:19,390 --> 00:00:22,000
+Vamos a trabajar esto dentro de nuestro proyecto.
+
+7
+00:00:23,140 --> 00:00:24,400
+Estamos dentro de Atton.
+
+8
+00:00:24,580 --> 00:00:26,880
+Vamos a ir a la carpeta principal y commerce.
+
+9
+00:00:26,890 --> 00:00:30,010
+Y aquí aparece y converge también la carpeta del proyecto.
+
+10
+00:00:30,310 --> 00:00:34,720
+Y ahora vamos a ir al VLC y abrimos el archivo.
+
+11
+00:00:36,400 --> 00:00:40,300
+Y aquí me aparece el conjunto de paths que he estado desarrollando hasta el momento.
+
+12
+00:00:40,990 --> 00:00:48,610
+Aquí vamos a agregar, dentro de este par de home sale un enter y agregamos un path.
+
+13
+00:00:50,420 --> 00:00:59,180
+Para Store en este caso lo que quiero es que me redirecciones hacia la App de Store que he estado trabajando
+
+14
+00:00:59,510 --> 00:01:07,280
+y a futuro dentro de esta App Store voy a crear otro archivo de tipo jurel que procese este pedido y
+
+15
+00:01:07,280 --> 00:01:11,330
+me redirecciones a la página principal de la App Store.
+
+16
+00:01:12,390 --> 00:01:14,290
+Entonces acá lo voy a poner por esto include.
+
+17
+00:01:17,190 --> 00:01:17,870
+Es torpe.
+
+18
+00:01:18,130 --> 00:01:19,320
+No llores.
+
+19
+00:01:20,190 --> 00:01:26,160
+Aquí estamos utilizando una palabra reservada que alude a algo muy importante en la parte final del
+
+20
+00:01:26,160 --> 00:01:26,430
+path.
+
+21
+00:01:26,460 --> 00:01:28,380
+Me faltó agregarle esta coma.
+
+22
+00:01:29,250 --> 00:01:31,740
+Aquí tengo que importar la palabra clave include.
+
+23
+00:01:32,160 --> 00:01:33,390
+Vamos a la parte superior.
+
+24
+00:01:34,390 --> 00:01:37,240
+Este include viene desde el Chango Juarez.
+
+25
+00:01:37,540 --> 00:01:38,740
+Aqui esta el import path.
+
+26
+00:01:38,890 --> 00:01:42,670
+Le voy a poner una coma espacio y le escribo include.
+
+27
+00:01:43,810 --> 00:01:47,890
+Ahora tenemos que ir hacia la App de Store y crear.
+
+28
+00:01:48,730 --> 00:01:49,990
+Este archivo de tipo.
+
+29
+00:01:51,280 --> 00:01:54,700
+Vamos entonces a la carpeta store que aparece.
+
+30
+00:01:55,420 --> 00:01:58,690
+Y aquí vamos a darle clic derecho, clic derecho, la opción Newfield.
+
+31
+00:01:59,230 --> 00:02:01,480
+Y aquí le pongo JLG.
+
+32
+00:02:01,670 --> 00:02:03,220
+Punto y.
+
+33
+00:02:04,610 --> 00:02:05,450
+Y le damos enter.
+
+34
+00:02:06,740 --> 00:02:09,680
+Y vamos aquí a crear el par.
+
+35
+00:02:09,710 --> 00:02:14,240
+El panel junto al panel para que me redirecciona hacia la página principal del Store.
+
+36
+00:02:14,720 --> 00:02:20,480
+Primero voy a hacer la importación de algunas herramientas que necesita el chango urls import path.
+
+37
+00:02:22,120 --> 00:02:28,510
+También voy a utilizar los recursos de los bus from punto espacio import bus.
+
+38
+00:02:30,310 --> 00:02:33,230
+Y ahora declaro una variable que va a ser el partners.
+
+39
+00:02:36,040 --> 00:02:37,540
+Y dentro abre un corchete.
+
+40
+00:02:38,530 --> 00:02:39,610
+Y agregó el pat.
+
+41
+00:02:40,150 --> 00:02:40,780
+Este pat.
+
+42
+00:02:42,850 --> 00:02:48,550
+Puedo indicarle que por defecto me lleve desde el Bus Store.
+
+43
+00:02:49,950 --> 00:02:54,360
+Y el nombre de la función del de la función va a ser store.
+
+44
+00:02:55,750 --> 00:02:56,860
+Al final una coma.
+
+45
+00:02:58,420 --> 00:03:04,870
+A continuación vamos hacia el archivo bus y donde tengo que programar esta función def.
+
+46
+00:03:05,530 --> 00:03:07,900
+Que estoy declarando dentro de este yo era el Parent.
+
+47
+00:03:08,440 --> 00:03:09,850
+Así que vamos dentro de Store.
+
+48
+00:03:10,300 --> 00:03:11,710
+Aquí debe aparecer el bus.
+
+49
+00:03:11,710 --> 00:03:12,340
+Punto Pi.
+
+50
+00:03:12,820 --> 00:03:13,510
+Aquí lo tengo.
+
+51
+00:03:14,900 --> 00:03:21,950
+Y voy a escribir acá la función de EF Store y recibe un objeto de tipo, un parámetro de tipo request.
+
+52
+00:03:23,880 --> 00:03:25,370
+Y le digo que me haga un return.
+
+53
+00:03:26,720 --> 00:03:31,400
+Utilizando esta función render pasándole este objeto rico es.
+
+54
+00:03:33,170 --> 00:03:35,960
+Y tengo que indicarle cuál es el nombre del template.
+
+55
+00:03:36,740 --> 00:03:41,720
+El nombre del template va a estar dentro de la carpeta templates, en una carpeta que se va a llamar
+
+56
+00:03:41,720 --> 00:03:45,530
+Store y el nombre del archivo es Store punto html.
+
+57
+00:03:46,130 --> 00:03:48,320
+Aún este archivo y esta carpeta no existe.
+
+58
+00:03:48,410 --> 00:03:50,060
+Le voy a proceder a crear en este momento.
+
+59
+00:03:50,290 --> 00:03:55,760
+Primero vamos a hacer un menú Field Safe all perfecto y ahora vamos a la carpeta Templates.
+
+60
+00:03:56,330 --> 00:03:58,930
+Dentro de templates vamos a crear esa carpeta Store.
+
+61
+00:03:59,960 --> 00:04:00,610
+Qué derecho?
+
+62
+00:04:01,460 --> 00:04:02,150
+Ni un folder.
+
+63
+00:04:04,590 --> 00:04:04,980
+Aquí.
+
+64
+00:04:04,980 --> 00:04:05,520
+Me equivoqué.
+
+65
+00:04:05,850 --> 00:04:08,760
+Voy a darle clic derecho nuevamente para hacerle un name.
+
+66
+00:04:10,080 --> 00:04:11,700
+De ser store una sola.
+
+67
+00:04:12,970 --> 00:04:13,350
+Esto.
+
+68
+00:04:13,570 --> 00:04:17,380
+Y dentro de esta carpeta Store vamos a ver un click derecho Newfield.
+
+69
+00:04:18,470 --> 00:04:22,610
+Y va a ser esto otro punto a HTML y le damos enter.
+
+70
+00:04:23,240 --> 00:04:24,920
+Vamos a verificar dentro de la carpeta.
+
+71
+00:04:25,370 --> 00:04:27,800
+Ya se creó este editor HTML.
+
+72
+00:04:29,490 --> 00:04:30,900
+Vamos a agregar un texto de prueba.
+
+73
+00:04:30,900 --> 00:04:35,820
+Por ahora le voy a poner un H1 y le pongo la tienda de productos.
+
+74
+00:04:37,570 --> 00:04:38,940
+Vamos a borrar los cambios.
+
+75
+00:04:38,950 --> 00:04:40,090
+Menús false all.
+
+76
+00:04:41,360 --> 00:04:42,440
+Y vamos a probar.
+
+77
+00:04:43,010 --> 00:04:45,920
+Verificamos que mi base esté ejecutándose sin ningún problema.
+
+78
+00:04:46,580 --> 00:04:48,440
+Ahora, si vamos a abrir un browser.
+
+79
+00:04:49,520 --> 00:04:50,660
+Por esto hacemos un local.
+
+80
+00:04:50,960 --> 00:04:52,760
+8000 es las Store.
+
+81
+00:04:53,240 --> 00:04:58,040
+Sin el punto HTML recuerda que estamos trabajando con un control directo del chango.
+
+82
+00:04:58,580 --> 00:04:59,390
+Entonces.
+
+83
+00:04:59,390 --> 00:05:03,890
+Y puedo notar que ya aparece el título que escribí la tienda de productos.
+
+84
+00:05:04,580 --> 00:05:05,390
+Perfecto.
+
+85
+00:05:05,390 --> 00:05:12,410
+Ahora, a continuación vamos a trabajar en construir el código HTML que debe mostrar esta página.
+
+86
+00:05:12,920 --> 00:05:19,670
+Recuerda que esta página, como todas las páginas de nuestro web e-commerce, debe tener una cabecera
+
+87
+00:05:19,970 --> 00:05:21,680
+y debe tener un pie de página.
+
+88
+00:05:22,850 --> 00:05:24,710
+Hemos vuelto a Atton a configurar esto.
+
+89
+00:05:24,720 --> 00:05:29,120
+Estamos en Play Store Store, punto HTML y en la parte superior.
+
+90
+00:05:29,330 --> 00:05:30,770
+Voy a borrar primero todo el contenido.
+
+91
+00:05:31,220 --> 00:05:37,400
+Y en la parte superior vamos a escribir entre llaves y signos de porcentaje.
+
+92
+00:05:39,380 --> 00:05:41,930
+Punto a HTML.
+
+93
+00:05:42,170 --> 00:05:49,730
+De esta forma estamos extendiendo los valores comunes que tiene mi página, las páginas dentro del ecommerce,
+
+94
+00:05:49,730 --> 00:05:53,870
+como son el futuro y también lo que es el header.
+
+95
+00:05:55,350 --> 00:05:57,690
+También voy a colocar aquí el contenido dinámico.
+
+96
+00:05:58,080 --> 00:05:59,040
+Abro otras llaves.
+
+97
+00:06:01,070 --> 00:06:03,690
+La que le colocó block content.
+
+98
+00:06:04,670 --> 00:06:05,270
+Espacio.
+
+99
+00:06:06,410 --> 00:06:08,090
+Y también indicó hasta dónde va a ir.
+
+100
+00:06:09,170 --> 00:06:12,320
+Ya ves, porcentajes y aquí le coloco en blog.
+
+101
+00:06:16,250 --> 00:06:18,380
+Vamos a borrar los cambios del safe hall.
+
+102
+00:06:19,250 --> 00:06:20,840
+Y ahora vamos a meter browser.
+
+103
+00:06:22,190 --> 00:06:23,030
+Esto es en el browser.
+
+104
+00:06:23,030 --> 00:06:27,980
+Vamos a refrescar la página y mira, ya se generó dentro de la página store.
+
+105
+00:06:28,100 --> 00:06:31,130
+Ya puedo yo ver el header y también el footer.
+
+106
+00:06:31,190 --> 00:06:32,930
+Lo que me falta es el contenido.
+
+107
+00:06:33,740 --> 00:06:34,700
+Volvamos a Atom.
+
+108
+00:06:35,870 --> 00:06:40,970
+El contenido dinámico tengo que colocarlo dentro de estos, de este content.
+
+109
+00:06:41,940 --> 00:06:45,420
+Dentro de la sección de archivos y recursos de este vídeo.
+
+110
+00:06:45,420 --> 00:06:51,630
+De este capítulo vas a encontrar un archivo HTML que le hemos llamado Story Template.
+
+111
+00:06:52,650 --> 00:06:53,190
+Ábrelo.
+
+112
+00:06:53,220 --> 00:06:58,320
+En este caso lo estoy abriendo con un bloc de notas y voy a copiar todo el contenido de este archivo.
+
+113
+00:07:00,530 --> 00:07:03,560
+Y lo vamos a pegar dentro de este blog content.
+
+114
+00:07:05,290 --> 00:07:05,920
+Pegamos.
+
+115
+00:07:06,130 --> 00:07:07,090
+Perfecto.
+
+116
+00:07:08,120 --> 00:07:10,400
+Ahora vamos a ir a Menu File Save All.
+
+117
+00:07:11,000 --> 00:07:12,380
+Guardamos todos los cambios.
+
+118
+00:07:13,530 --> 00:07:16,110
+Vamos a la página ocho Store.
+
+119
+00:07:16,680 --> 00:07:21,360
+Vamos a refrescar y mira, ya me aparece nuestra tienda.
+
+120
+00:07:21,750 --> 00:07:22,740
+Perfecto.
+
+121
+00:07:23,070 --> 00:07:23,940
+Dirás, profesor.
+
+122
+00:07:23,940 --> 00:07:27,000
+Pero estas categorías no son las que registre la base de datos.
+
+123
+00:07:27,200 --> 00:07:28,950
+Claro, esto está codeado aún.
+
+124
+00:07:29,430 --> 00:07:33,930
+También está codeado este producto que por defecto estoy mostrando.
+
+125
+00:07:34,320 --> 00:07:40,080
+En el siguiente capítulo vamos a hacer la consulta de la transacción a la base de datos para poder llenar
+
+126
+00:07:40,080 --> 00:07:44,940
+las categorías y también los productos dentro de esta página store.

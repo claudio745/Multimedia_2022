@@ -1,0 +1,431 @@
+1
+00:00:00,480 --> 00:00:07,830
+Yanko es un poderoso framework que no solo te permite crear interfaces gráficas y conexiones, transacciones
+
+2
+00:00:07,830 --> 00:00:09,270
+a diferentes base de datos.
+
+3
+00:00:09,510 --> 00:00:17,670
+También te permite acceder a su modo administrador, donde puedes manipular las entidades que vas generando
+
+4
+00:00:17,670 --> 00:00:24,570
+en tu proyecto para poder ingresar a la interfaz gráfica de administración de Yanko en tu proyecto.
+
+5
+00:00:24,960 --> 00:00:31,860
+Tienes que ir al local host 8000, luego le pones un slash y escribes Admin, le vamos a entrar.
+
+6
+00:00:33,610 --> 00:00:35,450
+Qué te ha a pedir un usuario un password?
+
+7
+00:00:36,080 --> 00:00:38,990
+Este usuario password aún no lo hemos generado.
+
+8
+00:00:38,990 --> 00:00:41,240
+Tenemos que generarlo dentro del bash.
+
+9
+00:00:41,750 --> 00:00:47,210
+Pero antes de crear este usuario dentro del valle, lo que tenemos que hacer es primero ejecutar la
+
+10
+00:00:47,210 --> 00:00:51,110
+migración, es decir, crear los archivos de migración.
+
+11
+00:00:52,060 --> 00:00:53,920
+Vamos entonces primeramente al valle.
+
+12
+00:00:53,950 --> 00:00:55,240
+Voy a detener mi servidor.
+
+13
+00:00:56,570 --> 00:01:00,280
+Y aquí vamos a ejecutar el comando de migración.
+
+14
+00:01:00,290 --> 00:01:06,770
+Escribimos Python, espacio, manage y espacio.
+
+15
+00:01:07,940 --> 00:01:09,920
+Make digresiones.
+
+16
+00:01:11,510 --> 00:01:12,410
+Y le damos a Enter.
+
+17
+00:01:14,060 --> 00:01:14,830
+Perfecto.
+
+18
+00:01:14,840 --> 00:01:17,300
+Se ejecutado exitosamente la migración.
+
+19
+00:01:17,630 --> 00:01:18,700
+Vamos al proyecto.
+
+20
+00:01:19,800 --> 00:01:20,810
+Revisemos el nombre.
+
+21
+00:01:20,820 --> 00:01:24,600
+El nombre que se ha generado del archivo es dentro de la carpeta Migration.
+
+22
+00:01:25,020 --> 00:01:26,340
+001.
+
+23
+00:01:26,340 --> 00:01:27,180
+Raya para abajo.
+
+24
+00:01:27,180 --> 00:01:28,670
+Inicial punto pi.
+
+25
+00:01:29,550 --> 00:01:30,840
+Y si vamos a Atom?
+
+26
+00:01:31,140 --> 00:01:32,380
+Dentro de Basic?
+
+27
+00:01:32,400 --> 00:01:35,890
+Usuarios a que aparece ya la carpeta Migration.
+
+28
+00:01:36,300 --> 00:01:39,000
+Y dentro de ella el archivo 001.
+
+29
+00:01:39,240 --> 00:01:40,110
+Raya para abajo.
+
+30
+00:01:40,110 --> 00:01:41,280
+Initial punto pi.
+
+31
+00:01:42,200 --> 00:01:48,870
+Y aquí aparece el código que se ha auto generado y que vamos a tener que ejecutar para que se genere
+
+32
+00:01:49,140 --> 00:01:52,590
+una tabla dentro de mi framework Jango.
+
+33
+00:01:54,110 --> 00:01:58,820
+Para poder ejecutar este nuevo código generado, vamos a abrir nuevamente el batch.
+
+34
+00:02:00,030 --> 00:02:01,770
+Y aquí vamos a escribir.
+
+35
+00:02:03,180 --> 00:02:06,390
+Peyton Espacio Manager y.
+
+36
+00:02:07,940 --> 00:02:10,730
+Espacio mi quedate y leamos enter.
+
+37
+00:02:12,700 --> 00:02:18,460
+Se ejecutado también exitosamente en la migración significa que ya se generó la tabla física dentro
+
+38
+00:02:18,460 --> 00:02:19,690
+de mi base de datos.
+
+39
+00:02:19,960 --> 00:02:27,700
+Si revisamos una vez más el archivo inicial Punto Pi, vas a notar que dentro de este aparece una columna
+
+40
+00:02:27,700 --> 00:02:28,210
+ID.
+
+41
+00:02:28,840 --> 00:02:35,800
+Esta columna ID la ha generado automáticamente la herramienta y la genera como si fuera una clave primaria
+
+42
+00:02:36,520 --> 00:02:40,750
+que se va a generar cada vez que se registre un nuevo usuario.
+
+43
+00:02:41,350 --> 00:02:48,280
+Entonces ya estamos listos para crear un super user que me permita acceder a la interface de administración
+
+44
+00:02:48,280 --> 00:02:48,940
+del rango.
+
+45
+00:02:49,690 --> 00:02:54,700
+Entonces vamos a ir nuevamente al Bash ya que escribimos este comando WIMP.
+
+46
+00:02:55,750 --> 00:02:56,180
+Con P?
+
+47
+00:02:56,860 --> 00:02:58,960
+Ti espacio.
+
+48
+00:03:00,020 --> 00:03:00,590
+Peyton.
+
+49
+00:03:00,980 --> 00:03:05,450
+Espacio Management y espacio criaste.
+
+50
+00:03:06,560 --> 00:03:08,180
+Super user.
+
+51
+00:03:10,440 --> 00:03:11,460
+Le damos a Enter.
+
+52
+00:03:13,270 --> 00:03:16,720
+Entonces quién me va a pedir el nombre de usuario que quiero crear?
+
+53
+00:03:17,380 --> 00:03:24,040
+Por favor, no vayas a confundir la creación de un usuario como si se fuera a registrar en la tabla
+
+54
+00:03:24,040 --> 00:03:26,380
+que nosotros hemos creado en nuestro proyecto.
+
+55
+00:03:26,830 --> 00:03:27,790
+No tiene nada que ver.
+
+56
+00:03:27,790 --> 00:03:33,160
+Esta tabla de repente debió haberse llamado libros o producto o computadoras.
+
+57
+00:03:33,640 --> 00:03:34,450
+Eso no importa.
+
+58
+00:03:35,170 --> 00:03:42,520
+Lo que estoy haciendo dentro del base es creando un super user para acceder a la interface gráfica de
+
+59
+00:03:42,520 --> 00:03:44,020
+mi framework Jango.
+
+60
+00:03:44,920 --> 00:03:49,270
+Aclarado este punto, entonces vamos a darle aquí un username.
+
+61
+00:03:49,300 --> 00:03:54,910
+Le voy a poner Bakshi Admin, le damos enter aquí, me pide un email.
+
+62
+00:03:55,000 --> 00:03:59,290
+Le voy a poner bakshi punto tres arroba gmail punto com.
+
+63
+00:04:01,290 --> 00:04:03,350
+Aquí puedes colocar tu email personal.
+
+64
+00:04:03,360 --> 00:04:03,960
+Por supuesto.
+
+65
+00:04:04,890 --> 00:04:05,730
+Le damos enter.
+
+66
+00:04:05,940 --> 00:04:07,170
+Aquí me pide un password.
+
+67
+00:04:07,260 --> 00:04:13,320
+Yo siempre recomiendo colocar un password largo, mínimo de ocho caracteres con mayúsculas, minúsculas,
+
+68
+00:04:13,320 --> 00:04:18,030
+números y también un caracter especial que puede ser el signo de dólar.
+
+69
+00:04:18,940 --> 00:04:19,720
+Ya lo puse.
+
+70
+00:04:19,720 --> 00:04:21,340
+El password lo acabo de escribir.
+
+71
+00:04:21,670 --> 00:04:23,110
+Le voy a entrar aquí.
+
+72
+00:04:23,110 --> 00:04:24,070
+Me pide repetirlo?
+
+73
+00:04:24,070 --> 00:04:25,390
+Vamos a escribirlo de nuevo.
+
+74
+00:04:26,470 --> 00:04:33,190
+Le volví a dar enter y ya ha creado mi super user para probar que todo es correcto.
+
+75
+00:04:33,200 --> 00:04:35,620
+Vamos a ejecutar nuevamente el servidor web en Django.
+
+76
+00:04:35,620 --> 00:04:37,150
+Así que escribimos acá Python.
+
+77
+00:04:39,190 --> 00:04:45,220
+Espacio Manage Punto Pi y Espacio Ram Server y le damos Enter.
+
+78
+00:04:45,610 --> 00:04:46,980
+Ya se está ejecutando mi servidor.
+
+79
+00:04:46,990 --> 00:04:48,130
+Vayamos a la página.
+
+80
+00:04:49,240 --> 00:04:50,350
+Estoy en la página.
+
+81
+00:04:50,350 --> 00:04:53,920
+Vamos a ingresar el username y el password queda registrado.
+
+82
+00:04:55,070 --> 00:04:56,750
+Aquí le ha puesto base admin.
+
+83
+00:04:57,140 --> 00:04:58,760
+Username y el password.
+
+84
+00:04:59,450 --> 00:05:01,220
+Vamos a dar click ahora a login.
+
+85
+00:05:03,540 --> 00:05:05,280
+Voy a guardar las credenciales en mi browser.
+
+86
+00:05:05,430 --> 00:05:05,910
+Perfecto.
+
+87
+00:05:05,910 --> 00:05:10,440
+Y como puedes darte cuenta, ya ingresé a la administración del Chango.
+
+88
+00:05:12,880 --> 00:05:15,280
+Vamos a darle click a este link de users.
+
+89
+00:05:16,900 --> 00:05:17,680
+Aquí aparece.
+
+90
+00:05:17,680 --> 00:05:21,760
+Vas a notar Bakshi Admin El usuario que he creado, el super user que he creado.
+
+91
+00:05:22,210 --> 00:05:26,020
+Vamos a darle clic para que vea sus características y propiedades.
+
+92
+00:05:26,320 --> 00:05:30,310
+Aquí me pide si yo quiero ingresar el nombre y el apellido first name.
+
+93
+00:05:30,310 --> 00:05:30,850
+Las name.
+
+94
+00:05:32,000 --> 00:05:35,270
+Voy a poner aquí las tres.
+
+95
+00:05:36,110 --> 00:05:36,800
+Perfecto.
+
+96
+00:05:37,610 --> 00:05:38,100
+Y le dos.
+
+97
+00:05:38,120 --> 00:05:39,220
+Click al botón Safe.
+
+98
+00:05:40,440 --> 00:05:46,800
+Bueno, en el siguiente capítulo vamos a comenzar a trabajar con la tabla que generé mi proyecto y que
+
+99
+00:05:46,800 --> 00:05:47,970
+aún no estoy viendo aquí.
+
+100
+00:05:48,330 --> 00:05:50,340
+Recuerda que la tabla que genere.
+
+101
+00:05:51,770 --> 00:05:57,590
+En la app se llama usuario y tiene estas columnas código, foto.
+
+102
+00:05:57,590 --> 00:05:59,300
+Nombre, profesión, genero, ciudad.
+
+103
+00:06:00,420 --> 00:06:07,710
+La idea principal de ingresar al Banco Administration era poder acceder y manipular las tablas que voy
+
+104
+00:06:07,710 --> 00:06:09,150
+creando para mi aplicación.
+
+105
+00:06:09,330 --> 00:06:11,880
+En este caso, la tabla debería ser usuario.
+
+106
+00:06:11,880 --> 00:06:12,780
+Aún no aparece aquí.
+
+107
+00:06:12,780 --> 00:06:13,770
+Tengo que limpiarla.
+
+108
+00:06:13,980 --> 00:06:16,470
+En el próximo capítulo vamos a trabajar en este tema.

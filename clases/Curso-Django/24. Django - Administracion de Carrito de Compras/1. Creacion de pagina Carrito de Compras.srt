@@ -1,0 +1,527 @@
+1
+00:00:00,390 --> 00:00:06,420
+En este capítulo trabajaremos en la creación de la página template para el shopping card, el carrito
+
+2
+00:00:06,420 --> 00:00:07,110
+de compras.
+
+3
+00:00:07,860 --> 00:00:12,810
+Por ese motivo vamos a ubicarnos dentro del Excel y aquí voy a ejecutar ese comando.
+
+4
+00:00:13,980 --> 00:00:19,080
+Python Espacio Manager, punto PY y.
+
+5
+00:00:21,680 --> 00:00:23,960
+Espacio start up.
+
+6
+00:00:26,680 --> 00:00:31,270
+Espacio el nombre de la app que va a ser en este caso Cards.
+
+7
+00:00:32,850 --> 00:00:33,720
+Vamos a entrar.
+
+8
+00:00:34,650 --> 00:00:39,660
+Esperamos unos segundos y vas a notar que ya apareció en la parte izquierda el explorador de Atton.
+
+9
+00:00:40,440 --> 00:00:42,000
+Esta nueva carpeta cards.
+
+10
+00:00:43,580 --> 00:00:46,010
+A continuación vamos a registrar esta nueva app.
+
+11
+00:00:46,370 --> 00:00:52,660
+Así que vamos al proyecto E-commerce, la carpeta de e-commerce, y vamos a hacer rápido.
+
+12
+00:00:53,230 --> 00:00:56,270
+Y aquí vamos a buscar la propiedad.
+
+13
+00:00:56,630 --> 00:00:58,970
+Instalé el app que apareció.
+
+14
+00:00:59,930 --> 00:01:01,880
+Al final de store enter.
+
+15
+00:01:01,880 --> 00:01:05,090
+Y aquí le escribo cartas y una coma.
+
+16
+00:01:05,090 --> 00:01:05,930
+Siempre al final.
+
+17
+00:01:06,170 --> 00:01:07,370
+Vamos a borrar los cambios.
+
+18
+00:01:07,400 --> 00:01:08,900
+Menú File Safe All.
+
+19
+00:01:09,620 --> 00:01:13,190
+Vamos ahora a registrar la URL de esta nueva app.
+
+20
+00:01:13,250 --> 00:01:20,540
+Así que estamos dentro de nuestro ecommerce y vamos a ir ahora al archivo del esquema y.
+
+21
+00:01:22,440 --> 00:01:25,200
+Que en esta sección de patterns.
+
+22
+00:01:26,330 --> 00:01:29,780
+Luego de este desamor con la coma, vamos a darle un enter.
+
+23
+00:01:30,860 --> 00:01:34,260
+Y aquí voy a copiar esa línea anterior del Patch Store.
+
+24
+00:01:34,580 --> 00:01:41,870
+Aquí la pego y le indico que no va a ser store ahora, va a ser cards card nada más sin la DS para diferenciarlo
+
+25
+00:01:42,200 --> 00:01:47,810
+y que incluya el archivo cards que está dentro de mí Cards.
+
+26
+00:01:48,260 --> 00:01:49,880
+Vamos a reemplazar este sector por.
+
+27
+00:01:50,810 --> 00:01:52,220
+García Llorens.
+
+28
+00:01:52,490 --> 00:01:53,780
+Aún no existe este archivo.
+
+29
+00:01:53,780 --> 00:01:55,310
+Vamos a crearlo a continuación.
+
+30
+00:01:56,260 --> 00:02:02,980
+Vamos entonces a nuestra carpeta cards, vamos a darle click derecho a la opción Newfield y aquí le
+
+31
+00:02:02,980 --> 00:02:07,090
+vamos a poner nombre con el final punto Pi y.
+
+32
+00:02:08,790 --> 00:02:09,690
+Y le damos enter.
+
+33
+00:02:11,080 --> 00:02:12,070
+Voy a importar.
+
+34
+00:02:12,370 --> 00:02:13,660
+Vamos a poner el primero from.
+
+35
+00:02:14,900 --> 00:02:19,880
+Touch and go punto rails import que importe el path.
+
+36
+00:02:22,050 --> 00:02:25,800
+Y también quiero importar el video del archivo bio.
+
+37
+00:02:27,170 --> 00:02:27,650
+Dios.
+
+38
+00:02:29,470 --> 00:02:30,130
+Tenemos.
+
+39
+00:02:31,360 --> 00:02:33,640
+Y ahora vamos a declarar, Laurel.
+
+40
+00:02:33,940 --> 00:02:36,190
+Vamos a ponerle el Panem igual.
+
+41
+00:02:37,830 --> 00:02:45,270
+Entre corchetes a este path que vamos a indicar por defecto cuando alguien quiere ingresar a esta app
+
+42
+00:02:45,270 --> 00:02:48,810
+de cards va a ser en blanco y lo por defecto.
+
+43
+00:02:49,680 --> 00:02:50,490
+Y le pongo que.
+
+44
+00:02:51,570 --> 00:02:58,110
+Seleccione el View Cart, el nombre de la función de EF que voy a crear entre apóstrofes.
+
+45
+00:02:58,110 --> 00:02:58,680
+Le pongo.
+
+46
+00:02:59,010 --> 00:02:59,910
+Va a ser card.
+
+47
+00:03:01,310 --> 00:03:02,660
+Y le ponemos una coma al final.
+
+48
+00:03:04,120 --> 00:03:07,750
+Ahora vamos al archivo views que se encuentra dentro de la carpeta Quartz.
+
+49
+00:03:09,720 --> 00:03:11,670
+A crear la función de tipo DF.
+
+50
+00:03:12,370 --> 00:03:18,270
+Ya hemos abierto el archivo y aquí vamos a crear esta función de start.
+
+51
+00:03:20,700 --> 00:03:26,280
+Pues dos puntos y lo único que me devuelva un render.
+
+52
+00:03:28,320 --> 00:03:30,510
+El objeto rico es coma.
+
+53
+00:03:31,020 --> 00:03:35,460
+Y aquí tengo que indicar cuál es el nombre del template que aún no existe, pero lo que voy a crear
+
+54
+00:03:35,460 --> 00:03:39,480
+dentro de la carpeta store que se encuentra dentro de templates.
+
+55
+00:03:40,020 --> 00:03:45,510
+Le pongo Store es la H y el nombre del template va a acercar punto a HTML.
+
+56
+00:03:47,440 --> 00:03:50,530
+Vamos a borrar los cambios del Al.
+
+57
+00:03:51,670 --> 00:03:53,530
+Y este es el nombre que le voy a dar al template.
+
+58
+00:03:53,540 --> 00:03:54,310
+Voy a no.
+
+59
+00:03:56,730 --> 00:04:00,360
+Y vamos ahora a la carpeta Templates a que aparece Templates.
+
+60
+00:04:00,990 --> 00:04:04,230
+Dentro de esta store vamos a darle clic derecho Store.
+
+61
+00:04:05,170 --> 00:04:06,220
+La opción Newfield.
+
+62
+00:04:07,030 --> 00:04:11,140
+Aquí le indico que el archivo template para ser carpeta html.
+
+63
+00:04:12,220 --> 00:04:13,110
+Le damos enter.
+
+64
+00:04:15,230 --> 00:04:15,940
+Ahora le ponemos.
+
+65
+00:04:15,940 --> 00:04:18,120
+Por ahora le ponemos un texto por defecto.
+
+66
+00:04:18,130 --> 00:04:21,040
+Lo voy a poner página cart.
+
+67
+00:04:22,730 --> 00:04:23,990
+Carrito de compras.
+
+68
+00:04:26,090 --> 00:04:31,700
+Vamos a borrar los cambios de Newfield CP All y vamos a ejecutar nuestro servidor web.
+
+69
+00:04:32,240 --> 00:04:36,200
+Para eso tengo que abrir el valle, escribir Python Management y Run Server.
+
+70
+00:04:36,470 --> 00:04:37,460
+Le damos enter.
+
+71
+00:04:38,210 --> 00:04:38,750
+Perfecto.
+
+72
+00:04:38,750 --> 00:04:40,160
+Se ejecuta sin problemas.
+
+73
+00:04:41,370 --> 00:04:46,080
+Y si vamos a la página vamos a lo que es la start y le damos enter.
+
+74
+00:04:46,080 --> 00:04:48,570
+Ya me está pintando el texto por defecto.
+
+75
+00:04:48,780 --> 00:04:55,470
+Pero ahora tenemos que utilizar un template HTML que ya tengo listo y está como un archivo adjunto de
+
+76
+00:04:55,470 --> 00:04:56,160
+esta clase.
+
+77
+00:04:57,000 --> 00:05:00,180
+Por favor, descarga este archivo de tipo HTML.
+
+78
+00:05:01,420 --> 00:05:03,490
+El archivo se llama Card Template.
+
+79
+00:05:03,880 --> 00:05:11,020
+Te repito, está como archivo adjunto dentro de este video, como un recurso de esta clase en particular.
+
+80
+00:05:11,500 --> 00:05:19,030
+Lo que voy a hacer es copiar todo este contenido de este bloc de notas y vamos a Atom y dentro de Atom
+
+81
+00:05:19,030 --> 00:05:23,500
+vamos a ir a la carpeta Store a que aparece el carpeta HTML y lo hemos abierto.
+
+82
+00:05:23,920 --> 00:05:29,110
+Voy a borrar este texto que había puesto de prueba y aquí pego todo el código HTML.
+
+83
+00:05:30,050 --> 00:05:31,670
+Voy a minimizar la sección.
+
+84
+00:05:31,670 --> 00:05:39,140
+Por ahora vamos a darle un espaciado porque recuerda que también tengo que importar el bajo común que
+
+85
+00:05:39,140 --> 00:05:42,320
+tienen todas las páginas que estoy desarrollando en Python.
+
+86
+00:05:43,160 --> 00:05:44,850
+Entonces vamos a la parte superior.
+
+87
+00:05:44,870 --> 00:05:46,820
+Aquí le he puesto unos espacios.
+
+88
+00:05:48,280 --> 00:05:52,450
+Y aquí voy a escribir entre llaves y porcentajes extends.
+
+89
+00:05:53,810 --> 00:05:55,730
+Veis a HTML.
+
+90
+00:05:57,490 --> 00:06:02,710
+También vamos a colocar el contenido dinámico, todo este section que yo he copiado del libro de notas
+
+91
+00:06:02,720 --> 00:06:03,280
+adjunto.
+
+92
+00:06:04,220 --> 00:06:08,720
+Tiene que estar rodeado del blog dinámico del blog content.
+
+93
+00:06:09,020 --> 00:06:13,670
+Así que aquí, en la parte superior del sexo, vamos a colocarle entre llaves y porcentajes.
+
+94
+00:06:15,560 --> 00:06:16,700
+Con el blog.
+
+95
+00:06:16,820 --> 00:06:18,200
+Primeramente blog, blog.
+
+96
+00:06:19,240 --> 00:06:20,890
+Espacio content.
+
+97
+00:06:22,430 --> 00:06:24,860
+Y para cerrar, colocarle.
+
+98
+00:06:26,080 --> 00:06:26,740
+Ya ves.
+
+99
+00:06:27,950 --> 00:06:30,830
+Porcentajes que colocamos en blog.
+
+100
+00:06:32,400 --> 00:06:33,240
+Lo tenemos listo.
+
+101
+00:06:33,270 --> 00:06:37,470
+Voy a guardar los cambios de Newfield Safe Hall y vamos a la página.
+
+102
+00:06:38,510 --> 00:06:39,980
+Vamos a refrescar la página.
+
+103
+00:06:41,330 --> 00:06:46,040
+Y mira, ya me aparece la página del carrito de compras.
+
+104
+00:06:47,060 --> 00:06:52,040
+No te preocupes que esta data que va a mostrar aquí los productos que he seleccionado para el carrito
+
+105
+00:06:52,040 --> 00:06:54,320
+de compras, van a venir desde la base de datos.
+
+106
+00:06:54,380 --> 00:07:00,140
+En el próximo capítulo vamos a trabajar esa parte, pero aquí también tengo un icono que me va a mostrar
+
+107
+00:07:00,140 --> 00:07:06,470
+los tipos de pago que yo puedo hacer con tarjeta, Visa, Mastercard, etc Esta imagen va a ser estática,
+
+108
+00:07:06,800 --> 00:07:10,040
+así que vamos a colocar la desplegarla dentro de la página.
+
+109
+00:07:10,950 --> 00:07:13,880
+Vamos a volver a Atom al archivo carpeta HTML.
+
+110
+00:07:13,890 --> 00:07:20,190
+Voy a desplegar este section y más o menos en la línea 80, 83, 87, dependiendo de los espaciados
+
+111
+00:07:20,190 --> 00:07:30,180
+que tengas en tu archivo, aparece este PCLAP Center y el MG y MG Hacerse y Miss Payment como PNG.
+
+112
+00:07:31,410 --> 00:07:32,580
+Esto es lo que voy a reemplazar.
+
+113
+00:07:32,850 --> 00:07:34,680
+Voy a quitarle el contenido.
+
+114
+00:07:35,400 --> 00:07:37,190
+O mejor dicho, no le voy a quitar el contenido.
+
+115
+00:07:37,200 --> 00:07:38,070
+Voy a copiarlo.
+
+116
+00:07:39,150 --> 00:07:39,960
+Lo copiamos.
+
+117
+00:07:40,210 --> 00:07:42,930
+Ahora lo remuevo un momento y entre.
+
+118
+00:07:44,400 --> 00:07:45,030
+Llaves.
+
+119
+00:07:45,450 --> 00:07:47,160
+Vamos a colocar también porcentajes.
+
+120
+00:07:49,320 --> 00:07:54,390
+Vamos a colocarle la ubicación dinámica que viene gracias al estático y entre apóstrofes.
+
+121
+00:07:54,510 --> 00:07:58,390
+Pongo la ubicación que viene desde Images mis payment.
+
+122
+00:07:58,740 --> 00:08:03,570
+PNG pero este estático tengo que declararlo en la parte superior.
+
+123
+00:08:05,100 --> 00:08:06,030
+Vamos arriba.
+
+124
+00:08:06,330 --> 00:08:14,190
+Y aquí, después de la extensa base HTML entre llaves y también porcentajes, vamos a colocarle que
+
+125
+00:08:14,190 --> 00:08:15,750
+cargue el LOD estático.
+
+126
+00:08:16,770 --> 00:08:17,700
+Lo tenemos listo.
+
+127
+00:08:17,700 --> 00:08:21,330
+Voy a File Safe All y vamos a probar a la página.
+
+128
+00:08:22,330 --> 00:08:24,520
+Estamos en la página, vamos a refrescarla.
+
+129
+00:08:25,120 --> 00:08:25,840
+Y perfecto.
+
+130
+00:08:25,840 --> 00:08:30,850
+Ya me apareció este tipo de pago PayPal, Visa, Mastercard, American Express.
+
+131
+00:08:31,390 --> 00:08:37,240
+En el próximo capítulo vamos a comenzar a crear las estructuras, las tablas y mi base de datos que
+
+132
+00:08:37,240 --> 00:08:39,430
+soporten el carrito de compras.

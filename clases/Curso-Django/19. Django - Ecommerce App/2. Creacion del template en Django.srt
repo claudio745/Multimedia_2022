@@ -1,0 +1,411 @@
+1
+00:00:00,650 --> 00:00:08,090
+En el capítulo anterior creamos nuestro Virtual Environment y también creamos nuestro proyecto E-commerce
+
+2
+00:00:08,120 --> 00:00:08,840
+Django.
+
+3
+00:00:09,560 --> 00:00:16,430
+Ahora vamos a crear nuestro primer template de la página index home de nuestra web application.
+
+4
+00:00:16,940 --> 00:00:22,220
+Por ese motivo, vamos a abrir nuestro proyecto utilizando la herramienta Atom.
+
+5
+00:00:22,850 --> 00:00:26,840
+Entonces vamos a primero copiar la ubicación donde está mi carpeta en el disco.
+
+6
+00:00:26,840 --> 00:00:28,160
+Sé que se llama e-commerce.
+
+7
+00:00:28,190 --> 00:00:28,920
+Voy a copiarla.
+
+8
+00:00:28,970 --> 00:00:29,530
+Copiar.
+
+9
+00:00:29,870 --> 00:00:32,930
+Ahora vamos a abrir una consola de comandos de Hook.
+
+10
+00:00:33,980 --> 00:00:34,390
+Aquí.
+
+11
+00:00:34,400 --> 00:00:35,420
+Ya le he abierto.
+
+12
+00:00:35,630 --> 00:00:37,700
+Voy a escribir despacio.
+
+13
+00:00:38,330 --> 00:00:40,880
+Pego aquí la ubicación de la carpeta y los puntos.
+
+14
+00:00:40,880 --> 00:00:42,530
+Y comas y comas.
+
+15
+00:00:42,830 --> 00:00:43,640
+Le damos enter.
+
+16
+00:00:44,710 --> 00:00:47,080
+Y ahora vas a escribir Atom.
+
+17
+00:00:47,110 --> 00:00:48,280
+Espacio, punto.
+
+18
+00:00:48,580 --> 00:00:49,660
+Y le damos enter.
+
+19
+00:00:51,160 --> 00:00:53,740
+En unos segundos ya se está abriendo el hide.
+
+20
+00:00:55,160 --> 00:00:55,490
+Listo.
+
+21
+00:00:55,490 --> 00:00:56,030
+Lo tengo.
+
+22
+00:00:56,030 --> 00:00:57,320
+Aquí está el IDE de Atom.
+
+23
+00:00:57,530 --> 00:00:58,010
+Perfecto.
+
+24
+00:00:58,010 --> 00:01:00,770
+Voy a cerrar estos stops que por defecto se han abierto.
+
+25
+00:01:01,670 --> 00:01:06,230
+Y ahora vamos a ubicarnos dentro de la carpeta y commerce.
+
+26
+00:01:07,840 --> 00:01:15,520
+Centro y Comercio está el Archivo Juárez Sport Py y como ya revisamos en capítulos anteriores, si yo
+
+27
+00:01:15,520 --> 00:01:21,320
+quiero redirigir la página de inicio de mi proyecto web, tengo que registrar este endpoint.
+
+28
+00:01:21,370 --> 00:01:25,990
+Estaré dentro de wireless y en la variable yo en el panel.
+
+29
+00:01:27,070 --> 00:01:28,690
+Aquí vamos a darle un enter.
+
+30
+00:01:30,770 --> 00:01:34,280
+Voy a crear un nuevo path, en este caso para la página de inicio.
+
+31
+00:01:34,610 --> 00:01:37,580
+Por eso le pongo dos apóstrofes sin ningún valor.
+
+32
+00:01:37,820 --> 00:01:43,040
+Luego le pongo una coma y a continuación le voy a indicar cuál es la función de F que va a procesar
+
+33
+00:01:43,040 --> 00:01:47,390
+este pedido que me haga el cliente hacia la página de inicio.
+
+34
+00:01:48,020 --> 00:01:49,610
+Lo voy a poner que sea home.
+
+35
+00:01:49,640 --> 00:01:51,950
+La función coma.
+
+36
+00:01:53,720 --> 00:01:59,500
+Y también les digo que el nombre va a ser Home y al final una coma para tener alas.
+
+37
+00:01:59,540 --> 00:02:05,690
+El acceso al archivo bus tengo que referenciar en la parte superior, por eso aquí le pongo from punto
+
+38
+00:02:06,050 --> 00:02:07,400
+import bus.
+
+39
+00:02:07,820 --> 00:02:08,450
+Perfecto.
+
+40
+00:02:08,660 --> 00:02:13,000
+Ahora lo que tengo que hacer es crear la función que va a procesar mi pedido.
+
+41
+00:02:13,010 --> 00:02:14,360
+Esta función se llama Home.
+
+42
+00:02:14,840 --> 00:02:17,650
+Primeramente guardamos los cambios del safe all.
+
+43
+00:02:18,080 --> 00:02:18,470
+Listo.
+
+44
+00:02:19,160 --> 00:02:24,260
+Y ahora vamos a crear el archivo views dentro de mi carpeta Commerce.
+
+45
+00:02:24,500 --> 00:02:29,510
+Vamos a darle clic derecho y Commerce Newfield que aparece y Commerce Back Slash.
+
+46
+00:02:30,260 --> 00:02:34,190
+Le pongo views copy y le damos enter.
+
+47
+00:02:35,770 --> 00:02:38,230
+Íbamos a escribir aquí nuestra primera función.
+
+48
+00:02:38,560 --> 00:02:44,800
+Primeramente, yo quiero que esta función lea la data desde un template HTML que voy a crear a futuro.
+
+49
+00:02:45,340 --> 00:02:52,120
+Entonces, para que pueda procesar este request, voy a tener que crearlo con una función de tipo render.
+
+50
+00:02:52,510 --> 00:02:58,010
+Entonces, en la parte superior voy a hacer primero la importación del Jango shortcuts.
+
+51
+00:03:00,620 --> 00:03:02,390
+Import render.
+
+52
+00:03:03,680 --> 00:03:10,280
+Esta función me va a permitir renderizar, desplegar el código HTML que provenga, que se genere dentro
+
+53
+00:03:10,280 --> 00:03:11,480
+de mi motor, mi engine.
+
+54
+00:03:13,890 --> 00:03:15,470
+La función de EF se llama home.
+
+55
+00:03:17,480 --> 00:03:19,540
+Y va a recibir un objeto request.
+
+56
+00:03:19,690 --> 00:03:20,890
+Vamos a ponerle dos puntos.
+
+57
+00:03:22,170 --> 00:03:25,320
+Y lo que me tiene que devolver es un render.
+
+58
+00:03:27,500 --> 00:03:31,170
+Este render que a pintar recibe un request.
+
+59
+00:03:32,310 --> 00:03:35,310
+Y también cuál es el nombre del template que va a desplegar.
+
+60
+00:03:35,640 --> 00:03:39,000
+En este caso se va a llamar home a HTML.
+
+61
+00:03:39,480 --> 00:03:45,390
+Vamos ahora a crear una carpeta donde se va a ubicar ese archivo template home punto HTML.
+
+62
+00:03:45,630 --> 00:03:47,640
+Pero lo vamos a crear a nivel de la raíz.
+
+63
+00:03:48,030 --> 00:03:50,130
+En la raíz, que también se llama e-commerce.
+
+64
+00:03:50,190 --> 00:03:51,120
+No lo confundas.
+
+65
+00:03:51,210 --> 00:03:53,700
+Está bien a nivel de la raíz del proyecto.
+
+66
+00:03:53,970 --> 00:03:56,580
+Vamos a darle click derecho a la opción New Folder.
+
+67
+00:03:57,450 --> 00:03:59,320
+De aquí lo voy a poner templates.
+
+68
+00:04:00,470 --> 00:04:01,370
+Lo tenemos listo.
+
+69
+00:04:01,850 --> 00:04:07,070
+Y ahora, al interior de Templates, vamos a dar clic derecho y creamos un nuevo archivo que se va a
+
+70
+00:04:07,070 --> 00:04:09,470
+llamar Home junto a HTML.
+
+71
+00:04:12,370 --> 00:04:13,140
+Y le damos enter.
+
+72
+00:04:14,050 --> 00:04:20,080
+Y ahora vamos a registrar esta carpeta de templates de nuestro proyecto al interior de la configuración.
+
+73
+00:04:20,530 --> 00:04:22,630
+Por eso vamos a ir a la carpeta de comercio.
+
+74
+00:04:22,960 --> 00:04:30,790
+Aquí está el proyecto y aquí está el archivo Crystal API y dale click y vamos a la parte inferior.
+
+75
+00:04:30,940 --> 00:04:33,940
+Va a buscar el atributo Templates.
+
+76
+00:04:33,950 --> 00:04:35,110
+Aquí aparecía el Templates.
+
+77
+00:04:36,370 --> 00:04:40,180
+Este tiene una propiedad que se llama Tipos de directorios.
+
+78
+00:04:40,180 --> 00:04:41,320
+Donde van a estar los templates.
+
+79
+00:04:41,950 --> 00:04:46,510
+Aquí vas a agregar entre apóstrofes, el directorio que acabamos de crear, que se llama Templates,
+
+80
+00:04:46,720 --> 00:04:50,260
+para que los empleados se puedan leer desde esta locación.
+
+81
+00:04:51,330 --> 00:04:52,860
+Vamos a guardar estos cambios.
+
+82
+00:04:52,890 --> 00:04:54,060
+Me gusta el Safe Hall.
+
+83
+00:04:55,020 --> 00:05:01,500
+Y ahora vamos a ubicarnos nuevamente en la carpeta Templates, ya que aparece el home HTML ese mi template
+
+84
+00:05:01,500 --> 00:05:04,050
+que se va a desplegar ahora como página inicial.
+
+85
+00:05:04,290 --> 00:05:10,020
+Lo que quiero es colocarle un texto para probar que está funcionando, que lo voy a poner bienvenido.
+
+86
+00:05:14,150 --> 00:05:16,550
+Al eCommerce Bakshi tres.
+
+87
+00:05:18,480 --> 00:05:20,010
+Vamos a borrar los cambios.
+
+88
+00:05:21,540 --> 00:05:23,810
+Y vamos a ejecutar nuestro proyecto.
+
+89
+00:05:24,320 --> 00:05:27,530
+Recuerda que nosotros ejecutamos el proyecto utilizando el bus.
+
+90
+00:05:27,740 --> 00:05:29,170
+Verifica que esté ejecutándose.
+
+91
+00:05:29,300 --> 00:05:30,710
+Si lo está ejecutando, no hay problema.
+
+92
+00:05:30,710 --> 00:05:35,810
+Simplemente guarda los cambios y levanta directamente el cron o el browser que tu deseas.
+
+93
+00:05:36,470 --> 00:05:38,900
+Pero en mi caso, yo lo había detenido hace unos momentos.
+
+94
+00:05:39,110 --> 00:05:41,270
+Por eso tengo que volver a ejecutar manualmente.
+
+95
+00:05:41,660 --> 00:05:47,030
+Siempre revisa que estés dentro del Virtual Environment con esas palabritas que aparecen en la parte
+
+96
+00:05:47,030 --> 00:05:47,660
+superior.
+
+97
+00:05:48,350 --> 00:05:51,170
+Y ahora, aquí vamos a escribir el comando.
+
+98
+00:05:52,490 --> 00:06:01,580
+Peyton, Espacio Manager y Espacio Rad Server le damos a Enter y aquí ya ejecutó nuestro proyecto el
+
+99
+00:06:01,580 --> 00:06:01,980
+servidor.
+
+100
+00:06:02,000 --> 00:06:03,260
+Vamos a levantar la página.
+
+101
+00:06:04,490 --> 00:06:09,380
+Y como puedes ver, ya está apareciendo el texto que viene desde el template home.
+
+102
+00:06:09,710 --> 00:06:11,840
+Bienvenidos al eCommerce Packs y tres.
+
+103
+00:06:12,080 --> 00:06:18,140
+En el próximo capítulo vamos ya a comenzar a construir la interface gráfica de un carrito de compras.

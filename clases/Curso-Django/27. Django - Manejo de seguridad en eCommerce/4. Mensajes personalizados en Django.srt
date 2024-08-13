@@ -1,0 +1,947 @@
+1
+00:00:00,530 --> 00:00:04,280
+En ese capítulo vamos a seguir trabajando en los mensajes de alerta en Jango.
+
+2
+00:00:05,150 --> 00:00:12,410
+Dentro de Jango existe un paquete que se llama Messages que te va a permitir manejar el disparo de estos
+
+3
+00:00:12,410 --> 00:00:13,160
+eventos.
+
+4
+00:00:13,400 --> 00:00:15,530
+Vamos entonces a configurar los primero.
+
+5
+00:00:16,160 --> 00:00:19,670
+Vamos a la carpeta e-commerce y vamos al Crystal y.
+
+6
+00:00:21,700 --> 00:00:24,850
+Vamos a ubicarnos en la parte final del archivo.
+
+7
+00:00:26,870 --> 00:00:27,580
+No tan final.
+
+8
+00:00:27,620 --> 00:00:32,870
+Luego de la estática jureles y el media jurel, medio Ruth aquí.
+
+9
+00:00:34,370 --> 00:00:37,280
+Podemos agregar este from da chango.
+
+10
+00:00:39,040 --> 00:00:40,150
+Punto com.
+
+11
+00:00:40,150 --> 00:00:40,540
+Triff.
+
+12
+00:00:40,930 --> 00:00:42,380
+Punto messages.
+
+13
+00:00:43,820 --> 00:00:45,950
+Para que importe a Constance.
+
+14
+00:00:47,390 --> 00:00:48,620
+Has mensajes.
+
+15
+00:00:51,630 --> 00:00:54,440
+De aquí le voy a indicar que me estáis.
+
+16
+00:00:57,450 --> 00:01:00,780
+Va a ser igual a la que le ponemos en todo.
+
+17
+00:01:01,900 --> 00:01:03,780
+En minúscula messages.
+
+18
+00:01:04,750 --> 00:01:05,320
+Error.
+
+19
+00:01:09,140 --> 00:01:09,920
+Dos puntos.
+
+20
+00:01:11,590 --> 00:01:18,730
+Le estoy indicando que es un error igual a Danger porque quiero que de esta forma incorpore los estilos
+
+21
+00:01:18,730 --> 00:01:24,970
+que por defecto tiene el bus de scrap y estos mensajes de alerta, sea de error o confirmación de alguna
+
+22
+00:01:24,970 --> 00:01:25,660
+transacción.
+
+23
+00:01:25,870 --> 00:01:32,070
+No son solamente para la página de registro de usuarios, tienen que ser para todas las páginas.
+
+24
+00:01:32,090 --> 00:01:37,660
+Cualquier página de mi aplicación web tiene que tener acceso a los mensajes de alerta.
+
+25
+00:01:38,350 --> 00:01:41,050
+Por este motivo vamos a ir a la carpeta templates.
+
+26
+00:01:41,890 --> 00:01:45,790
+Dentro de includes vamos a agregar un nuevo template.
+
+27
+00:01:45,790 --> 00:01:48,070
+Dale click derecho new file.
+
+28
+00:01:49,630 --> 00:01:53,860
+Y le vamos a poner alerts a html.
+
+29
+00:01:56,090 --> 00:02:01,970
+Y en este archivo vamos a primero indicarle que va a aparecer siempre y cuando exista algún mensaje.
+
+30
+00:02:02,270 --> 00:02:04,310
+Por eso le pongo if messages.
+
+31
+00:02:04,340 --> 00:02:05,480
+Aquí me falto colocarle.
+
+32
+00:02:06,840 --> 00:02:07,950
+El signo de porcentaje.
+
+33
+00:02:08,010 --> 00:02:09,090
+Después de las llaves.
+
+34
+00:02:09,150 --> 00:02:09,660
+Listo.
+
+35
+00:02:10,650 --> 00:02:11,760
+Y cerramos también.
+
+36
+00:02:14,410 --> 00:02:18,130
+Este bloque se va a mostrar solo si existen mensajes.
+
+37
+00:02:18,610 --> 00:02:19,300
+Perfecto.
+
+38
+00:02:20,770 --> 00:02:23,980
+Y ahora tú puedes tener diferentes tipos de alertas, no solamente una.
+
+39
+00:02:23,980 --> 00:02:24,880
+Van a ser un grupo.
+
+40
+00:02:24,880 --> 00:02:26,470
+Alertas que pueden ocurrir.
+
+41
+00:02:27,360 --> 00:02:29,190
+Por este motivo vamos a desplegarla.
+
+42
+00:02:29,430 --> 00:02:36,140
+Utilizando un bucle, hacemos un for meses y mensajes.
+
+43
+00:02:38,290 --> 00:02:39,550
+Cerramos el bucle.
+
+44
+00:02:42,660 --> 00:02:42,770
+End.
+
+45
+00:02:43,380 --> 00:02:43,860
+Listo.
+
+46
+00:02:45,710 --> 00:02:49,160
+Y aquí vamos a construir la estructura del template html.
+
+47
+00:02:50,180 --> 00:02:51,140
+Vamos a crear primero un.
+
+48
+00:02:52,900 --> 00:02:54,040
+Escribimos ahora?
+
+49
+00:02:54,040 --> 00:02:54,250
+Si.
+
+50
+00:02:55,450 --> 00:02:59,020
+Este Tiff va a tener un Klass que va a ser de tipo container.
+
+51
+00:02:59,230 --> 00:03:04,630
+Recuerda que estos estilos vienen desde el Bootstrap, que ya está incorporado por defecto de mi proyecto
+
+52
+00:03:05,890 --> 00:03:10,600
+y le voy a poner aquí también un ID que le pongo Message, ID, iMessage.
+
+53
+00:03:12,410 --> 00:03:14,750
+Voy a crear otro div en su interior.
+
+54
+00:03:15,440 --> 00:03:15,740
+Div.
+
+55
+00:03:18,750 --> 00:03:27,060
+Y este va a tener un Klass que va a ser alert también un alert raya.
+
+56
+00:03:29,070 --> 00:03:30,690
+Pero por qué me pongo esto dinámico?
+
+57
+00:03:30,700 --> 00:03:37,140
+Porque puede ser una alerta, un mensaje de tipo de error o puede ser una alerta de tipo de success,
+
+58
+00:03:37,320 --> 00:03:43,770
+indicándote que, por ejemplo, se guardó exitosamente el registro del usuario en la base de datos para
+
+59
+00:03:43,770 --> 00:03:48,630
+saber si es un estilo de tipo error o es un tipo de confirmación de evento.
+
+60
+00:03:49,350 --> 00:03:55,430
+Es que le vamos a indicar que ese tipo venga desde el Message Point Tags.
+
+61
+00:03:56,610 --> 00:04:00,810
+Pero puede ocurrir en algún caso que ese taxi no tenga ningún valor.
+
+62
+00:04:01,440 --> 00:04:03,630
+Entonces, hagamos primero una condición.
+
+63
+00:04:04,350 --> 00:04:05,070
+Una condición?
+
+64
+00:04:05,070 --> 00:04:08,970
+Se puede hacer una condición para que solo aparezca, desaparezca este atributo?
+
+65
+00:04:09,660 --> 00:04:10,530
+Si se puede hacer.
+
+66
+00:04:10,530 --> 00:04:11,640
+Mira, te lo voy a enseñar ahora.
+
+67
+00:04:11,640 --> 00:04:13,470
+Voy a poner un poco de espacio para que nos notes.
+
+68
+00:04:15,160 --> 00:04:22,150
+Y aquí, después del diez, entre llaves y porcentajes, le ponemos la condición if.
+
+69
+00:04:24,020 --> 00:04:24,680
+Meses.
+
+70
+00:04:24,730 --> 00:04:26,300
+El taxi tiene taxis.
+
+71
+00:04:26,540 --> 00:04:28,880
+Entonces que haga esto.
+
+72
+00:04:30,670 --> 00:04:31,930
+Ya he quitado que cerrar el if.
+
+73
+00:04:32,470 --> 00:04:33,640
+Le pongo llaves.
+
+74
+00:04:34,760 --> 00:04:38,300
+Y también porcentajes y le pongo un if.
+
+75
+00:04:40,620 --> 00:04:41,760
+Lo tenemos listo.
+
+76
+00:04:44,000 --> 00:04:48,170
+Y ahora le voy a poner luego de este if el rol que va a tener.
+
+77
+00:04:48,410 --> 00:04:52,010
+Voy a poner un rol que diga alert, este tipo de alert.
+
+78
+00:04:54,310 --> 00:04:55,150
+Y en su interior.
+
+79
+00:04:55,150 --> 00:04:57,850
+Lo que quiero que aparezca es el mensaje en sí.
+
+80
+00:04:58,510 --> 00:05:00,130
+Así que solo lo escribimos acá.
+
+81
+00:05:01,830 --> 00:05:02,970
+Entre el doble Chávez.
+
+82
+00:05:04,330 --> 00:05:04,870
+Meses.
+
+83
+00:05:06,230 --> 00:05:07,070
+Eso sería todo.
+
+84
+00:05:07,130 --> 00:05:08,780
+Pero también hay un detalle aquí.
+
+85
+00:05:09,050 --> 00:05:12,950
+Qué pasaría si el mensaje que te están enviando es de suma importancia?
+
+86
+00:05:13,610 --> 00:05:20,210
+Entonces vamos a agregarle un texto condicionado para ser dependiendo del mensaje level eleven del mensaje
+
+87
+00:05:20,210 --> 00:05:21,080
+en la importancia.
+
+88
+00:05:22,160 --> 00:05:23,270
+Pues aquí lo voy a poner.
+
+89
+00:05:23,690 --> 00:05:32,000
+Primeramente una condición saber si es importante o no, if message label es igual a default.
+
+90
+00:05:33,230 --> 00:05:34,780
+Punto por punto.
+
+91
+00:05:34,790 --> 00:05:35,530
+Raya para abajo.
+
+92
+00:05:35,540 --> 00:05:36,230
+Meses.
+
+93
+00:05:37,310 --> 00:05:38,000
+Levels.
+
+94
+00:05:39,400 --> 00:05:39,850
+Punto.
+
+95
+00:05:39,850 --> 00:05:40,390
+Error.
+
+96
+00:05:41,870 --> 00:05:48,980
+Si esto se comprueba, entonces quiero que imprimas este texto que diga importante y dos puntos.
+
+97
+00:05:49,790 --> 00:05:51,770
+Y aquí cerramos el n10.
+
+98
+00:05:59,110 --> 00:06:00,910
+Pero aquí también hay algo importante.
+
+99
+00:06:00,910 --> 00:06:04,930
+Yo quiero que aparezca el mensaje, pero no quiero que se quede por siempre pegado en la pantalla.
+
+100
+00:06:05,200 --> 00:06:11,230
+Yo quiero que después de cuatro segundos este mensaje que se esté imprimiendo desaparezca.
+
+101
+00:06:11,470 --> 00:06:16,570
+Cómo hago para controlar el tiempo de impresión de este mensaje?
+
+102
+00:06:16,600 --> 00:06:17,320
+No te preocupes.
+
+103
+00:06:17,320 --> 00:06:23,410
+Para esto vamos a tener que utilizar una función JavaScript que reconozca que el DIF hoy día existe
+
+104
+00:06:23,410 --> 00:06:27,190
+en tu pantalla y lo es aparezca después de cuatro segundos.
+
+105
+00:06:28,130 --> 00:06:31,880
+Vamos a la carpeta estática que está en la raíz de tu proyecto.
+
+106
+00:06:32,940 --> 00:06:39,670
+Aquí, al parecer static dentro de static aparece JS de JavaScript ya que aparece el archivo script
+
+107
+00:06:39,990 --> 00:06:40,560
+js.
+
+108
+00:06:40,560 --> 00:06:48,480
+Vamos a abrirlo después que se cierre esta línea que s jQuery end damos un enter y aquí vamos a escribir
+
+109
+00:06:48,480 --> 00:06:52,020
+una función javascript que va a ser sigue se timeout.
+
+110
+00:06:53,750 --> 00:06:54,910
+Eso un Fulcrum.
+
+111
+00:06:56,070 --> 00:07:03,380
+Abrimos las llaves y aquí tengo que indicar que capture al DIF para capturar ese DIF.
+
+112
+00:07:03,430 --> 00:07:10,590
+Lo hago com entre apóstrofes, si no numeral y le pongo el nombre del DIF que se llama meses.
+
+113
+00:07:11,770 --> 00:07:13,480
+Y les digo que este va a desaparecer.
+
+114
+00:07:13,960 --> 00:07:18,580
+Le pongo un fade out que se desaparezca lentamente, que hay que tener cuidado.
+
+115
+00:07:18,580 --> 00:07:19,690
+La O es con mayúscula.
+
+116
+00:07:19,960 --> 00:07:20,770
+Fade out.
+
+117
+00:07:21,580 --> 00:07:22,240
+Desaparezca.
+
+118
+00:07:22,240 --> 00:07:23,500
+Desvanezca lentamente.
+
+119
+00:07:23,560 --> 00:07:24,870
+Le pongo por eso es lo.
+
+120
+00:07:26,150 --> 00:07:29,900
+Y cuánto va a durar este proceso para que desaparezca lentamente.
+
+121
+00:07:30,380 --> 00:07:34,220
+Luego de esta llave, le pones una coma y le ponemos 4000.
+
+122
+00:07:34,430 --> 00:07:35,150
+Qué significa?
+
+123
+00:07:35,150 --> 00:07:39,050
+Que va a demorar cuatro segundos en desaparecer?
+
+124
+00:07:40,070 --> 00:07:46,490
+Lo que yo deseo en este caso es que aparezca un mensaje en la parte superior indicándome que se registró
+
+125
+00:07:46,490 --> 00:07:48,380
+correctamente este usuario.
+
+126
+00:07:48,770 --> 00:07:55,340
+Entonces, para que se dispare ese error tengo que ir a la función que se encarga de crear esa transacción
+
+127
+00:07:55,340 --> 00:07:56,000
+de este botón.
+
+128
+00:07:56,750 --> 00:08:04,100
+Por este motivo vamos a ir a la carpeta account y luego a buscar y ya que aparece la función registrar.
+
+129
+00:08:05,380 --> 00:08:11,860
+Lo que quiero hacer ahora es incluir dentro de este registro posterior al user safe que aparece Safe.
+
+130
+00:08:13,250 --> 00:08:15,470
+Quiero que me aparezca un mensaje.
+
+131
+00:08:16,280 --> 00:08:17,240
+Enviar un mensaje.
+
+132
+00:08:17,780 --> 00:08:18,740
+Por eso lo voy a poner acá.
+
+133
+00:08:18,770 --> 00:08:19,580
+Messages.
+
+134
+00:08:21,080 --> 00:08:25,850
+Success Un mensaje de éxito porque se guardó correctamente.
+
+135
+00:08:26,420 --> 00:08:28,130
+Y entonces algún rico es.
+
+136
+00:08:28,970 --> 00:08:32,630
+Y a continuación le tengo que indicar cuál es el mensaje que quiero enviar.
+
+137
+00:08:33,540 --> 00:08:36,630
+Se registró el usuario exitosamente.
+
+138
+00:08:37,290 --> 00:08:38,100
+Ese es el mensaje.
+
+139
+00:08:40,480 --> 00:08:42,670
+E inmediatamente después voy a hacer un return.
+
+140
+00:08:42,740 --> 00:08:43,310
+Retire.
+
+141
+00:08:45,160 --> 00:08:47,770
+Hacia la página register como un refrescar.
+
+142
+00:08:49,250 --> 00:08:50,210
+Lo tenemos listo.
+
+143
+00:08:50,450 --> 00:08:54,680
+Sí, pero me falta importar en la parte superior ese retire.
+
+144
+00:08:54,770 --> 00:08:58,520
+Así que aquí hacemos un sándwich y aquí está escrito.
+
+145
+00:08:59,000 --> 00:09:01,450
+Le pongo una coma y le pongo un retire.
+
+146
+00:09:02,210 --> 00:09:04,910
+También estoy utilizando lo que es el messages.
+
+147
+00:09:05,120 --> 00:09:06,800
+Mira este objeto.
+
+148
+00:09:06,800 --> 00:09:08,120
+También tengo que importarlo.
+
+149
+00:09:08,270 --> 00:09:10,960
+Vamos a hacerlo después de este Model Account.
+
+150
+00:09:12,160 --> 00:09:12,790
+Aquí lo escribo.
+
+151
+00:09:12,790 --> 00:09:16,270
+From tha chango country.
+
+152
+00:09:17,650 --> 00:09:18,280
+Import.
+
+153
+00:09:19,280 --> 00:09:19,910
+Mensajes.
+
+154
+00:09:21,760 --> 00:09:22,240
+Listo.
+
+155
+00:09:22,600 --> 00:09:23,470
+Lo tenemos.
+
+156
+00:09:24,190 --> 00:09:24,880
+Lo tenemos.
+
+157
+00:09:24,880 --> 00:09:25,960
+Listo ahora.
+
+158
+00:09:25,990 --> 00:09:26,660
+Un momento.
+
+159
+00:09:26,680 --> 00:09:29,320
+Estamos tratando de registrar un nuevo usuario.
+
+160
+00:09:29,830 --> 00:09:31,810
+Entonces vayamos a la carpeta Templates.
+
+161
+00:09:32,440 --> 00:09:34,720
+Y ahora vamos hacia acá.
+
+162
+00:09:35,710 --> 00:09:38,500
+Y el archivo register, punto HTML.
+
+163
+00:09:40,110 --> 00:09:42,840
+Aquí es donde tenemos que crear el alert.
+
+164
+00:09:44,110 --> 00:09:47,080
+Pero donde lo voy a crear tiene que estar en la parte superior.
+
+165
+00:09:48,040 --> 00:09:51,610
+Justo después de este body, más o menos en la línea 12.
+
+166
+00:09:53,110 --> 00:09:53,500
+Aquí.
+
+167
+00:09:54,560 --> 00:10:03,620
+En este article class debajo y antes del header, voy a agregar que se incluya ese mensaje de alerta.
+
+168
+00:10:05,730 --> 00:10:06,840
+Ese archivo de alerta.
+
+169
+00:10:06,840 --> 00:10:10,430
+Recuerda que hemos creado dentro de includes este alerts html.
+
+170
+00:10:10,860 --> 00:10:14,820
+Aquí lo vamos a incluir y solamente se va a pintar si es que aparece algún mensaje.
+
+171
+00:10:16,040 --> 00:10:17,710
+Entonces acá le ponemos include.
+
+172
+00:10:20,030 --> 00:10:25,640
+Y aquí le agrego la dirección que está en la carpeta includes es la cual es el nombre del archivo alert.
+
+173
+00:10:26,270 --> 00:10:27,170
+HTML.
+
+174
+00:10:28,640 --> 00:10:30,080
+Bien, ya lo agregamos.
+
+175
+00:10:30,740 --> 00:10:31,940
+Ahora voy a guardar los cambios.
+
+176
+00:10:31,970 --> 00:10:33,320
+Menú File Safe All.
+
+177
+00:10:34,980 --> 00:10:37,130
+Íbamos a la página de registro de usuarios.
+
+178
+00:10:37,140 --> 00:10:42,570
+Acá hay un detalle cuando tú hagas un cambio dentro de un archivo JavaScript, te recomiendo siempre
+
+179
+00:10:42,570 --> 00:10:43,530
+limpiar la caché.
+
+180
+00:10:43,770 --> 00:10:44,820
+Cómo lo vas a limpiar?
+
+181
+00:10:45,000 --> 00:10:51,300
+Primero dale click derecho al browser regulación inspec inspeccionar y ahora dale click derecho a este
+
+182
+00:10:51,300 --> 00:10:54,840
+botón de refrescar que aparece en la parte superior izquierda.
+
+183
+00:10:55,110 --> 00:10:57,450
+Dale clic derecho y aquí aparece la opción.
+
+184
+00:10:57,750 --> 00:11:00,180
+En realidad es la tercera opción.
+
+185
+00:11:00,540 --> 00:11:01,200
+Le damos clic.
+
+186
+00:11:02,220 --> 00:11:04,440
+Y va a limpiarse la cache de tu browser.
+
+187
+00:11:05,790 --> 00:11:06,840
+Lo tenemos listo.
+
+188
+00:11:07,020 --> 00:11:10,140
+Ahora sí vamos a ingresar un usuario para registrarlo.
+
+189
+00:11:11,040 --> 00:11:14,100
+Ya he llenado el formulario con datos correctos.
+
+190
+00:11:14,100 --> 00:11:15,580
+También he creado un password fuerte.
+
+191
+00:11:15,600 --> 00:11:16,920
+Mayúsculas, minúsculas.
+
+192
+00:11:17,190 --> 00:11:18,960
+Un carácter especial, un número.
+
+193
+00:11:19,200 --> 00:11:22,500
+Y lo ha repetido también correctamente en esta caja de texto.
+
+194
+00:11:22,950 --> 00:11:25,530
+Y le vamos a dar clic al botón Registrar.
+
+195
+00:11:26,560 --> 00:11:33,580
+Y mira automáticamente ya apareció este mensaje que dice se registró el usuario exitosamente?
+
+196
+00:11:34,710 --> 00:11:35,790
+Esto que significa?
+
+197
+00:11:36,120 --> 00:11:38,820
+Que hemos hecho los cambios de manera.
+
+198
+00:11:39,090 --> 00:11:41,190
+Pero aquí tenemos un pequeño problema.
+
+199
+00:11:41,190 --> 00:11:46,170
+No estás desapareciendo el mensaje a los cuatro segundos como yo le estoy indicando.
+
+200
+00:11:46,620 --> 00:11:47,430
+No te preocupes.
+
+201
+00:11:47,760 --> 00:11:49,020
+Voy a cortar.
+
+202
+00:11:49,020 --> 00:11:51,930
+Voy a volver otra vez a Static JS Scripts.
+
+203
+00:11:52,260 --> 00:11:55,230
+Y en la parte final, esta función es Time out.
+
+204
+00:11:56,070 --> 00:11:56,940
+La voy a cortar.
+
+205
+00:11:58,020 --> 00:11:59,730
+Y vamos a ubicarla.
+
+206
+00:12:01,030 --> 00:12:09,490
+En la base vamos a ir a la carpeta templates ya que aparece dentro del template en base a HTML en la
+
+207
+00:12:09,490 --> 00:12:10,510
+parte superior.
+
+208
+00:12:11,750 --> 00:12:18,500
+Antes de que cierre el script aparece este documento Ready for example aquí vamos a agregar pegar ese
+
+209
+00:12:18,500 --> 00:12:18,950
+código.
+
+210
+00:12:20,390 --> 00:12:21,740
+También voy a hacer otro cambio.
+
+211
+00:12:21,740 --> 00:12:24,650
+Vamos a volver a Templates Includes Alerts.
+
+212
+00:12:25,580 --> 00:12:26,090
+Y aquí.
+
+213
+00:12:26,330 --> 00:12:28,160
+Aquí tenemos un pequeño detalle.
+
+214
+00:12:28,220 --> 00:12:36,050
+Mira, estoy haciendo un bucle del MSG y messages, pero estoy haciendo que ese bucle imprima varias
+
+215
+00:12:36,050 --> 00:12:38,390
+veces un div con el mismo ID.
+
+216
+00:12:38,750 --> 00:12:39,650
+Esto es incorrecto.
+
+217
+00:12:40,190 --> 00:12:46,070
+Así que vamos a mover el fore para que se encuentre luego del div it y message.
+
+218
+00:12:46,940 --> 00:12:49,280
+Este div comienza aquí y termina aquí.
+
+219
+00:12:49,280 --> 00:12:54,910
+Aquí en la parte final le voy a poner unos centers para que lo notes y voy a mover este form meses y
+
+220
+00:12:54,920 --> 00:12:55,940
+meses lo corto.
+
+221
+00:12:56,970 --> 00:12:57,690
+Hasta que lo pego.
+
+222
+00:12:58,710 --> 00:12:59,760
+Y este end form.
+
+223
+00:13:02,200 --> 00:13:04,240
+También lo corto acá, lo pego.
+
+224
+00:13:06,930 --> 00:13:07,380
+Listo.
+
+225
+00:13:07,710 --> 00:13:08,610
+Ahí lo tenemos.
+
+226
+00:13:08,820 --> 00:13:10,620
+Vamos a ir a Minute Field Safe all.
+
+227
+00:13:10,650 --> 00:13:13,560
+Vamos a borrar todos los cambios y vamos a probar la página.
+
+228
+00:13:14,220 --> 00:13:15,240
+Estamos en la página.
+
+229
+00:13:15,240 --> 00:13:19,140
+Como hice un cambio en el JavaScript, vamos a darle clic derecho inspec a la página.
+
+230
+00:13:19,650 --> 00:13:24,730
+Y aquí la tecla derecho a este reload y reload.
+
+231
+00:13:24,810 --> 00:13:25,500
+Perfecto.
+
+232
+00:13:26,010 --> 00:13:29,190
+Cerramos esto y vamos a llenar el formulario.
+
+233
+00:13:29,730 --> 00:13:35,040
+Ya lo hemos llenado con los datos correctos, también con el password que hemos repetido adecuadamente
+
+234
+00:13:35,640 --> 00:13:37,920
+y le vamos a dar clic al botón Registrar.
+
+235
+00:13:38,760 --> 00:13:46,200
+Perfecto se registró el usuario exitosamente y luego de cuatro segundos, como puedes ver, automáticamente
+
+236
+00:13:46,200 --> 00:13:48,090
+desapareció el mensaje.
+
+237
+00:13:48,690 --> 00:13:50,640
+Continuamos en el siguiente capítulo.

@@ -1,0 +1,883 @@
+1
+00:00:00,450 --> 00:00:05,220
+En este capítulo continuaremos trabajando dentro del template de registro de un nuevo usuario.
+
+2
+00:00:05,550 --> 00:00:12,450
+Llegó el momento ahora de trabajar específicamente en la transacción de registrar un nuevo usuario en
+
+3
+00:00:12,450 --> 00:00:15,240
+la base de datos utilizando este formulario.
+
+4
+00:00:15,990 --> 00:00:22,980
+Para esto vayamos a Atton y dentro de Atton vamos a ubicarnos en la carpeta account y ahora en el archivo
+
+5
+00:00:22,980 --> 00:00:24,360
+Buscar y.
+
+6
+00:00:25,920 --> 00:00:29,700
+Dentro de este archivo encontramos la función register.
+
+7
+00:00:30,690 --> 00:00:37,950
+Pero vamos a comenzar en la parte superior invocando la referencia de Models from Imports.
+
+8
+00:00:39,270 --> 00:00:40,200
+De Account.
+
+9
+00:00:40,740 --> 00:00:47,130
+Recuerda que account es el modelo en la clase modelo sobre la cual insertaremos este record dentro de
+
+10
+00:00:47,130 --> 00:00:48,390
+nuestra base de datos.
+
+11
+00:00:49,270 --> 00:00:50,400
+Bien, lo tenemos.
+
+12
+00:00:50,400 --> 00:00:50,850
+Listo.
+
+13
+00:00:51,120 --> 00:00:51,750
+Comencemos.
+
+14
+00:00:51,780 --> 00:00:53,190
+Vamos al metodo Register.
+
+15
+00:00:53,430 --> 00:00:56,970
+Y lo primero que tengo que hacer es capturar la data que me está enviando el cliente.
+
+16
+00:00:57,210 --> 00:01:03,060
+Pero esta data que me envía el cliente está viajando dentro de un metodo post dentro del objeto request.
+
+17
+00:01:03,660 --> 00:01:09,210
+Por eso vamos a hacer una condicion acá hacemos un if sea el request method.
+
+18
+00:01:09,570 --> 00:01:11,520
+El método del request envió datos.
+
+19
+00:01:11,520 --> 00:01:12,510
+Es de tipo post.
+
+20
+00:01:13,910 --> 00:01:14,660
+Dos puntos.
+
+21
+00:01:14,900 --> 00:01:15,770
+Haz lo siguiente.
+
+22
+00:01:16,340 --> 00:01:17,450
+Qué es lo que tengo que hacer?
+
+23
+00:01:17,990 --> 00:01:20,510
+Tengo que instanciar un objeto de tipo Form.
+
+24
+00:01:22,990 --> 00:01:26,260
+Y le digo que esa registración va a ser igual a a registración.
+
+25
+00:01:27,520 --> 00:01:28,000
+Form.
+
+26
+00:01:30,060 --> 00:01:31,980
+Pasándole este request.
+
+27
+00:01:33,110 --> 00:01:33,890
+Punto post.
+
+28
+00:01:37,570 --> 00:01:38,710
+Y hago una condición.
+
+29
+00:01:38,890 --> 00:01:42,340
+Si el formulario es válido, es válido.
+
+30
+00:01:42,940 --> 00:01:46,450
+Si ha pasado las validaciones, llama a esta función dos puntos.
+
+31
+00:01:47,200 --> 00:01:52,420
+Entonces, a lo siguiente captura los datos que te esté enviando el cliente.
+
+32
+00:01:54,090 --> 00:02:00,000
+Por eso aquí lo voy a poner primero first name is a form punch clinic data.
+
+33
+00:02:06,090 --> 00:02:12,060
+Y aquí le pongo el dato que me está enviando dentro de dentro del método dentro del request el cliente
+
+34
+00:02:12,060 --> 00:02:12,930
+se llama First Name.
+
+35
+00:02:15,100 --> 00:02:15,970
+Voy a copiarlo.
+
+36
+00:02:18,090 --> 00:02:20,330
+Y aquí vamos con las.
+
+37
+00:02:26,010 --> 00:02:26,400
+Listo.
+
+38
+00:02:26,910 --> 00:02:27,750
+Continuamos?
+
+39
+00:02:27,780 --> 00:02:28,620
+Lo voy a poner ahora.
+
+40
+00:02:28,650 --> 00:02:29,970
+Phone Number.
+
+41
+00:02:34,640 --> 00:02:36,670
+Así que le ponemos el fondant también.
+
+42
+00:02:39,250 --> 00:02:40,690
+De esta forma, línea a línea.
+
+43
+00:02:40,690 --> 00:02:45,670
+Estoy capturando los valores que mueve el cliente y las estoy almacenando en estas variables.
+
+44
+00:02:48,270 --> 00:02:49,770
+Siguiente el email.
+
+45
+00:02:56,100 --> 00:02:56,610
+Listo.
+
+46
+00:02:58,840 --> 00:03:01,660
+Vamos ahora con el paso siguiente línea.
+
+47
+00:03:02,290 --> 00:03:03,070
+Password.
+
+48
+00:03:11,890 --> 00:03:18,940
+Otro campo muy importante que me va a pedir la base de datos para registrar un nuevo usuario es el username.
+
+49
+00:03:19,180 --> 00:03:24,100
+Pero si no hace nuestro formulario, nosotros no tenemos un campo donde almacenar este username.
+
+50
+00:03:24,640 --> 00:03:25,960
+Tenemos que auto generarlo.
+
+51
+00:03:26,140 --> 00:03:27,100
+A partir de dónde?
+
+52
+00:03:27,370 --> 00:03:29,290
+A partir del correo electrónico.
+
+53
+00:03:29,590 --> 00:03:34,930
+Como sabes, un correo electrónico tiene dos partes separadas por el signo de arroba.
+
+54
+00:03:35,590 --> 00:03:40,180
+1/1 es referente al nombre del usuario Pax Address.
+
+55
+00:03:40,840 --> 00:03:46,150
+1/2 se refiere al dominio de la compañía donde está registrado el correo electrónico.
+
+56
+00:03:46,160 --> 00:03:47,740
+En este caso podría ser Gmail.
+
+57
+00:03:48,710 --> 00:03:57,680
+Lo que yo quiero es capturar este primer segmento del email y almacenarlo como si fuera el username.
+
+58
+00:03:58,190 --> 00:03:59,150
+Cómo lo voy a hacer?
+
+59
+00:04:00,440 --> 00:04:02,210
+Voy a indicar la username.
+
+60
+00:04:02,810 --> 00:04:06,770
+Va a ser igual al email que me esté enviando el cliente.
+
+61
+00:04:07,230 --> 00:04:15,350
+Punto Split llama la función split para que me separe esta cadena de caracteres por un carácter en específico
+
+62
+00:04:15,350 --> 00:04:16,820
+que debe ser el arroba.
+
+63
+00:04:17,600 --> 00:04:24,080
+Entonces acá le pongo entre comillas el arroba.
+
+64
+00:04:25,560 --> 00:04:30,410
+Y quiero que solamente me devuelva el primer bloque al hacer el split.
+
+65
+00:04:30,420 --> 00:04:37,410
+Lo que está haciendo esa función es crearme un arreglo, un arreglo separado, un arreglo string separado
+
+66
+00:04:37,410 --> 00:04:38,910
+por el carácter en específico.
+
+67
+00:04:39,120 --> 00:04:45,270
+En este caso tendría un arreglo con dos elementos base y el otro sería gmail.com.
+
+68
+00:04:45,840 --> 00:04:51,840
+Yo quiero que me traiga solamente 1/1, por eso aquí le pongo el que está en la posición cero que corresponde.
+
+69
+00:04:53,100 --> 00:04:53,940
+Al username.
+
+70
+00:04:55,170 --> 00:04:55,530
+Listo.
+
+71
+00:04:56,490 --> 00:05:02,490
+Entonces ya con esto estoy capturando el username y ya tendría realmente todos los campos que necesito
+
+72
+00:05:02,490 --> 00:05:06,930
+para poder crear un usuario al interior de Jungle.
+
+73
+00:05:08,450 --> 00:05:15,670
+Vamos a hacer entonces la instancia de un usuario user va a ser igual a quien llamó a la count punto.
+
+74
+00:05:16,800 --> 00:05:17,400
+Object.
+
+75
+00:05:18,210 --> 00:05:18,780
+Punto.
+
+76
+00:05:19,850 --> 00:05:20,660
+Cree usted?
+
+77
+00:05:22,020 --> 00:05:26,220
+De aquí le voy a pasar los parámetros que se necesitan para crear un nuevo usuario.
+
+78
+00:05:26,530 --> 00:05:30,660
+Le pongo un first name igual a first name.
+
+79
+00:05:31,140 --> 00:05:34,560
+El parámetro también las name.
+
+80
+00:05:35,840 --> 00:05:39,800
+Igual a las dame el parámetro que estoy ingresando ahora.
+
+81
+00:05:40,010 --> 00:05:47,480
+No te confundas, lo que sucede es que este account tiene un método que se llama Crea user que nosotros
+
+82
+00:05:47,480 --> 00:05:56,630
+hemos definido clases pasadas y este método te solicita estos parámetros first class, name, email,
+
+83
+00:05:56,810 --> 00:05:58,250
+username y password.
+
+84
+00:05:59,440 --> 00:06:01,960
+Este es el nombre del parámetro de crear user.
+
+85
+00:06:02,200 --> 00:06:09,070
+Mientras que esta segunda parte es el nombre del valor de la variable que estás obteniendo desde el
+
+86
+00:06:09,070 --> 00:06:09,670
+cliente.
+
+87
+00:06:11,190 --> 00:06:12,360
+Sí, para que no te equivoques.
+
+88
+00:06:12,630 --> 00:06:14,730
+Las damas continuamos ahora.
+
+89
+00:06:15,510 --> 00:06:16,110
+Y mal.
+
+90
+00:06:16,530 --> 00:06:20,040
+Igual a la variable username.
+
+91
+00:06:20,190 --> 00:06:22,890
+Igual al username que he capturado de la variable.
+
+92
+00:06:24,030 --> 00:06:25,830
+Y ahora le pone aquí password.
+
+93
+00:06:26,980 --> 00:06:29,800
+Igual a password que capturado de la variable.
+
+94
+00:06:30,070 --> 00:06:31,990
+Voy a maximizar para que sea mejor.
+
+95
+00:06:32,560 --> 00:06:33,280
+Ahí lo puedes ver.
+
+96
+00:06:35,060 --> 00:06:42,440
+Pero este método cree user no tiene entre sus parámetros al nom, al número telefónico, al number.
+
+97
+00:06:43,040 --> 00:06:48,440
+No te preocupes, lo que hace este método es solo crear una instancia del usuario.
+
+98
+00:06:48,450 --> 00:06:52,250
+Realmente en este momento no lo está almacenando aún en la base de datos.
+
+99
+00:06:52,850 --> 00:07:00,290
+Entonces, esta instancia de user yo puedo llamarle a su propiedad number y aquí en su propiedad ya
+
+100
+00:07:00,290 --> 00:07:05,720
+lo puedo setear con la variable que obtuve desde el objeto que me envió el usuario.
+
+101
+00:07:05,870 --> 00:07:06,440
+El cliente.
+
+102
+00:07:07,610 --> 00:07:14,990
+Aquí le pongo un nombre listo y una vez que ya tengo el usuario, el objeto user listo, ya puedo llamar
+
+103
+00:07:14,990 --> 00:07:20,300
+a su método safe, que es el que dispara el evento para almacenar.
+
+104
+00:07:20,450 --> 00:07:23,720
+Insertar este nuevo record en la base de datos.
+
+105
+00:07:25,160 --> 00:07:29,690
+Pero recuerda, todo esto va a suceder si el formulario es válido.
+
+106
+00:07:30,880 --> 00:07:35,170
+Pero en ese caso tendría problemas porque no se estaría inicializando adecuadamente el form.
+
+107
+00:07:35,600 --> 00:07:37,890
+Mira, aquí aparece esta línea de registración Form.
+
+108
+00:07:37,930 --> 00:07:38,830
+Sin parámetros.
+
+109
+00:07:39,160 --> 00:07:40,150
+Voy a cortarla.
+
+110
+00:07:41,120 --> 00:07:43,760
+Y la vamos a colocar antes de Lif.
+
+111
+00:07:45,670 --> 00:07:54,040
+Esto a ese nivel, de modo que el contexto pueda tomar, ya sea este inicial form o pueda tomar el form
+
+112
+00:07:54,400 --> 00:07:57,280
+que ya me está enviando con los datos del POS.
+
+113
+00:07:58,830 --> 00:07:59,860
+Vamos a borrar los cambios.
+
+114
+00:07:59,880 --> 00:08:00,990
+Mayfield, safe Hall.
+
+115
+00:08:01,440 --> 00:08:03,120
+Y ahora vamos a la página.
+
+116
+00:08:03,990 --> 00:08:05,830
+Estamos en la página de Account Register.
+
+117
+00:08:05,850 --> 00:08:06,720
+Voy a actualizar.
+
+118
+00:08:06,750 --> 00:08:07,950
+Todo parece perfecto.
+
+119
+00:08:08,340 --> 00:08:11,010
+Vamos a ingresar el dato de un usuario.
+
+120
+00:08:11,790 --> 00:08:15,240
+Ya hemos ingresado los datos de ese formulario.
+
+121
+00:08:15,690 --> 00:08:19,230
+Y recuerda colocar un password relativamente fuerte.
+
+122
+00:08:19,560 --> 00:08:21,870
+Caracteres mayúsculas y minúsculas.
+
+123
+00:08:22,180 --> 00:08:23,400
+Un carácter especial.
+
+124
+00:08:23,770 --> 00:08:24,510
+Un número.
+
+125
+00:08:25,080 --> 00:08:27,130
+Y lo repetimos en esta otra caja de texto.
+
+126
+00:08:27,150 --> 00:08:29,220
+Vamos a darle clic al botón Registrar.
+
+127
+00:08:32,300 --> 00:08:35,090
+Sí, parece que ya se registró sin ningún problemas.
+
+128
+00:08:35,330 --> 00:08:38,390
+Vamos ahora a la página en local.
+
+129
+00:08:39,110 --> 00:08:40,040
+Es la admin.
+
+130
+00:08:40,070 --> 00:08:41,060
+Vamos a refrescarlo.
+
+131
+00:08:42,320 --> 00:08:48,050
+Y ahora que aparece Account vamos a darle clic account y ya aparece aquí el usuario que se ha registrado
+
+132
+00:08:48,050 --> 00:08:55,760
+que es John Ortiz con el correo gmail.com y también como puedes ver se ha generado su username.
+
+133
+00:08:57,970 --> 00:09:01,040
+Vamos ahora hacia la página nuevamente.
+
+134
+00:09:01,060 --> 00:09:02,350
+Voy a ir a bastidores.
+
+135
+00:09:02,860 --> 00:09:04,120
+Voy de nuevo a registrar.
+
+136
+00:09:04,450 --> 00:09:09,010
+Y mira, algo que me interesa mucho es hacer la validación de los passwords.
+
+137
+00:09:09,280 --> 00:09:17,200
+Yo quisiera que si el usuario coloca un password 123456, etcétera y aquí coloca solamente 789, los
+
+138
+00:09:17,200 --> 00:09:18,460
+passwords van a coincidir.
+
+139
+00:09:18,640 --> 00:09:24,070
+Debería de mandarme una alerta o un mensaje indicándome de que el password no coincide.
+
+140
+00:09:24,790 --> 00:09:30,350
+Por ese motivo vamos a ir a Atom y vamos a la carpeta account y ahora el archivo funciona.
+
+141
+00:09:30,640 --> 00:09:36,130
+Y de aquí vamos a registrar una nueva función al interior del registro form.
+
+142
+00:09:37,740 --> 00:09:43,410
+Después de este déficit que había creado antes, vamos a darle un enter ya de la altura del DF.
+
+143
+00:09:45,100 --> 00:09:46,240
+Vamos a hacer un debut.
+
+144
+00:09:46,540 --> 00:09:48,730
+Que se vaya a Marklin de limpiar.
+
+145
+00:09:49,690 --> 00:09:51,910
+Iba a recibir el objeto de la clase.
+
+146
+00:09:52,330 --> 00:10:01,450
+Por eso le pongo el self y aquí le ponemos un client data igual a super para que mi instancia al Registración
+
+147
+00:10:02,320 --> 00:10:02,770
+Form.
+
+148
+00:10:06,630 --> 00:10:07,930
+Ya es un clean method.
+
+149
+00:10:08,820 --> 00:10:11,850
+El clip lo que hace es tener acceso a los datos del formulario.
+
+150
+00:10:11,850 --> 00:10:12,870
+Por eso es que lo llamo.
+
+151
+00:10:13,920 --> 00:10:14,210
+Bien.
+
+152
+00:10:14,220 --> 00:10:18,150
+Ahora voy a llamar exactamente al campo Password.
+
+153
+00:10:19,150 --> 00:10:25,570
+A la caja de texto password utilizando el Clinic data que representa el formulario y le digo Clinic
+
+154
+00:10:25,570 --> 00:10:26,860
+data get.
+
+155
+00:10:28,480 --> 00:10:29,590
+Obtén el password.
+
+156
+00:10:30,160 --> 00:10:30,820
+Ya lo tengo.
+
+157
+00:10:31,250 --> 00:10:31,650
+Valor!
+
+158
+00:10:32,430 --> 00:10:35,890
+Y ahora voy a repetir la figura para obtener el valor del confirmar password.
+
+159
+00:10:37,070 --> 00:10:41,810
+Con password igual a actividad ASP.NET de aquí le pongo.
+
+160
+00:10:42,800 --> 00:10:43,910
+Confirm password.
+
+161
+00:10:45,990 --> 00:10:47,140
+Ya tengo los dos valores.
+
+162
+00:10:47,160 --> 00:10:49,260
+A continuación voy a hacer la condición.
+
+163
+00:10:50,190 --> 00:10:51,510
+Le digo si el password.
+
+164
+00:10:55,150 --> 00:10:57,340
+Es diferente de conseguir password.
+
+165
+00:10:58,960 --> 00:10:59,950
+Dos puntos.
+
+166
+00:11:00,340 --> 00:11:03,520
+Entonces quiero que envíe un error.
+
+167
+00:11:03,520 --> 00:11:06,280
+Por eso llamó a Royce Forms.
+
+168
+00:11:08,110 --> 00:11:08,670
+Validez.
+
+169
+00:11:09,070 --> 00:11:09,580
+Error.
+
+170
+00:11:11,180 --> 00:11:13,820
+Sé que le puedo personalizar el mensaje de error que yo quiero.
+
+171
+00:11:14,390 --> 00:11:17,960
+Le digo que envíe el password.
+
+172
+00:11:19,680 --> 00:11:20,670
+No coincide.
+
+173
+00:11:22,790 --> 00:11:23,690
+Ingrese el paso.
+
+174
+00:11:25,510 --> 00:11:26,590
+El pastor no coincide.
+
+175
+00:11:26,980 --> 00:11:28,270
+Solamente eso la vamos a colocar.
+
+176
+00:11:29,510 --> 00:11:29,660
+Bien.
+
+177
+00:11:29,930 --> 00:11:31,490
+Ahora vamos a borrar los cambios.
+
+178
+00:11:31,810 --> 00:11:37,610
+Menú Falstaff Hall y vamos a tratar de imprimir este espacio dentro del template.
+
+179
+00:11:38,590 --> 00:11:41,590
+Vayamos entonces ahora a la carpeta Templates.
+
+180
+00:11:42,690 --> 00:11:47,010
+Y aquí me aparece el account y register a html.
+
+181
+00:11:48,100 --> 00:11:51,280
+Vamos a la línea más o menos 50 y tantos.
+
+182
+00:11:51,520 --> 00:11:53,490
+Aquí aparece el botón de registrar.
+
+183
+00:11:53,500 --> 00:11:56,860
+Lo puedes ver luego de este div que contiene el botón.
+
+184
+00:11:57,760 --> 00:12:01,780
+Voy a darle un enter, ya que lo voy a poner entre doble llave font.
+
+185
+00:12:02,710 --> 00:12:04,660
+Aquí tengo que poner punto errors.
+
+186
+00:12:04,930 --> 00:12:07,120
+Pero hay un detalle adicional que quiero revisar contigo.
+
+187
+00:12:07,120 --> 00:12:09,970
+Vayamos por esto a la carpeta account y ahora al fondo.
+
+188
+00:12:10,510 --> 00:12:14,140
+Y mira, aquí tengo un pequeño problema con los tabs.
+
+189
+00:12:14,680 --> 00:12:21,670
+Este client que acabo de crear no está a la misma altura de este definidos, ni de left class no está
+
+190
+00:12:21,670 --> 00:12:23,410
+siguiendo el TAB.
+
+191
+00:12:23,770 --> 00:12:27,880
+Entonces tenemos que tener mucho cuidado en Python cuando haces el espaciado.
+
+192
+00:12:28,360 --> 00:12:29,320
+Le voy a poner un tab.
+
+193
+00:12:30,370 --> 00:12:30,870
+Listo.
+
+194
+00:12:30,880 --> 00:12:33,130
+Este taxi está a la altura del DF.
+
+195
+00:12:33,400 --> 00:12:35,320
+Ten siempre mucho cuidado aquí.
+
+196
+00:12:36,610 --> 00:12:37,010
+Listo.
+
+197
+00:12:37,030 --> 00:12:37,750
+Lo tenemos.
+
+198
+00:12:37,780 --> 00:12:39,040
+Voy a ir a Menú File.
+
+199
+00:12:39,640 --> 00:12:42,640
+Guardamos todos los cambios y vamos a la página.
+
+200
+00:12:43,330 --> 00:12:44,410
+Ya estoy en la página.
+
+201
+00:12:44,440 --> 00:12:46,270
+Voy a ingresar unos datos.
+
+202
+00:12:47,350 --> 00:12:49,390
+He ingresado este usuario de prueba.
+
+203
+00:12:49,900 --> 00:12:53,620
+Vas a notar que tiene un password totalmente diferente para estas cajas.
+
+204
+00:12:54,100 --> 00:12:58,510
+Y ahora voy a darle clic al botón Registrar y mira lo que me apareció.
+
+205
+00:12:59,020 --> 00:13:01,000
+El password no coincide.
+
+206
+00:13:01,090 --> 00:13:01,590
+Perfecto.
+
+207
+00:13:01,600 --> 00:13:05,590
+Entonces la validación por el password está funcionando.
+
+208
+00:13:06,310 --> 00:13:08,860
+Aquí me puedes indicar, profesor, pero por qué aparece de esta forma?
+
+209
+00:13:08,860 --> 00:13:11,410
+Con ese AL por delante no lo podemos arreglar.
+
+210
+00:13:11,410 --> 00:13:12,520
+Sí, vamos a arreglarlo.
+
+211
+00:13:12,530 --> 00:13:13,450
+Vayamos al código.
+
+212
+00:13:14,230 --> 00:13:19,000
+Y ahora vayamos hacia la carpeta Templates Account, ya que aparece Register.
+
+213
+00:13:20,130 --> 00:13:23,640
+Y en vez de este formato errors vamos a colocarle un form.
+
+214
+00:13:24,960 --> 00:13:25,590
+Punto.
+
+215
+00:13:26,290 --> 00:13:28,890
+Nom field.
+
+216
+00:13:30,200 --> 00:13:30,740
+Errores.
+
+217
+00:13:32,480 --> 00:13:39,200
+Ahora, si vamos a borrar los cambios, menú false all y vamos a la página, vamos a refrescar la página.
+
+218
+00:13:41,340 --> 00:13:45,720
+Esto y pueden ver que ya aquí me aparece el password no coincide.
+
+219
+00:13:46,820 --> 00:13:47,270
+Listo.
+
+220
+00:13:47,290 --> 00:13:52,810
+Continuamos en el siguiente capítulo hablando más de los mensajes de error personalizados que puedo
+
+221
+00:13:52,810 --> 00:13:53,560
+crear en Jango.

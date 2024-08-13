@@ -1,0 +1,975 @@
+1
+00:00:00,550 --> 00:00:03,420
+En este capítulo vamos a instalar Jango.
+
+2
+00:00:03,430 --> 00:00:09,130
+Recuerda que esta instalación de este framework se hará dentro del virtual environment que hemos estado
+
+3
+00:00:09,130 --> 00:00:09,730
+trabajando.
+
+4
+00:00:10,330 --> 00:00:12,610
+Por ello, ubícate dentro de la carpeta.
+
+5
+00:00:12,880 --> 00:00:16,300
+En el disco se Jango, slash, basic o basic.
+
+6
+00:00:17,380 --> 00:00:19,700
+Dentro de la carpeta aparece la carpeta.
+
+7
+00:00:20,740 --> 00:00:25,060
+Eso está bien, pero ubícate siempre al nivel de basic y aquí le vas a dar click derecho.
+
+8
+00:00:26,040 --> 00:00:27,960
+Y la opción Get here.
+
+9
+00:00:30,600 --> 00:00:37,500
+Te aparecer esta ventana de Bach se te aparece la ubicación del directorio disco Sheet Jango Basic.
+
+10
+00:00:38,770 --> 00:00:44,260
+A continuación vamos a ingresar al ambiente del virtual environment que hemos creado en la carpeta AMP.
+
+11
+00:00:44,650 --> 00:00:49,250
+Por ello, aquí vamos a escribir Source Espacio.
+
+12
+00:00:49,750 --> 00:00:53,140
+El nombre de la carpeta es el age scripts.
+
+13
+00:00:54,690 --> 00:00:56,550
+Es la actívate.
+
+14
+00:00:57,920 --> 00:00:58,830
+Y le damos enter.
+
+15
+00:00:59,960 --> 00:01:00,380
+Listo.
+
+16
+00:01:01,040 --> 00:01:04,850
+A partir de ese momento, entonces ya me encuentro dentro del ambiente del Virtual Environment.
+
+17
+00:01:05,120 --> 00:01:10,730
+Lo vas a notar porque el cursor de ahora en adelante va a tener este texto en la parte superior.
+
+18
+00:01:12,160 --> 00:01:17,890
+Por ejemplo, si le doy enter, mira, todos los cursores van a aparecer siempre con este EMP.
+
+19
+00:01:19,060 --> 00:01:22,150
+Esto determina que estás en el ambiente del Virtual Environment.
+
+20
+00:01:23,390 --> 00:01:29,300
+Lo que quiero ahora es saber qué paquetes están instalados dentro de mi virtual environment.
+
+21
+00:01:29,810 --> 00:01:34,460
+Para que veas eso, escribe este comando Pip Espacio Freeze.
+
+22
+00:01:36,040 --> 00:01:36,960
+Y le damos enter.
+
+23
+00:01:38,830 --> 00:01:39,700
+No me aparece nada.
+
+24
+00:01:39,700 --> 00:01:44,230
+Significa que mi virtual Environment no tiene ningún paquete ni librería instalada.
+
+25
+00:01:45,510 --> 00:01:47,250
+Eso está bien, porque esto es nuevo.
+
+26
+00:01:47,610 --> 00:01:48,450
+No hay ningún problema.
+
+27
+00:01:48,720 --> 00:01:50,880
+Ahora procedemos a instalar el Jango.
+
+28
+00:01:51,150 --> 00:01:51,980
+Para instalarlo.
+
+29
+00:01:51,990 --> 00:01:53,460
+Escribimos el comando Pip.
+
+30
+00:01:55,350 --> 00:01:56,040
+Instal.
+
+31
+00:01:57,630 --> 00:02:05,160
+Chango recuerda que el chango sólo se va a instalar en este virtual environment, no en tu computadora.
+
+32
+00:02:05,820 --> 00:02:09,270
+Este es el motivo por el cual creamos el Virtual Environment en el capítulo pasado.
+
+33
+00:02:10,090 --> 00:02:10,350
+Bien.
+
+34
+00:02:10,600 --> 00:02:11,650
+Ahora le damos enter.
+
+35
+00:02:14,170 --> 00:02:16,360
+Y comienza la descarga e instalación.
+
+36
+00:02:18,510 --> 00:02:24,090
+Aquí ya podemos ver que se instaló correctamente, me parece, este mensaje de instalación exitosa de
+
+37
+00:02:24,090 --> 00:02:24,510
+Jango.
+
+38
+00:02:24,810 --> 00:02:30,810
+Pero para estar seguros de que se instaló correctamente en Virtual Environment, vamos a ejecutar el
+
+39
+00:02:30,810 --> 00:02:32,760
+comando Pipe Freeze.
+
+40
+00:02:32,760 --> 00:02:38,280
+Ya sabes que este comando me permite ver la lista de paquetes instalados en mi environment y le damos
+
+41
+00:02:38,280 --> 00:02:38,820
+Enter.
+
+42
+00:02:40,190 --> 00:02:47,480
+Y aquí vas a notar que ya aparecen los paquetes de Jango y también sus dependencias instaladas en Virtual
+
+43
+00:02:47,480 --> 00:02:48,170
+Environment.
+
+44
+00:02:48,800 --> 00:02:52,340
+Una vez instalado Jango ya podemos utilizar sus herramientas.
+
+45
+00:02:52,730 --> 00:02:57,650
+Una de las herramientas más importantes de Jango es su capacidad de poder crear proyectos web.
+
+46
+00:02:58,100 --> 00:03:00,170
+En este caso quiero crear un proyecto.
+
+47
+00:03:00,890 --> 00:03:05,120
+No te preocupes, seguimos en la consola y aquí vamos a llamar al comando Jango.
+
+48
+00:03:06,940 --> 00:03:07,450
+Raya.
+
+49
+00:03:08,330 --> 00:03:08,770
+Admin.
+
+50
+00:03:10,210 --> 00:03:10,900
+Espacio.
+
+51
+00:03:11,870 --> 00:03:12,920
+Estar Project.
+
+52
+00:03:14,370 --> 00:03:18,630
+Este comando te va a permitir crear un proyecto para Jango y tipo Jango.
+
+53
+00:03:19,860 --> 00:03:24,420
+Le pones un espacio y a continuación el nombre que este proyecto va a tener.
+
+54
+00:03:24,720 --> 00:03:26,160
+Yo le voy a poner Banksy.
+
+55
+00:03:27,890 --> 00:03:28,460
+Project.
+
+56
+00:03:30,180 --> 00:03:34,620
+Le pongo espacio y aquí le tengo que indicar cuál va a ser la ubicación, dónde va a estar este proyecto.
+
+57
+00:03:34,890 --> 00:03:38,670
+Se supone que ese proyecto está en un ambiente de tango Basic.
+
+58
+00:03:39,300 --> 00:03:45,990
+Si yo le pongo solo un punto, lo que va a hacer es crear el directorio al nivel de environment.
+
+59
+00:03:47,270 --> 00:03:47,930
+Eso es lo que quiero.
+
+60
+00:03:47,930 --> 00:03:48,680
+Sí, está bien.
+
+61
+00:03:48,680 --> 00:03:51,230
+Para evitar problemas de múltiples directorios.
+
+62
+00:03:51,830 --> 00:03:57,230
+Entonces, de esta forma creamos un proyecto dentro de mi virtual Environment.
+
+63
+00:03:57,530 --> 00:03:59,080
+Un proyecto de tipo Janko.
+
+64
+00:03:59,090 --> 00:04:00,230
+Vamos a darle enter.
+
+65
+00:04:03,160 --> 00:04:07,060
+Vas a anotar la continuación que se ha creado el directorio del proyecto Base Project.
+
+66
+00:04:07,060 --> 00:04:12,820
+A nivel de mi carpeta principal ya tengo basic y también un archivo administrador que es el manager
+
+67
+00:04:13,030 --> 00:04:14,000
+punto PI.
+
+68
+00:04:14,350 --> 00:04:21,460
+Si vamos dentro del archivo Basic Project, vamos a ver toda la estructura que me ha generado este framework
+
+69
+00:04:21,460 --> 00:04:22,030
+Jango.
+
+70
+00:04:22,510 --> 00:04:24,790
+No te preocupes que más adelante lo vamos a revisar.
+
+71
+00:04:25,540 --> 00:04:30,850
+Volvemos al nivel del basic y lo que yo quiero es ejecutar mi aplicación web.
+
+72
+00:04:31,510 --> 00:04:33,160
+Vamos a nuestra consola nuevamente.
+
+73
+00:04:33,850 --> 00:04:34,870
+Qué es lo que tenemos que hacer?
+
+74
+00:04:34,870 --> 00:04:43,120
+Es llamar al comando Python espacio y llamar al archivo raíz de mi proyecto que es manager punto Pi.
+
+75
+00:04:43,480 --> 00:04:47,860
+Y entonces acá le escribimos Espacio Manager, Punto Pi y.
+
+76
+00:04:49,660 --> 00:04:54,550
+Espacio, el comando run server y le damos enter.
+
+77
+00:04:57,790 --> 00:05:01,720
+A continuación te va a aparecer un mensaje que dice Watching for film changes Quick Step.
+
+78
+00:05:02,770 --> 00:05:06,190
+Esto significa que ya tu proyecto web se está ejecutando.
+
+79
+00:05:07,400 --> 00:05:13,520
+Y si abrimos una ventana de browser y vamos a localhost 8000 y le damos enter?
+
+80
+00:05:13,520 --> 00:05:19,460
+Vas a notar que ya esta es la aplicación web de Chango que se está ejecutando por defecto.
+
+81
+00:05:20,980 --> 00:05:21,690
+Así es.
+
+82
+00:05:21,700 --> 00:05:22,960
+Este es el Bakshi Project.
+
+83
+00:05:24,420 --> 00:05:29,820
+Las aplicaciones de web de Jango por defecto se ejecutan en el puerto 8000.
+
+84
+00:05:30,000 --> 00:05:31,680
+Tienes que tener mucho cuidado aquí.
+
+85
+00:05:32,010 --> 00:05:39,900
+Y también recuerda que puedes llamarlo utilizando el local host o también utilizando el 127 punto 0.12
+
+86
+00:05:39,900 --> 00:05:41,430
+puntos, el puerto 8000.
+
+87
+00:05:42,180 --> 00:05:47,160
+En ambos casos no vas a tener problemas ejecutando tu aplicación web con Jango.
+
+88
+00:05:47,850 --> 00:05:52,890
+Hemos vuelto ahora al directorio Yankee Basic donde está mi proyecto en mi Virtual Environment y lo
+
+89
+00:05:52,890 --> 00:05:56,280
+que quiero es comenzar a trabajar dentro de estos archivos.
+
+90
+00:05:56,520 --> 00:05:59,040
+Pero yo no quiero trabajar a nivel de esta carpeta.
+
+91
+00:05:59,050 --> 00:06:03,360
+Yo quiero utilizar el IDE de Atom que he instalado en capítulos anteriores.
+
+92
+00:06:03,990 --> 00:06:07,470
+Entonces, lo que vas a hacer primero es copiar la ubicación de la carpeta.
+
+93
+00:06:08,680 --> 00:06:10,170
+Vamos a abrir una ventana de.
+
+94
+00:06:10,210 --> 00:06:10,350
+De.
+
+95
+00:06:10,360 --> 00:06:10,810
+Ok?
+
+96
+00:06:10,840 --> 00:06:12,070
+Una ventana de terminal.
+
+97
+00:06:13,250 --> 00:06:14,630
+Aquí ya la he abierto.
+
+98
+00:06:14,840 --> 00:06:19,070
+No la confundas con la ventana de Bash que tenemos abierta desde hace un momento.
+
+99
+00:06:19,070 --> 00:06:20,870
+Ejecutando el servidor de la página.
+
+100
+00:06:22,670 --> 00:06:23,660
+Esta es la ventana de Bach.
+
+101
+00:06:24,140 --> 00:06:24,560
+De Bach?
+
+102
+00:06:24,740 --> 00:06:25,550
+No la confundas.
+
+103
+00:06:25,880 --> 00:06:27,570
+Lo que yo he abierto es una nueva ventana.
+
+104
+00:06:27,610 --> 00:06:31,040
+Una consola de house que viene con mi sistema operativo Windows.
+
+105
+00:06:31,340 --> 00:06:31,580
+Bien.
+
+106
+00:06:31,790 --> 00:06:34,100
+Estando en esta ventana, voy a escribir cd.
+
+107
+00:06:35,330 --> 00:06:38,150
+Y pego la ubicación de la carpeta.
+
+108
+00:06:39,750 --> 00:06:45,090
+Que se dos puntos que se las jango para que se las basic y le damos a enter.
+
+109
+00:06:46,070 --> 00:06:55,130
+Y ahora lo que voy a hacer para abrir este contexto con mi IDE Atom es escribir acá Atom espacio, punto
+
+110
+00:06:55,700 --> 00:06:57,050
+y le damos Enter.
+
+111
+00:06:59,340 --> 00:07:04,050
+Vamos a esperar unos segundos y ya se está abriendo aquí mi ID.
+
+112
+00:07:05,160 --> 00:07:10,260
+Ya se abrió el IDE Deaton, como puedes darte cuenta apuntando a la carpeta basic.
+
+113
+00:07:11,150 --> 00:07:15,410
+Ya que aparece en los directorios de Environment, de Virtual Environment y también el proyecto web
+
+114
+00:07:15,410 --> 00:07:17,270
+que acabo de crear, que es el Taxi Project.
+
+115
+00:07:18,300 --> 00:07:21,600
+Ahora vamos a abrir el archivo Manage Copy y.
+
+116
+00:07:22,600 --> 00:07:24,070
+En la parte izquierda lo puedes notar.
+
+117
+00:07:24,370 --> 00:07:26,320
+Le damos doble clic y se va a abrir.
+
+118
+00:07:26,560 --> 00:07:30,030
+Aquí tengo un tap de Google con que voy a cerrar este tema con 60.000.
+
+119
+00:07:30,040 --> 00:07:33,760
+Lo cierro porque quiero maximizar este archivo manage y.
+
+120
+00:07:35,050 --> 00:07:42,370
+Este es el archivo más importante del proyecto porque lo utilizamos para ejecutar levantar nuestro servidor
+
+121
+00:07:42,550 --> 00:07:46,300
+que ejecuta nuestra página a nuestra aplicación web.
+
+122
+00:07:47,460 --> 00:07:54,150
+Básicamente utilizamos este archivo para poder realizar ejecutar tareas de alto nivel administrativo
+
+123
+00:07:54,300 --> 00:07:55,980
+de administración de mi proyecto.
+
+124
+00:07:57,030 --> 00:07:59,460
+Vamos a revisar algunos de sus comandos principales.
+
+125
+00:08:00,210 --> 00:08:03,480
+Vamos a abrir nuestro Bash que hemos estado utilizando desde el inicio de la clase.
+
+126
+00:08:04,490 --> 00:08:07,420
+Recuerdas que necesitábamos para ejecutar el proyecto?
+
+127
+00:08:07,430 --> 00:08:08,720
+Aquí aparece el Chango Admin.
+
+128
+00:08:08,990 --> 00:08:12,410
+Es el Project Python Manager Pipes Server.
+
+129
+00:08:12,990 --> 00:08:18,680
+En ese momento puedes ver que aparece un log porque se está ejecutando la página del servidor.
+
+130
+00:08:18,980 --> 00:08:24,440
+Si quisiera detener el servidor de Python, simplemente presionar la tecla control junto con la tecla
+
+131
+00:08:24,440 --> 00:08:24,650
+C.
+
+132
+00:08:26,370 --> 00:08:28,500
+Y esto va a detener el servidor.
+
+133
+00:08:28,650 --> 00:08:29,460
+El control se.
+
+134
+00:08:30,900 --> 00:08:35,910
+Ahora lo que quiero es ver algunas tareas que pueda realizar este archivo manage.
+
+135
+00:08:36,330 --> 00:08:43,260
+Así que escribe Python Espacio Manage, punto y espacio help.
+
+136
+00:08:43,890 --> 00:08:50,070
+Y aquí te va a aparecer toda la lista de comandos que puedes utilizar para el mantenimiento de tu proyecto.
+
+137
+00:08:50,250 --> 00:08:53,610
+Por ejemplo Create super user en password.
+
+138
+00:08:54,300 --> 00:08:56,340
+Compile message checks.
+
+139
+00:08:57,620 --> 00:08:57,860
+Si.
+
+140
+00:08:57,860 --> 00:08:58,520
+Cual flash?
+
+141
+00:08:58,580 --> 00:08:59,120
+Shell.
+
+142
+00:08:59,330 --> 00:08:59,890
+Mirate.
+
+143
+00:09:00,440 --> 00:09:02,360
+100.º etc.
+
+144
+00:09:03,530 --> 00:09:10,160
+Y lo mejor que puedes tener acceso a todos estos comandos gracias al archivo Manage Copy aquí.
+
+145
+00:09:11,130 --> 00:09:14,340
+Volvemos a líder para que lo puedas ver desde este archivo.
+
+146
+00:09:14,340 --> 00:09:19,890
+Puedes tú manejar el código para administrar los comandos que creas necesarios?
+
+147
+00:09:21,410 --> 00:09:26,160
+El siguiente archivo que veremos dentro de nuestra estructura es el DVD Light.
+
+148
+00:09:26,720 --> 00:09:33,460
+Este es un manejador de base de datos local de archivos que tú puedes utilizar dentro de tu proyecto.
+
+149
+00:09:33,470 --> 00:09:35,900
+Jango es totalmente opcional.
+
+150
+00:09:36,380 --> 00:09:42,080
+Para este primer proyecto que vamos a trabajar no utilizaremos Icon Lights, sino que utilizaremos PostgreSQL.
+
+151
+00:09:42,620 --> 00:09:44,960
+Así que no te preocupes, déjalo como está.
+
+152
+00:09:45,110 --> 00:09:52,280
+No va a afectar en nada la existencia de este DVD básico Elite en caso no lo quieras utilizar.
+
+153
+00:09:53,560 --> 00:09:58,810
+Ahora ingresemos a nuestra carpeta del proyecto que es Bakshi Project, ya que aparece esta carpeta.
+
+154
+00:09:58,870 --> 00:10:04,420
+Pikachu No te preocupes que estos archivos son el resultado de la compilación.
+
+155
+00:10:04,690 --> 00:10:08,090
+Cada vez que ejecutemos nuestro proyecto se abre uno.
+
+156
+00:10:08,110 --> 00:10:13,180
+Lo que vas a encontrar es este tipo de código como de caracteres especiales.
+
+157
+00:10:13,570 --> 00:10:20,950
+Este es un código de tipo boycott y como te repito, se va a auto generar cada vez que nosotros ejecutemos
+
+158
+00:10:20,950 --> 00:10:23,140
+o compilamos nuestro proyecto.
+
+159
+00:10:24,170 --> 00:10:28,850
+Vamos a minimizarlo porque no vamos a editar ningún tipo de archivo al interior de este directorio.
+
+160
+00:10:28,850 --> 00:10:29,260
+Pikachu.
+
+161
+00:10:30,640 --> 00:10:34,120
+A continuación, vamos al archivo init punto y.
+
+162
+00:10:35,300 --> 00:10:40,160
+Este se caracteriza por ser el primer archivo que se carga dentro de un módulo.
+
+163
+00:10:40,490 --> 00:10:44,270
+Entonces puedes utilizarlo para ejecutar una tarea específica.
+
+164
+00:10:44,450 --> 00:10:51,380
+Cada vez que un módulo es, está haciendo un Lorin o una carga, o cada vez que un módulo es exportado.
+
+165
+00:10:51,950 --> 00:10:57,710
+Por el momento no lo vamos a utilizar, así que continuemos con el siguiente archivo que es el a s que
+
+166
+00:10:57,710 --> 00:11:05,030
+y si este archivo representa la configuración de la puerta de entrada a nuestro servidor asíncrono.
+
+167
+00:11:05,210 --> 00:11:10,670
+Python Django trabaja al igual que el archivo double ese que.
+
+168
+00:11:10,670 --> 00:11:12,410
+Y si lo notas?
+
+169
+00:11:12,680 --> 00:11:20,000
+Ambos tienen el mismo código y su función principal es el de administrar la puerta de entrada asíncrona
+
+170
+00:11:20,210 --> 00:11:26,000
+que necesita nuestro servidor para poder arrancar y comunicarse con nuestra web application.
+
+171
+00:11:27,190 --> 00:11:35,260
+A continuación se encuentra el archivo Settings PY y este archivo lo vamos a trabajar bastante y contiene
+
+172
+00:11:35,260 --> 00:11:41,350
+todas las propiedades settings que necesita nuestra aplicación web para poder ejecutarse.
+
+173
+00:11:42,290 --> 00:11:49,850
+Por ejemplo, aquí puedes ver el acceder el directorio base que representa el directorio principal de
+
+174
+00:11:49,850 --> 00:11:50,840
+nuestra aplicación.
+
+175
+00:11:51,170 --> 00:11:57,230
+En este caso tienes que tener mucho cuidado porque el BCR está apuntando a la carpeta raíz de nuestro
+
+176
+00:11:57,230 --> 00:12:01,670
+directorio, que para este ejemplo es la carpeta basic.
+
+177
+00:12:02,270 --> 00:12:08,390
+Toda web application con jango tiene un secret que o clave secreta frase secreta.
+
+178
+00:12:09,230 --> 00:12:15,710
+Este código es individual y te recomendamos nunca enseñarlo o ponerlo público.
+
+179
+00:12:15,710 --> 00:12:17,960
+Siempre debe mantenerse privado.
+
+180
+00:12:18,170 --> 00:12:26,210
+Pero si en algún punto piensas que fue vulnerado, puedes venir acá y editar este valor y cambiarlo
+
+181
+00:12:26,210 --> 00:12:26,750
+por otro.
+
+182
+00:12:28,690 --> 00:12:31,780
+A continuación tenemos otra propiedad que es el debug en true.
+
+183
+00:12:32,440 --> 00:12:40,030
+Este debug dentro me permite poder saber el log de errores o la pila secuencia de transacciones que
+
+184
+00:12:40,030 --> 00:12:41,530
+se están ejecutando.
+
+185
+00:12:41,710 --> 00:12:45,310
+Por defecto, el dev está en true como desarrollo.
+
+186
+00:12:45,550 --> 00:12:50,140
+Cuando estemos en producción, esta propiedad debería ponerse en false.
+
+187
+00:12:51,010 --> 00:12:56,440
+La siguiente propiedad es el helado host, que realmente es la lista de dominios donde se va a ejecutar
+
+188
+00:12:56,620 --> 00:12:58,420
+tu proyecto, tu web application.
+
+189
+00:12:58,720 --> 00:13:00,310
+Aquí le puedes poner, por ejemplo.
+
+190
+00:13:02,340 --> 00:13:02,840
+Patsy.
+
+191
+00:13:02,840 --> 00:13:03,920
+Tres puntocom.
+
+192
+00:13:07,340 --> 00:13:07,820
+Vista.
+
+193
+00:13:07,820 --> 00:13:08,450
+Falcón.
+
+194
+00:13:08,450 --> 00:13:09,170
+Punto com.
+
+195
+00:13:09,590 --> 00:13:14,960
+Etcétera puesto agregar aquí la lista de dominios donde se va a ejecutar tu web application.
+
+196
+00:13:15,290 --> 00:13:20,690
+Pero por el momento, ya que estamos en modo desarrollo, no necesitamos llenar nada aquí.
+
+197
+00:13:21,080 --> 00:13:22,250
+Lo vamos a dejar en blanco.
+
+198
+00:13:23,860 --> 00:13:29,950
+A continuación vamos a encontrar las herramientas que ha instalado el framework Giant Gon para mi proyecto.
+
+199
+00:13:30,130 --> 00:13:36,550
+Por ejemplo, aquí ha instalado estas apps dentro de mi proyecto el Country Outlet, Session, Admin,
+
+200
+00:13:36,580 --> 00:13:43,240
+Messages, Session, etcétera Y también he instalado un concepto de middleware que iremos viendo más
+
+201
+00:13:43,240 --> 00:13:43,750
+adelante.
+
+202
+00:13:43,960 --> 00:13:47,890
+No te preocupes que estas herramientas ya están listas para ser implementadas.
+
+203
+00:13:48,100 --> 00:13:50,740
+Tú solo necesitas instanciar las.
+
+204
+00:13:52,180 --> 00:13:59,080
+A continuación me aparece esta propiedad de Root, que básicamente está apuntando hacia el archivo de
+
+205
+00:13:59,080 --> 00:14:01,660
+mi proyecto que se llama Yo Real y.
+
+206
+00:14:02,640 --> 00:14:09,630
+Si en algún caso quieres utilizar reutilizar alguna URL registrada en tu proyecto, tendrías que solo
+
+207
+00:14:09,630 --> 00:14:10,980
+llamar al root.
+
+208
+00:14:11,670 --> 00:14:13,920
+Al root raya abajo o rl conf.
+
+209
+00:14:15,260 --> 00:14:20,450
+A continuación vamos a ver que aparece este atributo templates, que es un template en Python.
+
+210
+00:14:20,760 --> 00:14:29,390
+En Jango un template es una estructura logica que te permite incorporar variables que se van a reemplazar
+
+211
+00:14:29,390 --> 00:14:31,460
+en tiempo de ejecución.
+
+212
+00:14:32,030 --> 00:14:37,730
+No te preocupes que por defecto ya esto esta configurado dentro de Jango, así que no lo vamos a tocar
+
+213
+00:14:37,940 --> 00:14:40,130
+cuando se ejecute mi web application.
+
+214
+00:14:40,370 --> 00:14:47,330
+Automáticamente Chango va a reconocer qué variables pertenecen al ámbito del servidor y en función a
+
+215
+00:14:47,330 --> 00:14:52,280
+la lógica que programaste, procederá a reemplazar con valores fijos estas variables.
+
+216
+00:14:53,590 --> 00:14:59,020
+A continuación vamos a revisar la otra propiedad, que es el doble CSG y Application.
+
+217
+00:14:59,380 --> 00:15:03,100
+Esto está apuntando directamente al archivo W.
+
+218
+00:15:03,250 --> 00:15:04,430
+Ezekiel P.
+
+219
+00:15:04,780 --> 00:15:06,100
+Ya lo explicamos anteriormente.
+
+220
+00:15:06,100 --> 00:15:07,060
+Que este archivo.
+
+221
+00:15:08,450 --> 00:15:10,720
+Y ahora sigue lo que son las base de datos.
+
+222
+00:15:10,730 --> 00:15:16,080
+Como te había dicho, el inicio por defecto está levantando la base de datos psicoanalítico.
+
+223
+00:15:16,610 --> 00:15:21,680
+Pero nosotros vamos a trabajar con una base de datos de tipo progress, así que en siguientes capítulos
+
+224
+00:15:21,860 --> 00:15:25,910
+vamos a hacer esa configuración al interior de este atributo.
+
+225
+00:15:26,900 --> 00:15:32,930
+A continuación vamos a encontrar una propiedad que se llama Out Password 14, que voy a utilizar bastante
+
+226
+00:15:32,930 --> 00:15:40,310
+cuando necesite crear un proceso de registro de nuevos usuarios o también para hacer Elojim de los usuarios
+
+227
+00:15:40,310 --> 00:15:41,090
+en mi aplicación.
+
+228
+00:15:42,490 --> 00:15:47,380
+Y lo que continuó viene lo que es el lenguaje, el código, que en este caso estamos hablando por defecto,
+
+229
+00:15:47,380 --> 00:15:50,110
+que es un English americano estadounidense.
+
+230
+00:15:51,630 --> 00:15:57,260
+Y esto creo que serían las propiedades más importantes que tenemos por ahora dentro del punto PI.
+
+231
+00:15:57,570 --> 00:16:00,360
+Ahora vamos al archivo Rails, punto API.
+
+232
+00:16:02,420 --> 00:16:06,260
+Podríamos decir que este es uno de los archivos más importantes de mi proyecto.
+
+233
+00:16:06,530 --> 00:16:07,100
+Por qué?
+
+234
+00:16:07,460 --> 00:16:14,780
+Porque cuando un cliente envía un pedido para visualizar alguna página de mi web Project Jango, ese
+
+235
+00:16:14,780 --> 00:16:18,550
+pedido primero llega a este archivo o RL punto PI.
+
+236
+00:16:19,280 --> 00:16:22,910
+Supongamos que un cliente quiere ver la página de productos.
+
+237
+00:16:23,480 --> 00:16:26,690
+Envía la URL con la página de productos.
+
+238
+00:16:27,410 --> 00:16:30,380
+Esa URL, ese pedido llega a este archivo.
+
+239
+00:16:31,330 --> 00:16:39,910
+Este archivo lo que hace es reconocer la RL y buscar en función a la RL, el recurso, el componente,
+
+240
+00:16:39,910 --> 00:16:44,560
+la página que contiene la información de productos que en este caso sería esta ubicación.
+
+241
+00:16:46,550 --> 00:16:52,700
+Y lo que haría a continuación es devolverle el recurso al cliente, al usuario que solicitó la página.
+
+242
+00:16:53,450 --> 00:16:58,010
+Bueno, esto ha sido solo un resumen de los componentes que contiene una web application de Jango.
+
+243
+00:16:58,280 --> 00:17:04,190
+No te preocupes que en los siguientes capítulos iremos construyendo paso a paso la web application que
+
+244
+00:17:04,190 --> 00:17:09,440
+te va a permitir profundizar en cada uno de los conceptos que hemos visto en este vídeo.
